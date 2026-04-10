@@ -7,14 +7,14 @@ export const portfolioData = {
     headline: "Business analytics. AI systems. Built to work.",
     heroTitle: ["Business analytics.", "AI systems.", "Built to work."],
     heroDescription:
-      "I'm Misha Semenov — a graduate student, NCAA swimmer, and practitioner who builds analytics and AI tools that hold up in real environments. Based in New York.",
+      "I'm Misha Semenov, a graduate student in New York. I build analytics and AI tools, and I care whether they hold up once someone actually uses them.",
     professionalSummary: [
-      "I'm a Business Analytics graduate student at Fordham University's Gabelli School of Business, where I focus on AI systems, reporting, and applied decision-making. Before that, I completed my undergraduate degree at Lewis University while competing as a Division I NCAA swimmer.",
-      "My work sits at the intersection of data and execution. That means clean automation, readable dashboards, and AI workflows with a clear purpose.",
-      "I've worked across CRM, marketing analytics, agentic AI, and business intelligence. The thread is simple: make the output useful for the person receiving it.",
+      "I'm a Business Analytics graduate student at Fordham University's Gabelli School of Business. Before that, I finished my undergraduate degree at Lewis University while competing as a Division I swimmer.",
+      "Most of my work is practical. Internal AI tools. Reporting that reads cleanly. Automation that does its job and gets out of the way.",
+      "I've worked in CRM, marketing analytics, agentic AI, and business intelligence. What matters to me is whether the result is useful on a real day of work.",
     ],
     athleticsNote:
-      "I've competed in swimming for over twenty years — NCAA medalist, All-American, and Dean's Scholarship recipient. It shapes how I approach work: with consistency, not bursts.",
+      "I've spent more than twenty years in the pool. NCAA medalist. All-American. That background taught me to trust repetition and standards, not mood.",
   },
 
   contact: {
@@ -22,24 +22,23 @@ export const portfolioData = {
     linkedin: "https://www.linkedin.com/in/mykhailo-semenov/",
     location: "New York, NY",
     availability:
-      "I'm open to conversations around analytics, AI work, and automation. If something I've built is relevant to what you're working on, reach out.",
+      "If something here lines up with what you're building, feel free to reach out.",
   },
 
   summary: {
-    short:
-      "Analytical by training. Practical by preference.",
+    short: "Sharp with details. Better when the work is real.",
     long:
-      "I'm a Business Analytics graduate student at Fordham University's Gabelli School of Business, where I focus on AI systems, reporting, and applied decision-making. Before that, I completed my undergraduate degree at Lewis University while competing as a Division I NCAA swimmer.",
+      "I'm at Fordham now, studying Business Analytics with a focus on AI systems, reporting, and applied decision-making. Before that, I was at Lewis University, finishing my undergraduate degree and training full-time as a Division I swimmer.",
     secondary:
-      "My work sits at the intersection of data and execution — building tools that are meant to be used, not just demonstrated. That means clean automation, readable dashboards, and AI workflows with a clear purpose.",
+      "I like work that has a clear use case. A dashboard someone can read quickly. An automation that saves time. An assistant that answers without wandering.",
     tertiary:
-      "I've worked across CRM, marketing analytics, agentic AI, and business intelligence. The thread connecting all of it is the same: make the output useful for the person receiving it.",
+      "The roles have been different, but the standard stays the same. Keep it useful. Keep it clean. Make it hold up.",
     focusAreas: [
       "Agentic AI",
       "Workflow Automation",
       "Business Analytics",
       "Data Visualization",
-      "CRM & Marketing Analytics",
+      "CRM and Marketing Analytics",
     ],
   },
 
@@ -88,7 +87,7 @@ export const portfolioData = {
       end: "Present",
       category: "AI & Automation",
       summary:
-        "Working on internal AI initiatives using Microsoft Copilot Studio. Designed assistant experiences for administrative and analytical workflows, with a focus on practical use cases over novelty.",
+        "Working on internal AI initiatives with Microsoft Copilot Studio. The work is less about demos and more about whether the tool earns its place.",
       highlights: [
         "Internal AI workflow tooling in a real operating environment.",
         "Assistant experiences for administrative and analytical use cases.",
@@ -103,7 +102,7 @@ export const portfolioData = {
       end: "May 2025",
       category: "Coordination",
       summary:
-        "Managed program coordination and stakeholder communication for a university-facing initiative. Kept things organized and moving.",
+        "Managed program coordination and stakeholder communication for a university-facing initiative. A lot of the value came from keeping moving parts under control.",
       highlights: [
         "Program coordination across stakeholders.",
         "Execution built on consistency and communication.",
@@ -118,7 +117,7 @@ export const portfolioData = {
       end: "Aug 2024",
       category: "Analytics",
       summary:
-        "Analyzed operational data and contributed to AI-supported reporting workflows. Work was seasonal and remote, output was structured.",
+        "Analyzed operational data and helped shape AI-supported reporting workflows. Seasonal work, but the output still had to be tight.",
       highlights: [
         "Operational analysis tied to reporting output.",
         "Seasonal work with clear deliverables and clean structure.",
@@ -133,7 +132,7 @@ export const portfolioData = {
       end: "Jun 2024",
       category: "Marketing Analytics",
       summary:
-        "Supported performance reporting and behavioral analysis for marketing decisions. Worked in Excel, Tableau, and SEO tooling.",
+        "Supported performance reporting and behavioral analysis tied to marketing decisions. Most of the work lived in Excel, Tableau, and SEO tools.",
       highlights: [
         "Performance reporting tied to decision-making.",
         "Behavioral analysis across marketing data.",
@@ -148,7 +147,7 @@ export const portfolioData = {
       end: "Jan 2021",
       category: "Sales",
       summary:
-        "Early career role in sales management and client operations in Ukraine. Where professional discipline started.",
+        "An early role in sales management and client operations in Ukraine. That's where professional discipline started for me.",
       highlights: [
         "Client operations and sales management.",
         "Foundation for pace, discipline, and accountability.",
@@ -162,10 +161,10 @@ export const portfolioData = {
       title: "AI Portfolio Assistant",
       subtitle: "Structured prompt design with Gemini",
       description:
-        "Built a portfolio assistant powered by Gemini that answers questions about my background using structured data instead of generic prompting. The focus was on accuracy and usability, not the AI wrapper.",
+        "I built this so the assistant could answer from structure, not fluff. The hard part was getting the context and wording right, not wiring up a chat box.",
       highlights: [
         "Structured context instead of loose prompt stuffing.",
-        "Readable output grounded in the portfolio itself.",
+        "Answers stay tied to the portfolio.",
       ],
       tools: ["Next.js", "Gemini API", "Tailwind CSS", "JavaScript"],
       image: null,
@@ -175,7 +174,7 @@ export const portfolioData = {
       title: "UN Internal Copilot Agent Project",
       subtitle: "Microsoft Copilot Studio in a real environment",
       description:
-        "Contributed to internal AI workflow tooling at the United Nations using Microsoft Copilot Studio. Real-environment constraints made this different from academic project work.",
+        "This work happened in a real internal environment, which changes everything. Constraints are stricter. The standard is higher. The tool has to make sense for the people using it.",
       highlights: [
         "Internal constraints shaped the build.",
         "Practical AI over novelty features.",
@@ -188,10 +187,10 @@ export const portfolioData = {
       title: "March Madness Prediction Model",
       subtitle: "Classification and interpretation",
       description:
-        "Built a classification model for March Madness bracket prediction. I spent more time on data preparation and interpreting output than on the model architecture itself — which is usually where the actual work is.",
+        "Built a classification model for March Madness bracket prediction. Most of the real work was in prep, cleanup, and making the output worth reading.",
       highlights: [
         "Data preparation did the heavy lifting.",
-        "Model output translated into something usable.",
+        "Output had to be interpretable.",
       ],
       tools: ["Python", "SQL", "Machine Learning", "Data Preprocessing"],
       image: null,
@@ -201,7 +200,7 @@ export const portfolioData = {
       title: "Data Analytics in Excel",
       subtitle: "Reporting that reads cleanly",
       description:
-        "Structured reporting workflows in Excel designed to surface trends and support decisions. Focused on outputs that are presentation-ready without needing explanation.",
+        "Built Excel reporting workflows that surface trends fast. The goal was simple: someone should be able to open the file and know what matters.",
       highlights: [
         "Structured reporting built for decision support.",
         "Presentation-ready outputs without extra framing.",
@@ -214,7 +213,7 @@ export const portfolioData = {
       title: "Machine Learning for Business",
       subtitle: "Business-facing model interpretation",
       description:
-        "Applied ML to business scenarios with an emphasis on translating model results into something a non-technical audience can act on.",
+        "Applied machine learning in business settings where the model alone was never enough. The output had to make sense to someone who didn't build it.",
       highlights: [
         "Business context stayed in front of the model.",
         "Interpretation mattered as much as prediction.",
@@ -227,10 +226,10 @@ export const portfolioData = {
       title: "Tableau Data Visualization",
       subtitle: "Dashboards with restraint",
       description:
-        "Turned raw datasets into dashboards that tell a story. Visual clarity was the constraint, not adding more charts.",
+        "Turned raw datasets into dashboards that could say something quickly. I cared more about restraint than chart count.",
       highlights: [
         "Dashboards built for readability.",
-        "Story first, clutter cut out.",
+        "Clutter got cut early.",
       ],
       tools: ["Tableau", "Data Visualization", "Business Analytics"],
       image: null,
@@ -240,7 +239,7 @@ export const portfolioData = {
       title: "Python Fitness Tracker",
       subtitle: "Small scope, clear structure",
       description:
-        "Built a small Python project around data flow and user-facing structure. Practical scope, intentional design.",
+        "A smaller Python build, but a useful one for thinking through flow, state, and user-facing structure without hiding behind scale.",
       highlights: [
         "Simple structure that still feels deliberate.",
         "Data flow and user logic handled cleanly.",
@@ -303,7 +302,7 @@ export const portfolioData = {
 
   athletics: {
     profile:
-      "I've competed in swimming for over twenty years — NCAA medalist, All-American, and Dean's Scholarship recipient. It shapes how I approach work: with consistency, not bursts.",
+      "I've competed in swimming for over twenty years. NCAA medalist. All-American. It shaped how I work long before I had a resume.",
     highlights: [
       "NCAA swimmer",
       "20+ years in the water",
@@ -330,9 +329,9 @@ export const portfolioData = {
   },
 
   ai: {
-    heading: "Ask about the work.",
+    heading: "Ask about the work",
     subtext:
-      "This assistant is grounded in structured portfolio data, not generic prompts. It can answer questions about my experience, projects, tools, education, and timeline with reasonable accuracy.",
+      "This assistant is fed from structured portfolio data, so it can answer specific questions without sounding generic.",
     sampleQuestions: [
       "What AI work has Misha done at the UN?",
       "What tools does Misha work with day to day?",
@@ -344,11 +343,11 @@ export const portfolioData = {
   },
 
   ux: {
-    heading: "UX work.",
+    heading: "Earlier UX work",
     intro:
-      "I started using automated no-code tools when AI was just starting to rise, because it felt more efficient than trying to code everything myself.",
+      "Before I leaned this hard into analytics and AI, I spent time building with no-code tools because they let me move faster.",
     body:
-      "These are raw demos I built for businesses or for fun during the period when I was more focused on UX design.",
+      "These are early demos, some built for businesses, some just for fun. Raw, but still part of the path.",
     linkLabel: "View UX demos",
     link: "https://micksems01.wixstudio.com/my-site",
   },
