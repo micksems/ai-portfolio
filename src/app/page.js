@@ -34,8 +34,8 @@ function ProjectCard({ project, index }) {
     <article
       data-reveal
       style={{ transitionDelay: `${index * 70}ms` }}
-      className={`group rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05] ${
-        odd ? "lg:translate-y-8" : ""
+      className={`group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05] ${
+        odd ? "lg:translate-y-6" : ""
       }`}
     >
       <div className={`flex flex-col ${odd ? "lg:items-end lg:text-right" : ""}`}>
@@ -44,40 +44,20 @@ function ProjectCard({ project, index }) {
           {project.title}
         </h3>
         <p className="mt-2 max-w-[28ch] text-sm text-white/55">{project.subtitle}</p>
-        <p className="mt-5 max-w-[44ch] text-base leading-7 text-white/68">
+        <p className="mt-5 max-w-[38ch] text-base leading-7 text-white/68">
           {project.description}
         </p>
       </div>
 
-      <div
-        className={`mt-7 grid gap-5 ${
-          odd ? "md:grid-cols-[auto_1fr]" : "md:grid-cols-[1fr_auto]"
-        }`}
-      >
-        <ul
-          className={`space-y-3 text-sm leading-7 text-white/66 ${
-            odd ? "md:order-2" : ""
-          }`}
-        >
-          {project.highlights.map((highlight) => (
-            <li key={highlight}>{highlight}</li>
-          ))}
-        </ul>
-
-        <div
-          className={`flex flex-wrap gap-2 ${
-            odd ? "md:order-1 md:max-w-[220px]" : "md:max-w-[220px] md:justify-end"
-          }`}
-        >
-          {project.tools.map((tool) => (
-            <span
-              key={tool}
-              className="inline-flex w-fit max-w-full items-center rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs text-white/66 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:border-white/22 hover:bg-black/40"
-            >
-              {tool}
-            </span>
-          ))}
-        </div>
+      <div className={`mt-8 flex flex-wrap gap-2 ${odd ? "lg:justify-end" : ""}`}>
+        {project.tools.map((tool) => (
+          <span
+            key={tool}
+            className="inline-flex w-fit items-center rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs text-white/66 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:border-white/22 hover:bg-black/40"
+          >
+            {tool}
+          </span>
+        ))}
       </div>
     </article>
   );
@@ -181,7 +161,7 @@ export default function HomePage() {
 
       <section
         id="home"
-        className="relative mx-auto max-w-7xl px-5 pb-16 pt-16 md:px-8 md:pb-22 md:pt-24"
+        className="relative mx-auto max-w-7xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24"
       >
         <div className="grid gap-12 lg:grid-cols-[1.35fr_0.85fr] lg:items-end">
           <div className="max-w-4xl text-center lg:text-left" data-reveal>
@@ -197,7 +177,7 @@ export default function HomePage() {
               ))}
             </h1>
 
-            <p className="mx-auto mt-7 max-w-[34rem] text-lg leading-8 text-white/66 md:text-xl lg:mx-0">
+            <p className="mx-auto mt-7 max-w-[30rem] text-lg leading-8 text-white/66 md:text-xl lg:mx-0">
               {personal.heroDescription}
             </p>
 
@@ -229,9 +209,7 @@ export default function HomePage() {
                   key={item.label}
                   data-reveal
                   style={{ transitionDelay: `${index * 70}ms` }}
-                  className={`rounded-2xl border border-white/8 bg-black/30 px-4 py-5 ${
-                    index % 2 === 0 ? "text-left" : "text-right"
-                  }`}
+                  className="flex min-h-[108px] flex-col justify-between rounded-2xl border border-white/8 bg-black/30 px-4 py-5 text-center"
                 >
                   <p className="text-3xl font-semibold tracking-[-0.04em]">{item.value}</p>
                   <p className="mt-2 text-sm text-white/58">{item.label}</p>
@@ -256,14 +234,14 @@ export default function HomePage() {
 
           <div className="grid gap-6 lg:pl-8">
             <div
-              className="max-w-[38rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8"
+              className="max-w-[34rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8"
               data-reveal
             >
               <p className="text-base leading-7 text-white/68">{summary.secondary}</p>
             </div>
 
             <div
-              className="max-w-[34rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:ml-14 md:p-8"
+              className="max-w-[30rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:ml-12 md:p-8"
               data-reveal
             >
               <p className="text-base leading-7 text-white/68">{summary.tertiary}</p>
@@ -278,12 +256,12 @@ export default function HomePage() {
       >
         <SectionHeader
           eyebrow="Projects"
-          title="Selected work"
-          description="Different problems. Different kinds of output. Same standard."
+          title="Selected work."
+          description="A few projects across analytics, AI, and applied systems."
           align="center"
         />
 
-        <div className="mt-12 grid items-start gap-6 lg:grid-cols-2">
+        <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
@@ -300,10 +278,10 @@ export default function HomePage() {
           </div>
 
           <div
-            className="max-w-[42rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8"
+            className="max-w-[40rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8"
             data-reveal
           >
-            <p className="max-w-[36rem] text-base leading-7 text-white/68">{ux.body}</p>
+            <p className="max-w-[34rem] text-base leading-7 text-white/68">{ux.body}</p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href={ux.link}
@@ -313,9 +291,6 @@ export default function HomePage() {
               >
                 {ux.linkLabel}
               </a>
-              <p className="max-w-[16rem] text-sm leading-6 text-white/52">
-                Earlier work. Still worth showing.
-              </p>
             </div>
           </div>
         </div>
@@ -336,7 +311,7 @@ export default function HomePage() {
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 md:p-8">
             <form onSubmit={handleAsk} className="flex flex-col gap-4">
               <label htmlFor="portfolio-question" className="text-sm text-white/58">
-                Ask about experience, projects, tools, education, or timeline.
+                Ask about experience, projects, skills, education, timeline, or background.
               </label>
 
               <textarea
@@ -387,7 +362,7 @@ export default function HomePage() {
                   data-reveal
                   style={{ transitionDelay: `${index * 70}ms` }}
                   onClick={() => setQuestion(item)}
-                  className="inline-flex w-fit max-w-full items-center rounded-full border border-white/10 bg-black/25 px-4 py-3 text-left text-sm leading-6 text-white/70 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/24 hover:text-white"
+                  className="inline-flex w-fit items-center rounded-full border border-white/10 bg-black/25 px-4 py-3 text-left text-sm leading-6 text-white/70 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/24 hover:text-white"
                 >
                   {item}
                 </button>
@@ -403,51 +378,42 @@ export default function HomePage() {
       >
         <SectionHeader
           eyebrow="Contact"
-          title="Let's talk"
+          title="Get in touch."
           description={contact.availability}
           align="center"
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              label: "Email",
-              content: contact.publicEmail,
-              href: `mailto:${contact.publicEmail}`,
-            },
-            {
-              label: "LinkedIn",
-              content: "linkedin.com/in/mykhailo-semenov",
-              href: contact.linkedin,
-            },
-            {
-              label: "Location",
-              content: contact.location,
-            },
-          ].map((item, index) => (
-            <div
-              key={item.label}
-              data-reveal
-              style={{ transitionDelay: `${index * 70}ms` }}
-              className={`rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 ${
-                index === 1 ? "md:translate-y-6" : index === 2 ? "md:translate-y-2" : ""
-              }`}
-            >
-              <p className="text-sm uppercase tracking-[0.28em] text-white/38">{item.label}</p>
-              {item.href ? (
-                <a
-                  href={item.href}
-                  target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                  className="mt-5 inline-flex w-fit max-w-full items-center text-base text-white/76 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:text-white"
-                >
-                  {item.content}
-                </a>
-              ) : (
-                <p className="mt-5 text-base text-white/76">{item.content}</p>
-              )}
-            </div>
-          ))}
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <a
+            href={`mailto:${contact.publicEmail}`}
+            data-reveal
+            className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
+          >
+            <p className="text-sm uppercase tracking-[0.28em] text-white/38">Email</p>
+            <p className="mt-5 text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+              Open mail
+            </p>
+          </a>
+
+          <a
+            href={contact.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            data-reveal
+            style={{ transitionDelay: "70ms" }}
+            className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
+          >
+            <p className="text-sm uppercase tracking-[0.28em] text-white/38">LinkedIn</p>
+            <p className="mt-5 text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+              Open profile
+            </p>
+          </a>
+        </div>
+
+        <div className="mt-8 flex justify-center" data-reveal style={{ transitionDelay: "140ms" }}>
+          <span className="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/60">
+            {contact.location}
+          </span>
         </div>
       </section>
     </main>
