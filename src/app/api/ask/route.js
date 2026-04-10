@@ -2,25 +2,32 @@ import { NextResponse } from "next/server";
 
 import { portfolioData } from "@/data/portfolioData";
 
+function safeArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
 function formatList(items = []) {
-  return items.map((item) => `- ${item}`).join("\n");
+  return safeArray(items).map((item) => `- ${item}`).join("\n");
 }
 
 function formatEducation(items = []) {
-  return items
+  return safeArray(items)
     .map((item) => {
       const range = `${item.start}-${item.end}`;
-      const details = item.details?.length ? ` (${item.details.join(" ")})` : "";
+      const detailsList = safeArray(item.details);
+      const details = detailsList.length ? ` (${detailsList.join(" ")})` : "";
       return `- ${item.school}, ${item.degree}, ${range}, ${item.location}${details}`;
     })
     .join("\n");
 }
 
 function formatExperience(items = []) {
-  return items
+  return safeArray(items)
     .map((item) => {
-      const highlights = item.highlights?.length
-        ? ` Highlights: ${item.highlights.join(" ")}`
+      const highlightsList = safeArray(item.highlights);
+      const toolsList = safeArray(item.tools);
+      const highlights = highlightsList.length
+        ? ` Highlights: ${highlightsList.join(" ")}`
         : "";
 
       return [
@@ -29,7 +36,7 @@ function formatExperience(items = []) {
         `  Dates: ${item.start} to ${item.end}`,
         `  Category: ${item.category}`,
         `  Summary: ${item.summary}`,
-        `  Tools: ${item.tools.join(", ")}`,
+        `  Tools: ${toolsList.join(", ")}`,
         highlights ? `  ${highlights.trim()}` : null,
       ]
         .filter(Boolean)
@@ -39,11 +46,13 @@ function formatExperience(items = []) {
 }
 
 function formatProjects(items = []) {
-  return items
+  return safeArray(items)
     .map((item) => {
       const link = item.link ? ` Link: ${item.link}` : "";
-      const highlights = item.highlights?.length
-        ? `  Highlights: ${item.highlights.join(" | ")}`
+      const highlightsList = safeArray(item.highlights);
+      const toolsList = safeArray(item.tools);
+      const highlights = highlightsList.length
+        ? `  Highlights: ${highlightsList.join(" | ")}`
         : null;
 
       return [
@@ -51,7 +60,7 @@ function formatProjects(items = []) {
         `  Subtitle: ${item.subtitle}`,
         `  Description: ${item.description}`,
         highlights,
-        `  Tools: ${item.tools.join(", ")}${link}`,
+        `  Tools: ${toolsList.join(", ")}${link}`,
       ]
         .filter(Boolean)
         .join("\n");
