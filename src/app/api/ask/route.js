@@ -42,13 +42,19 @@ function formatProjects(items = []) {
   return items
     .map((item) => {
       const link = item.link ? ` Link: ${item.link}` : "";
+      const highlights = item.highlights?.length
+        ? `  Highlights: ${item.highlights.join(" | ")}`
+        : null;
+
       return [
         `- ${item.title}`,
         `  Subtitle: ${item.subtitle}`,
         `  Description: ${item.description}`,
-        `  Highlights: ${item.highlights.join(" | ")}`,
+        highlights,
         `  Tools: ${item.tools.join(", ")}${link}`,
-      ].join("\n");
+      ]
+        .filter(Boolean)
+        .join("\n");
     })
     .join("\n");
 }
@@ -72,7 +78,7 @@ PERSONAL
 - Full name: ${personal.fullName}
 - Location: ${personal.location}
 - Headline: ${personal.headline}
-- Identity highlights: ${personal.identityHighlights.join(", ")}
+- Hero summary: ${personal.heroDescription}
 
 CONTACT
 ${contactLines}
