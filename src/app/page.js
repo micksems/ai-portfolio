@@ -351,6 +351,7 @@ export default function HomePage() {
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
               Email
+              Open mail
             </p>
           </a>
 
@@ -364,6 +365,7 @@ export default function HomePage() {
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
               Linkedin
+              Open profile
             </p>
           </a>
         </div>
