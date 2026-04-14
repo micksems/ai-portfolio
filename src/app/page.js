@@ -233,19 +233,6 @@ export default function HomePage() {
           />
 
           <div className="grid gap-6 lg:pl-8">
-            <div
-              className="max-w-[34rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8"
-              data-reveal
-            >
-              <p className="text-base leading-7 text-white/68">{summary.secondary}</p>
-            </div>
-
-            <div
-              className="max-w-[30rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:ml-12 md:p-8"
-              data-reveal
-            >
-              <p className="text-base leading-7 text-white/68">{summary.tertiary}</p>
-            </div>
           </div>
         </div>
       </section>
