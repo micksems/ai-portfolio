@@ -68,7 +68,17 @@ export default function HomePage() {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const { personal, contact, summary, projects, metrics, ai, ux } = portfolioData;
+  const { personal, contact, projects, metrics, ai, ux } = portfolioData;
+  const uxCardIsOdd = projects.length % 2 === 1;
+  const uxCardClass =
+    "group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]" +
+    (uxCardIsOdd ? " lg:translate-y-6" : "");
+  const uxCardContentClass = uxCardIsOdd
+    ? "flex flex-col lg:items-end lg:text-right"
+    : "flex flex-col";
+  const uxCardActionsClass = uxCardIsOdd
+    ? "mt-8 flex flex-wrap gap-2 lg:justify-end"
+    : "mt-8 flex flex-wrap gap-2";
 
   useEffect(() => {
     const elements = document.querySelectorAll("[data-reveal]");
@@ -141,9 +151,7 @@ export default function HomePage() {
 
           <nav className="hidden items-center gap-6 text-sm text-white/62 md:flex">
             {[
-              ["Intro", "intro"],
               ["Projects", "projects"],
-              ["UX", "ux"],
               ["AI", "ai"],
               ["Contact", "contact"],
             ].map(([label, id]) => (
@@ -221,23 +229,6 @@ export default function HomePage() {
       </section>
 
       <section
-        id="intro"
-        className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20"
-      >
-        <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-          <SectionHeader
-            eyebrow="Introduction"
-            title={summary.short}
-            description={summary.long}
-            align="left"
-          />
-
-          <div className="grid gap-6 lg:pl-8">
-          </div>
-        </div>
-      </section>
-
-      <section
         id="projects"
         className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20"
       >
@@ -252,24 +243,22 @@ export default function HomePage() {
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
-        </div>
-      </section>
 
-      <section
-        id="ux"
-        className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20"
-      >
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="lg:justify-self-end" data-reveal>
-            <SectionHeader eyebrow="UX" title={ux.heading} description={ux.intro} align="right" />
-          </div>
-
-          <div
-            className="max-w-[40rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8"
+          <article
             data-reveal
+            style={{ transitionDelay: `${projects.length * 70}ms` }}
+            className={uxCardClass}
           >
-            <p className="max-w-[34rem] text-base leading-7 text-white/68">{ux.body}</p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className={uxCardContentClass}>
+              <p className="text-xs uppercase tracking-[0.28em] text-white/34">UX</p>
+              <h3 className="mt-4 max-w-[18ch] text-2xl font-semibold tracking-[-0.04em] text-white">
+                {ux.heading}
+              </h3>
+              <p className="mt-2 max-w-[28ch] text-sm text-white/55">{ux.intro}</p>
+              <p className="mt-5 max-w-[38ch] text-base leading-7 text-white/68">{ux.body}</p>
+            </div>
+
+            <div className={uxCardActionsClass}>
               <a
                 href={ux.link}
                 target="_blank"
@@ -279,7 +268,7 @@ export default function HomePage() {
                 {ux.linkLabel}
               </a>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
@@ -362,22 +351,16 @@ export default function HomePage() {
         id="contact"
         className="relative mx-auto max-w-7xl px-5 pb-20 pt-16 md:px-8 md:pb-28 md:pt-20"
       >
-        <SectionHeader
-          eyebrow="Contact"
-          title="Get in touch."
-          description={contact.availability}
-          align="center"
-        />
+        <p className="mb-8 text-center text-xs uppercase tracking-[0.35em] text-white/40">Contact</p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           <a
             href={`mailto:${contact.publicEmail}`}
             data-reveal
-            className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
+            className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
-            <p className="text-sm uppercase tracking-[0.28em] text-white/38">Email</p>
-            <p className="mt-5 text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
-              Open mail
+            <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+              EMAIL
             </p>
           </a>
 
@@ -387,19 +370,12 @@ export default function HomePage() {
             rel="noreferrer"
             data-reveal
             style={{ transitionDelay: "70ms" }}
-            className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
+            className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
-            <p className="text-sm uppercase tracking-[0.28em] text-white/38">LinkedIn</p>
-            <p className="mt-5 text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
-              Open profile
+            <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+              LINKEDIN
             </p>
           </a>
-        </div>
-
-        <div className="mt-8 flex justify-center" data-reveal style={{ transitionDelay: "140ms" }}>
-          <p className="text-sm text-white/60">
-            {contact.location}
-          </p>
         </div>
       </section>
     </main>
