@@ -244,6 +244,14 @@ export default function HomePage() {
             ].join(" ")}
           >
             <div className={["flex flex-col", uxCardIsOdd ? "lg:items-end lg:text-right" : ""].join(" ")}>
+            className={`group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05] ${
+              uxCardIsOdd ? "lg:translate-y-6" : ""
+            }`}
+          >
+            <div className={`flex flex-col ${uxCardIsOdd ? "lg:items-end lg:text-right" : ""}`}>
+            className="group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
+          >
+            <div className="flex flex-col">
               <p className="text-xs uppercase tracking-[0.28em] text-white/34">UX</p>
               <h3 className="mt-4 max-w-[18ch] text-2xl font-semibold tracking-[-0.04em] text-white">
                 {ux.heading}
@@ -253,6 +261,8 @@ export default function HomePage() {
             </div>
 
             <div className={["mt-8 flex flex-wrap gap-2", uxCardIsOdd ? "lg:justify-end" : ""].join(" ")}>
+            <div className={`mt-8 flex flex-wrap gap-2 ${uxCardIsOdd ? "lg:justify-end" : ""}`}>
+            <div className="mt-8 flex flex-wrap gap-2">
               <a
                 href={ux.link}
                 target="_blank"
@@ -355,6 +365,8 @@ export default function HomePage() {
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
               EMAIL
+              Email
+              Open mail
             </p>
           </a>
 
@@ -368,6 +380,8 @@ export default function HomePage() {
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
               LINKEDIN
+              Linkedin
+              Open profile
             </p>
           </a>
         </div>
