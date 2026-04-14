@@ -238,6 +238,9 @@ export default function HomePage() {
           <article
             data-reveal
             style={{ transitionDelay: `${projects.length * 70}ms` }}
+            className={uxCardClass}
+          >
+            <div className={uxCardContentClass}>
             className={[
               "group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]",
               uxCardIsOdd ? "lg:translate-y-6" : "",
