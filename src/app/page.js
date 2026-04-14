@@ -185,7 +185,7 @@ export default function HomePage() {
               <a
                 href="#projects"
                 aria-label="View projects"
-                className="rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:bg-black/90"
+                className="rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:border-white/35 hover:bg-white/[0.06]"
               >
                 View Projects
               </a>
