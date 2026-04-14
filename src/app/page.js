@@ -68,7 +68,7 @@ export default function HomePage() {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const { personal, contact, summary, projects, metrics, ai, ux } = portfolioData;
+  const { personal, contact, projects, metrics, ai, ux } = portfolioData;
 
   useEffect(() => {
     const elements = document.querySelectorAll("[data-reveal]");
@@ -141,7 +141,6 @@ export default function HomePage() {
 
           <nav className="hidden items-center gap-6 text-sm text-white/62 md:flex">
             {[
-              ["Intro", "intro"],
               ["Projects", "projects"],
               ["UX", "ux"],
               ["AI", "ai"],
@@ -216,23 +215,6 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="intro"
-        className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20"
-      >
-        <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-          <SectionHeader
-            eyebrow="Introduction"
-            title={summary.short}
-            description={summary.long}
-            align="left"
-          />
-
-          <div className="grid gap-6 lg:pl-8">
           </div>
         </div>
       </section>
@@ -362,21 +344,13 @@ export default function HomePage() {
         id="contact"
         className="relative mx-auto max-w-7xl px-5 pb-20 pt-16 md:px-8 md:pb-28 md:pt-20"
       >
-        <SectionHeader
-          eyebrow="Contact"
-          title="Get in touch."
-          description={contact.availability}
-          align="center"
-        />
-
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           <a
             href={`mailto:${contact.publicEmail}`}
             data-reveal
-            className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
+            className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
-            <p className="text-sm uppercase tracking-[0.28em] text-white/38">Email</p>
-            <p className="mt-5 text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+            <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
               Open mail
             </p>
           </a>
@@ -387,19 +361,12 @@ export default function HomePage() {
             rel="noreferrer"
             data-reveal
             style={{ transitionDelay: "70ms" }}
-            className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
+            className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
-            <p className="text-sm uppercase tracking-[0.28em] text-white/38">LinkedIn</p>
-            <p className="mt-5 text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+            <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
               Open profile
             </p>
           </a>
-        </div>
-
-        <div className="mt-8 flex justify-center" data-reveal style={{ transitionDelay: "140ms" }}>
-          <p className="text-sm text-white/60">
-            {contact.location}
-          </p>
         </div>
       </section>
     </main>
