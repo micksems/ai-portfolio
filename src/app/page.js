@@ -185,7 +185,7 @@ export default function HomePage() {
               <a
                 href="#projects"
                 aria-label="View projects"
-                className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:bg-white/90"
+                className="rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:border-white/35 hover:bg-white/[0.06]"
               >
                 View Projects
               </a>
@@ -233,19 +233,6 @@ export default function HomePage() {
           />
 
           <div className="grid gap-6 lg:pl-8">
-            <div
-              className="max-w-[34rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8"
-              data-reveal
-            >
-              <p className="text-base leading-7 text-white/68">{summary.secondary}</p>
-            </div>
-
-            <div
-              className="max-w-[30rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:ml-12 md:p-8"
-              data-reveal
-            >
-              <p className="text-base leading-7 text-white/68">{summary.tertiary}</p>
-            </div>
           </div>
         </div>
       </section>
@@ -353,7 +340,6 @@ export default function HomePage() {
           </div>
 
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8">
-            <p className="text-sm uppercase tracking-[0.28em] text-white/38">Try asking</p>
             <div className="mt-6 flex flex-wrap gap-3">
               {ai.sampleQuestions.map((item, index) => (
                 <button
@@ -411,9 +397,9 @@ export default function HomePage() {
         </div>
 
         <div className="mt-8 flex justify-center" data-reveal style={{ transitionDelay: "140ms" }}>
-          <span className="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/60">
+          <p className="text-sm text-white/60">
             {contact.location}
-          </span>
+          </p>
         </div>
       </section>
     </main>

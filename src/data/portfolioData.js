@@ -286,14 +286,14 @@ export const portfolioData = {
 
   ai: {
     heading: "Ask about the work.",
-    subtext: "The assistant handles the detail.",
+    subtext: "",
     sampleQuestions: [
-      "UN project",
-      "Experience",
-      "Skills",
-      "Education",
-      "Projects",
-      "Timeline",
+      "What's your experience with AI systems and workflow automation?",
+      "Can you walk me through your UN Copilot Studio project?",
+      "How would you approach a business analytics problem?",
+      "What tools do you work with for data and AI?",
+      "Tell me about your background in analytics.",
+      "What makes your approach to reporting different?",
     ],
     responseStyle:
       "Clear, concise, natural, and grounded only in the provided portfolio information.",
