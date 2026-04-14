@@ -286,7 +286,7 @@ export const portfolioData = {
 
   ai: {
     heading: "Ask about the work.",
-    subtext: "The assistant handles the detail.",
+    subtext: "",
     sampleQuestions: [
       "What's your experience with AI systems and workflow automation?",
       "Can you walk me through your UN Copilot Studio project?",
