@@ -142,7 +142,6 @@ export default function HomePage() {
           <nav className="hidden items-center gap-6 text-sm text-white/62 md:flex">
             {[
               ["Projects", "projects"],
-              ["UX", "ux"],
               ["AI", "ai"],
               ["Contact", "contact"],
             ].map(([label, id]) => (
@@ -234,24 +233,22 @@ export default function HomePage() {
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
-        </div>
-      </section>
 
-      <section
-        id="ux"
-        className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20"
-      >
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="lg:justify-self-end" data-reveal>
-            <SectionHeader eyebrow="UX" title={ux.heading} description={ux.intro} align="right" />
-          </div>
-
-          <div
-            className="max-w-[40rem] rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8"
+          <article
             data-reveal
+            style={{ transitionDelay: `${projects.length * 70}ms` }}
+            className="group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
-            <p className="max-w-[34rem] text-base leading-7 text-white/68">{ux.body}</p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="flex flex-col">
+              <p className="text-xs uppercase tracking-[0.28em] text-white/34">UX</p>
+              <h3 className="mt-4 max-w-[18ch] text-2xl font-semibold tracking-[-0.04em] text-white">
+                {ux.heading}
+              </h3>
+              <p className="mt-2 max-w-[28ch] text-sm text-white/55">{ux.intro}</p>
+              <p className="mt-5 max-w-[38ch] text-base leading-7 text-white/68">{ux.body}</p>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-2">
               <a
                 href={ux.link}
                 target="_blank"
@@ -261,7 +258,7 @@ export default function HomePage() {
                 {ux.linkLabel}
               </a>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
@@ -344,6 +341,8 @@ export default function HomePage() {
         id="contact"
         className="relative mx-auto max-w-7xl px-5 pb-20 pt-16 md:px-8 md:pb-28 md:pt-20"
       >
+        <p className="mb-8 text-center text-xs uppercase tracking-[0.35em] text-white/40">Contact</p>
+
         <div className="grid gap-6 md:grid-cols-2">
           <a
             href={`mailto:${contact.publicEmail}`}
@@ -351,6 +350,7 @@ export default function HomePage() {
             className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+              Email
               Open mail
             </p>
           </a>
@@ -364,6 +364,7 @@ export default function HomePage() {
             className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+              Linkedin
               Open profile
             </p>
           </a>
