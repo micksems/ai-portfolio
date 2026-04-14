@@ -278,7 +278,7 @@ export const portfolioData = {
     projectCount: 7,
     stats: [
       { value: "2019", label: "Professional start" },
-      { value: "20+", label: "Years in the water" },
+      { value: "2024", label: "AI systems since" },
       { value: "7", label: "Featured projects" },
       { value: "4", label: "Languages" },
     ],
