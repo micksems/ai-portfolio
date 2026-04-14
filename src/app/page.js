@@ -340,7 +340,6 @@ export default function HomePage() {
           </div>
 
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8">
-            <p className="text-sm uppercase tracking-[0.28em] text-white/38">Try asking</p>
             <div className="mt-6 flex flex-wrap gap-3">
               {ai.sampleQuestions.map((item, index) => (
                 <button
@@ -398,9 +397,9 @@ export default function HomePage() {
         </div>
 
         <div className="mt-8 flex justify-center" data-reveal style={{ transitionDelay: "140ms" }}>
-          <span className="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/60">
+          <p className="text-sm text-white/60">
             {contact.location}
-          </span>
+          </p>
         </div>
       </section>
     </main>
