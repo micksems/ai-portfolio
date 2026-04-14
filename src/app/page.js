@@ -69,6 +69,8 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
 
   const { personal, contact, projects, metrics, ai, ux } = portfolioData;
+  const uxCardIsOdd = projects.length % 2 === 1;
+
   useEffect(() => {
     const elements = document.querySelectorAll("[data-reveal]");
 
@@ -236,6 +238,17 @@ export default function HomePage() {
           <article
             data-reveal
             style={{ transitionDelay: `${projects.length * 70}ms` }}
+            className={[
+              "group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]",
+              uxCardIsOdd ? "lg:translate-y-6" : "",
+            ].join(" ")}
+          >
+            <div className={["flex flex-col", uxCardIsOdd ? "lg:items-end lg:text-right" : ""].join(" ")}>
+            className={`group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05] ${
+              uxCardIsOdd ? "lg:translate-y-6" : ""
+            }`}
+          >
+            <div className={`flex flex-col ${uxCardIsOdd ? "lg:items-end lg:text-right" : ""}`}>
             className="group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
             <div className="flex flex-col">
@@ -247,6 +260,8 @@ export default function HomePage() {
               <p className="mt-5 max-w-[38ch] text-base leading-7 text-white/68">{ux.body}</p>
             </div>
 
+            <div className={["mt-8 flex flex-wrap gap-2", uxCardIsOdd ? "lg:justify-end" : ""].join(" ")}>
+            <div className={`mt-8 flex flex-wrap gap-2 ${uxCardIsOdd ? "lg:justify-end" : ""}`}>
             <div className="mt-8 flex flex-wrap gap-2">
               <a
                 href={ux.link}
@@ -350,6 +365,8 @@ export default function HomePage() {
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
               EMAIL
+              Email
+              Open mail
             </p>
           </a>
 
@@ -363,6 +380,8 @@ export default function HomePage() {
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
               LINKEDIN
+              Linkedin
+              Open profile
             </p>
           </a>
         </div>
