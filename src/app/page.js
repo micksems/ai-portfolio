@@ -14,7 +14,9 @@ function SectionHeader({ eyebrow, title, description, align = "left" }) {
 
   return (
     <div className={`max-w-3xl ${alignment}`} data-reveal>
-      <p className="text-xs uppercase tracking-[0.35em] text-white/40">{eyebrow}</p>
+      {eyebrow ? (
+        <p className="text-xs uppercase tracking-[0.35em] text-white/40">{eyebrow}</p>
+      ) : null}
       <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
         {title}
       </h2>
@@ -185,7 +187,7 @@ export default function HomePage() {
               <a
                 href="#projects"
                 aria-label="View projects"
-                className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:bg-white/90"
+                className="rounded-full bg-white px-6 py-3 text-sm font-medium !text-black transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:bg-white/90 hover:!text-black"
               >
                 View Projects
               </a>
@@ -377,9 +379,7 @@ export default function HomePage() {
         className="relative mx-auto max-w-7xl px-5 pb-20 pt-16 md:px-8 md:pb-28 md:pt-20"
       >
         <SectionHeader
-          eyebrow="Contact"
-          title="Get in touch."
-          description={contact.availability}
+          title="Get in touch"
           align="center"
         />
 

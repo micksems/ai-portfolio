@@ -4,23 +4,27 @@ export const portfolioData = {
     fullName: "Mykhailo 'Misha' Semenov",
     firstName: "Misha",
     location: "New York, NY",
-    headline: "Business analytics. AI systems. Built to work.",
-    heroTitle: ["Business analytics.", "AI systems.", "Built to work."],
-    heroDescription: "Tools, models, and workflows made for real use.",
+    headline: "Analytics, AI, and systems that earn their place.",
+    heroTitle: ["Analytics that clarify.", "AI that helps.", "Systems that hold up."],
+    heroDescription:
+      "I build practical digital work across business analytics, automation, and AI.",
   },
 
   contact: {
     publicEmail: "micksems01@gmail.com",
     linkedin: "https://www.linkedin.com/in/mykhailo-semenov/",
     location: "New York, NY",
-    availability: "Email, LinkedIn, and location.",
+    availability: "",
   },
 
   summary: {
-    short: "A quiet page. Real work behind it.",
-    long: "Graduate work in analytics, AI, and applied systems.",
-    secondary: "Built around tools that need to be useful, not ornamental.",
-    tertiary: "The assistant handles the detail.",
+    short: "A portfolio for work that needs to be clear, useful, and finished.",
+    long:
+      "I focus on business analytics, AI, and applied systems that solve real problems without unnecessary noise.",
+    secondary:
+      "Most of what I build sits at the intersection of analysis, automation, and communication.",
+    tertiary:
+      "If you want the fuller story, the assistant can answer with the detail behind the projects.",
     focusAreas: [
       "Agentic AI",
       "Workflow Automation",
@@ -278,15 +282,16 @@ export const portfolioData = {
     projectCount: 7,
     stats: [
       { value: "2019", label: "Professional start" },
-      { value: "20+", label: "Years in the water" },
+      { value: "2026", label: "MSBA expected" },
       { value: "7", label: "Featured projects" },
       { value: "4", label: "Languages" },
     ],
   },
 
   ai: {
-    heading: "Ask about the work.",
-    subtext: "The assistant handles the detail.",
+    heading: "Ask for the details.",
+    subtext:
+      "The assistant is connected to the full portfolio context and can answer beyond what appears on the page.",
     sampleQuestions: [
       "UN project",
       "Experience",
@@ -302,9 +307,9 @@ export const portfolioData = {
   ux: {
     heading: "UX work.",
     intro:
-      "Before the analytics path took over, I spent time building no-code prototypes and web experiences for small businesses.",
+      "I also spent time designing no-code prototypes and web experiences for small businesses.",
     body:
-      "These are demos from that period - kept here as a separate track, not the main act.",
+      "Those demos live here as a secondary track: relevant to how I think, but not the center of the portfolio.",
     linkLabel: "View UX demos",
     link: "https://micksems01.wixstudio.com/my-site",
   },
