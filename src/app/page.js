@@ -14,8 +14,10 @@ function SectionHeader({ eyebrow, title, description, align = "left" }) {
 
   return (
     <div className={`max-w-3xl ${alignment}`} data-reveal>
-      <p className="text-xs uppercase tracking-[0.35em] text-white/40">{eyebrow}</p>
-      <h2 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white md:text-4xl">
+      {eyebrow ? (
+        <p className="text-xs uppercase tracking-[0.35em] text-white/40">{eyebrow}</p>
+      ) : null}
+      <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
         {title}
       </h2>
       {description ? (
@@ -64,7 +66,8 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
 
   const { personal, contact, projects, metrics, ai, ux } = portfolioData;
-  const sectionClass = "relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20";
+  const uxCardIsOdd = projects.length % 2 === 1;
+
   useEffect(() => {
     const elements = document.querySelectorAll("[data-reveal]");
 
@@ -210,7 +213,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="projects" className={sectionClass}>
+      <section
+        id="projects"
+        className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20"
+      >
         <SectionHeader
           eyebrow="Projects"
           title="Selected work."
@@ -226,17 +232,31 @@ export default function HomePage() {
           <article
             data-reveal
             style={{ transitionDelay: `${projects.length * 70}ms` }}
-            className="group flex h-full min-h-[290px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.05]"
+            className={[
+              "group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]",
+              uxCardIsOdd ? "lg:translate-y-6" : "",
+            ].join(" ")}
+          >
+            <div className={["flex flex-col", uxCardIsOdd ? "lg:items-end lg:text-right" : ""].join(" ")}>
+            className={`group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05] ${
+              uxCardIsOdd ? "lg:translate-y-6" : ""
+            }`}
+          >
+            <div className={`flex flex-col ${uxCardIsOdd ? "lg:items-end lg:text-right" : ""}`}>
+            className="group flex min-h-[300px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
             <div className="flex flex-col">
-              <p className="text-[11px] uppercase tracking-[0.24em] text-white/38">UX</p>
-              <h3 className="mt-3 max-w-[18ch] text-xl font-semibold tracking-[-0.03em] text-white md:text-2xl">
+              <p className="text-xs uppercase tracking-[0.28em] text-white/34">UX</p>
+              <h3 className="mt-4 max-w-[18ch] text-2xl font-semibold tracking-[-0.04em] text-white">
                 {ux.heading}
               </h3>
-              <p className="mt-4 max-w-[42ch] text-sm leading-7 text-white/68">{ux.body}</p>
+              <p className="mt-2 max-w-[28ch] text-sm text-white/55">{ux.intro}</p>
+              <p className="mt-5 max-w-[38ch] text-base leading-7 text-white/68">{ux.body}</p>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className={["mt-8 flex flex-wrap gap-2", uxCardIsOdd ? "lg:justify-end" : ""].join(" ")}>
+            <div className={`mt-8 flex flex-wrap gap-2 ${uxCardIsOdd ? "lg:justify-end" : ""}`}>
+            <div className="mt-8 flex flex-wrap gap-2">
               <a
                 href={ux.link}
                 target="_blank"
@@ -328,13 +348,13 @@ export default function HomePage() {
       >
         <p className="mb-8 text-center text-xs uppercase tracking-[0.35em] text-white/40">Contact</p>
 
-        <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           <a
             href={`mailto:${contact.publicEmail}`}
             data-reveal
-            className="group flex min-h-[104px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.05]"
+            className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
-            <p className="text-sm uppercase tracking-[0.2em] text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+            <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
               Email
             </p>
           </a>
@@ -345,17 +365,13 @@ export default function HomePage() {
             rel="noreferrer"
             data-reveal
             style={{ transitionDelay: "70ms" }}
-            className="group flex min-h-[104px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.05]"
+            className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
-            <p className="text-sm uppercase tracking-[0.2em] text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
-              LinkedIn
+            <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
+              Linkedin
             </p>
           </a>
         </div>
-
-        <p className="mt-6 text-center text-xs uppercase tracking-[0.2em] text-white/45">
-          {contact.location}
-        </p>
       </section>
     </main>
   );

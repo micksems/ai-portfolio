@@ -4,23 +4,27 @@ export const portfolioData = {
     fullName: "Mykhailo 'Misha' Semenov",
     firstName: "Misha",
     location: "New York, NY",
-    headline: "Business analytics and AI systems.",
-    heroTitle: ["Business analytics.", "AI systems."],
-    heroDescription: "I build decision tools people actually use.",
+    headline: "Analytics, AI, and systems that earn their place.",
+    heroTitle: ["Analytics that clarify.", "AI that helps.", "Systems that hold up."],
+    heroDescription:
+      "I build practical digital work across business analytics, automation, and AI.",
   },
 
   contact: {
     publicEmail: "micksems01@gmail.com",
     linkedin: "https://www.linkedin.com/in/mykhailo-semenov/",
     location: "New York, NY",
-    availability: "Open to analytics and AI roles.",
+    availability: "",
   },
 
   summary: {
-    short: "A quiet page. Real work behind it.",
-    long: "Graduate work in analytics, AI, and applied systems.",
-    secondary: "Built around tools that need to be useful, not ornamental.",
-    tertiary: "The assistant handles the detail.",
+    short: "A portfolio for work that needs to be clear, useful, and finished.",
+    long:
+      "I focus on business analytics, AI, and applied systems that solve real problems without unnecessary noise.",
+    secondary:
+      "Most of what I build sits at the intersection of analysis, automation, and communication.",
+    tertiary:
+      "If you want the fuller story, the assistant can answer with the detail behind the projects.",
     focusAreas: [
       "Agentic AI",
       "Workflow Automation",
@@ -300,9 +304,11 @@ export const portfolioData = {
   },
 
   ux: {
-    heading: "UX prototypes.",
-    intro: "No-code product concepts for small businesses.",
-    body: "Built quick prototypes to test structure, flow, and clarity before full build-out.",
+    heading: "UX work.",
+    intro:
+      "I also spent time designing no-code prototypes and web experiences for small businesses.",
+    body:
+      "Those demos live here as a secondary track: relevant to how I think, but not the center of the portfolio.",
     linkLabel: "View UX demos",
     link: "https://micksems01.wixstudio.com/my-site",
   },
