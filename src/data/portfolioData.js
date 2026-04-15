@@ -273,14 +273,14 @@ export const portfolioData = {
 
   ai: {
     heading: "Ask for the deeper details",
-    subtext: "Minimal page. Full context lives in the assistant.",
+    subtext: "A quick way to understand my background beyond the highlights on the page.",
     sampleQuestions: [
-      "Experience",
-      "Projects",
-      "Skills",
-      "Education",
-      "Timeline",
-      "UN project",
+      "What makes Misha a strong candidate for analytics and AI roles?",
+      "Tell me about Misha's experience building AI and automation tools.",
+      "Which projects best show Misha can turn analysis into business decisions?",
+      "How does Misha combine technical skills with communication and teamwork?",
+      "Summarize Misha's background in a way a hiring manager would care about.",
+      "What experience does Misha have that would help him contribute quickly?",
     ],
     responseStyle:
       "Clear, concise, natural, and grounded only in the provided portfolio information.",
