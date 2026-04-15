@@ -9,6 +9,16 @@ export const portfolioData = {
     heroDescription: "MS candidate building analytics, automation, and AI for real teams.",
   },
 
+  about: {
+    name: "Misha Semenov",
+    image: "/images/profile.jpg",
+    bio: [
+      "M.S. in Business Analytics at Fordham University, experienced in AI automation and Data Management.",
+      "Before grad school, I got my Bachelor's in Business Administration where I became interested in problem solving via numeric or textual data.",
+      "Over the past years, I've built AI automated workflows and participated in projects that I invite you to look at.",
+    ],
+  },
+
   contact: {
     publicEmail: "micksems01@gmail.com",
     linkedin: "https://www.linkedin.com/in/mykhailo-semenov/",
@@ -139,63 +149,77 @@ export const portfolioData = {
       subtitle: "Conversational AI",
       description:
         "Built a Gemini-based assistant using structured profile data so recruiters can query experience, projects, and timeline in seconds.",
+      outcome: "→ Enables recruiters to talk to AI that is trained on my resume.",
       tools: ["Next.js", "Gemini API", "Tailwind CSS", "JavaScript"],
       image: null,
       link: null,
+      codeLink: "https://github.com/username/ai-portfolio",
     },
     {
-      title: "UN Internal Copilot Agent",
+      title: "UN x Microsoft Agentic AI",
       subtitle: "Enterprise Automation",
       description:
         "Designed internal Copilot Studio workflows with Power Automate to route recurring support requests inside UN operational constraints.",
+      outcome: "→ Built a multi-agent AI automated product for the internal use of the United Nations in collaboration with Microsoft.",
       tools: ["Microsoft Copilot Studio", "Power Automate", "Teams"],
       image: null,
       link: null,
+      codeLink: null,
     },
     {
-      title: "March Madness Prediction Model",
+      title: "March Data Crunch Madness x Deloitte",
       subtitle: "Predictive Analytics",
       description:
         "Built a classification pipeline in Python and SQL, improving bracket prediction quality through feature engineering and data cleaning.",
+      outcome: "→ Built a mutli-layered machine learning prediction model using natural language processing and feature engineering.",
       tools: ["Python", "SQL", "Machine Learning", "Data Preprocessing"],
       image: null,
       link: null,
+      codeLink: "https://github.com/username/march-madness",
     },
     {
       title: "Decision Reporting in Excel",
       subtitle: "Business Reporting",
       description:
         "Created handoff-ready Excel reporting models with clear KPI structure and presentation outputs for faster stakeholder review.",
+      outcome: "→ Cut stakeholder reporting prep time with handoff-ready, presentation-quality outputs.",
       tools: ["Excel", "Data Modeling", "PowerPoint"],
       image: null,
       link: null,
+      codeLink: null,
     },
     {
-      title: "Machine Learning for Business",
+      title: "Customer Segmentation Model",
       subtitle: "Applied ML",
       description:
         "Applied supervised models to business cases and translated output into recommendations non-technical teams could act on.",
+      outcome: "→ ML model that divides customers into clusters which helps identifying best marketing solutions and resource planning.",
       tools: ["Python", "Google Colab", "Data Preprocessing"],
       image: null,
       link: null,
+      codeLink: "https://github.com/username/ml-business",
     },
     {
-      title: "Tableau Executive Dashboards",
-      subtitle: "Data Visualization",
+      title: "Research project",
+      subtitle: "Data Research",
       description:
         "Built Tableau dashboards that reduced chart clutter and surfaced trend, risk, and performance signals for quick executive reads.",
+      outcome: "→ Collected, cleaned, normalized, and visualized data from WDI to show the correlation between quality of education and its effects on economy.",
       tools: ["Tableau", "Data Visualization", "Business Analytics"],
       image: null,
       link: null,
+      codeLink: null,
     },
     {
       title: "Python Fitness Tracker",
       subtitle: "Product Analytics",
       description:
         "Developed a lightweight Python tracker with structured data flow and progress metrics to support routine performance analysis.",
+      outcome: "→ Built a simple tool that allows for measuring one's high jump and choose next rep's weight based on the chosen training style. It automatically saves the results to a csv on user's computer.",
       tools: ["Python", "Data Modeling"],
       image: null,
       link: null,
+      codeLink: "https://github.com/username/fitness-tracker",
     },
   ],
 
@@ -264,10 +288,10 @@ export const portfolioData = {
     educationProgramsListed: 3,
     projectCount: 7,
     stats: [
-      { value: "2019", label: "Professional start" },
-      { value: "2024", label: "AI systems since" },
-      { value: "7", label: "Featured projects" },
-      { value: "4", label: "Languages" },
+      { value: "5+", label: "Years Experience" },
+      { value: "3+", label: "AI & Automation Projects" },
+      { value: "8", label: "Projects Shipped" },
+      { value: "NYC", label: "Based" },
     ],
   },
 
@@ -275,12 +299,12 @@ export const portfolioData = {
     heading: "Ask for the deeper details",
     subtext: "A quick way to understand my background beyond the highlights on the page.",
     sampleQuestions: [
-      "What makes Misha a strong candidate for analytics and AI roles?",
-      "Tell me about Misha's experience building AI and automation tools.",
-      "Which projects best show Misha can turn analysis into business decisions?",
-      "How does Misha combine technical skills with communication and teamwork?",
-      "Summarize Misha's background in a way a hiring manager would care about.",
-      "What experience does Misha have that would help him contribute quickly?",
+      "Why hire Misha for analytics?",
+      "What AI tools has he built?",
+      "How does he communicate findings?",
+      "Which project shows the most impact?",
+      "Can he contribute from day one?",
+      "Summarize his background quickly.",
     ],
     responseStyle:
       "Clear, concise, natural, and grounded only in the provided portfolio information.",
@@ -292,5 +316,7 @@ export const portfolioData = {
     body: "Built no-code prototypes to test interaction flow and business messaging.",
     linkLabel: "View UX demos",
     link: "https://micksems01.wixstudio.com/my-site",
+    outcome:
+      "→ I started using no code solutions way before it was cool. It's the link to my older portfolio where I showed off my web design skills. Majority of projects were built as demos for small businesses. No cost at all, just the love of the game.",
   },
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { portfolioData } from "@/data/portfolioData";
@@ -9,6 +10,12 @@ const cardClass =
   "group flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.055]";
 const actionButtonClass =
   "inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:border-white/32 hover:bg-white/[0.07]";
+const navItems = [
+  { label: "About", id: "about" },
+  { label: "Projects", id: "projects" },
+  { label: "AI", id: "ai" },
+  { label: "Contact", id: "contact" },
+];
 
 function SectionHeader({ eyebrow, title, description, align = "left" }) {
   const alignment =
@@ -24,7 +31,42 @@ function SectionHeader({ eyebrow, title, description, align = "left" }) {
         <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">{eyebrow}</p>
       ) : null}
       <h2 className="mt-4 text-3xl font-medium tracking-[-0.03em] text-white md:text-4xl">{title}</h2>
-      {description ? <p className="mt-4 text-sm text-white/60 md:text-base">{description}</p> : null}
+      {description ? <p className="mt-4 text-sm leading-7 text-white/60 md:text-base">{description}</p> : null}
+    </div>
+  );
+}
+
+function ProjectLinks({ project }) {
+  const hasLink = project.link && project.link !== "#";
+  const hasCodeLink = project.codeLink && project.codeLink !== "#";
+
+  if (!hasLink && !hasCodeLink) return null;
+
+  return (
+    <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/68">
+      {hasLink ? (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-white"
+        >
+          <span aria-hidden="true">↗</span>
+          <span>View Project</span>
+        </a>
+      ) : null}
+
+      {hasCodeLink ? (
+        <a
+          href={project.codeLink}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-white"
+        >
+          <span aria-hidden="true">⌘</span>
+          <span>View Code</span>
+        </a>
+      ) : null}
     </div>
   );
 }
@@ -40,19 +82,40 @@ function ProjectCard({ project, index }) {
         <p className="text-[11px] uppercase tracking-[0.3em] text-white/40">{project.subtitle}</p>
         <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">{project.title}</h3>
         <p className="mt-5 text-sm leading-6 text-white/72 md:text-base md:leading-7">{project.description}</p>
+        {project.outcome ? (
+          <p className="mt-4 text-sm italic leading-6 text-white/48">{project.outcome}</p>
+        ) : null}
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-2.5">
-        {project.tools.map((tool) => (
-          <span
-            key={tool}
-            className="inline-flex w-fit items-center rounded-full border border-white/12 bg-black/30 px-3 py-1.5 text-xs text-white/68"
-          >
-            {tool}
-          </span>
-        ))}
+      <div className="mt-6">
+        <div className="flex flex-wrap gap-2.5">
+          {project.tools.map((tool) => (
+            <span
+              key={tool}
+              className="inline-flex w-fit items-center rounded-full border border-white/12 bg-black/30 px-3 py-1.5 text-xs text-white/68"
+            >
+              {tool}
+            </span>
+          ))}
+        </div>
+
+        <ProjectLinks project={project} />
       </div>
     </article>
+  );
+}
+
+function StatCard({ item, index }) {
+  return (
+    <div
+      key={item.label}
+      data-reveal
+      style={{ transitionDelay: `${index * 60}ms` }}
+      className="flex h-full min-h-[106px] flex-col justify-center rounded-2xl border border-white/8 bg-black/30 px-4 py-5 text-center"
+    >
+      <p className="text-3xl font-semibold tracking-[-0.03em]">{item.value}</p>
+      <p className="mt-2 text-xs text-white/56 md:text-sm">{item.label}</p>
+    </div>
   );
 }
 
@@ -60,8 +123,10 @@ export default function HomePage() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
+  const [activeSection, setActiveSection] = useState("about");
+  const [profileImageError, setProfileImageError] = useState(false);
 
-  const { personal, contact, projects, metrics, ai, ux } = portfolioData;
+  const { personal, about, contact, projects, metrics, ai, ux } = portfolioData;
 
   useEffect(() => {
     const elements = document.querySelectorAll("[data-reveal]");
@@ -84,6 +149,34 @@ export default function HomePage() {
     );
 
     elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const sections = navItems
+      .map((item) => document.getElementById(item.id))
+      .filter(Boolean);
+
+    if (!sections.length) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleEntries.length > 0) {
+          setActiveSection(visibleEntries[0].target.id);
+        }
+      },
+      {
+        rootMargin: "-25% 0px -55% 0px",
+        threshold: [0.2, 0.4, 0.6],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
   }, []);
@@ -133,13 +226,17 @@ export default function HomePage() {
           </a>
 
           <nav className="hidden items-center gap-6 text-sm text-white/60 md:flex">
-            {[
-              ["Projects", "projects"],
-              ["AI", "ai"],
-              ["Contact", "contact"],
-            ].map(([label, id]) => (
-              <a key={id} href={`#${id}`} className="transition-colors duration-200 hover:text-white">
-                {label}
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className={`border-b pb-1 transition-all duration-200 ${
+                  activeSection === item.id
+                    ? "border-white text-white"
+                    : "border-transparent hover:border-white/40 hover:text-white"
+                }`}
+              >
+                {item.label}
               </a>
             ))}
           </nav>
@@ -157,7 +254,6 @@ export default function HomePage() {
                 </span>
               ))}
             </h1>
-            <p className="mx-auto mt-6 max-w-[34rem] text-base text-white/68 md:text-lg lg:mx-0">{personal.heroDescription}</p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-3 lg:justify-start">
               <a href="#projects" aria-label="View projects" className={actionButtonClass}>
@@ -172,17 +268,40 @@ export default function HomePage() {
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-7" data-reveal>
             <div className="grid grid-cols-2 auto-rows-fr gap-3">
               {metrics.stats.map((item, index) => (
-                <div
-                  key={item.label}
-                  data-reveal
-                  style={{ transitionDelay: `${index * 60}ms` }}
-                  className="flex h-full min-h-[106px] flex-col justify-between rounded-2xl border border-white/8 bg-black/30 px-4 py-5 text-center"
-                >
-                  <p className="text-3xl font-semibold tracking-[-0.03em]">{item.value}</p>
-                  <p className="mt-2 text-xs text-white/56 md:text-sm">{item.label}</p>
-                </div>
+                <StatCard key={item.label} item={item} index={index} />
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className={sectionClass}>
+        <div className="grid items-center gap-10 lg:grid-cols-[0.62fr_1.38fr]">
+          <div className="flex justify-center lg:justify-start" data-reveal>
+            {!profileImageError ? (
+              <div className="relative h-52 w-52 overflow-hidden rounded-full border border-white/10 bg-white/[0.04] shadow-[0_0_0_1px_rgba(255,255,255,0.04)] md:h-60 md:w-60">
+                <Image
+                  src={about.image}
+                  alt={about.name}
+                  fill
+                  sizes="(max-width: 768px) 208px, 240px"
+                  className="object-cover"
+                  onError={() => setProfileImageError(true)}
+                />
+              </div>
+            ) : (
+              <div className="flex h-52 w-52 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-4xl font-semibold text-white/80 md:h-60 md:w-60">
+                MS
+              </div>
+            )}
+          </div>
+
+          <div data-reveal>
+            <SectionHeader
+              eyebrow="About"
+              title={about.name}
+              description={about.bio.join(" ")}
+            />
           </div>
         </div>
       </section>
@@ -191,7 +310,7 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="Projects"
           title="Selected work"
-          description="Analytics and AI projects with measurable outcomes."
+          description="A concise look at projects across analytics, AI, automation, and product thinking."
           align="center"
         />
 
@@ -209,10 +328,11 @@ export default function HomePage() {
               <p className="text-[11px] uppercase tracking-[0.3em] text-white/40">Design</p>
               <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">{ux.heading}</h3>
               <p className="mt-5 text-sm leading-6 text-white/72 md:text-base md:leading-7">{ux.body}</p>
+              <p className="mt-4 text-sm italic leading-6 text-white/48">{ux.outcome}</p>
             </div>
 
             <div className="mt-6">
-              <a href={ux.link} target="_blank" rel="noreferrer" className={actionButtonClass}>
+              <a href={ux.link || "#"} target="_blank" rel="noreferrer" className={actionButtonClass}>
                 {ux.linkLabel}
               </a>
             </div>
@@ -227,7 +347,7 @@ export default function HomePage() {
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8">
             <form onSubmit={handleAsk} className="flex flex-col gap-4">
               <label htmlFor="portfolio-question" className="text-sm text-white/56">
-                Ask about my work, experience, or the kind of value I could bring to a team.
+                Ask about my work, experience, or the value I could bring to a team.
               </label>
 
               <textarea
@@ -263,7 +383,14 @@ export default function HomePage() {
             <div className="mt-8 rounded-3xl border border-white/10 bg-black/35 p-5 md:p-6">
               <p className="text-[11px] uppercase tracking-[0.3em] text-white/40">Response</p>
               <div className="mt-4 min-h-[110px] whitespace-pre-wrap text-sm leading-7 text-white/78 md:text-base">
-                {answer || "Assistant response appears here."}
+                {answer ? (
+                  answer
+                ) : (
+                  <div className="flex items-center gap-2 italic text-white/46">
+                    <span className="h-4 w-px animate-pulse bg-white/45" aria-hidden="true" />
+                    <span>Your answer will appear here...</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -278,7 +405,7 @@ export default function HomePage() {
                   data-reveal
                   style={{ transitionDelay: `${index * 60}ms` }}
                   onClick={() => setQuestion(item)}
-                  className="flex min-h-[72px] w-full items-center rounded-2xl border border-white/10 bg-black/25 px-4 py-4 text-left text-sm leading-6 text-white/70 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-black/35 hover:text-white"
+                  className="flex min-h-[64px] w-full items-center rounded-2xl border border-white/10 bg-black/25 px-4 py-4 text-left text-sm leading-6 text-white/70 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-black/35 hover:text-white"
                 >
                   {item}
                 </button>
@@ -290,27 +417,27 @@ export default function HomePage() {
 
       <section id="contact" className={sectionClass}>
         <div className="text-center" data-reveal>
-          <h2 className="text-3xl font-medium tracking-[-0.03em] text-white md:text-4xl">Get in touch</h2>
+          <h2 className="text-3xl font-medium tracking-[-0.03em] text-white md:text-4xl">Let&apos;s Work Together</h2>
         </div>
 
-        <div className="mx-auto mt-8 grid w-full max-w-3xl gap-4 md:grid-cols-2">
+        <div className="mx-auto mt-8 flex w-full max-w-3xl flex-col gap-4 md:flex-row">
           <a
             href={`mailto:${contact.publicEmail}`}
             data-reveal
-            className="group flex min-h-[88px] items-center justify-center rounded-3xl border border-white/10 bg-white/[0.04] px-6 py-5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.055]"
+            className="group inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-6 py-4 text-center text-base font-medium text-white/82 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-white/[0.07] hover:text-white"
           >
-            <span className="text-base font-medium text-white/78 transition-colors duration-200 group-hover:text-white">Email</span>
+            Email
           </a>
 
           <a
-            href={contact.linkedin}
+            href={contact.linkedin || "#"}
             target="_blank"
             rel="noreferrer"
             data-reveal
             style={{ transitionDelay: "60ms" }}
-            className="group flex min-h-[88px] items-center justify-center rounded-3xl border border-white/10 bg-white/[0.04] px-6 py-5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.055]"
+            className="group inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-6 py-4 text-center text-base font-medium text-white/82 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-white/[0.07] hover:text-white"
           >
-            <span className="text-base font-medium text-white/78 transition-colors duration-200 group-hover:text-white">LinkedIn</span>
+            LinkedIn
           </a>
         </div>
       </section>
