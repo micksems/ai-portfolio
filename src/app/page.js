@@ -350,9 +350,7 @@ export default function HomePage() {
             className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
-              EMAIL
               Email
-              Open mail
             </p>
           </a>
 
@@ -365,9 +363,7 @@ export default function HomePage() {
             className="group flex min-h-[96px] items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center transition-[color,background-color,border-color,opacity,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-white/18 hover:bg-white/[0.05]"
           >
             <p className="text-base text-white/76 transition-colors duration-200 ease-in-out group-hover:text-white">
-              LINKEDIN
               Linkedin
-              Open profile
             </p>
           </a>
         </div>
