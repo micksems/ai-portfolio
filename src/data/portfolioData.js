@@ -4,16 +4,16 @@ export const portfolioData = {
     fullName: "Mykhailo 'Misha' Semenov",
     firstName: "Misha",
     location: "New York, NY",
-    headline: "Business analytics. AI systems. Built to work.",
-    heroTitle: ["Business analytics.", "AI systems.", "Built to work."],
-    heroDescription: "Tools, models, and workflows made for real use.",
+    headline: "Business analytics and AI systems.",
+    heroTitle: ["Business analytics.", "AI systems."],
+    heroDescription: "I build decision tools people actually use.",
   },
 
   contact: {
     publicEmail: "micksems01@gmail.com",
     linkedin: "https://www.linkedin.com/in/mykhailo-semenov/",
     location: "New York, NY",
-    availability: "Email, LinkedIn, and location.",
+    availability: "Open to analytics and AI roles.",
   },
 
   summary: {
@@ -143,63 +143,63 @@ export const portfolioData = {
   projects: [
     {
       title: "AI Portfolio Assistant",
-      subtitle: "Gemini-powered, grounded in real data",
+      subtitle: "AI product",
       description:
-        "Built an AI assistant that answers questions about my background using structured portfolio content as its source.",
+        "Built a grounded Gemini assistant in Next.js that answers role-focused questions from structured portfolio data.",
       tools: ["Next.js", "Gemini API", "Tailwind CSS", "JavaScript"],
       image: null,
       link: null,
     },
     {
       title: "UN Internal Copilot Agent Project",
-      subtitle: "Enterprise AI inside real constraints",
+      subtitle: "Workflow automation",
       description:
-        "Contributed to internal AI tooling at the United Nations using Microsoft Copilot Studio.",
+        "Designed internal Copilot Studio flows for UN operations, reducing manual back-and-forth for repeat support tasks.",
       tools: ["Microsoft Copilot Studio", "Power Automate", "Teams"],
       image: null,
       link: null,
     },
     {
       title: "March Madness Prediction Model",
-      subtitle: "Where data prep did the heavy lifting",
+      subtitle: "Predictive modeling",
       description:
-        "Built a classification model for bracket prediction, with most of the work in data cleanup, feature choice, and interpretation.",
+        "Trained a classification model in Python/SQL on historical game data to improve bracket prediction accuracy.",
       tools: ["Python", "SQL", "Machine Learning", "Data Preprocessing"],
       image: null,
       link: null,
     },
     {
       title: "Data Analytics in Excel",
-      subtitle: "Reporting built to be handed off",
+      subtitle: "Reporting system",
       description:
-        "Designed reporting workflows in Excel that stay clean, decision-ready, and presentation-safe.",
+        "Built Excel reporting templates with validation and handoff-ready structure for weekly stakeholder decisions.",
       tools: ["Excel", "Data Modeling", "PowerPoint"],
       image: null,
       link: null,
     },
     {
       title: "Machine Learning for Business",
-      subtitle: "Model output that non-technical people can use",
+      subtitle: "Applied ML",
       description:
-        "Applied ML to business problems with interpretation kept ahead of model architecture.",
+        "Delivered business ML prototypes in Python with feature interpretation prioritized for non-technical teams.",
       tools: ["Python", "Google Colab", "Data Preprocessing"],
       image: null,
       link: null,
     },
     {
       title: "Tableau Data Visualization",
-      subtitle: "Fewer charts, clearer story",
+      subtitle: "Dashboards",
       description:
-        "Built dashboards in Tableau by cutting until only what mattered remained.",
+        "Created Tableau dashboards that surfaced the core KPIs and cut reporting review time for decision meetings.",
       tools: ["Tableau", "Data Visualization", "Business Analytics"],
       image: null,
       link: null,
     },
     {
       title: "Python Fitness Tracker",
-      subtitle: "Small project, deliberate structure",
+      subtitle: "Product prototype",
       description:
-        "A Python project with clean data flow and a clear user-facing purpose.",
+        "Built a Python tracker with structured logging and progress summaries to turn raw activity into usable trends.",
       tools: ["Python", "Data Modeling"],
       image: null,
       link: null,
@@ -278,33 +278,31 @@ export const portfolioData = {
     projectCount: 7,
     stats: [
       { value: "2019", label: "Professional start" },
-      { value: "20+", label: "Years in the water" },
+      { value: "2024", label: "AI systems since" },
       { value: "7", label: "Featured projects" },
       { value: "4", label: "Languages" },
     ],
   },
 
   ai: {
-    heading: "Ask about the work.",
-    subtext: "",
+    heading: "Ask for the full context.",
+    subtext: "The page is minimal by design. The assistant handles the detail.",
     sampleQuestions: [
-      "What's your experience with AI systems and workflow automation?",
-      "Can you walk me through your UN Copilot Studio project?",
-      "How would you approach a business analytics problem?",
-      "What tools do you work with for data and AI?",
-      "Tell me about your background in analytics.",
-      "What makes your approach to reporting different?",
+      "Summarize experience",
+      "Walk me through projects",
+      "List core skills",
+      "Explain education timeline",
+      "Which tools do you use?",
+      "Tell me about the UN project",
     ],
     responseStyle:
       "Clear, concise, natural, and grounded only in the provided portfolio information.",
   },
 
   ux: {
-    heading: "UX work.",
-    intro:
-      "Before the analytics path took over, I spent time building no-code prototypes and web experiences for small businesses.",
-    body:
-      "These are demos from that period - kept here as a separate track, not the main act.",
+    heading: "UX prototypes.",
+    intro: "No-code product concepts for small businesses.",
+    body: "Built quick prototypes to test structure, flow, and clarity before full build-out.",
     linkLabel: "View UX demos",
     link: "https://micksems01.wixstudio.com/my-site",
   },
