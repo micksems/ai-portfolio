@@ -4,9 +4,10 @@ export const portfolioData = {
     fullName: "Mykhailo 'Misha' Semenov",
     firstName: "Misha",
     location: "New York, NY",
-    headline: "Business analytics and AI candidate.",
-    heroTitle: ["Business Analytics", "AI Systems", "Decision-Ready Work"],
-    heroDescription: "MS candidate building analytics, automation, and AI systems teams can use fast.",
+    headline: "Business analytics graduate student building practical AI tools.",
+    heroTitle: ["Analytics that", "make sense fast", "and hold up later"],
+    heroDescription:
+      "I build reporting, automation, and AI workflows that help teams move from raw information to clearer decisions.",
   },
 
   contact: {
@@ -17,10 +18,10 @@ export const portfolioData = {
   },
 
   summary: {
-    short: "Practical analytics work with clean execution.",
-    long: "Focused on business analytics, AI workflows, and reporting teams can trust.",
-    secondary: "Built at the intersection of analysis, automation, and communication.",
-    tertiary: "Use the assistant for deeper project detail.",
+    short: "Practical analytics work with a strong communication layer.",
+    long: "My work sits between analysis, automation, and business context, so the output is useful to the people making decisions.",
+    secondary: "I care about making technical work understandable, not just impressive.",
+    tertiary: "If you want more detail, the assistant can walk through projects, tools, and experience.",
     focusAreas: [
       "Agentic AI",
       "Workflow Automation",
@@ -38,7 +39,7 @@ export const portfolioData = {
       start: "2025",
       end: "2026",
       current: true,
-      details: ["Graduate focus on AI systems, reporting, and decision support."],
+      details: ["Focused on AI systems, reporting, and decision support for real business use cases."],
     },
     {
       school: "Lewis University",
@@ -47,7 +48,7 @@ export const portfolioData = {
       start: "2021",
       end: "2025",
       current: false,
-      details: ["Completed while competing as a Division I NCAA swimmer."],
+      details: ["Completed while competing as a Division I NCAA swimmer and balancing a high-performance schedule."],
     },
     {
       school: "Emmanuel University",
@@ -56,7 +57,7 @@ export const portfolioData = {
       start: "2021",
       end: "2023",
       current: false,
-      details: ["Early business coursework before transfer."],
+      details: ["Started my business studies here before transferring and continuing the degree path elsewhere."],
     },
   ],
 
@@ -68,10 +69,10 @@ export const portfolioData = {
       start: "Jan 2026",
       end: "Present",
       category: "AI & Automation",
-      summary: "Internal AI tooling with Microsoft Copilot Studio for daily operations.",
+      summary: "Building internal AI tooling with Microsoft Copilot Studio to support day-to-day operations.",
       highlights: [
-        "Built internal AI workflow tooling inside a live operating environment.",
-        "Delivered assistant experiences for administrative and analytical requests.",
+        "Built workflow tools in a live operating environment where reliability matters.",
+        "Created assistant experiences for recurring administrative and analytical requests.",
       ],
       tools: ["Microsoft Copilot Studio", "Power Automate", "Teams", "Slack"],
     },
@@ -82,10 +83,10 @@ export const portfolioData = {
       start: "Aug 2024",
       end: "May 2025",
       category: "Coordination",
-      summary: "Program coordination and stakeholder communication.",
+      summary: "Managed program coordination and kept communication moving across teams.",
       highlights: [
         "Coordinated planning and delivery across student and staff stakeholders.",
-        "Maintained consistent execution across recurring program needs.",
+        "Kept recurring work organized and dependable across changing needs.",
       ],
       tools: ["Excel", "PowerPoint", "Teams"],
     },
@@ -96,10 +97,10 @@ export const portfolioData = {
       start: "May 2024",
       end: "Aug 2024",
       category: "Analytics",
-      summary: "Operational analysis and AI-supported reporting.",
+      summary: "Handled operational analysis and AI-supported reporting for leadership review.",
       highlights: [
-        "Analyzed seasonal operations and built reports for leadership review.",
-        "Packaged analysis into clear outputs for non-technical users.",
+        "Analyzed seasonal operations and turned the results into usable reports.",
+        "Packaged analysis in a way that worked for non-technical decision-makers.",
       ],
       tools: ["Python", "Excel", "Google Colab"],
     },
@@ -110,10 +111,10 @@ export const portfolioData = {
       start: "Mar 2024",
       end: "Jun 2024",
       category: "Marketing Analytics",
-      summary: "Performance reporting and behavioral analysis.",
+      summary: "Built performance reporting and behavior analysis around marketing data.",
       highlights: [
-        "Built campaign performance reports tied to weekly decisions.",
-        "Analyzed behavior and channel results across marketing data.",
+        "Created campaign reporting tied to weekly decisions, not just passive dashboards.",
+        "Analyzed customer behavior and channel performance across marketing data.",
       ],
       tools: ["Excel", "Tableau", "SEO"],
     },
@@ -124,10 +125,10 @@ export const portfolioData = {
       start: "Aug 2019",
       end: "Jan 2021",
       category: "Sales",
-      summary: "Sales management and client operations.",
+      summary: "Managed sales activity and client communication in a fast-moving environment.",
       highlights: [
-        "Managed client communication and recurring sales operations.",
-        "Built a foundation in pace, accountability, and execution discipline.",
+        "Handled client communication and recurring sales operations.",
+        "Built an early foundation in pace, accountability, and execution discipline.",
       ],
       tools: ["Sales Operations", "Client Communication"],
     },
@@ -138,7 +139,7 @@ export const portfolioData = {
       title: "AI Portfolio Assistant",
       subtitle: "Conversational AI",
       description:
-        "Built a Gemini assistant on structured portfolio data so hiring teams can query experience, tools, and timeline instantly.",
+        "Built a Gemini-powered assistant on top of structured portfolio data so recruiters and hiring managers can explore my background naturally.",
       tools: ["Next.js", "Gemini API", "Tailwind CSS", "JavaScript"],
       image: null,
       link: null,
@@ -147,7 +148,7 @@ export const portfolioData = {
       title: "UN Internal Copilot Agent",
       subtitle: "Enterprise Automation",
       description:
-        "Designed Copilot Studio workflows with Power Automate to route recurring support requests inside UN operational constraints.",
+        "Designed Copilot Studio flows with Power Automate to handle recurring support requests inside real operational constraints.",
       tools: ["Microsoft Copilot Studio", "Power Automate", "Teams"],
       image: null,
       link: null,
@@ -156,7 +157,7 @@ export const portfolioData = {
       title: "March Madness Prediction Model",
       subtitle: "Predictive Analytics",
       description:
-        "Built a Python + SQL classification pipeline, improving prediction quality through disciplined feature engineering and data cleaning.",
+        "Built a Python and SQL classification pipeline, improving prediction quality through feature engineering and disciplined data cleaning.",
       tools: ["Python", "SQL", "Machine Learning", "Data Preprocessing"],
       image: null,
       link: null,
@@ -165,7 +166,7 @@ export const portfolioData = {
       title: "Decision Reporting in Excel",
       subtitle: "Business Reporting",
       description:
-        "Created handoff-ready Excel reporting models with clear KPI logic and presentation outputs for faster stakeholder review.",
+        "Created Excel reporting models with clear KPI logic and presentation-ready outputs for faster stakeholder review.",
       tools: ["Excel", "Data Modeling", "PowerPoint"],
       image: null,
       link: null,
@@ -174,7 +175,7 @@ export const portfolioData = {
       title: "Machine Learning for Business",
       subtitle: "Applied ML",
       description:
-        "Applied supervised models to business cases and translated outputs into decisions non-technical teams could act on.",
+        "Applied supervised learning to business cases and translated the results into actions non-technical teams could actually use.",
       tools: ["Python", "Google Colab", "Data Preprocessing"],
       image: null,
       link: null,
@@ -183,7 +184,7 @@ export const portfolioData = {
       title: "Tableau Executive Dashboards",
       subtitle: "Data Visualization",
       description:
-        "Built Tableau dashboards that cut chart clutter and surfaced trend, risk, and performance signals for quick executive reads.",
+        "Built Tableau dashboards that reduced chart clutter and highlighted trend, risk, and performance signals for faster executive reads.",
       tools: ["Tableau", "Data Visualization", "Business Analytics"],
       image: null,
       link: null,
@@ -192,7 +193,7 @@ export const portfolioData = {
       title: "Python Fitness Tracker",
       subtitle: "Product Analytics",
       description:
-        "Developed a lightweight Python tracker with structured data flow and progress metrics for routine performance analysis.",
+        "Developed a lightweight Python tracker with structured data flow and progress metrics for recurring performance analysis.",
       tools: ["Python", "Data Modeling"],
       image: null,
       link: null,
@@ -245,7 +246,7 @@ export const portfolioData = {
   honors: ["NCAA medalist", "NCAA All-American", "Dean's Scholarship recipient"],
 
   athletics: {
-    profile: "NCAA swimmer with 20+ years in the sport.",
+    profile: "NCAA swimmer with more than 20 years in the sport.",
     highlights: [
       "NCAA swimmer",
       "20+ years in the water",
@@ -272,8 +273,8 @@ export const portfolioData = {
   },
 
   ai: {
-    heading: "Ask for the deeper details",
-    subtext: "Minimal page. Full context lives in the assistant.",
+    heading: "Ask for the details behind the highlights",
+    subtext: "The page stays concise on purpose. The assistant can fill in the context.",
     sampleQuestions: [
       "Experience",
       "Projects",
@@ -289,8 +290,8 @@ export const portfolioData = {
   ux: {
     heading: "UX Prototype Work",
     intro: "",
-    body: "Built no-code prototypes to test interaction flow and business messaging.",
-    linkLabel: "View UX demos",
+    body: "Built no-code prototypes to test interaction flow, messaging, and how a user moves through a product story.",
+    linkLabel: "View prototypes",
     link: "https://micksems01.wixstudio.com/my-site",
   },
 };
