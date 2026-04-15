@@ -6,7 +6,7 @@ import { portfolioData } from "@/data/portfolioData";
 
 const sectionClass = "relative mx-auto w-full max-w-6xl px-6 py-16 md:px-10 md:py-24";
 const cardClass =
-  "group flex h-full min-h-[320px] flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.055]";
+  "group flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.055]";
 
 function SectionHeader({ eyebrow, title, description, align = "left" }) {
   const alignment =
@@ -21,7 +21,7 @@ function SectionHeader({ eyebrow, title, description, align = "left" }) {
       {eyebrow ? (
         <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">{eyebrow}</p>
       ) : null}
-      <h2 className="mt-4 text-3xl font-medium leading-tight tracking-[-0.03em] text-white md:text-4xl">{title}</h2>
+      <h2 className="mt-4 text-3xl font-medium tracking-[-0.03em] text-white md:text-4xl">{title}</h2>
       {description ? <p className="mt-4 text-sm text-white/60 md:text-base">{description}</p> : null}
     </div>
   );
@@ -281,7 +281,7 @@ export default function HomePage() {
 
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8">
             <p className="text-[11px] uppercase tracking-[0.3em] text-white/40">Suggested prompts</p>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            <div className="mt-5 flex flex-wrap gap-3">
               {ai.sampleQuestions.map((item, index) => (
                 <button
                   key={item}
@@ -289,7 +289,7 @@ export default function HomePage() {
                   data-reveal
                   style={{ transitionDelay: `${index * 60}ms` }}
                   onClick={() => setQuestion(item)}
-                  className="inline-flex w-full items-center justify-center rounded-full border border-white/10 bg-black/25 px-4 py-2.5 text-sm text-white/70 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:text-white"
+                  className="inline-flex w-fit items-center rounded-full border border-white/10 bg-black/25 px-4 py-2.5 text-sm text-white/70 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:text-white"
                 >
                   {item}
                 </button>
@@ -300,7 +300,7 @@ export default function HomePage() {
       </section>
 
       <section id="contact" className={sectionClass}>
-        <SectionHeader eyebrow="Contact" title="Letâ€™s connect" description="Open to analytics and AI roles." align="center" />
+        <SectionHeader eyebrow="Contact" title="Let’s connect" description="Open to analytics and AI roles." align="center" />
 
         <div className="mx-auto mt-10 grid w-full max-w-3xl gap-5 md:grid-cols-2">
           <a

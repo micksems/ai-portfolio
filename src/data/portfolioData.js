@@ -6,7 +6,7 @@ export const portfolioData = {
     location: "New York, NY",
     headline: "Business analytics and AI candidate.",
     heroTitle: ["Business Analytics", "AI Systems", "Decision-Ready Work"],
-    heroDescription: "MS candidate building analytics, automation, and AI systems teams can use fast.",
+    heroDescription: "MS candidate building analytics, automation, and AI for real teams.",
   },
 
   contact: {
@@ -138,7 +138,7 @@ export const portfolioData = {
       title: "AI Portfolio Assistant",
       subtitle: "Conversational AI",
       description:
-        "Built a Gemini assistant on structured portfolio data so hiring teams can query experience, tools, and timeline instantly.",
+        "Built a Gemini-based assistant using structured profile data so recruiters can query experience, projects, and timeline in seconds.",
       tools: ["Next.js", "Gemini API", "Tailwind CSS", "JavaScript"],
       image: null,
       link: null,
@@ -147,7 +147,7 @@ export const portfolioData = {
       title: "UN Internal Copilot Agent",
       subtitle: "Enterprise Automation",
       description:
-        "Designed Copilot Studio workflows with Power Automate to route recurring support requests inside UN operational constraints.",
+        "Designed internal Copilot Studio workflows with Power Automate to route recurring support requests inside UN operational constraints.",
       tools: ["Microsoft Copilot Studio", "Power Automate", "Teams"],
       image: null,
       link: null,
@@ -156,7 +156,7 @@ export const portfolioData = {
       title: "March Madness Prediction Model",
       subtitle: "Predictive Analytics",
       description:
-        "Built a Python + SQL classification pipeline, improving prediction quality through disciplined feature engineering and data cleaning.",
+        "Built a classification pipeline in Python and SQL, improving bracket prediction quality through feature engineering and data cleaning.",
       tools: ["Python", "SQL", "Machine Learning", "Data Preprocessing"],
       image: null,
       link: null,
@@ -165,7 +165,7 @@ export const portfolioData = {
       title: "Decision Reporting in Excel",
       subtitle: "Business Reporting",
       description:
-        "Created handoff-ready Excel reporting models with clear KPI logic and presentation outputs for faster stakeholder review.",
+        "Created handoff-ready Excel reporting models with clear KPI structure and presentation outputs for faster stakeholder review.",
       tools: ["Excel", "Data Modeling", "PowerPoint"],
       image: null,
       link: null,
@@ -174,7 +174,7 @@ export const portfolioData = {
       title: "Machine Learning for Business",
       subtitle: "Applied ML",
       description:
-        "Applied supervised models to business cases and translated outputs into decisions non-technical teams could act on.",
+        "Applied supervised models to business cases and translated output into recommendations non-technical teams could act on.",
       tools: ["Python", "Google Colab", "Data Preprocessing"],
       image: null,
       link: null,
@@ -183,7 +183,7 @@ export const portfolioData = {
       title: "Tableau Executive Dashboards",
       subtitle: "Data Visualization",
       description:
-        "Built Tableau dashboards that cut chart clutter and surfaced trend, risk, and performance signals for quick executive reads.",
+        "Built Tableau dashboards that reduced chart clutter and surfaced trend, risk, and performance signals for quick executive reads.",
       tools: ["Tableau", "Data Visualization", "Business Analytics"],
       image: null,
       link: null,
@@ -192,7 +192,7 @@ export const portfolioData = {
       title: "Python Fitness Tracker",
       subtitle: "Product Analytics",
       description:
-        "Developed a lightweight Python tracker with structured data flow and progress metrics for routine performance analysis.",
+        "Developed a lightweight Python tracker with structured data flow and progress metrics to support routine performance analysis.",
       tools: ["Python", "Data Modeling"],
       image: null,
       link: null,
