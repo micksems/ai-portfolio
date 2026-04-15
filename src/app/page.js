@@ -14,7 +14,9 @@ function SectionHeader({ eyebrow, title, description, align = "left" }) {
 
   return (
     <div className={`max-w-3xl ${alignment}`} data-reveal>
-      <p className="text-xs uppercase tracking-[0.35em] text-white/40">{eyebrow}</p>
+      {eyebrow ? (
+        <p className="text-xs uppercase tracking-[0.35em] text-white/40">{eyebrow}</p>
+      ) : null}
       <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
         {title}
       </h2>
