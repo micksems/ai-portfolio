@@ -245,45 +245,16 @@ export default function HomePage() {
       </header>
 
       <section id="home" className={sectionClass}>
-        <div className="grid items-center gap-10 lg:grid-cols-[1.28fr_0.72fr]">
+        <div className="grid items-end gap-10 lg:grid-cols-[1.28fr_0.72fr]">
           <div className="max-w-3xl text-center lg:text-left" data-reveal>
             <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">{personal.location}</p>
-            <h1 className="mt-6 text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[5.15rem]">
-              {personal.heroTitle.map((line, index) =>
-                index === 2 ? (
-                  <span
-                    key={line}
-                    className="mt-1 flex items-center justify-center gap-3 sm:gap-4 lg:justify-start"
-                  >
-                    <span>Numbers</span>
-                    <svg
-                      aria-hidden="true"
-                      viewBox="0 0 120 24"
-                      className="h-4 w-18 text-white sm:h-5 sm:w-24 md:w-28"
-                    >
-                      <path
-                        d="M4 12H104"
-                        stroke="currentColor"
-                        strokeWidth="2.2"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M92 4L104 12L92 20"
-                        stroke="currentColor"
-                        strokeWidth="2.2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        fill="none"
-                      />
-                    </svg>
-                    <span>Solutions</span>
-                  </span>
-                ) : (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
-                )
-              )}
+            <h1 className="mt-6 text-5xl font-semibold leading-[1.01] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[5.15rem]">
+              <span className="block">{personal.heroTitle[0]}</span>
+              <span className="block">{personal.heroTitle[1]}</span>
+              <span className="hero-word-wrap mt-1 block">
+                <span className="hero-word hero-word-primary">Numbers</span>
+                <span className="hero-word hero-word-secondary">Solutions</span>
+              </span>
             </h1>
 
             <div className="mt-10 flex flex-wrap justify-center gap-3 lg:justify-start">
@@ -296,7 +267,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="self-center rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-7" data-reveal>
+          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-7 lg:-translate-y-2" data-reveal>
             <div className="grid grid-cols-2 auto-rows-fr gap-3">
               {metrics.stats.map((item, index) => (
                 <StatCard key={item.label} item={item} index={index} />
