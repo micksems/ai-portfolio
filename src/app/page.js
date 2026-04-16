@@ -37,24 +37,19 @@ function SectionHeader({ eyebrow, title, description, align = "left" }) {
 }
 
 function ProjectLinks({ project }) {
-  const hasLink = project.link && project.link !== "#";
+  const projectUrl = project.link || project.codeLink || "#";
   const hasCodeLink = project.codeLink && project.codeLink !== "#";
-
-  if (!hasLink && !hasCodeLink) return null;
 
   return (
     <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/68">
-      {hasLink ? (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-white"
-        >
-          <span aria-hidden="true">-&gt;</span>
-          <span>View Project</span>
-        </a>
-      ) : null}
+      <a
+        href={projectUrl}
+        target="_blank"
+        rel="noreferrer"
+        className={actionButtonClass}
+      >
+        See Project
+      </a>
 
       {hasCodeLink ? (
         <a
