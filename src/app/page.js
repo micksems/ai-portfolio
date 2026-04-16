@@ -247,7 +247,7 @@ export default function HomePage() {
         <div className="grid items-end gap-10 lg:grid-cols-[1.28fr_0.72fr]">
           <div className="max-w-3xl text-center lg:text-left" data-reveal>
             <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">{personal.location}</p>
-            <h1 className="mt-6 text-5xl font-semibold leading-[0.93] tracking-[-0.05em] text-white sm:text-6xl md:text-7xl lg:text-[5.15rem]">
+            <h1 className="mt-6 text-5xl font-semibold leading-[0.98] tracking-[-0.05em] text-white sm:text-6xl md:text-7xl lg:text-[5.15rem]">
               {personal.heroTitle.map((line) => (
                 <span key={line} className="block">
                   {line}
@@ -341,7 +341,7 @@ export default function HomePage() {
       </section>
 
       <section id="ai" className={sectionClass}>
-        <SectionHeader eyebrow="AI Assistant" title={ai.heading} description={ai.subtext} align="right" />
+        <SectionHeader eyebrow="AI Assistant" title={ai.heading} description={ai.subtext} align="center" />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.12fr_0.88fr]">
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8">

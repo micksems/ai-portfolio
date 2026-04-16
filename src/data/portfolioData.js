@@ -5,7 +5,7 @@ export const portfolioData = {
     firstName: "Misha",
     location: "New York, NY",
     headline: "Business analytics and AI candidate.",
-    heroTitle: ["Business Analytics", "AI Systems", "Decision-Ready Work"],
+    heroTitle: ["Business Analytics", "AI Systems", "from numbers to solutions"],
     heroDescription: "MS candidate building analytics, automation, and AI for real teams.",
   },
 
@@ -147,9 +147,8 @@ export const portfolioData = {
     {
       title: "AI Portfolio Assistant",
       subtitle: "Conversational AI",
-      description:
-        "Built a Gemini-based assistant using structured profile data so recruiters can query experience, projects, and timeline in seconds.",
-      outcome: "→ Enables recruiters to talk to AI that is trained on my resume.",
+      description: "Enables recruiters to talk to AI that is trained on my resume.",
+      outcome: "",
       tools: ["Next.js", "Gemini API", "Tailwind CSS", "JavaScript"],
       image: null,
       link: null,
@@ -159,8 +158,8 @@ export const portfolioData = {
       title: "UN x Microsoft Agentic AI",
       subtitle: "Enterprise Automation",
       description:
-        "Designed internal Copilot Studio workflows with Power Automate to route recurring support requests inside UN operational constraints.",
-      outcome: "→ Built a multi-agent AI automated product for the internal use of the United Nations in collaboration with Microsoft.",
+        "Built a multi-agent AI automated product for the internal use of the United Nations in collaboration with Microsoft.",
+      outcome: "",
       tools: ["Microsoft Copilot Studio", "Power Automate", "Teams"],
       image: null,
       link: null,
@@ -170,8 +169,8 @@ export const portfolioData = {
       title: "March Data Crunch Madness x Deloitte",
       subtitle: "Predictive Analytics",
       description:
-        "Built a classification pipeline in Python and SQL, improving bracket prediction quality through feature engineering and data cleaning.",
-      outcome: "→ Built a mutli-layered machine learning prediction model using natural language processing and feature engineering.",
+        "Built a mutli-layered machine learning prediction model using natural language processing and feature engineering.",
+      outcome: "",
       tools: ["Python", "SQL", "Machine Learning", "Data Preprocessing"],
       image: null,
       link: null,
@@ -180,9 +179,8 @@ export const portfolioData = {
     {
       title: "Decision Reporting in Excel",
       subtitle: "Business Reporting",
-      description:
-        "Created handoff-ready Excel reporting models with clear KPI structure and presentation outputs for faster stakeholder review.",
-      outcome: "→ Cut stakeholder reporting prep time with handoff-ready, presentation-quality outputs.",
+      description: "Cut stakeholder reporting prep time with handoff-ready, presentation-quality outputs.",
+      outcome: "",
       tools: ["Excel", "Data Modeling", "PowerPoint"],
       image: null,
       link: null,
@@ -192,8 +190,8 @@ export const portfolioData = {
       title: "Customer Segmentation Model",
       subtitle: "Applied ML",
       description:
-        "Applied supervised models to business cases and translated output into recommendations non-technical teams could act on.",
-      outcome: "→ ML model that divides customers into clusters which helps identifying best marketing solutions and resource planning.",
+        "ML model that divides customers into clusters which helps identifying best marketing solutions and resource planning.",
+      outcome: "",
       tools: ["Python", "Google Colab", "Data Preprocessing"],
       image: null,
       link: null,
@@ -203,8 +201,8 @@ export const portfolioData = {
       title: "Research project",
       subtitle: "Data Research",
       description:
-        "Built Tableau dashboards that reduced chart clutter and surfaced trend, risk, and performance signals for quick executive reads.",
-      outcome: "→ Collected, cleaned, normalized, and visualized data from WDI to show the correlation between quality of education and its effects on economy.",
+        "Collected, cleaned, normalized, and visualized data from WDI to show the correlation between quality of education and its effects on economy.",
+      outcome: "",
       tools: ["Tableau", "Data Visualization", "Business Analytics"],
       image: null,
       link: null,
@@ -214,8 +212,8 @@ export const portfolioData = {
       title: "Python Fitness Tracker",
       subtitle: "Product Analytics",
       description:
-        "Developed a lightweight Python tracker with structured data flow and progress metrics to support routine performance analysis.",
-      outcome: "→ Built a simple tool that allows for measuring one's high jump and choose next rep's weight based on the chosen training style. It automatically saves the results to a csv on user's computer.",
+        "Built a simple tool that allows for measuring one's high jump and choose next rep's weight based on the chosen training style. It automatically saves the results to a csv on user's computer.",
+      outcome: "",
       tools: ["Python", "Data Modeling"],
       image: null,
       link: null,
@@ -264,7 +262,7 @@ export const portfolioData = {
     },
   ],
 
-  languages: ["English", "Ukrainian", "Russian", "Polish"],
+  languages: ["English", "Ukrainian", "Russian"],
 
   honors: ["NCAA medalist", "NCAA All-American", "Dean's Scholarship recipient"],
 
@@ -284,14 +282,14 @@ export const portfolioData = {
     aiExperienceStartYear: 2024,
     swimmingYears: 20,
     coachingYears: "Placeholder - add exact number if needed",
-    languagesSpoken: 4,
+    languagesSpoken: 3,
     educationProgramsListed: 3,
     projectCount: 7,
     stats: [
       { value: "5+", label: "Years Experience" },
       { value: "3+", label: "AI & Automation Projects" },
       { value: "8", label: "Projects Shipped" },
-      { value: "NYC", label: "Based" },
+      { value: "3", label: "Languages" },
     ],
   },
 
@@ -313,10 +311,10 @@ export const portfolioData = {
   ux: {
     heading: "UX Prototype Work",
     intro: "",
-    body: "Built no-code prototypes to test interaction flow and business messaging.",
+    body:
+      "I started using no code solutions way before it was cool. It's the link to my older portfolio where I showed off my web design skills. Majority of projects were built as demos for small businesses. No cost at all, just the love of the game.",
     linkLabel: "View UX demos",
     link: "https://micksems01.wixstudio.com/my-site",
-    outcome:
-      "→ I started using no code solutions way before it was cool. It's the link to my older portfolio where I showed off my web design skills. Majority of projects were built as demos for small businesses. No cost at all, just the love of the game.",
+    outcome: "",
   },
 };
