@@ -61,9 +61,15 @@ function ProjectLinks({ project }) {
           href={project.codeLink}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-white"
+          className="inline-flex items-center gap-2 transition-all duration-200 hover:-translate-y-0.5 hover:text-white"
         >
-          <span aria-hidden="true">&lt;/&gt;</span>
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            className="h-4 w-4 fill-current"
+          >
+            <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.72-4.04-1.41-4.04-1.41-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.22 1.84 1.22 1.08 1.8 2.82 1.28 3.5.98.11-.76.42-1.28.77-1.58-2.67-.3-5.47-1.31-5.47-5.86 0-1.3.47-2.36 1.23-3.19-.12-.3-.53-1.52.12-3.17 0 0 1.01-.32 3.3 1.22a11.6 11.6 0 0 1 6 0c2.28-1.54 3.29-1.22 3.29-1.22.66 1.65.25 2.87.12 3.17.77.83 1.23 1.89 1.23 3.19 0 4.56-2.8 5.55-5.48 5.85.43.37.81 1.1.81 2.23v3.31c0 .32.21.69.83.58A12 12 0 0 0 12 .5Z" />
+          </svg>
           <span>View Code</span>
         </a>
       ) : null}
@@ -92,7 +98,7 @@ function ProjectCard({ project, index }) {
           {project.tools.map((tool) => (
             <span
               key={tool}
-              className="inline-flex w-fit items-center rounded-full border border-white/12 bg-black/30 px-3 py-1.5 text-xs text-white/68"
+              className="inline-flex w-fit items-center rounded-full border border-white/12 bg-black/30 px-3 py-1.5 text-xs text-white/68 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-black/40 hover:text-white"
             >
               {tool}
             </span>
@@ -111,7 +117,7 @@ function StatCard({ item, index }) {
       key={item.label}
       data-reveal
       style={{ transitionDelay: `${index * 60}ms` }}
-      className="flex h-full min-h-[112px] flex-col justify-center rounded-2xl border border-white/8 bg-black/30 px-4 py-5 text-center"
+      className="flex h-full min-h-[112px] flex-col justify-center rounded-2xl border border-white/8 bg-black/30 px-4 py-5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-white/18 hover:bg-black/40"
     >
       <p className="text-3xl font-semibold tracking-[-0.03em] text-white">{item.value}</p>
       <p className="mt-2 text-sm leading-5 text-white/56">{item.label}</p>
@@ -230,10 +236,10 @@ export default function HomePage() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`border-b pb-1 transition-all duration-200 ${
+                className={`rounded-full px-3 py-1.5 transition-all duration-200 ${
                   activeSection === item.id
-                    ? "border-white text-white"
-                    : "border-transparent hover:border-white/40 hover:text-white"
+                    ? "bg-white/10 text-white"
+                    : "text-white/60 hover:bg-white/8 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -248,11 +254,41 @@ export default function HomePage() {
           <div className="max-w-3xl text-center lg:text-left" data-reveal>
             <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">{personal.location}</p>
             <h1 className="mt-6 text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[5.15rem]">
-              {personal.heroTitle.map((line) => (
-                <span key={line} className="block">
-                  {line}
-                </span>
-              ))}
+              {personal.heroTitle.map((line, index) =>
+                index === 2 ? (
+                  <span
+                    key={line}
+                    className="mt-1 flex items-center justify-center gap-3 sm:gap-4 lg:justify-start"
+                  >
+                    <span>Numbers</span>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 120 24"
+                      className="h-4 w-18 text-white sm:h-5 sm:w-24 md:w-28"
+                    >
+                      <path
+                        d="M4 12H104"
+                        stroke="currentColor"
+                        strokeWidth="2.2"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M92 4L104 12L92 20"
+                        stroke="currentColor"
+                        strokeWidth="2.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        fill="none"
+                      />
+                    </svg>
+                    <span>Solutions</span>
+                  </span>
+                ) : (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                )
+              )}
             </h1>
 
             <div className="mt-10 flex flex-wrap justify-center gap-3 lg:justify-start">
