@@ -81,37 +81,37 @@ a {
 }
 
 .hero-word-primary {
-  animation: hero-word-primary 1s ease-in-out infinite;
+  animation: hero-word-primary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 .hero-word-secondary {
   opacity: 0;
-  animation: hero-word-secondary 1s ease-in-out infinite;
+  animation: hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 @keyframes hero-word-primary {
   0%,
-  40% {
+  38% {
     opacity: 1;
     transform: translateY(0);
   }
 
-  50%,
+  52%,
   100% {
     opacity: 0;
-    transform: translateY(-72%);
+    transform: translateY(-64%);
   }
 }
 
 @keyframes hero-word-secondary {
   0%,
-  40% {
+  38% {
     opacity: 0;
-    transform: translateY(72%);
+    transform: translateY(64%);
   }
 
-  50%,
-  90% {
+  52%,
+  88% {
     opacity: 1;
     transform: translateY(0);
   }
