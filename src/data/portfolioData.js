@@ -5,7 +5,7 @@ export const portfolioData = {
     firstName: "Misha",
     location: "New York, NY",
     headline: "Business analytics and AI candidate.",
-    heroTitle: ["Business Analytics", "AI Systems", "from numbers to solutions"],
+    heroTitle: ["Business Analytics", "AI Systems", "Numbers -> Solutions"],
     heroDescription: "MS candidate building analytics, automation, and AI for real teams.",
   },
 

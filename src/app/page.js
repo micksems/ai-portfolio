@@ -51,7 +51,7 @@ function ProjectLinks({ project }) {
           rel="noreferrer"
           className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-white"
         >
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true">-&gt;</span>
           <span>View Project</span>
         </a>
       ) : null}
@@ -63,7 +63,7 @@ function ProjectLinks({ project }) {
           rel="noreferrer"
           className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-white"
         >
-          <span aria-hidden="true">⌘</span>
+          <span aria-hidden="true">&lt;/&gt;</span>
           <span>View Code</span>
         </a>
       ) : null}
@@ -111,10 +111,10 @@ function StatCard({ item, index }) {
       key={item.label}
       data-reveal
       style={{ transitionDelay: `${index * 60}ms` }}
-      className="flex h-full min-h-[106px] flex-col justify-center rounded-2xl border border-white/8 bg-black/30 px-4 py-5 text-center"
+      className="flex h-full min-h-[112px] flex-col justify-center rounded-2xl border border-white/8 bg-black/30 px-4 py-5 text-center"
     >
-      <p className="text-3xl font-semibold tracking-[-0.03em]">{item.value}</p>
-      <p className="mt-2 text-xs text-white/56 md:text-sm">{item.label}</p>
+      <p className="text-3xl font-semibold tracking-[-0.03em] text-white">{item.value}</p>
+      <p className="mt-2 text-sm leading-5 text-white/56">{item.label}</p>
     </div>
   );
 }
@@ -244,10 +244,10 @@ export default function HomePage() {
       </header>
 
       <section id="home" className={sectionClass}>
-        <div className="grid items-end gap-10 lg:grid-cols-[1.28fr_0.72fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.28fr_0.72fr]">
           <div className="max-w-3xl text-center lg:text-left" data-reveal>
             <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">{personal.location}</p>
-            <h1 className="mt-6 text-5xl font-semibold leading-[0.98] tracking-[-0.05em] text-white sm:text-6xl md:text-7xl lg:text-[5.15rem]">
+            <h1 className="mt-6 text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[5.15rem]">
               {personal.heroTitle.map((line) => (
                 <span key={line} className="block">
                   {line}
@@ -265,7 +265,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-7" data-reveal>
+          <div className="self-center rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-7" data-reveal>
             <div className="grid grid-cols-2 auto-rows-fr gap-3">
               {metrics.stats.map((item, index) => (
                 <StatCard key={item.label} item={item} index={index} />
@@ -285,7 +285,7 @@ export default function HomePage() {
                   alt={about.name}
                   fill
                   sizes="(max-width: 768px) 208px, 240px"
-                  className="object-cover"
+                  className="object-cover object-[58%_center]"
                   onError={() => setProfileImageError(true)}
                 />
               </div>
@@ -297,11 +297,7 @@ export default function HomePage() {
           </div>
 
           <div data-reveal>
-            <SectionHeader
-              eyebrow="About"
-              title={about.name}
-              description={about.bio.join(" ")}
-            />
+            <SectionHeader eyebrow="About" title={about.name} description={about.bio.join(" ")} />
           </div>
         </div>
       </section>
@@ -328,7 +324,9 @@ export default function HomePage() {
               <p className="text-[11px] uppercase tracking-[0.3em] text-white/40">Design</p>
               <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">{ux.heading}</h3>
               <p className="mt-5 text-sm leading-6 text-white/72 md:text-base md:leading-7">{ux.body}</p>
-              <p className="mt-4 text-sm italic leading-6 text-white/48">{ux.outcome}</p>
+              {ux.outcome ? (
+                <p className="mt-4 text-sm italic leading-6 text-white/48">{ux.outcome}</p>
+              ) : null}
             </div>
 
             <div className="mt-6">
@@ -382,7 +380,7 @@ export default function HomePage() {
 
             <div className="mt-8 rounded-3xl border border-white/10 bg-black/35 p-5 md:p-6">
               <p className="text-[11px] uppercase tracking-[0.3em] text-white/40">Response</p>
-              <div className="mt-4 min-h-[110px] whitespace-pre-wrap text-sm leading-7 text-white/78 md:text-base">
+              <div className="mt-4 min-h-[160px] break-words whitespace-pre-wrap text-sm leading-7 text-white/78 md:text-base">
                 {answer ? (
                   answer
                 ) : (
