@@ -88,30 +88,15 @@ a {
 
 .hero-word-secondary {
   opacity: 0;
-  background:
-    linear-gradient(
-      100deg,
-      rgba(255, 255, 255, 0.92) 0%,
-      rgba(255, 255, 255, 0.92) 28%,
-      rgba(255, 248, 220, 1) 44%,
-      rgba(255, 255, 255, 0.96) 58%,
-      rgba(255, 255, 255, 0.92) 100%
-    );
-  background-size: 220% 100%, 100% 100%;
-  background-position: 160% 50%, 0 0;
-  background-clip: text;
-  -webkit-background-clip: text;
   color: #ffffff;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px rgba(212, 175, 55, 0.98);
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke: 1px rgba(212, 175, 55, 0.88);
   font-weight: 700;
   text-shadow:
-    0 0 8px rgba(212, 175, 55, 0.2),
-    0 0 20px rgba(212, 175, 55, 0.16),
-    0 0 34px rgba(212, 175, 55, 0.1);
-  animation:
-    hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite,
-    hero-word-gloss 6.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    0 0 6px rgba(212, 175, 55, 0.16),
+    0 0 16px rgba(212, 175, 55, 0.12),
+    0 0 30px rgba(212, 175, 55, 0.07);
+  animation: hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 @keyframes hero-word-primary {
@@ -144,21 +129,6 @@ a {
   100% {
     opacity: 0;
     transform: translateY(0);
-  }
-}
-
-@keyframes hero-word-gloss {
-  0%,
-  56% {
-    background-position: 160% 50%, 0 0;
-  }
-
-  86% {
-    background-position: -10% 50%, 0 0;
-  }
-
-  100% {
-    background-position: -18% 50%, 0 0;
   }
 }
 
