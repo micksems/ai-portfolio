@@ -103,7 +103,7 @@ a {
     0 0 24px rgba(212, 175, 55, 0.12);
   animation:
     hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite,
-    hero-word-gloss 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    hero-word-gloss 4.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 @keyframes hero-word-primary {
