@@ -10,8 +10,6 @@ const cardClass =
   "group flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.055]";
 const actionButtonClass =
   "inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:border-white/32 hover:bg-white/[0.07]";
-const outlineButtonClass =
-  "inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-transparent px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-white hover:text-black";
 const navItems = [
   { label: "About", id: "about" },
   { label: "Projects", id: "projects" },
@@ -306,7 +304,7 @@ export default function HomePage() {
               <a href="#ai" aria-label="Ask the assistant" className={actionButtonClass}>
                 Ask Assistant
               </a>
-              <button type="button" onClick={openResumeModal} className={outlineButtonClass}>
+              <button type="button" onClick={openResumeModal} className={actionButtonClass}>
                 Request Resume
               </button>
             </div>
@@ -472,6 +470,12 @@ export default function HomePage() {
             href={`mailto:${contact.publicEmail}`}
             data-reveal
             className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:border-white hover:bg-white !hover:text-black"
+            onMouseEnter={(event) => {
+              event.currentTarget.style.color = "#000000";
+            }}
+            onMouseLeave={(event) => {
+              event.currentTarget.style.color = "#ffffff";
+            }}
           >
             Email
           </a>
@@ -483,6 +487,12 @@ export default function HomePage() {
             data-reveal
             style={{ transitionDelay: "60ms" }}
             className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:border-white hover:bg-white !hover:text-black"
+            onMouseEnter={(event) => {
+              event.currentTarget.style.color = "#000000";
+            }}
+            onMouseLeave={(event) => {
+              event.currentTarget.style.color = "#ffffff";
+            }}
           >
             LinkedIn
           </a>
@@ -490,7 +500,7 @@ export default function HomePage() {
       </section>
 
       <footer className="pb-8 pt-4 text-center text-xs text-[#666666]">
-        Â© 2026 Misha Semenov
+        © 2026 Misha Semenov
       </footer>
 
       {resumeModalOpen ? (
