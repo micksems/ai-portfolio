@@ -1,4 +1,4 @@
-"use client";
+ï»¿"use client";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -469,7 +469,7 @@ export default function HomePage() {
           <a
             href={`mailto:${contact.publicEmail}`}
             data-reveal
-            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:border-white hover:bg-white !hover:text-black"
+            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:border-white hover:bg-white"
             onMouseEnter={(event) => {
               event.currentTarget.style.color = "#000000";
             }}
@@ -486,7 +486,7 @@ export default function HomePage() {
             rel="noreferrer"
             data-reveal
             style={{ transitionDelay: "60ms" }}
-            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:border-white hover:bg-white !hover:text-black"
+            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:border-white hover:bg-white"
             onMouseEnter={(event) => {
               event.currentTarget.style.color = "#000000";
             }}
@@ -500,7 +500,7 @@ export default function HomePage() {
       </section>
 
       <footer className="pb-8 pt-4 text-center text-xs text-[#666666]">
-        © 2026 Misha Semenov
+        &copy; 2026 Misha Semenov
       </footer>
 
       {resumeModalOpen ? (
