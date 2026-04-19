@@ -10,6 +10,8 @@ const cardClass =
   "group flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.055]";
 const actionButtonClass =
   "inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:border-white/32 hover:bg-white/[0.07]";
+const outlineButtonClass =
+  "inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-transparent px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-white hover:text-black";
 const navItems = [
   { label: "About", id: "about" },
   { label: "Projects", id: "projects" },
@@ -37,32 +39,33 @@ function SectionHeader({ eyebrow, title, description, align = "left" }) {
 }
 
 function ProjectLinks({ project }) {
-  const projectUrl = project.link || project.codeLink || "#";
-  const hasCodeLink = project.codeLink && project.codeLink !== "#";
+  const projectUrl = project.link || "#";
+  const codeUrl = project.codeLink || "#";
+  const hasProjectUrl = projectUrl !== "#";
+  const hasCodeUrl = codeUrl !== "#";
+  const duplicateLinks = hasProjectUrl && hasCodeUrl && projectUrl === codeUrl;
 
   return (
     <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/68">
-      <a
-        href={projectUrl}
-        target="_blank"
-        rel="noreferrer"
-        className={actionButtonClass}
-      >
-        See Project
-      </a>
-
-      {hasCodeLink ? (
+      {!duplicateLinks ? (
         <a
-          href={project.codeLink}
+          href={hasProjectUrl ? projectUrl : "#"}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 transition-all duration-200 hover:-translate-y-0.5 hover:text-white"
+          className={actionButtonClass}
         >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="h-4 w-4 fill-current"
-          >
+          See Project
+        </a>
+      ) : null}
+
+      {hasCodeUrl ? (
+        <a
+          href={codeUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 text-sm transition-all duration-200 hover:-translate-y-0.5 hover:text-white"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
             <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.72-4.04-1.41-4.04-1.41-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.22 1.84 1.22 1.08 1.8 2.82 1.28 3.5.98.11-.76.42-1.28.77-1.58-2.67-.3-5.47-1.31-5.47-5.86 0-1.3.47-2.36 1.23-3.19-.12-.3-.53-1.52.12-3.17 0 0 1.01-.32 3.3 1.22a11.6 11.6 0 0 1 6 0c2.28-1.54 3.29-1.22 3.29-1.22.66 1.65.25 2.87.12 3.17.77.83 1.23 1.89 1.23 3.19 0 4.56-2.8 5.55-5.48 5.85.43.37.81 1.1.81 2.23v3.31c0 .32.21.69.83.58A12 12 0 0 0 12 .5Z" />
           </svg>
           <span>View Code</span>
@@ -126,6 +129,10 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
   const [profileImageError, setProfileImageError] = useState(false);
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
+  const [resumeEmail, setResumeEmail] = useState("");
+  const [resumeError, setResumeError] = useState("");
+  const [resumeConfirmation, setResumeConfirmation] = useState("");
 
   const { personal, about, contact, projects, metrics, ai, ux } = portfolioData;
 
@@ -213,6 +220,37 @@ export default function HomePage() {
     }
   }
 
+  function openResumeModal() {
+    setResumeModalOpen(true);
+    setResumeError("");
+    setResumeConfirmation("");
+  }
+
+  function closeResumeModal() {
+    setResumeModalOpen(false);
+    setResumeError("");
+  }
+
+  function handleResumeRequest() {
+    const email = resumeEmail.trim();
+
+    if (!email || !email.includes("@")) {
+      setResumeError("Please enter a valid email.");
+      return;
+    }
+
+    const subject = encodeURIComponent("Resume Request");
+    const body = encodeURIComponent(
+      `Hi Misha, I'd like to request your resume. You can reach me at: ${email}`
+    );
+
+    window.location.href = `mailto:${contact.publicEmail}?subject=${subject}&body=${body}`;
+    setResumeModalOpen(false);
+    setResumeEmail("");
+    setResumeError("");
+    setResumeConfirmation("Message sent! Misha will be in touch.");
+  }
+
   return (
     <main className="min-h-screen bg-[#050505] text-white">
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.1),_transparent_30%),radial-gradient(circle_at_80%_20%,_rgba(64,123,255,0.12),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.03),_transparent_26%,_transparent_78%,_rgba(255,255,255,0.02))]" />
@@ -264,7 +302,14 @@ export default function HomePage() {
               <a href="#ai" aria-label="Ask the assistant" className={actionButtonClass}>
                 Ask Assistant
               </a>
+              <button type="button" onClick={openResumeModal} className={outlineButtonClass}>
+                Request Resume
+              </button>
             </div>
+
+            {resumeConfirmation ? (
+              <p className="mt-4 text-sm text-white/68">{resumeConfirmation}</p>
+            ) : null}
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-7 lg:-translate-y-2" data-reveal>
@@ -326,9 +371,6 @@ export default function HomePage() {
               <p className="text-[11px] uppercase tracking-[0.3em] text-white/40">Design</p>
               <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">{ux.heading}</h3>
               <p className="mt-5 text-sm leading-6 text-white/72 md:text-base md:leading-7">{ux.body}</p>
-              {ux.outcome ? (
-                <p className="mt-4 text-sm italic leading-6 text-white/48">{ux.outcome}</p>
-              ) : null}
             </div>
 
             <div className="mt-6">
@@ -397,7 +439,7 @@ export default function HomePage() {
 
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8">
             <p className="text-[11px] uppercase tracking-[0.3em] text-white/40">Suggested prompts</p>
-            <div className="mt-5 grid gap-3">
+            <div className="mt-5 flex flex-wrap gap-3">
               {ai.sampleQuestions.map((item, index) => (
                 <button
                   key={item}
@@ -405,7 +447,7 @@ export default function HomePage() {
                   data-reveal
                   style={{ transitionDelay: `${index * 60}ms` }}
                   onClick={() => setQuestion(item)}
-                  className="flex min-h-[64px] w-full items-center rounded-2xl border border-white/10 bg-black/25 px-4 py-4 text-left text-sm leading-6 text-white/70 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-black/35 hover:text-white"
+                  className="inline-flex min-h-11 items-center rounded-full border border-white/10 bg-white/[0.05] px-4 py-2.5 text-left text-sm leading-6 text-white/72 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/22 hover:bg-white/[0.1] hover:text-white"
                 >
                   {item}
                 </button>
@@ -416,15 +458,16 @@ export default function HomePage() {
       </section>
 
       <section id="contact" className={sectionClass}>
-        <div className="text-center" data-reveal>
-          <h2 className="text-3xl font-medium tracking-[-0.03em] text-white md:text-4xl">Let&apos;s Work Together</h2>
+        <div data-reveal className="text-center">
+          <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">Contact</p>
+          <h2 className="mt-4 text-3xl font-medium tracking-[-0.03em] text-white md:text-4xl">Let&apos;s Work Together</h2>
         </div>
 
         <div className="mx-auto mt-8 flex w-full max-w-3xl flex-col gap-4 md:flex-row">
           <a
             href={`mailto:${contact.publicEmail}`}
             data-reveal
-            className="group inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-6 py-4 text-center text-base font-medium text-white/82 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-white/[0.07] hover:text-white"
+            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:bg-white hover:text-black"
           >
             Email
           </a>
@@ -435,12 +478,70 @@ export default function HomePage() {
             rel="noreferrer"
             data-reveal
             style={{ transitionDelay: "60ms" }}
-            className="group inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-6 py-4 text-center text-base font-medium text-white/82 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/24 hover:bg-white/[0.07] hover:text-white"
+            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:bg-white hover:text-black"
           >
             LinkedIn
           </a>
         </div>
       </section>
+
+      <footer className="pb-8 pt-4 text-center text-xs text-[#666666]">
+        © 2025 Misha Semenov
+      </footer>
+
+      {resumeModalOpen ? (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 px-6">
+          <div className="w-full max-w-md rounded-3xl border border-white/10 bg-[#0b0b0c] p-6 shadow-2xl">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h3 className="text-xl font-semibold text-white">Request Misha&apos;s Resume</h3>
+                <p className="mt-2 text-sm leading-6 text-white/60">
+                  Enter your email and a message will be sent on your behalf.
+                </p>
+              </div>
+
+              <button
+                type="button"
+                onClick={closeResumeModal}
+                className="text-sm text-white/55 transition-colors duration-200 hover:text-white"
+              >
+                Cancel
+              </button>
+            </div>
+
+            <div className="mt-6">
+              <input
+                type="email"
+                value={resumeEmail}
+                onChange={(event) => {
+                  setResumeEmail(event.target.value);
+                  if (resumeError) setResumeError("");
+                }}
+                placeholder="Your email address"
+                className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none transition-all duration-200 placeholder:text-white/30 focus:border-white/28"
+              />
+              {resumeError ? <p className="mt-2 text-sm text-red-300">{resumeError}</p> : null}
+            </div>
+
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={handleResumeRequest}
+                className="inline-flex min-h-11 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-all duration-200 hover:bg-white/90"
+              >
+                Send Request
+              </button>
+              <button
+                type="button"
+                onClick={closeResumeModal}
+                className="text-sm text-white/55 transition-colors duration-200 hover:text-white"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </main>
   );
 }

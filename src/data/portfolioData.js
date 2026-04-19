@@ -15,7 +15,7 @@ export const portfolioData = {
     bio: [
       "M.S. in Business Analytics at Fordham University, experienced in AI automation and Data Management.",
       "Before grad school, I got my Bachelor's in Business Administration where I became interested in problem solving via numeric or textual data.",
-      "Over the past years, I've built AI automated workflows and participated in projects that I invite you to look at.",
+      "I'm currently seeking full-time roles in New York in analytics, AI, or data strategy — where I can ship things that matter.",
     ],
   },
 
@@ -198,7 +198,7 @@ export const portfolioData = {
       codeLink: "https://github.com/username/ml-business",
     },
     {
-      title: "Research project",
+      title: "Statistical Analysis of Education's Impact on Economic Outcomes: the WDI Study",
       subtitle: "Data Research",
       description:
         "Collected, cleaned, normalized, and visualized data from WDI to show the correlation between quality of education and its effects on economy.",
@@ -289,7 +289,7 @@ export const portfolioData = {
       { value: "5+", label: "Years Experience" },
       { value: "3+", label: "AI & Automation Projects" },
       { value: "8", label: "Projects Shipped" },
-      { value: "3", label: "Languages" },
+      { value: "3", label: "Languages Spoken" },
     ],
   },
 

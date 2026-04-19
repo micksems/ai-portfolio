@@ -81,11 +81,22 @@ a {
 }
 
 .hero-word-primary {
+  color: #888888;
+  font-weight: 300;
   animation: hero-word-primary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 .hero-word-secondary {
   opacity: 0;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d4af37, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 30px rgba(212, 175, 55, 0.6),
+    0 0 60px rgba(255, 255, 255, 0.2);
   animation: hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
