@@ -9,7 +9,7 @@ const sectionClass = "relative mx-auto w-full max-w-6xl px-6 py-16 md:px-10 md:p
 const cardClass =
   "group flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.055]";
 const actionButtonClass =
-  "appearance-none inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm leading-none font-medium text-white transition-all duration-200 hover:border-white/32 hover:bg-white/[0.07]";
+  "inline-flex h-12 items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-white/[0.03] px-6 text-sm font-medium text-white transition-all duration-200 hover:border-white/32 hover:bg-white/[0.07]";
 const navItems = [
   { label: "About", id: "about" },
   { label: "Projects", id: "projects" },
@@ -304,9 +304,16 @@ export default function HomePage() {
               <a href="#ai" aria-label="Ask the assistant" className={actionButtonClass}>
                 Ask Assistant
               </a>
-              <button type="button" onClick={openResumeModal} className={actionButtonClass}>
+              <a
+                href="#resume-request"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openResumeModal();
+                }}
+                className={actionButtonClass}
+              >
                 Request Resume
-              </button>
+              </a>
             </div>
 
             {resumeConfirmation ? (
