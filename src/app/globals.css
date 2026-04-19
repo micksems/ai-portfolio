@@ -88,8 +88,15 @@ a {
 
 .hero-word-secondary {
   opacity: 0;
-  color: #d4af37;
+  background: linear-gradient(180deg, #fff7d1 0%, #f3d46b 32%, #d4af37 62%, #9f7a18 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
   font-weight: 700;
+  text-shadow:
+    0 0 10px rgba(212, 175, 55, 0.16),
+    0 0 24px rgba(212, 175, 55, 0.12);
   animation: hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
