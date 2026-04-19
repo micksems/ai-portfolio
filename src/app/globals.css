@@ -141,16 +141,16 @@ a {
 
 @keyframes hero-word-gloss {
   0%,
-  50% {
+  54% {
     background-position: 160% 50%, 0 0;
   }
 
-  78% {
-    background-position: -28% 50%, 0 0;
+  84% {
+    background-position: -18% 50%, 0 0;
   }
 
   100% {
-    background-position: -40% 50%, 0 0;
+    background-position: -26% 50%, 0 0;
   }
 }
 
