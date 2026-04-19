@@ -190,7 +190,7 @@ export const portfolioData = {
       title: "Customer Segmentation Model",
       subtitle: "Applied ML",
       description:
-        "ML model that divides customers into clusters which helps identifying best marketing solutions and resource planning.",
+        "ML model that identifies groups of customers which helps making best marketing and resource planning decisions.",
       outcome: "",
       tools: ["Python", "Google Colab", "Data Preprocessing"],
       image: null,
@@ -198,7 +198,7 @@ export const portfolioData = {
       codeLink: "https://github.com/username/ml-business",
     },
     {
-      title: "Statistical Analysis of Education's Impact on Economic Outcomes: the WDI Study",
+      title: "Correlation between the Quality of Education and Economic Growth: the WDI Study",
       subtitle: "Data Research",
       description:
         "Collected, cleaned, normalized, and visualized data from WDI to show the correlation between quality of education and its effects on economy.",
