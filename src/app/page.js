@@ -168,25 +168,29 @@ export default function HomePage() {
 
     if (!sections.length) return undefined;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    const updateActiveSection = () => {
+      const viewportTarget = window.innerHeight * 0.32;
+      let currentSection = sections[0].id;
 
-        if (visibleEntries.length > 0) {
-          setActiveSection(visibleEntries[0].target.id);
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= viewportTarget && rect.bottom >= viewportTarget) {
+          currentSection = section.id;
         }
-      },
-      {
-        rootMargin: "-25% 0px -55% 0px",
-        threshold: [0.2, 0.4, 0.6],
-      }
-    );
+      });
 
-    sections.forEach((section) => observer.observe(section));
+      setActiveSection(currentSection);
+    };
 
-    return () => observer.disconnect();
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   async function handleAsk(event) {
@@ -467,7 +471,7 @@ export default function HomePage() {
           <a
             href={`mailto:${contact.publicEmail}`}
             data-reveal
-            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:bg-white hover:text-black"
+            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:border-white hover:bg-white !hover:text-black"
           >
             Email
           </a>
@@ -478,7 +482,7 @@ export default function HomePage() {
             rel="noreferrer"
             data-reveal
             style={{ transitionDelay: "60ms" }}
-            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:bg-white hover:text-black"
+            className="inline-flex min-h-[56px] flex-1 items-center justify-center rounded-full border border-white/20 bg-transparent px-6 py-4 text-center text-base font-medium text-white transition-all duration-200 hover:border-white hover:bg-white !hover:text-black"
           >
             LinkedIn
           </a>
@@ -486,7 +490,7 @@ export default function HomePage() {
       </section>
 
       <footer className="pb-8 pt-4 text-center text-xs text-[#666666]">
-        © 2025 Misha Semenov
+        © 2026 Misha Semenov
       </footer>
 
       {resumeModalOpen ? (
