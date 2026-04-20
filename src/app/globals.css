@@ -80,6 +80,15 @@ a {
   width: 100%;
 }
 
+.hero-word-primary {
+  animation: hero-word-primary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.hero-word-secondary {
+  opacity: 0;
+  animation: hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
 @keyframes gold-sweep {
   0% {
     background-position: -200% center;
