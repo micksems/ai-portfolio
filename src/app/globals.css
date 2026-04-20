@@ -88,13 +88,6 @@ a {
 
 .hero-word-secondary {
   opacity: 0;
-  color: #d4af37;
-  -webkit-text-fill-color: transparent;
-  background:
-    linear-gradient(180deg, #fff4c4 0%, #f4d870 22%, #d4af37 56%, #95660f 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 0.18px rgba(255, 244, 194, 0.28);
   font-weight: 700;
   text-shadow: none;
   animation: hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
@@ -103,7 +96,12 @@ a {
 .hero-word-secondary-text {
   position: relative;
   display: inline-block;
-  color: transparent;
+  color: #d4af37;
+  background: linear-gradient(180deg, #fff4c4 0%, #f4d870 22%, #d4af37 56%, #95660f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.18px rgba(255, 244, 194, 0.28);
 }
 
 .hero-word-secondary-text::after {
