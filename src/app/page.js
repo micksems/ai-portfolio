@@ -277,7 +277,7 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-[#050505] text-white">
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.1),_transparent_30%),radial-gradient(circle_at_80%_20%,_rgba(64,123,255,0.12),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.03),_transparent_26%,_transparent_78%,_rgba(255,255,255,0.02))]" />
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.1),_transparent_30%),radial-gradient(circle_at_80%_20%,_rgba(212,175,55,0.14),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.03),_transparent_26%,_transparent_78%,_rgba(255,255,255,0.02))]" />
 
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black/55 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 md:px-10">
@@ -548,7 +548,7 @@ export default function HomePage() {
               <button
                 type="button"
                 onClick={closeResumeModal}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-lg text-white/55 transition-colors duration-200 hover:text-white"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 pb-[1px] text-xl leading-none text-white/55 transition-colors duration-200 hover:text-white"
                 aria-label="Close resume request modal"
               >
                 ×
