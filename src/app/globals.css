@@ -97,11 +97,11 @@ a {
   position: relative;
   display: inline-block;
   color: #d4af37;
-  background: linear-gradient(180deg, #fff4c4 0%, #f4d870 22%, #d4af37 56%, #95660f 100%);
+  background: linear-gradient(180deg, #fff3bf 0%, #f3d56a 20%, #d4af37 54%, #b8860b 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.18px rgba(255, 244, 194, 0.28);
+  -webkit-text-stroke: 0 transparent;
 }
 
 .hero-word-secondary-text::after {
@@ -111,19 +111,20 @@ a {
   color: transparent;
   background: linear-gradient(
     102deg,
-    rgba(255, 255, 255, 0) 34%,
-    rgba(255, 249, 227, 0.18) 40%,
-    rgba(255, 255, 255, 0.98) 49%,
-    rgba(255, 244, 194, 0.28) 56%,
-    rgba(255, 255, 255, 0) 64%
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 248, 222, 0.18) 39%,
+    rgba(255, 255, 255, 0.98) 48%,
+    rgba(255, 250, 234, 0.68) 52%,
+    rgba(255, 244, 194, 0.22) 57%,
+    rgba(255, 255, 255, 0) 66%
   );
-  background-size: 250% 100%;
-  background-position: 140% 50%;
+  background-size: 230% 100%;
+  background-position: 145% 50%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: blur(0.08px);
-  animation: hero-word-sheen 1.55s cubic-bezier(0.22, 1, 0.36, 1) 1;
+  filter: blur(0.04px);
+  animation: hero-word-sheen 1.7s cubic-bezier(0.22, 1, 0.36, 1) 1;
   pointer-events: none;
 }
 
@@ -162,11 +163,11 @@ a {
 
 @keyframes hero-word-sheen {
   0% {
-    background-position: 140% 50%;
+    background-position: 145% 50%;
   }
 
   100% {
-    background-position: -40% 50%;
+    background-position: -35% 50%;
   }
 }
 
