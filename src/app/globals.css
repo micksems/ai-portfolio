@@ -104,6 +104,7 @@ a {
   font-weight: 700;
   color: #d4af37;
   -webkit-text-fill-color: #d4af37;
+  text-shadow: 0 0 0.01px rgba(212, 175, 55, 0.01);
 }
 
 .solutions-text::after {
@@ -113,19 +114,20 @@ a {
   background: linear-gradient(
     90deg,
     rgba(184, 134, 11, 0) 0%,
-    rgba(212, 175, 55, 0.08) 24%,
-    rgba(255, 250, 205, 0.78) 46%,
-    rgba(255, 255, 255, 0.98) 50%,
-    rgba(255, 250, 205, 0.72) 54%,
-    rgba(212, 175, 55, 0.08) 76%,
+    rgba(212, 175, 55, 0.05) 28%,
+    rgba(255, 248, 210, 0.6) 42%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 248, 210, 0.72) 58%,
+    rgba(212, 175, 55, 0.08) 74%,
     rgba(184, 134, 11, 0) 100%
   );
-  background-size: 200% auto;
+  background-size: 240% 100%;
+  background-position: -220% center;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  animation: gold-sweep 1.2s ease-in-out forwards;
+  animation: gold-sweep 1.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   pointer-events: none;
 }
 
