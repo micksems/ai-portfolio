@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -132,6 +133,7 @@ export default function HomePage() {
   const [resumeEmail, setResumeEmail] = useState("");
   const [resumeError, setResumeError] = useState("");
   const [resumeConfirmation, setResumeConfirmation] = useState("");
+  const [resumeSending, setResumeSending] = useState(false);
 
   const { personal, about, contact, projects, metrics, ai, ux } = portfolioData;
 
@@ -240,9 +242,10 @@ export default function HomePage() {
   function closeResumeModal() {
     setResumeModalOpen(false);
     setResumeError("");
+    setResumeSending(false);
   }
 
-  function handleResumeRequest() {
+  async function handleResumeRequest() {
     const email = resumeEmail.trim();
 
     if (!email || !email.includes("@")) {
@@ -250,16 +253,26 @@ export default function HomePage() {
       return;
     }
 
-    const subject = encodeURIComponent("Resume Request");
-    const body = encodeURIComponent(
-      `Hi Misha, I'd like to request your resume. You can reach me at: ${email}`
-    );
-
-    window.location.href = `mailto:${contact.publicEmail}?subject=${subject}&body=${body}`;
-    setResumeModalOpen(false);
-    setResumeEmail("");
+    setResumeSending(true);
     setResumeError("");
-    setResumeConfirmation("Message sent! Misha will be in touch.");
+
+    try {
+      await emailjs.send(
+        "service_wyr9isx",
+        "template_7sua9lt",
+        { from_email: email },
+        "uBpLKSHkhcuEeOxsx"
+      );
+
+      setResumeModalOpen(false);
+      setResumeEmail("");
+      setResumeError("");
+      setResumeConfirmation("Request sent! Misha will be in touch.");
+    } catch {
+      setResumeError("Something went wrong. Please email micksems01@gmail.com directly.");
+    } finally {
+      setResumeSending(false);
+    }
   }
 
   return (
@@ -528,16 +541,17 @@ export default function HomePage() {
               <div>
                 <h3 className="text-xl font-semibold text-white">Request Misha&apos;s Resume</h3>
                 <p className="mt-2 text-sm leading-6 text-white/60">
-                  Enter your email and a message will be sent on your behalf.
+                  Drop your email and Misha will send it over.
                 </p>
               </div>
 
               <button
                 type="button"
                 onClick={closeResumeModal}
-                className="text-sm text-white/55 transition-colors duration-200 hover:text-white"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-lg text-white/55 transition-colors duration-200 hover:text-white"
+                aria-label="Close resume request modal"
               >
-                Cancel
+                ×
               </button>
             </div>
 
@@ -559,9 +573,10 @@ export default function HomePage() {
               <button
                 type="button"
                 onClick={handleResumeRequest}
-                className="inline-flex min-h-11 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-all duration-200 hover:bg-white/90"
+                disabled={resumeSending}
+                className="inline-flex min-h-11 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-all duration-200 hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Send Request
+                {resumeSending ? "Sending..." : "Send Request"}
               </button>
               <button
                 type="button"
