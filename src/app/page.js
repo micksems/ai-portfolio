@@ -121,6 +121,27 @@ function StatCard({ item, index }) {
   );
 }
 
+function SkylineAnimation() {
+  return (
+    <div className="skyline-reveal mx-auto mt-4 w-full max-w-6xl px-6 md:px-10" data-reveal>
+      <svg
+        viewBox="0 0 1200 180"
+        className="h-28 w-full md:h-36"
+        role="img"
+        aria-label="Animated 2026 NYC skyline silhouette"
+        preserveAspectRatio="none"
+      >
+        <path
+          className="skyline-path"
+          d="M20 150 H70 V118 H96 V88 H112 V150 H162 V112 H188 V98 H204 V150 H250 V120 H268 V58 H284 V120 H324 V104 H348 V150 H402 V92 H422 V54 H434 V30 H446 V54 H458 V92 H496 V120 H524 V74 H540 V150 H598 V112 H626 V96 H642 V150 H700 V108 H724 V64 H740 V150 H790 V126 H820 V86 H836 V150 H888 V118 H904 V72 H916 V50 H928 V150 H982 V104 H1008 V84 H1024 V150 H1080 V116 H1108 V90 H1124 V150 H1180"
+          fill="none"
+          pathLength="1"
+        />
+      </svg>
+    </div>
+  );
+}
+
 export default function HomePage() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
@@ -516,6 +537,8 @@ export default function HomePage() {
           </a>
         </div>
       </section>
+
+      <SkylineAnimation />
 
       <footer className="pb-8 pt-4 text-center text-xs text-[#666666]">
         &copy; 2026 Misha Semenov
