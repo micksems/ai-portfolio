@@ -89,16 +89,23 @@ a {
 .hero-word-secondary {
   opacity: 0;
   color: #d4af37;
-  -webkit-text-fill-color: #d4af37;
-  -webkit-text-stroke: 0 transparent;
+  -webkit-text-fill-color: transparent;
+  background:
+    linear-gradient(180deg, #fff4c2 0%, #f5d97a 24%, #d4af37 56%, #9e7414 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.35px rgba(255, 244, 194, 0.45);
   font-weight: 700;
+  text-shadow:
+    0 1px 0 rgba(255, 249, 225, 0.18),
+    0 0 14px rgba(212, 175, 55, 0.08);
   animation: hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 .hero-word-secondary-text {
   position: relative;
   display: inline-block;
-  color: #d4af37;
+  color: transparent;
 }
 
 .hero-word-secondary-text::after {
@@ -108,16 +115,19 @@ a {
   color: transparent;
   background: linear-gradient(
     102deg,
-    rgba(255, 255, 255, 0) 36%,
-    rgba(255, 248, 224, 0.98) 48%,
-    rgba(255, 255, 255, 0) 60%
+    rgba(255, 255, 255, 0) 34%,
+    rgba(255, 250, 232, 0.2) 42%,
+    rgba(255, 255, 255, 0.95) 49%,
+    rgba(255, 248, 214, 0.28) 56%,
+    rgba(255, 255, 255, 0) 64%
   );
   background-size: 250% 100%;
   background-position: 140% 50%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: hero-word-sheen 1.15s cubic-bezier(0.22, 1, 0.36, 1) 1;
+  filter: blur(0.2px);
+  animation: hero-word-sheen 1.35s cubic-bezier(0.22, 1, 0.36, 1) 1;
   pointer-events: none;
 }
 
