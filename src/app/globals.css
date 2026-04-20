@@ -101,6 +101,9 @@ a {
 .solutions-text {
   display: inline-block;
   position: relative;
+  padding-right: 0.08em;
+  margin-right: -0.08em;
+  white-space: nowrap;
   font-weight: 700;
   color: #d4af37;
   -webkit-text-fill-color: #d4af37;
