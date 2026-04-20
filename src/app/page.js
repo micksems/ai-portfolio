@@ -314,7 +314,7 @@ export default function HomePage() {
               <span className="block">{personal.heroTitle[0]}</span>
               <span className="block">{personal.heroTitle[1]}</span>
               <span className="hero-word-wrap mt-1 block">
-                <span className="hero-word">
+                <span className="hero-word hero-word-primary">
                   <span className="numbers-text">Numbers</span>
                 </span>
                 <span key={`solutions-${heroCycleCount}`} className="hero-word hero-word-secondary">
