@@ -97,11 +97,9 @@ a {
   position: relative;
   display: inline-block;
   color: #d4af37;
-  background: linear-gradient(180deg, #fff3bf 0%, #f3d56a 20%, #d4af37 54%, #b8860b 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0 transparent;
+  background: none;
+  -webkit-text-fill-color: #d4af37;
+  -webkit-text-stroke: 0;
 }
 
 .hero-word-secondary-text::after {
