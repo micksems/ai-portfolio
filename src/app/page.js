@@ -127,6 +127,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
   const [profileImageError, setProfileImageError] = useState(false);
+  const [heroCycleCount, setHeroCycleCount] = useState(0);
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
   const [resumeEmail, setResumeEmail] = useState("");
   const [resumeError, setResumeError] = useState("");
@@ -189,6 +190,14 @@ export default function HomePage() {
       window.removeEventListener("scroll", updateActiveSection);
       window.removeEventListener("resize", updateActiveSection);
     };
+  }, []);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setHeroCycleCount((count) => count + 1);
+    }, 2800);
+
+    return () => window.clearInterval(interval);
   }, []);
 
   async function handleAsk(event) {
@@ -293,7 +302,9 @@ export default function HomePage() {
               <span className="block">{personal.heroTitle[1]}</span>
               <span className="hero-word-wrap mt-1 block">
                 <span className="hero-word hero-word-primary">Numbers</span>
-                <span className="hero-word hero-word-secondary">Solutions</span>
+                <span key={heroCycleCount} className="hero-word hero-word-secondary">
+                  <span className="hero-word-secondary-text">Solutions</span>
+                </span>
               </span>
             </h1>
 
