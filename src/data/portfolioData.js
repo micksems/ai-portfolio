@@ -178,7 +178,7 @@ export const portfolioData = {
     },
     {
       title: "United Nations Military Defense Hackathon",
-      subtitle: "Defense Hackathon",
+      subtitle: "AI Hackathon",
       description:
         "A 2 week coding sprint where we developed an application that serves as a solution for unit evaluations.",
       outcome: "",

@@ -10,7 +10,7 @@ const sectionClass = "relative mx-auto w-full max-w-6xl px-6 py-16 md:px-10 md:p
 const cardClass =
   "group flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.055]";
 const actionButtonClass =
-  "inline-flex h-12 items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-white/[0.03] px-6 text-sm font-medium text-white visited:text-white transition-all duration-200 hover:border-white/32 hover:bg-white/[0.07]";
+  "inline-flex h-12 items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-white/[0.03] px-6 text-sm font-medium !text-white visited:!text-white hover:!text-white transition-all duration-200 hover:border-white/32 hover:bg-white/[0.07]";
 const navItems = [
   { label: "About", id: "about" },
   { label: "Projects", id: "projects" },
