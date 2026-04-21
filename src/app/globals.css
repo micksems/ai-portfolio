@@ -130,7 +130,7 @@ a {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  animation: gold-sweep 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: gold-sweep 1.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: 1.45s;
   pointer-events: none;
 }
