@@ -107,9 +107,7 @@ a {
   font-weight: 700;
   color: #d4af37;
   -webkit-text-fill-color: #d4af37;
-  text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.12),
-    0 0 18px rgba(255, 239, 184, 0.12);
+  text-shadow: 0 0 0.01px rgba(212, 175, 55, 0.01);
 }
 
 .solutions-text::after {

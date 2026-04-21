@@ -177,11 +177,12 @@ export const portfolioData = {
       codeLink: "https://github.com/username/march-madness",
     },
     {
-      title: "Excel & Power BI",
-      subtitle: "Business Reporting",
-      description: "Cut stakeholder reporting prep time with handoff-ready, presentation-quality outputs.",
+      title: "United Nations Military Defense Hackathon",
+      subtitle: "Defense Hackathon",
+      description:
+        "A 2 week coding sprint where we developed an application that serves as a solution for unit evaluations.",
       outcome: "",
-      tools: ["Excel", "Data Modeling", "Power BI"],
+      tools: ["Application Development", "Unit Evaluation", "Hackathon"],
       image: null,
       link: null,
       codeLink: null,
