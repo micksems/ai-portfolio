@@ -117,20 +117,21 @@ a {
   background: linear-gradient(
     90deg,
     rgba(184, 134, 11, 0) 0%,
-    rgba(212, 175, 55, 0.05) 28%,
-    rgba(255, 248, 210, 0.6) 42%,
+    rgba(212, 175, 55, 0.08) 24%,
+    rgba(255, 248, 210, 0.82) 40%,
     rgba(255, 255, 255, 1) 50%,
-    rgba(255, 248, 210, 0.72) 58%,
-    rgba(212, 175, 55, 0.08) 74%,
+    rgba(255, 248, 210, 0.92) 60%,
+    rgba(212, 175, 55, 0.12) 76%,
     rgba(184, 134, 11, 0) 100%
   );
-  background-size: 240% 100%;
-  background-position: -220% center;
+  background-size: 280% 100%;
+  background-position: -240% center;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  animation: gold-sweep 1.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  filter: brightness(1.08);
+  animation: gold-sweep 1.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: 1.45s;
   pointer-events: none;
 }
