@@ -367,6 +367,8 @@ export default function HomePage() {
                   alt={about.name}
                   fill
                   sizes="(max-width: 768px) 208px, 240px"
+                  quality={100}
+                  priority
                   className="object-cover object-[58%_center]"
                   onError={() => setProfileImageError(true)}
                 />
