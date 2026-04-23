@@ -289,14 +289,6 @@ export default function HomePage() {
     };
   }, []);
 
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setHeroCycleCount((count) => count + 1);
-    }, 2800);
-
-    return () => window.clearInterval(interval);
-  }, []);
-
   async function handleAsk(event) {
     event.preventDefault();
 

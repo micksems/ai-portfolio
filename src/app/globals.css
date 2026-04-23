@@ -67,6 +67,9 @@ a {
 }
 
 .hero-word-wrap {
+  --hero-word-speed: 2.8s;
+  --gold-sweep-speed: 2.6s;
+  --gold-sweep-delay: 1.42s;
   position: relative;
   height: 1.08em;
   overflow: hidden;
@@ -81,12 +84,12 @@ a {
 }
 
 .hero-word-primary {
-  animation: hero-word-primary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: hero-word-primary var(--hero-word-speed) cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 .hero-word-secondary {
   opacity: 0;
-  animation: hero-word-secondary 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: hero-word-secondary var(--hero-word-speed) cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 @keyframes gold-sweep {
@@ -132,8 +135,8 @@ a {
   -webkit-text-fill-color: transparent;
   color: transparent;
   filter: brightness(1.08);
-  animation: gold-sweep 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 1.42s;
+  animation: gold-sweep var(--gold-sweep-speed) cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--gold-sweep-delay);
   pointer-events: none;
 }
 
@@ -145,21 +148,16 @@ a {
 }
 
 .coursework-ticker {
-  --coursework-speed: 34s;
   --coursework-gap: 18px;
   width: 100%;
   overflow: hidden;
-  padding-block: 2px;
-}
-
-.coursework-ticker:hover {
-  --coursework-speed: 90s;
+  padding-block: 8px;
 }
 
 .coursework-track {
   display: flex;
   width: max-content;
-  animation: coursework-scroll var(--coursework-speed) linear infinite;
+  animation: coursework-scroll 34s linear infinite;
   will-change: transform;
 }
 
@@ -171,6 +169,7 @@ a {
 }
 
 .coursework-pill {
+  position: relative;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
@@ -180,6 +179,20 @@ a {
   color: #aaaaaa;
   font-size: 13px;
   line-height: 1;
+  transform: scale(1);
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.coursework-pill:hover {
+  z-index: 1;
+  border-color: #8a8a8a;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  transform: scale(1.08);
 }
 
 @keyframes coursework-scroll {
@@ -222,6 +235,14 @@ a {
   100% {
     opacity: 0;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-word-wrap {
+    --hero-word-speed: 4.2s;
+    --gold-sweep-speed: 3.8s;
+    --gold-sweep-delay: 2.05s;
   }
 }
 
