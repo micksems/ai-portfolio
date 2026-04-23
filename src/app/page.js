@@ -17,6 +17,14 @@ const navItems = [
   { label: "AI", id: "ai" },
   { label: "Contact", id: "contact" },
 ];
+const coursework = [
+  "Python",
+  "Database Management & SQL",
+  "Machine Learning for Business",
+  "Data Visualization",
+  "Advanced Excel & Power BI",
+  "Natural Language Processing",
+];
 
 function SectionHeader({ eyebrow, title, description, align = "left" }) {
   const alignment =
@@ -119,6 +127,27 @@ function StatCard({ item, index }) {
       <p className="text-3xl font-semibold tracking-[-0.03em] text-white">{item.value}</p>
       <p className="mt-2 text-sm leading-5 text-white/56">{item.label}</p>
     </div>
+  );
+}
+
+function CourseworkTicker() {
+  const tickerItems = [...coursework, ...coursework];
+
+  return (
+    <section className="relative mx-auto w-full max-w-6xl px-6 py-10 md:px-10">
+      <p className="text-[11px] uppercase tracking-[0.32em] text-white/42" data-reveal>
+        Relevant Coursework
+      </p>
+      <div className="coursework-ticker mt-5" data-reveal>
+        <div className="coursework-track">
+          {tickerItems.map((course, index) => (
+            <span className="coursework-pill" key={`${course}-${index}`}>
+              {course}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -379,10 +408,12 @@ export default function HomePage() {
           </div>
 
           <div data-reveal>
-            <SectionHeader eyebrow="About" title={about.name} description={about.bio.join(" ")} />
+            <SectionHeader eyebrow="About Me" title="Hi, I'm Misha Semenov" description={about.bio.join(" ")} />
           </div>
         </div>
       </section>
+
+      <CourseworkTicker />
 
       <section id="projects" className={sectionClass}>
         <SectionHeader
