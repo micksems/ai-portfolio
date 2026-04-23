@@ -144,6 +144,40 @@ a {
   -webkit-text-fill-color: #777777;
 }
 
+.coursework-ticker {
+  width: 100%;
+  overflow: hidden;
+}
+
+.coursework-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: coursework-scroll 24s linear infinite;
+}
+
+.coursework-pill {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  border: 1px solid #555555;
+  border-radius: 9999px;
+  padding: 6px 16px;
+  color: #aaaaaa;
+  font-size: 13px;
+  line-height: 1;
+}
+
+@keyframes coursework-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
 @keyframes hero-word-primary {
   0%,
   38% {
