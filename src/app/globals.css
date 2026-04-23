@@ -145,7 +145,8 @@ a {
 }
 
 .coursework-ticker {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   overflow: hidden;
 }
 
@@ -153,7 +154,8 @@ a {
   display: flex;
   width: max-content;
   gap: 20px;
-  animation: coursework-scroll 24s linear infinite;
+  animation: coursework-scroll 18s linear infinite;
+  will-change: transform;
 }
 
 .coursework-pill {
@@ -170,11 +172,11 @@ a {
 
 @keyframes coursework-scroll {
   from {
-    transform: translateX(0);
+    transform: translateX(100vw);
   }
 
   to {
-    transform: translateX(calc(-50% - 10px));
+    transform: translateX(-100%);
   }
 }
 

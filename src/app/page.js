@@ -131,17 +131,15 @@ function StatCard({ item, index }) {
 }
 
 function CourseworkTicker() {
-  const tickerItems = [...coursework, ...coursework];
-
   return (
     <section className="relative mx-auto w-full max-w-6xl px-6 py-10 md:px-10">
-      <p className="text-[11px] uppercase tracking-[0.32em] text-white/42" data-reveal>
+      <p className="text-center text-sm font-semibold uppercase tracking-[0.34em] text-white/58 md:text-base" data-reveal>
         Relevant Coursework
       </p>
       <div className="coursework-ticker mt-5" data-reveal>
         <div className="coursework-track">
-          {tickerItems.map((course, index) => (
-            <span className="coursework-pill" key={`${course}-${index}`}>
+          {coursework.map((course) => (
+            <span className="coursework-pill" key={course}>
               {course}
             </span>
           ))}
