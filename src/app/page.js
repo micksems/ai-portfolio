@@ -2,7 +2,7 @@
 
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { portfolioData } from "@/data/portfolioData";
 
@@ -131,15 +131,55 @@ function StatCard({ item, index }) {
 }
 
 function CourseworkTicker() {
+  const tickerRef = useRef(null);
+  const playbackFrameRef = useRef(null);
   const courseworkGroup = [...coursework, ...coursework, ...coursework];
+
+  useEffect(() => {
+    return () => {
+      if (playbackFrameRef.current) {
+        window.cancelAnimationFrame(playbackFrameRef.current);
+      }
+    };
+  }, []);
+
+  function easeTickerTo(targetRate) {
+    const track = tickerRef.current;
+    const animation = track?.getAnimations()[0];
+
+    if (!animation) return;
+
+    if (playbackFrameRef.current) {
+      window.cancelAnimationFrame(playbackFrameRef.current);
+    }
+
+    const step = () => {
+      const currentRate = animation.playbackRate;
+      const nextRate = currentRate + (targetRate - currentRate) * 0.08;
+
+      animation.playbackRate = Math.abs(targetRate - nextRate) < 0.01 ? targetRate : nextRate;
+
+      if (animation.playbackRate !== targetRate) {
+        playbackFrameRef.current = window.requestAnimationFrame(step);
+      }
+    };
+
+    playbackFrameRef.current = window.requestAnimationFrame(step);
+  }
 
   return (
     <section className="relative w-full overflow-x-hidden py-14 md:py-16">
       <p className="mx-auto max-w-6xl px-6 text-center text-sm font-semibold uppercase tracking-[0.34em] text-white/58 md:px-10 md:text-base" data-reveal>
         Relevant Coursework
       </p>
-      <div className="coursework-ticker mt-7" aria-label={`Relevant coursework: ${coursework.join(", ")}`} data-reveal>
-        <div className="coursework-track" aria-hidden="true">
+      <div
+        className="coursework-ticker mt-7"
+        aria-label={`Relevant coursework: ${coursework.join(", ")}`}
+        onPointerEnter={() => easeTickerTo(0.28)}
+        onPointerLeave={() => easeTickerTo(1)}
+        data-reveal
+      >
+        <div className="coursework-track" aria-hidden="true" ref={tickerRef}>
           {[0, 1].map((group) => (
             <div className="coursework-group" key={group}>
               {courseworkGroup.map((course, index) => (
@@ -224,6 +264,28 @@ export default function HomePage() {
     return () => {
       window.removeEventListener("scroll", updateActiveSection);
       window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 640px)");
+    let intervalId;
+
+    const startHeroCycle = () => {
+      window.clearInterval(intervalId);
+      const intervalLength = mobileQuery.matches ? 4200 : 2800;
+
+      intervalId = window.setInterval(() => {
+        setHeroCycleCount((count) => count + 1);
+      }, intervalLength);
+    };
+
+    startHeroCycle();
+    mobileQuery.addEventListener("change", startHeroCycle);
+
+    return () => {
+      window.clearInterval(intervalId);
+      mobileQuery.removeEventListener("change", startHeroCycle);
     };
   }, []);
 
