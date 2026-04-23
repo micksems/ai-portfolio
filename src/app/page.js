@@ -196,6 +196,7 @@ function CourseworkTicker() {
 }
 
 export default function HomePage() {
+  const answerRef = useRef(null);
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
@@ -288,6 +289,15 @@ export default function HomePage() {
       mobileQuery.removeEventListener("change", startHeroCycle);
     };
   }, []);
+
+  useEffect(() => {
+    const answerElement = answerRef.current;
+
+    if (!answerElement) return;
+
+    answerElement.style.height = "0px";
+    answerElement.style.height = `${answerElement.scrollHeight}px`;
+  }, [answer]);
 
   async function handleAsk(event) {
     event.preventDefault();
@@ -548,16 +558,15 @@ export default function HomePage() {
 
             <div className="mt-8 rounded-3xl border border-white/10 bg-black/35 p-5 md:p-6">
               <p className="text-[11px] uppercase tracking-[0.3em] text-white/40">Response</p>
-              <div className="mt-4 min-h-[160px] break-words whitespace-pre-wrap text-sm leading-7 text-white/78 md:text-base">
-                {answer ? (
-                  answer
-                ) : (
-                  <div className="flex items-center gap-2 italic text-white/46">
-                    <span className="h-4 w-px animate-pulse bg-white/45" aria-hidden="true" />
-                    <span>Your answer will appear here...</span>
-                  </div>
-                )}
-              </div>
+              <textarea
+                ref={answerRef}
+                value={answer || "Your answer will appear here..."}
+                readOnly
+                aria-label="AI response"
+                className={`mt-4 min-h-[160px] w-full resize-y overflow-y-auto rounded-2xl border border-white/8 bg-black/20 px-4 py-3 text-sm leading-7 outline-none md:text-base ${
+                  answer ? "text-white/78" : "italic text-white/46"
+                }`}
+              />
             </div>
           </div>
 
