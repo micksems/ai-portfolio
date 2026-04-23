@@ -145,17 +145,29 @@ a {
 }
 
 .coursework-ticker {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  --coursework-speed: 34s;
+  --coursework-gap: 18px;
+  width: 100%;
   overflow: hidden;
+  padding-block: 2px;
+}
+
+.coursework-ticker:hover {
+  --coursework-speed: 90s;
 }
 
 .coursework-track {
   display: flex;
   width: max-content;
-  gap: 20px;
-  animation: coursework-scroll 18s linear infinite;
+  animation: coursework-scroll var(--coursework-speed) linear infinite;
   will-change: transform;
+}
+
+.coursework-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--coursework-gap);
+  padding-right: var(--coursework-gap);
 }
 
 .coursework-pill {
@@ -172,11 +184,11 @@ a {
 
 @keyframes coursework-scroll {
   from {
-    transform: translateX(100vw);
+    transform: translateX(0);
   }
 
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 

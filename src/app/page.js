@@ -131,17 +131,23 @@ function StatCard({ item, index }) {
 }
 
 function CourseworkTicker() {
+  const courseworkGroup = [...coursework, ...coursework, ...coursework];
+
   return (
-    <section className="relative mx-auto w-full max-w-6xl px-6 py-10 md:px-10">
-      <p className="text-center text-sm font-semibold uppercase tracking-[0.34em] text-white/58 md:text-base" data-reveal>
+    <section className="relative w-full overflow-x-hidden py-14 md:py-16">
+      <p className="mx-auto max-w-6xl px-6 text-center text-sm font-semibold uppercase tracking-[0.34em] text-white/58 md:px-10 md:text-base" data-reveal>
         Relevant Coursework
       </p>
-      <div className="coursework-ticker mt-5" data-reveal>
-        <div className="coursework-track">
-          {coursework.map((course) => (
-            <span className="coursework-pill" key={course}>
-              {course}
-            </span>
+      <div className="coursework-ticker mt-7" aria-label={`Relevant coursework: ${coursework.join(", ")}`} data-reveal>
+        <div className="coursework-track" aria-hidden="true">
+          {[0, 1].map((group) => (
+            <div className="coursework-group" key={group}>
+              {courseworkGroup.map((course, index) => (
+                <span className="coursework-pill" key={`${group}-${course}-${index}`}>
+                  {course}
+                </span>
+              ))}
+            </div>
           ))}
         </div>
       </div>
