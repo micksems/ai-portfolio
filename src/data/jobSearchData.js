@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "August 19, 2026 · 1:05 PM ET",
+  updatedAt: "August 19, 2026 · 1:10 PM ET",
   nextReport: "Today at 6:00 PM ET",
   recurringReport: "Every day at 9:00 AM ET",
   locations: ["New York City", "San Francisco", "Charlotte"],
@@ -110,6 +110,18 @@ export const jobSearchData = {
       risk: "Title is level II, though the posting allows degree-based qualification.",
     },
     {
+      company: "Nen Creative",
+      role: "Operations Coordinator",
+      location: "New York City / San Francisco",
+      score: 88,
+      status: "Found",
+      contacts: 1,
+      url: "https://jobs.ashbyhq.com/nen-creative/4eccbd19-890a-485c-8e1b-5cf1b0255ed1",
+      resume: "",
+      fit: "Strong early-career operations fit across project coordination, recurring workflows, record management, CRM systems, process documentation, and operational follow-through.",
+      risk: "Direct finance-operations tools such as QuickBooks, Ramp, and Gusto are not verified; emphasize systems discipline and process ownership instead.",
+    },
+    {
       company: "NYC Campaign Finance Board",
       role: "Data & Metrics Analyst",
       location: "New York City",
@@ -120,18 +132,6 @@ export const jobSearchData = {
       resume: "",
       fit: "Strong analytics and reporting fit with Tableau, Python, data cleaning, and decision support.",
       risk: "Survey-design experience is not currently verified.",
-    },
-    {
-      company: "Broadridge",
-      role: "Asset Management Implementation Analyst",
-      location: "NYC / Newark hybrid",
-      score: 85,
-      status: "Found",
-      contacts: 1,
-      url: "https://broadridge.wd5.myworkdayjobs.com/en-GB/Careers/job/New-York-NY/Asset-Management-Implementation-Analyst--Hybrid--Newark--NJ--NYC-or-Edgewood--NY-_JR1082854",
-      resume: "",
-      fit: "Credible implementation/project stretch with SQL, requirements gathering, workflow analysis, CRM, and stakeholder coordination.",
-      risk: "Asset-management and dedicated software-implementation experience are lighter than the strongest candidates; treat as a selective stretch.",
     },
     {
       company: "United Hospital Fund",
@@ -185,13 +185,14 @@ export const jobSearchData = {
       email: "recruiting@rain.xyz",
     },
     {
-      company: "Broadridge",
-      role: "Asset Management Implementation Analyst",
-      name: "Patricia Priola",
-      title: "Senior Director, Talent Acquisition",
-      type: "Recruiter",
+      company: "Nen Creative",
+      role: "Operations Coordinator",
+      name: "Jason Zhu",
+      title: "Cofounder & Managing Partner",
+      type: "Other",
       status: "New",
-      linkedin: "https://www.linkedin.com/in/patricia-priola",
+      linkedin: "https://www.linkedin.com/in/jasonlzhu",
+      email: "jason@nencreative.com",
     },
     {
       company: "Instawork",
@@ -251,10 +252,10 @@ export const jobSearchData = {
   reports: [
     {
       date: "August 19, 2026",
-      time: "1:05 PM ET",
+      time: "1:10 PM ET",
       title: "Production run - expanded role scope",
       status: "Complete",
-      note: "Added five qualified roles, five outreach paths, five tailored one-page resumes, and a Rain recruiting Gmail draft. No applications or outreach were sent.",
+      note: "Added five qualified roles, five outreach paths, five tailored one-page resumes, and two reviewable Gmail drafts. No applications or outreach were sent.",
     },
     {
       date: "August 19, 2026",
