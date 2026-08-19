@@ -13,7 +13,7 @@ export const RECOVERY_COOKIE = "misha_job_recovery";
 export const PASSKEY_COOKIE = "misha_job_passkey";
 export const CHALLENGE_COOKIE = "misha_job_challenge";
 
-export const ACCESS_MAX_AGE = 60 * 60 * 24 * 7;
+export const ACCESS_MAX_AGE = 60 * 60;
 export const RECOVERY_MAX_AGE = 60 * 60 * 24 * 180;
 
 const PIN_ITERATIONS = 750000;
