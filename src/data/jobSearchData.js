@@ -1,6 +1,6 @@
 export const jobSearchData = {
-  updatedAt: "August 19, 2026 · 1:10 PM ET",
-  nextReport: "Today at 6:00 PM ET",
+  updatedAt: "August 21, 2026 · 1:00 PM ET",
+  nextReport: "Tomorrow at 9:00 AM ET",
   recurringReport: "Every day at 9:00 AM ET",
   locations: ["New York City", "San Francisco", "Charlotte"],
   roleFamilies: [
@@ -99,7 +99,7 @@ export const jobSearchData = {
     },
     {
       company: "Walmart / VIZIO",
-      role: "Data Analyst II",
+      role: "(USA) Data Analyst II",
       location: "New York City",
       score: 90,
       status: "Found",
@@ -178,10 +178,10 @@ export const jobSearchData = {
       company: "Rain",
       role: "Implementation Specialist",
       name: "Rain Recruiting Team",
-      title: "Recruiting",
+      title: "Talent Acquisition",
       type: "Recruiter",
       status: "New",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/company/rainxyz",
       email: "recruiting@rain.xyz",
     },
     {
@@ -214,7 +214,7 @@ export const jobSearchData = {
     },
     {
       company: "Walmart / VIZIO",
-      role: "Data Analyst II",
+      role: "(USA) Data Analyst II",
       name: "Rich Guinness",
       title: "Associate Director, Data Licensing",
       type: "Other",
@@ -244,12 +244,26 @@ export const jobSearchData = {
       role: "Data Analyst (SQL Expertise)",
       name: "Alessandra Taverna-Trani",
       title: "Managing Director of Medicaid",
-      type: "Other",
+      type: "Hiring Manager",
       status: "New",
       linkedin: "https://www.linkedin.com/in/alessandra-taverna-trani-mba-004a0b",
     },
   ],
   reports: [
+    {
+      date: "August 21, 2026",
+      time: "1:00 PM ET",
+      title: "Dashboard synchronization audit",
+      status: "Complete",
+      note: "Detected that the Career Control Center was still showing the August 19 snapshot. The live Sheet was intact, the Daily Job Application Pack had become disabled after its August 20 run, and the recurring workflow was re-enabled. Dashboard data was synchronized to the current tracker state.",
+    },
+    {
+      date: "August 20, 2026",
+      time: "9:07 AM ET",
+      title: "Morning Job Application Pack",
+      status: "Complete",
+      note: "The scheduled workflow ran, but the hosted dashboard snapshot did not advance and the recurring task was later found disabled. No current Job Tracker stage changes were present when audited on August 21.",
+    },
     {
       date: "August 19, 2026",
       time: "1:10 PM ET",
@@ -258,18 +272,11 @@ export const jobSearchData = {
       note: "Added five qualified roles, five outreach paths, five tailored one-page resumes, and two reviewable Gmail drafts. No applications or outreach were sent.",
     },
     {
-      date: "August 19, 2026",
-      time: "6:00 PM ET",
-      title: "Expanded-scope research report",
-      status: "Scheduled",
-      note: "Next full research, scoring, outreach, resume, tracker, dashboard, and written ChatGPT report run.",
-    },
-    {
-      date: "August 20, 2026",
+      date: "August 22, 2026",
       time: "9:00 AM ET",
       title: "Morning Job Application Pack",
       status: "Scheduled",
-      note: "Recurring daily report and dashboard refresh.",
+      note: "Recurring daily research, scoring, outreach, resume preparation, tracker sync, dashboard refresh, and written ChatGPT report.",
     },
   ],
 };
