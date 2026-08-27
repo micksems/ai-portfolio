@@ -26,8 +26,8 @@ export default function DashboardClient({ jobSearchData }) {
             <h1 className="mt-2 text-4xl font-semibold tracking-[-0.055em] sm:text-5xl">Job search scoreboard</h1>
           </div>
           <div className="text-right text-xs text-white/30">
-            <div>Last updated</div>
-            <div className="mt-1 text-white/55">{jobSearchData.updatedAt}</div>
+            <div>Daily sync</div>
+            <div className="mt-1 text-white/55">9:00 AM ET</div>
           </div>
         </div>
 
