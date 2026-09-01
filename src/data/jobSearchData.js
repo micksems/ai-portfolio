@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "August 29, 2026 · 10:43 AM ET",
+  updatedAt: "August 31, 2026 · 9:23 PM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
     { company: "Good Apple", status: "Found" },
@@ -22,6 +22,15 @@ export const jobSearchData = {
     { company: "Salesforce", status: "Ready to Submit" },
     { company: "Foodbuy", status: "Ready to Submit" },
     { company: "ABM Industries", status: "Ready to Submit" },
+    { company: "Dimensional Fund Advisors", status: "Found" },
+    { company: "Instawork", status: "Found" },
+    { company: "Finch", status: "Found" },
+    { company: "Ramp", status: "Found" },
+    { company: "Hive", status: "Found" },
+    { company: "Harper", status: "Ready to Submit" },
     { company: "Hive", status: "Ready to Submit" },
+    { company: "Hive", status: "Ready to Submit" },
+    { company: "iHeartMedia", status: "Ready to Submit" },
+    { company: "Tryon Medical Partners", status: "Ready to Submit" },
   ],
 };
