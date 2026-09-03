@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 2, 2026 · 9:00 AM ET",
+  updatedAt: "September 3, 2026 · 9:00 AM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
     { company: "Good Apple", status: "Found" },
@@ -42,5 +42,10 @@ export const jobSearchData = {
     { company: "Realign LLC", status: "Found" },
     { company: "Scan.com", status: "Found" },
     { company: "Talos", status: "Found" },
+    { company: "iTradeNetwork", status: "Found" },
+    { company: "Tennr", status: "Found" },
+    { company: "Garage", status: "Found" },
+    { company: "Fortuna Health", status: "Found" },
+    { company: "Meow", status: "Found" },
   ],
 };
