@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 6, 2026 · 9:00 AM ET",
+  updatedAt: "September 6, 2026 · 8:24 PM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
     { company: "Good Apple", status: "Found" },
@@ -12,10 +12,10 @@ export const jobSearchData = {
     { company: "Charlie Health", status: "Found" },
     { company: "Rain", status: "Found" },
     { company: "Nen Creative", status: "Closed" },
-    { company: "Stepful", status: "Ready to Submit" },
+    { company: "Stepful", status: "Found" },
     { company: "Horizon Media", status: "Ready to Submit" },
     { company: "NBA", status: "Ready to Submit" },
-    { company: "Columbia University", status: "Ready to Submit" },
+    { company: "Columbia University", status: "Closed" },
     { company: "Capital Group", status: "Ready to Submit" },
     { company: "Macy's", status: "Ready to Submit" },
     { company: "Grapevine", status: "Ready to Submit" },
