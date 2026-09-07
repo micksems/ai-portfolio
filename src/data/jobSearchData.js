@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 7, 2026 · 2:33 PM ET",
+  updatedAt: "September 7, 2026 · 2:36 PM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
     { company: "Good Apple", status: "Ready to Submit" },
@@ -74,10 +74,14 @@ export const jobSearchData = {
     { company: "Point72", status: "Ready to Submit" },
     { company: "Forge Global", status: "Ready to Submit" },
     { company: "Forus", status: "Found" },
-    { company: "Hive", status: "Found" },
+    { company: "Hive", status: "Ready to Submit" },
     { company: "iCapital", status: "Found" },
   ],
   activityHistory: [
+    {
+      at: "2026-09-07T18:36:21.000Z",
+      action: "Hive Data Operations Analyst passed exact-form verification, rescored to 97, received a tailored Drive resume, and advanced to Ready to Submit."
+    },
     {
       at: "2026-09-07T18:33:11.000Z",
       action: "Backlog-first rescore: four high-fit application packages advanced to Ready, Charlie Health GTM was rescored but held for final-form verification, and iCapital was added through expanded responsibility-based discovery."
