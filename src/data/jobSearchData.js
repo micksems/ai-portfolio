@@ -1,13 +1,13 @@
 export const jobSearchData = {
-  updatedAt: "September 7, 2026 · 1:58 PM ET",
+  updatedAt: "September 7, 2026 · 2:33 PM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
-    { company: "Good Apple", status: "Found" },
+    { company: "Good Apple", status: "Ready to Submit" },
     { company: "Instawork", status: "Found" },
     { company: "AvidXchange", status: "Closed" },
     { company: "Walmart / VIZIO", status: "Found" },
     { company: "NYC Campaign Finance Board", status: "Closed" },
-    { company: "Instawork", status: "Found" },
+    { company: "Instawork", status: "Ready to Submit" },
     { company: "Charlie Health", status: "Found" },
     { company: "Charlie Health", status: "Found" },
     { company: "Rain", status: "Found" },
@@ -57,8 +57,8 @@ export const jobSearchData = {
     { company: "Washington Abstract", status: "Found" },
     { company: "Inmar Intelligence", status: "Found" },
     { company: "Michael Page client", status: "Found" },
-    { company: "Digital Asset", status: "Found" },
-    { company: "Metro Vein Centers", status: "Found" },
+    { company: "Digital Asset", status: "Ready to Submit" },
+    { company: "Metro Vein Centers", status: "Ready to Submit" },
     { company: "Vooma", status: "Found" },
     { company: "Clera", status: "Found" },
     { company: "Crusoe", status: "Found" },
@@ -75,8 +75,13 @@ export const jobSearchData = {
     { company: "Forge Global", status: "Ready to Submit" },
     { company: "Forus", status: "Found" },
     { company: "Hive", status: "Found" },
+    { company: "iCapital", status: "Found" },
   ],
   activityHistory: [
+    {
+      at: "2026-09-07T18:33:11.000Z",
+      action: "Backlog-first rescore: four high-fit application packages advanced to Ready, Charlie Health GTM was rescored but held for final-form verification, and iCapital was added through expanded responsibility-based discovery."
+    },
     {
       at: "2026-09-07T17:58:15.000Z",
       action: "Manual morning audit: revalidated today's application queue, demoted one unverified application endpoint, added Hive Data Operations Analyst, and synced the canonical pipeline."
