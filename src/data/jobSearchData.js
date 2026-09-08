@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 7, 2026 · 10:43 PM ET",
+  updatedAt: "September 8, 2026 · 10:13 AM ET",
   jobs: [
   {
     "company": "United Hospital Fund",
@@ -123,7 +123,7 @@ export const jobSearchData = {
   },
   {
     "company": "Tryon Medical Partners",
-    "status": "Applied"
+    "status": "Closed"
   },
   {
     "company": "Judi Health",
@@ -303,6 +303,7 @@ export const jobSearchData = {
   }
 ],
   activityHistory: [
+    { at: "2026-09-08T14:13:18.000Z", action: "Tryon Medical Partners rejected the Procurement Analyst application. Employer email verified; no reason provided. Application History records Rejected and tracker records Closed." },
     { at: "2026-09-08T02:43:00.000Z", action: "Misha confirmed Metro Vein Centers application submitted. Tracker and Application History updated; Hive Data Operations Analyst selected next." },
     {
       at: "2026-09-07T18:36:21.000Z",
