@@ -1,325 +1,90 @@
 export const jobSearchData = {
-  updatedAt: "September 8, 2026 · 10:13 AM ET",
+  updatedAt: "September 9, 2026 · 9:00 AM ET",
   jobs: [
-  {
-    "company": "United Hospital Fund",
-    "status": "Closed"
-  },
-  {
-    "company": "Good Apple",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Instawork",
-    "status": "Found"
-  },
-  {
-    "company": "AvidXchange",
-    "status": "Closed"
-  },
-  {
-    "company": "Walmart / VIZIO",
-    "status": "Found"
-  },
-  {
-    "company": "NYC Campaign Finance Board",
-    "status": "Closed"
-  },
-  {
-    "company": "Instawork",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Charlie Health",
-    "status": "Found"
-  },
-  {
-    "company": "Charlie Health",
-    "status": "Found"
-  },
-  {
-    "company": "Rain",
-    "status": "Found"
-  },
-  {
-    "company": "Nen Creative",
-    "status": "Closed"
-  },
-  {
-    "company": "Stepful",
-    "status": "Found"
-  },
-  {
-    "company": "Horizon Media",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "NBA",
-    "status": "Closed"
-  },
-  {
-    "company": "Columbia University",
-    "status": "Closed"
-  },
-  {
-    "company": "Capital Group",
-    "status": "Closed"
-  },
-  {
-    "company": "Macy's",
-    "status": "Found"
-  },
-  {
-    "company": "Grapevine",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Salesforce",
-    "status": "Closed"
-  },
-  {
-    "company": "Foodbuy",
-    "status": "Closed"
-  },
-  {
-    "company": "ABM Industries",
-    "status": "Found"
-  },
-  {
-    "company": "Dimensional Fund Advisors",
-    "status": "Found"
-  },
-  {
-    "company": "Instawork",
-    "status": "Closed"
-  },
-  {
-    "company": "Finch",
-    "status": "Closed"
-  },
-  {
-    "company": "Ramp",
-    "status": "Found"
-  },
-  {
-    "company": "Hive",
-    "status": "Found"
-  },
-  {
-    "company": "Harper",
-    "status": "Found"
-  },
-  {
-    "company": "Hive",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Hive",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "iHeartMedia",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Tryon Medical Partners",
-    "status": "Closed"
-  },
-  {
-    "company": "Judi Health",
-    "status": "Found"
-  },
-  {
-    "company": "Shiftsmart",
-    "status": "Applied"
-  },
-  {
-    "company": "Treeswift",
-    "status": "Found"
-  },
-  {
-    "company": "Finix",
-    "status": "Found"
-  },
-  {
-    "company": "Capcom USA",
-    "status": "Found"
-  },
-  {
-    "company": "Sela AI",
-    "status": "Found"
-  },
-  {
-    "company": "Highbeam",
-    "status": "Found"
-  },
-  {
-    "company": "Realign LLC",
-    "status": "Found"
-  },
-  {
-    "company": "Scan.com",
-    "status": "Found"
-  },
-  {
-    "company": "Talos",
-    "status": "Found"
-  },
-  {
-    "company": "iTradeNetwork",
-    "status": "Found"
-  },
-  {
-    "company": "Tennr",
-    "status": "Found"
-  },
-  {
-    "company": "Garage",
-    "status": "Found"
-  },
-  {
-    "company": "Fortuna Health",
-    "status": "Found"
-  },
-  {
-    "company": "Meow",
-    "status": "Found"
-  },
-  {
-    "company": "Kahana & Feld LLP",
-    "status": "Found"
-  },
-  {
-    "company": "STARK Carpet",
-    "status": "Found"
-  },
-  {
-    "company": "allwhere",
-    "status": "Found"
-  },
-  {
-    "company": "DataCT LLC",
-    "status": "Found"
-  },
-  {
-    "company": "CastleOak Securities",
-    "status": "Found"
-  },
-  {
-    "company": "CRC Group",
-    "status": "Found"
-  },
-  {
-    "company": "TerraForm Power",
-    "status": "Found"
-  },
-  {
-    "company": "Washington Abstract",
-    "status": "Found"
-  },
-  {
-    "company": "Inmar Intelligence",
-    "status": "Found"
-  },
-  {
-    "company": "Michael Page client",
-    "status": "Found"
-  },
-  {
-    "company": "Digital Asset",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Metro Vein Centers",
-    "status": "Applied"
-  },
-  {
-    "company": "Vooma",
-    "status": "Found"
-  },
-  {
-    "company": "Clera",
-    "status": "Found"
-  },
-  {
-    "company": "Crusoe",
-    "status": "Found"
-  },
-  {
-    "company": "Alvarez & Marsal",
-    "status": "Found"
-  },
-  {
-    "company": "First American",
-    "status": "Closed"
-  },
-  {
-    "company": "AtoB",
-    "status": "Found"
-  },
-  {
-    "company": "BlackRock",
-    "status": "Found"
-  },
-  {
-    "company": "BlackRock",
-    "status": "Found"
-  },
-  {
-    "company": "BlackRock",
-    "status": "Found"
-  },
-  {
-    "company": "BlackRock",
-    "status": "Found"
-  },
-  {
-    "company": "New Engen / Grapevine",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Boylan Bottling Co",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Point72",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Forge Global",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Forus",
-    "status": "Found"
-  },
-  {
-    "company": "Hive",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "iCapital",
-    "status": "Found"
-  }
-],
+    { company: "United Hospital Fund", status: "Closed" },
+    { company: "Good Apple", status: "Ready to Submit" },
+    { company: "Instawork", status: "Found" },
+    { company: "AvidXchange", status: "Closed" },
+    { company: "Walmart / VIZIO", status: "Found" },
+    { company: "NYC Campaign Finance Board", status: "Closed" },
+    { company: "Instawork", status: "Ready to Submit" },
+    { company: "Charlie Health", status: "Found" },
+    { company: "Charlie Health", status: "Found" },
+    { company: "Rain", status: "Found" },
+    { company: "Nen Creative", status: "Closed" },
+    { company: "Stepful", status: "Found" },
+    { company: "Horizon Media", status: "Ready to Submit" },
+    { company: "NBA", status: "Closed" },
+    { company: "Columbia University", status: "Closed" },
+    { company: "Capital Group", status: "Closed" },
+    { company: "Macy's", status: "Found" },
+    { company: "Grapevine", status: "Ready to Submit" },
+    { company: "Salesforce", status: "Closed" },
+    { company: "Foodbuy", status: "Closed" },
+    { company: "ABM Industries", status: "Found" },
+    { company: "Dimensional Fund Advisors", status: "Found" },
+    { company: "Instawork", status: "Closed" },
+    { company: "Finch", status: "Closed" },
+    { company: "Ramp", status: "Found" },
+    { company: "Hive", status: "Found" },
+    { company: "Harper", status: "Found" },
+    { company: "Hive", status: "Ready to Submit" },
+    { company: "Hive", status: "Ready to Submit" },
+    { company: "iHeartMedia", status: "Ready to Submit" },
+    { company: "Tryon Medical Partners", status: "Closed" },
+    { company: "Judi Health", status: "Found" },
+    { company: "Shiftsmart", status: "Applied" },
+    { company: "Treeswift", status: "Found" },
+    { company: "Finix", status: "Found" },
+    { company: "Capcom USA", status: "Found" },
+    { company: "Sela AI", status: "Found" },
+    { company: "Highbeam", status: "Found" },
+    { company: "Realign LLC", status: "Found" },
+    { company: "Scan.com", status: "Found" },
+    { company: "Talos", status: "Found" },
+    { company: "iTradeNetwork", status: "Found" },
+    { company: "Tennr", status: "Found" },
+    { company: "Garage", status: "Found" },
+    { company: "Fortuna Health", status: "Found" },
+    { company: "Meow", status: "Found" },
+    { company: "Kahana & Feld LLP", status: "Found" },
+    { company: "STARK Carpet", status: "Found" },
+    { company: "allwhere", status: "Found" },
+    { company: "DataCT LLC", status: "Found" },
+    { company: "CastleOak Securities", status: "Found" },
+    { company: "CRC Group", status: "Found" },
+    { company: "TerraForm Power", status: "Found" },
+    { company: "Washington Abstract", status: "Found" },
+    { company: "Inmar Intelligence", status: "Found" },
+    { company: "Michael Page client", status: "Found" },
+    { company: "Digital Asset", status: "Ready to Submit" },
+    { company: "Metro Vein Centers", status: "Applied" },
+    { company: "Vooma", status: "Found" },
+    { company: "Clera", status: "Found" },
+    { company: "Crusoe", status: "Found" },
+    { company: "Alvarez & Marsal", status: "Found" },
+    { company: "First American", status: "Closed" },
+    { company: "AtoB", status: "Found" },
+    { company: "BlackRock", status: "Found" },
+    { company: "BlackRock", status: "Found" },
+    { company: "BlackRock", status: "Found" },
+    { company: "BlackRock", status: "Found" },
+    { company: "New Engen / Grapevine", status: "Ready to Submit" },
+    { company: "Boylan Bottling Co", status: "Ready to Submit" },
+    { company: "Point72", status: "Ready to Submit" },
+    { company: "Forge Global", status: "Ready to Submit" },
+    { company: "Forus", status: "Found" },
+    { company: "Hive", status: "Ready to Submit" },
+    { company: "iCapital", status: "Found" },
+    { company: "Hive", status: "Found" },
+    { company: "Hive", status: "Found" },
+    { company: "Cardless", status: "Found" },
+    { company: "Palantir Technologies", status: "Found" },
+    { company: "Cardless", status: "Found" }
+  ],
   activityHistory: [
+    { at: "2026-09-09T13:00:00.000Z", action: "Daily search added five verified active roles: Hive Business Operations Analyst, Hive Sales Operations Analyst, Cardless Data Analyst, Palantir Site Reliability Operations Analyst - Commercial, and Cardless Business Operations Associate." },
     { at: "2026-09-08T14:13:18.000Z", action: "Tryon Medical Partners rejected the Procurement Analyst application. Employer email verified; no reason provided. Application History records Rejected and tracker records Closed." },
-    { at: "2026-09-08T02:43:00.000Z", action: "Misha confirmed Metro Vein Centers application submitted. Tracker and Application History updated; Hive Data Operations Analyst selected next." },
-    {
-      at: "2026-09-07T18:36:21.000Z",
-      action: "Hive Data Operations Analyst passed exact-form verification, rescored to 97, received a tailored Drive resume, and advanced to Ready to Submit."
-    },
-    {
-      at: "2026-09-07T18:33:11.000Z",
-      action: "Backlog-first rescore: four high-fit application packages advanced to Ready, Charlie Health GTM was rescored but held for final-form verification, and iCapital was added through expanded responsibility-based discovery."
-    },
-    {
-      at: "2026-09-07T17:58:15.000Z",
-      action: "Manual morning audit: revalidated today's application queue, demoted one unverified application endpoint, added Hive Data Operations Analyst, and synced the canonical pipeline."
-    },
-    {
-      at: "2026-09-07T17:39:13.713Z",
-      action: "Morning run completed: five new application packets prepared; one unavailable role closed. No new submissions."
-    }
+    { at: "2026-09-08T02:43:00.000Z", action: "Misha confirmed Metro Vein Centers application submitted. Tracker and Application History updated; Hive Data Operations Analyst selected next." }
   ]
 };
