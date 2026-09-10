@@ -84,11 +84,10 @@ export const jobSearchData = {
     { company: "Datadog", status: "Found" },
     { company: "Datadog", status: "Found" },
     { company: "Alvarez & Marsal", status: "Found" },
-    { company: "iHeartMedia", status: "Found" },
-    { company: "Uber", status: "Found" }
+    { company: "iHeartMedia", status: "Found" }
   ],
   activityHistory: [
-    { at: "2026-09-10T13:00:00.000Z", action: "Daily search added five active roles: Datadog GTM Operations Associate, Datadog GTM Strategy/Operations Associate, Alvarez & Marsal Associate - Global Transaction Analytics, iHeartMedia Finance Analyst Corporate, and Uber Finance Operations Analyst." },
+    { at: "2026-09-10T13:00:00.000Z", action: "Daily search added four hard-filter-passing active roles: Datadog GTM Operations Associate, Datadog GTM Strategy/Operations Associate, Alvarez & Marsal Associate - Global Transaction Analytics, and iHeartMedia Finance Analyst Corporate. A fifth candidate was removed after final qualification review." },
     { at: "2026-09-10T03:14:00.000Z", action: "Added Rejected as a distinct tracker status and updated Tryon Medical Partners from Closed to Rejected based on verified employer rejection evidence." },
     { at: "2026-09-09T13:00:00.000Z", action: "Daily search added five verified active roles: Hive Business Operations Analyst, Hive Sales Operations Analyst, Cardless Data Analyst, Palantir Site Reliability Operations Analyst - Commercial, and Cardless Business Operations Associate." },
     { at: "2026-09-08T14:13:18.000Z", action: "Tryon Medical Partners rejected the Procurement Analyst application. Employer email verified; no reason provided. Application History records Rejected and tracker status is Rejected." },
