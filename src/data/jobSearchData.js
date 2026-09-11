@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 11, 2026 · 7:50 AM ET",
+  updatedAt: "September 11, 2026 · 7:51 AM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
     { company: "Good Apple", status: "Ready to Submit" },
@@ -93,9 +93,27 @@ export const jobSearchData = {
     { company: "SpaceXAI", status: "Rejected" },
     { company: "Agilyti", status: "Rejected" },
     { company: "CFGI", status: "Rejected" },
-    { company: "Trident Consulting", status: "Rejected" }
+    { company: "Trident Consulting", status: "Rejected" },
+    { company: "Gartner", status: "Interview" }
+  ],
+  outreach: [
+    {
+      company: "Gartner",
+      position: "Business Analyst, Marketing Analytics",
+      contact: "Nick Jordan",
+      contactTitle: "Senior Recruiter - GSSO",
+      contactType: "Recruiter",
+      email: "nick.jordan@gartner.com",
+      linkedin: "https://www.linkedin.com/in/nicksjordan",
+      status: "Replied",
+      firstContactAt: "11/09/2026",
+      followUpDue: "9/18/2026",
+      followUpStatus: "Call scheduled 14/09/2026 09:30 ET",
+      lastResponseAt: "11/09/2026 05:12:26"
+    }
   ],
   activityHistory: [
+    { at: "2026-09-11T11:51:00.000Z", action: "Added Gartner Business Analyst, Marketing Analytics as Interview after recruiter Nick Jordan requested a virtual call and resume; outreach marked Replied and Monday September 14 at 9:30 AM ET call recorded." },
     { at: "2026-09-11T11:50:00.000Z", action: "Daily search added five active roles: adMarketplace Data Analyst Finance, Lincoln Financial Analyst Investment Data Analytics, Canoe Intelligence Data Analyst Private Markets, Lincoln Financial Junior Associate Program Investments, and Fastly Operations Analyst." },
     { at: "2026-09-11T11:49:00.000Z", action: "Reconciled historical rejection emails and added four previously missing rejected applications: SpaceXAI AI Tutor - Russian, Agilyti Artificial Intelligence Analyst, CFGI Consultant, and Trident Consulting Product Consultant." },
     { at: "2026-09-10T13:00:00.000Z", action: "Daily search added four hard-filter-passing active roles: Datadog GTM Operations Associate, Datadog GTM Strategy/Operations Associate, Alvarez & Marsal Associate - Global Transaction Analytics, and iHeartMedia Finance Analyst Corporate. A fifth candidate was removed after final qualification review." },
