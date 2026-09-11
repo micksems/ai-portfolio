@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 11, 2026 · 7:51 AM ET",
+  updatedAt: "September 11, 2026 · 9:00 AM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
     { company: "Good Apple", status: "Ready to Submit" },
@@ -94,7 +94,12 @@ export const jobSearchData = {
     { company: "Agilyti", status: "Rejected" },
     { company: "CFGI", status: "Rejected" },
     { company: "Trident Consulting", status: "Rejected" },
-    { company: "Gartner", status: "Interview" }
+    { company: "Gartner", status: "Interview" },
+    { company: "Ramp", status: "Found" },
+    { company: "Qualitate", status: "Found" },
+    { company: "Judi Health", status: "Found" },
+    { company: "Northmarq", status: "Found" },
+    { company: "Ramp", status: "Found" }
   ],
   outreach: [
     {
@@ -113,13 +118,9 @@ export const jobSearchData = {
     }
   ],
   activityHistory: [
+    { at: "2026-09-11T13:00:00.000Z", action: "Daily search added five active roles: Ramp Product Operations Specialist Customer Setup, Qualitate Research Analyst Generalist, Judi Health Analyst Client Experience & Optimization, Northmarq Data Business Analyst, and Ramp Product Operations Specialist Juno." },
     { at: "2026-09-11T11:51:00.000Z", action: "Added Gartner Business Analyst, Marketing Analytics as Interview after recruiter Nick Jordan requested a virtual call and resume; outreach marked Replied and Monday September 14 at 9:30 AM ET call recorded." },
     { at: "2026-09-11T11:50:00.000Z", action: "Daily search added five active roles: adMarketplace Data Analyst Finance, Lincoln Financial Analyst Investment Data Analytics, Canoe Intelligence Data Analyst Private Markets, Lincoln Financial Junior Associate Program Investments, and Fastly Operations Analyst." },
-    { at: "2026-09-11T11:49:00.000Z", action: "Reconciled historical rejection emails and added four previously missing rejected applications: SpaceXAI AI Tutor - Russian, Agilyti Artificial Intelligence Analyst, CFGI Consultant, and Trident Consulting Product Consultant." },
-    { at: "2026-09-10T13:00:00.000Z", action: "Daily search added four hard-filter-passing active roles: Datadog GTM Operations Associate, Datadog GTM Strategy/Operations Associate, Alvarez & Marsal Associate - Global Transaction Analytics, and iHeartMedia Finance Analyst Corporate. A fifth candidate was removed after final qualification review." },
-    { at: "2026-09-10T03:14:00.000Z", action: "Added Rejected as a distinct tracker status and updated Tryon Medical Partners from Closed to Rejected based on verified employer rejection evidence." },
-    { at: "2026-09-09T13:00:00.000Z", action: "Daily search added five verified active roles: Hive Business Operations Analyst, Hive Sales Operations Analyst, Cardless Data Analyst, Palantir Site Reliability Operations Analyst - Commercial, and Cardless Business Operations Associate." },
-    { at: "2026-09-08T14:13:18.000Z", action: "Tryon Medical Partners rejected the Procurement Analyst application. Employer email verified; no reason provided. Application History records Rejected and tracker status is Rejected." },
-    { at: "2026-09-08T02:43:00.000Z", action: "Misha confirmed Metro Vein Centers application submitted. Tracker and Application History updated; Hive Data Operations Analyst selected next." }
+    { at: "2026-09-11T11:49:00.000Z", action: "Reconciled historical rejection emails and added four previously missing rejected applications: SpaceXAI AI Tutor - Russian, Agilyti Artificial Intelligence Analyst, CFGI Consultant, and Trident Consulting Product Consultant." }
   ]
 };
