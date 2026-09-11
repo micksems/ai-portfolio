@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 10, 2026 · 9:00 AM ET",
+  updatedAt: "September 11, 2026 · 7:50 AM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
     { company: "Good Apple", status: "Ready to Submit" },
@@ -84,9 +84,20 @@ export const jobSearchData = {
     { company: "Datadog", status: "Found" },
     { company: "Datadog", status: "Found" },
     { company: "Alvarez & Marsal", status: "Found" },
-    { company: "iHeartMedia", status: "Found" }
+    { company: "iHeartMedia", status: "Found" },
+    { company: "adMarketplace", status: "Found" },
+    { company: "Lincoln Financial", status: "Found" },
+    { company: "Canoe Intelligence", status: "Found" },
+    { company: "Lincoln Financial", status: "Found" },
+    { company: "Fastly", status: "Found" },
+    { company: "SpaceXAI", status: "Rejected" },
+    { company: "Agilyti", status: "Rejected" },
+    { company: "CFGI", status: "Rejected" },
+    { company: "Trident Consulting", status: "Rejected" }
   ],
   activityHistory: [
+    { at: "2026-09-11T11:50:00.000Z", action: "Daily search added five active roles: adMarketplace Data Analyst Finance, Lincoln Financial Analyst Investment Data Analytics, Canoe Intelligence Data Analyst Private Markets, Lincoln Financial Junior Associate Program Investments, and Fastly Operations Analyst." },
+    { at: "2026-09-11T11:49:00.000Z", action: "Reconciled historical rejection emails and added four previously missing rejected applications: SpaceXAI AI Tutor - Russian, Agilyti Artificial Intelligence Analyst, CFGI Consultant, and Trident Consulting Product Consultant." },
     { at: "2026-09-10T13:00:00.000Z", action: "Daily search added four hard-filter-passing active roles: Datadog GTM Operations Associate, Datadog GTM Strategy/Operations Associate, Alvarez & Marsal Associate - Global Transaction Analytics, and iHeartMedia Finance Analyst Corporate. A fifth candidate was removed after final qualification review." },
     { at: "2026-09-10T03:14:00.000Z", action: "Added Rejected as a distinct tracker status and updated Tryon Medical Partners from Closed to Rejected based on verified employer rejection evidence." },
     { at: "2026-09-09T13:00:00.000Z", action: "Daily search added five verified active roles: Hive Business Operations Analyst, Hive Sales Operations Analyst, Cardless Data Analyst, Palantir Site Reliability Operations Analyst - Commercial, and Cardless Business Operations Associate." },
