@@ -100,11 +100,11 @@ export const jobSearchData = {
     { company: "Judi Health", status: "Found" },
     { company: "Northmarq", status: "Found" },
     { company: "Ramp", status: "Found" },
-    { company: "DoorDash", status: "Found" },
-    { company: "Bank of America", status: "Found" },
-    { company: "DoorDash", status: "Found" },
-    { company: "DoorDash", status: "Found" },
-    { company: "Clasp", status: "Found" }
+    { company: "DoorDash", status: "Ready to Submit" },
+    { company: "Bank of America", status: "Ready to Submit" },
+    { company: "DoorDash", status: "Ready to Submit" },
+    { company: "DoorDash", status: "Ready to Submit" },
+    { company: "Clasp", status: "Ready to Submit" }
   ],
   outreach: [
     {
@@ -123,6 +123,7 @@ export const jobSearchData = {
     }
   ],
   activityHistory: [
+    { at: "2026-09-12T13:00:00.000Z", action: "Prepared and saved five job-specific resume PDFs to Google Drive and advanced all five September 12 roles to Ready to Submit." },
     { at: "2026-09-12T13:00:00.000Z", action: "Daily search added five active roles: DoorDash Associate Marketplace Strategy & Operations, Bank of America Client Quantitative Analyst I, DoorDash Associate New Verticals Pharmacy Strategy & Operations, DoorDash Senior Associate New Verticals Fulfilment Strategy & Operations, and Clasp Operations Associate." },
     { at: "2026-09-11T13:00:00.000Z", action: "Daily search added five active roles: Ramp Product Operations Specialist Customer Setup, Qualitate Research Analyst Generalist, Judi Health Analyst Client Experience & Optimization, Northmarq Data Business Analyst, and Ramp Product Operations Specialist Juno." },
     { at: "2026-09-11T11:51:00.000Z", action: "Added Gartner Business Analyst, Marketing Analytics as Interview after recruiter Nick Jordan requested a virtual call and resume; outreach marked Replied and Monday September 14 at 9:30 AM ET call recorded." },
