@@ -105,11 +105,11 @@ export const jobSearchData = {
     { company: "DoorDash", status: "Ready to Submit" },
     { company: "DoorDash", status: "Ready to Submit" },
     { company: "Clasp", status: "Ready to Submit" },
-    { company: "FanDuel", status: "Found" },
-    { company: "The Trade Desk", status: "Found" },
+    { company: "FanDuel", status: "Ready to Submit" },
+    { company: "The Trade Desk", status: "Ready to Submit" },
     { company: "The Brattle Group", status: "Found" },
-    { company: "Goldman Sachs", status: "Found" },
-    { company: "Milltown Partners", status: "Found" }
+    { company: "Goldman Sachs", status: "Ready to Submit" },
+    { company: "Milltown Partners", status: "Ready to Submit" }
   ],
   outreach: [
     {
@@ -128,12 +128,12 @@ export const jobSearchData = {
     }
   ],
   activityHistory: [
+    { at: "2026-09-13T13:15:00.000Z", action: "Saved job-specific resume PDFs to Google Drive for all five September 13 roles and advanced FanDuel, The Trade Desk, Goldman Sachs, and Milltown Partners to Ready to Submit. Brattle remains Found pending required application materials and sensitive eligibility review." },
     { at: "2026-09-13T13:00:00.000Z", action: "Daily search added five active roles: FanDuel Commercial Analyst Casino, The Trade Desk Data Support Analyst I, The Brattle Group Research Analyst Economics and Finance, Goldman Sachs Corporate Treasury Project Management Analyst, and Milltown Partners Analyst SF." },
     { at: "2026-09-12T13:00:00.000Z", action: "Prepared and saved five job-specific resume PDFs to Google Drive and advanced all five September 12 roles to Ready to Submit." },
     { at: "2026-09-12T13:00:00.000Z", action: "Daily search added five active roles: DoorDash Associate Marketplace Strategy & Operations, Bank of America Client Quantitative Analyst I, DoorDash Associate New Verticals Pharmacy Strategy & Operations, DoorDash Senior Associate New Verticals Fulfilment Strategy & Operations, and Clasp Operations Associate." },
     { at: "2026-09-11T13:00:00.000Z", action: "Daily search added five active roles: Ramp Product Operations Specialist Customer Setup, Qualitate Research Analyst Generalist, Judi Health Analyst Client Experience & Optimization, Northmarq Data Business Analyst, and Ramp Product Operations Specialist Juno." },
     { at: "2026-09-11T11:51:00.000Z", action: "Added Gartner Business Analyst, Marketing Analytics as Interview after recruiter Nick Jordan requested a virtual call and resume; outreach marked Replied and Monday September 14 at 9:30 AM ET call recorded." },
-    { at: "2026-09-11T11:50:00.000Z", action: "Daily search added five active roles: adMarketplace Data Analyst Finance, Lincoln Financial Analyst Investment Data Analytics, Canoe Intelligence Data Analyst Private Markets, Lincoln Financial Junior Associate Program Investments, and Fastly Operations Analyst." },
-    { at: "2026-09-11T11:49:00.000Z", action: "Reconciled historical rejection emails and added four previously missing rejected applications: SpaceXAI AI Tutor - Russian, Agilyti Artificial Intelligence Analyst, CFGI Consultant, and Trident Consulting Product Consultant." }
+    { at: "2026-09-11T11:50:00.000Z", action: "Daily search added five active roles: adMarketplace Data Analyst Finance, Lincoln Financial Analyst Investment Data Analytics, Canoe Intelligence Data Analyst Private Markets, Lincoln Financial Junior Associate Program Investments, and Fastly Operations Analyst." }
   ]
 };
