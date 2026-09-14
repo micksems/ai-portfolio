@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 13, 2026 · 9:00 AM ET",
+  updatedAt: "September 14, 2026 · 9:56 AM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
     { company: "Good Apple", status: "Ready to Submit" },
@@ -109,7 +109,12 @@ export const jobSearchData = {
     { company: "The Trade Desk", status: "Ready to Submit" },
     { company: "The Brattle Group", status: "Found" },
     { company: "Goldman Sachs", status: "Ready to Submit" },
-    { company: "Milltown Partners", status: "Ready to Submit" }
+    { company: "Milltown Partners", status: "Ready to Submit" },
+    { company: "Valerie Health", status: "Found" },
+    { company: "Valerie Health", status: "Found" },
+    { company: "Mecka AI", status: "Found" },
+    { company: "Sierra", status: "Found" },
+    { company: "Medra", status: "Found" }
   ],
   outreach: [
     {
@@ -128,6 +133,7 @@ export const jobSearchData = {
     }
   ],
   activityHistory: [
+    { at: "2026-09-14T13:56:55.000Z", action: "Daily search added five active roles: Valerie Health AI Operations Specialist, Valerie Health Agent Operations Associate, Mecka AI Strategic Project Lead, Sierra GTM Operations Analyst, and Medra Business Operations." },
     { at: "2026-09-13T13:15:00.000Z", action: "Saved job-specific resume PDFs to Google Drive for all five September 13 roles and advanced FanDuel, The Trade Desk, Goldman Sachs, and Milltown Partners to Ready to Submit. Brattle remains Found pending required application materials and sensitive eligibility review." },
     { at: "2026-09-13T13:00:00.000Z", action: "Daily search added five active roles: FanDuel Commercial Analyst Casino, The Trade Desk Data Support Analyst I, The Brattle Group Research Analyst Economics and Finance, Goldman Sachs Corporate Treasury Project Management Analyst, and Milltown Partners Analyst SF." },
     { at: "2026-09-12T13:00:00.000Z", action: "Prepared and saved five job-specific resume PDFs to Google Drive and advanced all five September 12 roles to Ready to Submit." },
