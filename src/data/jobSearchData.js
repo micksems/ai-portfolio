@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 14, 2026 · 9:56 AM ET",
+  updatedAt: "September 14, 2026 · 10:08 AM ET",
   jobs: [
     { company: "United Hospital Fund", status: "Closed" },
     { company: "Good Apple", status: "Ready to Submit" },
@@ -110,11 +110,11 @@ export const jobSearchData = {
     { company: "The Brattle Group", status: "Found" },
     { company: "Goldman Sachs", status: "Ready to Submit" },
     { company: "Milltown Partners", status: "Ready to Submit" },
-    { company: "Valerie Health", status: "Found" },
-    { company: "Valerie Health", status: "Found" },
-    { company: "Mecka AI", status: "Found" },
-    { company: "Sierra", status: "Found" },
-    { company: "Medra", status: "Found" }
+    { company: "Valerie Health", status: "Ready to Submit" },
+    { company: "Valerie Health", status: "Ready to Submit" },
+    { company: "Mecka AI", status: "Ready to Submit" },
+    { company: "Sierra", status: "Ready to Submit" },
+    { company: "Medra", status: "Ready to Submit" }
   ],
   outreach: [
     {
@@ -133,13 +133,13 @@ export const jobSearchData = {
     }
   ],
   activityHistory: [
+    { at: "2026-09-14T14:08:18.000Z", action: "Saved five September 14 job-specific resume PDFs to Google Drive and advanced Valerie Health AI Operations Specialist, Valerie Health Agent Operations Associate, Mecka AI Strategic Project Lead, Sierra GTM Operations Analyst, and Medra Business Operations to Ready to Submit." },
     { at: "2026-09-14T13:56:55.000Z", action: "Daily search added five active roles: Valerie Health AI Operations Specialist, Valerie Health Agent Operations Associate, Mecka AI Strategic Project Lead, Sierra GTM Operations Analyst, and Medra Business Operations." },
     { at: "2026-09-13T13:15:00.000Z", action: "Saved job-specific resume PDFs to Google Drive for all five September 13 roles and advanced FanDuel, The Trade Desk, Goldman Sachs, and Milltown Partners to Ready to Submit. Brattle remains Found pending required application materials and sensitive eligibility review." },
     { at: "2026-09-13T13:00:00.000Z", action: "Daily search added five active roles: FanDuel Commercial Analyst Casino, The Trade Desk Data Support Analyst I, The Brattle Group Research Analyst Economics and Finance, Goldman Sachs Corporate Treasury Project Management Analyst, and Milltown Partners Analyst SF." },
     { at: "2026-09-12T13:00:00.000Z", action: "Prepared and saved five job-specific resume PDFs to Google Drive and advanced all five September 12 roles to Ready to Submit." },
     { at: "2026-09-12T13:00:00.000Z", action: "Daily search added five active roles: DoorDash Associate Marketplace Strategy & Operations, Bank of America Client Quantitative Analyst I, DoorDash Associate New Verticals Pharmacy Strategy & Operations, DoorDash Senior Associate New Verticals Fulfilment Strategy & Operations, and Clasp Operations Associate." },
     { at: "2026-09-11T13:00:00.000Z", action: "Daily search added five active roles: Ramp Product Operations Specialist Customer Setup, Qualitate Research Analyst Generalist, Judi Health Analyst Client Experience & Optimization, Northmarq Data Business Analyst, and Ramp Product Operations Specialist Juno." },
-    { at: "2026-09-11T11:51:00.000Z", action: "Added Gartner Business Analyst, Marketing Analytics as Interview after recruiter Nick Jordan requested a virtual call and resume; outreach marked Replied and Monday September 14 at 9:30 AM ET call recorded." },
-    { at: "2026-09-11T11:50:00.000Z", action: "Daily search added five active roles: adMarketplace Data Analyst Finance, Lincoln Financial Analyst Investment Data Analytics, Canoe Intelligence Data Analyst Private Markets, Lincoln Financial Junior Associate Program Investments, and Fastly Operations Analyst." }
+    { at: "2026-09-11T11:51:00.000Z", action: "Added Gartner Business Analyst, Marketing Analytics as Interview after recruiter Nick Jordan requested a virtual call and resume; outreach marked Replied and Monday September 14 at 9:30 AM ET call recorded." }
   ]
 };
