@@ -1,489 +1,58 @@
 export const jobSearchData = {
-  updatedAt: "September 14, 2026 · 11:46 PM ET",
+  updatedAt: "September 15, 2026 · 9:00 AM ET",
   jobs: [
-  {
-    "company": "United Hospital Fund",
-    "status": "Closed"
-  },
-  {
-    "company": "Good Apple",
-    "status": "Closed"
-  },
-  {
-    "company": "Instawork",
-    "status": "Found"
-  },
-  {
-    "company": "AvidXchange",
-    "status": "Closed"
-  },
-  {
-    "company": "Walmart / VIZIO",
-    "status": "Found"
-  },
-  {
-    "company": "NYC Campaign Finance Board",
-    "status": "Closed"
-  },
-  {
-    "company": "Instawork",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Charlie Health",
-    "status": "Found"
-  },
-  {
-    "company": "Charlie Health",
-    "status": "Found"
-  },
-  {
-    "company": "Rain",
-    "status": "Found"
-  },
-  {
-    "company": "Nen Creative",
-    "status": "Closed"
-  },
-  {
-    "company": "Stepful",
-    "status": "Found"
-  },
-  {
-    "company": "Horizon Media",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "NBA",
-    "status": "Closed"
-  },
-  {
-    "company": "Columbia University",
-    "status": "Closed"
-  },
-  {
-    "company": "Capital Group",
-    "status": "Closed"
-  },
-  {
-    "company": "Macy's",
-    "status": "Found"
-  },
-  {
-    "company": "Grapevine",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Salesforce",
-    "status": "Closed"
-  },
-  {
-    "company": "Foodbuy",
-    "status": "Closed"
-  },
-  {
-    "company": "ABM Industries",
-    "status": "Found"
-  },
-  {
-    "company": "Dimensional Fund Advisors",
-    "status": "Found"
-  },
-  {
-    "company": "Instawork",
-    "status": "Closed"
-  },
-  {
-    "company": "Finch",
-    "status": "Closed"
-  },
-  {
-    "company": "Ramp",
-    "status": "Found"
-  },
-  {
-    "company": "Hive",
-    "status": "Found"
-  },
-  {
-    "company": "Harper",
-    "status": "Found"
-  },
-  {
-    "company": "Hive",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Hive",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "iHeartMedia",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Tryon Medical Partners",
-    "status": "Rejected"
-  },
-  {
-    "company": "Judi Health",
-    "status": "Found"
-  },
-  {
-    "company": "Shiftsmart",
-    "status": "Applied"
-  },
-  {
-    "company": "Treeswift",
-    "status": "Found"
-  },
-  {
-    "company": "Finix",
-    "status": "Found"
-  },
-  {
-    "company": "Capcom USA",
-    "status": "Found"
-  },
-  {
-    "company": "Sela AI",
-    "status": "Found"
-  },
-  {
-    "company": "Highbeam",
-    "status": "Found"
-  },
-  {
-    "company": "Realign LLC",
-    "status": "Found"
-  },
-  {
-    "company": "Scan.com",
-    "status": "Found"
-  },
-  {
-    "company": "Talos",
-    "status": "Found"
-  },
-  {
-    "company": "iTradeNetwork",
-    "status": "Found"
-  },
-  {
-    "company": "Tennr",
-    "status": "Found"
-  },
-  {
-    "company": "Garage",
-    "status": "Found"
-  },
-  {
-    "company": "Fortuna Health",
-    "status": "Found"
-  },
-  {
-    "company": "Meow",
-    "status": "Found"
-  },
-  {
-    "company": "Kahana & Feld LLP",
-    "status": "Found"
-  },
-  {
-    "company": "STARK Carpet",
-    "status": "Found"
-  },
-  {
-    "company": "allwhere",
-    "status": "Found"
-  },
-  {
-    "company": "DataCT LLC",
-    "status": "Found"
-  },
-  {
-    "company": "CastleOak Securities",
-    "status": "Found"
-  },
-  {
-    "company": "CRC Group",
-    "status": "Found"
-  },
-  {
-    "company": "TerraForm Power",
-    "status": "Found"
-  },
-  {
-    "company": "Washington Abstract",
-    "status": "Found"
-  },
-  {
-    "company": "Inmar Intelligence",
-    "status": "Found"
-  },
-  {
-    "company": "Michael Page client",
-    "status": "Found"
-  },
-  {
-    "company": "Digital Asset",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Metro Vein Centers",
-    "status": "Rejected"
-  },
-  {
-    "company": "Vooma",
-    "status": "Found"
-  },
-  {
-    "company": "Clera",
-    "status": "Found"
-  },
-  {
-    "company": "Crusoe",
-    "status": "Found"
-  },
-  {
-    "company": "Alvarez & Marsal",
-    "status": "Found"
-  },
-  {
-    "company": "First American",
-    "status": "Closed"
-  },
-  {
-    "company": "AtoB",
-    "status": "Found"
-  },
-  {
-    "company": "BlackRock",
-    "status": "Found"
-  },
-  {
-    "company": "BlackRock",
-    "status": "Found"
-  },
-  {
-    "company": "BlackRock",
-    "status": "Found"
-  },
-  {
-    "company": "BlackRock",
-    "status": "Found"
-  },
-  {
-    "company": "New Engen / Grapevine",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Boylan Bottling Co",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Point72",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Forge Global",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Forus",
-    "status": "Found"
-  },
-  {
-    "company": "Hive",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "iCapital",
-    "status": "Found"
-  },
-  {
-    "company": "Hive",
-    "status": "Found"
-  },
-  {
-    "company": "Hive",
-    "status": "Found"
-  },
-  {
-    "company": "Cardless",
-    "status": "Found"
-  },
-  {
-    "company": "Palantir Technologies",
-    "status": "Found"
-  },
-  {
-    "company": "Cardless",
-    "status": "Found"
-  },
-  {
-    "company": "Datadog",
-    "status": "Found"
-  },
-  {
-    "company": "Datadog",
-    "status": "Found"
-  },
-  {
-    "company": "Alvarez & Marsal",
-    "status": "Found"
-  },
-  {
-    "company": "iHeartMedia",
-    "status": "Found"
-  },
-  {
-    "company": "adMarketplace",
-    "status": "Found"
-  },
-  {
-    "company": "Lincoln Financial",
-    "status": "Found"
-  },
-  {
-    "company": "Canoe Intelligence",
-    "status": "Found"
-  },
-  {
-    "company": "Lincoln Financial",
-    "status": "Found"
-  },
-  {
-    "company": "Fastly",
-    "status": "Found"
-  },
-  {
-    "company": "SpaceXAI",
-    "status": "Rejected"
-  },
-  {
-    "company": "Agilyti",
-    "status": "Rejected"
-  },
-  {
-    "company": "CFGI",
-    "status": "Rejected"
-  },
-  {
-    "company": "Trident Consulting",
-    "status": "Rejected"
-  },
-  {
-    "company": "Gartner",
-    "status": "Interview"
-  },
-  {
-    "company": "Ramp",
-    "status": "Found"
-  },
-  {
-    "company": "Qualitate",
-    "status": "Found"
-  },
-  {
-    "company": "Judi Health",
-    "status": "Found"
-  },
-  {
-    "company": "Northmarq",
-    "status": "Found"
-  },
-  {
-    "company": "Ramp",
-    "status": "Found"
-  },
-  {
-    "company": "DoorDash",
-    "status": "Applied"
-  },
-  {
-    "company": "Bank of America",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "DoorDash",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "DoorDash",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Clasp",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "FanDuel",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "The Trade Desk",
-    "status": "Applied"
-  },
-  {
-    "company": "The Brattle Group",
-    "status": "Found"
-  },
-  {
-    "company": "Goldman Sachs",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Milltown Partners",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Valerie Health",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Valerie Health",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Mecka AI",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Sierra",
-    "status": "Ready to Submit"
-  },
-  {
-    "company": "Medra",
-    "status": "Ready to Submit"
-  }
-],
+    { company: "Instawork", status: "Ready to Submit" },
+    { company: "Horizon Media", status: "Ready to Submit" },
+    { company: "Grapevine", status: "Ready to Submit" },
+    { company: "Hive", status: "Ready to Submit" },
+    { company: "Hive", status: "Ready to Submit" },
+    { company: "iHeartMedia", status: "Ready to Submit" },
+    { company: "Digital Asset", status: "Ready to Submit" },
+    { company: "New Engen / Grapevine", status: "Ready to Submit" },
+    { company: "Boylan Bottling Co", status: "Ready to Submit" },
+    { company: "Point72", status: "Ready to Submit" },
+    { company: "Forge Global", status: "Ready to Submit" },
+    { company: "Hive", status: "Ready to Submit" },
+    { company: "Bank of America", status: "Ready to Submit" },
+    { company: "DoorDash", status: "Ready to Submit" },
+    { company: "DoorDash", status: "Ready to Submit" },
+    { company: "Clasp", status: "Ready to Submit" },
+    { company: "FanDuel", status: "Ready to Submit" },
+    { company: "Goldman Sachs", status: "Ready to Submit" },
+    { company: "Milltown Partners", status: "Ready to Submit" },
+    { company: "Valerie Health", status: "Ready to Submit" },
+    { company: "Valerie Health", status: "Ready to Submit" },
+    { company: "Mecka AI", status: "Ready to Submit" },
+    { company: "Sierra", status: "Ready to Submit" },
+    { company: "Medra", status: "Ready to Submit" },
+    { company: "Shiftsmart", status: "Applied" },
+    { company: "DoorDash", status: "Applied" },
+    { company: "The Trade Desk", status: "Applied" },
+    { company: "Gartner", status: "Interview" },
+    { company: "Lambda", status: "Found" },
+    { company: "MONTICELLOAM", status: "Found" },
+    { company: "Agave", status: "Found" },
+    { company: "Claim Health", status: "Found" },
+    { company: "Big Leap Health", status: "Found" }
+  ],
   outreach: [
-  {
-    "company": "Gartner",
-    "position": "Business Analyst, Marketing Analytics",
-    "contact": "Nick Jordan",
-    "contactTitle": "Senior Recruiter - GSSO",
-    "contactType": "Recruiter",
-    "email": "nick.jordan@gartner.com",
-    "linkedin": "https://www.linkedin.com/in/nicksjordan",
-    "status": "Replied",
-    "firstContactAt": "11/09/2026",
-    "followUpDue": "9/18/2026",
-    "followUpStatus": "Call scheduled 14/09/2026 09:30 ET",
-    "lastResponseAt": "11/09/2026 05:12:26"
-  }
-],
+    {
+      company: "Gartner",
+      position: "Business Analyst, Marketing Analytics",
+      contact: "Nick Jordan",
+      contactTitle: "Senior Recruiter - GSSO",
+      contactType: "Recruiter",
+      email: "nick.jordan@gartner.com",
+      linkedin: "https://www.linkedin.com/in/nicksjordan",
+      status: "Replied",
+      firstContactAt: "11/09/2026",
+      followUpDue: "9/18/2026",
+      followUpStatus: "Call scheduled 14/09/2026 09:30 ET",
+      lastResponseAt: "11/09/2026 05:12:26"
+    }
+  ],
   activityHistory: [
-    {"at":"2026-09-15T03:46:56.000Z","action":"Application submission confirmed by Misha for DoorDash Associate, Marketplace - Strategy & Operations. Job Tracker and Application History advanced to Applied; dashboard reconciled to the canonical Sheet, including The Trade Desk as Applied."},
-    {"at":"2026-09-15T02:35:59.244Z","action":"Evening application audit: recorded Metro Vein rejection, closed Good Apple for explicit sponsorship restriction, and corrected The Trade Desk resume to include AI Evaluator and Knack. Trade Desk returned to Found pending resume visual QA and form approval. No new applications submitted."},
-    { at: "2026-09-14T14:08:18.000Z", action: "Saved five September 14 job-specific resume PDFs to Google Drive and advanced Valerie Health AI Operations Specialist, Valerie Health Agent Operations Associate, Mecka AI Strategic Project Lead, Sierra GTM Operations Analyst, and Medra Business Operations to Ready to Submit." },
-    { at: "2026-09-14T13:56:55.000Z", action: "Daily search added five active roles: Valerie Health AI Operations Specialist, Valerie Health Agent Operations Associate, Mecka AI Strategic Project Lead, Sierra GTM Operations Analyst, and Medra Business Operations." },
-    { at: "2026-09-13T13:15:00.000Z", action: "Saved job-specific resume PDFs to Google Drive for all five September 13 roles and advanced FanDuel, The Trade Desk, Goldman Sachs, and Milltown Partners to Ready to Submit. Brattle remains Found pending required application materials and sensitive eligibility review." },
-    { at: "2026-09-13T13:00:00.000Z", action: "Daily search added five active roles: FanDuel Commercial Analyst Casino, The Trade Desk Data Support Analyst I, The Brattle Group Research Analyst Economics and Finance, Goldman Sachs Corporate Treasury Project Management Analyst, and Milltown Partners Analyst SF." },
-    { at: "2026-09-12T13:00:00.000Z", action: "Prepared and saved five job-specific resume PDFs to Google Drive and advanced all five September 12 roles to Ready to Submit." },
-    { at: "2026-09-12T13:00:00.000Z", action: "Daily search added five active roles: DoorDash Associate Marketplace Strategy & Operations, Bank of America Client Quantitative Analyst I, DoorDash Associate New Verticals Pharmacy Strategy & Operations, DoorDash Senior Associate New Verticals Fulfilment Strategy & Operations, and Clasp Operations Associate." },
-    { at: "2026-09-11T13:00:00.000Z", action: "Daily search added five active roles: Ramp Product Operations Specialist Customer Setup, Qualitate Research Analyst Generalist, Judi Health Analyst Client Experience & Optimization, Northmarq Data Business Analyst, and Ramp Product Operations Specialist Juno." },
-    { at: "2026-09-11T11:51:00.000Z", action: "Added Gartner Business Analyst, Marketing Analytics as Interview after recruiter Nick Jordan requested a virtual call and resume; outreach marked Replied and Monday September 14 at 9:30 AM ET call recorded." }
+    { at: "2026-09-15T13:00:00.000Z", action: "Daily search added five active roles: Lambda Internal Tools & Data Product Analyst, MONTICELLOAM Business Analyst, Agave Product Analyst, Claim Health Operations Associate, and Big Leap Health Strategy and Operations Associate. Job-specific Google Docs were prepared; PDF persistence remained blocked by connector file-egress restrictions, so the five roles remain Found." },
+    { at: "2026-09-15T03:46:56.000Z", action: "Application submission confirmed for DoorDash Associate, Marketplace - Strategy & Operations." }
   ]
 };
