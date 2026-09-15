@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 14, 2026 · 10:35 PM ET",
+  updatedAt: "September 14, 2026 · 11:46 PM ET",
   jobs: [
   {
     "company": "United Hospital Fund",
@@ -399,7 +399,7 @@ export const jobSearchData = {
   },
   {
     "company": "DoorDash",
-    "status": "Ready to Submit"
+    "status": "Applied"
   },
   {
     "company": "Bank of America",
@@ -423,7 +423,7 @@ export const jobSearchData = {
   },
   {
     "company": "The Trade Desk",
-    "status": "Found"
+    "status": "Applied"
   },
   {
     "company": "The Brattle Group",
@@ -475,6 +475,7 @@ export const jobSearchData = {
   }
 ],
   activityHistory: [
+    {"at":"2026-09-15T03:46:56.000Z","action":"Application submission confirmed by Misha for DoorDash Associate, Marketplace - Strategy & Operations. Job Tracker and Application History advanced to Applied; dashboard reconciled to the canonical Sheet, including The Trade Desk as Applied."},
     {"at":"2026-09-15T02:35:59.244Z","action":"Evening application audit: recorded Metro Vein rejection, closed Good Apple for explicit sponsorship restriction, and corrected The Trade Desk resume to include AI Evaluator and Knack. Trade Desk returned to Found pending resume visual QA and form approval. No new applications submitted."},
     { at: "2026-09-14T14:08:18.000Z", action: "Saved five September 14 job-specific resume PDFs to Google Drive and advanced Valerie Health AI Operations Specialist, Valerie Health Agent Operations Associate, Mecka AI Strategic Project Lead, Sierra GTM Operations Analyst, and Medra Business Operations to Ready to Submit." },
     { at: "2026-09-14T13:56:55.000Z", action: "Daily search added five active roles: Valerie Health AI Operations Specialist, Valerie Health Agent Operations Associate, Mecka AI Strategic Project Lead, Sierra GTM Operations Analyst, and Medra Business Operations." },
