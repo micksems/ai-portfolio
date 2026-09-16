@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 15, 2026 · 9:00 AM ET",
+  updatedAt: "September 16, 2026 · 9:02 AM ET",
   jobs: [
     { company: "Instawork", status: "Ready to Submit" },
     { company: "Horizon Media", status: "Ready to Submit" },
@@ -33,7 +33,12 @@ export const jobSearchData = {
     { company: "MONTICELLOAM", status: "Found" },
     { company: "Agave", status: "Found" },
     { company: "Claim Health", status: "Found" },
-    { company: "Big Leap Health", status: "Found" }
+    { company: "Big Leap Health", status: "Found" },
+    { company: "CAIS", status: "Found" },
+    { company: "Aksia", status: "Found" },
+    { company: "Audax Private Debt", status: "Found" },
+    { company: "Conduit Health", status: "Found" },
+    { company: "Basis Research Institute", status: "Found" }
   ],
   outreach: [
     {
@@ -52,6 +57,7 @@ export const jobSearchData = {
     }
   ],
   activityHistory: [
+    { at: "2026-09-16T13:02:04.000Z", action: "Daily search added five active roles: CAIS Partner Experience Analyst-Associate, Aksia Analyst Operational Due Diligence, Audax Private Debt Investor Relations Operations Analyst, Conduit Health Implementation Manager, and Basis Research Institute Technical Program Manager." },
     { at: "2026-09-15T13:00:00.000Z", action: "Daily search added five active roles: Lambda Internal Tools & Data Product Analyst, MONTICELLOAM Business Analyst, Agave Product Analyst, Claim Health Operations Associate, and Big Leap Health Strategy and Operations Associate. Job-specific Google Docs were prepared; PDF persistence remained blocked by connector file-egress restrictions, so the five roles remain Found." },
     { at: "2026-09-15T03:46:56.000Z", action: "Application submission confirmed for DoorDash Associate, Marketplace - Strategy & Operations." }
   ]
