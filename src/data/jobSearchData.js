@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "September 16, 2026 · 1:16 PM ET",
+  updatedAt: "September 16, 2026 · 1:18 PM ET",
   jobs: [
     { company: "Instawork", status: "Ready to Submit" },
     { company: "Horizon Media", status: "Ready to Submit" },
@@ -57,7 +57,7 @@ export const jobSearchData = {
     }
   ],
   activityHistory: [
-    { at: "2026-09-16T17:16:00.000Z", action: "Application submission confirmed for Aksia Analyst, Operational Due Diligence. Tracker and application history updated; post-application outreach research started." },
+    { at: "2026-09-16T17:18:46.000Z", action: "Aksia Analyst, Operational Due Diligence application recorded as Applied. Post-application outreach was sent to recruiter Zachary Hamner and Senior Analyst/former ODD Analyst Michael Calabrese; follow-up due September 23." },
     { at: "2026-09-16T16:04:51.000Z", action: "Application submission confirmed for CAIS Partner Experience (Analyst – Associate). Post-application outreach targets identified and queued." },
     { at: "2026-09-16T13:02:04.000Z", action: "Daily search added five active roles: CAIS Partner Experience Analyst-Associate, Aksia Analyst Operational Due Diligence, Audax Private Debt Investor Relations Operations Analyst, Conduit Health Implementation Manager, and Basis Research Institute Technical Program Manager." },
     { at: "2026-09-15T13:00:00.000Z", action: "Daily search added five active roles: Lambda Internal Tools & Data Product Analyst, MONTICELLOAM Business Analyst, Agave Product Analyst, Claim Health Operations Associate, and Big Leap Health Strategy and Operations Associate. Job-specific Google Docs were prepared; PDF persistence remained blocked by connector file-egress restrictions, so the five roles remain Found." }
