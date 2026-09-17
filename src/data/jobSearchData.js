@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "16/09/2026 22:11:29 ET",
+  updatedAt: "17/09/2026 13:58:49 ET",
   jobs: [
   {
     "company": "United Hospital Fund",
@@ -431,7 +431,7 @@ export const jobSearchData = {
   },
   {
     "company": "Goldman Sachs",
-    "status": "Ready to Submit"
+    "status": "On Hold"
   },
   {
     "company": "Milltown Partners",
@@ -496,6 +496,22 @@ export const jobSearchData = {
   {
     "company": "Basis Research Institute",
     "status": "Found"
+  },
+  {
+    "company": "Madhive",
+    "status": "Found"
+  },
+  {
+    "company": "Tailwind",
+    "status": "Found"
+  },
+  {
+    "company": "Farsight AI",
+    "status": "Closed"
+  },
+  {
+    "company": "Fernstone",
+    "status": "On Hold"
   }
 ],
   outreach: [
@@ -571,6 +587,7 @@ export const jobSearchData = {
   }
 ],
   activityHistory: [
+    {"at":"2026-09-17T17:58:49.472Z","action":"NYC application run: Mecka Strategic Project Lead and Claim Health Operations Associate forms verified. Mecka resume and cover letter refreshed. Goldman application on hold after blank form; Farsight saved job not found; Fernstone link needs verification. No new applications submitted."},
     {"at":"2026-09-17T02:12:56.706Z","action":"DoorDash Pharmacy Strategy & Operations submission confirmed by Misha. Tracker and application history updated. Next: Goldman Sachs Corporate Treasury Project Management Analyst; tailored resume and cover letter prepared."},
     {"at":"2026-09-16T22:12:40.008Z","action":"MONTICELLOAM Business Analyst submission confirmed by Misha; tracker and application history updated. Next: DoorDash Pharmacy Strategy & Operations Associate, distinct from the previously submitted Marketplace role."},
     {"at":"2026-09-16T22:05:21.434Z","action":"FanDuel Commercial Analyst, Casino application confirmed submitted by Misha. Tracker and Application History updated. Preparing MONTICELLOAM Business Analyst next."},
