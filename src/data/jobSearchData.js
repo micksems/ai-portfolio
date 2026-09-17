@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "17/09/2026 14:07:16 ET",
+  updatedAt: "17/09/2026 14:30:01 ET",
   jobs: [
   {
     "company": "United Hospital Fund",
@@ -471,7 +471,7 @@ export const jobSearchData = {
   },
   {
     "company": "Claim Health",
-    "status": "Ready to Submit"
+    "status": "Applied"
   },
   {
     "company": "Big Leap Health",
@@ -487,7 +487,7 @@ export const jobSearchData = {
   },
   {
     "company": "Audax Private Debt",
-    "status": "Found"
+    "status": "Ready to Submit"
   },
   {
     "company": "Conduit Health",
@@ -587,6 +587,7 @@ export const jobSearchData = {
   }
 ],
   activityHistory: [
+    {"at":"2026-09-17T18:30:01.247Z","action":"Claim Health submission confirmed by Misha. Audax Private Debt Investor Relations Operations Analyst documents prepared and linked; not submitted."},
     {"at":"2026-09-17T18:07:16.880Z","action":"Mecka submission confirmed by Misha. Claim Health Operations Associate resume and cover letter prepared, visually checked, and linked in tracker. Claim Health not yet submitted."},
     {"at":"2026-09-17T17:58:49.472Z","action":"NYC application run: Mecka Strategic Project Lead and Claim Health Operations Associate forms verified. Mecka resume and cover letter refreshed. Goldman application on hold after blank form; Farsight saved job not found; Fernstone link needs verification. No new applications submitted."},
     {"at":"2026-09-17T02:12:56.706Z","action":"DoorDash Pharmacy Strategy & Operations submission confirmed by Misha. Tracker and application history updated. Next: Goldman Sachs Corporate Treasury Project Management Analyst; tailored resume and cover letter prepared."},
