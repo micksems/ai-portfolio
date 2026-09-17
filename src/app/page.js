@@ -17,15 +17,6 @@ const navItems = [
   { label: "AI", id: "ai" },
   { label: "Contact", id: "contact" },
 ];
-const coursework = [
-  "Python",
-  "Database Management & SQL",
-  "Machine Learning for Business",
-  "Data Visualization",
-  "Advanced Excel & Power BI",
-  "Natural Language Processing",
-];
-
 function SectionHeader({ eyebrow, title, description, align = "left" }) {
   const alignment =
     align === "center"
@@ -130,7 +121,7 @@ function StatCard({ item, index }) {
   );
 }
 
-function CourseworkTicker() {
+function CourseworkTicker({ coursework }) {
   const tickerRef = useRef(null);
   const playbackFrameRef = useRef(null);
   const courseworkGroup = [...coursework, ...coursework, ...coursework];
@@ -209,7 +200,7 @@ export default function HomePage() {
   const [resumeConfirmation, setResumeConfirmation] = useState("");
   const [resumeSending, setResumeSending] = useState(false);
 
-  const { personal, about, contact, projects, metrics, ai, ux } = portfolioData;
+  const { personal, about, contact, coursework, projects, metrics, ai, ux } = portfolioData;
 
   useEffect(() => {
     const elements = document.querySelectorAll("[data-reveal]");
@@ -481,7 +472,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CourseworkTicker />
+      <CourseworkTicker coursework={coursework} />
 
       <section id="projects" className={sectionClass}>
         <SectionHeader

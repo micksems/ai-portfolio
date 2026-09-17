@@ -70,6 +70,17 @@ export const portfolioData = {
     },
   ],
 
+  coursework: [
+    "Python",
+    "Database Management & SQL",
+    "Machine Learning for Business",
+    "Data Visualization",
+    "Advanced Excel & Power BI",
+    "Natural Language Processing",
+    "Business Technology & Analytics",
+    "Accounting Information Systems",
+  ],
+
   experience: [
     {
       company: "United Nations",

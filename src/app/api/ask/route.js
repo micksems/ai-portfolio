@@ -69,7 +69,7 @@ function formatProjects(items = []) {
 }
 
 function buildPortfolioContext() {
-  const { personal, contact, summary, education, experience, projects, skills, tools, certifications, languages, honors, athletics, metrics } =
+  const { personal, contact, summary, education, coursework, experience, projects, skills, tools, certifications, languages, honors, athletics, metrics } =
     portfolioData;
 
   const contactLines = [
@@ -100,6 +100,9 @@ ${formatList(summary.focusAreas)}
 
 EDUCATION
 ${formatEducation(education)}
+
+RELEVANT COURSEWORK
+${formatList(coursework)}
 
 EXPERIENCE
 ${formatExperience(experience)}
@@ -235,7 +238,7 @@ export async function POST(request) {
             temperature: 0.3,
             topP: 0.8,
             topK: 20,
-            maxOutputTokens: 700,
+            maxOutputTokens: 2048,
           },
         }),
       }
@@ -252,9 +255,11 @@ export async function POST(request) {
       );
     }
 
-    const answer =
-      data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() ||
-      "No response generated.";
+    const answer = safeArray(data?.candidates?.[0]?.content?.parts)
+      .map((part) => part?.text)
+      .filter(Boolean)
+      .join("")
+      .trim() || "No response generated.";
 
     return NextResponse.json({ answer });
   } catch (error) {
