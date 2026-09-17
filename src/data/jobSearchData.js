@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "16/09/2026 18:12:19 ET",
+  updatedAt: "16/09/2026 22:11:29 ET",
   jobs: [
   {
     "company": "United Hospital Fund",
@@ -407,7 +407,7 @@ export const jobSearchData = {
   },
   {
     "company": "DoorDash",
-    "status": "Ready to Submit"
+    "status": "Applied"
   },
   {
     "company": "DoorDash",
@@ -463,7 +463,7 @@ export const jobSearchData = {
   },
   {
     "company": "MONTICELLOAM",
-    "status": "Found"
+    "status": "Applied"
   },
   {
     "company": "Agave",
@@ -571,6 +571,7 @@ export const jobSearchData = {
   }
 ],
   activityHistory: [
+    {"at":"2026-09-17T02:12:56.706Z","action":"DoorDash Pharmacy Strategy & Operations submission confirmed by Misha. Tracker and application history updated. Next: Goldman Sachs Corporate Treasury Project Management Analyst; tailored resume and cover letter prepared."},
     {"at":"2026-09-16T22:12:40.008Z","action":"MONTICELLOAM Business Analyst submission confirmed by Misha; tracker and application history updated. Next: DoorDash Pharmacy Strategy & Operations Associate, distinct from the previously submitted Marketplace role."},
     {"at":"2026-09-16T22:05:21.434Z","action":"FanDuel Commercial Analyst, Casino application confirmed submitted by Misha. Tracker and Application History updated. Preparing MONTICELLOAM Business Analyst next."},
     { at: "2026-09-16T17:22:00.000Z", action: "FanDuel Commercial Analyst – Casino posting re-verified active. The outdated tailored resume was replaced with a corrected one-page version built from the current master and uploaded to the tailored-resume Drive folder." },
