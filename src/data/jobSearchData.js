@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  updatedAt: "18/09/2026 09:00:00 ET",
+  updatedAt: "18/09/2026 09:03:00 ET",
   jobs: [
     ...Array.from({ length: 79 }, (_, i) => ({ company: `Found ${i + 1}`, status: "Found" })),
     ...Array.from({ length: 20 }, (_, i) => ({ company: `Ready ${i + 1}`, status: "Ready to Submit" })),
