@@ -846,6 +846,36 @@ export const jobSearchData = {
       "position": "Legal & Compliance, Research Compliance Associate",
       "url": "https://www.alphasights.com/job/legal-compliance-research-compliance-associate-2/",
       "status": "Applied"
+    },
+    {
+      "company": "VTS",
+      "position": "Associate Implementation Manager",
+      "url": "https://job-boards.greenhouse.io/vts/jobs/4723555005",
+      "status": "Found"
+    },
+    {
+      "company": "EvenUp",
+      "position": "Product Operations Associate",
+      "url": "https://jobs.ashbyhq.com/evenup/dfa6dfeb-70e9-48bf-8df7-00cf7681fd11",
+      "status": "Found"
+    },
+    {
+      "company": "Monaco",
+      "position": "Client Operations",
+      "url": "https://jobs.ashbyhq.com/monaco/95a79c72-9720-4743-8923-4dc00321adb8",
+      "status": "Found"
+    },
+    {
+      "company": "Endeavor Flow",
+      "position": "Operations Associate",
+      "url": "https://jobs.ashbyhq.com/endeavorflow/12b245a0-1afd-4157-9de4-98a0d6203685",
+      "status": "Found"
+    },
+    {
+      "company": "ReKlame Health",
+      "position": "Business Operations Senior Associate",
+      "url": "https://jobs.ashbyhq.com/ReklameHealth/b38ae959-899d-47c6-92dd-89f9d69191bb",
+      "status": "Found"
     }
   ]
 };
