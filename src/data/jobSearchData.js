@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "18/09/2026 11:33 ET",
+  "updatedAt": "18/09/2026 12:00 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -822,6 +822,30 @@ export const jobSearchData = {
       "position": "AI Evaluators: Assessing a Shopping Assistant",
       "url": "https://terac.com/opportunities/TKd76RUIQxw3wy-x",
       "status": "Archived"
+    },
+    {
+      "company": "AlphaSights",
+      "position": "Transcription Operations Associate",
+      "url": "https://www.alphasights.com/job/transcription-operations-associate/",
+      "status": "Found"
+    },
+    {
+      "company": "Precision AQ",
+      "position": "Analyst, Investor Relations and External Communications",
+      "url": "https://job-boards.greenhouse.io/precisionaq/jobs/6115102004",
+      "status": "Found"
+    },
+    {
+      "company": "AlphaSights",
+      "position": "Growth Operations Associate",
+      "url": "https://www.alphasights.com/job/growth-operations-associate/",
+      "status": "Found"
+    },
+    {
+      "company": "AlphaSights",
+      "position": "Legal & Compliance, Research Compliance Associate",
+      "url": "https://www.alphasights.com/job/legal-compliance-research-compliance-associate-2/",
+      "status": "Found"
     }
   ]
 };
