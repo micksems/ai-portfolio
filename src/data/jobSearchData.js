@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "18/09/2026 12:00 ET",
+  "updatedAt": "18/09/2026 12:05 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -641,7 +641,7 @@ export const jobSearchData = {
       "company": "The Brattle Group",
       "position": "Research Analyst (Economics and Finance) - July 2027",
       "url": "https://job-boards.greenhouse.io/thebrattlegroup/jobs/4720816005",
-      "status": "Found"
+      "status": "Applied"
     },
     {
       "company": "Goldman Sachs",
@@ -827,25 +827,25 @@ export const jobSearchData = {
       "company": "AlphaSights",
       "position": "Transcription Operations Associate",
       "url": "https://www.alphasights.com/job/transcription-operations-associate/",
-      "status": "Found"
+      "status": "Applied"
     },
     {
       "company": "Precision AQ",
       "position": "Analyst, Investor Relations and External Communications",
       "url": "https://job-boards.greenhouse.io/precisionaq/jobs/6115102004",
-      "status": "Found"
+      "status": "Applied"
     },
     {
       "company": "AlphaSights",
       "position": "Growth Operations Associate",
       "url": "https://www.alphasights.com/job/growth-operations-associate/",
-      "status": "Found"
+      "status": "Applied"
     },
     {
       "company": "AlphaSights",
       "position": "Legal & Compliance, Research Compliance Associate",
       "url": "https://www.alphasights.com/job/legal-compliance-research-compliance-associate-2/",
-      "status": "Found"
+      "status": "Applied"
     }
   ]
 };
