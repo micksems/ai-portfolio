@@ -629,7 +629,7 @@ export const jobSearchData = {
       "company": "FanDuel",
       "position": "Commercial Analyst – Casino",
       "url": "https://www.fanduel.careers/jobs/fanduel/commercial-analyst-casino/",
-      "status": "Applied"
+      "status": "Closed"
     },
     {
       "company": "The Trade Desk",
