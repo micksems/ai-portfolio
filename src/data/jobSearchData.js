@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "19/09/2026 09:43 ET",
+  "updatedAt": "19/09/2026 10:11 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -388,8 +388,8 @@ export const jobSearchData = {
     {
       "company": "BlackRock",
       "position": "2027 Full-Time Analyst Program - AMRS",
-      "url": "https://careers.blackrock.com/job/ottawa/2027-full-time-analyst-program-amrs/45831/97843197536",
-      "status": "Archived"
+      "url": "https://blackrock.tal.net/vx/lang-en-GB/mobile-0/brand-3/xf-ad177cb70942/candidate/so/pm/1/pl/1/opp/12218-2027-Full-Time-Analyst-Program-AMRS/en-GB",
+      "status": "Ready to Submit"
     },
     {
       "company": "BlackRock",
@@ -419,13 +419,13 @@ export const jobSearchData = {
       "company": "Boylan Bottling Co",
       "position": "Supply Chain Operations Analyst",
       "url": "https://job-boards.greenhouse.io/boylanbottling/jobs/4709173006",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Point72",
       "position": "Benefits Analyst",
       "url": "https://job-boards.greenhouse.io/point72/jobs/8678094002",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Forge Global",
@@ -887,6 +887,12 @@ export const jobSearchData = {
       "company": "AlphaSense",
       "position": "Customer Success Associate",
       "url": "https://job-boards.greenhouse.io/alphasense/jobs/8600929002",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Visa",
+      "position": "Strategy Analyst - Cross Border Strategy & Operations",
+      "url": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/Analyst_REF087892W",
       "status": "Ready to Submit"
     }
   ]
