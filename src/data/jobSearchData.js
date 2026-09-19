@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "18/09/2026 14:59 ET",
+  "updatedAt": "19/09/2026 09:00 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -562,8 +562,8 @@ export const jobSearchData = {
     {
       "company": "Gartner",
       "position": "Business Analyst, Marketing Analytics",
-      "url": null,
-      "status": "Interview"
+      "url": "",
+      "status": "Rejected"
     },
     {
       "company": "Ramp",
@@ -629,7 +629,7 @@ export const jobSearchData = {
       "company": "FanDuel",
       "position": "Commercial Analyst – Casino",
       "url": "https://www.fanduel.careers/jobs/fanduel/commercial-analyst-casino/",
-      "status": "Closed"
+      "status": "Rejected"
     },
     {
       "company": "The Trade Desk",
@@ -857,25 +857,25 @@ export const jobSearchData = {
       "company": "EvenUp",
       "position": "Product Operations Associate",
       "url": "https://jobs.ashbyhq.com/evenup/dfa6dfeb-70e9-48bf-8df7-00cf7681fd11",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Monaco",
       "position": "Client Operations",
       "url": "https://jobs.ashbyhq.com/monaco/95a79c72-9720-4743-8923-4dc00321adb8",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Endeavor Flow",
       "position": "Operations Associate",
       "url": "https://jobs.ashbyhq.com/endeavorflow/12b245a0-1afd-4157-9de4-98a0d6203685",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "ReKlame Health",
       "position": "Business Operations Senior Associate",
       "url": "https://jobs.ashbyhq.com/ReklameHealth/b38ae959-899d-47c6-92dd-89f9d69191bb",
-      "status": "Ready to Submit"
+      "status": "Archived"
     }
   ]
 };
