@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "19/09/2026 09:00 ET",
+  "updatedAt": "19/09/2026 09:06 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -40,8 +40,8 @@ export const jobSearchData = {
     {
       "company": "Instawork",
       "position": "Product Operations Analyst",
-      "url": "https://job-boards.greenhouse.io/instawork/jobs/4583589006?gh_src=dd8f22f76us",
-      "status": "Archived"
+      "url": "https://job-boards.greenhouse.io/instawork/jobs/4583589006",
+      "status": "Ready to Submit"
     },
     {
       "company": "Charlie Health",
@@ -341,7 +341,7 @@ export const jobSearchData = {
       "company": "Digital Asset",
       "position": "Business Operations & Data Analyst",
       "url": "https://job-boards.greenhouse.io/digitalassetcorp/jobs/4385554009",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "Metro Vein Centers",
@@ -876,6 +876,12 @@ export const jobSearchData = {
       "position": "Business Operations Senior Associate",
       "url": "https://jobs.ashbyhq.com/ReklameHealth/b38ae959-899d-47c6-92dd-89f9d69191bb",
       "status": "Archived"
+    },
+    {
+      "company": "Trayd",
+      "position": "Implementations Analyst",
+      "url": "https://www.ycombinator.com/companies/trayd/jobs/2DvQ0jQ-implementations-analyst",
+      "status": "Found"
     }
   ]
 };
