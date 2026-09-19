@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "19/09/2026 09:06 ET",
+  "updatedAt": "19/09/2026 09:12 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -881,7 +881,7 @@ export const jobSearchData = {
       "company": "Trayd",
       "position": "Implementations Analyst",
       "url": "https://www.ycombinator.com/companies/trayd/jobs/2DvQ0jQ-implementations-analyst",
-      "status": "Found"
+      "status": "Ready to Submit"
     }
   ]
 };
