@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "19/09/2026 10:11 ET",
+  "updatedAt": "19/09/2026 11:13 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -887,12 +887,24 @@ export const jobSearchData = {
       "company": "AlphaSense",
       "position": "Customer Success Associate",
       "url": "https://job-boards.greenhouse.io/alphasense/jobs/8600929002",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Visa",
       "position": "Strategy Analyst - Cross Border Strategy & Operations",
       "url": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/Analyst_REF087892W",
+      "status": "Archived"
+    },
+    {
+      "company": "Visa",
+      "position": "Associate - Visa Destinations",
+      "url": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---San-Francisco-CA/Associate---Visa-Destinations_REF088107W",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Visa",
+      "position": "Analyst, NA Growth Marketing",
+      "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---San-Francisco-CA/Analyst--NA-Growth-Marketing_REF087814W-1",
       "status": "Ready to Submit"
     }
   ]
