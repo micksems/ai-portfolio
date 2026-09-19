@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "19/09/2026 12:28 ET",
+  "updatedAt": "19/09/2026 15:26 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -387,9 +387,9 @@ export const jobSearchData = {
     },
     {
       "company": "BlackRock",
-      "position": "2027 Full-Time Analyst Program - AMRS",
+      "position": "2027 Full-Time Analyst Program - Technology - Sales & Relationship Management - FinTech Platform - New York",
       "url": "https://blackrock.tal.net/vx/lang-en-GB/mobile-0/brand-3/xf-ad177cb70942/candidate/so/pm/1/pl/1/opp/12218-2027-Full-Time-Analyst-Program-AMRS/en-GB",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "BlackRock",
@@ -851,7 +851,7 @@ export const jobSearchData = {
       "company": "VTS",
       "position": "Associate Implementation Manager",
       "url": "https://job-boards.greenhouse.io/vts/jobs/4723555005",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "EvenUp",
@@ -881,7 +881,7 @@ export const jobSearchData = {
       "company": "Trayd",
       "position": "Implementations Analyst",
       "url": "https://www.ycombinator.com/companies/trayd/jobs/2DvQ0jQ-implementations-analyst",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "AlphaSense",
@@ -899,13 +899,13 @@ export const jobSearchData = {
       "company": "Visa",
       "position": "Associate - Visa Destinations",
       "url": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---San-Francisco-CA/Associate---Visa-Destinations_REF088107W",
-      "status": "Ready to Submit"
+      "status": "Closed"
     },
     {
       "company": "Visa",
       "position": "Analyst, NA Growth Marketing",
       "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---San-Francisco-CA/Analyst--NA-Growth-Marketing_REF087814W-1",
-      "status": "Ready to Submit"
+      "status": "Applied"
     }
   ]
 };
