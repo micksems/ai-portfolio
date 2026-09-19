@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "19/09/2026 09:12 ET",
+  "updatedAt": "19/09/2026 09:43 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -41,7 +41,7 @@ export const jobSearchData = {
       "company": "Instawork",
       "position": "Product Operations Analyst",
       "url": "https://job-boards.greenhouse.io/instawork/jobs/4583589006",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Charlie Health",
@@ -341,7 +341,7 @@ export const jobSearchData = {
       "company": "Digital Asset",
       "position": "Business Operations & Data Analyst",
       "url": "https://job-boards.greenhouse.io/digitalassetcorp/jobs/4385554009",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Metro Vein Centers",
@@ -419,13 +419,13 @@ export const jobSearchData = {
       "company": "Boylan Bottling Co",
       "position": "Supply Chain Operations Analyst",
       "url": "https://job-boards.greenhouse.io/boylanbottling/jobs/4709173006",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "Point72",
       "position": "Benefits Analyst",
       "url": "https://job-boards.greenhouse.io/point72/jobs/8678094002",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "Forge Global",
@@ -881,6 +881,12 @@ export const jobSearchData = {
       "company": "Trayd",
       "position": "Implementations Analyst",
       "url": "https://www.ycombinator.com/companies/trayd/jobs/2DvQ0jQ-implementations-analyst",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "AlphaSense",
+      "position": "Customer Success Associate",
+      "url": "https://job-boards.greenhouse.io/alphasense/jobs/8600929002",
       "status": "Ready to Submit"
     }
   ]
