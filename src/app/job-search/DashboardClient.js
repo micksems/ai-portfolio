@@ -18,9 +18,9 @@ export default function DashboardClient({ jobSearchData }) {
       description: "Offers received",
     },
     {
-      label: "On your radar",
-      value: jobs.filter((job) => ["Found", "Ready to Submit"].includes(job.status)).length,
-      description: "Verified options to consider next",
+      label: "Rejections",
+      value: jobs.filter((job) => job.status === "Rejected").length,
+      description: "Applications not moved forward",
     },
   ];
 
