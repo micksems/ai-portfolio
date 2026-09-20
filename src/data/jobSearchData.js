@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "20/09/2026 12:14 ET",
+  "updatedAt": "20/09/2026 13:49 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -41,7 +41,7 @@ export const jobSearchData = {
       "company": "Instawork",
       "position": "Product Operations Analyst",
       "url": "https://job-boards.greenhouse.io/instawork/jobs/4583589006",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "Charlie Health",
@@ -443,7 +443,7 @@ export const jobSearchData = {
       "company": "Hive",
       "position": "Data Operations Analyst",
       "url": "https://jobs.lever.co/hive/8a55e4ff-ec69-4691-aa65-fc7cbd7c6ee0",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "iCapital",
@@ -689,7 +689,7 @@ export const jobSearchData = {
       "company": "Lambda",
       "position": "Internal Tools & Data Product Analyst",
       "url": "https://jobs.ashbyhq.com/Lambda/c0116ab6-9ec2-4189-9f07-e9dd284222b6",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "MONTICELLOAM",
@@ -773,7 +773,7 @@ export const jobSearchData = {
       "company": "Jerry.ai",
       "position": "Associate, BizOps & Analytics",
       "url": "https://jobs.ashbyhq.com/Jerry.ai/2dbc19ea-c239-4d85-bbe2-8cac96dc5b90",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "Axial",
@@ -923,7 +923,7 @@ export const jobSearchData = {
       "company": "Listen Labs",
       "position": "Insights Analyst",
       "url": "https://jobs.ashbyhq.com/listenlabs/0b65b19c-44c0-4440-9b6c-4d88c6024772",
-      "status": "Ready to Submit"
+      "status": "Applied"
     }
   ]
 };
