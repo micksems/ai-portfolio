@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "20/09/2026 13:49 ET",
+  "updatedAt": "20/09/2026 14:05 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -924,6 +924,36 @@ export const jobSearchData = {
       "position": "Insights Analyst",
       "url": "https://jobs.ashbyhq.com/listenlabs/0b65b19c-44c0-4440-9b6c-4d88c6024772",
       "status": "Applied"
+    },
+    {
+      "company": "Agave",
+      "position": "Associate Product Manager, Integrations",
+      "url": "https://www.ycombinator.com/companies/agave/jobs/Dnn8XB5-associate-product-manager-integrations",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Mercor",
+      "position": "Data Scientist",
+      "url": "https://jobs.ashbyhq.com/mercor/982a0751-e9eb-4b96-ac93-a1fd1d2f9152",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Dime",
+      "position": "Forward Deployed Engineer",
+      "url": "https://www.ycombinator.com/companies/dime-2/jobs/O1bzYN2-forward-deployed-engineer",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Karumi",
+      "position": "Forward Deployed Engineer (FDE)",
+      "url": "https://www.ycombinator.com/companies/karumi/jobs/mzQuJ9K-forward-deployed-engineer-fde",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Draft The Record",
+      "position": "Customer Success Specialist",
+      "url": "https://www.ycombinator.com/companies/draft-the-record/jobs/WN9VSsM-customer-success-specialist",
+      "status": "Ready to Submit"
     }
   ]
 };
