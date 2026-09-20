@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "20/09/2026 11:13 ET",
+  "updatedAt": "20/09/2026 12:04 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -41,7 +41,7 @@ export const jobSearchData = {
       "company": "Instawork",
       "position": "Product Operations Analyst",
       "url": "https://job-boards.greenhouse.io/instawork/jobs/4583589006",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "Charlie Health",
@@ -407,7 +407,7 @@ export const jobSearchData = {
       "company": "BlackRock",
       "position": "Analyst, Real Estate Portfolio Analytics & Reporting, PFS",
       "url": "https://careers.blackrock.com/job/new-york/analyst-real-estate-portfolio-analytics-and-reporting-pfs/45831/98890304192",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "New Engen / Grapevine",
@@ -443,13 +443,13 @@ export const jobSearchData = {
       "company": "Hive",
       "position": "Data Operations Analyst",
       "url": "https://jobs.lever.co/hive/8a55e4ff-ec69-4691-aa65-fc7cbd7c6ee0",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "iCapital",
       "position": "Product Operations - Associate",
       "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8648980002",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "Hive",
@@ -689,7 +689,7 @@ export const jobSearchData = {
       "company": "Lambda",
       "position": "Internal Tools & Data Product Analyst",
       "url": "https://jobs.ashbyhq.com/Lambda/c0116ab6-9ec2-4189-9f07-e9dd284222b6",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "MONTICELLOAM",
@@ -773,7 +773,7 @@ export const jobSearchData = {
       "company": "Jerry.ai",
       "position": "Associate, BizOps & Analytics",
       "url": "https://jobs.ashbyhq.com/Jerry.ai/2dbc19ea-c239-4d85-bbe2-8cac96dc5b90",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "Axial",
@@ -911,19 +911,19 @@ export const jobSearchData = {
       "company": "Moody's",
       "position": "Data Operations Specialist II",
       "url": "https://careers.moodys.com/en/job/new-york/data-operations-specialist-ii/49841/99480722144",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "Socure",
       "position": "Business Operations Analyst",
       "url": "https://jobs.ashbyhq.com/socure/e977aad8-77fa-4d36-872f-a5f022e76c22",
-      "status": "Found"
+      "status": "Closed"
     },
     {
       "company": "Listen Labs",
       "position": "Insights Analyst",
       "url": "https://jobs.ashbyhq.com/listenlabs/0b65b19c-44c0-4440-9b6c-4d88c6024772",
-      "status": "Found"
+      "status": "Ready to Submit"
     }
   ]
 };
