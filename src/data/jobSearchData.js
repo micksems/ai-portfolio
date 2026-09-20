@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "19/09/2026 15:26 ET",
+  "updatedAt": "20/09/2026 11:13 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -407,7 +407,7 @@ export const jobSearchData = {
       "company": "BlackRock",
       "position": "Analyst, Real Estate Portfolio Analytics & Reporting, PFS",
       "url": "https://careers.blackrock.com/job/new-york/analyst-real-estate-portfolio-analytics-and-reporting-pfs/45831/98890304192",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "New Engen / Grapevine",
@@ -449,7 +449,7 @@ export const jobSearchData = {
       "company": "iCapital",
       "position": "Product Operations - Associate",
       "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8648980002",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "Hive",
@@ -906,6 +906,24 @@ export const jobSearchData = {
       "position": "Analyst, NA Growth Marketing",
       "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---San-Francisco-CA/Analyst--NA-Growth-Marketing_REF087814W-1",
       "status": "Applied"
+    },
+    {
+      "company": "Moody's",
+      "position": "Data Operations Specialist II",
+      "url": "https://careers.moodys.com/en/job/new-york/data-operations-specialist-ii/49841/99480722144",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Socure",
+      "position": "Business Operations Analyst",
+      "url": "https://jobs.ashbyhq.com/socure/e977aad8-77fa-4d36-872f-a5f022e76c22",
+      "status": "Found"
+    },
+    {
+      "company": "Listen Labs",
+      "position": "Insights Analyst",
+      "url": "https://jobs.ashbyhq.com/listenlabs/0b65b19c-44c0-4440-9b6c-4d88c6024772",
+      "status": "Found"
     }
   ]
 };
