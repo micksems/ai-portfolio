@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "20/09/2026 14:05 ET",
+  "updatedAt": "20/09/2026 14:15 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -935,7 +935,7 @@ export const jobSearchData = {
       "company": "Mercor",
       "position": "Data Scientist",
       "url": "https://jobs.ashbyhq.com/mercor/982a0751-e9eb-4b96-ac93-a1fd1d2f9152",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Dime",
@@ -953,6 +953,12 @@ export const jobSearchData = {
       "company": "Draft The Record",
       "position": "Customer Success Specialist",
       "url": "https://www.ycombinator.com/companies/draft-the-record/jobs/WN9VSsM-customer-success-specialist",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Airgoods",
+      "position": "Growth - Retailers",
+      "url": "https://www.ycombinator.com/companies/airgoods/jobs/eHjNGRk-growth-retailers",
       "status": "Ready to Submit"
     }
   ]
