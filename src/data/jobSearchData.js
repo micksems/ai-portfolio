@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "20/09/2026 14:15 ET",
+  "updatedAt": "21/09/2026 09:01:45 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -929,7 +929,7 @@ export const jobSearchData = {
       "company": "Agave",
       "position": "Associate Product Manager, Integrations",
       "url": "https://www.ycombinator.com/companies/agave/jobs/Dnn8XB5-associate-product-manager-integrations",
-      "status": "Ready to Submit"
+      "status": "Found"
     },
     {
       "company": "Mercor",
@@ -941,25 +941,25 @@ export const jobSearchData = {
       "company": "Dime",
       "position": "Forward Deployed Engineer",
       "url": "https://www.ycombinator.com/companies/dime-2/jobs/O1bzYN2-forward-deployed-engineer",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Karumi",
       "position": "Forward Deployed Engineer (FDE)",
       "url": "https://www.ycombinator.com/companies/karumi/jobs/mzQuJ9K-forward-deployed-engineer-fde",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Draft The Record",
       "position": "Customer Success Specialist",
       "url": "https://www.ycombinator.com/companies/draft-the-record/jobs/WN9VSsM-customer-success-specialist",
-      "status": "Ready to Submit"
+      "status": "Found"
     },
     {
       "company": "Airgoods",
       "position": "Growth - Retailers",
       "url": "https://www.ycombinator.com/companies/airgoods/jobs/eHjNGRk-growth-retailers",
-      "status": "Ready to Submit"
+      "status": "Archived"
     }
   ]
 };
