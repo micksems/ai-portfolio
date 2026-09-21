@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "21/09/2026 09:01:45 ET",
+  "updatedAt": "21/09/2026 09:32 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -59,7 +59,7 @@ export const jobSearchData = {
       "company": "Rain",
       "position": "Implementation Specialist",
       "url": "https://jobs.ashbyhq.com/rain/2a014d5a-c59e-4cac-9fa9-b365991ae27a",
-      "status": "Archived"
+      "status": "Found"
     },
     {
       "company": "Nen Creative",
@@ -227,7 +227,7 @@ export const jobSearchData = {
       "company": "Highbeam",
       "position": "AI Implementation Associate",
       "url": "https://jobs.ashbyhq.com/highbeam/60b69921-b805-4a8d-a6ef-bba2a3aba05d",
-      "status": "Archived"
+      "status": "Found"
     },
     {
       "company": "Realign LLC",
@@ -960,6 +960,12 @@ export const jobSearchData = {
       "position": "Growth - Retailers",
       "url": "https://www.ycombinator.com/companies/airgoods/jobs/eHjNGRk-growth-retailers",
       "status": "Archived"
+    },
+    {
+      "company": "Loop",
+      "position": "AI Operations Associate",
+      "url": "https://ats.rippling.com/loop/jobs/9191b3df-1a8b-46d2-a1b4-1420da7b09f7",
+      "status": "Ready to Submit"
     }
   ]
 };
