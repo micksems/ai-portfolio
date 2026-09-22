@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "22/09/2026, 09:27 ET",
+  "updatedAt": "22/09/2026, 14:43 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -341,7 +341,7 @@ export const jobSearchData = {
       "company": "Digital Asset",
       "position": "Business Operations & Data Analyst",
       "url": "https://job-boards.greenhouse.io/digitalassetcorp/jobs/4385554009",
-      "status": "Ready to Submit"
+      "status": "Archived"
     },
     {
       "company": "Metro Vein Centers",
@@ -521,7 +521,7 @@ export const jobSearchData = {
       "company": "Canoe Intelligence",
       "position": "Data Analyst, Private Markets",
       "url": "https://careers.canoeintelligence.com/jobs/676043-data-analyst-private-markets",
-      "status": "Found"
+      "status": "Archived"
     },
     {
       "company": "Lincoln Financial",
@@ -984,6 +984,18 @@ export const jobSearchData = {
       "position": "Associate Partner - AI Operations",
       "url": "https://jobs.ashbyhq.com/claimsorted/e25262a6-4797-4ae3-b702-fdbeeb2327cb",
       "status": "Archived"
+    },
+    {
+      "company": "Enigma",
+      "position": "Data Operations Associate",
+      "url": "https://job-boards.greenhouse.io/enigmaio/jobs/6803803",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Astra",
+      "position": "Payment Operations Analyst",
+      "url": "https://jobs.ashbyhq.com/astra/7705d345-5ae1-4bfa-b826-937ebb7d7ca1/",
+      "status": "Found"
     }
   ]
 };
