@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "21/09/2026 09:32 ET",
+  "updatedAt": "22/09/2026, 09:08 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -227,7 +227,7 @@ export const jobSearchData = {
       "company": "Highbeam",
       "position": "AI Implementation Associate",
       "url": "https://jobs.ashbyhq.com/highbeam/60b69921-b805-4a8d-a6ef-bba2a3aba05d",
-      "status": "Found"
+      "status": "Archived"
     },
     {
       "company": "Realign LLC",
@@ -352,8 +352,8 @@ export const jobSearchData = {
     {
       "company": "Vooma",
       "position": "Operations Associate - Deployments",
-      "url": "https://jobs.ashbyhq.com/vooma/e48e6671-96e2-4c37-a884-263aa87891fc",
-      "status": "Archived"
+      "url": "https://www.ycombinator.com/companies/vooma/jobs/vcXtY49-operations-associate-deployments",
+      "status": "Found"
     },
     {
       "company": "Clera",
@@ -562,7 +562,7 @@ export const jobSearchData = {
     {
       "company": "Gartner",
       "position": "Business Analyst, Marketing Analytics",
-      "url": "",
+      "url": null,
       "status": "Rejected"
     },
     {
@@ -611,7 +611,7 @@ export const jobSearchData = {
       "company": "DoorDash",
       "position": "Associate, New Verticals - Pharmacy Strategy & Operations",
       "url": "https://careersatdoordash.com/jobs/associate-new-verticals---pharmacy-strategy-operations/7980105/",
-      "status": "Applied"
+      "status": "Rejected"
     },
     {
       "company": "DoorDash",
@@ -731,7 +731,7 @@ export const jobSearchData = {
       "company": "Audax Private Debt",
       "position": "Investor Relations Operations Analyst",
       "url": "https://job-boards.greenhouse.io/audaxprivatedebt/jobs/4731334005",
-      "status": "Applied"
+      "status": "Rejected"
     },
     {
       "company": "Conduit Health",
@@ -929,7 +929,7 @@ export const jobSearchData = {
       "company": "Agave",
       "position": "Associate Product Manager, Integrations",
       "url": "https://www.ycombinator.com/companies/agave/jobs/Dnn8XB5-associate-product-manager-integrations",
-      "status": "Found"
+      "status": "Archived"
     },
     {
       "company": "Mercor",
@@ -966,6 +966,24 @@ export const jobSearchData = {
       "position": "AI Operations Associate",
       "url": "https://ats.rippling.com/loop/jobs/9191b3df-1a8b-46d2-a1b4-1420da7b09f7",
       "status": "Ready to Submit"
+    },
+    {
+      "company": "Agave",
+      "position": "Operations Associate",
+      "url": "https://www.ycombinator.com/companies/agave/jobs/owV2cRx-operations-associate",
+      "status": "Found"
+    },
+    {
+      "company": "Flagler Health",
+      "position": "AI Operations Associate",
+      "url": "https://jobs.ashbyhq.com/flaglerhealth/e758d675-82f0-4a16-ae0b-251b7a0b118f",
+      "status": "Archived"
+    },
+    {
+      "company": "ClaimSorted",
+      "position": "Associate Partner - AI Operations",
+      "url": "https://jobs.ashbyhq.com/claimsorted/e25262a6-4797-4ae3-b702-fdbeeb2327cb",
+      "status": "Archived"
     }
   ]
 };
