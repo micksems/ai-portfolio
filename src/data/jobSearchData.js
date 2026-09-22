@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "22/09/2026, 09:08 ET",
+  "updatedAt": "22/09/2026, 09:27 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -59,7 +59,7 @@ export const jobSearchData = {
       "company": "Rain",
       "position": "Implementation Specialist",
       "url": "https://jobs.ashbyhq.com/rain/2a014d5a-c59e-4cac-9fa9-b365991ae27a",
-      "status": "Found"
+      "status": "Archived"
     },
     {
       "company": "Nen Creative",
@@ -341,7 +341,7 @@ export const jobSearchData = {
       "company": "Digital Asset",
       "position": "Business Operations & Data Analyst",
       "url": "https://job-boards.greenhouse.io/digitalassetcorp/jobs/4385554009",
-      "status": "Archived"
+      "status": "Ready to Submit"
     },
     {
       "company": "Metro Vein Centers",
@@ -521,7 +521,7 @@ export const jobSearchData = {
       "company": "Canoe Intelligence",
       "position": "Data Analyst, Private Markets",
       "url": "https://careers.canoeintelligence.com/jobs/676043-data-analyst-private-markets",
-      "status": "Archived"
+      "status": "Found"
     },
     {
       "company": "Lincoln Financial",
@@ -953,7 +953,7 @@ export const jobSearchData = {
       "company": "Draft The Record",
       "position": "Customer Success Specialist",
       "url": "https://www.ycombinator.com/companies/draft-the-record/jobs/WN9VSsM-customer-success-specialist",
-      "status": "Found"
+      "status": "Archived"
     },
     {
       "company": "Airgoods",
