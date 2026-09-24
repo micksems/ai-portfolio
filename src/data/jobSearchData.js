@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "22/09/2026, 14:43 ET",
+  "updatedAt": "24/09/2026, 07:58 ET",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -449,7 +449,7 @@ export const jobSearchData = {
       "company": "iCapital",
       "position": "Product Operations - Associate",
       "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8648980002",
-      "status": "Applied"
+      "status": "Closed"
     },
     {
       "company": "Hive",
@@ -562,7 +562,7 @@ export const jobSearchData = {
     {
       "company": "Gartner",
       "position": "Business Analyst, Marketing Analytics",
-      "url": null,
+      "url": "",
       "status": "Rejected"
     },
     {
@@ -599,7 +599,7 @@ export const jobSearchData = {
       "company": "DoorDash",
       "position": "Associate, Marketplace - Strategy & Operations",
       "url": "https://careersatdoordash.com/jobs/associate-marketplace---strategy-operations/8143179/",
-      "status": "Applied"
+      "status": "Closed"
     },
     {
       "company": "Bank of America",
@@ -827,7 +827,7 @@ export const jobSearchData = {
       "company": "AlphaSights",
       "position": "Transcription Operations Associate",
       "url": "https://www.alphasights.com/job/transcription-operations-associate/",
-      "status": "Applied"
+      "status": "Closed"
     },
     {
       "company": "Precision AQ",
@@ -839,7 +839,7 @@ export const jobSearchData = {
       "company": "AlphaSights",
       "position": "Growth Operations Associate",
       "url": "https://www.alphasights.com/job/growth-operations-associate/",
-      "status": "Applied"
+      "status": "Closed"
     },
     {
       "company": "AlphaSights",
@@ -905,7 +905,7 @@ export const jobSearchData = {
       "company": "Visa",
       "position": "Analyst, NA Growth Marketing",
       "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---San-Francisco-CA/Analyst--NA-Growth-Marketing_REF087814W-1",
-      "status": "Applied"
+      "status": "Rejected"
     },
     {
       "company": "Moody's",
@@ -971,7 +971,7 @@ export const jobSearchData = {
       "company": "Agave",
       "position": "Operations Associate",
       "url": "https://www.ycombinator.com/companies/agave/jobs/owV2cRx-operations-associate",
-      "status": "Found"
+      "status": "Archived"
     },
     {
       "company": "Flagler Health",
@@ -995,6 +995,18 @@ export const jobSearchData = {
       "company": "Astra",
       "position": "Payment Operations Analyst",
       "url": "https://jobs.ashbyhq.com/astra/7705d345-5ae1-4bfa-b826-937ebb7d7ca1/",
+      "status": "Archived"
+    },
+    {
+      "company": "Clera",
+      "position": "Business Operations Graduate",
+      "url": "https://jobs.ashbyhq.com/clera/07059143-0d6b-419f-82af-a549ddee3171",
+      "status": "Found"
+    },
+    {
+      "company": "Bikky",
+      "position": "Data Analyst - Data Operations",
+      "url": "https://jobs.gem.com/bikky/am9icG9zdDpzZP7kWfEFU_aadmielBxz",
       "status": "Found"
     }
   ]
