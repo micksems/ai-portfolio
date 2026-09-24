@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "24/09/2026, 09:15 ET",
+  "updatedAt": "2026-09-24T23:02:35.770Z",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -353,7 +353,7 @@ export const jobSearchData = {
       "company": "Vooma",
       "position": "Operations Associate - Deployments",
       "url": "https://www.ycombinator.com/companies/vooma/jobs/vcXtY49-operations-associate-deployments",
-      "status": "Found"
+      "status": "Applied"
     },
     {
       "company": "Clera",
@@ -641,7 +641,7 @@ export const jobSearchData = {
       "company": "The Brattle Group",
       "position": "Research Analyst (Economics and Finance) - July 2027",
       "url": "https://job-boards.greenhouse.io/thebrattlegroup/jobs/4720816005",
-      "status": "Applied"
+      "status": "Closed"
     },
     {
       "company": "Goldman Sachs",
@@ -965,13 +965,13 @@ export const jobSearchData = {
       "company": "Loop",
       "position": "AI Operations Associate",
       "url": "https://ats.rippling.com/loop/jobs/9191b3df-1a8b-46d2-a1b4-1420da7b09f7",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "Agave",
       "position": "Operations Associate",
       "url": "https://www.ycombinator.com/companies/agave/jobs/owV2cRx-operations-associate",
-      "status": "Archived"
+      "status": "Applied"
     },
     {
       "company": "Flagler Health",
@@ -989,7 +989,7 @@ export const jobSearchData = {
       "company": "Enigma",
       "position": "Data Operations Associate",
       "url": "https://job-boards.greenhouse.io/enigmaio/jobs/6803803",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "Astra",
