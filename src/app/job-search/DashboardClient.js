@@ -1,5 +1,7 @@
 export default function DashboardClient({ jobSearchData }) {
   const jobs = jobSearchData.jobs || [];
+  const activeJobs = jobs.filter((job) => ["Found", "Ready to Submit"].includes(job.status));
+  const pending = activeJobs.filter((job) => job.status === "Found").length;
   const ready = jobs.filter((job) => job.status === "Ready to Submit").length;
   const metrics = [
     {
@@ -49,12 +51,14 @@ export default function DashboardClient({ jobSearchData }) {
         </header>
         <dl className="grid grid-cols-1 gap-4 min-[360px]:grid-cols-2 md:grid-cols-[1.15fr_1fr_1fr]">
           <div className="flex min-h-64 flex-col justify-between rounded-3xl border border-blue-100 bg-[#edf4ff] p-7 min-[360px]:col-span-2 sm:p-8 md:col-span-1 md:row-span-2">
-            <dt className="text-base font-medium text-blue-900">Ready to submit</dt>
+            <dt className="text-base font-medium text-blue-900">Active jobs</dt>
             <dd className="my-6 text-8xl font-semibold leading-none tracking-[-0.055em] text-blue-700 tabular-nums sm:text-9xl">
-              {ready}
+              {activeJobs.length}
             </dd>
             <div className="max-w-52 text-sm leading-6 text-blue-900">
-              {ready > 0 ? "Your next applications, ready to send." : "New applications will appear here when ready."}
+              {activeJobs.length > 0
+                ? `${ready} ready to submit · ${pending} awaiting form review`
+                : "New opportunities will appear here after the next search."}
             </div>
           </div>
           {metrics.map((metric) => (
@@ -65,6 +69,29 @@ export default function DashboardClient({ jobSearchData }) {
             </div>
           ))}
         </dl>
+        <section aria-labelledby="active-jobs-heading" className="mt-10">
+          <h2 id="active-jobs-heading" className="text-xl font-semibold">Your current shortlist</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            Ready to submit means the application form has been checked. The other roles remain in your shortlist while their final form review is pending.
+          </p>
+          <ul className="mt-5 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+            {activeJobs.map((job) => (
+              <li key={job.url || `${job.company}-${job.position}`} className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-slate-500">{job.company}</p>
+                  <h3 className="mt-1 font-semibold">{job.position}</h3>
+                  <p className="mt-2 text-sm text-slate-600">
+                    {job.status === "Ready to Submit" ? "Ready to submit" : "Awaiting form review"}
+                  </p>
+                </div>
+                <a href={job.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 shrink-0 items-center self-start rounded-full border border-blue-200 px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 sm:self-auto">
+                  View job <span aria-hidden="true" className="ml-2">↗</span>
+                  <span className="sr-only"> at {job.company} (opens in a new tab)</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
       </section>
     </main>
   );
