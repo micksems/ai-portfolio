@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "2026-09-25T16:35:04.556Z",
+  "updatedAt": "2026-09-25T18:21:59.077Z",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -269,7 +269,7 @@ export const jobSearchData = {
       "company": "Fortuna Health",
       "position": "Product Operations Associate",
       "url": "https://jobs.ashbyhq.com/fortuna-health/aa48c14b-e38e-4f27-84ef-a6b032bb9b60/application",
-      "status": "Ready to Submit"
+      "status": "Applied"
     },
     {
       "company": "Meow",
@@ -701,7 +701,7 @@ export const jobSearchData = {
       "company": "Agave",
       "position": "Product Analyst",
       "url": "https://jobs.ashbyhq.com/Agave/929b3239-7f09-42bc-9603-14b4c347b998",
-      "status": "Found"
+      "status": "Applied"
     },
     {
       "company": "Claim Health",
@@ -1001,13 +1001,13 @@ export const jobSearchData = {
       "company": "Clera client (fintech bank)",
       "position": "Business Operations Graduate",
       "url": "https://jobs.ashbyhq.com/clera/57d1d370-987c-4cf6-baf1-36dd448c2d14",
-      "status": "Found"
+      "status": "Applied"
     },
     {
       "company": "Bikky",
       "position": "Data Analyst - Data Operations",
       "url": "https://jobs.gem.com/bikky/am9icG9zdDpzZP7kWfEFU_aadmielBxz",
-      "status": "Found"
+      "status": "Applied"
     },
     {
       "company": "Ambrook",
@@ -1025,7 +1025,7 @@ export const jobSearchData = {
       "company": "Pylon",
       "position": "Product Support Engineer",
       "url": "https://jobs.ashbyhq.com/pylon-labs/2b1c3ce3-0b80-4daa-b9b8-8f48b24e491f",
-      "status": "Found"
+      "status": "Applied"
     }
   ]
 };
