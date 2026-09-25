@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "2026-09-24T23:02:35.770Z",
+  "updatedAt": "2026-09-25T12:22:00.000Z",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -268,8 +268,8 @@ export const jobSearchData = {
     {
       "company": "Fortuna Health",
       "position": "Product Operations Associate",
-      "url": "https://jobs.ashbyhq.com/fortuna-health/aa48c14b-e38e-4f27-84ef-a6b032bb9b60",
-      "status": "Archived"
+      "url": "https://jobs.ashbyhq.com/fortuna-health/aa48c14b-e38e-4f27-84ef-a6b032bb9b60/application",
+      "status": "Ready to Submit"
     },
     {
       "company": "Meow",
@@ -641,7 +641,7 @@ export const jobSearchData = {
       "company": "The Brattle Group",
       "position": "Research Analyst (Economics and Finance) - July 2027",
       "url": "https://job-boards.greenhouse.io/thebrattlegroup/jobs/4720816005",
-      "status": "Closed"
+      "status": "Rejected"
     },
     {
       "company": "Goldman Sachs",
@@ -1000,13 +1000,25 @@ export const jobSearchData = {
     {
       "company": "Clera",
       "position": "Business Operations Graduate",
-      "url": "https://jobs.ashbyhq.com/clera/07059143-0d6b-419f-82af-a549ddee3171",
+      "url": "https://jobs.ashbyhq.com/clera/07059143-0d6b-419f-82af-a549ddee3171/application",
       "status": "Found"
     },
     {
       "company": "Bikky",
       "position": "Data Analyst - Data Operations",
       "url": "https://jobs.gem.com/bikky/am9icG9zdDpzZP7kWfEFU_aadmielBxz",
+      "status": "Found"
+    },
+    {
+      "company": "Ambrook",
+      "position": "Product Operations",
+      "url": "https://jobs.ashbyhq.com/ambrook/d477f001-417f-455d-914b-254bc411dff1/application",
+      "status": "Found"
+    },
+    {
+      "company": "BlackRock",
+      "position": "Product Operations Associate, Aladdin Platform Engineering",
+      "url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/New-York-NY/Product-Operations-Associate--Aladdin-Platform-Engineering_R266544/apply",
       "status": "Found"
     }
   ]
