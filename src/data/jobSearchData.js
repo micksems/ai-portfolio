@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "2026-09-25T12:22:00.000Z",
+  "updatedAt": "2026-09-25T16:35:04.556Z",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -449,7 +449,7 @@ export const jobSearchData = {
       "company": "iCapital",
       "position": "Product Operations - Associate",
       "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8648980002",
-      "status": "Closed"
+      "status": "Rejected"
     },
     {
       "company": "Hive",
@@ -701,7 +701,7 @@ export const jobSearchData = {
       "company": "Agave",
       "position": "Product Analyst",
       "url": "https://jobs.ashbyhq.com/Agave/929b3239-7f09-42bc-9603-14b4c347b998",
-      "status": "Archived"
+      "status": "Found"
     },
     {
       "company": "Claim Health",
@@ -827,7 +827,7 @@ export const jobSearchData = {
       "company": "AlphaSights",
       "position": "Transcription Operations Associate",
       "url": "https://www.alphasights.com/job/transcription-operations-associate/",
-      "status": "Closed"
+      "status": "Rejected"
     },
     {
       "company": "Precision AQ",
@@ -839,7 +839,7 @@ export const jobSearchData = {
       "company": "AlphaSights",
       "position": "Growth Operations Associate",
       "url": "https://www.alphasights.com/job/growth-operations-associate/",
-      "status": "Closed"
+      "status": "Rejected"
     },
     {
       "company": "AlphaSights",
@@ -998,9 +998,9 @@ export const jobSearchData = {
       "status": "Archived"
     },
     {
-      "company": "Clera",
+      "company": "Clera client (fintech bank)",
       "position": "Business Operations Graduate",
-      "url": "https://jobs.ashbyhq.com/clera/07059143-0d6b-419f-82af-a549ddee3171/application",
+      "url": "https://jobs.ashbyhq.com/clera/57d1d370-987c-4cf6-baf1-36dd448c2d14",
       "status": "Found"
     },
     {
@@ -1013,12 +1013,18 @@ export const jobSearchData = {
       "company": "Ambrook",
       "position": "Product Operations",
       "url": "https://jobs.ashbyhq.com/ambrook/d477f001-417f-455d-914b-254bc411dff1/application",
-      "status": "Found"
+      "status": "Archived"
     },
     {
       "company": "BlackRock",
       "position": "Product Operations Associate, Aladdin Platform Engineering",
       "url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/New-York-NY/Product-Operations-Associate--Aladdin-Platform-Engineering_R266544/apply",
+      "status": "Archived"
+    },
+    {
+      "company": "Pylon",
+      "position": "Product Support Engineer",
+      "url": "https://jobs.ashbyhq.com/pylon-labs/2b1c3ce3-0b80-4daa-b9b8-8f48b24e491f",
       "status": "Found"
     }
   ]
