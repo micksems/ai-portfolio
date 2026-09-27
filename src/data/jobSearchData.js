@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "2026-09-25T18:32:00-04:00",
+  "updatedAt": "2026-09-27T08:00:00-04:00",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -1026,6 +1026,36 @@ export const jobSearchData = {
       "position": "Product Support Engineer",
       "url": "https://jobs.ashbyhq.com/pylon-labs/2b1c3ce3-0b80-4daa-b9b8-8f48b24e491f",
       "status": "Applied"
+    },
+    {
+      "company": "MissionOne Media",
+      "position": "Analyst, Reporting",
+      "url": "https://job-boards.greenhouse.io/missiononemedia/jobs/6185658004",
+      "status": "Ready to Submit"
+    },
+    {
+      "company": "Arch",
+      "position": "Operations Associate | Early Careers, Summer 2027 Start",
+      "url": "https://jobs.ashbyhq.com/arch.co/4e1822e5-1149-4acd-9287-252a22d99c41/application",
+      "status": "Found"
+    },
+    {
+      "company": "Numeral",
+      "position": "Product Operations Analyst",
+      "url": "https://jobs.ashbyhq.com/numeral/e50e001c-870b-4bc9-b519-9333e762e64b/application",
+      "status": "Found"
+    },
+    {
+      "company": "Column",
+      "position": "Payment Operations (New Grad / Early Career)",
+      "url": "https://jobs.ashbyhq.com/column/c349d594-33a2-49a2-a168-afa8d8226572/application",
+      "status": "Found"
+    },
+    {
+      "company": "Squad Health",
+      "position": "Operations Associate",
+      "url": "https://jobs.ashbyhq.com/squadhealth/06f53c8e-820a-48d7-9da9-e5c04a368cf9/application",
+      "status": "Found"
     }
   ]
 };
