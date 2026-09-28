@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "2026-09-28T14:40:13.014Z",
+  "updatedAt": "2026-09-28T12:43:00-04:00",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -41,9 +41,7 @@ export const jobSearchData = {
       "company": "Instawork",
       "position": "Product Operations Analyst",
       "url": "https://job-boards.greenhouse.io/instawork/jobs/4583589006",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/10KQ3X2LaeB4Me-ezyeOaRUP0V5YNc98N/view?usp=drivesdk",
-      "notes": "Reverified 20/09/2026; exact Greenhouse role + application path live"
+      "status": "Applied"
     },
     {
       "company": "Charlie Health",
@@ -61,9 +59,7 @@ export const jobSearchData = {
       "company": "Rain",
       "position": "Implementation Specialist",
       "url": "https://jobs.ashbyhq.com/rain/2a014d5a-c59e-4cac-9fa9-b365991ae27a",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/1cXyqY_CS3jms5-U4p8v3UhuFyq8ITpEH/view?usp=drivesdk",
-      "notes": "Archived 22/09/2026 after fresh ranking: replaced by stronger verified active options; archive is not employer rejection."
+      "status": "Archived"
     },
     {
       "company": "Nen Creative",
@@ -75,142 +71,121 @@ export const jobSearchData = {
       "company": "Stepful",
       "position": "Revenue Operations Analyst",
       "url": "https://jobs.ashbyhq.com/Stepful/b5ffd982-cc32-49d3-a033-c2bf22d69d5b",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Horizon Media",
       "position": "Analyst, BI, Product Management",
       "url": "https://horizonmedia.wd1.myworkdayjobs.com/en-US/CareerOpportunities/job/Analyst--BI--Product-Management_R0017344",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "NBA",
       "position": "Youth Fan Development Analyst",
       "url": "https://nba.wd108.myworkdayjobs.com/nbacareers/job/Youth-Fan-Development-Analyst_JR000874",
-      "status": "Closed",
-      "notes": "7d+"
+      "status": "Closed"
     },
     {
       "company": "Columbia University",
       "position": "Associate Data Analyst",
       "url": "https://opportunities.columbia.edu/en-US/jobs/associate-data-analyst-new-york-united-states",
-      "status": "Closed",
-      "notes": "7d+"
+      "status": "Closed"
     },
     {
       "company": "Capital Group",
       "position": "Core Ops Analyst",
       "url": "https://capgroup.wd1.myworkdayjobs.com/capitalgroupcareers/job/charlotte/core-ops-analyst_jr6952",
-      "status": "Closed",
-      "notes": "7d+"
+      "status": "Closed"
     },
     {
       "company": "Macy's",
       "position": "Product Management Assistant",
       "url": "https://www.indeed.com/viewjob?jk=047cd4d6b11956e1",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Grapevine",
       "position": "Product & Savings Intelligence Analyst",
       "url": "https://jobs.ashbyhq.com/grapevine/b785642f-d4a4-466b-9458-9e7e422bc1af",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Salesforce",
       "position": "Marketing Operations Associate Analyst",
       "url": "https://to.indeed.com/aalvfhdpy94m",
-      "status": "Closed",
-      "notes": "7d+"
+      "status": "Closed"
     },
     {
       "company": "Foodbuy",
       "position": "Data Intelligence Analyst",
       "url": "https://jobs.compassgroupcareers.com/United_States/job/Charlotte-DATA-INTELLIGENCE-ANALYST-%28CHARLOTTE%2C-NC%29-NC-28217/1416572600/",
-      "status": "Closed",
-      "notes": "7d+"
+      "status": "Closed"
     },
     {
       "company": "ABM Industries",
       "position": "Workforce Productivity Analyst",
       "url": "https://www.indeed.com/viewjob?jk=2f4f16bd1c008347",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Dimensional Fund Advisors",
       "position": "Analyst, Business Data",
       "url": "https://dimensional.wd5.myworkdayjobs.com/en-US/DFA_Careers/job/Analyst--Business-Data_2026-9014-1",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Instawork",
       "position": "Business Operations Associate, AI & Automation",
       "url": "https://job-boards.greenhouse.io/instawork/jobs/4702041006",
-      "status": "Closed",
-      "notes": "≤24h"
+      "status": "Closed"
     },
     {
       "company": "Finch",
       "position": "Product Analyst",
       "url": "https://jobs.lever.co/finch/c94f2732-3307-4fe0-b021-8fc0fe6d341a",
-      "status": "Closed",
-      "notes": "≤24h"
+      "status": "Closed"
     },
     {
       "company": "Ramp",
       "position": "Employee Lifecycle Analyst",
       "url": "https://jobs.ashbyhq.com/ramp/1c8e2b03-fcb3-4949-9113-07812f138eb6",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Hive",
       "position": "Business Operations Associate",
       "url": "https://jobs.lever.co/hive/70d6122f-b0c4-46cf-bb73-0ec9a3749942",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Harper",
       "position": "Business Operations Associate",
       "url": "https://jobs.ashbyhq.com/harperinsure/f635e211-fda5-4628-a3fb-d61ef12b8052",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Hive",
       "position": "Analyst, Media & Sports",
       "url": "https://jobs.lever.co/hive/a9a638ae-bafa-4cfd-9edc-c4a6c3df566a",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Hive",
       "position": "Client Delivery Analyst",
       "url": "https://jobs.lever.co/hive/1043f588-0fb2-40cf-af3f-267f4c117975",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "iHeartMedia",
       "position": "Digital Data Analyst",
       "url": "https://iheartmedia.wd5.myworkdayjobs.com/en-US/External_iHM/job/New-York-NY-55th-St/Digital-Data-Analyst_Req38532-2",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Tryon Medical Partners",
       "position": "Procurement Analyst",
       "url": "https://tryonmedicalpartners.applytojob.com/apply/AVTtKFYT8t/Procurement-Analyst",
-      "status": "Rejected",
-      "resumeUrl": "Open PDF",
-      "notes": "7d+"
+      "status": "Rejected"
     },
     {
       "company": "Judi Health",
@@ -222,8 +197,7 @@ export const jobSearchData = {
       "company": "Shiftsmart",
       "position": "Strategy & Operations Associate, Marketplace",
       "url": "https://jobs.ashbyhq.com/shiftsmart/b3b5a129-776c-4b57-a326-5306e509e9b6/",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1udubu8Y7-fg9cxdXqZLRxMw1A8SKOEt7/view?usp=drivesdk"
+      "status": "Applied"
     },
     {
       "company": "Treeswift",
@@ -247,195 +221,163 @@ export const jobSearchData = {
       "company": "Sela AI",
       "position": "Associate Product Manager",
       "url": "https://jobs.ashbyhq.com/sela%20ai/bed4b178-8620-4e10-90b3-ff3898072c81",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Highbeam",
       "position": "AI Implementation Associate",
       "url": "https://jobs.ashbyhq.com/highbeam/60b69921-b805-4a8d-a6ef-bba2a3aba05d",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/1hYR7CJnfl6iq4I3uJtRq6NUSAkYz5otj/view?usp=drivesdk",
-      "notes": "Current 22/09/2026 review: archived from unsubmitted radar. Independently scored 75/100 versus displayed 86; role emphasizes cash-flow, AP/AR and implementation experience not established by verified background. Exact Ashby page is JS-only to this reader, and final application form cannot be confirmed. Earlier sent peer outreach remains a historical event."
+      "status": "Archived"
     },
     {
       "company": "Realign LLC",
       "position": "Technical Business Analyst",
       "url": "https://www.indeed.com/viewjob?jk=964e31a96c59ad15",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Scan.com",
       "position": "Associate Product Manager",
       "url": "https://jobs.ashbyhq.com/scan-com/e3460b05-078d-4050-ab6a-e62a0f8733a7",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Talos",
       "position": "Associate Product Manager",
       "url": "https://jobs.ashbyhq.com/Talos-Trading/6bfa5c2e-dbd1-4b6a-93b5-3592c264ff40",
-      "status": "Archived",
-      "notes": "1–3d"
+      "status": "Archived"
     },
     {
       "company": "iTradeNetwork",
       "position": "Data Analyst 2",
       "url": "https://www.itradenetwork.com/jobs/5381144008?gh_jid=5381144008",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Tennr",
       "position": "Product Operations Associate",
       "url": "https://jobs.ashbyhq.com/tennr/5cbe9ece-a98b-4412-b872-8051077e3e7d",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Garage",
       "position": "Growth Operations Analyst",
       "url": "https://jobs.ashbyhq.com/garage/4b6513b6-fb8d-4ab4-86fc-295fa0699085",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Fortuna Health",
       "position": "Product Operations Associate",
       "url": "https://jobs.ashbyhq.com/fortuna-health/aa48c14b-e38e-4f27-84ef-a6b032bb9b60/application",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1P-EiUyUyzBDZyXxZvZBnafETUMYpFnnf/view?usp=drivesdk",
-      "notes": "September 28, 2026, 09:12 ET: Fortuna rejected the application. No specific reason provided; no ATS or sponsorship cause established. Gmail 1a0e824d9a871acb.\n\nSUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Retained from September 25 automated run; previously seen, not applied. Explicitly accepts 0–1 years including internships. Operational recordkeeping, service requests, data quality and internal user needs align closely. Gap: No Medicaid-specific experience; posting says none is needed. Full-time onsite start date and work authorization remain to be confirmed. Score 24+17+18+15+8+7=89; fit only, not ATS probability. $90,000; New York City, onsite five days. Authorization: Not stated in employer posting; CPT/OPT acceptance and start date need confirmation. Exact public destination revalidated September 25. Morning form verification retained; onsite availability and start date need user review. Resume: https://drive.google.com/file/d/1P-EiUyUyzBDZyXxZvZBnafETUMYpFnnf/view?usp=drivesdk Cover: https://drive.google.com/file/d/1fGfPOpYGfMEgw-OwhLiE5BaaJ0XeKyyw/view?usp=drivesdk"
+      "status": "Rejected"
     },
     {
       "company": "Meow",
       "position": "Operations Analyst",
       "url": "https://jobs.ashbyhq.com/meow/8e38ca33-13df-45e1-90f2-de13847fc4b2",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Kahana & Feld LLP",
       "position": "Operations Junior Data & Staffing Analyst",
       "url": "https://www.indeed.com/viewjob?jk=96ab249ba45e248f",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "STARK Carpet",
       "position": "Business Analyst",
       "url": "https://www.indeed.com/viewjob?jk=f2bd758de514888e",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "allwhere",
       "position": "Business Operations Analyst",
       "url": "https://allwhere.applytojob.com/apply/YrAZafJNnp/Business-Operations-Analyst",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "DataCT LLC",
       "position": "Operations Analyst",
       "url": "https://datact.hireclick.com/jb/operations-analyst/view/232875",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "CastleOak Securities",
       "position": "Analyst, Office of the CEO",
       "url": "https://job-boards.greenhouse.io/castleoaksecurities/jobs/6140885004?gh_src=cm8cx31f4us",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "CRC Group",
       "position": "Associate Business Analyst",
       "url": "https://tihinsurance.wd1.myworkdayjobs.com/en-US/CRC_Careers/job/Associate-Business-Analyst_R0000003103",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "TerraForm Power",
       "position": "Analyst, Performance",
       "url": "https://recruiting.ultipro.com/BRO5000/JobBoard/8a85f2ba-487c-4082-bfb9-ef9393d416f4/OpportunityDetail?opportunityId=7a81191e-f62b-42d6-a8ea-a2fc38fbed15&postingId=35312a55-12cd-4cbd-a4a3-9c4b3a192476",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Washington Abstract",
       "position": "Product Operations Analyst",
       "url": "https://www.monster.com/job-openings/product-operations-analyst-new-york-ny--fd2ffb03-6fb7-4787-870f-2f54f696f1ee",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Inmar Intelligence",
       "position": "Product Operations Analyst (Data & Insights)",
       "url": "https://inmar.wd1.myworkdayjobs.com/en-US/inmarcareers/job/Product-Operations-Analyst--Data---Insights-_JY2627293",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Michael Page client",
       "position": "Analyst, Operations & Analytics",
       "url": "https://www.michaelpage.com/job-detail/analyst-operations-analytics/ref/jn-072026-7063510",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Digital Asset",
       "position": "Business Operations & Data Analyst",
       "url": "https://job-boards.greenhouse.io/digitalassetcorp/jobs/4385554009",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/1spsXW2gXwF54XPQahm0JsjwLpVuB1L4g/view?usp=drivesdk",
-      "notes": "Archived September 22: 2–4 years requested and capital-markets context make this a weaker early-career pick than the refreshed five. Not an application or rejection."
+      "status": "Archived"
     },
     {
       "company": "Metro Vein Centers",
       "position": "Analyst, Marketing and Sales",
       "url": "https://job-boards.greenhouse.io/metroveincenters/jobs/4395083009",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1mJvHWWpDKNdHA5mNWa5dOorq5l7CGmFE/view?usp=drivesdk",
-      "notes": "1–3d"
+      "status": "Rejected"
     },
     {
       "company": "Vooma",
       "position": "Operations Associate - Deployments",
       "url": "https://www.ycombinator.com/companies/vooma/jobs/vcXtY49-operations-associate-deployments",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1kYG2PQ0mNcy_xWOl2VuJ8qHbYVQ0MeYr/view?usp=drivesdk",
-      "notes": "September 22 full run. Combines internal-client needs, automation, service coordination, and AI experience; exceptional early-career applicants considered. Gap: No direct logistics or SaaS account ownership. Customer deployments would be new responsibilities. Score 22+17+17+14+9+9=88; fit only. $100,000–$120,000 (YC listing); San Francisco, in person; 10–20% travel. Sponsorship: Employer YC listing says it will sponsor. Documents rebuilt from approved master; one-page visual/text checks passed. Resume: https://drive.google.com/file/d/1kYG2PQ0mNcy_xWOl2VuJ8qHbYVQ0MeYr/view?usp=drivesdk Cover: https://drive.google.com/file/d/1lfMEYJC5mrpRVXE1A6HKkgz1ALEfEli9/view?usp=drivesdk Final application fields not independently verified; keep Found."
+      "status": "Applied"
     },
     {
       "company": "Clera",
       "position": "Founder Associate",
       "url": "https://jobs.ashbyhq.com/Clera/27eacf07-7293-47aa-a39e-a0577f750378",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Crusoe",
       "position": "Strategy and Operations Associate",
       "url": "https://jobs.ashbyhq.com/Crusoe/dd0f789c-e2d0-47bc-bfd1-83bfdf89082e",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Alvarez & Marsal",
       "position": "Product Analyst, AI Tools",
       "url": "https://careers.alvarezandmarsal.com/jobs/16891235-product-analyst-ai-tools",
-      "status": "Archived",
-      "notes": "3–7d"
+      "status": "Archived"
     },
     {
       "company": "First American",
       "position": "Business Intelligence Specialist",
       "url": "https://careers.firstam.com/job/santa-ana/business-intelligence-specialist-remote/39054/99034161792",
-      "status": "Closed",
-      "notes": "≤24h"
+      "status": "Closed"
     },
     {
       "company": "AtoB",
@@ -447,9 +389,7 @@ export const jobSearchData = {
       "company": "BlackRock",
       "position": "2027 Full-Time Analyst Program - Technology - Sales & Relationship Management - FinTech Platform - New York",
       "url": "https://blackrock.tal.net/vx/lang-en-GB/mobile-0/brand-3/xf-ad177cb70942/candidate/so/pm/1/pl/1/opp/12218-2027-Full-Time-Analyst-Program-AMRS/en-GB",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1S1h5kxC5AWep_t9myir_E7sKwVqvRfO9/view?usp=drivesdk",
-      "notes": "Reverified 19/09/2026; aged 7d+ but active"
+      "status": "Applied"
     },
     {
       "company": "BlackRock",
@@ -467,158 +407,133 @@ export const jobSearchData = {
       "company": "BlackRock",
       "position": "Analyst, Real Estate Portfolio Analytics & Reporting, PFS",
       "url": "https://careers.blackrock.com/job/new-york/analyst-real-estate-portfolio-analytics-and-reporting-pfs/45831/98890304192",
-      "status": "Archived",
-      "notes": "Reverified 20/09/2026; 7d+"
+      "status": "Archived"
     },
     {
       "company": "New Engen / Grapevine",
       "position": "Brand Success Analyst - Grapevine",
       "url": "https://job-boards.greenhouse.io/newengeninc/jobs/4289114009",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Boylan Bottling Co",
       "position": "Supply Chain Operations Analyst",
       "url": "https://job-boards.greenhouse.io/boylanbottling/jobs/4709173006",
-      "status": "Archived",
-      "notes": "Reverified 19/09/2026; posting date unknown"
+      "status": "Archived"
     },
     {
       "company": "Point72",
       "position": "Benefits Analyst",
       "url": "https://job-boards.greenhouse.io/point72/jobs/8678094002",
-      "status": "Archived",
-      "notes": "Reverified 19/09/2026; posting date unknown"
+      "status": "Archived"
     },
     {
       "company": "Forge Global",
       "position": "Fund Administration, Operations Analyst",
       "url": "https://job-boards.greenhouse.io/forgeglobal/jobs/6142217004",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Forus",
       "position": "AI Operations",
       "url": "https://jobs.ashbyhq.com/forus/ddf8e4e0-78a8-4e51-acb8-d653109970f9/application",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Hive",
       "position": "Data Operations Analyst",
       "url": "https://jobs.lever.co/hive/8a55e4ff-ec69-4691-aa65-fc7cbd7c6ee0",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/13S3HUW-qCv3NWayIt0znNGBbLf4oGhcm/view?usp=drivesdk",
-      "notes": "Reverified 20/09/2026; exact Lever role + application path live"
+      "status": "Applied"
     },
     {
       "company": "iCapital",
       "position": "Product Operations - Associate",
       "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8648980002",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1FdUz-nhqk8LFnd13JhqcBljUzO-RTj05/view?usp=drivesdk",
-      "notes": "Reverified 20/09/2026; 7d+\nSeptember 22 email: iCapital Product Operations - Associate rejected; other candidates more closely aligned with needs."
+      "status": "Rejected"
     },
     {
       "company": "Hive",
       "position": "Business Operations Analyst",
       "url": "https://jobs.lever.co/hive/0fcd320b-b613-4ecf-b217-f4714cf56a61",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Hive",
       "position": "Sales Operations Analyst",
       "url": "https://jobs.lever.co/hive/44ecff3f-02e2-4408-9f47-dfbafb280344",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Cardless",
       "position": "Data Analyst",
       "url": "https://jobs.ashbyhq.com/cardless/91940d95-ee52-42c9-8844-46d6c10567f3",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Palantir Technologies",
       "position": "Site Reliability Operations Analyst - Commercial",
       "url": "https://jobs.lever.co/palantir/5174e95b-2e0a-46f8-8db7-e2c837a0ac94",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Cardless",
       "position": "Business Operations Associate",
       "url": "https://jobs.ashbyhq.com/cardless/53b586e0-c37d-4b8a-91e9-7c98697d9c2b",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Datadog",
       "position": "GTM Operations Associate",
       "url": "https://careers.datadoghq.com/detail/8049521/",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Datadog",
       "position": "GTM Strategy/Operations Associate",
       "url": "https://careers.datadoghq.com/detail/7843331/",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Alvarez & Marsal",
       "position": "Associate - Global Transaction Analytics",
       "url": "https://careers.alvarezandmarsal.com/jobs/17160946-associate-global-transaction-analytics",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "iHeartMedia",
       "position": "Finance Analyst, Corporate",
       "url": "https://www.iheartmedia.com/careers",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "adMarketplace",
       "position": "Data Analyst, Finance",
       "url": "https://careers.admarketplace.com/jobs/698969-data-analyst-finance",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Lincoln Financial",
       "position": "Analyst, Investment Data Analytics",
       "url": "https://jobs.lincolnfinancial.com/job/Charlotte-Analyst%2C-Investment-Data-Analytics-NC-28201/1409076700/",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Canoe Intelligence",
       "position": "Data Analyst, Private Markets",
       "url": "https://careers.canoeintelligence.com/jobs/676043-data-analyst-private-markets",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/1fuzwQ87Rbs8iALNE0ys8nHkoXSttQnZz/view?usp=drivesdk",
-      "notes": "Archived September 22: required private-markets/fund-operations experience is not demonstrated in the current resume. Not an application or rejection."
+      "status": "Archived"
     },
     {
       "company": "Lincoln Financial",
       "position": "Junior Associate Program, Investments (2026)",
       "url": "https://jobs.lincolnfinancial.com/job/Charlotte-Associate-Investment-Analyst-NC-28201/1414165900/",
-      "status": "Archived",
-      "notes": "7d+"
+      "status": "Archived"
     },
     {
       "company": "Fastly",
       "position": "Operations Analyst",
       "url": "https://www.fastly.com/about/careers",
-      "status": "Archived",
-      "notes": "1–3d"
+      "status": "Archived"
     },
     {
       "company": "SpaceXAI",
@@ -648,192 +563,157 @@ export const jobSearchData = {
       "company": "Gartner",
       "position": "Business Analyst, Marketing Analytics",
       "url": "",
-      "status": "Rejected",
-      "notes": "1–3d"
+      "status": "Rejected"
     },
     {
       "company": "Ramp",
       "position": "Product Operations Specialist | Customer Setup",
       "url": "https://jobs.ashbyhq.com/ramp/4d3197eb-49dc-4827-a1e6-26cf0ff24b55",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Qualitate",
       "position": "Research Analyst - Generalist",
       "url": "https://jobs.ashbyhq.com/qualitate/b5b22dba-5864-4eb2-a412-7420c949de35",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Judi Health",
       "position": "Analyst, Client Experience & Optimization",
       "url": "https://job-boards.greenhouse.io/judihealth/jobs/5143266008",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Northmarq",
       "position": "Data Business Analyst",
       "url": "https://job-boards.greenhouse.io/northmarq/jobs/5239502008",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Ramp",
       "position": "Product Operations Specialist | Juno",
       "url": "https://jobs.ashbyhq.com/ramp/dba53e68-4c96-449d-af4d-27dc475b814c",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "DoorDash",
       "position": "Associate, Marketplace - Strategy & Operations",
       "url": "https://careersatdoordash.com/jobs/associate-marketplace---strategy-operations/8143179/",
-      "status": "Closed",
-      "resumeUrl": "https://docs.google.com/document/d/1TjnYJK5g57LV86H5lDaP8Ah3M8ucWMXnpEycjgnR5T4/edit",
-      "notes": "≤24h\nSeptember 22 email confirms opening closed; no longer hiring, not candidate rejection."
+      "status": "Closed"
     },
     {
       "company": "Bank of America",
       "position": "Client Quantitative Analyst I",
       "url": "https://careers.bankofamerica.com/en-us/job-detail/26031257/client-quantitative-analyst-i-multiple-locations",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "DoorDash",
       "position": "Associate, New Verticals - Pharmacy Strategy & Operations",
       "url": "https://careersatdoordash.com/jobs/associate-new-verticals---pharmacy-strategy-operations/7980105/",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/155AIZzzJ8nsrKsP6gPPYZIVU8WNJzZSG/view?usp=drivesdk",
-      "notes": "≤24h"
+      "status": "Rejected"
     },
     {
       "company": "DoorDash",
       "position": "Senior Associate, New Verticals - Fulfilment Strategy & Operations",
       "url": "https://careersatdoordash.com/jobs/senior-associate-new-verticals---fulfilment-strategy-operations/8189143/",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Clasp",
       "position": "Operations Associate",
       "url": "https://jobs.ashbyhq.com/clasp/8582f75d-84fe-433f-b92d-d208e0334341",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "FanDuel",
       "position": "Commercial Analyst – Casino",
       "url": "https://www.fanduel.careers/jobs/fanduel/commercial-analyst-casino/",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1e7t8heuLkmtdaoIyVRNonbLZb5LH-XsL/view?usp=drivesdk",
-      "notes": "≤24h"
+      "status": "Rejected"
     },
     {
       "company": "The Trade Desk",
       "position": "Data Support Analyst I",
       "url": "https://careers.thetradedesk.com/jobs/5165780007/data-support-analyst-i",
-      "status": "Rejected",
-      "resumeUrl": "https://docs.google.com/document/d/16BZhgVaiyiyGFGrZQwa1hpbC_NwkG4uOs0t4o64H8yk/edit",
-      "notes": "1–3d"
+      "status": "Rejected"
     },
     {
       "company": "The Brattle Group",
       "position": "Research Analyst (Economics and Finance) - July 2027",
       "url": "https://job-boards.greenhouse.io/thebrattlegroup/jobs/4720816005",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1Kxnk_IeNQpGeGjbL_G5k7RUzCBBMRh9p/view?usp=drivesdk"
+      "status": "Rejected"
     },
     {
       "company": "Goldman Sachs",
       "position": "Corporate Treasury, Project Management, New York, Analyst",
       "url": "https://higher.gs.com/roles/183545",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Milltown Partners",
       "position": "Analyst (SF)",
       "url": "https://jobs.lever.co/milltownpartners/d4c1e4fb-63c3-453e-9ddf-bb58dff7aefd",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Valerie Health",
       "position": "AI Operations Specialist",
       "url": "https://jobs.ashbyhq.com/valeriehealth/54707996-63b5-4811-98eb-016266654e78",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Valerie Health",
       "position": "Agent Operations Associate",
       "url": "https://jobs.ashbyhq.com/valeriehealth/3f3cb67b-2227-486c-b2bf-667dc59dae95/",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Mecka AI",
       "position": "Strategic Project Lead",
       "url": "https://jobs.ashbyhq.com/mecka.ai/7617ec0c-f0b2-45a8-bd6b-ded57fa2222a",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/10MypVvMegoewJfWXBsJ8RzPTP7Xf9dm8/view?usp=drivesdk",
-      "notes": "≤24h"
+      "status": "Applied"
     },
     {
       "company": "Sierra",
       "position": "GTM Operations Analyst",
       "url": "https://jobs.ashbyhq.com/sierra/21a4df49-1b95-4fe9-b375-af6cf69c0812",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Medra",
       "position": "Business Operations",
       "url": "https://jobs.ashbyhq.com/medraai/13e93fc3-fd20-4e7c-a748-00ccbc2a7f79",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Lambda",
       "position": "Internal Tools & Data Product Analyst",
       "url": "https://jobs.ashbyhq.com/Lambda/c0116ab6-9ec2-4189-9f07-e9dd284222b6",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1VMMW9L2bvDbdbQxRwb3zk07Pjl4g0utJ/view?usp=drivesdk",
-      "notes": "Reverified 20/09/2026; exact Ashby role + application path live"
+      "status": "Applied"
     },
     {
       "company": "MONTICELLOAM",
       "position": "Business Analyst",
       "url": "https://job-boards.greenhouse.io/monticelloam/jobs/4295353009",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1OlT6UFmfZbMh_sEoLpM6y1bSRx1Gf1sn/view?usp=drivesdk",
-      "notes": "≤24h"
+      "status": "Applied"
     },
     {
       "company": "Agave",
       "position": "Product Analyst",
       "url": "https://jobs.ashbyhq.com/Agave/929b3239-7f09-42bc-9603-14b4c347b998",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1jUhnDsc4_wETjSYkazyGI5nuHsJOoso7/view?usp=drivesdk",
-      "notes": "SUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Reactivated; distinct from submitted Operations Associate. Early-career product investigation, QA, user requirements and data quality connect to AI evaluation and the UN assistant project. Gap: No professional API/Postman integration debugging or product specification ownership. Posting accepts a desire to learn these tools. Do not confuse with already submitted Operations Associate. Score 22+16+16+14+9+7=84; fit only, not ATS probability. $100,000–$150,000; San Francisco, onsite five days. Authorization: Employer YC listing explicitly offers sponsorship, including H-1B/TN for suitable candidates. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1jUhnDsc4_wETjSYkazyGI5nuHsJOoso7/view?usp=drivesdk Cover: https://drive.google.com/file/d/1Iq-ma4h5FemDaHwnrUPMgXAq_n6ZEswA/view?usp=drivesdk"
+      "status": "Applied"
     },
     {
       "company": "Claim Health",
       "position": "Strategy and Operations Associate",
       "url": "https://jobs.ashbyhq.com/claim-health/bb76582b-fe73-48d5-8897-a863bfd88013",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1zVHKQcjVLTgKAPZfErgwkko5TL-PBnXG/view?usp=drivesdk",
-      "notes": "≤24h"
+      "status": "Rejected"
     },
     {
       "company": "Big Leap Health",
       "position": "Strategy and Operations Associate",
       "url": "https://jobs.ashbyhq.com/big-leap-health/671a061d-21e4-45de-9ea0-c745440d0c65",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "CAIS",
@@ -845,94 +725,79 @@ export const jobSearchData = {
       "company": "Aksia",
       "position": "Analyst, Operational Due Diligence",
       "url": "https://job-boards.greenhouse.io/aksia/jobs/8800607002",
-      "status": "Applied",
-      "notes": "≤24h"
+      "status": "Applied"
     },
     {
       "company": "Audax Private Debt",
       "position": "Investor Relations Operations Analyst",
       "url": "https://job-boards.greenhouse.io/audaxprivatedebt/jobs/4731334005",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1IvpYu9B2suafsaZCdiaTtFHHXyCOGLqh/view?usp=drivesdk",
-      "notes": "≤24h"
+      "status": "Rejected"
     },
     {
       "company": "Conduit Health",
       "position": "Implementation Manager",
       "url": "https://jobs.ashbyhq.com/conduit-health/050d57b6-e7c6-4f4e-8350-f67fa3af8da5",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Basis Research Institute",
       "position": "Technical Program Manager",
       "url": "https://jobs.ashbyhq.com/basis-research/05559513-288d-4dfe-bbbf-f0035a7d3d2a",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Madhive",
       "position": "Business Operations Analyst",
       "url": "https://jobs.ashbyhq.com/madhive/319ce3d7-c2b7-4963-a31b-5d8d73293745",
-      "status": "Archived",
-      "notes": "3–7d"
+      "status": "Archived"
     },
     {
       "company": "Tailwind",
       "position": "Product Operations",
       "url": "https://jobs.ashbyhq.com/tailwind/6752496a-70b7-4679-be3b-4b8ba6d14cb3",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Farsight AI",
       "position": "Strategy & Operations Associate",
       "url": "https://jobs.ashbyhq.com/farsight/103845f1-f775-4fe0-a7a2-9185e72e749e",
-      "status": "Closed",
-      "notes": "≤24h"
+      "status": "Closed"
     },
     {
       "company": "Fernstone",
       "position": "Growth & Operations Analyst",
       "url": "https://jobs.ashbyhq.com/fernstone/04aec27e-888e-47e5-b23f-a1b3da541b02/",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Jerry.ai",
       "position": "Associate, BizOps & Analytics",
       "url": "https://jobs.ashbyhq.com/Jerry.ai/2dbc19ea-c239-4d85-bbe2-8cac96dc5b90",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1XCs5sCmBGu5It-zf9zuG22adoUTchWNE/view?usp=drivesdk",
-      "notes": "Reverified 20/09/2026; exact Ashby role + application path live"
+      "status": "Applied"
     },
     {
       "company": "Axial",
       "position": "Business Operations Associate / Senior Associate",
       "url": "https://www.axial.net/company/careers/",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "iCapital",
       "position": "Structured Investments Operations - Analyst",
       "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8660767002",
-      "status": "Archived",
-      "notes": "1–3d"
+      "status": "Archived"
     },
     {
       "company": "Valon",
       "position": "Product Operations Senior Associate",
       "url": "https://jobs.ashbyhq.com/Valon/457cbb87-6c9b-4a21-96f8-f99701411754",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Distributed Spectrum",
       "position": "Operations Associate, Growth",
       "url": "https://jobs.ashbyhq.com/distributed-spectrum/dba82f49-0db4-4d80-8223-2c81bd345761",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Roku",
@@ -962,136 +827,109 @@ export const jobSearchData = {
       "company": "AlphaSights",
       "position": "Transcription Operations Associate",
       "url": "https://www.alphasights.com/job/transcription-operations-associate/",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1ERyxOh20upWaMT8viMbkrLiag0-j0ytC/view?usp=drivesdk",
-      "notes": "September 23 email: Transcription Operations Associate application rejected. Six-month wait before reapplying to this role. Other AlphaSights applications unaffected."
+      "status": "Rejected"
     },
     {
       "company": "Precision AQ",
       "position": "Analyst, Investor Relations and External Communications",
       "url": "https://job-boards.greenhouse.io/precisionaq/jobs/6115102004",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1nx7CQl72-WkOD6omw1FOUcbu6SvLvHlY/view?usp=drivesdk"
+      "status": "Applied"
     },
     {
       "company": "AlphaSights",
       "position": "Growth Operations Associate",
       "url": "https://www.alphasights.com/job/growth-operations-associate/",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1WNn5Gz6rpVFMoJRNFOqUqtrjJEityWtG/view?usp=drivesdk",
-      "notes": "September 23 email: Growth Operations Associate rejected. Explicit reason: requires immediate start and cannot consider applicants still in education; invites reapplication nearer graduation."
+      "status": "Rejected"
     },
     {
       "company": "AlphaSights",
       "position": "Legal & Compliance, Research Compliance Associate",
       "url": "https://www.alphasights.com/job/legal-compliance-research-compliance-associate-2/",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1zHrrsYwql0PzbxV5UAKO1AHqk7D9budR/view?usp=drivesdk",
-      "notes": "September 25, 12:23 ET: Research Compliance HeyMilo screening completed; awaiting employer review. Other AlphaSights role rejections do not apply here."
+      "status": "Applied"
     },
     {
       "company": "VTS",
       "position": "Associate Implementation Manager",
       "url": "https://job-boards.greenhouse.io/vts/jobs/4723555005",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1ybDrsnjL6C0jV7p_U1wNLNDMnaBV84XI/view?usp=drivesdk",
-      "notes": "Reverified 19/09/2026; posting date unknown"
+      "status": "Applied"
     },
     {
       "company": "EvenUp",
       "position": "Product Operations Associate",
       "url": "https://jobs.ashbyhq.com/evenup/dfa6dfeb-70e9-48bf-8df7-00cf7681fd11",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Monaco",
       "position": "Client Operations",
       "url": "https://jobs.ashbyhq.com/monaco/95a79c72-9720-4743-8923-4dc00321adb8",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Endeavor Flow",
       "position": "Operations Associate",
       "url": "https://jobs.ashbyhq.com/endeavorflow/12b245a0-1afd-4157-9de4-98a0d6203685",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "ReKlame Health",
       "position": "Business Operations Senior Associate",
       "url": "https://jobs.ashbyhq.com/ReklameHealth/b38ae959-899d-47c6-92dd-89f9d69191bb",
-      "status": "Archived",
-      "notes": "≤24h"
+      "status": "Archived"
     },
     {
       "company": "Trayd",
       "position": "Implementations Analyst",
       "url": "https://www.ycombinator.com/companies/trayd/jobs/2DvQ0jQ-implementations-analyst",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1pMbn_870OSbD6uz1-9PwiosOztDyzS8R/view?usp=drivesdk",
-      "notes": "Reverified 19/09/2026; posting date unknown"
+      "status": "Applied"
     },
     {
       "company": "AlphaSense",
       "position": "Customer Success Associate",
       "url": "https://job-boards.greenhouse.io/alphasense/jobs/8600929002",
-      "status": "Archived",
-      "notes": "First seen today; posting date unknown"
+      "status": "Archived"
     },
     {
       "company": "Visa",
       "position": "Strategy Analyst - Cross Border Strategy & Operations",
       "url": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/Analyst_REF087892W",
-      "status": "Archived",
-      "notes": "Posted ~11d ago; reverified 19/09/2026"
+      "status": "Archived"
     },
     {
       "company": "Visa",
       "position": "Associate - Visa Destinations",
       "url": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---San-Francisco-CA/Associate---Visa-Destinations_REF088107W",
-      "status": "Closed",
-      "notes": "1–3d"
+      "status": "Closed"
     },
     {
       "company": "Visa",
       "position": "Analyst, NA Growth Marketing",
       "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---San-Francisco-CA/Analyst--NA-Growth-Marketing_REF087814W-1",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/17PxhGnS1zKSeYi3yL6EmPs-5iJKTqmc-/view?usp=drivesdk",
-      "notes": "Rejected 24/09/2026: Visa Talent Acquisition email confirmed the Analyst, NA Growth Marketing application will not move forward."
+      "status": "Rejected"
     },
     {
       "company": "Moody's",
       "position": "Data Operations Specialist II",
       "url": "https://careers.moodys.com/en/job/new-york/data-operations-specialist-ii/49841/99480722144",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1xyK1jlK_dZExGi_M_g_wTh05CsT0WmRM/view?usp=drivesdk",
-      "notes": "Reverified 20/09/2026; 7d+"
+      "status": "Applied"
     },
     {
       "company": "Socure",
       "position": "Business Operations Analyst",
       "url": "https://jobs.ashbyhq.com/socure/e977aad8-77fa-4d36-872f-a5f022e76c22",
-      "status": "Closed",
-      "notes": "First seen 20/09/2026; exact final form not independently verified"
+      "status": "Closed"
     },
     {
       "company": "Listen Labs",
       "position": "Insights Analyst",
       "url": "https://jobs.ashbyhq.com/listenlabs/0b65b19c-44c0-4440-9b6c-4d88c6024772",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1HFON-e-hiD1XpEDe-5Kn7gwsNHgLmz9K/view?usp=drivesdk",
-      "notes": "Reverified 20/09/2026; employer careers + exact Ashby role live"
+      "status": "Applied"
     },
     {
       "company": "Agave",
       "position": "Associate Product Manager, Integrations",
       "url": "https://www.ycombinator.com/companies/agave/jobs/Dnn8XB5-associate-product-manager-integrations",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/1GNSvz2dWW7pD1QWIqsBJ1wonvQEW6wOW/view?usp=drivesdk",
-      "notes": "Current 22/09/2026 review: archived from unsubmitted radar, not an employer rejection. Exact role is advertised, but integration debugging, API/Postman QA and product-spec delivery are less directly evidenced than retained operations roles; SF five-day onsite and YC signed-in form unverified. Re-entry requires fresh evidence."
+      "status": "Archived"
     },
     {
       "company": "Mercor",
@@ -1103,156 +941,121 @@ export const jobSearchData = {
       "company": "Dime",
       "position": "Forward Deployed Engineer",
       "url": "https://www.ycombinator.com/companies/dime-2/jobs/O1bzYN2-forward-deployed-engineer",
-      "status": "Archived",
-      "notes": "Mandatory API/system integration familiarity and production deployment ownership exceed verified engineering experience; YC login gates form."
+      "status": "Archived"
     },
     {
       "company": "Karumi",
       "position": "Forward Deployed Engineer (FDE)",
       "url": "https://www.ycombinator.com/companies/karumi/jobs/mzQuJ9K-forward-deployed-engineer-fde",
-      "status": "Archived",
-      "notes": "1–3 years implementation/QA/solutions engineering and CS/STEM or equivalent practical experience not established from verified record; YC login gates form."
+      "status": "Archived"
     },
     {
       "company": "Draft The Record",
       "position": "Customer Success Specialist",
       "url": "https://www.ycombinator.com/companies/draft-the-record/jobs/WN9VSsM-customer-success-specialist",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/13eay48pQPWhbRKqscouYmRHmfE9LqNAv/view?usp=drivesdk",
-      "notes": "Archived 22/09/2026 after fresh ranking: lower fit than stronger verified active options; archive is not employer rejection."
+      "status": "Archived"
     },
     {
       "company": "Airgoods",
       "position": "Growth - Retailers",
       "url": "https://www.ycombinator.com/companies/airgoods/jobs/eHjNGRk-growth-retailers",
-      "status": "Archived",
-      "notes": "Role predominantly retailer account sales/GMV ownership, with stated 9am–9pm Mon–Thu plus later nights/weekends; weaker match than operations focus."
+      "status": "Archived"
     },
     {
       "company": "Loop",
       "position": "AI Operations Associate",
       "url": "https://ats.rippling.com/loop/jobs/9191b3df-1a8b-46d2-a1b4-1420da7b09f7",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/145tQVrWqzB_zg4Vu76sXiXe5y93p8amu/view?usp=drivesdk",
-      "notes": "September 22 full run. AI workflow development, output evaluation, and operational data work connect directly to the role. Gap: 1+ year of technical/quantitative work requested; relevant experience includes internships. No claim of enterprise deployment ownership. Score 23+17+17+11+10+9=87; fit only. $80,000–$125,000; New York City / San Francisco; 4+ office days. Sponsorship: Not stated in employer posting. Documents rebuilt from approved master; one-page visual/text checks passed. Resume: https://drive.google.com/file/d/145tQVrWqzB_zg4Vu76sXiXe5y93p8amu/view?usp=drivesdk Cover: https://drive.google.com/file/d/1lDnsJw50XUkrYA_lH1K9e0vdZoftysdW/view?usp=drivesdk Posting rechecked today; form was verified September 21, not reverified today."
+      "status": "Applied"
     },
     {
       "company": "Agave",
       "position": "Operations Associate",
       "url": "https://www.ycombinator.com/companies/agave/jobs/owV2cRx-operations-associate",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1neqkS7wbFjpmCaiPljyV4p0QxPXV2Jf-/view?usp=drivesdk",
-      "notes": "Archived 24/09/2026 from unsubmitted radar, not an employer rejection. Role remains advertised, but the finance-operations work (Stripe, sales tax, invoicing, partner payouts) is less directly evidenced than the stronger NYC replacements; five-day San Francisco onsite and final YC form remain unverified. Re-entry requires fresh evidence.\nCORRECTION September 24: User confirmed Operations Associate submission. Applied is authoritative; earlier archived/not-submitted note is superseded."
+      "status": "Rejected"
     },
     {
       "company": "Flagler Health",
       "position": "AI Operations Associate",
       "url": "https://jobs.ashbyhq.com/flaglerhealth/e758d675-82f0-4a16-ae0b-251b7a0b118f",
-      "status": "Archived",
-      "notes": "Current 22/09/2026 review: archived from unsubmitted radar, not an employer rejection. Although titled Associate, requisition calls for ownership of AI automation roadmap, EHR integration/API work and player-coach functional leadership beyond verified early-career experience; final employer application form not verified."
+      "status": "Archived"
     },
     {
       "company": "ClaimSorted",
       "position": "Associate Partner - AI Operations",
       "url": "https://jobs.ashbyhq.com/claimsorted/e25262a6-4797-4ae3-b702-fdbeeb2327cb",
-      "status": "Archived",
-      "notes": "Current 22/09/2026 review: archived from unsubmitted radar, not an employer rejection. Employer's current posting presents 'Founding Ops & Strategy' rather than the tracked Associate Partner title and describes $140k–$220k, consulting/banking/startup product ownership; title/seniority mismatch and final form not verified."
+      "status": "Archived"
     },
     {
       "company": "Enigma",
       "position": "Data Operations Associate",
       "url": "https://job-boards.greenhouse.io/enigmaio/jobs/6803803",
-      "status": "Rejected",
-      "resumeUrl": "https://drive.google.com/file/d/1Z8dQfRlGLM8tSiWNnrcDvRwE4uefRZvl/view?usp=drivesdk",
-      "notes": "September 28, 2026, 08:57 ET: Enigma rejected candidacy before any interview took place. September 25 invitation is preserved as an invitation only; selected September 28 09:30 time was not employer-confirmed. Gmail 1a0e8187c17fca69. User reports zero completed live interviews obtained through applications.\n\nSeptember 22 full run. Data validation, operational records, analysis, and communication are the clearest match. The posting welcomes 0–2 years. Gap: No demonstrated ownership of enterprise customer onboarding or data dictionaries. SQL is supported by coursework, not claimed as professional production experience. Score 23+18+17+14+9+9=90; fit only. $80,000–$150,000; New York City. Sponsorship: Not stated in employer posting; confirm with recruiting. Documents rebuilt from approved master; one-page visual/text checks passed. Resume: https://drive.google.com/file/d/1Z8dQfRlGLM8tSiWNnrcDvRwE4uefRZvl/view?usp=drivesdk Cover: https://drive.google.com/file/d/1E3UdczUQxENqomLuPCUHsx7xZ6FGnBvj/view?usp=drivesdk Exact application fields verified today."
+      "status": "Rejected"
     },
     {
       "company": "Astra",
       "position": "Payment Operations Analyst",
       "url": "https://jobs.ashbyhq.com/astra/7705d345-5ae1-4bfa-b826-937ebb7d7ca1/",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/1H3JqMV5dp5tNR104nR43rqwMFT7N_son/view?usp=drivesdk",
-      "notes": "24 September 2026: User could not find the Astra opening and did not apply. Archived from active radar. Not an employer rejection. Earlier package retained."
+      "status": "Archived"
     },
     {
       "company": "Clera client (fintech bank)",
       "position": "Business Operations Graduate",
       "url": "https://jobs.ashbyhq.com/clera/57d1d370-987c-4cf6-baf1-36dd448c2d14",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1sFD21vcLr4WoPnaKeNHP0Wke_EwHbMds/view?usp=drivesdk",
-      "notes": "SUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Retained; URL corrected. Graduate-level role connects service workflows, AI automation and careful handling of exceptions. Gap: No banking operations or production automation impact metrics. Low-code experience is Copilot Studio, not Zapier/Make/n8n. Description says onsite despite remote metadata. Score 23+17+17+14+9+6=86; fit only, not ATS probability. $100,000–$125,000; New York City, onsite per description. Authorization: Sponsorship explicitly available. End employer unnamed; confirm employer identity and start date. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1sFD21vcLr4WoPnaKeNHP0Wke_EwHbMds/view?usp=drivesdk Cover: https://drive.google.com/file/d/1_sTO1mWa6kgGtWHKRju2XveQFfpUxreX/view?usp=drivesdk"
+      "status": "Applied"
     },
     {
       "company": "Bikky",
       "position": "Data Analyst - Data Operations",
       "url": "https://jobs.gem.com/bikky/am9icG9zdDpzZP7kWfEFU_aadmielBxz",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1WKbevyzPMk8WC_kaPsuNVvRmJVssFF7A/view?usp=drivesdk",
-      "notes": "SUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Retained; score corrected. Data validation, discrepancy investigation, marketing analysis and business reporting are directly relevant. Gap: SQL fluency is required; resume supports SQL coursework, not production SQL ownership. dbt is not evidenced. Ideal 1–3 years, but posting considers exceptional applicants from other backgrounds. Score 23+16+17+12+10+6=84; fit only, not ATS probability. $100,000–$140,000; New York City, hybrid. Authorization: Not stated; CPT/OPT acceptance and longer-term policy need confirmation. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1WKbevyzPMk8WC_kaPsuNVvRmJVssFF7A/view?usp=drivesdk Cover: https://drive.google.com/file/d/1iswZnAK-FmDN0xDyhcVDaQ2cC1zcIIqt/view?usp=drivesdk"
+      "status": "Applied"
     },
     {
       "company": "Ambrook",
       "position": "Product Operations",
       "url": "https://jobs.ashbyhq.com/ambrook/d477f001-417f-455d-914b-254bc411dff1/application",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/1ftgSjYJrrploag3TVoZhvLQVvwwkvqrm/view?usp=drivesdk",
-      "notes": "September 25 reconciliation: archived from active radar. Exact Ambrook employer page returns isListed=false. Old URL resolves but does not establish a currently advertised opening. Not an employer rejection; fresh active evidence required."
+      "status": "Archived"
     },
     {
       "company": "BlackRock",
       "position": "Product Operations Associate, Aladdin Platform Engineering",
       "url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/New-York-NY/Product-Operations-Associate--Aladdin-Platform-Engineering_R266544/apply",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/1uMzwAGfdXgTo6YDY0H2IjT8auIW45tkg/view?usp=drivesdk",
-      "notes": "September 25 reconciliation: archived, not applied or rejected. BlackRock R266544 asks for 2–4 years and technology-organization OKR/planning/roadmap delivery. This evidence is weaker than the five selected early-career roles. Other BlackRock applications remain unchanged."
+      "status": "Archived"
     },
     {
       "company": "Pylon",
       "position": "Product Support Engineer",
       "url": "https://jobs.ashbyhq.com/pylon-labs/2b1c3ce3-0b80-4daa-b9b8-8f48b24e491f",
-      "status": "Applied",
-      "resumeUrl": "https://drive.google.com/file/d/1IsXWvQyvXo_AojgBsy3V7N5hx5MASG6S/view?usp=drivesdk",
-      "notes": "SUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. New. Combines service coordination, written explanation, investigation and hands-on AI workflow experience. Gap: No professional SaaS support queue, knowledge-base ownership or engineering bug triage. Posting asks 1–8 years; technical background is a plus rather than a required engineering degree. Score 22+15+16+12+8+8=81; fit only, not ATS probability. $100,000–$150,000; San Francisco, onsite. Authorization: Not stated for this specific role; confirm CPT/OPT acceptance and longer-term policy. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1IsXWvQyvXo_AojgBsy3V7N5hx5MASG6S/view?usp=drivesdk Cover: https://drive.google.com/file/d/1ZWq2i5mzGWhAhqaELbSyN-QPi1Xps3BE/view?usp=drivesdk"
+      "status": "Applied"
     },
     {
       "company": "MissionOne Media",
       "position": "Analyst, Reporting",
       "url": "https://job-boards.greenhouse.io/missiononemedia/jobs/6185658004",
-      "status": "Found",
-      "resumeUrl": "https://drive.google.com/file/d/1oLcCgIgkj4Dl8Kh4WEu_akJ0f8INCI40/view?usp=drivesdk",
-      "notes": "28/09/2026 review: CONTENT PASS for sourced resume claims; VISUAL PASS: one page, master geometry, 23 bullets, extracted text, links, typography and alignment inspected. Eligibility UNRESOLVED: application asks completed quantitative/science bachelor's/master's OR 4+ years analytical experience; MSBA expected Dec 2026 and BS is Business Administration. Do not infer Yes. SQL only supported at academic level; no claim of production refresh, RLS or data dictionary ownership. Exact form verified live today. Compensation and sponsorship policy unstated. Reclassified Found pending eligibility review. Updated resume: https://drive.google.com/file/d/1oLcCgIgkj4Dl8Kh4WEu_akJ0f8INCI40/view?usp=drivesdk"
+      "status": "Found"
     },
     {
       "company": "Arch",
       "position": "Operations Associate | Early Careers, Summer 2027 Start",
       "url": "https://jobs.ashbyhq.com/arch.co/4e1822e5-1149-4acd-9287-252a22d99c41/application",
-      "status": "Found",
-      "resumeUrl": "https://drive.google.com/file/d/1YY4QqRdbdxzdKHEi5cXPK7Su5vefLDUl/view?usp=drivesdk",
-      "notes": "28/09/2026 review: CONTENT PASS for supported resume claims; VISUAL PASS: rendered one-page master layout and extracted text checked. Strong transferable records, data quality and client coordination evidence. Eligibility UNRESOLVED: posting says current college senior graduating Winter 2026 or Spring/Summer 2027; candidate is an MS student with BS in 2025. Confirm graduate-student eligibility. Summer 2027 start is not near-term income. Deadline October 11, 11:59 PM ET; $70K-$85K. Sponsorship policy unstated. Employer listing indexed; final Ashby form not independently exposed. Updated resume: https://drive.google.com/file/d/1YY4QqRdbdxzdKHEi5cXPK7Su5vefLDUl/view?usp=drivesdk"
+      "status": "Found"
     },
     {
       "company": "Numeral",
       "position": "Product Operations Analyst",
       "url": "https://jobs.ashbyhq.com/numeral/e50e001c-870b-4bc9-b519-9333e762e64b/application",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/19_R3OlVgK8nNchHzaBNLHydQgcoRM0uO/view?usp=drivesdk",
-      "notes": "28/09/2026 archived after evidence-first screening. Employer states strong SQL experience is a must and 1-3 years professional analytical/operations experience. Current evidence establishes SQL coursework, not strong applied SQL. Do not spend another application or imply the missing qualification. Re-entry only with concrete supporting evidence. Previous resume retained as history, not recommended."
+      "status": "Archived"
     },
     {
       "company": "Column",
       "position": "Payment Operations (New Grad / Early Career)",
       "url": "https://jobs.ashbyhq.com/column/c349d594-33a2-49a2-a168-afa8d8226572/application",
-      "status": "Archived",
-      "resumeUrl": "https://drive.google.com/file/d/1fiZbopWXLM0TfVMvqnHmUOrDFUX_SbXZ/view?usp=drivesdk",
-      "notes": "28/09/2026 archived after evidence-first screening. Employer lists familiarity with NACHA operating rules, wire standards and payment processing among needed qualifications. Candidate has transferable records/automation experience but no sourced payment-rail knowledge. New-grad title does not remove this gap. Re-entry if relevant knowledge is demonstrated. Prior resume retained as history."
+      "status": "Archived"
     },
     {
       "company": "Squad Health",
       "position": "Operations Associate",
       "url": "https://jobs.ashbyhq.com/squadhealth/06f53c8e-820a-48d7-9da9-e5c04a368cf9/application",
-      "status": "Found",
-      "resumeUrl": "https://drive.google.com/file/d/12LJC7T_oMll1WpDex7Pa_YK6JsMSp6LW/view?usp=drivesdk",
-      "notes": "28/09/2026 review: CONTENT PASS for supported resume claims; VISUAL PASS: one-page approved layout, typography, alignment, text, links and bullet counts checked. Best remaining near-term role: 0-2 years, internships count; supported UN workflow project, Lewis records/service coordination, Pinear KPI and market analysis. No healthcare or patient-operations experience claimed. $50K-$100K advertised; confirm at least $70K base. Sponsorship and start-date compatibility remain unconfirmed. Employer posting indexed; final Ashby fields not independently exposed, so remains Found. Updated resume: https://drive.google.com/file/d/12LJC7T_oMll1WpDex7Pa_YK6JsMSp6LW/view?usp=drivesdk"
+      "status": "Found"
     }
   ]
 };
