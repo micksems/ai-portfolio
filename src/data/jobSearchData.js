@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "2026-09-28T08:00:00-04:00",
+  "updatedAt": "2026-09-28T09:00:00-04:00",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -989,7 +989,7 @@ export const jobSearchData = {
       "company": "Enigma",
       "position": "Data Operations Associate",
       "url": "https://job-boards.greenhouse.io/enigmaio/jobs/6803803",
-      "status": "Interview"
+      "status": "Closed"
     },
     {
       "company": "Astra",
