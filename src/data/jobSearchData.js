@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "2026-09-28T09:00:00-04:00",
+  "updatedAt": "2026-09-28T13:17:20.585Z",
   "jobs": [
     {
       "company": "United Hospital Fund",
@@ -269,7 +269,7 @@ export const jobSearchData = {
       "company": "Fortuna Health",
       "position": "Product Operations Associate",
       "url": "https://jobs.ashbyhq.com/fortuna-health/aa48c14b-e38e-4f27-84ef-a6b032bb9b60/application",
-      "status": "Applied"
+      "status": "Rejected"
     },
     {
       "company": "Meow",
@@ -989,7 +989,7 @@ export const jobSearchData = {
       "company": "Enigma",
       "position": "Data Operations Associate",
       "url": "https://job-boards.greenhouse.io/enigmaio/jobs/6803803",
-      "status": "Closed"
+      "status": "Rejected"
     },
     {
       "company": "Astra",
