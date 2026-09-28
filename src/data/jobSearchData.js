@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "2026-09-27T08:00:00-04:00",
+  "updatedAt": "2026-09-28T08:00:00-04:00",
   "jobs": [
     {
       "company": "United Hospital Fund",
