@@ -45,9 +45,9 @@ function ProjectLinks({ project }) {
 
   return (
     <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/68">
-      {!duplicateLinks ? (
+      {hasProjectUrl && !duplicateLinks ? (
         <a
-          href={hasProjectUrl ? projectUrl : "#"}
+          href={projectUrl}
           target="_blank"
           rel="noreferrer"
           className={actionButtonClass}
