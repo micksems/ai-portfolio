@@ -2,27 +2,31 @@ export default function DashboardClient({ jobSearchData }) {
   const jobs = jobSearchData.jobs || [];
   const activeJobs = jobs.filter((job) => ["Found", "Ready to Submit"].includes(job.status));
   const pending = activeJobs.filter((job) => job.status === "Found").length;
-  const ready = jobs.filter((job) => job.status === "Ready to Submit").length;
+  const ready = activeJobs.filter((job) => job.status === "Ready to Submit").length;
+  const lifetime = jobSearchData.metrics || {};
+
   const metrics = [
     {
-      label: "Submitted",
-      value: jobs.filter((job) => ["Applied", "Interview", "Offer"].includes(job.status)).length,
-      description: "Includes interviews and offers",
+      label: "Applications",
+      value: lifetime.applications ?? jobs.filter((job) => ["Applied", "Interview", "Offer"].includes(job.status)).length,
+      description: lifetime.trackerStartedAt
+        ? `Confirmed since ${lifetime.trackerStartedAt}`
+        : "Lifetime submitted applications",
     },
     {
       label: "Interviews",
-      value: jobs.filter((job) => job.status === "Interview").length,
-      description: "Currently interviewing",
+      value: lifetime.interviews ?? jobs.filter((job) => job.status === "Interview").length,
+      description: "Completed interviews",
     },
     {
       label: "Offers",
-      value: jobs.filter((job) => job.status === "Offer").length,
+      value: lifetime.offers ?? jobs.filter((job) => job.status === "Offer").length,
       description: "Offers received",
     },
     {
       label: "Rejections",
-      value: jobs.filter((job) => job.status === "Rejected").length,
-      description: "Applications not moved forward",
+      value: lifetime.rejections ?? jobs.filter((job) => job.status === "Rejected").length,
+      description: "Lifetime application rejections",
     },
   ];
 
@@ -49,6 +53,7 @@ export default function DashboardClient({ jobSearchData }) {
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
         </header>
+
         <dl className="grid grid-cols-1 gap-4 min-[360px]:grid-cols-2 md:grid-cols-[1.15fr_1fr_1fr]">
           <div className="flex min-h-64 flex-col justify-between rounded-3xl border border-blue-100 bg-[#edf4ff] p-7 min-[360px]:col-span-2 sm:p-8 md:col-span-1 md:row-span-2">
             <dt className="text-base font-medium text-blue-900">Active jobs</dt>
@@ -61,6 +66,7 @@ export default function DashboardClient({ jobSearchData }) {
                 : "New opportunities will appear here after the next search."}
             </div>
           </div>
+
           {metrics.map((metric) => (
             <div key={metric.label} className="flex min-h-44 flex-col rounded-3xl border border-slate-200/80 bg-white p-5 sm:min-h-48 sm:p-6">
               <dt className="text-sm font-medium text-slate-700">{metric.label}</dt>
@@ -69,6 +75,11 @@ export default function DashboardClient({ jobSearchData }) {
             </div>
           ))}
         </dl>
+
+        <p className="mt-4 text-xs leading-5 text-slate-500">
+          Application totals are cumulative. Rejected or closed applications remain included in the lifetime application count.
+        </p>
+
         <section aria-labelledby="active-jobs-heading" className="mt-10">
           <h2 id="active-jobs-heading" className="text-xl font-semibold">Your current shortlist</h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
