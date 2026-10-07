@@ -2145,6 +2145,16 @@ export const jobSearchData = {
       "notes": "October 7, 2026: Misha confirmed submission. Confirmation date recorded; exact submission time not supplied. User-selected LinkedIn posting 4474312818; duplicate check found no prior record. NYC hybrid, 60% in office; $95,000–$130,000 base, incentives separate. JD asks 2–5 years analytics/digital enablement; internships not counted as cumulative full-time years. AI output evaluation and UN Copilot Studio project align with AI experimentation, workflow testing and documentation. Sponsorship, start timing and deadline not established. Approved updated master used; one page, 15 position-specific experience bullets, 4 school bullets each, 3 working contact links, rendered and extracted text checked. No unsupported custom GPT deployment, AI coaching or prompt-library accomplishments claimed. Submitted resume: https://drive.google.com/file/d/1Mlh2XW7JgT_IgTQYFnHt8CVwn8HehPpp/view?usp=drivesdk",
       "firstSeenAt": "October 7, 2026",
       "appliedAt": "October 7, 2026"
+    },
+    {
+      "company": "Recidiviz",
+      "position": "Data Analyst (Entry-Level)",
+      "url": "https://job-boards.greenhouse.io/recidiviz/jobs/4717510006",
+      "status": "Found",
+      "resumeUrl": "https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
+      "notes": "User-selected resume request October 7, 2026; not applied. Explicit visa sponsorship unavailable; excluded from automatic sponsorship-friendly searches, retained only as user-selected exception. Official live JD: https://job-boards.greenhouse.io/recidiviz/jobs/4717510006. Entry-level Data Analyst, $85,000 fixed annual compensation, NYC/Oakland/US remote; occasional state travel including prison/parole office visits. Minimum six months real-world data analysis/cleaning including internships; part-time hours must equal roughly six months full-time, not established. SQL joins/aggregations/window functions and Python/Pandas live coding required; granular proficiency not assumed from general skills. No invented BigQuery, Looker, GCP, criminal justice analysis or product-launch delivery. TechJobsForGood shows posted October 6, validThrough November 5; employer deadline and mandatory start not published. Current CPT compatibility and future work authorization must be confirmed. Master layout preserved; all 15 revised experience bullets, 23 total bullets, one page and three contact links passed extracted-text and rendered QA. Resume: https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
+      "firstSeenAt": "October 7, 2026",
+      "appliedAt": ""
     }
   ]
 };
