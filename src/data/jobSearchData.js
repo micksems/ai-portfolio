@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 7, 2026",
   "metrics": {
-    "applications": 67,
+    "applications": 68,
     "interviews": 0,
     "offers": 0,
     "rejections": 23,
@@ -2133,6 +2133,16 @@ export const jobSearchData = {
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1c9W_ND-dEUqtN9b7ISGuZ8x3jgsJgnp7/view?usp=drivesdk",
       "notes": "User-selected entry-level data analyst role. Salary and sponsorship not published; remote eligibility requires confirmation.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
+      "firstSeenAt": "October 7, 2026",
+      "appliedAt": "October 7, 2026"
+    },
+    {
+      "company": "Oliver Wyman",
+      "position": "Regional AI Product & Experimentation Analyst - NY",
+      "url": "https://www.linkedin.com/jobs/view/4474312818/",
+      "status": "Applied",
+      "resumeUrl": "https://drive.google.com/file/d/1Mlh2XW7JgT_IgTQYFnHt8CVwn8HehPpp/view?usp=drivesdk",
+      "notes": "October 7, 2026: Misha confirmed submission. Confirmation date recorded; exact submission time not supplied. User-selected LinkedIn posting 4474312818; duplicate check found no prior record. NYC hybrid, 60% in office; $95,000–$130,000 base, incentives separate. JD asks 2–5 years analytics/digital enablement; internships not counted as cumulative full-time years. AI output evaluation and UN Copilot Studio project align with AI experimentation, workflow testing and documentation. Sponsorship, start timing and deadline not established. Approved updated master used; one page, 15 position-specific experience bullets, 4 school bullets each, 3 working contact links, rendered and extracted text checked. No unsupported custom GPT deployment, AI coaching or prompt-library accomplishments claimed. Submitted resume: https://drive.google.com/file/d/1Mlh2XW7JgT_IgTQYFnHt8CVwn8HehPpp/view?usp=drivesdk",
       "firstSeenAt": "October 7, 2026",
       "appliedAt": "October 7, 2026"
     }
