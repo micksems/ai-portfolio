@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 7, 2026",
   "metrics": {
-    "applications": 62,
+    "applications": 67,
     "interviews": 0,
     "offers": 0,
     "rejections": 23,
@@ -1101,11 +1101,11 @@ export const jobSearchData = {
       "company": "Valerie Health",
       "position": "AI Operations Specialist",
       "url": "https://jobs.ashbyhq.com/valeriehealth/54707996-63b5-4811-98eb-016266654e78",
-      "status": "Found",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1BkiFovLRFivyrc_WCjwJqnr9L14biGGE/view?usp=drivesdk",
-      "notes": "Early-career applicants explicitly encouraged; prior startup/healthcare experience helpful, not required. Lewis records, Camp Vega validation and UN workflows support accuracy, discrepancy investigation and operational delivery. No claimed patient/EHR experience. Pay: $65,000–$85,000 base; offer must be at least $70,000. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.",
+      "notes": "Early-career applicants explicitly encouraged; prior startup/healthcare experience helpful, not required. Lewis records, Camp Vega validation and UN workflows support accuracy, discrepancy investigation and operational delivery. No claimed patient/EHR experience. Pay: $65,000–$85,000 base; offer must be at least $70,000. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
       "firstSeenAt": "14/09/2026 09:56:55",
-      "appliedAt": ""
+      "appliedAt": "October 7, 2026"
     },
     {
       "company": "Valerie Health",
@@ -2100,31 +2100,41 @@ export const jobSearchData = {
       "company": "Silna Health",
       "position": "AI Deployment Analyst",
       "url": "https://jobs.ashbyhq.com/silnahealth.com/8ed75986-4032-425b-b82a-fa6010a18656",
-      "status": "Found",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1B-Hy-Bm56xobyHNnxkjDcHfDwFYVWddg/view?usp=drivesdk",
-      "notes": "Recent graduates, including nontechnical analytical backgrounds, explicitly encouraged. UN Copilot Studio assistant and Data Annotation output evaluation directly match deployment testing, prompting and AI quality. OCR, healthcare insurance workflows and production browser/phone agents are gaps, not required prior experience. Pay: $120,000–$160,000 base. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.",
+      "notes": "Recent graduates, including nontechnical analytical backgrounds, explicitly encouraged. UN Copilot Studio assistant and Data Annotation output evaluation directly match deployment testing, prompting and AI quality. OCR, healthcare insurance workflows and production browser/phone agents are gaps, not required prior experience. Pay: $120,000–$160,000 base. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
       "firstSeenAt": "07/10/2026 13:02:41",
-      "appliedAt": ""
+      "appliedAt": "October 7, 2026"
     },
     {
       "company": "Health Services Advisory Group",
       "position": "Analyst I - REMOTE",
       "url": "https://jobs.lever.co/hsag/2937f26a-3e66-4d42-ba61-c26e5b52f488",
-      "status": "Found",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1yhqWgi0YR1BqZPrDV3Yg0TFjVBuE9OCp/view?usp=drivesdk",
-      "notes": "Academic/internship data analysis accepted; related analytical degree and coursework. Verified SQL/Python, Excel, data validation and logistic-regression academic project support requirements. SAS willingness to learn required, not prior SAS; healthcare datasets and SAS are gaps. Apply form asks SAS experience: verified record supports No. Pay: $70,000–$75,000 base. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.",
+      "notes": "Academic/internship data analysis accepted; related analytical degree and coursework. Verified SQL/Python, Excel, data validation and logistic-regression academic project support requirements. SAS willingness to learn required, not prior SAS; healthcare datasets and SAS are gaps. Apply form asks SAS experience: verified record supports No. Pay: $70,000–$75,000 base. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
       "firstSeenAt": "07/10/2026 13:02:41",
-      "appliedAt": ""
+      "appliedAt": "October 7, 2026"
     },
     {
       "company": "CertiK",
       "position": "Financial Analyst (Entry-Level)",
       "url": "https://jobs.lever.co/certik/7d25f5e8-2fed-412c-b182-6568a491483e",
-      "status": "Found",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1vA8CNgCBS2_4Nw9JSh2wFhdL12pJWxLc/view?usp=drivesdk",
-      "notes": "Current degree completion explicitly permitted; business administration and MS Business Analytics related to finance, both GPAs exceed 3.6; Lewis finance/accounting courses verified. Record cleansing, validation, KPI analysis and budget modeling align. Confirm requested mid-level course equivalency with transcript; no invented journal-entry, month-end close or bank-reconciliation experience. Pay: $60,000–$80,000 annual salary; offer must be at least $70,000. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.",
+      "notes": "Current degree completion explicitly permitted; business administration and MS Business Analytics related to finance, both GPAs exceed 3.6; Lewis finance/accounting courses verified. Record cleansing, validation, KPI analysis and budget modeling align. Confirm requested mid-level course equivalency with transcript; no invented journal-entry, month-end close or bank-reconciliation experience. Pay: $60,000–$80,000 annual salary; offer must be at least $70,000. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
       "firstSeenAt": "07/10/2026 13:02:41",
-      "appliedAt": ""
+      "appliedAt": "October 7, 2026"
+    },
+    {
+      "company": "Security Benefit",
+      "position": "Associate Business Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/associate-business-data-analyst-at-security-benefit-4476316169/",
+      "status": "Applied",
+      "resumeUrl": "https://drive.google.com/file/d/1c9W_ND-dEUqtN9b7ISGuZ8x3jgsJgnp7/view?usp=drivesdk",
+      "notes": "User-selected entry-level data analyst role. Salary and sponsorship not published; remote eligibility requires confirmation.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
+      "firstSeenAt": "October 7, 2026",
+      "appliedAt": "October 7, 2026"
     }
   ]
 };
