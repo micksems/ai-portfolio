@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 7, 2026",
   "metrics": {
-    "applications": 68,
+    "applications": 69,
     "interviews": 0,
     "offers": 0,
     "rejections": 23,
@@ -2150,11 +2150,11 @@ export const jobSearchData = {
       "company": "Recidiviz",
       "position": "Data Analyst (Entry-Level)",
       "url": "https://job-boards.greenhouse.io/recidiviz/jobs/4717510006",
-      "status": "Found",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
-      "notes": "User-selected resume request October 7, 2026; not applied. Explicit visa sponsorship unavailable; excluded from automatic sponsorship-friendly searches, retained only as user-selected exception. Official live JD: https://job-boards.greenhouse.io/recidiviz/jobs/4717510006. Entry-level Data Analyst, $85,000 fixed annual compensation, NYC/Oakland/US remote; occasional state travel including prison/parole office visits. Minimum six months real-world data analysis/cleaning including internships; part-time hours must equal roughly six months full-time, not established. SQL joins/aggregations/window functions and Python/Pandas live coding required; granular proficiency not assumed from general skills. No invented BigQuery, Looker, GCP, criminal justice analysis or product-launch delivery. TechJobsForGood shows posted October 6, validThrough November 5; employer deadline and mandatory start not published. Current CPT compatibility and future work authorization must be confirmed. Master layout preserved; all 15 revised experience bullets, 23 total bullets, one page and three contact links passed extracted-text and rendered QA. Resume: https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
+      "notes": "October 7, 2026: Misha confirmed submission of Recidiviz Data Analyst (Entry-Level). Confirmation date recorded; exact submission time not supplied. Application submitted by Misha. Preserve submitted resume snapshot and explicit no-sponsorship evidence.\n\nUser-selected resume request October 7, 2026; subsequently confirmed applied. Explicit visa sponsorship unavailable; excluded from automatic sponsorship-friendly searches, retained only as user-selected exception. Official live JD: https://job-boards.greenhouse.io/recidiviz/jobs/4717510006. Entry-level Data Analyst, $85,000 fixed annual compensation, NYC/Oakland/US remote; occasional state travel including prison/parole office visits. Minimum six months real-world data analysis/cleaning including internships; part-time hours must equal roughly six months full-time, not established. SQL joins/aggregations/window functions and Python/Pandas live coding required; granular proficiency not assumed from general skills. No invented BigQuery, Looker, GCP, criminal justice analysis or product-launch delivery. TechJobsForGood shows posted October 6, validThrough November 5; employer deadline and mandatory start not published. Current CPT compatibility and future work authorization must be confirmed. Master layout preserved; all 15 revised experience bullets, 23 total bullets, one page and three contact links passed extracted-text and rendered QA. Resume: https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
       "firstSeenAt": "October 7, 2026",
-      "appliedAt": ""
+      "appliedAt": "October 7, 2026"
     }
   ]
 };
