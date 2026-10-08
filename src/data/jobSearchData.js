@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 8, 2026",
   "metrics": {
-    "applications": 72,
+    "applications": 74,
     "interviews": 0,
     "offers": 0,
     "rejections": 23,
@@ -2183,6 +2183,26 @@ export const jobSearchData = {
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/15LlZp3FmU_96ZnrnsShVgxl3c7ZJj-Td/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed application submission; confirmation date recorded, exact submission time not supplied. User-selected exception to analyst search priorities, not a full run. Handshake 11500652 header Founding Growth Marketer — AI & Ecommerce; JD title Content & Growth Marketer — Revley. Full description read October 8. NYC in-person preferred or remote; initial 60-day contract, possible full-time conversion not guaranteed. Header $65,000–$450,000 does not establish base, bonus or contract rate; compensation unconfirmed. Role focuses X content, product demos, creator outreach, growth experiments, AI production workflows and HubSpot tracking. Relevant verified evidence: Pinear market research/three segments/KPIs/budget modeling/SEO, UN Copilot Studio/Power Automate, AI response evaluation, LinkedIn-verified website/Google Ads/Odoo CRM and 1,500+ records in Semenov Swim Program. No invented X following, creator campaigns, ecommerce clients, HubSpot, Meta campaigns or conversion metrics. Personal X profile, work samples, ecommerce experience examples and AI workflow demo requested; completeness of submitted samples not confirmed. JD requests no cover letter; user separately requested one, prepared file retained without asserting it was attached. US work authorization required; sponsorship not confirmed by JD, search filters not sufficient proof. CPT compatibility and future work authorization not assumed. Duplicate check before drafting; one-page resume, 23 bullets, 3 contact links, approved master Liberation Serif font/layout, rendered and extracted text QA passed. Resume snapshot: https://drive.google.com/file/d/15LlZp3FmU_96ZnrnsShVgxl3c7ZJj-Td/view?usp=drivesdk. Prepared cover letter: https://drive.google.com/file/d/1Wo8XFYq7YHIMaMkUPWDVgkDwQHo2uUhs/view?usp=drivesdk. Library resume libfile_f2293f8c75d48191a3ef9c6c9ceb0b26; cover libfile_ace940fb6034819189119dbcad0487a5.",
+      "firstSeenAt": "October 8, 2026",
+      "appliedAt": "October 8, 2026"
+    },
+    {
+      "company": "Cardella Waste Services",
+      "position": "Financial Analyst – Finance, Risk & Operations",
+      "url": "https://app.joinhandshake.com/jobs/11600315",
+      "status": "Applied",
+      "resumeUrl": "https://drive.google.com/file/d/1ov5923vGeP8pc6nbyEu41t3mQekeXtzC/view?usp=drivesdk",
+      "notes": "October 8, 2026: Misha confirmed submission of this and the preceding application ('applied to both'), interpreted as Cardella and Renewable Careers. Confirmation date recorded; exact submission time not supplied. Duplicate check completed before drafting. Full JD read October 8, Handshake 11600315. Full-time entry-level; recent/upcoming graduates welcome, relevant internship not required. $80,000–$85,000 base, benefits and 401(k). Finance/accounting/operations/risk reporting, budgeting/forecasting/variance, invoice/vendor/cash-flow/captive insurance, fleet costs/profitability, dashboards, Salesforce analysis, AI tools and workflow automation. Fit: Business degree, MSBA, Excel/Python/SQL/Power BI, Pinear budget/KPI work, UN automation and large-data validation. Gaps: no verified professional accounts payable, captive insurance, cash-flow forecasting, fleet/capex analysis, Salesforce or valuation. No invented claims. Authorization required, sponsorship not stated; Handshake filter not positive role-level proof. Start timing and deadline unknown; current CPT compatibility and future authorization need confirmation. Resume Library libfile_38c9fa4f067c81918ff0d9210106258d. Approved latest master layout and Liberation Serif font retained, one page, 23 bullets, three working contact links; rendered PDF and extracted text checked. Submitted resume snapshot: https://drive.google.com/file/d/1ov5923vGeP8pc6nbyEu41t3mQekeXtzC/view?usp=drivesdk",
+      "firstSeenAt": "October 8, 2026",
+      "appliedAt": "October 8, 2026"
+    },
+    {
+      "company": "Renewable Careers (energy employer undisclosed)",
+      "position": "Renewable Energy Analyst (Entry-Level)",
+      "url": "https://www.linkedin.com/jobs/view/4477185963/",
+      "status": "Applied",
+      "resumeUrl": "https://drive.google.com/file/d/1NdZ61iUY_P750mUago-bYEf2liGsNNKU/view?usp=drivesdk",
+      "notes": "October 8, 2026: Misha confirmed submission of this and the preceding application ('applied to both'), interpreted as Cardella and Renewable Careers. Confirmation date recorded; exact submission time not supplied. Duplicate check completed before drafting. Full LinkedIn JD read October 8, 4477185963. Posted by Renewable Careers recruiter Daniel May; underlying energy operating company not named. $80,000–$100,000 base, full-time hybrid Jersey City. Entry-level models for project economics/energy production/markets, research markets/policy/technology/competitors, due diligence support, fleet performance, reports/dashboards/presentations and spreadsheets/data sets. Excel required; Python/SQL/visualization plus; energy/finance/data internships optional. Fit: MSBA, strong GPAs, modeling/KPIs/market research, Python/SQL/Excel/BI and validation. Gaps: no verified energy production modeling, project due diligence, interconnection/permitting or renewable asset experience; no invented sector claims. US authorization required; sponsorship not stated. Rolling applications; fixed deadline and start unknown. Resume Library libfile_873b31f543d48191990aa1173eb14c45. Approved latest master layout and Liberation Serif font retained, one page, 23 bullets, three working contact links; rendered PDF and extracted text checked. Submitted resume snapshot: https://drive.google.com/file/d/1NdZ61iUY_P750mUago-bYEf2liGsNNKU/view?usp=drivesdk",
       "firstSeenAt": "October 8, 2026",
       "appliedAt": "October 8, 2026"
     }
