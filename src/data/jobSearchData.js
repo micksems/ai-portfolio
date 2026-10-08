@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 8, 2026",
   "metrics": {
-    "applications": 71,
+    "applications": 72,
     "interviews": 0,
     "offers": 0,
     "rejections": 23,
@@ -2173,6 +2173,16 @@ export const jobSearchData = {
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed application submission; confirmation date recorded, exact submission time not supplied. User-selected Handshake posting 11568732, full description read October 8. Associates and Consultants (2027 Grads), economics/strategy/technology and litigation consulting. $110,000–$176,000 base; discretionary bonus separate. Hybrid, multiple US offices including NYC and San Francisco. Strong overlap: MS Business Analytics GPA 3.88, BS Business Administration GPA 3.98, Python/SQL, data cleaning/validation, market research and analytical reporting. Gaps: no verified litigation consulting, econometrics, financial valuation or R/Stata experience. December 2026 graduation versus 2027 cohort eligibility needs confirmation; exact start and employer deadline not established. JD requires US work authorization; sponsorship not confirmed. Handshake search filter is not role-level sponsorship evidence. No future OPT approval assumed. Duplicate check completed before drafting. Approved master uses Liberation Serif, verified embedded fonts; resume one page, 23 bullets, 3 working contact links, extracted text and rendered layout checked. Cover letter one page, requested separately, checked. Submitted resume snapshot: https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk. Prepared cover letter: https://drive.google.com/file/d/19Ug54HzeKqqJiKHq2AEbbC9Xcp9EmRPF/view?usp=drivesdk. Library resume libfile_85bd98bf3e008191a7d710eb3c2518d8; cover libfile_0357f04f4c3c8191b5eb6c09e7d49f8a.",
+      "firstSeenAt": "October 8, 2026",
+      "appliedAt": "October 8, 2026"
+    },
+    {
+      "company": "Revley.ai",
+      "position": "Content & Growth Marketer — AI & Ecommerce",
+      "url": "https://app.joinhandshake.com/jobs/11500652",
+      "status": "Applied",
+      "resumeUrl": "https://drive.google.com/file/d/15LlZp3FmU_96ZnrnsShVgxl3c7ZJj-Td/view?usp=drivesdk",
+      "notes": "October 8, 2026: Misha confirmed application submission; confirmation date recorded, exact submission time not supplied. User-selected exception to analyst search priorities, not a full run. Handshake 11500652 header Founding Growth Marketer — AI & Ecommerce; JD title Content & Growth Marketer — Revley. Full description read October 8. NYC in-person preferred or remote; initial 60-day contract, possible full-time conversion not guaranteed. Header $65,000–$450,000 does not establish base, bonus or contract rate; compensation unconfirmed. Role focuses X content, product demos, creator outreach, growth experiments, AI production workflows and HubSpot tracking. Relevant verified evidence: Pinear market research/three segments/KPIs/budget modeling/SEO, UN Copilot Studio/Power Automate, AI response evaluation, LinkedIn-verified website/Google Ads/Odoo CRM and 1,500+ records in Semenov Swim Program. No invented X following, creator campaigns, ecommerce clients, HubSpot, Meta campaigns or conversion metrics. Personal X profile, work samples, ecommerce experience examples and AI workflow demo requested; completeness of submitted samples not confirmed. JD requests no cover letter; user separately requested one, prepared file retained without asserting it was attached. US work authorization required; sponsorship not confirmed by JD, search filters not sufficient proof. CPT compatibility and future work authorization not assumed. Duplicate check before drafting; one-page resume, 23 bullets, 3 contact links, approved master Liberation Serif font/layout, rendered and extracted text QA passed. Resume snapshot: https://drive.google.com/file/d/15LlZp3FmU_96ZnrnsShVgxl3c7ZJj-Td/view?usp=drivesdk. Prepared cover letter: https://drive.google.com/file/d/1Wo8XFYq7YHIMaMkUPWDVgkDwQHo2uUhs/view?usp=drivesdk. Library resume libfile_f2293f8c75d48191a3ef9c6c9ceb0b26; cover libfile_ace940fb6034819189119dbcad0487a5.",
       "firstSeenAt": "October 8, 2026",
       "appliedAt": "October 8, 2026"
     }
