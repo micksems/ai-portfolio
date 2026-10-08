@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 8, 2026",
   "metrics": {
-    "applications": 70,
+    "applications": 71,
     "interviews": 0,
     "offers": 0,
     "rejections": 23,
@@ -2163,6 +2163,16 @@ export const jobSearchData = {
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1EmkzvYOZjzx-om5BO3EGc8751WgaZbVe/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed submission. Confirmation date recorded; exact submission time not supplied. User-selected exception to search priorities, not a new run. Handshake full description viewed in cloud browser October 8 by user request, job 11273033. January 2027 anticipated start, on-site NYC. Actual base $65,000 plus uncapped monthly bonus; employer states $85,000–$115,000 average for high-performing associates, while platform header advertises $91,000–$125,000. Base below $70,000 floor. Expert-network client services: expert identification/outreach, consultation scheduling, multiple engagements, client coordination. Outside main business/data/AI analyst search; do not use as justification to include sales/client-services in future runs. Bachelor degree/GPA3.5 minimum, 6–18 months experience, internships welcome; leadership and multilingual record align. No invented expert recruiting or hedge-fund client work. Explicit F-1 STEM OPT acceptance; future sponsorship not stated, OPT approval not assumed. Approved latest master retained; one page, 15 updated experience bullets, 3 hyperlinks, 3 bullets per experience and 4 per school. Extracted text and final rendered PDF checked. Submitted resume snapshot: https://drive.google.com/file/d/1EmkzvYOZjzx-om5BO3EGc8751WgaZbVe/view?usp=drivesdk",
+      "firstSeenAt": "October 8, 2026",
+      "appliedAt": "October 8, 2026"
+    },
+    {
+      "company": "Keystone",
+      "position": "Associates and Consultants (2027 Grads)",
+      "url": "https://app.joinhandshake.com/jobs/11568732",
+      "status": "Applied",
+      "resumeUrl": "https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk",
+      "notes": "October 8, 2026: Misha confirmed application submission; confirmation date recorded, exact submission time not supplied. User-selected Handshake posting 11568732, full description read October 8. Associates and Consultants (2027 Grads), economics/strategy/technology and litigation consulting. $110,000–$176,000 base; discretionary bonus separate. Hybrid, multiple US offices including NYC and San Francisco. Strong overlap: MS Business Analytics GPA 3.88, BS Business Administration GPA 3.98, Python/SQL, data cleaning/validation, market research and analytical reporting. Gaps: no verified litigation consulting, econometrics, financial valuation or R/Stata experience. December 2026 graduation versus 2027 cohort eligibility needs confirmation; exact start and employer deadline not established. JD requires US work authorization; sponsorship not confirmed. Handshake search filter is not role-level sponsorship evidence. No future OPT approval assumed. Duplicate check completed before drafting. Approved master uses Liberation Serif, verified embedded fonts; resume one page, 23 bullets, 3 working contact links, extracted text and rendered layout checked. Cover letter one page, requested separately, checked. Submitted resume snapshot: https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk. Prepared cover letter: https://drive.google.com/file/d/19Ug54HzeKqqJiKHq2AEbbC9Xcp9EmRPF/view?usp=drivesdk. Library resume libfile_85bd98bf3e008191a7d710eb3c2518d8; cover libfile_0357f04f4c3c8191b5eb6c09e7d49f8a.",
       "firstSeenAt": "October 8, 2026",
       "appliedAt": "October 8, 2026"
     }
