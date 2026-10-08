@@ -1,7 +1,7 @@
 export const jobSearchData = {
-  "updatedAt": "October 7, 2026",
+  "updatedAt": "October 8, 2026",
   "metrics": {
-    "applications": 69,
+    "applications": 70,
     "interviews": 0,
     "offers": 0,
     "rejections": 23,
@@ -2155,6 +2155,16 @@ export const jobSearchData = {
       "notes": "October 7, 2026: Misha confirmed submission of Recidiviz Data Analyst (Entry-Level). Confirmation date recorded; exact submission time not supplied. Application submitted by Misha. Preserve submitted resume snapshot and explicit no-sponsorship evidence.\n\nUser-selected resume request October 7, 2026; subsequently confirmed applied. Explicit visa sponsorship unavailable; excluded from automatic sponsorship-friendly searches, retained only as user-selected exception. Official live JD: https://job-boards.greenhouse.io/recidiviz/jobs/4717510006. Entry-level Data Analyst, $85,000 fixed annual compensation, NYC/Oakland/US remote; occasional state travel including prison/parole office visits. Minimum six months real-world data analysis/cleaning including internships; part-time hours must equal roughly six months full-time, not established. SQL joins/aggregations/window functions and Python/Pandas live coding required; granular proficiency not assumed from general skills. No invented BigQuery, Looker, GCP, criminal justice analysis or product-launch delivery. TechJobsForGood shows posted October 6, validThrough November 5; employer deadline and mandatory start not published. Current CPT compatibility and future work authorization must be confirmed. Master layout preserved; all 15 revised experience bullets, 23 total bullets, one page and three contact links passed extracted-text and rendered QA. Resume: https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
       "firstSeenAt": "October 7, 2026",
       "appliedAt": "October 7, 2026"
+    },
+    {
+      "company": "True North Insights",
+      "position": "Associate, Client Services - Full-Time (January 2027)",
+      "url": "https://app.joinhandshake.com/jobs/11273033",
+      "status": "Applied",
+      "resumeUrl": "https://drive.google.com/file/d/1EmkzvYOZjzx-om5BO3EGc8751WgaZbVe/view?usp=drivesdk",
+      "notes": "October 8, 2026: Misha confirmed submission. Confirmation date recorded; exact submission time not supplied. User-selected exception to search priorities, not a new run. Handshake full description viewed in cloud browser October 8 by user request, job 11273033. January 2027 anticipated start, on-site NYC. Actual base $65,000 plus uncapped monthly bonus; employer states $85,000–$115,000 average for high-performing associates, while platform header advertises $91,000–$125,000. Base below $70,000 floor. Expert-network client services: expert identification/outreach, consultation scheduling, multiple engagements, client coordination. Outside main business/data/AI analyst search; do not use as justification to include sales/client-services in future runs. Bachelor degree/GPA3.5 minimum, 6–18 months experience, internships welcome; leadership and multilingual record align. No invented expert recruiting or hedge-fund client work. Explicit F-1 STEM OPT acceptance; future sponsorship not stated, OPT approval not assumed. Approved latest master retained; one page, 15 updated experience bullets, 3 hyperlinks, 3 bullets per experience and 4 per school. Extracted text and final rendered PDF checked. Submitted resume snapshot: https://drive.google.com/file/d/1EmkzvYOZjzx-om5BO3EGc8751WgaZbVe/view?usp=drivesdk",
+      "firstSeenAt": "October 8, 2026",
+      "appliedAt": "October 8, 2026"
     }
   ]
 };
