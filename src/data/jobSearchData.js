@@ -2,10 +2,14 @@ export const jobSearchData = {
   "updatedAt": "October 9, 2026",
   "metrics": {
     "applications": 77,
-    "interviews": 0,
+    "interviews": 6,
     "offers": 0,
     "rejections": 23,
-    "trackerStartedAt": "Aug 24, 2026"
+    "trackerStartedAt": "Aug 24, 2026",
+    "interviewsMinimum": true,
+    "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
+    "scheduledInterviews": 1,
+    "aiAssessments": 1
   },
   "jobs": [
     {
@@ -76,7 +80,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/10KQ3X2LaeB4Me-ezyeOaRUP0V5YNc98N/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; exact Greenhouse role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "",
-      "appliedAt": "20/09/2026 00:00:00"
+      "appliedAt": 46285
     },
     {
       "company": "Charlie Health",
@@ -92,11 +96,11 @@ export const jobSearchData = {
       "company": "Charlie Health",
       "position": "Strategy & Operations Analyst",
       "url": "https://www.charliehealth.com/careers/corporate?gh_jid=5997404004",
-      "status": "Archived",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1FYpMoYl1W66MruGgiUz6llt767r2G7MQ/view?usp=drivesdk",
       "notes": "October 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\n2026-10-03 fresh re-entry after primary-role reprioritization. Exact employer requisition 5997404004 is live; external application destination exposes Submit application. NYC hybrid/four office days, $75,000-$100,000 base plus target bonus, 1-3 years, advanced Excel and SQL/Tableau strongly preferred. Core work is data analysis, dashboards, process design and cross-functional operational improvement. Sponsorship is not stated; retained as an exceptional analytical match under V-03 neutral treatment, not as sponsorship evidence. One-page position-specific PDF rebuilt from the approved master; extracted text and visual QA passed.",
       "firstSeenAt": "03/10/2026 08:09:50",
-      "appliedAt": ""
+      "appliedAt": 46299
     },
     {
       "company": "Rain",
@@ -172,7 +176,7 @@ export const jobSearchData = {
       "company": "Macy's",
       "position": "Product Management Assistant",
       "url": "https://www.indeed.com/viewjob?jk=047cd4d6b11956e1",
-      "status": "Closed",
+      "status": "Archived",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "24/08/2026 17:31:16",
@@ -212,7 +216,7 @@ export const jobSearchData = {
       "company": "ABM Industries",
       "position": "Workforce Productivity Analyst",
       "url": "https://www.indeed.com/viewjob?jk=2f4f16bd1c008347",
-      "status": "Closed",
+      "status": "Archived",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "29/08/2026 10:34:39",
@@ -234,9 +238,9 @@ export const jobSearchData = {
       "url": "https://job-boards.greenhouse.io/instawork/jobs/4702041006",
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1w77O4jYJHbnDX_g-zQHhEFcQAhiUC4js/view?usp=drivesdk",
-      "notes": "Manual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial live full description AND application fields/Submit Application inspected October 7: https://job-boards.greenhouse.io/instawork/jobs/4702041006 . Base $90,000-$120,000 plus equity. Accepts 0-3 years, including new grads with strong internships. Analytics, workflow automation, compensation process and forecasting operations; no selling or prospecting quota. Fit: UN Copilot Studio multi-agent assistant, client-needs scoping, AI output evaluation, Lewis data operations and Excel analytics. Gaps: no verified payroll/commission administration, Salesforce, n8n or production compensation automation. Reopened existing tracker row24 after live employer form verified; original August30 first-seen preserved. No history submission for this requisition. Different from Applied Instawork Product Operations req4583589006.",
+      "notes": "October 7, 2026 12:47 ET: Misha confirmed all three submissions (Instawork AI & Automation, Metropolitan Applied AI Analyst, PineBridge Data Systems Analyst). Date recorded; exact submission times not provided. Preserve final submitted PDF snapshot.\n\nManual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial live full description AND application fields/Submit Application inspected October 7: https://job-boards.greenhouse.io/instawork/jobs/4702041006 . Base $90,000-$120,000 plus equity. Accepts 0-3 years, including new grads with strong internships. Analytics, workflow automation, compensation process and forecasting operations; no selling or prospecting quota. Fit: UN Copilot Studio multi-agent assistant, client-needs scoping, AI output evaluation, Lewis data operations and Excel analytics. Gaps: no verified payroll/commission administration, Salesforce, n8n or production compensation automation. Reopened existing tracker row24 after live employer form verified; original August30 first-seen preserved. No history submission for this requisition. Different from Applied Instawork Product Operations req4583589006.",
       "firstSeenAt": "30/08/2026 09:01:36",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": 46302
     },
     {
       "company": "Finch",
@@ -286,7 +290,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/15mTgdR-C1TcBXBZYTM0DuQase7uY08tE/view",
       "notes": "October 9, 2026: Misha confirmed submission of all three jobs from the latest run: adMarketplace Graduate Data Analyst, Hive Analyst Media & Sports, and Hive Client Delivery Analyst. Confirmation date recorded; exact submission times were not supplied. Application materials are historical submitted snapshots. Prior pending application requirements are superseded by this submission confirmation.\nOctober 9, 2026 manual specialist run. Duplicate check and live-snapshot preflight passed BEFORE resume authoring; approved master libfile_7675dde2a3908191a50dba63afe47887 v2 sha256 db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: Specialist analyst role, with AI/data quality/analysis responsibilities matching verified experience. location: San Francisco experience: 0–1 years preferred, bachelor's degree. AI evaluations, data-quality projects, marketing analysis and D1 athletics support role. mandatory_requirements: Verified bachelor's degree, analytics coursework/SQL/Excel, clear communication and relevant AI/data/project evidence. No unverified tools or experience claimed. base_salary: $60,000–$85,000 base; conditional on offer >=$70,000 authorization: Unknown sponsorship exception explicitly recorded and to be disclosed; no explicit no-current/future-sponsorship restriction. start_timing: Not published; December 2026 graduation and current CPT need employer timing confirmation. application_path: Exact Lever application form verified with resume input and Submit application button. Mandatory cover upload noted; no cover requested this run. Sponsorship UNCONFIRMED: Strong attainable analyst fit and verified live application; no explicit sponsorship exclusion in official JD. Employer sponsorship for this role is NOT confirmed. Current CPT scope and post-Dec-2026 authorization/start date must be confirmed; no future OPT approval assumed. Fixed deadline not published; live application checked 2026-10-09T13:46:07.227Z. Fit score 91; role/skills/experience/seniority/education/achievement 23/18/16/15/10/9. No submission or outreach performed. One-page PDF visually inspected and extracted text checked: 23 bullets, 3 working contact links, master typography/geometry. Reactivated archived unsubmitted role; archival is not rejection. Distinct official Lever UUID and title from already-applied Hive Data Operations Analyst 8a55e4ff-ec69-4691-aa65-fc7cbd7c6ee0; different requisition, related data-quality responsibilities acknowledged. Salary requires >=$70,000 base offer. Hive thehive.ai is NOT the YC hive.co company. No professional sports-media analytics claimed; NCAA athletics is verified interest/evidence. REQUIRED COVER LETTER UPLOAD remains outstanding; PDF prepared but not fully application-ready.",
       "firstSeenAt": "31/08/2026 21:06:37",
-      "appliedAt": "October 9, 2026"
+      "appliedAt": 46304
     },
     {
       "company": "Hive",
@@ -296,7 +300,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1E2MKHWuga1tlReDJ3hukPBy5yjSvKr6R/view",
       "notes": "October 9, 2026: Misha confirmed submission of all three jobs from the latest run: adMarketplace Graduate Data Analyst, Hive Analyst Media & Sports, and Hive Client Delivery Analyst. Confirmation date recorded; exact submission times were not supplied. Application materials are historical submitted snapshots. Prior pending application requirements are superseded by this submission confirmation.\nOctober 9, 2026 manual specialist run. Duplicate check and live-snapshot preflight passed BEFORE resume authoring; approved master libfile_7675dde2a3908191a50dba63afe47887 v2 sha256 db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: Specialist analyst role, with AI/data quality/analysis responsibilities matching verified experience. location: San Francisco experience: 0–2 years; bachelor's degree. UN requirements scoping, Lewis records/project work, Camp Vega data QA relevant. mandatory_requirements: Verified bachelor's degree, analytics coursework/SQL/Excel, clear communication and relevant AI/data/project evidence. No unverified tools or experience claimed. base_salary: $60,000–$85,000 base; conditional on offer >=$70,000 authorization: Unknown sponsorship exception explicitly recorded and to be disclosed; no explicit no-current/future-sponsorship restriction. start_timing: Not published; December 2026 graduation and current CPT need employer timing confirmation. application_path: Exact Lever application form verified with resume input and Submit application button. Official live path takes precedence over third-party closed labels. Sponsorship UNCONFIRMED: Strong attainable analyst fit and verified live application; no explicit sponsorship exclusion in official JD. Employer sponsorship for this role is NOT confirmed. Current CPT scope and post-Dec-2026 authorization/start date must be confirmed; no future OPT approval assumed. Fixed deadline not published; live application checked 2026-10-09T13:46:07.227Z. Fit score 89; role/skills/experience/seniority/education/achievement 22/18/16/15/10/8. No submission or outreach performed. One-page PDF visually inspected and extracted text checked: 23 bullets, 3 working contact links, master typography/geometry. Reactivated archived unsubmitted role; archival is not rejection. Distinct official Lever UUID and title from already-applied Hive Data Operations Analyst 8a55e4ff-ec69-4691-aa65-fc7cbd7c6ee0; different requisition, related data-quality responsibilities acknowledged. Salary requires >=$70,000 base offer. Hive thehive.ai is NOT the YC hive.co company. Client scoping/project and data QA evidence verified. No production pipeline engineering or enterprise implementation metrics claimed.",
       "firstSeenAt": "31/08/2026 21:06:37",
-      "appliedAt": "October 9, 2026"
+      "appliedAt": 46304
     },
     {
       "company": "iHeartMedia",
@@ -316,7 +320,7 @@ export const jobSearchData = {
       "resumeUrl": "Open PDF",
       "notes": "7d+",
       "firstSeenAt": "31/08/2026 21:06:37",
-      "appliedAt": "06/09/2026 21:32:02"
+      "appliedAt": 46271.89724180556
     },
     {
       "company": "Judi Health",
@@ -336,7 +340,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1udubu8Y7-fg9cxdXqZLRxMw1A8SKOEt7/view?usp=drivesdk",
       "notes": "",
       "firstSeenAt": "01/09/2026 09:13:47",
-      "appliedAt": "01/09/2026 13:51:40"
+      "appliedAt": 46266.57754629629
     },
     {
       "company": "Treeswift",
@@ -392,7 +396,7 @@ export const jobSearchData = {
       "company": "Realign LLC",
       "position": "Technical Business Analyst",
       "url": "https://www.indeed.com/viewjob?jk=964e31a96c59ad15",
-      "status": "Closed",
+      "status": "Archived",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "02/09/2026 09:00:30",
@@ -456,7 +460,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1P-EiUyUyzBDZyXxZvZBnafETUMYpFnnf/view?usp=drivesdk",
       "notes": "September 28, 2026, 09:12 ET: Fortuna rejected the application. No specific reason provided; no ATS or sponsorship cause established. Gmail 1a0e824d9a871acb.\n\nSUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Retained from September 25 automated run; previously seen, not applied. Explicitly accepts 0–1 years including internships. Operational recordkeeping, service requests, data quality and internal user needs align closely. Gap: No Medicaid-specific experience; posting says none is needed. Full-time onsite start date and work authorization remain to be confirmed. Score 24+17+18+15+8+7=89; fit only, not ATS probability. $90,000; New York City, onsite five days. Authorization: Not stated in employer posting; CPT/OPT acceptance and start date need confirmation. Exact public destination revalidated September 25. Morning form verification retained; onsite availability and start date need user review. Resume: https://drive.google.com/file/d/1P-EiUyUyzBDZyXxZvZBnafETUMYpFnnf/view?usp=drivesdk Cover: https://drive.google.com/file/d/1fGfPOpYGfMEgw-OwhLiE5BaaJ0XeKyyw/view?usp=drivesdk",
       "firstSeenAt": "03/09/2026 09:00:40",
-      "appliedAt": "25/09/2026 00:00:00"
+      "appliedAt": 46290
     },
     {
       "company": "Meow",
@@ -472,7 +476,7 @@ export const jobSearchData = {
       "company": "Kahana & Feld LLP",
       "position": "Operations Junior Data & Staffing Analyst",
       "url": "https://www.indeed.com/viewjob?jk=96ab249ba45e248f",
-      "status": "Closed",
+      "status": "Archived",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "04/09/2026 09:01:28",
@@ -482,7 +486,7 @@ export const jobSearchData = {
       "company": "STARK Carpet",
       "position": "Business Analyst",
       "url": "https://www.indeed.com/viewjob?jk=f2bd758de514888e",
-      "status": "Closed",
+      "status": "Archived",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "04/09/2026 09:01:28",
@@ -576,7 +580,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1jiBga8lBkTv_xVfPe8ty7IXQ2aq8UWIl/view?usp=drivesdk",
       "notes": "October 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\n2026-10-03 fresh re-entry based on current official Greenhouse requisition 4385554009 and the user’s clarified Business/AI Analyst priority. Employer page describes the first Operations analyst, SQL dashboards, operational/on-chain analysis, AI workflow automation and executive reporting; $100,000-$125,000 base. It asks 2-4 years but explicitly frames the role as early-career and treats internships/early operations, finance, consulting or data-heavy roles as relevant. Application form and sponsorship question are live; role-level sponsorship policy is not stated. Retained as an exceptional functional match, with the experience and sponsorship gaps disclosed. New one-page position-specific PDF rebuilt from the approved master; extracted text and visual QA passed.",
       "firstSeenAt": "05/09/2026 09:03:00",
-      "appliedAt": "04/10/2026 00:00:00"
+      "appliedAt": 46299
     },
     {
       "company": "Metro Vein Centers",
@@ -586,7 +590,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1mJvHWWpDKNdHA5mNWa5dOorq5l7CGmFE/view?usp=drivesdk",
       "notes": "1–3d",
       "firstSeenAt": "05/09/2026 09:03:00",
-      "appliedAt": "07/09/2026 22:43:00"
+      "appliedAt": 46272.94652777778
     },
     {
       "company": "Vooma",
@@ -596,7 +600,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1kYG2PQ0mNcy_xWOl2VuJ8qHbYVQ0MeYr/view?usp=drivesdk",
       "notes": "September 22 full run. Combines internal-client needs, automation, service coordination, and AI experience; exceptional early-career applicants considered. Gap: No direct logistics or SaaS account ownership. Customer deployments would be new responsibilities. Score 22+17+17+14+9+9=88; fit only. $100,000–$120,000 (YC listing); San Francisco, in person; 10–20% travel. Sponsorship: Employer YC listing says it will sponsor. Documents rebuilt from approved master; one-page visual/text checks passed. Resume: https://drive.google.com/file/d/1kYG2PQ0mNcy_xWOl2VuJ8qHbYVQ0MeYr/view?usp=drivesdk Cover: https://drive.google.com/file/d/1lfMEYJC5mrpRVXE1A6HKkgz1ALEfEli9/view?usp=drivesdk Final application fields not independently verified; keep Found.",
       "firstSeenAt": "06/09/2026 09:00:41",
-      "appliedAt": "24/09/2026 22:26:02"
+      "appliedAt": 46289.934745370374
     },
     {
       "company": "Clera",
@@ -656,7 +660,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1S1h5kxC5AWep_t9myir_E7sKwVqvRfO9/view?usp=drivesdk",
       "notes": "Reverified 19/09/2026; aged 7d+ but active",
       "firstSeenAt": "07/09/2026 09:06:06",
-      "appliedAt": "19/09/2026 00:00:00"
+      "appliedAt": 46284
     },
     {
       "company": "BlackRock",
@@ -746,7 +750,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/13S3HUW-qCv3NWayIt0znNGBbLf4oGhcm/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; exact Lever role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "07/09/2026 13:54:00",
-      "appliedAt": "20/09/2026 00:00:00"
+      "appliedAt": 46285
     },
     {
       "company": "iCapital",
@@ -756,7 +760,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1FdUz-nhqk8LFnd13JhqcBljUzO-RTj05/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; 7d+\nSeptember 22 email: iCapital Product Operations - Associate rejected; other candidates more closely aligned with needs.",
       "firstSeenAt": "07/09/2026 14:28:45",
-      "appliedAt": "20/09/2026 11:51:03"
+      "appliedAt": 46285.493784722225
     },
     {
       "company": "Hive",
@@ -945,7 +949,8 @@ export const jobSearchData = {
       "resumeUrl": "",
       "notes": "1–3d",
       "firstSeenAt": "09/09/2026 07:25:19",
-      "appliedAt": ""
+      "appliedAt": "",
+      "status": "Rejected"
     },
     {
       "company": "Ramp",
@@ -1101,11 +1106,11 @@ export const jobSearchData = {
       "company": "Valerie Health",
       "position": "AI Operations Specialist",
       "url": "https://jobs.ashbyhq.com/valeriehealth/54707996-63b5-4811-98eb-016266654e78",
-      "status": "Applied",
+      "status": "Interview",
       "resumeUrl": "https://drive.google.com/file/d/1BkiFovLRFivyrc_WCjwJqnr9L14biGGE/view?usp=drivesdk",
-      "notes": "Early-career applicants explicitly encouraged; prior startup/healthcare experience helpful, not required. Lewis records, Camp Vega validation and UN workflows support accuracy, discrepancy investigation and operational delivery. No claimed patient/EHR experience. Pay: $65,000–$85,000 base; offer must be at least $70,000. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
+      "notes": "October 9 Gmail reconciliation: recruiter screen scheduled Monday October 12, 2026 11–11:30am ET with Katelyn Allen. Gmail 1a11c8c5126ccd6d and 1a11c8d4ad393ab1. This is UPCOMING, not a completed interview. Interview Prep INT-VALERIE-20261012 records the event.\n\nOctober 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nManual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nValerie Health: Early-career applicants explicitly encouraged; prior startup/healthcare experience helpful, not required. Lewis records, Camp Vega validation and UN workflows support accuracy, discrepancy investigation and operational delivery. No claimed patient/EHR experience.\nPay: $65,000–$85,000 base; offer must be at least $70,000. Equity/bonus separate if applicable. Current employer careers page links exact requisition; official Ashby public posting feed lists it isListed=true with exact /application URL.\nOfficial JD: https://jobs.ashbyhq.com/valeriehealth/54707996-63b5-4811-98eb-016266654e78\nEvidence checked 2026-10-07T16:59:08.234Z; source https://api.ashbyhq.com/posting-api/job-board/valeriehealth\nResume: https://drive.google.com/file/d/1BkiFovLRFivyrc_WCjwJqnr9L14biGGE/view?usp=drivesdk\n\nHistorical note preserved: ≤24h",
       "firstSeenAt": "14/09/2026 09:56:55",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": "07/10/2026"
     },
     {
       "company": "Valerie Health",
@@ -1175,7 +1180,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1jUhnDsc4_wETjSYkazyGI5nuHsJOoso7/view?usp=drivesdk",
       "notes": "October 1, 2026 12:27 ET: Agave rejected the Product Analyst application after review and said it is moving forward with candidates whose experience more closely aligns. Gmail 1a0f84b2c764c0f5. No visa or ATS-specific reason was given.\n\nSUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Reactivated; distinct from submitted Operations Associate. Early-career product investigation, QA, user requirements and data quality connect to AI evaluation and the UN assistant project. Gap: No professional API/Postman integration debugging or product specification ownership. Posting accepts a desire to learn these tools. Do not confuse with already submitted Operations Associate. Score 22+16+16+14+9+7=84; fit only, not ATS probability. $100,000–$150,000; San Francisco, onsite five days. Authorization: Employer YC listing explicitly offers sponsorship, including H-1B/TN for suitable candidates. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1jUhnDsc4_wETjSYkazyGI5nuHsJOoso7/view?usp=drivesdk Cover: https://drive.google.com/file/d/1Iq-ma4h5FemDaHwnrUPMgXAq_n6ZEswA/view?usp=drivesdk",
       "firstSeenAt": "15/09/2026 09:00:00",
-      "appliedAt": "25/09/2026"
+      "appliedAt": 46290
     },
     {
       "company": "Claim Health",
@@ -1555,7 +1560,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/12zl6gLIz3KJT04LCjhD7uoMLM8Fus9zh/view?usp=drivesdk",
       "notes": "October 1, 2026 12:37 ET: Application submitted. Y Combinator confirmation email 1a0f8540e083e97b confirms Agave received the Associate Product Manager, Integrations application.\n\nOctober 1, 2026 full run: reactivated from Archived using fresh role-level evidence. Exact YC employer page is live, explicitly welcomes new graduates, lists $100,000-$150,000 base and states visa sponsorship is available. Fit: AI-response evaluation, UN client-needs research, workflow testing, documentation, and large-scale data-quality review support product investigation and QA. Material gaps: no professional API/Postman debugging or ownership of engineer-ready product specifications. San Francisco onsite five days; YC sign-in gates the final application form, so status remains Found. One-page position-specific PDF passed extracted-text and rendered visual QA and was durably saved. Resume: https://drive.google.com/file/d/12zl6gLIz3KJT04LCjhD7uoMLM8Fus9zh/view?usp=drivesdk Outreach: Maya Mitchell, current Agave Product Analyst; draft only, not sent.",
       "firstSeenAt": "20/09/2026",
-      "appliedAt": "01/10/2026"
+      "appliedAt": 46296.52606481482
     },
     {
       "company": "Mercor",
@@ -1675,7 +1680,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1sFD21vcLr4WoPnaKeNHP0Wke_EwHbMds/view?usp=drivesdk",
       "notes": "SUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Retained; URL corrected. Graduate-level role connects service workflows, AI automation and careful handling of exceptions. Gap: No banking operations or production automation impact metrics. Low-code experience is Copilot Studio, not Zapier/Make/n8n. Description says onsite despite remote metadata. Score 23+17+17+14+9+6=86; fit only, not ATS probability. $100,000–$125,000; New York City, onsite per description. Authorization: Sponsorship explicitly available. End employer unnamed; confirm employer identity and start date. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1sFD21vcLr4WoPnaKeNHP0Wke_EwHbMds/view?usp=drivesdk Cover: https://drive.google.com/file/d/1_sTO1mWa6kgGtWHKRju2XveQFfpUxreX/view?usp=drivesdk",
       "firstSeenAt": "24/09/2026 07:58:00",
-      "appliedAt": "25/09/2026"
+      "appliedAt": 46290
     },
     {
       "company": "Bikky",
@@ -1685,7 +1690,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1WKbevyzPMk8WC_kaPsuNVvRmJVssFF7A/view?usp=drivesdk",
       "notes": "September 29, 2026: Bikky rejected Data Analyst - Data Operations; employer said other candidates more closely align. Email 1a0ee9c5741b91eb. No specific ATS or sponsorship reason supplied.\n\nSUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Retained; score corrected. Data validation, discrepancy investigation, marketing analysis and business reporting are directly relevant. Gap: SQL fluency is required; resume supports SQL coursework, not production SQL ownership. dbt is not evidenced. Ideal 1–3 years, but posting considers exceptional applicants from other backgrounds. Score 23+16+17+12+10+6=84; fit only, not ATS probability. $100,000–$140,000; New York City, hybrid. Authorization: Not stated; CPT/OPT acceptance and longer-term policy need confirmation. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1WKbevyzPMk8WC_kaPsuNVvRmJVssFF7A/view?usp=drivesdk Cover: https://drive.google.com/file/d/1iswZnAK-FmDN0xDyhcVDaQ2cC1zcIIqt/view?usp=drivesdk",
       "firstSeenAt": "24/09/2026 07:58:00",
-      "appliedAt": "25/09/2026"
+      "appliedAt": 46290
     },
     {
       "company": "Ambrook",
@@ -1715,7 +1720,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1IsXWvQyvXo_AojgBsy3V7N5hx5MASG6S/view?usp=drivesdk",
       "notes": "SUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. New. Combines service coordination, written explanation, investigation and hands-on AI workflow experience. Gap: No professional SaaS support queue, knowledge-base ownership or engineering bug triage. Posting asks 1–8 years; technical background is a plus rather than a required engineering degree. Score 22+15+16+12+8+8=81; fit only, not ATS probability. $100,000–$150,000; San Francisco, onsite. Authorization: Not stated for this specific role; confirm CPT/OPT acceptance and longer-term policy. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1IsXWvQyvXo_AojgBsy3V7N5hx5MASG6S/view?usp=drivesdk Cover: https://drive.google.com/file/d/1ZWq2i5mzGWhAhqaELbSyN-QPi1Xps3BE/view?usp=drivesdk",
       "firstSeenAt": "25/09/2026",
-      "appliedAt": "25/09/2026"
+      "appliedAt": 46290
     },
     {
       "company": "MissionOne Media",
@@ -1865,7 +1870,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1RzUGJvKsGSoXvGabvrTtzCF9Gaijq0PP/view?usp=drivesdk",
       "notes": "October 1, 2026 12:32 ET: Application submitted. Y Combinator confirmation email 1a0f84f0abb93a72 confirms Fulcrum received the Generalist application.\n\nOctober 1, 2026 full run: retained. Exact YC employer page remains live, accepts new graduates, lists $150,000-$300,000 plus equity, and explicitly states Will sponsor. Fit remains strategic operations, AI evaluation, product coordination and client-needs research. Material gaps remain product-roadmap ownership, launches, enterprise accounts and published technical writing. YC sign-in gates the final application form, so status remains Found. Existing one-page PDF was re-downloaded, text-extracted and visually inspected; QA passed. Resume: https://drive.google.com/file/d/1RzUGJvKsGSoXvGabvrTtzCF9Gaijq0PP/view?usp=drivesdk No credible nonexecutive recruiter or team contact was publicly verified; founders were not added as filler.",
       "firstSeenAt": "01/10/2026 00:27:00",
-      "appliedAt": "01/10/2026"
+      "appliedAt": 46296.522256944445
     },
     {
       "company": "Agave",
@@ -1875,7 +1880,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1gSVR638_yvqKZRn_o9s87ZlBOyysBQdC/view?usp=drivesdk",
       "notes": "October 1, 2026 12:46 ET: Application submitted. Y Combinator confirmation email 1a0f85c3235c80c9 confirms Agave received the Customer Solutions Engineer application.\n\nOctober 1, 2026 full run. New. Fit 85/100; evidence fit, not interview probability. Exact YC employer posting is live, lists $130,000-$180,000 base, 1+ year, San Francisco with remote optional, and explicitly states visa sponsorship is available. UN client-needs research, Copilot Studio workflow work, project coordination and student-facing services align with implementations, documentation and customer communication. Material gaps: no professional SaaS implementation portfolio, construction experience, sales demos, Postman/API work or ownership of 15+ concurrent customer launches. Employer says construction and technical skills are not required, but customer-facing experience is required and startup/top-consulting experience is preferred. YC sign-in gates the final form, so status remains Found. One-page position-specific PDF passed extracted-text and rendered visual QA and was durably saved. Resume: https://drive.google.com/file/d/1gSVR638_yvqKZRn_o9s87ZlBOyysBQdC/view?usp=drivesdk Outreach: Ben Vandenbosch, current Founding Technical Product Manager at Agave; draft only, no email verified and nothing sent.",
       "firstSeenAt": "01/10/2026 07:55:56",
-      "appliedAt": "01/10/2026"
+      "appliedAt": 46296.53224537037
     },
     {
       "company": "Daisy",
@@ -1913,7 +1918,7 @@ export const jobSearchData = {
       "url": "https://raymondjames.wd1.myworkdayjobs.com/en-US/RaymondJamesCareers/job/AI-Business-Engineer---Investment-Banking-Experience_R-0013200",
       "status": "Archived",
       "resumeUrl": "https://drive.google.com/file/d/1yk2w7Vvz95w9HtgjzzrEf7m6mwokmK6m/view?usp=drivesdk",
-      "notes": "Archived October 7, 2026 manual run — not applied, not an employer rejection. Replaced in the five-job radar by Invesco's Business Analyst role, whose explicit early-career academic/internship route and full current requirements are better substantiated. Exact R-0013200 is indexed under AI Business Enablement Analyst despite the older engineer title in its URL; current title and qualifications require reconfirmation. Direct Workday read was blocked; did not silently reuse the different R-0012485 description or its conflicting experience fields. Prior resume and unsent outreach preserved.\n\nOctober 6, 2026: exact Raymond James Workday requisition R-0013200 is live and replaces the prior LinkedIn-only destination. Official title is AI Business Engineer — Investment Banking Experience. Duties center on GenAI adoption for Investment Banking/Capital Markets, custom GPTs and agent tools, prompt design, stakeholder support, training, documentation and vendor evaluation. Verified fit: UN Copilot Studio workflow work, AI response evaluation, business analytics coursework and cross-functional project coordination. Verified base range is $65,000-$125,000; the lower bound is below the $70,000 target, so confirm offer range. Role-level sponsorship is not stated; no promise is inferred. Direct employer application is verified. Retained one-page PDF was re-opened from Drive; extracted-text, required-content, hyperlink and rendered-page QA passed. Kimberly Rankin outreach draft remains unsent.",
+      "notes": "October 7 current-run exclusion: current official CXS returned posted=true/canApply=true and title AI Business Enablement Analyst, but requested vendor/license/contract coordination experience is not established in verified candidate record. Remains Archived, unsubmitted, not an employer rejection. No resume authored this run. Manual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nArchived October 7, 2026 manual run — not applied, not an employer rejection. Replaced in the five-job radar by Invesco's Business Analyst role, whose explicit early-career academic/internship route and full current requirements are better substantiated. Exact R-0013200 is indexed under AI Business Enablement Analyst despite the older engineer title in its URL; current title and qualifications require reconfirmation. Direct Workday read was blocked; did not silently reuse the different R-0012485 description or its conflicting experience fields. Prior resume and unsent outreach preserved.\n\nOctober 6, 2026: exact Raymond James Workday requisition R-0013200 is live and replaces the prior LinkedIn-only destination. Official title is AI Business Engineer — Investment Banking Experience. Duties center on GenAI adoption for Investment Banking/Capital Markets, custom GPTs and agent tools, prompt design, stakeholder support, training, documentation and vendor evaluation. Verified fit: UN Copilot Studio workflow work, AI response evaluation, business analytics coursework and cross-functional project coordination. Verified base range is $65,000-$125,000; the lower bound is below the $70,000 target, so confirm offer range. Role-level sponsorship is not stated; no promise is inferred. Direct employer application is verified. Retained one-page PDF was re-opened from Drive; extracted-text, required-content, hyperlink and rendered-page QA passed. Kimberly Rankin outreach draft remains unsent.",
       "firstSeenAt": "02/10/2026 00:14:00",
       "appliedAt": ""
     },
@@ -2024,7 +2029,8 @@ export const jobSearchData = {
       "resumeUrl": "",
       "notes": "Employer confirmation email 2026-09-29; exact position and application URL were not stated.",
       "firstSeenAt": "29/09/2026 02:15:03",
-      "appliedAt": ""
+      "appliedAt": "29/09/2026 02:15:03",
+      "status": "Applied"
     },
     {
       "company": "WisdomTree",
@@ -2082,9 +2088,9 @@ export const jobSearchData = {
       "url": "https://job-boards.greenhouse.io/metropolitancommercialbank/jobs/4708072006",
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1fgu9G5xJVZ7GmCUQignI-QB17Botfdco/view?usp=drivesdk",
-      "notes": "Manual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial full JD and full application form verified: https://job-boards.greenhouse.io/metropolitancommercialbank/jobs/4708072006 . Base $120,000-$150,000; incentives separate. Two-plus years requested but employer explicitly considers relevant internships, apprenticeships and hands-on AI/analytics/automation projects. EXPERIENCE AND TECHNICAL STRETCH: verified internships are overlapping and are NOT counted as two full-time years. Strong direct fit in UN Copilot Studio assistant, user-needs/scoping, multi-agent workflow refinement, Data Annotation evaluation, Camp Vega AI-data validation. Gaps: no verified professional RAG, Azure Foundry, Snowflake, REST/API, JSON/YAML, Git or MCP/A2A deployment. Python/SQL listed from approved master and coursework, not portrayed as enterprise delivery. Sponsorship questions present but no commitment to sponsor. LinkedIn discovery https://www.linkedin.com/jobs/view/applied-ai-analyst-at-metropolitan-commercial-bank-4472561499 .",
+      "notes": "October 7, 2026 12:47 ET: Misha confirmed all three submissions (Instawork AI & Automation, Metropolitan Applied AI Analyst, PineBridge Data Systems Analyst). Date recorded; exact submission times not provided. Preserve final submitted PDF snapshot.\n\nManual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial full JD and full application form verified: https://job-boards.greenhouse.io/metropolitancommercialbank/jobs/4708072006 . Base $120,000-$150,000; incentives separate. Two-plus years requested but employer explicitly considers relevant internships, apprenticeships and hands-on AI/analytics/automation projects. EXPERIENCE AND TECHNICAL STRETCH: verified internships are overlapping and are NOT counted as two full-time years. Strong direct fit in UN Copilot Studio assistant, user-needs/scoping, multi-agent workflow refinement, Data Annotation evaluation, Camp Vega AI-data validation. Gaps: no verified professional RAG, Azure Foundry, Snowflake, REST/API, JSON/YAML, Git or MCP/A2A deployment. Python/SQL listed from approved master and coursework, not portrayed as enterprise delivery. Sponsorship questions present but no commitment to sponsor. LinkedIn discovery https://www.linkedin.com/jobs/view/applied-ai-analyst-at-metropolitan-commercial-bank-4472561499 .",
       "firstSeenAt": "07/10/2026 12:18:00",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": "07/10/2026"
     },
     {
       "company": "PineBridge Investments (MetLife Investment Management)",
@@ -2092,9 +2098,9 @@ export const jobSearchData = {
       "url": "https://pinebridge.wd5.myworkdayjobs.com/PineBridge_Career_Site/job/New-York/Data-Systems-Analyst_R-02095",
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1lBdd9F5lk1Ob9tr_Y3kRRvtCNL037lFP/view?usp=drivesdk",
-      "notes": "Manual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial Workday requisition R-02095 retrieved through employer public CXS job details: title exact, posted=true and canApply=true, externalUrl exact. Full active JD verified October7. Application destination: https://pinebridge.wd5.myworkdayjobs.com/PineBridge_Career_Site/job/New-York/Data-Systems-Analyst_R-02095 . JS-dependent final account/form not inspected, no browser used. Base $100,000-$110,000 plus separate bonus/benefits. Bachelor's in business analytics or related accepted; 1-2 years asset-management/finance-operations experience PREFERRED, not required. AI implementation/project management strongly preferred. SQL/Python/Excel required. Fit: UN AI assistant project, Camp Vega 20,000+ AI-data quality work, Lewis 10,000+ record operations, KPI analysis and verified analytical coursework. Gaps: no professional private-credit portfolio systems, cash-flow projection or investment modeling delivery; tools beyond academic/approved-master evidence not claimed. Employer posted September9; this is posting date, not employment start date. LinkedIn listing https://www.linkedin.com/jobs/view/data-systems-analyst-at-metlife-investment-management-4463058587 .\n\nRun shortfall: THREE credible active unsubmitted matches, not five. CAIS Partner Experience req8809524002 excluded as ALREADY APPLIED (history APP-20260916-CAIS-PARTNEREXP). Jitsu Business Insights official Rippling redirects job_not_found; TogetherAI GTM Data Analytics Engineer official Greenhouse redirects board error (closed); WisdomTree Portfolio Solutions direct Lever404. MUFG Markets AI Enablement appears in mirrors but not current employer NY analyst job feed; not claimed active. Middesk Data Operations requires at least2 years consulting/finance/strategy/BizOps with scalable software processes, no explicit internship allowance; excluded experience mismatch. Clipboard Revenue Strategy/Growth salary is80-120TOTAL base+bonus and employer-profile says sponsorship unavailable; also Sales department; excluded. Emendata Data Analyst explicitly no current/future sponsorship. VettaFi Index Governance explicitly no work permit sponsorship. BlackRock PFS BI/BA full JD requires5+ years despite junior-looking mirrors. Shiftsmart Shift Success requires3-6 years and is reported closed. Hearst AI/resilience21hours/week35-41/hr annual below70kfloor. Relevant official UN search: UNICEF595944 expiredOct5; REACH595949 activeOct8 but5yearsminimum; UNDataAnalyst275170 explicitly no longer available, Apr23deadline; UN national-professional openings outside approved geographies excluded. Sponsor-friendly employers/YC researched first; no new role with positive sponsorship, approved pay and verified experience fit passed all filters. LinkedIn used for discovery and official employer paths for verification.",
+      "notes": "October 7, 2026 12:47 ET: Misha confirmed all three submissions (Instawork AI & Automation, Metropolitan Applied AI Analyst, PineBridge Data Systems Analyst). Date recorded; exact submission times not provided. Preserve final submitted PDF snapshot.\n\nManual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial Workday requisition R-02095 retrieved through employer public CXS job details: title exact, posted=true and canApply=true, externalUrl exact. Full active JD verified October7. Application destination: https://pinebridge.wd5.myworkdayjobs.com/PineBridge_Career_Site/job/New-York/Data-Systems-Analyst_R-02095 . JS-dependent final account/form not inspected, no browser used. Base $100,000-$110,000 plus separate bonus/benefits. Bachelor's in business analytics or related accepted; 1-2 years asset-management/finance-operations experience PREFERRED, not required. AI implementation/project management strongly preferred. SQL/Python/Excel required. Fit: UN AI assistant project, Camp Vega 20,000+ AI-data quality work, Lewis 10,000+ record operations, KPI analysis and verified analytical coursework. Gaps: no professional private-credit portfolio systems, cash-flow projection or investment modeling delivery; tools beyond academic/approved-master evidence not claimed. Employer posted September9; this is posting date, not employment start date. LinkedIn listing https://www.linkedin.com/jobs/view/data-systems-analyst-at-metlife-investment-management-4463058587 .\n\nRun shortfall: THREE credible active unsubmitted matches, not five. CAIS Partner Experience req8809524002 excluded as ALREADY APPLIED (history APP-20260916-CAIS-PARTNEREXP). Jitsu Business Insights official Rippling redirects job_not_found; TogetherAI GTM Data Analytics Engineer official Greenhouse redirects board error (closed); WisdomTree Portfolio Solutions direct Lever404. MUFG Markets AI Enablement appears in mirrors but not current employer NY analyst job feed; not claimed active. Middesk Data Operations requires at least2 years consulting/finance/strategy/BizOps with scalable software processes, no explicit internship allowance; excluded experience mismatch. Clipboard Revenue Strategy/Growth salary is80-120TOTAL base+bonus and employer-profile says sponsorship unavailable; also Sales department; excluded. Emendata Data Analyst explicitly no current/future sponsorship. VettaFi Index Governance explicitly no work permit sponsorship. BlackRock PFS BI/BA full JD requires5+ years despite junior-looking mirrors. Shiftsmart Shift Success requires3-6 years and is reported closed. Hearst AI/resilience21hours/week35-41/hr annual below70kfloor. Relevant official UN search: UNICEF595944 expiredOct5; REACH595949 activeOct8 but5yearsminimum; UNDataAnalyst275170 explicitly no longer available, Apr23deadline; UN national-professional openings outside approved geographies excluded. Sponsor-friendly employers/YC researched first; no new role with positive sponsorship, approved pay and verified experience fit passed all filters. LinkedIn used for discovery and official employer paths for verification.",
       "firstSeenAt": "07/10/2026 12:18:00",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": "07/10/2026"
     },
     {
       "company": "Silna Health",
@@ -2102,9 +2108,9 @@ export const jobSearchData = {
       "url": "https://jobs.ashbyhq.com/silnahealth.com/8ed75986-4032-425b-b82a-fa6010a18656",
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1B-Hy-Bm56xobyHNnxkjDcHfDwFYVWddg/view?usp=drivesdk",
-      "notes": "Recent graduates, including nontechnical analytical backgrounds, explicitly encouraged. UN Copilot Studio assistant and Data Annotation output evaluation directly match deployment testing, prompting and AI quality. OCR, healthcare insurance workflows and production browser/phone agents are gaps, not required prior experience. Pay: $120,000–$160,000 base. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
+      "notes": "October 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nManual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nSilna Health: Recent graduates, including nontechnical analytical backgrounds, explicitly encouraged. UN Copilot Studio assistant and Data Annotation output evaluation directly match deployment testing, prompting and AI quality. OCR, healthcare insurance workflows and production browser/phone agents are gaps, not required prior experience.\nPay: $120,000–$160,000 base. Equity/bonus separate if applicable. Public official Ashby posting API returned isListed=true and exact current applyUrl; old 4fb17cf8 requisition not used.\nOfficial JD: https://jobs.ashbyhq.com/silnahealth.com/8ed75986-4032-425b-b82a-fa6010a18656\nEvidence checked 2026-10-07T16:59:08.234Z; source https://api.ashbyhq.com/posting-api/job-board/silnahealth.com?includeCompensation=true\nResume: https://drive.google.com/file/d/1B-Hy-Bm56xobyHNnxkjDcHfDwFYVWddg/view?usp=drivesdk",
       "firstSeenAt": "07/10/2026 13:02:41",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": "07/10/2026"
     },
     {
       "company": "Health Services Advisory Group",
@@ -2112,9 +2118,9 @@ export const jobSearchData = {
       "url": "https://jobs.lever.co/hsag/2937f26a-3e66-4d42-ba61-c26e5b52f488",
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1yhqWgi0YR1BqZPrDV3Yg0TFjVBuE9OCp/view?usp=drivesdk",
-      "notes": "Academic/internship data analysis accepted; related analytical degree and coursework. Verified SQL/Python, Excel, data validation and logistic-regression academic project support requirements. SAS willingness to learn required, not prior SAS; healthcare datasets and SAS are gaps. Apply form asks SAS experience: verified record supports No. Pay: $70,000–$75,000 base. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
+      "notes": "October 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nManual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nHealth Services Advisory Group: Academic/internship data analysis accepted; related analytical degree and coursework. Verified SQL/Python, Excel, data validation and logistic-regression academic project support requirements. SAS willingness to learn required, not prior SAS; healthcare datasets and SAS are gaps. Apply form asks SAS experience: verified record supports No.\nPay: $70,000–$75,000 base. Equity/bonus separate if applicable. Exact official Lever application form opened today with resume upload, contact fields and Submit application button; no form filled or submitted.\nOfficial JD: https://jobs.lever.co/hsag/2937f26a-3e66-4d42-ba61-c26e5b52f488\nEvidence checked 2026-10-07T16:59:08.234Z; source https://jobs.lever.co/hsag/2937f26a-3e66-4d42-ba61-c26e5b52f488/apply\nResume: https://drive.google.com/file/d/1yhqWgi0YR1BqZPrDV3Yg0TFjVBuE9OCp/view?usp=drivesdk",
       "firstSeenAt": "07/10/2026 13:02:41",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": "07/10/2026"
     },
     {
       "company": "CertiK",
@@ -2122,9 +2128,9 @@ export const jobSearchData = {
       "url": "https://jobs.lever.co/certik/7d25f5e8-2fed-412c-b182-6568a491483e",
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1vA8CNgCBS2_4Nw9JSh2wFhdL12pJWxLc/view?usp=drivesdk",
-      "notes": "Current degree completion explicitly permitted; business administration and MS Business Analytics related to finance, both GPAs exceed 3.6; Lewis finance/accounting courses verified. Record cleansing, validation, KPI analysis and budget modeling align. Confirm requested mid-level course equivalency with transcript; no invented journal-entry, month-end close or bank-reconciliation experience. Pay: $60,000–$80,000 annual salary; offer must be at least $70,000. Sponsorship unknown; disclosed fit-based exception. Start timing and CPT compatibility require confirmation. No deadline published. Verified October 7, 2026; one-page tailored master-layout resume passed visual/text/link QA.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
+      "notes": "October 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nManual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nCertiK: Current degree completion explicitly permitted; business administration and MS Business Analytics related to finance, both GPAs exceed 3.6; Lewis finance/accounting courses verified. Record cleansing, validation, KPI analysis and budget modeling align. Confirm requested mid-level course equivalency with transcript; no invented journal-entry, month-end close or bank-reconciliation experience.\nPay: $60,000–$80,000 annual salary; offer must be at least $70,000. Equity/bonus separate if applicable. Exact official Lever application form opened today, current title, resume upload, contact fields and Submit application button; no submission.\nOfficial JD: https://jobs.lever.co/certik/7d25f5e8-2fed-412c-b182-6568a491483e\nEvidence checked 2026-10-07T16:59:08.234Z; source https://jobs.lever.co/certik/7d25f5e8-2fed-412c-b182-6568a491483e/apply\nResume: https://drive.google.com/file/d/1vA8CNgCBS2_4Nw9JSh2wFhdL12pJWxLc/view?usp=drivesdk",
       "firstSeenAt": "07/10/2026 13:02:41",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": "07/10/2026"
     },
     {
       "company": "Security Benefit",
@@ -2132,9 +2138,9 @@ export const jobSearchData = {
       "url": "https://www.linkedin.com/jobs/view/associate-business-data-analyst-at-security-benefit-4476316169/",
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1c9W_ND-dEUqtN9b7ISGuZ8x3jgsJgnp7/view?usp=drivesdk",
-      "notes": "User-selected entry-level data analyst role. Salary and sponsorship not published; remote eligibility requires confirmation.\nUser confirmed submission October 7, 2026; exact submission time not supplied.",
+      "notes": "October 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nUser-selected additional opening, not a scheduled run. Exact Security Benefit LinkedIn posting 4476316169 describes entry-level Data Intelligence work: data collection/validation, reporting, documentation and supported testing. 0–2 years; coursework and internships accepted. Remote possible for the right candidate; Topeka home office. Salary, deadline, start timing and role sponsorship not published in provided posting. Unknown sponsorship and remote eligibility are not positive evidence. Resume prepared from approved September 29 updated master; one page, three bullets per experience, four per school; extracted text, all 15 position-specific bullets, three contact links and rendered layout checked. No invented Snowflake, ELT production delivery, UAT or insurance work. Library version 2, libfile_3253cd10119881918752aab7f2c66847. Submitted PDF: https://drive.google.com/file/d/1c9W_ND-dEUqtN9b7ISGuZ8x3jgsJgnp7/view?usp=drivesdk",
       "firstSeenAt": "October 7, 2026",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": "07/10/2026"
     },
     {
       "company": "Oliver Wyman",
@@ -2144,7 +2150,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1Mlh2XW7JgT_IgTQYFnHt8CVwn8HehPpp/view?usp=drivesdk",
       "notes": "October 7, 2026: Misha confirmed submission. Confirmation date recorded; exact submission time not supplied. User-selected LinkedIn posting 4474312818; duplicate check found no prior record. NYC hybrid, 60% in office; $95,000–$130,000 base, incentives separate. JD asks 2–5 years analytics/digital enablement; internships not counted as cumulative full-time years. AI output evaluation and UN Copilot Studio project align with AI experimentation, workflow testing and documentation. Sponsorship, start timing and deadline not established. Approved updated master used; one page, 15 position-specific experience bullets, 4 school bullets each, 3 working contact links, rendered and extracted text checked. No unsupported custom GPT deployment, AI coaching or prompt-library accomplishments claimed. Submitted resume: https://drive.google.com/file/d/1Mlh2XW7JgT_IgTQYFnHt8CVwn8HehPpp/view?usp=drivesdk",
       "firstSeenAt": "October 7, 2026",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": "07/10/2026"
     },
     {
       "company": "Recidiviz",
@@ -2154,7 +2160,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
       "notes": "October 7, 2026: Misha confirmed submission of Recidiviz Data Analyst (Entry-Level). Confirmation date recorded; exact submission time not supplied. Application submitted by Misha. Preserve submitted resume snapshot and explicit no-sponsorship evidence.\n\nUser-selected resume request October 7, 2026; subsequently confirmed applied. Explicit visa sponsorship unavailable; excluded from automatic sponsorship-friendly searches, retained only as user-selected exception. Official live JD: https://job-boards.greenhouse.io/recidiviz/jobs/4717510006. Entry-level Data Analyst, $85,000 fixed annual compensation, NYC/Oakland/US remote; occasional state travel including prison/parole office visits. Minimum six months real-world data analysis/cleaning including internships; part-time hours must equal roughly six months full-time, not established. SQL joins/aggregations/window functions and Python/Pandas live coding required; granular proficiency not assumed from general skills. No invented BigQuery, Looker, GCP, criminal justice analysis or product-launch delivery. TechJobsForGood shows posted October 6, validThrough November 5; employer deadline and mandatory start not published. Current CPT compatibility and future work authorization must be confirmed. Master layout preserved; all 15 revised experience bullets, 23 total bullets, one page and three contact links passed extracted-text and rendered QA. Resume: https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
       "firstSeenAt": "October 7, 2026",
-      "appliedAt": "October 7, 2026"
+      "appliedAt": "07/10/2026"
     },
     {
       "company": "True North Insights",
@@ -2164,7 +2170,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1EmkzvYOZjzx-om5BO3EGc8751WgaZbVe/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed submission. Confirmation date recorded; exact submission time not supplied. User-selected exception to search priorities, not a new run. Handshake full description viewed in cloud browser October 8 by user request, job 11273033. January 2027 anticipated start, on-site NYC. Actual base $65,000 plus uncapped monthly bonus; employer states $85,000–$115,000 average for high-performing associates, while platform header advertises $91,000–$125,000. Base below $70,000 floor. Expert-network client services: expert identification/outreach, consultation scheduling, multiple engagements, client coordination. Outside main business/data/AI analyst search; do not use as justification to include sales/client-services in future runs. Bachelor degree/GPA3.5 minimum, 6–18 months experience, internships welcome; leadership and multilingual record align. No invented expert recruiting or hedge-fund client work. Explicit F-1 STEM OPT acceptance; future sponsorship not stated, OPT approval not assumed. Approved latest master retained; one page, 15 updated experience bullets, 3 hyperlinks, 3 bullets per experience and 4 per school. Extracted text and final rendered PDF checked. Submitted resume snapshot: https://drive.google.com/file/d/1EmkzvYOZjzx-om5BO3EGc8751WgaZbVe/view?usp=drivesdk",
       "firstSeenAt": "October 8, 2026",
-      "appliedAt": "October 8, 2026"
+      "appliedAt": "08/10/2026"
     },
     {
       "company": "Keystone",
@@ -2174,7 +2180,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed application submission; confirmation date recorded, exact submission time not supplied. User-selected Handshake posting 11568732, full description read October 8. Associates and Consultants (2027 Grads), economics/strategy/technology and litigation consulting. $110,000–$176,000 base; discretionary bonus separate. Hybrid, multiple US offices including NYC and San Francisco. Strong overlap: MS Business Analytics GPA 3.88, BS Business Administration GPA 3.98, Python/SQL, data cleaning/validation, market research and analytical reporting. Gaps: no verified litigation consulting, econometrics, financial valuation or R/Stata experience. December 2026 graduation versus 2027 cohort eligibility needs confirmation; exact start and employer deadline not established. JD requires US work authorization; sponsorship not confirmed. Handshake search filter is not role-level sponsorship evidence. No future OPT approval assumed. Duplicate check completed before drafting. Approved master uses Liberation Serif, verified embedded fonts; resume one page, 23 bullets, 3 working contact links, extracted text and rendered layout checked. Cover letter one page, requested separately, checked. Submitted resume snapshot: https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk. Prepared cover letter: https://drive.google.com/file/d/19Ug54HzeKqqJiKHq2AEbbC9Xcp9EmRPF/view?usp=drivesdk. Library resume libfile_85bd98bf3e008191a7d710eb3c2518d8; cover libfile_0357f04f4c3c8191b5eb6c09e7d49f8a.",
       "firstSeenAt": "October 8, 2026",
-      "appliedAt": "October 8, 2026"
+      "appliedAt": "08/10/2026"
     },
     {
       "company": "Revley.ai",
@@ -2184,7 +2190,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/15LlZp3FmU_96ZnrnsShVgxl3c7ZJj-Td/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed application submission; confirmation date recorded, exact submission time not supplied. User-selected exception to analyst search priorities, not a full run. Handshake 11500652 header Founding Growth Marketer — AI & Ecommerce; JD title Content & Growth Marketer — Revley. Full description read October 8. NYC in-person preferred or remote; initial 60-day contract, possible full-time conversion not guaranteed. Header $65,000–$450,000 does not establish base, bonus or contract rate; compensation unconfirmed. Role focuses X content, product demos, creator outreach, growth experiments, AI production workflows and HubSpot tracking. Relevant verified evidence: Pinear market research/three segments/KPIs/budget modeling/SEO, UN Copilot Studio/Power Automate, AI response evaluation, LinkedIn-verified website/Google Ads/Odoo CRM and 1,500+ records in Semenov Swim Program. No invented X following, creator campaigns, ecommerce clients, HubSpot, Meta campaigns or conversion metrics. Personal X profile, work samples, ecommerce experience examples and AI workflow demo requested; completeness of submitted samples not confirmed. JD requests no cover letter; user separately requested one, prepared file retained without asserting it was attached. US work authorization required; sponsorship not confirmed by JD, search filters not sufficient proof. CPT compatibility and future work authorization not assumed. Duplicate check before drafting; one-page resume, 23 bullets, 3 contact links, approved master Liberation Serif font/layout, rendered and extracted text QA passed. Resume snapshot: https://drive.google.com/file/d/15LlZp3FmU_96ZnrnsShVgxl3c7ZJj-Td/view?usp=drivesdk. Prepared cover letter: https://drive.google.com/file/d/1Wo8XFYq7YHIMaMkUPWDVgkDwQHo2uUhs/view?usp=drivesdk. Library resume libfile_f2293f8c75d48191a3ef9c6c9ceb0b26; cover libfile_ace940fb6034819189119dbcad0487a5.",
       "firstSeenAt": "October 8, 2026",
-      "appliedAt": "October 8, 2026"
+      "appliedAt": "08/10/2026"
     },
     {
       "company": "Cardella Waste Services",
@@ -2194,7 +2200,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1ov5923vGeP8pc6nbyEu41t3mQekeXtzC/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed submission of this and the preceding application ('applied to both'), interpreted as Cardella and Renewable Careers. Confirmation date recorded; exact submission time not supplied. Duplicate check completed before drafting. Full JD read October 8, Handshake 11600315. Full-time entry-level; recent/upcoming graduates welcome, relevant internship not required. $80,000–$85,000 base, benefits and 401(k). Finance/accounting/operations/risk reporting, budgeting/forecasting/variance, invoice/vendor/cash-flow/captive insurance, fleet costs/profitability, dashboards, Salesforce analysis, AI tools and workflow automation. Fit: Business degree, MSBA, Excel/Python/SQL/Power BI, Pinear budget/KPI work, UN automation and large-data validation. Gaps: no verified professional accounts payable, captive insurance, cash-flow forecasting, fleet/capex analysis, Salesforce or valuation. No invented claims. Authorization required, sponsorship not stated; Handshake filter not positive role-level proof. Start timing and deadline unknown; current CPT compatibility and future authorization need confirmation. Resume Library libfile_38c9fa4f067c81918ff0d9210106258d. Approved latest master layout and Liberation Serif font retained, one page, 23 bullets, three working contact links; rendered PDF and extracted text checked. Submitted resume snapshot: https://drive.google.com/file/d/1ov5923vGeP8pc6nbyEu41t3mQekeXtzC/view?usp=drivesdk",
       "firstSeenAt": "October 8, 2026",
-      "appliedAt": "October 8, 2026"
+      "appliedAt": "08/10/2026"
     },
     {
       "company": "Renewable Careers (energy employer undisclosed)",
@@ -2204,7 +2210,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1NdZ61iUY_P750mUago-bYEf2liGsNNKU/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed submission of this and the preceding application ('applied to both'), interpreted as Cardella and Renewable Careers. Confirmation date recorded; exact submission time not supplied. Duplicate check completed before drafting. Full LinkedIn JD read October 8, 4477185963. Posted by Renewable Careers recruiter Daniel May; underlying energy operating company not named. $80,000–$100,000 base, full-time hybrid Jersey City. Entry-level models for project economics/energy production/markets, research markets/policy/technology/competitors, due diligence support, fleet performance, reports/dashboards/presentations and spreadsheets/data sets. Excel required; Python/SQL/visualization plus; energy/finance/data internships optional. Fit: MSBA, strong GPAs, modeling/KPIs/market research, Python/SQL/Excel/BI and validation. Gaps: no verified energy production modeling, project due diligence, interconnection/permitting or renewable asset experience; no invented sector claims. US authorization required; sponsorship not stated. Rolling applications; fixed deadline and start unknown. Resume Library libfile_873b31f543d48191990aa1173eb14c45. Approved latest master layout and Liberation Serif font retained, one page, 23 bullets, three working contact links; rendered PDF and extracted text checked. Submitted resume snapshot: https://drive.google.com/file/d/1NdZ61iUY_P750mUago-bYEf2liGsNNKU/view?usp=drivesdk",
       "firstSeenAt": "October 8, 2026",
-      "appliedAt": "October 8, 2026"
+      "appliedAt": "08/10/2026"
     },
     {
       "company": "adMarketplace",
@@ -2214,7 +2220,81 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1CzqtPmhle8MXkqXO08eQNQ3bzRLES0BG/view",
       "notes": "October 9, 2026: Misha confirmed submission of all three jobs from the latest run: adMarketplace Graduate Data Analyst, Hive Analyst Media & Sports, and Hive Client Delivery Analyst. Confirmation date recorded; exact submission times were not supplied. Application materials are historical submitted snapshots. Prior pending application requirements are superseded by this submission confirmation.\nOctober 9, 2026 manual specialist run. Duplicate check and live-snapshot preflight passed BEFORE resume authoring; approved master libfile_7675dde2a3908191a50dba63afe47887 v2 sha256 db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: Specialist analyst role, with AI/data quality/analysis responsibilities matching verified experience. location: New York experience: Graduate candidates completing degrees explicitly accepted; basic SQL and data coursework/internships qualify. mandatory_requirements: Verified bachelor's degree, analytics coursework/SQL/Excel, clear communication and relevant AI/data/project evidence. No unverified tools or experience claimed. base_salary: $100,000–$120,000 base authorization: Unknown sponsorship exception explicitly recorded and to be disclosed; no explicit no-current/future-sponsorship restriction. start_timing: Not published; December 2026 graduation and current CPT need employer timing confirmation. application_path: Actual application form fetched HTTP 200, form id job-application-form, resume and candidate input fields. Sponsorship UNCONFIRMED: Strong attainable analyst fit and verified live application; no explicit sponsorship exclusion in official JD. Employer sponsorship for this role is NOT confirmed. Current CPT scope and post-Dec-2026 authorization/start date must be confirmed; no future OPT approval assumed. Fixed deadline not published; live application checked 2026-10-09T13:46:07.227Z. Fit score 93; role/skills/experience/seniority/education/achievement 24/18/17/15/10/9. No submission or outreach performed. One-page PDF visually inspected and extracted text checked: 23 bullets, 3 working contact links, master typography/geometry. Material gaps: no production dbt/Snowflake/Databricks, causal inference or A/B experiment ownership claimed; posting makes these learning areas/preferred. New distinct requisition 706587, not prior Finance 698969. Run shortfall: THREE matches, ZERO YC matches retained. YC roles Agave already submitted; Confido mandatory 2–4 R&D years/STEM gap; David AI 2–6 years; Pocket 3+ supply chain; Calltree/Ultra existing-US-visa label gives no future sponsorship support. No generalist padding. UN/UNICEF relevant searched openings had passed deadlines Oct5/7/8; none counted. Promising Dow Jones 55391, FanDuel 8055746 and Grapevine held out because exact employer form could not be verified; no resumes drafted for them.",
       "firstSeenAt": "October 9, 2026",
-      "appliedAt": "October 9, 2026"
+      "appliedAt": 46304
+    }
+  ],
+  "interviewEvents": [
+    {
+      "id": "INT-PNK-20260528",
+      "company": "PNK Group",
+      "position": "Junior Project Manager",
+      "stage": "Completed — Recruiter screen",
+      "date": "28/05/2026 14:45 ET",
+      "interviewer": "Anna Miroshnikova",
+      "notes": "Gmail 19e6fe7047552f16 (updated invite), same event as 19e6aa3ef11bf37b. Counted once. Completion grounded in Misha's October 9 confirmation of multiple PNK calls and progression to subsequent interview. Additional undated calls not counted."
+    },
+    {
+      "id": "INT-PNK-20260530",
+      "company": "PNK Group",
+      "position": "Junior Project Manager",
+      "stage": "Completed — Interview",
+      "date": "30/05/2026 11:00 ET",
+      "interviewer": "Anna Miroshnikova; Anton Voronkin",
+      "notes": "Gmail 19e79678af9b094f; June 10 task email 19eb1c0172f4732b references prior call and finalists. Completion also grounded in Misha's confirmation. Take-home task is not a separate interview."
+    },
+    {
+      "id": "INT-PNK-20260615",
+      "company": "PNK Group",
+      "position": "Junior Project Manager",
+      "stage": "Completed — In-person interview",
+      "date": "15/06/2026 17:00 ET",
+      "interviewer": "Aleksei Posokhov",
+      "notes": "Gmail thread 19ebdd83d57ba4cd: June 16 thank-you 19ed15b76fb936c2 confirms yesterday's meeting; employer reply confirms next steps. Unanswered phone attempt at entry not counted separately."
+    },
+    {
+      "id": "INT-GARTNER-20260914",
+      "company": "Gartner",
+      "position": "Business Analyst, Marketing Analytics",
+      "stage": "Completed — Recruiter screen",
+      "date": "14/09/2026 09:30 ET",
+      "interviewer": "Nick Jordan",
+      "notes": "Date preserved from existing Application History row57. Misha confirmed one completed call; Gmail 1a0b8e8a15aa5f88 thanks him for recent discussion and rejects application Sept19. Rejection preserved."
+    },
+    {
+      "id": "INT-OUT2WIN-RECRUITER",
+      "company": "Out2Win",
+      "position": "Sales Development Representative",
+      "stage": "Completed — Recruiter screen",
+      "date": "Date not confirmed",
+      "interviewer": null,
+      "notes": "Misha explicitly confirmed two completed Out2Win calls October9. One employer round confirmed by Gmail Oct7, so one earlier recruiter call counted. Exact earlier date/interviewer not established; no application date invented."
+    },
+    {
+      "id": "INT-OUT2WIN-20261007",
+      "company": "Out2Win",
+      "position": "Sales Development Representative",
+      "stage": "Completed — Employer interview",
+      "date": "07/10/2026 10:00 ET",
+      "interviewer": "Owen Lyons",
+      "notes": "Gmail invite 1a112133d155e6ca and thank-you 1a116ed099701478 confirm completion Oct7. Updated conferencing invitations are duplicates. Out2Win two total includes preceding recruiter screen. No new sales discovery authorized."
+    },
+    {
+      "id": "INT-VALERIE-20261012",
+      "company": "Valerie Health",
+      "position": "AI Operations Specialist",
+      "stage": "Scheduled — Recruiter screen",
+      "date": "12/10/2026 11:00 ET",
+      "interviewer": "Katelyn Allen",
+      "notes": "Gmail invite 1a11c8c5126ccd6d and scheduling reply 1a11c8d4ad393ab1. Monday Oct12 11–11:30am ET, upcoming as of Oct9; excluded from completed count."
+    },
+    {
+      "id": "ASSESS-ALPHASIGHTS-20260925",
+      "company": "AlphaSights",
+      "position": "Research Compliance Associate",
+      "stage": "Completed AI assessment",
+      "date": "25/09/2026",
+      "interviewer": null,
+      "notes": "Gmail 1a0d9614f1b1a703 explicitly confirms completed HeyMilo interview for Research Compliance Associate. Automated screening, excluded from human interview/screening count. Sept29 rejection preserved."
     }
   ]
 };
