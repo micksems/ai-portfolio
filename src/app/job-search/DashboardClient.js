@@ -15,8 +15,8 @@ export default function DashboardClient({ jobSearchData }) {
     },
     {
       label: "Interviews",
-      value: lifetime.interviews ?? jobs.filter((job) => job.status === "Interview").length,
-      description: "Completed interviews",
+      value: lifetime.interviewsMinimum ? `${lifetime.interviews}+` : (lifetime.interviews ?? 0),
+      description: `Completed interviews and recruiter calls · ${lifetime.scheduledInterviews ?? 0} upcoming`,
     },
     {
       label: "Offers",
