@@ -1,15 +1,16 @@
 export const jobSearchData = {
-  "updatedAt": "October 10, 2026",
+  "updatedAt": "October 13, 2026",
   "metrics": {
     "applications": 82,
-    "interviews": 6,
+    "interviews": 7,
     "offers": 0,
     "rejections": 23,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
-    "scheduledInterviews": 1,
-    "aiAssessments": 1
+    "scheduledInterviews": 0,
+    "aiAssessments": 1,
+    "onlineAssessments": 1
   },
   "jobs": [
     {
@@ -2258,7 +2259,7 @@ export const jobSearchData = {
       "url": "https://lseg.wd3.myworkdayjobs.com/Graduate_Careers/job/USA-New-York-28-Liberty-Street/R0123408-Business-Analyst-Graduate-Programme_R0123420",
       "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1Sskb0EEcTazZSugM7PAcw-SNnIx2V3vl/view?usp=drivesdk",
-      "notes": "October 10, 2026: Misha confirmed submission of all five October 9 run roles: Dow Jones Analyst, Newsroom Data; FanDuel Campaign Analytics, Data Analyst; Wilson Elser Data Analyst; Grapevine Product & Savings Intelligence Analyst; LSEG Business Analyst Graduate Programme. Confirmation date recorded; exact submission dates/times not supplied. Prepared resumes retained as submitted snapshots. Prior pending application requirements are superseded by this submission confirmation.\nOctober 9, 2026 manual analyst run. Live snapshot preflight passed before authoring; snapshot SHA256 abcce8bb40ec1a8a78254e1b9ce2b999643647d07845606db2244881da6f275f. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256 db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: Graduate business/data analysis and stakeholder requirements fit UN project scoping and analytics projects. | location: New York | experience: 2026 graduates/final-year master's completing before September 2027 accepted; MS Business Analytics December 2026, SQL/Python/BI coursework and finance background fit. | mandatory_requirements: 2026 graduates/final-year master's completing before September 2027 accepted; MS Business Analytics December 2026, SQL/Python/BI coursework and finance background fit. | base_salary: Posted annual base $62,800–104,600; include only with offer at least $70,000 | authorization: Posting says unrestricted work rights are ideal, not an explicit sponsorship prohibition. Current CPT is reported only; September 2027 authorization must be confirmed. | start_timing: September 2027 programme start; MS expected December 2026 meets stated education timing. | application_path: Workday canApply=true; posted=true; deadline October 20, 2026; one programme application.. Application checked 2026-10-09T16:21:21.409Z. Sponsorship UNCONFIRMED: Relevant eligible graduate programme; work-rights wording is preference, not categorical prohibition. Confirm September 2027 eligibility and sponsorship before applying. September 2027 start. Base range $62,800–$104,600 crosses floor: require offer >=$70,000. Deadline October 20, 2026, rolling and may close early. Unrestricted US work rights stated as ideal; confirm programme eligibility, employer support and September 2027 authorization. Future OPT approval not assumed. Fit score 94; role/skills/experience/seniority/education/achievement 24/19/17/15/10/9. Resume one page, 23 bullets, 3 contact links; approved Liberation Serif font and geometry, rendered page and extracted text inspected. PDF SHA256 335fa3a337e852887483c88c739d96017ac31708b811890d11d5ce34f0a3a542. Resume https://drive.google.com/file/d/1Sskb0EEcTazZSugM7PAcw-SNnIx2V3vl/view?usp=drivesdk; Library libfile_f40bc449a17481919f5b3b4c80598d9e. Prepared only; no application submission or outreach. YC target shortfall: zero YC roles retained. Agave equivalents already submitted; Confido 2–4 R&D years/domain gap, David AI 2–6 startup operations years, Pocket physical supply forecasting gap, Rainfall analyst absent from live board, ARQ/Numeral/Bretton authorization restrictions. UN relevant searched postings expired before October 9; no generalist padding.",
+      "notes": "October 13, 2026: Misha confirmed completion of the LSEG Cappfinity Immersive Online Assessment. Candidate reports soft skills, teamwork and workplace-behavior questions; no numerical or technical sections reported. Assessment completed; employer result and progression pending. Completion is not a human interview. Date confirmed; exact completion time not supplied.\nOctober 10, 2026: Misha confirmed submission of all five October 9 run roles: Dow Jones Analyst, Newsroom Data; FanDuel Campaign Analytics, Data Analyst; Wilson Elser Data Analyst; Grapevine Product & Savings Intelligence Analyst; LSEG Business Analyst Graduate Programme. Confirmation date recorded; exact submission dates/times not supplied. Prepared resumes retained as submitted snapshots. Prior pending application requirements are superseded by this submission confirmation.\nOctober 9, 2026 manual analyst run. Live snapshot preflight passed before authoring; snapshot SHA256 abcce8bb40ec1a8a78254e1b9ce2b999643647d07845606db2244881da6f275f. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256 db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: Graduate business/data analysis and stakeholder requirements fit UN project scoping and analytics projects. | location: New York | experience: 2026 graduates/final-year master's completing before September 2027 accepted; MS Business Analytics December 2026, SQL/Python/BI coursework and finance background fit. | mandatory_requirements: 2026 graduates/final-year master's completing before September 2027 accepted; MS Business Analytics December 2026, SQL/Python/BI coursework and finance background fit. | base_salary: Posted annual base $62,800–104,600; include only with offer at least $70,000 | authorization: Posting says unrestricted work rights are ideal, not an explicit sponsorship prohibition. Current CPT is reported only; September 2027 authorization must be confirmed. | start_timing: September 2027 programme start; MS expected December 2026 meets stated education timing. | application_path: Workday canApply=true; posted=true; deadline October 20, 2026; one programme application.. Application checked 2026-10-09T16:21:21.409Z. Sponsorship UNCONFIRMED: Relevant eligible graduate programme; work-rights wording is preference, not categorical prohibition. Confirm September 2027 eligibility and sponsorship before applying. September 2027 start. Base range $62,800–$104,600 crosses floor: require offer >=$70,000. Deadline October 20, 2026, rolling and may close early. Unrestricted US work rights stated as ideal; confirm programme eligibility, employer support and September 2027 authorization. Future OPT approval not assumed. Fit score 94; role/skills/experience/seniority/education/achievement 24/19/17/15/10/9. Resume one page, 23 bullets, 3 contact links; approved Liberation Serif font and geometry, rendered page and extracted text inspected. PDF SHA256 335fa3a337e852887483c88c739d96017ac31708b811890d11d5ce34f0a3a542. Resume https://drive.google.com/file/d/1Sskb0EEcTazZSugM7PAcw-SNnIx2V3vl/view?usp=drivesdk; Library libfile_f40bc449a17481919f5b3b4c80598d9e. Prepared only; no application submission or outreach. YC target shortfall: zero YC roles retained. Agave equivalents already submitted; Confido 2–4 R&D years/domain gap, David AI 2–6 startup operations years, Pocket physical supply forecasting gap, Rainfall analyst absent from live board, ARQ/Numeral/Bretton authorization restrictions. UN relevant searched postings expired before October 9; no generalist padding.",
       "firstSeenAt": "October 9, 2026",
       "appliedAt": "10/10/2026"
     }
@@ -2322,10 +2323,10 @@ export const jobSearchData = {
       "id": "INT-VALERIE-20261012",
       "company": "Valerie Health",
       "position": "AI Operations Specialist",
-      "stage": "Scheduled — Recruiter screen",
+      "stage": "Completed — Recruiter screen",
       "date": "12/10/2026 11:00 ET",
       "interviewer": "Katelyn Allen",
-      "notes": "Gmail invite 1a11c8c5126ccd6d and scheduling reply 1a11c8d4ad393ab1. Monday Oct12 11–11:30am ET, upcoming as of Oct9; excluded from completed count."
+      "notes": "October 12, 2026 recruiter screen with Katelyn Allen completed, grounded in Misha's post-call request to draft a thank-you email and subsequent edits. Draft prepared; sending not confirmed. No employer progression decision recorded.\nGmail invite 1a11c8c5126ccd6d and scheduling reply 1a11c8d4ad393ab1. Monday Oct12 11–11:30am ET, upcoming as of Oct9; excluded from completed count."
     },
     {
       "id": "ASSESS-ALPHASIGHTS-20260925",
@@ -2335,6 +2336,15 @@ export const jobSearchData = {
       "date": "25/09/2026",
       "interviewer": null,
       "notes": "Gmail 1a0d9614f1b1a703 explicitly confirms completed HeyMilo interview for Research Compliance Associate. Automated screening, excluded from human interview/screening count. Sept29 rejection preserved."
+    },
+    {
+      "id": "ASSESS-LSEG-20261013",
+      "company": "LSEG",
+      "position": "Business Analyst Graduate Programme",
+      "stage": "Completed — Online assessment",
+      "date": "13/10/2026",
+      "interviewer": null,
+      "notes": "October 13, 2026: Misha confirmed completion of the LSEG Cappfinity Immersive Online Assessment. Candidate reports soft skills, teamwork and workplace-behavior questions; no numerical or technical sections reported. Assessment completed; employer result and progression pending. Completion is not a human interview. Date confirmed; exact completion time not supplied."
     }
   ]
 };
