@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 13, 2026",
   "metrics": {
-    "applications": 85,
+    "applications": 88,
     "interviews": 7,
     "offers": 0,
     "rejections": 23,
