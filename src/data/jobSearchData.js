@@ -4,7 +4,7 @@ export const jobSearchData = {
     "applications": 88,
     "interviews": 7,
     "offers": 0,
-    "rejections": 31,
+    "rejections": 32,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -2177,7 +2177,7 @@ export const jobSearchData = {
       "company": "Keystone",
       "position": "Associates and Consultants (2027 Grads)",
       "url": "https://app.joinhandshake.com/jobs/11568732",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed application submission; confirmation date recorded, exact submission time not supplied. User-selected Handshake posting 11568732, full description read October 8. Associates and Consultants (2027 Grads), economics/strategy/technology and litigation consulting. $110,000–$176,000 base; discretionary bonus separate. Hybrid, multiple US offices including NYC and San Francisco. Strong overlap: MS Business Analytics GPA 3.88, BS Business Administration GPA 3.98, Python/SQL, data cleaning/validation, market research and analytical reporting. Gaps: no verified litigation consulting, econometrics, financial valuation or R/Stata experience. December 2026 graduation versus 2027 cohort eligibility needs confirmation; exact start and employer deadline not established. JD requires US work authorization; sponsorship not confirmed. Handshake search filter is not role-level sponsorship evidence. No future OPT approval assumed. Duplicate check completed before drafting. Approved master uses Liberation Serif, verified embedded fonts; resume one page, 23 bullets, 3 working contact links, extracted text and rendered layout checked. Cover letter one page, requested separately, checked. Submitted resume snapshot: https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk. Prepared cover letter: https://drive.google.com/file/d/19Ug54HzeKqqJiKHq2AEbbC9Xcp9EmRPF/view?usp=drivesdk. Library resume libfile_85bd98bf3e008191a7d710eb3c2518d8; cover libfile_0357f04f4c3c8191b5eb6c09e7d49f8a.",
       "firstSeenAt": "October 8, 2026",
@@ -3165,6 +3165,14 @@ export const jobSearchData = {
   ],
   "activityHistory": [
     {
+      "date": "2026-10-15",
+      "type": "Rejection",
+      "company": "Keystone",
+      "position": "Associates and Consultants (2027 Grads)",
+      "stage": "Closed",
+      "source": "Google Sheet Application History row 141 / employer email 1a1404c28e68aecd"
+    },
+    {
       "date": "2026-10-14",
       "type": "Rejection",
       "company": "Valerie Health",
@@ -3191,6 +3199,19 @@ export const jobSearchData = {
     }
   ],
   "reports": [
+    {
+      "date": "2026-10-15",
+      "title": "Keystone application decision",
+      "summary": "Keystone declined the Associates and Consultants (2027 Grads) application. Job Tracker row 338 and Application History row 141 updated to Closed/Rejected on October 15, 2026. No sponsorship information or reply requested.",
+      "changes": [
+        {
+          "company": "Keystone",
+          "position": "Associates and Consultants (2027 Grads)",
+          "from": "Applied",
+          "to": "Closed"
+        }
+      ]
+    },
     {
       "date": "2026-10-15",
       "title": "Employer response reconciliation",
