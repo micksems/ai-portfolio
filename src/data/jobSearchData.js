@@ -136,10 +136,10 @@ export const jobSearchData = {
     {
       "company": "Horizon Media",
       "position": "Analyst, BI, Product Management",
-      "url": "https://horizonmedia.wd1.myworkdayjobs.com/en-US/CareerOpportunities/job/Analyst--BI--Product-Management_R0017344",
-      "status": "Archived",
-      "resumeUrl": "",
-      "notes": "7d+",
+      "url": "https://horizonmedia.wd1.myworkdayjobs.com/CareerOpportunities/job/New-York-New-York/Analyst--BI--Product-Management_R0017344",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/12d6XZYczGwjJ5DvLO1k1ZwVnTtaEJeDo/view?usp=drivesdk",
+      "notes": "NYC hybrid; base 70,000–85,000. No years minimum; Excel and media experience preferred; academic SQL accepted. Pinear, data validation and model evaluation fit. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "24/08/2026 17:31:16",
       "appliedAt": ""
     },
@@ -2322,6 +2322,96 @@ export const jobSearchData = {
       "notes": "October 13, 2026: Misha confirmed submission of all six October13 positions, including David AI and replacement Altis. AppliedAt records the confirmation date only; exact submission times were not supplied. Prepared materials retained as submitted snapshots. The standing exclusion of lead roles remains in force for future searches.\nRUN-20261013-REPLACEMENT. User rejected lead positions permanently; David AI unsubmitted role archived, not employer rejection. RuleR-138 saved. Otherfour approvedOct13roles retained unchanged. ReplacementnewAltisAshbyUUIDbd10f062-18cc-4ee8-98ab-be0bc9244073. Freshboth-trackersnapshotread 2026-10-13T18:16:17.077Z UTC / America/New_York; pre-authoringpreflightPASS snapshotSHA2565965606ad054e5fb797193de69936ff8ccf150a3894f2b2fc5f5fa0c5ac7cd52. Pinnedmasterlibfile_7675dde2a3908191a50dba63afe47887 v2 SHA256db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit:PASS — Full employer Ashby JD: analyst supports research pods, expert interviews, quantitative models, synthesis and investor reports. UN client-needs research and scoping, Pinear market research/KPIs/budget models, MSBA quantitative projects and documented AI evaluation reasoning are direct transferable evidence. Structured apprenticeship role, no lead title or people-management scope. | location:PASS — Employer JD NYC 27th and Park Ave, in-office4–5days/week, within approved geography. No relocation required from current NYC. | experience:PASS — Posting accepts 'Graduated recently OR up to2years professional consulting/banking/expert-network experience'. BBA graduatedSpring2025 and currentMSBA expectedDec2026 satisfies recent-grad path; prior consulting/banking tenure is not required for that path. | mandatory_requirements:PASS — Quantitative/analytical foundation, clear communication, curiosity about AI/technology/company performance and research/modeling. Verified MSBA3.88, BBA3.98 with finance/accounting/economics, PythonSQLExcel, UN scope research, market analysis and writtenAIoutputassessment. No mandatory prior VC, investment banking, professional expert interviews or industry certification in currentJD. No professionalVCdiligence/expert-network experience claimed. | base_salary:PASS — Current employer Ashby description and structured compensation: annualUSDbase100000–130000; stock options separate. Above70kbasefloor. | authorization:PASS — Current employer JD silent on sponsorship and no explicit current/future ban. CPTreportedthroughDec2026; plannedOPTnotapproved. Employer acceptance/currentpermission and future support remain to be confirmed; no unrestrictedworkrightsclaimed. | start_timing:PASS — Full-time two-year program; no published fixedcohortstart or completedmaster requirement. RecentBBAgraduateseligible. Exactstart/studyschedule/CPTacceptance requires human confirmation. | application_path:PASS — Current official careers altis.vc/careers HTTP200 links exactAshbyUUIDbd10f062...; postingAPIHTTP200 hasisListed=true andapplyURLsameUUID; exactapplicationrouteHTTP200withroleidentity. Read-only; applicationfieldsrenderclient-side so any human-required questions to be reviewedbyMisha. Checked 2026-10-13T18:16:17.077Z. Sponsorship UNKNOWN: Highfit early-career analyst program withverifiedquantitative education, business research/modeling andAIevaluation; officialrolehasnoban, recentgradsaccepted. Explicitfit-basedexception, not positivevisa evidence. Fit90/100; role/skills/experience/seniority/education/achievement23/17/17/14/10/9. Score is candidate fit, not interview probability. PASS: one page,23 bullets,3 unchanged contact links,original master font/geometry preserved. Full rendered page visually inspected against approved master; no clipping/overlap and extracted reading order correct. PDF SHA25685ad058aaca590c2985bd73ed54022cd53d97ac893dea11beac7449ab85007d5; libfile_d8527368c940819193b0b2d031245f6f; Drive 13fPWUX27hRM3h_HVJgEU4ZMxQQD4CWxk; https://drive.google.com/file/d/13fPWUX27hRM3h_HVJgEU4ZMxQQD4CWxk/view?usp=drivesdk. Published2026-06-05 employer timestamp, isListedtrue today despite old publication. No deadline or exactstartdate published. Sensitive authorization, futuresponsorship, pay, start and commitments remain human-reviewed. No submission/outreach/schedule. Tracker91, History155.",
       "firstSeenAt": "2026-10-13T18:16:17.077Z",
       "appliedAt": "2026-10-13"
+    },
+    {
+      "company": "Gap",
+      "position": "Analyst - Pricing Analytics",
+      "url": "https://gapinc.wd1.myworkdayjobs.com/GAPINC/job/NY-55-Thomas-St/Analyst---Pricing-Analytics_R223225",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1jq4zz3q9jjQl9AnkG2WQqNPpr4t6tU-r/view?usp=drivesdk",
+      "notes": "NYC; base 76,400–95,500. 1–3 years; internships welcome. Business degree, Excel scenario modeling, data quality and AI evaluation match. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "firstSeenAt": "15/10/2026 12:06:37",
+      "appliedAt": ""
+    },
+    {
+      "company": "Amex Global Business Travel",
+      "position": "Business Analyst",
+      "url": "https://travelhrportal.wd1.myworkdayjobs.com/Jobs/job/New-York-United-States/Business-Analyst_J-84604",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1cNRPBxyc8gezI3lNA_UWLab6ETTh3uyf/view?usp=drivesdk",
+      "notes": "NYC hybrid; base 60,200–111,800. Analytical experience without fixed years; business-process analysis, modeling and stakeholder communication match. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "firstSeenAt": "15/10/2026 12:06:37",
+      "appliedAt": ""
+    },
+    {
+      "company": "Judi Health",
+      "position": "Analyst, Analytics - Business Insights",
+      "url": "https://job-boards.greenhouse.io/judihealth/jobs/5447579008",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/11-dlvV0F-j4dI-OufaidsoAEmZQ_Etyg/view?usp=drivesdk",
+      "notes": "NYC / Charlotte hybrid; base NYC 96,800–121,000; Charlotte 80,800–101,000. 1–2 years related analytics; cumulative internships/student data roles. SQL Python Tableau match. Healthcare/cloud/dbt preferred, not required. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "firstSeenAt": "15/10/2026 12:06:37",
+      "appliedAt": ""
+    },
+    {
+      "company": "UCSF",
+      "position": "Research Data Analyst - HDFCCC",
+      "url": "https://iazuqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/8821",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/18_Gsvj2IgWtBnCquKcsB_MUZKf37sdL8/view?usp=drivesdk",
+      "notes": "San Francisco; 1 day onsite; base 32.42–40.00/hour. Explicit entry-level training role; related degree/equivalent training, SQL Oracle Python BI skills. No clinical experience required. 100% FTE. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "firstSeenAt": "15/10/2026 12:06:37",
+      "appliedAt": ""
+    },
+    {
+      "company": "Horizon Media",
+      "position": "Analyst, Performance Media Analytics",
+      "url": "https://horizonmedia.wd1.myworkdayjobs.com/CareerOpportunities/job/New-York-New-York/Analyst--Performance-Media-Analytics_R0017544",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1GPQQPDF_AfTvIVcIWgobxLGQiW5ZQySD/view?usp=drivesdk",
+      "notes": "NYC hybrid; base 66,300–75,000. 1–2 years preferred. Excel analytical communication required; Python/SQL/Tableau preferred. Pinear KPIs segmentation and budget models match. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "firstSeenAt": "15/10/2026 12:06:37",
+      "appliedAt": ""
+    },
+    {
+      "company": "Etsy",
+      "position": "Marketing Analyst, Paid Social",
+      "url": "https://careers.etsy.com/jobs/marketing-analyst-paid-social-brooklyn-new-york-united-states",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1HFt_oZWSMOfXCjxDN2z4HoqDpQZYwcUc/view?usp=drivesdk",
+      "notes": "Brooklyn hybrid; base 80,000–108,000. Explicit 0–2 years including projects/internships. SMM/Google Ads familiarity verified; Excel campaign KPIs and budget analysis. Platform-specific training remains. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "firstSeenAt": "15/10/2026 12:06:37",
+      "appliedAt": ""
+    },
+    {
+      "company": "Atominvest",
+      "position": "Implementation Analyst",
+      "url": "https://jobs.ashbyhq.com/atominvest/c7469459-426c-405c-a178-db8421c8b3ec",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1bJNXwarQHXgLgDM-sTe1etfIjoOwXok8/view?usp=drivesdk",
+      "notes": "NYC hybrid; base Unpublished. 0–2 years; Excel data handling/client requirements/UAT support. SQL optional; fund structures willingness to learn accepted. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "firstSeenAt": "15/10/2026 12:06:37",
+      "appliedAt": ""
+    },
+    {
+      "company": "SS&C",
+      "position": "Product Solutions Analyst",
+      "url": "https://ssctech.wd1.myworkdayjobs.com/SSCTechnologies/job/Product-Solutions-Analyst_R46476",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1LwMgwSUKe2O17Brn9k744xXUwfsoFy8N/view?usp=drivesdk",
+      "notes": "NYC hybrid; base 70,000–100,000. No minimum years; business degree welcomed, analytical skills and communication; SQL/C#/PowerShell training provided. Technical support adjacent to BA. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "firstSeenAt": "15/10/2026 12:06:37",
+      "appliedAt": ""
+    },
+    {
+      "company": "Piper Sandler",
+      "position": "Fixed Income Strategy and Analytics Analyst",
+      "url": "https://pipersandler.wd501.myworkdayjobs.com/piper_sandler_careers/job/Fixed-Income-Strategy-and-Analytics-Analyst_R-100718",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1-Z5fM3gncxno2tKfMtlBuMZ-kDIuT2Bw/view?usp=drivesdk",
+      "notes": "NYC onsite; base 75,000–95,000. 0–2 years; related business degree with finance/accounting/economics coursework, Excel modeling. Financial-domain stretch. Licenses may be earned within120days; must discuss willingness with user. No sales quota listed. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "firstSeenAt": "15/10/2026 12:06:37",
+      "appliedAt": ""
     }
   ],
   "interviewEvents": [
