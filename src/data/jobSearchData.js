@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 15, 2026",
   "metrics": {
-    "applications": 88,
+    "applications": 90,
     "interviews": 7,
     "offers": 0,
     "rejections": 32,
@@ -2412,6 +2412,26 @@ export const jobSearchData = {
       "notes": "NYC onsite; base 75,000–95,000. 0–2 years; related business degree with finance/accounting/economics coursework, Excel modeling. Financial-domain stretch. Licenses may be earned within120days; must discuss willingness with user. No sales quota listed. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
       "appliedAt": ""
+    },
+    {
+      "company": "Building Services 32BJ Benefit Funds",
+      "position": "Business Analyst I",
+      "url": "https://app.joinhandshake.com/jobs/11626403",
+      "status": "Applied",
+      "resumeUrl": "https://drive.google.com/file/d/1uTEVVc4dvSmmFNTOdd4uzHdAGaSuNVvs/view?usp=drivesdk",
+      "notes": "Misha confirmed submission October 15, 2026; exact Handshake submit time unknown. NYC, $90,000/year, 0–2 years; business requirements, process improvement, data analysis, testing and documentation. United Nations AI assistant scope/stakeholder work, Lewis records and data validation align. Sponsorship UNKNOWN; role posting does not confirm support. Resume is a submitted snapshot in Google Drive.",
+      "firstSeenAt": "15/10/2026",
+      "appliedAt": 46310
+    },
+    {
+      "company": "Nathel & Nathel",
+      "position": "AI Solutions Analyst",
+      "url": "https://app.joinhandshake.com/jobs/11629049",
+      "status": "Applied",
+      "resumeUrl": "https://drive.google.com/file/d/1GW_gh4jMHeVHLT8KJiPanryZGvR_8UCR/view?usp=drivesdk",
+      "notes": "Misha confirmed submission October 15, 2026; exact Handshake submit time unknown. Bronx onsite, $120,000/year; AI automation, Python, operations process assessment, rollout/training. IMPORTANT: Employer expressly offers NO CURRENT OR FUTURE VISA SPONSORSHIP despite accepting OPT. User's independent long-term authorization is not documented, and sponsorship restriction remains a risk. Posting requires functioning portfolio/project URL and brief description; completeness of submitted form not independently verified. Resume is a submitted snapshot in Google Drive.",
+      "firstSeenAt": "15/10/2026",
+      "appliedAt": 46310
     }
   ],
   "interviewEvents": [
@@ -3199,6 +3219,25 @@ export const jobSearchData = {
     }
   ],
   "reports": [
+    {
+      "date": "2026-10-15",
+      "title": "Two Handshake applications confirmed — 32BJ and Nathel",
+      "summary": "Misha confirmed submissions to 32BJ Benefit Funds Business Analyst I and Nathel & Nathel AI Solutions Analyst on October 15. Two new canonical Google Sheets tracker/history rows and two position-specific submitted-resume PDF links were saved. Nathel explicitly bars present/future sponsorship; flagged for record accuracy.",
+      "changes": [
+        {
+          "company": "Building Services 32BJ Benefit Funds",
+          "position": "Business Analyst I",
+          "from": "Not tracked",
+          "to": "Applied"
+        },
+        {
+          "company": "Nathel & Nathel",
+          "position": "AI Solutions Analyst",
+          "from": "Not tracked",
+          "to": "Applied"
+        }
+      ]
+    },
     {
       "date": "2026-10-15",
       "title": "Keystone application decision",
