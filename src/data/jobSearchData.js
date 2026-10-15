@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 15, 2026",
   "metrics": {
-    "applications": 90,
+    "applications": 94,
     "interviews": 7,
     "offers": 0,
     "rejections": 32,
@@ -3222,7 +3222,7 @@ export const jobSearchData = {
     {
       "date": "2026-10-15",
       "title": "Two Handshake applications confirmed — 32BJ and Nathel",
-      "summary": "Misha confirmed submissions to 32BJ Benefit Funds Business Analyst I and Nathel & Nathel AI Solutions Analyst on October 15. Two new canonical Google Sheets tracker/history rows and two position-specific submitted-resume PDF links were saved. Nathel explicitly bars present/future sponsorship; flagged for record accuracy.",
+      "summary": "Misha confirmed submissions to 32BJ Benefit Funds Business Analyst I and Nathel & Nathel AI Solutions Analyst on October 15. Two new canonical Google Sheets tracker/history rows and two position-specific submitted-resume PDF links were saved. Nathel explicitly bars present/future sponsorship; flagged for record accuracy. Cumulative application metric reconciled to 94 dated submissions in canonical Application History; the separate Epic application remains history-only because its requisition/title were never verified.",
       "changes": [
         {
           "company": "Building Services 32BJ Benefit Funds",
