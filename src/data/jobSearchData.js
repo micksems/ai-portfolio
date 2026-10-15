@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 15, 2026",
   "metrics": {
-    "applications": 94,
+    "applications": 104,
     "interviews": 7,
     "offers": 0,
     "rejections": 32,
@@ -27,9 +27,9 @@ export const jobSearchData = {
       "company": "Good Apple",
       "position": "Data Analyst",
       "url": "https://goodapple.applytojob.com/apply/Z8TdorkT0r/Data-Analyst",
-      "status": "Closed",
-      "resumeUrl": "",
-      "notes": "",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1b6VkvJQiGejDPZuIc5OInUiZcpB-A6Qg/view?usp=drivesdk",
+      "notes": "NYC / onsite Mon-Thu; $85,000 base. Explicitentry-level0-2 years and bachelorGPA>=3.0; desired skills SQL, media analytics, visualization and QA. VerifiedSQL/Python/Tableau, Pinear segmentation/KPIs, CampVegaQA and graduate regression project. Cloud warehouses/pipelines/ad-server tools are learning gaps under Desired qualifications; not claimed. No employment visa sponsorship. Included under explicit R140 permission; current work authorization still requires employer-specific confirmation. Reopened previously unsubmitted role following updated sponsorship preference. Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": "",
       "appliedAt": ""
     },
@@ -137,11 +137,11 @@ export const jobSearchData = {
       "company": "Horizon Media",
       "position": "Analyst, BI, Product Management",
       "url": "https://horizonmedia.wd1.myworkdayjobs.com/CareerOpportunities/job/New-York-New-York/Analyst--BI--Product-Management_R0017344",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/12d6XZYczGwjJ5DvLO1k1ZwVnTtaEJeDo/view?usp=drivesdk",
-      "notes": "NYC hybrid; base 70,000–85,000. No years minimum; Excel and media experience preferred; academic SQL accepted. Pinear, data validation and model evaluation fit. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC hybrid; base 70,000–85,000. No years minimum; Excel and media experience preferred; academic SQL accepted. Pinear, data validation and model evaluation fit. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "24/08/2026 17:31:16",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "NBA",
@@ -2327,91 +2327,91 @@ export const jobSearchData = {
       "company": "Gap",
       "position": "Analyst - Pricing Analytics",
       "url": "https://gapinc.wd1.myworkdayjobs.com/GAPINC/job/NY-55-Thomas-St/Analyst---Pricing-Analytics_R223225",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1jq4zz3q9jjQl9AnkG2WQqNPpr4t6tU-r/view?usp=drivesdk",
-      "notes": "NYC; base 76,400–95,500. 1–3 years; internships welcome. Business degree, Excel scenario modeling, data quality and AI evaluation match. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC; base 76,400–95,500. 1–3 years; internships welcome. Business degree, Excel scenario modeling, data quality and AI evaluation match. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "Amex Global Business Travel",
       "position": "Business Analyst",
       "url": "https://travelhrportal.wd1.myworkdayjobs.com/Jobs/job/New-York-United-States/Business-Analyst_J-84604",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1cNRPBxyc8gezI3lNA_UWLab6ETTh3uyf/view?usp=drivesdk",
-      "notes": "NYC hybrid; base 60,200–111,800. Analytical experience without fixed years; business-process analysis, modeling and stakeholder communication match. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC hybrid; base 60,200–111,800. Analytical experience without fixed years; business-process analysis, modeling and stakeholder communication match. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "Judi Health",
       "position": "Analyst, Analytics - Business Insights",
       "url": "https://job-boards.greenhouse.io/judihealth/jobs/5447579008",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/11-dlvV0F-j4dI-OufaidsoAEmZQ_Etyg/view?usp=drivesdk",
-      "notes": "NYC / Charlotte hybrid; base NYC 96,800–121,000; Charlotte 80,800–101,000. 1–2 years related analytics; cumulative internships/student data roles. SQL Python Tableau match. Healthcare/cloud/dbt preferred, not required. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC / Charlotte hybrid; base NYC 96,800–121,000; Charlotte 80,800–101,000. 1–2 years related analytics; cumulative internships/student data roles. SQL Python Tableau match. Healthcare/cloud/dbt preferred, not required. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "UCSF",
       "position": "Research Data Analyst - HDFCCC",
       "url": "https://iazuqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/8821",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/18_Gsvj2IgWtBnCquKcsB_MUZKf37sdL8/view?usp=drivesdk",
-      "notes": "San Francisco; 1 day onsite; base 32.42–40.00/hour. Explicit entry-level training role; related degree/equivalent training, SQL Oracle Python BI skills. No clinical experience required. 100% FTE. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. San Francisco; 1 day onsite; base 32.42–40.00/hour. Explicit entry-level training role; related degree/equivalent training, SQL Oracle Python BI skills. No clinical experience required. 100% FTE. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "Horizon Media",
       "position": "Analyst, Performance Media Analytics",
       "url": "https://horizonmedia.wd1.myworkdayjobs.com/CareerOpportunities/job/New-York-New-York/Analyst--Performance-Media-Analytics_R0017544",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1GPQQPDF_AfTvIVcIWgobxLGQiW5ZQySD/view?usp=drivesdk",
-      "notes": "NYC hybrid; base 66,300–75,000. 1–2 years preferred. Excel analytical communication required; Python/SQL/Tableau preferred. Pinear KPIs segmentation and budget models match. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC hybrid; base 66,300–75,000. 1–2 years preferred. Excel analytical communication required; Python/SQL/Tableau preferred. Pinear KPIs segmentation and budget models match. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "Etsy",
       "position": "Marketing Analyst, Paid Social",
       "url": "https://careers.etsy.com/jobs/marketing-analyst-paid-social-brooklyn-new-york-united-states",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1HFt_oZWSMOfXCjxDN2z4HoqDpQZYwcUc/view?usp=drivesdk",
-      "notes": "Brooklyn hybrid; base 80,000–108,000. Explicit 0–2 years including projects/internships. SMM/Google Ads familiarity verified; Excel campaign KPIs and budget analysis. Platform-specific training remains. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. Brooklyn hybrid; base 80,000–108,000. Explicit 0–2 years including projects/internships. SMM/Google Ads familiarity verified; Excel campaign KPIs and budget analysis. Platform-specific training remains. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "Atominvest",
       "position": "Implementation Analyst",
       "url": "https://jobs.ashbyhq.com/atominvest/c7469459-426c-405c-a178-db8421c8b3ec",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1bJNXwarQHXgLgDM-sTe1etfIjoOwXok8/view?usp=drivesdk",
-      "notes": "NYC hybrid; base Unpublished. 0–2 years; Excel data handling/client requirements/UAT support. SQL optional; fund structures willingness to learn accepted. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC hybrid; base Unpublished. 0–2 years; Excel data handling/client requirements/UAT support. SQL optional; fund structures willingness to learn accepted. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "SS&C",
       "position": "Product Solutions Analyst",
       "url": "https://ssctech.wd1.myworkdayjobs.com/SSCTechnologies/job/Product-Solutions-Analyst_R46476",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1LwMgwSUKe2O17Brn9k744xXUwfsoFy8N/view?usp=drivesdk",
-      "notes": "NYC hybrid; base 70,000–100,000. No minimum years; business degree welcomed, analytical skills and communication; SQL/C#/PowerShell training provided. Technical support adjacent to BA. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC hybrid; base 70,000–100,000. No minimum years; business degree welcomed, analytical skills and communication; SQL/C#/PowerShell training provided. Technical support adjacent to BA. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "Piper Sandler",
       "position": "Fixed Income Strategy and Analytics Analyst",
       "url": "https://pipersandler.wd501.myworkdayjobs.com/piper_sandler_careers/job/Fixed-Income-Strategy-and-Analytics-Analyst_R-100718",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1-Z5fM3gncxno2tKfMtlBuMZ-kDIuT2Bw/view?usp=drivesdk",
-      "notes": "NYC onsite; base 75,000–95,000. 0–2 years; related business degree with finance/accounting/economics coursework, Excel modeling. Financial-domain stretch. Licenses may be earned within120days; must discuss willingness with user. No sales quota listed. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
+      "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC onsite; base 75,000–95,000. 0–2 years; related business degree with finance/accounting/economics coursework, Excel modeling. Financial-domain stretch. Licenses may be earned within120days; must discuss willingness with user. No sales quota listed. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "15/10/2026 12:06:37",
-      "appliedAt": ""
+      "appliedAt": 46310
     },
     {
       "company": "Building Services 32BJ Benefit Funds",
@@ -2432,6 +2432,46 @@ export const jobSearchData = {
       "notes": "Misha confirmed submission October 15, 2026; exact Handshake submit time unknown. Bronx onsite, $120,000/year; AI automation, Python, operations process assessment, rollout/training. IMPORTANT: Employer expressly offers NO CURRENT OR FUTURE VISA SPONSORSHIP despite accepting OPT. User's independent long-term authorization is not documented, and sponsorship restriction remains a risk. Posting requires functioning portfolio/project URL and brief description; completeness of submitted form not independently verified. Resume is a submitted snapshot in Google Drive.",
       "firstSeenAt": "15/10/2026",
       "appliedAt": 46310
+    },
+    {
+      "company": "Milbank",
+      "position": "Business Analyst",
+      "url": "https://careers-milbank.icims.com/jobs/1685/business-analyst/job",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1BjYS_-1EFGXkyU7fcmFdhIWBBUZ53pIr/view?usp=drivesdk",
+      "notes": "NYC / hybrid; $65,000-$85,000 base. No minimum years; analytics/law firm experience preferred. Business-related degree, advanced Excel, BI/database experience, report QC and business metrics. Verified Excel/Tableau/PowerBI/Oracle coursework, student records and KPI analysis match. Sponsorship unstated; current/future authorization requires review.  Resume prepared from approved master. Application not submitted.",
+      "firstSeenAt": 46310.799163194446,
+      "appliedAt": ""
+    },
+    {
+      "company": "BTS",
+      "position": "Business Analyst, Strategy & Business Modeling",
+      "url": "https://bts.hrmdirect.com/employment/job-opening.php?req=3732582&req_loc=1348990",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1olKq35N-Q4SyiL1dhVSTU8KP0fXOOvbQ/view?usp=drivesdk",
+      "notes": "NYC / hybrid; $75,000-$90,000 base. No minimum years; bachelor, advanced Excel/business simulation models, AI tool building, presentation and workflow thinking. UN Copilot project and Excel simulation project directly relevant. Travel25-30% requires user review; no travel consent claimed. Requires permanent US work eligibility without sponsorship. Retained for skills match under explicit user rule R140; eligibility NOT confirmed.  Resume prepared from approved master. Application not submitted.",
+      "firstSeenAt": 46310.799163194446,
+      "appliedAt": ""
+    },
+    {
+      "company": "Ekimetrics",
+      "position": "Junior Business Scientist, Data Science and Marketing Effectiveness",
+      "url": "https://jobs.lever.co/ekimetrics/d9d64766-3d42-4ba9-94d4-f74cdaf20065",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1MpWAKQyjt6jJA22TGlCdk2-ZOALU9t1P/view?usp=drivesdk",
+      "notes": "NYC / hybrid 3 days; $75,000 base. Explicit0-2 years including internships. BasicPython, data cleaning, regression/marketing metrics and analytical degree/equivalent. MSBA in progress, business bachelor/quant coursework, CampVega20kdata, PinearKPIs and regression project. MMM/Azure/Databricks nice-to-have; not claimed. No visa sponsorship or transfer for this recruitment. Application explicitly offers currently-authorized status as answer; user must answer truthfully and confirm work permission.  Resume prepared from approved master. Application not submitted.",
+      "firstSeenAt": 46310.799163194446,
+      "appliedAt": ""
+    },
+    {
+      "company": "Veeva Systems",
+      "position": "Marketing Analytics - Data Analyst - July 2027 Start Date - ADP",
+      "url": "https://jobs.lever.co/veeva/28c47d34-3ad6-4485-85a9-686b4239b9ea",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1fRTyjKpimuGWuGVXZkVeGKtKDAYLpg7x/view?usp=drivesdk",
+      "notes": "NYC / onsite 4 days; $82,500 base. Explicit0-2years post-grad; bacheloranymajorGPA3.0-4.0; intermediateSQL/Python, dataQA and marketingreporting. GPA3.98/3.88, SQLPythoncoursework, Pinear and CampVega directfit. July2027startafterDec2026graduation. No employmentvisa sponsorship; posting explicitly lists H-1B, OPT and TN. User R140 allows preparation; actualJuly2027eligibility not established. Transcript/shortanswers and assessment are human application steps.  Resume prepared from approved master. Application not submitted.",
+      "firstSeenAt": 46310.799163194446,
+      "appliedAt": ""
     }
   ],
   "interviewEvents": [
@@ -3184,6 +3224,14 @@ export const jobSearchData = {
     }
   ],
   "activityHistory": [
+    {
+      "date": "2026-10-15",
+      "type": "Applications confirmed and search completed",
+      "company": "10 prior applications; 5 next roles",
+      "position": "Entry-level business and data analytics",
+      "stage": "5 Ready to Submit",
+      "source": "User confirmation; canonical tracker and employer career pages"
+    },
     {
       "date": "2026-10-15",
       "type": "Rejection",
