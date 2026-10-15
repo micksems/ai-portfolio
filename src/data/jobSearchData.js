@@ -1,10 +1,10 @@
 export const jobSearchData = {
-  "updatedAt": "October 13, 2026",
+  "updatedAt": "October 15, 2026",
   "metrics": {
     "applications": 88,
     "interviews": 7,
     "offers": 0,
-    "rejections": 23,
+    "rejections": 31,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -1107,7 +1107,7 @@ export const jobSearchData = {
       "company": "Valerie Health",
       "position": "AI Operations Specialist",
       "url": "https://jobs.ashbyhq.com/valeriehealth/54707996-63b5-4811-98eb-016266654e78",
-      "status": "Interview",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1BkiFovLRFivyrc_WCjwJqnr9L14biGGE/view?usp=drivesdk",
       "notes": "October 9 Gmail reconciliation: recruiter screen scheduled Monday October 12, 2026 11–11:30am ET with Katelyn Allen. Gmail 1a11c8c5126ccd6d and 1a11c8d4ad393ab1. This is UPCOMING, not a completed interview. Interview Prep INT-VALERIE-20261012 records the event.\n\nOctober 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nManual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nValerie Health: Early-career applicants explicitly encouraged; prior startup/healthcare experience helpful, not required. Lewis records, Camp Vega validation and UN workflows support accuracy, discrepancy investigation and operational delivery. No claimed patient/EHR experience.\nPay: $65,000–$85,000 base; offer must be at least $70,000. Equity/bonus separate if applicable. Current employer careers page links exact requisition; official Ashby public posting feed lists it isListed=true with exact /application URL.\nOfficial JD: https://jobs.ashbyhq.com/valeriehealth/54707996-63b5-4811-98eb-016266654e78\nEvidence checked 2026-10-07T16:59:08.234Z; source https://api.ashbyhq.com/posting-api/job-board/valeriehealth\nResume: https://drive.google.com/file/d/1BkiFovLRFivyrc_WCjwJqnr9L14biGGE/view?usp=drivesdk\n\nHistorical note preserved: ≤24h",
       "firstSeenAt": "14/09/2026 09:56:55",
@@ -2237,7 +2237,7 @@ export const jobSearchData = {
       "company": "FanDuel",
       "position": "Campaign Analytics, Data Analyst",
       "url": "https://www.fanduel.careers/open-positions?gh_jid=8055746",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1e0TCTdc2aW6zus3CjFuK6u8ydlm0Ngdf/view?usp=drivesdk",
       "notes": "October 10, 2026: Misha confirmed submission of all five October 9 run roles: Dow Jones Analyst, Newsroom Data; FanDuel Campaign Analytics, Data Analyst; Wilson Elser Data Analyst; Grapevine Product & Savings Intelligence Analyst; LSEG Business Analyst Graduate Programme. Confirmation date recorded; exact submission dates/times not supplied. Prepared resumes retained as submitted snapshots. Prior pending application requirements are superseded by this submission confirmation.\nOctober 9, 2026 manual analyst run. Live snapshot preflight passed before authoring; snapshot SHA256 abcce8bb40ec1a8a78254e1b9ce2b999643647d07845606db2244881da6f275f. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256 db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: Pinear campaign KPIs and segments plus sports analytics project fit measurement role. | location: New York, hybrid | experience: One-plus year similar experience; marketing analytics, data QA and ongoing analytics coursework; SQL and Excel skills verified. | mandatory_requirements: One-plus year similar experience; marketing analytics, data QA and ongoing analytics coursework; SQL and Excel skills verified. | base_salary: Posted annual base $90,000–112,000 | authorization: No explicit sponsorship prohibition found in official posting. Current CPT reported; future OPT not approved or assumed. | start_timing: No mandatory immediate start date identified; availability remains subject to CPT approval. | application_path: Greenhouse requisition 8055746 returned active application questions and required resume field.. Application checked 2026-10-09T16:21:21.409Z. Sponsorship UNCONFIRMED: Exceptional fit for verified analytics experience; posting does not prohibit sponsorship. Must confirm employer authorization support before applying. No professional campaign attribution or experimentation ownership claimed. Requisition 8055746 is distinct from prior FanDuel Commercial Analyst Casino. Deadline not published. Fit score 92; role/skills/experience/seniority/education/achievement 24/19/17/13/10/9. Resume one page, 23 bullets, 3 contact links; approved Liberation Serif font and geometry, rendered page and extracted text inspected. PDF SHA256 ace0684823660da76999f9909642539ed4e4f8bb1913c0a125feb372b6a11266. Resume https://drive.google.com/file/d/1e0TCTdc2aW6zus3CjFuK6u8ydlm0Ngdf/view?usp=drivesdk; Library libfile_db89ee3f98ec81919a0234a4c2a7aedd. Prepared only; no application submission or outreach. YC target shortfall: zero YC roles retained. Agave equivalents already submitted; Confido 2–4 R&D years/domain gap, David AI 2–6 startup operations years, Pocket physical supply forecasting gap, Rainfall analyst absent from live board, ARQ/Numeral/Bretton authorization restrictions. UN relevant searched postings expired before October 9; no generalist padding.",
       "firstSeenAt": "October 9, 2026",
@@ -2257,7 +2257,7 @@ export const jobSearchData = {
       "company": "LSEG",
       "position": "Business Analyst Graduate Programme",
       "url": "https://lseg.wd3.myworkdayjobs.com/Graduate_Careers/job/USA-New-York-28-Liberty-Street/R0123408-Business-Analyst-Graduate-Programme_R0123420",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1Sskb0EEcTazZSugM7PAcw-SNnIx2V3vl/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed completion of the LSEG Cappfinity Immersive Online Assessment. Candidate reports soft skills, teamwork and workplace-behavior questions; no numerical or technical sections reported. Assessment completed; employer result and progression pending. Completion is not a human interview. Date confirmed; exact completion time not supplied.\nOctober 10, 2026: Misha confirmed submission of all five October 9 run roles: Dow Jones Analyst, Newsroom Data; FanDuel Campaign Analytics, Data Analyst; Wilson Elser Data Analyst; Grapevine Product & Savings Intelligence Analyst; LSEG Business Analyst Graduate Programme. Confirmation date recorded; exact submission dates/times not supplied. Prepared resumes retained as submitted snapshots. Prior pending application requirements are superseded by this submission confirmation.\nOctober 9, 2026 manual analyst run. Live snapshot preflight passed before authoring; snapshot SHA256 abcce8bb40ec1a8a78254e1b9ce2b999643647d07845606db2244881da6f275f. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256 db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: Graduate business/data analysis and stakeholder requirements fit UN project scoping and analytics projects. | location: New York | experience: 2026 graduates/final-year master's completing before September 2027 accepted; MS Business Analytics December 2026, SQL/Python/BI coursework and finance background fit. | mandatory_requirements: 2026 graduates/final-year master's completing before September 2027 accepted; MS Business Analytics December 2026, SQL/Python/BI coursework and finance background fit. | base_salary: Posted annual base $62,800–104,600; include only with offer at least $70,000 | authorization: Posting says unrestricted work rights are ideal, not an explicit sponsorship prohibition. Current CPT is reported only; September 2027 authorization must be confirmed. | start_timing: September 2027 programme start; MS expected December 2026 meets stated education timing. | application_path: Workday canApply=true; posted=true; deadline October 20, 2026; one programme application.. Application checked 2026-10-09T16:21:21.409Z. Sponsorship UNCONFIRMED: Relevant eligible graduate programme; work-rights wording is preference, not categorical prohibition. Confirm September 2027 eligibility and sponsorship before applying. September 2027 start. Base range $62,800–$104,600 crosses floor: require offer >=$70,000. Deadline October 20, 2026, rolling and may close early. Unrestricted US work rights stated as ideal; confirm programme eligibility, employer support and September 2027 authorization. Future OPT approval not assumed. Fit score 94; role/skills/experience/seniority/education/achievement 24/19/17/15/10/9. Resume one page, 23 bullets, 3 contact links; approved Liberation Serif font and geometry, rendered page and extracted text inspected. PDF SHA256 335fa3a337e852887483c88c739d96017ac31708b811890d11d5ce34f0a3a542. Resume https://drive.google.com/file/d/1Sskb0EEcTazZSugM7PAcw-SNnIx2V3vl/view?usp=drivesdk; Library libfile_f40bc449a17481919f5b3b4c80598d9e. Prepared only; no application submission or outreach. YC target shortfall: zero YC roles retained. Agave equivalents already submitted; Confido 2–4 R&D years/domain gap, David AI 2–6 startup operations years, Pocket physical supply forecasting gap, Rainfall analyst absent from live board, ARQ/Numeral/Bretton authorization restrictions. UN relevant searched postings expired before October 9; no generalist padding.",
       "firstSeenAt": "October 9, 2026",
@@ -2405,6 +2405,726 @@ export const jobSearchData = {
       "date": "13/10/2026",
       "interviewer": null,
       "notes": "October 13, 2026: Misha confirmed completion of the LSEG Cappfinity Immersive Online Assessment. Candidate reports soft skills, teamwork and workplace-behavior questions; no numerical or technical sections reported. Assessment completed; employer result and progression pending. Completion is not a human interview. Date confirmed; exact completion time not supplied."
+    }
+  ],
+  "outreachState": [
+    {
+      "company": "United Hospital Fund",
+      "position": "Data Analyst (SQL Expertise)",
+      "jobUrl": "https://www.indeed.com/viewjob?jk=215e8d1929e98a35",
+      "contact": "Alessandra Taverna-Trani",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "United Hospital Fund",
+      "position": "Data Analyst (SQL Expertise)",
+      "jobUrl": "https://www.indeed.com/viewjob?jk=215e8d1929e98a35",
+      "contact": "Jatna Rojas",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Instawork",
+      "position": "Data Operations Analyst - Instawork Robotics",
+      "jobUrl": "https://job-boards.greenhouse.io/instawork/jobs/4620751006",
+      "contact": "Cherish Ruggles",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "AvidXchange",
+      "position": "Business Insights Analyst I",
+      "jobUrl": "https://www.linkedin.com/jobs/view/business-insights-analyst-i-at-avidxchange-inc-4423208846",
+      "contact": "Jimmy Goose",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Walmart / VIZIO",
+      "position": "(USA) Data Analyst II",
+      "jobUrl": "https://careers.walmart.com/us/en/jobs/R-2504580",
+      "contact": "Rich Guinness",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "NYC Campaign Finance Board",
+      "position": "Data & Metrics Analyst",
+      "jobUrl": "https://cityjobs.nyc.gov/job/data-and-metrics-analyst-in-manhattan-jid-44848",
+      "contact": "Allie Swatek",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Instawork",
+      "position": "Product Operations Analyst",
+      "jobUrl": "https://job-boards.greenhouse.io/instawork/jobs/4583589006",
+      "contact": "Cherish Ruggles",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Charlie Health",
+      "position": "Growth Strategy Analyst, GTM Data",
+      "jobUrl": "https://www.charliehealth.com/careers/corporate?gh_jid=5998559004",
+      "contact": "Patrick Finnegan",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Charlie Health",
+      "position": "Strategy & Operations Analyst",
+      "jobUrl": "https://www.charliehealth.com/careers/corporate?gh_jid=5997404004",
+      "contact": "Brendan Ross",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Rain",
+      "position": "Implementation Specialist",
+      "jobUrl": "https://jobs.ashbyhq.com/rain/2a014d5a-c59e-4cac-9fa9-b365991ae27a",
+      "contact": "Rain Recruiting Team",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Nen Creative",
+      "position": "Operations Coordinator",
+      "jobUrl": "https://jobs.ashbyhq.com/nen-creative/4eccbd19-890a-485c-8e1b-5cf1b0255ed1",
+      "contact": "Jason Zhu",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Stepful",
+      "position": "Revenue Operations Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/Stepful/b5ffd982-cc32-49d3-a033-c2bf22d69d5b",
+      "contact": "Shelley Brown",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Metro Vein Centers",
+      "position": "Analyst, Marketing and Sales",
+      "jobUrl": "https://job-boards.greenhouse.io/metroveincenters/jobs/4395083009",
+      "contact": "Jolene Birch",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Digital Asset",
+      "position": "Business Operations & Data Analyst",
+      "jobUrl": "https://job-boards.greenhouse.io/digitalassetcorp/jobs/4385554009",
+      "contact": "Christopher Marte",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Hive",
+      "position": "Data Operations Analyst",
+      "jobUrl": "https://jobs.lever.co/hive/8a55e4ff-ec69-4691-aa65-fc7cbd7c6ee0",
+      "contact": "Michael Colores",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Gartner",
+      "position": "Business Analyst, Marketing Analytics",
+      "jobUrl": "",
+      "contact": "Nick Jordan",
+      "status": "Replied",
+      "lastResponseAt": "19/09/2026 05:04:07"
+    },
+    {
+      "company": "CAIS",
+      "position": "Partner Experience (Analyst – Associate)",
+      "jobUrl": "https://job-boards.greenhouse.io/cais/jobs/8809524002",
+      "contact": "Jon Finn",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "CAIS",
+      "position": "Partner Experience (Analyst – Associate)",
+      "jobUrl": "https://job-boards.greenhouse.io/cais/jobs/8809524002",
+      "contact": "Kristin Magnier",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "CAIS",
+      "position": "Partner Experience (Analyst – Associate)",
+      "jobUrl": "https://job-boards.greenhouse.io/cais/jobs/8809524002",
+      "contact": "Brooke Jones",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "CAIS",
+      "position": "Partner Experience (Analyst – Associate)",
+      "jobUrl": "https://job-boards.greenhouse.io/cais/jobs/8809524002",
+      "contact": "Alyssa Meszaros",
+      "status": "Sent",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "CAIS",
+      "position": "Partner Experience (Analyst – Associate)",
+      "jobUrl": "https://job-boards.greenhouse.io/cais/jobs/8809524002",
+      "contact": "Nicoletta Lagudis",
+      "status": "Sent",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Aksia",
+      "position": "Analyst, Operational Due Diligence",
+      "jobUrl": "https://job-boards.greenhouse.io/aksia/jobs/8800607002",
+      "contact": "Zachary Hamner",
+      "status": "Sent",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Aksia",
+      "position": "Analyst, Operational Due Diligence",
+      "jobUrl": "https://job-boards.greenhouse.io/aksia/jobs/8800607002",
+      "contact": "Michael Calabrese",
+      "status": "Sent",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Madhive",
+      "position": "Business Operations Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/madhive/319ce3d7-c2b7-4963-a31b-5d8d73293745",
+      "contact": "Chris Lillemoe",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Farsight AI",
+      "position": "Strategy & Operations Associate",
+      "jobUrl": "https://jobs.ashbyhq.com/farsight/103845f1-f775-4fe0-a7a2-9185e72e749e",
+      "contact": "Jacob Bassil",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Fernstone",
+      "position": "Growth & Operations Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/fernstone/04aec27e-888e-47e5-b23f-a1b3da541b02/",
+      "contact": "David Mason",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "DoorDash",
+      "position": "Associate, Marketplace - Strategy & Operations",
+      "jobUrl": "https://careersatdoordash.com/jobs/associate-marketplace---strategy-operations/8143179/",
+      "contact": "Christine Busaba",
+      "status": "Sent",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Audax Private Debt",
+      "position": "Investor Relations Operations Analyst",
+      "jobUrl": "https://job-boards.greenhouse.io/audaxprivatedebt/jobs/4731334005",
+      "contact": "Audax Recruiting Team",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "The Trade Desk",
+      "position": "Data Support Analyst I",
+      "jobUrl": "https://careers.thetradedesk.com/jobs/5165780007/data-support-analyst-i",
+      "contact": "The Trade Desk Recruiting Team",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Claim Health",
+      "position": "Operations Associate",
+      "jobUrl": "https://jobs.ashbyhq.com/claim-health/bb76582b-fe73-48d5-8897-a863bfd88013",
+      "contact": "Kevin Calcado & Jayen Ram",
+      "status": "Sent",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Jerry.ai",
+      "position": "Associate, BizOps & Analytics",
+      "jobUrl": "https://jobs.ashbyhq.com/Jerry.ai/2dbc19ea-c239-4d85-bbe2-8cac96dc5b90",
+      "contact": "Alana Xin",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Axial",
+      "position": "Business Operations Associate / Senior Associate",
+      "jobUrl": "https://www.axial.net/company/careers/",
+      "contact": "Nick Coetzee",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Valon",
+      "position": "Product Operations Senior Associate",
+      "jobUrl": "https://jobs.ashbyhq.com/Valon/457cbb87-6c9b-4a21-96f8-f99701411754",
+      "contact": "Elynna Chang",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Trayd",
+      "position": "Implementations Analyst",
+      "jobUrl": "https://www.ycombinator.com/companies/trayd/jobs/2DvQ0jQ-implementations-analyst",
+      "contact": "Carter Shields",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "BlackRock",
+      "position": "2027 Full-Time Analyst Program - AMRS",
+      "jobUrl": "https://blackrock.tal.net/vx/lang-en-GB/mobile-0/brand-3/xf-ad177cb70942/candidate/so/pm/1/pl/1/opp/12218-2027-Full-Time-Analyst-Program-AMRS/en-GB",
+      "contact": "Caitlyn Lopacinski",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Visa",
+      "position": "Strategy Analyst - Cross Border Strategy & Operations",
+      "jobUrl": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/Analyst_REF087892W",
+      "contact": "Claire Chen",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Visa",
+      "position": "Associate - Visa Destinations",
+      "jobUrl": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---San-Francisco-CA/Associate---Visa-Destinations_REF088107W",
+      "contact": "Mitch Siam",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Visa",
+      "position": "Analyst, NA Growth Marketing",
+      "jobUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---San-Francisco-CA/Analyst--NA-Growth-Marketing_REF087814W-1",
+      "contact": "Peter Quinn",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Moody's",
+      "position": "Data Operations Specialist II",
+      "jobUrl": "https://careers.moodys.com/en/job/new-york/data-operations-specialist-ii/49841/99480722144",
+      "contact": "Betty W.",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "iCapital",
+      "position": "Product Operations - Associate",
+      "jobUrl": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8648980002",
+      "contact": "Kaitlyn Turlis",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Socure",
+      "position": "Business Operations Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/socure/e977aad8-77fa-4d36-872f-a5f022e76c22",
+      "contact": "Matthew Vandegrift",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Listen Labs",
+      "position": "Insights Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/listenlabs/0b65b19c-44c0-4440-9b6c-4d88c6024772",
+      "contact": "Kathleen Kelejian",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Lambda",
+      "position": "Internal Tools & Data Product Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/Lambda/c0116ab6-9ec2-4189-9f07-e9dd284222b6",
+      "contact": "Jeraline Villegas",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Agave",
+      "position": "Associate Product Manager, Integrations",
+      "jobUrl": "https://www.ycombinator.com/companies/agave/jobs/Dnn8XB5-associate-product-manager-integrations",
+      "contact": "Maya Mitchell",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Mercor",
+      "position": "Data Scientist",
+      "jobUrl": "https://jobs.ashbyhq.com/mercor/982a0751-e9eb-4b96-ac93-a1fd1d2f9152",
+      "contact": "Nina (Prabhu) Sweeney",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Dime",
+      "position": "Forward Deployed Engineer",
+      "jobUrl": "https://www.ycombinator.com/companies/dime-2/jobs/O1bzYN2-forward-deployed-engineer",
+      "contact": "Akash Kumar",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Karumi",
+      "position": "Forward Deployed Engineer (FDE)",
+      "jobUrl": "https://www.ycombinator.com/companies/karumi/jobs/mzQuJ9K-forward-deployed-engineer-fde",
+      "contact": "Toni Lopez",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Draft The Record",
+      "position": "Customer Success Specialist",
+      "jobUrl": "https://www.ycombinator.com/companies/draft-the-record/jobs/WN9VSsM-customer-success-specialist",
+      "contact": "Adnan Sherif",
+      "status": "Do not contact — executive excluded",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Airgoods",
+      "position": "Growth - Retailers",
+      "jobUrl": "https://www.ycombinator.com/companies/airgoods/jobs/eHjNGRk-growth-retailers",
+      "contact": "Andrés Quevedo",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Rain",
+      "position": "Implementation Specialist",
+      "jobUrl": "https://jobs.ashbyhq.com/rain/2a014d5a-c59e-4cac-9fa9-b365991ae27a",
+      "contact": "Miles Green",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Highbeam",
+      "position": "AI Implementation Associate",
+      "jobUrl": "https://jobs.ashbyhq.com/highbeam/60b69921-b805-4a8d-a6ef-bba2a3aba05d",
+      "contact": "Ian Park",
+      "status": "Sent",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Loop",
+      "position": "AI Operations Associate",
+      "jobUrl": "https://ats.rippling.com/loop/jobs/9191b3df-1a8b-46d2-a1b4-1420da7b09f7",
+      "contact": "Dianna O'Brien",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Vooma",
+      "position": "Operations Associate - Deployments",
+      "jobUrl": "https://www.ycombinator.com/companies/vooma/jobs/vcXtY49-operations-associate-deployments",
+      "contact": "Chi Pham",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Agave",
+      "position": "Operations Associate",
+      "jobUrl": "https://www.ycombinator.com/companies/agave/jobs/owV2cRx-operations-associate",
+      "contact": "Nicole Sussman",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Canoe Intelligence",
+      "position": "Data Analyst, Private Markets",
+      "jobUrl": "https://careers.canoeintelligence.com/jobs/676043-data-analyst-private-markets",
+      "contact": "Kyle Hamel",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Enigma",
+      "position": "Data Operations Associate",
+      "jobUrl": "https://job-boards.greenhouse.io/enigmaio/jobs/6803803",
+      "contact": "Sandra Ibrahim",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Astra",
+      "position": "Payment Operations Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/astra/7705d345-5ae1-4bfa-b826-937ebb7d7ca1/",
+      "contact": "Andrew Reitz",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Clera",
+      "position": "Business Operations Graduate",
+      "jobUrl": "https://jobs.ashbyhq.com/clera/07059143-0d6b-419f-82af-a549ddee3171",
+      "contact": "Sebastian Scott",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Bikky",
+      "position": "Data Analyst - Data Operations",
+      "jobUrl": "https://jobs.gem.com/bikky/am9icG9zdDpzZP7kWfEFU_aadmielBxz",
+      "contact": "Michael Lyons",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Fortuna Health",
+      "position": "Product Operations Associate",
+      "jobUrl": "https://jobs.ashbyhq.com/fortuna-health/aa48c14b-e38e-4f27-84ef-a6b032bb9b60/application",
+      "contact": "Neeknaz Abari",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Ambrook",
+      "position": "Product Operations",
+      "jobUrl": "https://jobs.ashbyhq.com/ambrook/d477f001-417f-455d-914b-254bc411dff1/application",
+      "contact": "Cody Austin",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "BlackRock",
+      "position": "Product Operations Associate, Aladdin Platform Engineering",
+      "jobUrl": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/New-York-NY/Product-Operations-Associate--Aladdin-Platform-Engineering_R266544/apply",
+      "contact": "Katherine Batarin",
+      "status": "Closed",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Agave",
+      "position": "Product Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/Agave/929b3239-7f09-42bc-9603-14b4c347b998",
+      "contact": "Ben Vandenbosch",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Pylon",
+      "position": "Product Support Engineer",
+      "jobUrl": "https://jobs.ashbyhq.com/pylon-labs/2b1c3ce3-0b80-4daa-b9b8-8f48b24e491f",
+      "contact": "Paul Luu",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "MissionOne Media",
+      "position": "Analyst, Reporting",
+      "jobUrl": "https://job-boards.greenhouse.io/missiononemedia/jobs/6185658004",
+      "contact": "Sara Soseman",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Arch",
+      "position": "Operations Associate | Early Careers, Summer 2027 Start",
+      "jobUrl": "https://jobs.ashbyhq.com/arch.co/4e1822e5-1149-4acd-9287-252a22d99c41/application",
+      "contact": "Luke O'Hare",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Numeral",
+      "position": "Product Operations Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/numeral/e50e001c-870b-4bc9-b519-9333e762e64b/application",
+      "contact": "Christine Wang",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Column",
+      "position": "Payment Operations (New Grad / Early Career)",
+      "jobUrl": "https://jobs.ashbyhq.com/column/c349d594-33a2-49a2-a168-afa8d8226572/application",
+      "contact": "Kim Vermette",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Squad Health",
+      "position": "Operations Associate",
+      "jobUrl": "https://jobs.ashbyhq.com/squadhealth/06f53c8e-820a-48d7-9da9-e5c04a368cf9/application",
+      "contact": "Adhiti Rajesh",
+      "status": "New",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Handshake",
+      "position": "Operations Associate",
+      "jobUrl": "https://jobs.ashbyhq.com/handshake/d547e216-2ca7-4087-9d57-bbce9f5bd6b4",
+      "contact": "Winnie Yeoh",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Clipboard",
+      "position": "Revenue Strategy & Growth Associate",
+      "jobUrl": "https://jobs.ashbyhq.com/clipboard/2ca7fa94-6b57-4358-9105-857b911c15f7",
+      "contact": "Jefferson Griscavage, MD",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "IL MAKIAGE (ODDITY)",
+      "position": "Global Operations Analyst",
+      "jobUrl": "https://app.joinhandshake.com/jobs/11421561",
+      "contact": "Kiaam K.",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Raydar client",
+      "position": "Founding BizOps",
+      "jobUrl": "https://apply.workable.com/raydar/j/048557D378/",
+      "contact": "Alzen Flores",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Agave",
+      "position": "Customer Solutions Engineer",
+      "jobUrl": "https://www.ycombinator.com/companies/agave/jobs/CU8TDs5-customer-solutions-engineer",
+      "contact": "Ben Vandenbosch",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Daisy",
+      "position": "Business Operations Associate",
+      "jobUrl": "https://www.joindaisy.com/careers/business-operations-associate-6ff6d",
+      "contact": "Martha Salas",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "PointOne",
+      "position": "Sales Development Representative",
+      "jobUrl": "https://www.ycombinator.com/companies/pointone/jobs/KUme05Y-sales-development-representative",
+      "contact": "Andrew Romano",
+      "status": "Draft",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "UNICEF",
+      "position": "Assurance Mapping and Data Analytics Consultant",
+      "jobUrl": "https://secure.dc7.pageuppeople.com/apply/671/cw/applicationForm/initApplication.asp?lJobID=595944&sLanguage=en-us&sSourcePointer=cw&lJobSourceTypeID=796",
+      "contact": "Bernt Nilsen",
+      "status": "Closed - Expired",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "McKinsey & Company",
+      "position": "Business Analyst",
+      "jobUrl": "https://www.mckinsey.com/careers/search-jobs/jobs/businessanalyst-15136",
+      "contact": "No credible role-specific contact verified",
+      "status": "No Contact Found",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "WisdomTree",
+      "position": "AI Solutions Analyst",
+      "jobUrl": "https://jobs.lever.co/wisdomtree/621718c3-779f-4e9c-9681-be75dafc427e",
+      "contact": "Patsy Flores",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "OneMain Financial",
+      "position": "Analytics Analyst",
+      "jobUrl": "https://jobs.onemainfinancial.com/job/wilmington/analytics-analyst/21631/100341806912",
+      "contact": "Christine Santana-Smith",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "City of Charlotte",
+      "position": "UMS Business Systems Analyst",
+      "jobUrl": "https://charlottenc.wd12.myworkdayjobs.com/en-US/citgov/job/UMS-Business-Systems-Analyst_JR104646",
+      "contact": "Zachary Cannon",
+      "status": "Drafted",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Raymond James",
+      "position": "AI Business Engineer — Investment Banking Experience",
+      "jobUrl": "https://raymondjames.wd1.myworkdayjobs.com/en-US/RaymondJamesCareers/job/AI-Business-Engineer---Investment-Banking-Experience_R-0013200",
+      "contact": "Kimberly Rankin",
+      "status": "Archived",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Moab",
+      "position": "Data & AI Analyst",
+      "jobUrl": "https://jobs.ashbyhq.com/moab/8ab10f9b-2a49-409d-8b20-7ecf1ed92ee4",
+      "contact": "No credible role-specific nonexecutive contact verified",
+      "status": "No Contact Found",
+      "lastResponseAt": ""
+    }
+  ],
+  "activityHistory": [
+    {
+      "date": "2026-10-14",
+      "type": "Rejection",
+      "company": "Valerie Health",
+      "position": "AI Operations Specialist",
+      "stage": "Closed",
+      "source": "Google Sheet Application History"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "Rejection",
+      "company": "FanDuel",
+      "position": "Campaign Analytics, Data Analyst",
+      "stage": "Closed",
+      "source": "Google Sheet Application History"
+    },
+    {
+      "date": "2026-10-14T19:39:16-04:00",
+      "type": "Rejection",
+      "company": "LSEG",
+      "position": "Business Analyst Graduate Programme",
+      "requisition": "R0123420",
+      "stage": "Closed",
+      "source": "Google Sheet Application History row 149 / employer email 1a13cc8d2841d0bf"
+    }
+  ],
+  "reports": [
+    {
+      "date": "2026-10-15",
+      "title": "Employer response reconciliation",
+      "summary": "LSEG rejected Business Analyst Graduate Programme R0123420 after completed assessment. Valerie Health and FanDuel prior confirmed rejections synchronized from canonical Google Sheet. No new sponsorship policy information.",
+      "changes": [
+        {
+          "company": "Valerie Health",
+          "position": "AI Operations Specialist",
+          "from": "Interview",
+          "to": "Closed"
+        },
+        {
+          "company": "FanDuel",
+          "position": "Campaign Analytics, Data Analyst",
+          "from": "Applied",
+          "to": "Closed"
+        },
+        {
+          "company": "LSEG",
+          "position": "Business Analyst Graduate Programme",
+          "from": "Applied",
+          "to": "Closed"
+        }
+      ]
     }
   ]
 };
