@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 16, 2026",
   "metrics": {
-    "applications": 104,
+    "applications": 107,
     "interviews": 7,
     "offers": 0,
     "rejections": 32,
@@ -2477,31 +2477,31 @@ export const jobSearchData = {
       "company": "Artefact",
       "position": "Junior AI & Data Consultant",
       "url": "https://job-boards.greenhouse.io/artefactlinkedin/jobs/8893475002",
-      "status": "Found",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1KoUpGqxL6qGkRKYZZaHPSVFG6wpSeMYD/view?usp=drivesdk",
-      "notes": "Resume prepared for user-selected role. NYC hybrid; $85k-$105k base. AI/data analysis, Copilot Studio, response evaluation and client needs. Sponsorship and start date unconfirmed.",
+      "notes": "User confirmed submission October 16, 2026; exact time unknown. Resume prepared for user-selected role. NYC hybrid; $85k-$105k base. AI/data analysis, Copilot Studio, response evaluation and client needs. Sponsorship and start date unconfirmed.",
       "firstSeenAt": 46311,
-      "appliedAt": ""
+      "appliedAt": 46311
     },
     {
       "company": "Capgemini",
       "position": "C&CA Campus - Associate Application Consultant",
       "url": "https://careers.capgemini.com/job/New-York%2C-NY-C%26CA-Campus-Associate-Application-Consultant-NY-10001/1447324633/",
-      "status": "Found",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/18ENlPN4zn-rt1nASuevfzeKra2ySvGPd/view?usp=drivesdk",
-      "notes": "Resume prepared for user-selected role. NY/NJ hybrid; $48.5k-$92.7k base. Target offer >=$70k. Official Apply button redirected to careers homepage during verification; application route unresolved.",
+      "notes": "User confirmed submission October 16, 2026; exact time unknown. Resume prepared for user-selected role. NY/NJ hybrid; $48.5k-$92.7k base. Target offer >=$70k. Official Apply button redirected to careers homepage during verification; application route unresolved.",
       "firstSeenAt": 46311,
-      "appliedAt": ""
+      "appliedAt": 46311
     },
     {
       "company": "Deloitte",
       "position": "Business Analyst, Functional Transformation",
       "url": "https://www.linkedin.com/jobs/view/4479225734/",
-      "status": "Found",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1PP_GNYVB5duchMOHUyfoGMVJXAWGN3tj/view?usp=drivesdk",
-      "notes": "Resume prepared for user-selected role. NYC; posted range $82.6k-$162.8k, not location-adjusted. One year of product-development lifecycle experience is not clearly established in candidate records. No current/future sponsorship. Application path and eligibility require review.",
+      "notes": "User confirmed submission October 16, 2026; exact time unknown. Resume prepared for user-selected role. NYC; posted range $82.6k-$162.8k, not location-adjusted. One year of product-development lifecycle experience is not clearly established in candidate records. No current/future sponsorship. Application path and eligibility require review.",
       "firstSeenAt": 46311,
-      "appliedAt": ""
+      "appliedAt": 46311
     }
   ],
   "interviewEvents": [
@@ -3254,6 +3254,30 @@ export const jobSearchData = {
     }
   ],
   "activityHistory": [
+    {
+      "date": "2026-10-16",
+      "type": "Application",
+      "company": "Artefact",
+      "position": "Junior AI & Data Consultant",
+      "stage": "Applied",
+      "source": "User confirmation; canonical application history"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "Application",
+      "company": "Capgemini",
+      "position": "C&CA Campus - Associate Application Consultant",
+      "stage": "Applied",
+      "source": "User confirmation; canonical application history"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "Application",
+      "company": "Deloitte",
+      "position": "Business Analyst, Functional Transformation",
+      "stage": "Applied",
+      "source": "User confirmation; canonical application history"
+    },
     {
       "date": "2026-10-15",
       "type": "Applications confirmed and search completed",
