@@ -2447,11 +2447,11 @@ export const jobSearchData = {
       "company": "BTS",
       "position": "Business Analyst, Strategy & Business Modeling",
       "url": "https://bts.hrmdirect.com/employment/job-opening.php?req=3732582&req_loc=1348990",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1olKq35N-Q4SyiL1dhVSTU8KP0fXOOvbQ/view?usp=drivesdk",
       "notes": "NYC / hybrid; $75,000-$90,000 base. No minimum years; bachelor, advanced Excel/business simulation models, AI tool building, presentation and workflow thinking. UN Copilot project and Excel simulation project directly relevant. Travel25-30% requires user review; no travel consent claimed. Requires permanent US work eligibility without sponsorship. Retained for skills match under explicit user rule R140; eligibility NOT confirmed.  Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": 46310.799163194446,
-      "appliedAt": ""
+      "appliedAt": "10/15/2026 19:32"
     },
     {
       "company": "Ekimetrics",
