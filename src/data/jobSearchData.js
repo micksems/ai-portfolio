@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "October 16, 2026",
   "metrics": {
-    "applications": 107,
+    "applications": 112,
     "interviews": 7,
     "offers": 0,
     "rejections": 32,
@@ -2507,50 +2507,100 @@ export const jobSearchData = {
       "company": "Metergy Solutions",
       "position": "Business Intelligence Analyst",
       "url": "https://jobs.lever.co/metergysolutions/1a20d596-888d-4191-b22d-24d7435a7a69",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1B-XNlSpveE2h1ZWf7pSVDiuFRy-dnYGO/view?usp=drivesdk",
-      "notes": "Long Island City, NYC / hybrid 3+days; $70,000-$80,000 base. 0-2years inclinternships, analyticaldegree, ExcelPowerBIPythonSQL, relational databases, data quality and KPIreporting. VerifiedMSBAcoursework, SQLOracleAPEXandTableauprojects, CampVegaQA20k, PinearKPIs and Lewis10krecords. StrongSQL/view-maintenance expected; do not claim production views or pipelines. Skills stretch is depth, not an absent mandated technology. No policy promise; employer asks present authorization and future sponsorship. Role-specific sponsorship UNKNOWN. All resume formatting and links checked. Application not submitted.",
+      "notes": "Long Island City, NYC / hybrid 3+days; $70,000-$80,000 base. 0-2years inclinternships, analyticaldegree, ExcelPowerBIPythonSQL, relational databases, data quality and KPIreporting. VerifiedMSBAcoursework, SQLOracleAPEXandTableauprojects, CampVegaQA20k, PinearKPIs and Lewis10krecords. StrongSQL/view-maintenance expected; do not claim production views or pipelines. Skills stretch is depth, not an absent mandated technology. No policy promise; employer asks present authorization and future sponsorship. Role-specific sponsorship UNKNOWN. All resume formatting and links checked. Application submitted October 16; confirmed by Misha. Exact submission time unknown.",
       "firstSeenAt": 46311,
-      "appliedAt": ""
+      "appliedAt": "2026-10-16"
     },
     {
       "company": "Heitmeyer Consulting",
       "position": "Junior Business Analyst Contractor (Jr. BSA)",
       "url": "https://www.heitmeyerconsulting.com/job/14960-jr-bsa-charlotte-north-carolina/",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1bFoPGqZEKghGbVBzRyDzeW9e0OD9ak_I/view?usp=drivesdk",
-      "notes": "Charlotte, NC / contract; Unpublished base. Recentgraduate/up to2years, relateddegree, basicSQL, Excel, requirements/dataanalysis. UNclientneeds/scope, Lewisprojectrecords, CampVegaQA and analyticalcourseworkmatch; no productionUAT/Jiraclaims. Contractduration, W2vsother and pay require confirmation. Sponsorship and CPT/OPT acceptance unstated; role-specific support UNKNOWN. All resume formatting and links checked. Application not submitted.",
+      "notes": "Charlotte, NC / contract; Unpublished base. Recentgraduate/up to2years, relateddegree, basicSQL, Excel, requirements/dataanalysis. UNclientneeds/scope, Lewisprojectrecords, CampVegaQA and analyticalcourseworkmatch; no productionUAT/Jiraclaims. Contractduration, W2vsother and pay require confirmation. Sponsorship and CPT/OPT acceptance unstated; role-specific support UNKNOWN. All resume formatting and links checked. Application submitted October 16; confirmed by Misha. Exact submission time unknown.",
       "firstSeenAt": 46311,
-      "appliedAt": ""
+      "appliedAt": "2026-10-16"
     },
     {
       "company": "AFRY",
       "position": "Entry-Level Analyst, Pulp & Paper",
       "url": "https://jobs.smartrecruiters.com/AFRY/744000152200360-entry-level-analyst-pulp-paper",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/15_0RyeYt5MybqwX1NnLGLT6AQyMJY0l_/view?usp=drivesdk",
-      "notes": "NYC / hybrid; Up to $80,000 base. Explicitentrylevel, no priorindustryexperience required, bachelorbusiness accepted. Excel/PowerPoint, marketresearch and analyticalmodels. Pinearsegmentation/budgetmodeling, graduateExcelmodels, clientneedsUN directtransfer. Industryknowledge learned; no M&A/due-diligenceexperience claimed. Employer states no current or future sponsorship. Preparation permitted under userR140; no visa exception assumed. All resume formatting and links checked. Application not submitted.",
+      "notes": "NYC / hybrid; Up to $80,000 base. Explicitentrylevel, no priorindustryexperience required, bachelorbusiness accepted. Excel/PowerPoint, marketresearch and analyticalmodels. Pinearsegmentation/budgetmodeling, graduateExcelmodels, clientneedsUN directtransfer. Industryknowledge learned; no M&A/due-diligenceexperience claimed. Employer states no current or future sponsorship. Preparation permitted under userR140; no visa exception assumed. All resume formatting and links checked. Application submitted October 16; confirmed by Misha. Exact submission time unknown.",
       "firstSeenAt": 46311,
-      "appliedAt": ""
+      "appliedAt": "2026-10-16"
     },
     {
       "company": "Precision Medicine Group / Evidence Solutions",
       "position": "Analyst, Market Access Consulting",
       "url": "https://job-boards.greenhouse.io/precisionmedicinegroup/jobs/6205728004",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/12XafZQtD6-jgBR4busY3FTBa1iSuVObr/view?usp=drivesdk",
-      "notes": "NYC / travel as needed; $65,000-$88,000 base. Recentgraduate/earlycareer role, businessbacheloraccepted, analyticalresearch ExcelPowerPointandstakeholdercommunication. No healthcaredegree/experience mandatory; U.S.healthcare/marketaccessknowledge preferred. UNneedsresearch, Pinearmarketresearch/KPIs, graduateanalysis match. Healthcareinterest/travel need userconfirmation, no healthcareexperience invented. Posting requires authorization without employer sponsorship; future sponsorship question present. Included under R140; actualeligibility needs review. All resume formatting and links checked. Application not submitted.",
+      "notes": "NYC / travel as needed; $65,000-$88,000 base. Recentgraduate/earlycareer role, businessbacheloraccepted, analyticalresearch ExcelPowerPointandstakeholdercommunication. No healthcaredegree/experience mandatory; U.S.healthcare/marketaccessknowledge preferred. UNneedsresearch, Pinearmarketresearch/KPIs, graduateanalysis match. Healthcareinterest/travel need userconfirmation, no healthcareexperience invented. Posting requires authorization without employer sponsorship; future sponsorship question present. Included under R140; actualeligibility needs review. All resume formatting and links checked. Application submitted October 16; confirmed by Misha. Exact submission time unknown.",
       "firstSeenAt": 46311,
-      "appliedAt": ""
+      "appliedAt": "2026-10-16"
     },
     {
       "company": "Broadsign",
       "position": "Account Analyst",
       "url": "https://job-boards.greenhouse.io/broadsign/jobs/8019197003",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1c4bEh3s18BlmzzwIAceYTAxtVwb0EZc7/view?usp=drivesdk",
-      "notes": "NYC / hybrid (header says US remote); $60,000-$71,000 base. Explicit0-2years, media planning/execution/reporting and processcoordination; BItools are plus, no sellingquota or prospecting listed. Pineardigitalmarketingsegments/KPIs/budgetplanning transferable; programmaticSSP/DSP not claimed. Adtechdomain learningcurve and paylimited to70-71kacceptable band. Mediaoperations/reporting role, lesspureanalytics thanMetergy. Sponsorship unstated; no assurance, role-specific support UNKNOWN. All resume formatting and links checked. Application not submitted.",
+      "notes": "NYC / hybrid (header says US remote); $60,000-$71,000 base. Explicit0-2years, media planning/execution/reporting and processcoordination; BItools are plus, no sellingquota or prospecting listed. Pineardigitalmarketingsegments/KPIs/budgetplanning transferable; programmaticSSP/DSP not claimed. Adtechdomain learningcurve and paylimited to70-71kacceptable band. Mediaoperations/reporting role, lesspureanalytics thanMetergy. Sponsorship unstated; no assurance, role-specific support UNKNOWN. All resume formatting and links checked. Application submitted October 16; confirmed by Misha. Exact submission time unknown.",
       "firstSeenAt": 46311,
+      "appliedAt": "2026-10-16"
+    },
+    {
+      "company": "American Express",
+      "position": "Campus Graduate Masters Full-Time Senior Analyst - 2027 Data & Analytics, Enterprise Technology Services",
+      "url": "https://careers.americanexpress.com/en/sites/CX_1/job/26013683/",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1Fd_gaYKAJPF7sI-nlu4_6QFNZy7BANEK/view?usp=drivesdk",
+      "notes": "Charlotte hybrid; $89,250–$150,250 base + bonus/benefits. 2027 campus master's analytics program; Dec 2026–Jun 2027 graduation. Senior Analyst is the graduate program title, with no prior tenure minimum. Data quality, KPI dashboards, budgeting/scenarios and responsible AI. No visa sponsorship. Deadline Nov 1 at 03:59 UTC. Resume prepared from approved master; application not submitted.",
+      "firstSeenAt": "2026-10-16",
+      "appliedAt": ""
+    },
+    {
+      "company": "Grant Street Group",
+      "position": "Business Analyst",
+      "url": "https://jobs.lever.co/grantstreet/ee9892b2-41f6-45d7-b31a-56b806fd1565",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1ZjH1FYcsExQNM07k5Gu1bibJ6j2lELKc/view?usp=drivesdk",
+      "notes": "US remote; $70,000–$120,000 base. Entry-level business analysis bridging clients and software developers; training, testing, specifications and implementation. Prior BA experience not required. Requires 10–15% travel. Visa sponsorship unavailable. Resume prepared from approved master; application not submitted.",
+      "firstSeenAt": "2026-10-16",
+      "appliedAt": ""
+    },
+    {
+      "company": "PJT Partners",
+      "position": "Analyst - PJT Park Hill (Corporate - DealCloud)",
+      "url": "https://pjtpartners.wd1.myworkdayjobs.com/Careers/job/New-York/Analyst---Park-Hill-Corporate--DealCloud-_R0003386",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1q9Cis9lvrYY3WV0BXf3ymCOe3XAnsIxB/view?usp=drivesdk",
+      "notes": "New York onsite; $80,000–$100,000 base. BI, CRM data, reporting and quality checks. 0–1 year; internships and academic projects count. Equivalent CRM exposure accepted; DealCloud/VBA/finance experience are advantages. Role sponsorship unstated. Resume prepared from approved master; application not submitted.",
+      "firstSeenAt": "2026-10-16",
+      "appliedAt": ""
+    },
+    {
+      "company": "SemiAnalysis",
+      "position": "Research Analyst, AI Infrastructure & Economics",
+      "url": "https://app.dover.com/apply/SemiAnalysis/c7633db3-0196-4e39-bcdf-75a10526b9f0",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1ok1-0cdGO09XfzW8f8iDKufPmWuA2znL/view?usp=drivesdk",
+      "notes": "NYC or San Francisco, office preferred/hybrid considered. Junior research analyst, 0–3 years; datasets, spreadsheet models and research on AI infrastructure economics. Student projects accepted; Python/SQL optional. Employer hiring system explicitly lists visa support. Base pay unpublished; confirm it meets $70,000 minimum. Resume prepared from approved master; application not submitted.",
+      "firstSeenAt": "2026-10-16",
+      "appliedAt": ""
+    },
+    {
+      "company": "Blue Matter",
+      "position": "Associate / Associate Consultant - Analytics",
+      "url": "https://bluematterconsulting.applytojob.com/apply/5jX75t3YOY/Associate-Associate-Consultant-Analytics-Practice",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1VMr1ywG4DlIxrc_NwFPpFdQw2Frd39i4/view?usp=drivesdk",
+      "notes": "South San Francisco; $70,000–$130,000 base across Associate/Associate Consultant levels. Target Associate (0–1 year): segmentation, regression, dashboards and data quality. Pharma experience preferred. Quantitative education emphasized; MSBA expected December 2026, start timing to confirm. Sponsorship unstated. Resume prepared from approved master; application not submitted.",
+      "firstSeenAt": "2026-10-16",
       "appliedAt": ""
     }
   ],
@@ -3304,6 +3354,54 @@ export const jobSearchData = {
     }
   ],
   "activityHistory": [
+    {
+      "date": "2026-10-16",
+      "type": "Shortlist prepared",
+      "company": "Five new roles",
+      "position": "American Express; Grant Street Group; PJT Partners; SemiAnalysis; Blue Matter",
+      "stage": "Ready to Submit",
+      "source": "Verified employer postings / Google Sheet"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "Applied",
+      "company": "Broadsign",
+      "position": "Account Analyst",
+      "stage": "Applied",
+      "source": "User confirmation / Google Sheet Application History"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "Applied",
+      "company": "Precision Medicine Group / Evidence Solutions",
+      "position": "Analyst, Market Access Consulting",
+      "stage": "Applied",
+      "source": "User confirmation / Google Sheet Application History"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "Applied",
+      "company": "AFRY",
+      "position": "Entry-Level Analyst, Pulp & Paper",
+      "stage": "Applied",
+      "source": "User confirmation / Google Sheet Application History"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "Applied",
+      "company": "Heitmeyer Consulting",
+      "position": "Junior Business Analyst Contractor (Jr. BSA)",
+      "stage": "Applied",
+      "source": "User confirmation / Google Sheet Application History"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "Applied",
+      "company": "Metergy Solutions",
+      "position": "Business Intelligence Analyst",
+      "stage": "Applied",
+      "source": "User confirmation / Google Sheet Application History"
+    },
     {
       "date": "2026-10-16",
       "type": "Search completed",
