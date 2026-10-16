@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "October 15, 2026",
+  "updatedAt": "October 16, 2026",
   "metrics": {
     "applications": 104,
     "interviews": 7,
@@ -2471,6 +2471,36 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1fRTyjKpimuGWuGVXZkVeGKtKDAYLpg7x/view?usp=drivesdk",
       "notes": "NYC / onsite 4 days; $82,500 base. Explicit0-2years post-grad; bacheloranymajorGPA3.0-4.0; intermediateSQL/Python, dataQA and marketingreporting. GPA3.98/3.88, SQLPythoncoursework, Pinear and CampVega directfit. July2027startafterDec2026graduation. No employmentvisa sponsorship; posting explicitly lists H-1B, OPT and TN. User R140 allows preparation; actualJuly2027eligibility not established. Transcript/shortanswers and assessment are human application steps.  Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": 46310.799163194446,
+      "appliedAt": ""
+    },
+    {
+      "company": "Artefact",
+      "position": "Junior AI & Data Consultant",
+      "url": "https://job-boards.greenhouse.io/artefactlinkedin/jobs/8893475002",
+      "status": "Found",
+      "resumeUrl": "https://drive.google.com/file/d/1KoUpGqxL6qGkRKYZZaHPSVFG6wpSeMYD/view?usp=drivesdk",
+      "notes": "Resume prepared for user-selected role. NYC hybrid; $85k-$105k base. AI/data analysis, Copilot Studio, response evaluation and client needs. Sponsorship and start date unconfirmed.",
+      "firstSeenAt": 46311,
+      "appliedAt": ""
+    },
+    {
+      "company": "Capgemini",
+      "position": "C&CA Campus - Associate Application Consultant",
+      "url": "https://careers.capgemini.com/job/New-York%2C-NY-C%26CA-Campus-Associate-Application-Consultant-NY-10001/1447324633/",
+      "status": "Found",
+      "resumeUrl": "https://drive.google.com/file/d/18ENlPN4zn-rt1nASuevfzeKra2ySvGPd/view?usp=drivesdk",
+      "notes": "Resume prepared for user-selected role. NY/NJ hybrid; $48.5k-$92.7k base. Target offer >=$70k. Official Apply button redirected to careers homepage during verification; application route unresolved.",
+      "firstSeenAt": 46311,
+      "appliedAt": ""
+    },
+    {
+      "company": "Deloitte",
+      "position": "Business Analyst, Functional Transformation",
+      "url": "https://www.linkedin.com/jobs/view/4479225734/",
+      "status": "Found",
+      "resumeUrl": "https://drive.google.com/file/d/1PP_GNYVB5duchMOHUyfoGMVJXAWGN3tj/view?usp=drivesdk",
+      "notes": "Resume prepared for user-selected role. NYC; posted range $82.6k-$162.8k, not location-adjusted. One year of product-development lifecycle experience is not clearly established in candidate records. No current/future sponsorship. Application path and eligibility require review.",
+      "firstSeenAt": 46311,
       "appliedAt": ""
     }
   ],
