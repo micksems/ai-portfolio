@@ -27,9 +27,9 @@ export const jobSearchData = {
       "company": "Good Apple",
       "position": "Data Analyst",
       "url": "https://goodapple.applytojob.com/apply/Z8TdorkT0r/Data-Analyst",
-      "status": "Ready to Submit",
+      "status": "Archived",
       "resumeUrl": "https://drive.google.com/file/d/1b6VkvJQiGejDPZuIc5OInUiZcpB-A6Qg/view?usp=drivesdk",
-      "notes": "NYC / onsite Mon-Thu; $85,000 base. Explicitentry-level0-2 years and bachelorGPA>=3.0; desired skills SQL, media analytics, visualization and QA. VerifiedSQL/Python/Tableau, Pinear segmentation/KPIs, CampVegaQA and graduate regression project. Cloud warehouses/pipelines/ad-server tools are learning gaps under Desired qualifications; not claimed. No employment visa sponsorship. Included under explicit R140 permission; current work authorization still requires employer-specific confirmation. Reopened previously unsubmitted role following updated sponsorship preference. Resume prepared from approved master. Application not submitted.",
+      "notes": "October 16: moved out of current shortlist; remains unsubmitted. NYC / onsite Mon-Thu; $85,000 base. Explicitentry-level0-2 years and bachelorGPA>=3.0; desired skills SQL, media analytics, visualization and QA. VerifiedSQL/Python/Tableau, Pinear segmentation/KPIs, CampVegaQA and graduate regression project. Cloud warehouses/pipelines/ad-server tools are learning gaps under Desired qualifications; not claimed. No employment visa sponsorship. Included under explicit R140 permission; current work authorization still requires employer-specific confirmation. Reopened previously unsubmitted role following updated sponsorship preference. Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": "",
       "appliedAt": ""
     },
@@ -2437,9 +2437,9 @@ export const jobSearchData = {
       "company": "Milbank",
       "position": "Business Analyst",
       "url": "https://careers-milbank.icims.com/jobs/1685/business-analyst/job",
-      "status": "Ready to Submit",
+      "status": "Archived",
       "resumeUrl": "https://drive.google.com/file/d/1BjYS_-1EFGXkyU7fcmFdhIWBBUZ53pIr/view?usp=drivesdk",
-      "notes": "NYC / hybrid; $65,000-$85,000 base. No minimum years; analytics/law firm experience preferred. Business-related degree, advanced Excel, BI/database experience, report QC and business metrics. Verified Excel/Tableau/PowerBI/Oracle coursework, student records and KPI analysis match. Sponsorship unstated; current/future authorization requires review.  Resume prepared from approved master. Application not submitted.",
+      "notes": "October 16: moved out of current shortlist; remains unsubmitted. NYC / hybrid; $65,000-$85,000 base. No minimum years; analytics/law firm experience preferred. Business-related degree, advanced Excel, BI/database experience, report QC and business metrics. Verified Excel/Tableau/PowerBI/Oracle coursework, student records and KPI analysis match. Sponsorship unstated; current/future authorization requires review.  Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": 46310.799163194446,
       "appliedAt": ""
     },
@@ -2457,9 +2457,9 @@ export const jobSearchData = {
       "company": "Ekimetrics",
       "position": "Junior Business Scientist, Data Science and Marketing Effectiveness",
       "url": "https://jobs.lever.co/ekimetrics/d9d64766-3d42-4ba9-94d4-f74cdaf20065",
-      "status": "Ready to Submit",
+      "status": "Archived",
       "resumeUrl": "https://drive.google.com/file/d/1MpWAKQyjt6jJA22TGlCdk2-ZOALU9t1P/view?usp=drivesdk",
-      "notes": "NYC / hybrid 3 days; $75,000 base. Explicit0-2 years including internships. BasicPython, data cleaning, regression/marketing metrics and analytical degree/equivalent. MSBA in progress, business bachelor/quant coursework, CampVega20kdata, PinearKPIs and regression project. MMM/Azure/Databricks nice-to-have; not claimed. No visa sponsorship or transfer for this recruitment. Application explicitly offers currently-authorized status as answer; user must answer truthfully and confirm work permission.  Resume prepared from approved master. Application not submitted.",
+      "notes": "October 16: moved out of current shortlist; remains unsubmitted. NYC / hybrid 3 days; $75,000 base. Explicit0-2 years including internships. BasicPython, data cleaning, regression/marketing metrics and analytical degree/equivalent. MSBA in progress, business bachelor/quant coursework, CampVega20kdata, PinearKPIs and regression project. MMM/Azure/Databricks nice-to-have; not claimed. No visa sponsorship or transfer for this recruitment. Application explicitly offers currently-authorized status as answer; user must answer truthfully and confirm work permission.  Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": 46310.799163194446,
       "appliedAt": ""
     },
@@ -2467,9 +2467,9 @@ export const jobSearchData = {
       "company": "Veeva Systems",
       "position": "Marketing Analytics - Data Analyst - July 2027 Start Date - ADP",
       "url": "https://jobs.lever.co/veeva/28c47d34-3ad6-4485-85a9-686b4239b9ea",
-      "status": "Ready to Submit",
+      "status": "Archived",
       "resumeUrl": "https://drive.google.com/file/d/1fRTyjKpimuGWuGVXZkVeGKtKDAYLpg7x/view?usp=drivesdk",
-      "notes": "NYC / onsite 4 days; $82,500 base. Explicit0-2years post-grad; bacheloranymajorGPA3.0-4.0; intermediateSQL/Python, dataQA and marketingreporting. GPA3.98/3.88, SQLPythoncoursework, Pinear and CampVega directfit. July2027startafterDec2026graduation. No employmentvisa sponsorship; posting explicitly lists H-1B, OPT and TN. User R140 allows preparation; actualJuly2027eligibility not established. Transcript/shortanswers and assessment are human application steps.  Resume prepared from approved master. Application not submitted.",
+      "notes": "October 16: moved out of current shortlist; remains unsubmitted. NYC / onsite 4 days; $82,500 base. Explicit0-2years post-grad; bacheloranymajorGPA3.0-4.0; intermediateSQL/Python, dataQA and marketingreporting. GPA3.98/3.88, SQLPythoncoursework, Pinear and CampVega directfit. July2027startafterDec2026graduation. No employmentvisa sponsorship; posting explicitly lists H-1B, OPT and TN. User R140 allows preparation; actualJuly2027eligibility not established. Transcript/shortanswers and assessment are human application steps.  Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": 46310.799163194446,
       "appliedAt": ""
     },
@@ -2502,6 +2502,56 @@ export const jobSearchData = {
       "notes": "User confirmed submission October 16, 2026; exact time unknown. Resume prepared for user-selected role. NYC; posted range $82.6k-$162.8k, not location-adjusted. One year of product-development lifecycle experience is not clearly established in candidate records. No current/future sponsorship. Application path and eligibility require review.",
       "firstSeenAt": 46311,
       "appliedAt": 46311
+    },
+    {
+      "company": "Metergy Solutions",
+      "position": "Business Intelligence Analyst",
+      "url": "https://jobs.lever.co/metergysolutions/1a20d596-888d-4191-b22d-24d7435a7a69",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1B-XNlSpveE2h1ZWf7pSVDiuFRy-dnYGO/view?usp=drivesdk",
+      "notes": "Long Island City, NYC / hybrid 3+days; $70,000-$80,000 base. 0-2years inclinternships, analyticaldegree, ExcelPowerBIPythonSQL, relational databases, data quality and KPIreporting. VerifiedMSBAcoursework, SQLOracleAPEXandTableauprojects, CampVegaQA20k, PinearKPIs and Lewis10krecords. StrongSQL/view-maintenance expected; do not claim production views or pipelines. Skills stretch is depth, not an absent mandated technology. No policy promise; employer asks present authorization and future sponsorship. Role-specific sponsorship UNKNOWN. All resume formatting and links checked. Application not submitted.",
+      "firstSeenAt": 46311,
+      "appliedAt": ""
+    },
+    {
+      "company": "Heitmeyer Consulting",
+      "position": "Junior Business Analyst Contractor (Jr. BSA)",
+      "url": "https://www.heitmeyerconsulting.com/job/14960-jr-bsa-charlotte-north-carolina/",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1bFoPGqZEKghGbVBzRyDzeW9e0OD9ak_I/view?usp=drivesdk",
+      "notes": "Charlotte, NC / contract; Unpublished base. Recentgraduate/up to2years, relateddegree, basicSQL, Excel, requirements/dataanalysis. UNclientneeds/scope, Lewisprojectrecords, CampVegaQA and analyticalcourseworkmatch; no productionUAT/Jiraclaims. Contractduration, W2vsother and pay require confirmation. Sponsorship and CPT/OPT acceptance unstated; role-specific support UNKNOWN. All resume formatting and links checked. Application not submitted.",
+      "firstSeenAt": 46311,
+      "appliedAt": ""
+    },
+    {
+      "company": "AFRY",
+      "position": "Entry-Level Analyst, Pulp & Paper",
+      "url": "https://jobs.smartrecruiters.com/AFRY/744000152200360-entry-level-analyst-pulp-paper",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/15_0RyeYt5MybqwX1NnLGLT6AQyMJY0l_/view?usp=drivesdk",
+      "notes": "NYC / hybrid; Up to $80,000 base. Explicitentrylevel, no priorindustryexperience required, bachelorbusiness accepted. Excel/PowerPoint, marketresearch and analyticalmodels. Pinearsegmentation/budgetmodeling, graduateExcelmodels, clientneedsUN directtransfer. Industryknowledge learned; no M&A/due-diligenceexperience claimed. Employer states no current or future sponsorship. Preparation permitted under userR140; no visa exception assumed. All resume formatting and links checked. Application not submitted.",
+      "firstSeenAt": 46311,
+      "appliedAt": ""
+    },
+    {
+      "company": "Precision Medicine Group / Evidence Solutions",
+      "position": "Analyst, Market Access Consulting",
+      "url": "https://job-boards.greenhouse.io/precisionmedicinegroup/jobs/6205728004",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/12XafZQtD6-jgBR4busY3FTBa1iSuVObr/view?usp=drivesdk",
+      "notes": "NYC / travel as needed; $65,000-$88,000 base. Recentgraduate/earlycareer role, businessbacheloraccepted, analyticalresearch ExcelPowerPointandstakeholdercommunication. No healthcaredegree/experience mandatory; U.S.healthcare/marketaccessknowledge preferred. UNneedsresearch, Pinearmarketresearch/KPIs, graduateanalysis match. Healthcareinterest/travel need userconfirmation, no healthcareexperience invented. Posting requires authorization without employer sponsorship; future sponsorship question present. Included under R140; actualeligibility needs review. All resume formatting and links checked. Application not submitted.",
+      "firstSeenAt": 46311,
+      "appliedAt": ""
+    },
+    {
+      "company": "Broadsign",
+      "position": "Account Analyst",
+      "url": "https://job-boards.greenhouse.io/broadsign/jobs/8019197003",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1c4bEh3s18BlmzzwIAceYTAxtVwb0EZc7/view?usp=drivesdk",
+      "notes": "NYC / hybrid (header says US remote); $60,000-$71,000 base. Explicit0-2years, media planning/execution/reporting and processcoordination; BItools are plus, no sellingquota or prospecting listed. Pineardigitalmarketingsegments/KPIs/budgetplanning transferable; programmaticSSP/DSP not claimed. Adtechdomain learningcurve and paylimited to70-71kacceptable band. Mediaoperations/reporting role, lesspureanalytics thanMetergy. Sponsorship unstated; no assurance, role-specific support UNKNOWN. All resume formatting and links checked. Application not submitted.",
+      "firstSeenAt": 46311,
+      "appliedAt": ""
     }
   ],
   "interviewEvents": [
@@ -3254,6 +3304,14 @@ export const jobSearchData = {
     }
   ],
   "activityHistory": [
+    {
+      "date": "2026-10-16",
+      "type": "Search completed",
+      "company": "Five new unsubmitted roles",
+      "position": "Business analysis, BI, consulting and media reporting",
+      "stage": "Ready to Submit",
+      "source": "Live employer postings; canonical tracker and history"
+    },
     {
       "date": "2026-10-16",
       "type": "Application",
