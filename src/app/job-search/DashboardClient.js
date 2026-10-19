@@ -8,7 +8,7 @@ export default function DashboardClient({ jobSearchData }) {
   const metrics = [
     {
       label: "Applications",
-      value: lifetime.applications ?? jobs.filter((job) => ["Applied", "Interview", "Offer"].includes(job.status)).length,
+      value: lifetime.applications ?? "—",
       description: lifetime.trackerStartedAt
         ? `Confirmed since ${lifetime.trackerStartedAt}`
         : "Lifetime submitted applications",
@@ -20,12 +20,12 @@ export default function DashboardClient({ jobSearchData }) {
     },
     {
       label: "Offers",
-      value: lifetime.offers ?? jobs.filter((job) => job.status === "Offer").length,
+      value: lifetime.offers ?? "—",
       description: "Offers received",
     },
     {
       label: "Rejections",
-      value: lifetime.rejections ?? jobs.filter((job) => job.status === "Rejected").length,
+      value: lifetime.rejections ?? "—",
       description: "Lifetime application rejections",
     },
   ];
@@ -77,13 +77,13 @@ export default function DashboardClient({ jobSearchData }) {
         </dl>
 
         <p className="mt-4 text-xs leading-5 text-slate-500">
-          Application totals are cumulative. Rejected or closed applications remain included in the lifetime application count.
+          Applications count unique confirmed submissions since August 24, 2026. Rejected and closed applications remain included; unverified submissions are excluded. Interviews and rejections show lifetime confirmed outcomes.
         </p>
 
         <section aria-labelledby="active-jobs-heading" className="mt-10">
           <h2 id="active-jobs-heading" className="text-xl font-semibold">Your current shortlist</h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            Ready to submit means the application form has been checked. The other roles remain in your shortlist while their final form review is pending.
+            Ready to submit means the resume is prepared and the application path has been checked. These applications have not been confirmed submitted.
           </p>
           <ul className="mt-5 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
             {activeJobs.map((job) => (
