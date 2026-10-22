@@ -3453,14 +3453,14 @@ export const jobSearchData = {
       "company": "American Express",
       "position": "Campus Graduate Masters Full-Time Senior Analyst - 2027 Data & Analytics, Enterprise Technology Services - New York",
       "url": "https://careers.americanexpress.com/en/sites/CX_1/job/26013102/",
-      "status": "Ready to Submit",
+      "status": "Archived",
       "resumeUrl": "https://drive.google.com/file/d/15vn3Z-ef0TWZtVYPBXnf5HhwvHU3mUPg/view?usp=drivesdk",
-      "notes": "New NYC graduate requisition26013102, separate from previous Charlotte26013683. $89,250–$150,250 base plus bonus/benefits; hybrid. Explicit master graduate program accepts Dec2026–Jun2027 graduation;2027 start. Senior Analyst is a graduate degree band, not an experienced lead role. PostedSep2; older-role exception for a future graduate cohort. Apply beforeOct31 11:59pmET. No visa sponsorship. Confirm actual work eligibility. October22: retained and reverified against current employer Oracle detail; existing PDF unchanged. Deadline Oct31 23:59ET; Dec2026-Jun2027 graduation accepted.",
+      "notes": "New NYC graduate requisition26013102, separate from previous Charlotte26013683. $89,250–$150,250 base plus bonus/benefits; hybrid. Explicit master graduate program accepts Dec2026–Jun2027 graduation;2027 start. Senior Analyst is a graduate degree band, not an experienced lead role. PostedSep2; older-role exception for a future graduate cohort. Apply beforeOct31 11:59pmET. No visa sponsorship. Confirm actual work eligibility. October22: retained and reverified against current employer Oracle detail; existing PDF unchanged. Deadline Oct31 23:59ET; Dec2026-Jun2027 graduation accepted. October22 user correction: Senior and Lead positions are excluded, including campus titlebands. Removed unsubmitted from current shortlist; PDF/history preserved. Replaced with Emendata entry-level DataAnalyst.",
       "firstSeenAt": "2026-10-19",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Active",
+      "finalOutcome": "Other",
       "applicationCheckedAt": "2026-10-22"
     },
     {
@@ -3554,6 +3554,20 @@ export const jobSearchData = {
       "status": "Ready to Submit",
       "resumeUrl": "https://drive.google.com/file/d/12t0WZmAeKOvr87u5r7e5azdjxC8MAYu4/view?usp=drivesdk",
       "notes": "Charlotte, NC / hybrid; Base pay unpublished. Data quality and market research for internal sales analytics, no selling quota. Pay/start/sponsorship unpublished; confirm base at least70k. Posting: 2026-10-19T22:12:46.645201Z. Advertised3daysago; very direct dataQC/Excel/research scope and internships accepted. SalesDataAnalytics team produces research datasets/recordvalidation for internal colleagues; no cold calling, outbound selling, quotas or account sales duties. Payunknown must meet70kbase; ask before lengthy interview. Distinct from old Foodbuy DataIntelligenceAnalyst1416572600.",
+      "firstSeenAt": "2026-10-22",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "applicationCheckedAt": "2026-10-22"
+    },
+    {
+      "company": "Emendata",
+      "position": "Data Analyst",
+      "url": "https://job-boards.greenhouse.io/emendata/jobs/4164352003",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1R9ES-oMGntVSy9M0hLWUOkK7rXYTfwH3/view?usp=drivesdk",
+      "notes": "San Francisco onsite; new graduates explicitly welcome. Data cleaning/linking, statistical research and reporting; basic/intermediate Python/SQL/R. Evergreen requisition first published2020, updatedSep28,2026; current form/board verifiedOct22, not represented as fresh or proof of unfilled seat. Base pay and start unpublished; confirm base>=70k. No current/future visa sponsorship; SF85 background investigation and undergraduate transcript required. User expectedDec2026 graduation accurate; sensitive eligibility questions need review. Resume/masterfont/onepage/23bullets/3links checked.",
       "firstSeenAt": "2026-10-22",
       "appliedAt": "",
       "submissionConfirmed": false,
@@ -4312,6 +4326,14 @@ export const jobSearchData = {
     }
   ],
   "activityHistory": [
+    {
+      "date": "2026-10-22",
+      "type": "Shortlist corrected",
+      "company": "Entry-level-only rule",
+      "position": "Amex Senior Analyst removed; Emendata Data Analyst added. Five new matched entry-level roles completed.",
+      "stage": "Ready to Submit",
+      "source": "Explicit user correction; native rules and executable preflight updated: Senior/Sr/Lead excluded; exact requested new-job count enforced."
+    },
     {
       "date": "2026-10-22",
       "type": "Shortlist prepared",
