@@ -1,7 +1,7 @@
 export const jobSearchData = {
-  "updatedAt": "October 22, 2026",
+  "updatedAt": "October 23, 2026",
   "metrics": {
-    "applications": 111,
+    "applications": 117,
     "interviews": 7,
     "offers": 0,
     "rejections": 35,
@@ -13,7 +13,7 @@ export const jobSearchData = {
     "onlineAssessments": 1,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-10-22"
+    "auditedAt": "2026-10-23"
   },
   "jobs": [
     {
@@ -3453,14 +3453,14 @@ export const jobSearchData = {
       "company": "American Express",
       "position": "Campus Graduate Masters Full-Time Senior Analyst - 2027 Data & Analytics, Enterprise Technology Services - New York",
       "url": "https://careers.americanexpress.com/en/sites/CX_1/job/26013102/",
-      "status": "Archived",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/15vn3Z-ef0TWZtVYPBXnf5HhwvHU3mUPg/view?usp=drivesdk",
-      "notes": "New NYC graduate requisition26013102, separate from previous Charlotte26013683. $89,250–$150,250 base plus bonus/benefits; hybrid. Explicit master graduate program accepts Dec2026–Jun2027 graduation;2027 start. Senior Analyst is a graduate degree band, not an experienced lead role. PostedSep2; older-role exception for a future graduate cohort. Apply beforeOct31 11:59pmET. No visa sponsorship. Confirm actual work eligibility. October22: retained and reverified against current employer Oracle detail; existing PDF unchanged. Deadline Oct31 23:59ET; Dec2026-Jun2027 graduation accepted. October22 user correction: Senior and Lead positions are excluded, including campus titlebands. Removed unsubmitted from current shortlist; PDF/history preserved. Replaced with Emendata entry-level DataAnalyst.",
+      "notes": "October 23, 2026: Misha confirmed submission of the current five roles plus Amex New York, explicitly including Emendata. Submission date recorded; individual times unknown. This supersedes earlier unsubmitted/archive status. Submitted resume snapshot retained.\n\nNew NYC graduate requisition26013102, separate from previous Charlotte26013683. $89,250–$150,250 base plus bonus/benefits; hybrid. Explicit master graduate program accepts Dec2026–Jun2027 graduation;2027 start. Senior Analyst is a graduate degree band, not an experienced lead role. PostedSep2; older-role exception for a future graduate cohort. Apply beforeOct31 11:59pmET. No visa sponsorship. Confirm actual work eligibility. October22: retained and reverified against current employer Oracle detail; existing PDF unchanged. Deadline Oct31 23:59ET; Dec2026-Jun2027 graduation accepted. October22 user correction: Senior and Lead positions are excluded, including campus titlebands. Removed unsubmitted from current shortlist; PDF/history preserved. Replaced with Emendata entry-level DataAnalyst.",
       "firstSeenAt": "2026-10-19",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
-      "finalOutcome": "Other",
+      "appliedAt": "2026-10-23",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
+      "finalOutcome": "Active",
       "applicationCheckedAt": "2026-10-22"
     },
     {
@@ -3509,13 +3509,13 @@ export const jobSearchData = {
       "company": "Lantern",
       "position": "Operations Automation Specialist",
       "url": "https://job-boards.greenhouse.io/employerdirecthealthcare/jobs/5256718007",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/12tfBBL6jdE5v-ao_ewLnN2ep8JcDysow/view?usp=drivesdk",
-      "notes": "New York, NY / hybrid3days; $90,000-$120,000 base. Begins with hands-on provider inquiries; healthcare/Databricks taught. Start and sponsorship unknown. Posting: 2026-10-05T15:14:59Z. 17-day posting with direct UN agent-workflow/evaluation, dataQA and business-service fit. Fresh graduates explicitly encouraged; domain and Databricks taught. Actual work begins with provider inquiry resolution before automation; disclose service component. Stronger evidence than mandatory-warehouse roles.",
+      "notes": "October 23, 2026: Misha confirmed submission of the current five roles plus Amex New York, explicitly including Emendata. Submission date recorded; individual times unknown. This supersedes earlier unsubmitted/archive status. Submitted resume snapshot retained.\n\nNew York, NY / hybrid3days; $90,000-$120,000 base. Begins with hands-on provider inquiries; healthcare/Databricks taught. Start and sponsorship unknown. Posting: 2026-10-05T15:14:59Z. 17-day posting with direct UN agent-workflow/evaluation, dataQA and business-service fit. Fresh graduates explicitly encouraged; domain and Databricks taught. Actual work begins with provider inquiry resolution before automation; disclose service component. Stronger evidence than mandatory-warehouse roles.",
       "firstSeenAt": "2026-10-22",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-10-23",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "applicationCheckedAt": "2026-10-22"
     },
@@ -3523,13 +3523,13 @@ export const jobSearchData = {
       "company": "Makai Labs",
       "position": "Forward Deployed AI Analyst",
       "url": "https://jobs.ashbyhq.com/makai-labs/3d4373e8-e09a-4034-a8e0-d511cef44fc7",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/15q3QWTrUKxZGuNbB8DX6LPWdV0JhaFEu/view?usp=drivesdk",
-      "notes": "US remote / NY,CA,MA,NJ,NC,TX; ET overlap; $110,000-$120,000 base. Summer2027 full-time starts; January paid micro-cohort separate. No visa sponsorship. Screening questions require own writing; no production deployment experience claimed. Posting: unknown. Unknown-age exception: explicit early-career client workflow discovery and AI agent prototype remit closely matches UN scope/assistant plus DataAnnotation evaluation. Summer2027 start fits Dec2026. Lower urgency than recent Compass. No promise of production experience or employer visa exception.",
+      "notes": "October 23, 2026: Misha confirmed submission of the current five roles plus Amex New York, explicitly including Emendata. Submission date recorded; individual times unknown. This supersedes earlier unsubmitted/archive status. Submitted resume snapshot retained.\n\nUS remote / NY,CA,MA,NJ,NC,TX; ET overlap; $110,000-$120,000 base. Summer2027 full-time starts; January paid micro-cohort separate. No visa sponsorship. Screening questions require own writing; no production deployment experience claimed. Posting: unknown. Unknown-age exception: explicit early-career client workflow discovery and AI agent prototype remit closely matches UN scope/assistant plus DataAnnotation evaluation. Summer2027 start fits Dec2026. Lower urgency than recent Compass. No promise of production experience or employer visa exception.",
       "firstSeenAt": "2026-10-22",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-10-23",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "applicationCheckedAt": "2026-10-22"
     },
@@ -3537,13 +3537,13 @@ export const jobSearchData = {
       "company": "Charles River Associates",
       "position": "2027 Accounting / Business / Finance Consulting Analyst / Associate",
       "url": "https://job-boards.greenhouse.io/charlesriverassociates/jobs/8054054",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1u-LIOwnihQKHlhLGsiwo8lW0f9wu-qwl/view?usp=drivesdk",
-      "notes": "New York, NY / Intellectual Property;3-4office days; $92,500-$100,000 base. December2026 graduates explicitly eligible. NYC IntellectualProperty practice. Cover letter and undergraduate transcript required; graduate transcript if applicable. Company immigration/OPT support documented; current requisition approval conditional. Posting: 2026-07-14T16:11:23Z. 100-day future-graduate exception: Dec2026 explicitly accepted, NY IntellectualProperty practice and finance/business/Excel/regression research fit. Positive official OPT/immigration support history strengthens pursuit; current requisition support remains conditional. Cover letter+transcripts required. No GAAP expert/valuation/forensics claim.",
+      "notes": "October 23, 2026: Misha confirmed submission of the current five roles plus Amex New York, explicitly including Emendata. Submission date recorded; individual times unknown. This supersedes earlier unsubmitted/archive status. Submitted resume snapshot retained.\n\nNew York, NY / Intellectual Property;3-4office days; $92,500-$100,000 base. December2026 graduates explicitly eligible. NYC IntellectualProperty practice. Cover letter and undergraduate transcript required; graduate transcript if applicable. Company immigration/OPT support documented; current requisition approval conditional. Posting: 2026-07-14T16:11:23Z. 100-day future-graduate exception: Dec2026 explicitly accepted, NY IntellectualProperty practice and finance/business/Excel/regression research fit. Positive official OPT/immigration support history strengthens pursuit; current requisition support remains conditional. Cover letter+transcripts required. No GAAP expert/valuation/forensics claim.",
       "firstSeenAt": "2026-10-22",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-10-23",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "applicationCheckedAt": "2026-10-22"
     },
@@ -3551,13 +3551,13 @@ export const jobSearchData = {
       "company": "Compass Group",
       "position": "Data Analyst",
       "url": "https://careers.compass-usa.com/data-analyst-charlotte-nc-hybrid/job/5E66E542BE09BACDA81D38167C1649B8",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/12t0WZmAeKOvr87u5r7e5azdjxC8MAYu4/view?usp=drivesdk",
-      "notes": "Charlotte, NC / hybrid; Base pay unpublished. Data quality and market research for internal sales analytics, no selling quota. Pay/start/sponsorship unpublished; confirm base at least70k. Posting: 2026-10-19T22:12:46.645201Z. Advertised3daysago; very direct dataQC/Excel/research scope and internships accepted. SalesDataAnalytics team produces research datasets/recordvalidation for internal colleagues; no cold calling, outbound selling, quotas or account sales duties. Payunknown must meet70kbase; ask before lengthy interview. Distinct from old Foodbuy DataIntelligenceAnalyst1416572600.",
+      "notes": "October 23, 2026: Misha confirmed submission of the current five roles plus Amex New York, explicitly including Emendata. Submission date recorded; individual times unknown. This supersedes earlier unsubmitted/archive status. Submitted resume snapshot retained.\n\nCharlotte, NC / hybrid; Base pay unpublished. Data quality and market research for internal sales analytics, no selling quota. Pay/start/sponsorship unpublished; confirm base at least70k. Posting: 2026-10-19T22:12:46.645201Z. Advertised3daysago; very direct dataQC/Excel/research scope and internships accepted. SalesDataAnalytics team produces research datasets/recordvalidation for internal colleagues; no cold calling, outbound selling, quotas or account sales duties. Payunknown must meet70kbase; ask before lengthy interview. Distinct from old Foodbuy DataIntelligenceAnalyst1416572600.",
       "firstSeenAt": "2026-10-22",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-10-23",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "applicationCheckedAt": "2026-10-22"
     },
@@ -3565,13 +3565,13 @@ export const jobSearchData = {
       "company": "Emendata",
       "position": "Data Analyst",
       "url": "https://job-boards.greenhouse.io/emendata/jobs/4164352003",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1R9ES-oMGntVSy9M0hLWUOkK7rXYTfwH3/view?usp=drivesdk",
-      "notes": "San Francisco onsite; new graduates explicitly welcome. Data cleaning/linking, statistical research and reporting; basic/intermediate Python/SQL/R. Evergreen requisition first published2020, updatedSep28,2026; current form/board verifiedOct22, not represented as fresh or proof of unfilled seat. Base pay and start unpublished; confirm base>=70k. No current/future visa sponsorship; SF85 background investigation and undergraduate transcript required. User expectedDec2026 graduation accurate; sensitive eligibility questions need review. Resume/masterfont/onepage/23bullets/3links checked.",
+      "notes": "October 23, 2026: Misha confirmed submission of the current five roles plus Amex New York, explicitly including Emendata. Submission date recorded; individual times unknown. This supersedes earlier unsubmitted/archive status. Submitted resume snapshot retained.\n\nSan Francisco onsite; new graduates explicitly welcome. Data cleaning/linking, statistical research and reporting; basic/intermediate Python/SQL/R. Evergreen requisition first published2020, updatedSep28,2026; current form/board verifiedOct22, not represented as fresh or proof of unfilled seat. Base pay and start unpublished; confirm base>=70k. No current/future visa sponsorship; SF85 background investigation and undergraduate transcript required. User expectedDec2026 graduation accurate; sensitive eligibility questions need review. Resume/masterfont/onepage/23bullets/3links checked.",
       "firstSeenAt": "2026-10-22",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-10-23",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "applicationCheckedAt": "2026-10-22"
     }
@@ -4326,6 +4326,54 @@ export const jobSearchData = {
     }
   ],
   "activityHistory": [
+    {
+      "date": "2026-10-23",
+      "type": "Applied",
+      "company": "American Express",
+      "position": "Campus Graduate Masters Full-Time Senior Analyst - 2027 Data & Analytics, Enterprise Technology Services - New York",
+      "stage": "Applied",
+      "source": "Misha's explicit submission confirmation; canonical tracker and Application History updated. Individual submission time unknown."
+    },
+    {
+      "date": "2026-10-23",
+      "type": "Applied",
+      "company": "Lantern",
+      "position": "Operations Automation Specialist",
+      "stage": "Applied",
+      "source": "Misha's explicit submission confirmation; canonical tracker and Application History updated. Individual submission time unknown."
+    },
+    {
+      "date": "2026-10-23",
+      "type": "Applied",
+      "company": "Makai Labs",
+      "position": "Forward Deployed AI Analyst",
+      "stage": "Applied",
+      "source": "Misha's explicit submission confirmation; canonical tracker and Application History updated. Individual submission time unknown."
+    },
+    {
+      "date": "2026-10-23",
+      "type": "Applied",
+      "company": "Charles River Associates",
+      "position": "2027 Accounting / Business / Finance Consulting Analyst / Associate",
+      "stage": "Applied",
+      "source": "Misha's explicit submission confirmation; canonical tracker and Application History updated. Individual submission time unknown."
+    },
+    {
+      "date": "2026-10-23",
+      "type": "Applied",
+      "company": "Compass Group",
+      "position": "Data Analyst",
+      "stage": "Applied",
+      "source": "Misha's explicit submission confirmation; canonical tracker and Application History updated. Individual submission time unknown."
+    },
+    {
+      "date": "2026-10-23",
+      "type": "Applied",
+      "company": "Emendata",
+      "position": "Data Analyst",
+      "stage": "Applied",
+      "source": "Misha's explicit submission confirmation; canonical tracker and Application History updated. Individual submission time unknown."
+    },
     {
       "date": "2026-10-22",
       "type": "Shortlist corrected",
