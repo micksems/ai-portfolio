@@ -4172,6 +4172,86 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "greenhouse:8039471003",
+      "company": "Affirm",
+      "position": "Analyst, Early Career (Full Stack)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/8039471003",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/184S8G8q-6F9wxAZuGOi04PwO6suhCtYt/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-23",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "activateconsulting.applytojob.com/apply/sfmi8byazw/2027-business-analyst",
+      "company": "Activate Consulting",
+      "position": "2027 Business Analyst",
+      "url": "https://activateconsulting.applytojob.com/apply/sFMI8ByazW/2027-Business-Analyst",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1Dj6_6NkmPd122iPsk0uOI02GLU1SfgRU/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-23",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "greenhouse:4742654005",
+      "company": "iSpot",
+      "position": "Associate Data Analyst",
+      "url": "https://job-boards.greenhouse.io/ispottv/jobs/4742654005",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1iIOB6NnkHW8CHmlZk2OQxAD_CMhKiBaN/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-23",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "greenhouse:4450114009",
+      "company": "Industrial Electric Manufacturing",
+      "position": "Data Analyst",
+      "url": "https://job-boards.greenhouse.io/industrialelectricmanufacturing/jobs/4450114009",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/15ePAG9M1MXTye6NXROkgU1KEFwH48-ie/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-23",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "brixmor.wd504.myworkdayjobs.com:jr100023",
+      "company": "Brixmor Property Group",
+      "position": "Analyst, Financial Asset Management",
+      "url": "https://brixmor.wd504.myworkdayjobs.com/External_Career/job/New-York-NY-US/Analyst--Financial-Asset-Management_JR100023",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1DzbPNITJJXWWKxx-FL0powt4Ho1kFO-7/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-23",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -5209,10 +5289,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-23T16:32:39.228Z",
-    "sha256": "6b2a192a6bd2bb9b40aaba2b7b513f279883cee752f139ab6f17e0e03096d412",
-    "historyRecords": 189,
-    "trackerRecords": 269,
-    "uniqueHistoryRecords": 186
+    "readAt": "2026-10-23T17:10:28.987Z",
+    "sha256": "b640a0ab0c12b6c8501cb37626417161dcf265bcd44084fd3785d46b88ab119d",
+    "historyRecords": 194,
+    "trackerRecords": 274,
+    "uniqueHistoryRecords": 191
   }
 };
