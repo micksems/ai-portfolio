@@ -4,7 +4,7 @@ export const jobSearchData = {
     "applications": 117,
     "interviews": 7,
     "offers": 0,
-    "rejections": 35,
+    "rejections": 37,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -13,7 +13,8 @@ export const jobSearchData = {
     "onlineAssessments": 1,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-10-23"
+    "auditedAt": "2026-10-23",
+    "lifetimeApplications": 121
   },
   "jobs": [
     {
@@ -33,14 +34,17 @@ export const jobSearchData = {
       "company": "Good Apple",
       "position": "Data Analyst",
       "url": "https://goodapple.applytojob.com/apply/Z8TdorkT0r/Data-Analyst",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1b6VkvJQiGejDPZuIc5OInUiZcpB-A6Qg/view?usp=drivesdk",
       "notes": "October 16: moved out of current shortlist; remains unsubmitted. NYC / onsite Mon-Thu; $85,000 base. Explicitentry-level0-2 years and bachelorGPA>=3.0; desired skills SQL, media analytics, visualization and QA. VerifiedSQL/Python/Tableau, Pinear segmentation/KPIs, CampVegaQA and graduate regression project. Cloud warehouses/pipelines/ad-server tools are learning gaps under Desired qualifications; not claimed. No employment visa sponsorship. Included under explicit R140 permission; current work authorization still requires employer-specific confirmation. Reopened previously unsubmitted role following updated sponsorship preference. Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": "",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "goodapple.applytojob.com/apply/z8tdorkt0r/data-analyst",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Instawork",
@@ -102,10 +106,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/10KQ3X2LaeB4Me-ezyeOaRUP0V5YNc98N/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; exact Greenhouse role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-20",
-      "appliedAt": "2026-09-20",
+      "appliedAt": "20/09/2026 13:49:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:4583589006",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Charlie Health",
@@ -128,23 +135,29 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1FYpMoYl1W66MruGgiUz6llt767r2G7MQ/view?usp=drivesdk",
       "notes": "October 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\n2026-10-03 fresh re-entry after primary-role reprioritization. Exact employer requisition 5997404004 is live; external application destination exposes Submit application. NYC hybrid/four office days, $75,000-$100,000 base plus target bonus, 1-3 years, advanced Excel and SQL/Tableau strongly preferred. Core work is data analysis, dashboards, process design and cross-functional operational improvement. Sponsorship is not stated; retained as an exceptional analytical match under V-03 neutral treatment, not as sponsorship evidence. One-page position-specific PDF rebuilt from the approved master; extracted text and visual QA passed.",
       "firstSeenAt": "2026-10-03",
-      "appliedAt": "2026-10-04",
+      "appliedAt": "04/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:5997404004",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Rain",
       "position": "Implementation Specialist",
       "url": "https://jobs.ashbyhq.com/rain/2a014d5a-c59e-4cac-9fa9-b365991ae27a",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1cXyqY_CS3jms5-U4p8v3UhuFyq8ITpEH/view?usp=drivesdk",
       "notes": "Archived 22/09/2026 after fresh ranking: replaced by stronger verified active options; archive is not employer rejection.",
       "firstSeenAt": "",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:2a014d5a-c59e-4cac-9fa9-b365991ae27a",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Nen Creative",
@@ -163,27 +176,33 @@ export const jobSearchData = {
       "company": "Stepful",
       "position": "Revenue Operations Analyst",
       "url": "https://jobs.ashbyhq.com/Stepful/b5ffd982-cc32-49d3-a033-c2bf22d69d5b",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "2026-08-24",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:b5ffd982-cc32-49d3-a033-c2bf22d69d5b",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Horizon Media",
       "position": "Analyst, BI, Product Management",
       "url": "https://horizonmedia.wd1.myworkdayjobs.com/CareerOpportunities/job/New-York-New-York/Analyst--BI--Product-Management_R0017344",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/12d6XZYczGwjJ5DvLO1k1ZwVnTtaEJeDo/view?usp=drivesdk",
       "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC hybrid; base 70,000–85,000. No years minimum; Excel and media experience preferred; academic SQL accepted. Pinear, data validation and model evaluation fit. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "2026-08-24",
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Rejected",
+      "canonicalKey": "horizonmedia.wd1.myworkdayjobs.com:r0017344",
+      "rejectionAt": "10/21/2026 00:08",
+      "offerAt": ""
     },
     {
       "company": "NBA",
@@ -196,7 +215,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "nba.wd108.myworkdayjobs.com:jr000874",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Columbia University",
@@ -209,7 +231,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "opportunities.columbia.edu/en-us/jobs/associate-data-analyst-new-york-united-states",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Capital Group",
@@ -228,14 +253,17 @@ export const jobSearchData = {
       "company": "Macy's",
       "position": "Product Management Assistant",
       "url": "https://www.indeed.com/viewjob?jk=047cd4d6b11956e1",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "2026-08-24",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.indeed.com/viewjob?jk=047cd4d6b11956e1",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Grapevine",
@@ -248,7 +276,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-10",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "jobs.ashbyhq.com:b785642f-d4a4-466b-9458-9e7e422bc1af",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Salesforce",
@@ -261,7 +292,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "to.indeed.com/aalvfhdpy94m",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Foodbuy",
@@ -310,10 +344,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1w77O4jYJHbnDX_g-zQHhEFcQAhiUC4js/view?usp=drivesdk",
       "notes": "October 7, 2026 12:47 ET: Misha confirmed all three submissions (Instawork AI & Automation, Metropolitan Applied AI Analyst, PineBridge Data Systems Analyst). Date recorded; exact submission times not provided. Preserve final submitted PDF snapshot.\n\nManual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial live full description AND application fields/Submit Application inspected October 7: https://job-boards.greenhouse.io/instawork/jobs/4702041006 . Base $90,000-$120,000 plus equity. Accepts 0-3 years, including new grads with strong internships. Analytics, workflow automation, compensation process and forecasting operations; no selling or prospecting quota. Fit: UN Copilot Studio multi-agent assistant, client-needs scoping, AI output evaluation, Lewis data operations and Excel analytics. Gaps: no verified payroll/commission administration, Salesforce, n8n or production compensation automation. Reopened existing tracker row24 after live employer form verified; original August30 first-seen preserved. No history submission for this requisition. Different from Applied Instawork Product Operations req4583589006.",
       "firstSeenAt": "2026-08-30",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:4702041006",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Finch",
@@ -358,14 +395,17 @@ export const jobSearchData = {
       "company": "Harper",
       "position": "Business Operations Associate",
       "url": "https://jobs.ashbyhq.com/harperinsure/f635e211-fda5-4628-a3fb-d61ef12b8052",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "2026-08-31",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:f635e211-fda5-4628-a3fb-d61ef12b8052",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Hive",
@@ -378,7 +418,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-09",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:a9a638ae-bafa-4cfd-9edc-c4a6c3df566a",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Hive",
@@ -391,26 +434,32 @@ export const jobSearchData = {
       "appliedAt": "2026-10-09",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:1043f588-0fb2-40cf-af3f-267f4c117975",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "iHeartMedia",
       "position": "Digital Data Analyst",
       "url": "https://iheartmedia.wd5.myworkdayjobs.com/en-US/External_iHM/job/New-York-NY-55th-St/Digital-Data-Analyst_Req38532-2",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "2026-08-31",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "iheartmedia.wd5.myworkdayjobs.com:req38532",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Tryon Medical Partners",
       "position": "Procurement Analyst",
       "url": "https://tryonmedicalpartners.applytojob.com/apply/AVTtKFYT8t/Procurement-Analyst",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "Open PDF",
       "notes": "7d+",
       "firstSeenAt": "2026-08-31",
@@ -418,7 +467,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-08"
+      "rejectedAt": "2026-09-08",
+      "canonicalKey": "tryonmedicalpartners.applytojob.com/apply/avttkfyt8t/procurement-analyst",
+      "rejectionAt": "2026-09-08",
+      "offerAt": ""
     },
     {
       "company": "Judi Health",
@@ -444,7 +496,10 @@ export const jobSearchData = {
       "appliedAt": "2026-09-01",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:b3b5a129-776c-4b57-a326-5306e509e9b6",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Treeswift",
@@ -593,7 +648,7 @@ export const jobSearchData = {
       "company": "Fortuna Health",
       "position": "Product Operations Associate",
       "url": "https://jobs.ashbyhq.com/fortuna-health/aa48c14b-e38e-4f27-84ef-a6b032bb9b60/application",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1P-EiUyUyzBDZyXxZvZBnafETUMYpFnnf/view?usp=drivesdk",
       "notes": "September 28, 2026, 09:12 ET: Fortuna rejected the application. No specific reason provided; no ATS or sponsorship cause established. Gmail 1a0e824d9a871acb.\n\nSUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Retained from September 25 automated run; previously seen, not applied. Explicitly accepts 0–1 years including internships. Operational recordkeeping, service requests, data quality and internal user needs align closely. Gap: No Medicaid-specific experience; posting says none is needed. Full-time onsite start date and work authorization remain to be confirmed. Score 24+17+18+15+8+7=89; fit only, not ATS probability. $90,000; New York City, onsite five days. Authorization: Not stated in employer posting; CPT/OPT acceptance and start date need confirmation. Exact public destination revalidated September 25. Morning form verification retained; onsite availability and start date need user review. Resume: https://drive.google.com/file/d/1P-EiUyUyzBDZyXxZvZBnafETUMYpFnnf/view?usp=drivesdk Cover: https://drive.google.com/file/d/1fGfPOpYGfMEgw-OwhLiE5BaaJ0XeKyyw/view?usp=drivesdk",
       "firstSeenAt": "2026-09-03",
@@ -601,7 +656,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-28"
+      "rejectedAt": "2026-09-28",
+      "canonicalKey": "jobs.ashbyhq.com:aa48c14b-e38e-4f27-84ef-a6b032bb9b60",
+      "rejectionAt": "2026-09-28",
+      "offerAt": ""
     },
     {
       "company": "Meow",
@@ -754,16 +812,19 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1jiBga8lBkTv_xVfPe8ty7IXQ2aq8UWIl/view?usp=drivesdk",
       "notes": "October 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\n2026-10-03 fresh re-entry based on current official Greenhouse requisition 4385554009 and the user’s clarified Business/AI Analyst priority. Employer page describes the first Operations analyst, SQL dashboards, operational/on-chain analysis, AI workflow automation and executive reporting; $100,000-$125,000 base. It asks 2-4 years but explicitly frames the role as early-career and treats internships/early operations, finance, consulting or data-heavy roles as relevant. Application form and sponsorship question are live; role-level sponsorship policy is not stated. Retained as an exceptional functional match, with the experience and sponsorship gaps disclosed. New one-page position-specific PDF rebuilt from the approved master; extracted text and visual QA passed.",
       "firstSeenAt": "2026-09-05",
-      "appliedAt": "2026-10-04",
+      "appliedAt": "04/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:4385554009",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Metro Vein Centers",
       "position": "Analyst, Marketing and Sales",
       "url": "https://job-boards.greenhouse.io/metroveincenters/jobs/4395083009",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1mJvHWWpDKNdHA5mNWa5dOorq5l7CGmFE/view?usp=drivesdk",
       "notes": "1–3d",
       "firstSeenAt": "2026-09-05",
@@ -771,7 +832,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-09"
+      "rejectedAt": "2026-09-09",
+      "canonicalKey": "greenhouse:4395083009",
+      "rejectionAt": "09/09/2026 16:00:10",
+      "offerAt": ""
     },
     {
       "company": "Vooma",
@@ -781,10 +845,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1kYG2PQ0mNcy_xWOl2VuJ8qHbYVQ0MeYr/view?usp=drivesdk",
       "notes": "September 22 full run. Combines internal-client needs, automation, service coordination, and AI experience; exceptional early-career applicants considered. Gap: No direct logistics or SaaS account ownership. Customer deployments would be new responsibilities. Score 22+17+17+14+9+9=88; fit only. $100,000–$120,000 (YC listing); San Francisco, in person; 10–20% travel. Sponsorship: Employer YC listing says it will sponsor. Documents rebuilt from approved master; one-page visual/text checks passed. Resume: https://drive.google.com/file/d/1kYG2PQ0mNcy_xWOl2VuJ8qHbYVQ0MeYr/view?usp=drivesdk Cover: https://drive.google.com/file/d/1lfMEYJC5mrpRVXE1A6HKkgz1ALEfEli9/view?usp=drivesdk Final application fields not independently verified; keep Found.",
       "firstSeenAt": "2026-09-06",
-      "appliedAt": "2026-09-24",
+      "appliedAt": "24/09/2026 22:26:02",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.ycombinator.com/companies/vooma/jobs/vcxty49-operations-associate-deployments",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Clera",
@@ -859,10 +926,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1S1h5kxC5AWep_t9myir_E7sKwVqvRfO9/view?usp=drivesdk",
       "notes": "Reverified 19/09/2026; aged 7d+ but active",
       "firstSeenAt": "2026-09-07",
-      "appliedAt": "2026-09-19",
+      "appliedAt": "19/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "blackrock.tal.net/vx/lang-en-gb/mobile-0/brand-3/xf-ad177cb70942/candidate/so/pm/1/pl/1/opp/12218-2027-full-time-analyst-program-amrs/en-gb",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "BlackRock",
@@ -894,79 +964,97 @@ export const jobSearchData = {
       "company": "BlackRock",
       "position": "Analyst, Real Estate Portfolio Analytics & Reporting, PFS",
       "url": "https://careers.blackrock.com/job/new-york/analyst-real-estate-portfolio-analytics-and-reporting-pfs/45831/98890304192",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "Reverified 20/09/2026; 7d+",
       "firstSeenAt": "2026-09-07",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "careers.blackrock.com/job/new-york/analyst-real-estate-portfolio-analytics-and-reporting-pfs/45831/98890304192",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "New Engen / Grapevine",
       "position": "Brand Success Analyst - Grapevine",
       "url": "https://job-boards.greenhouse.io/newengeninc/jobs/4289114009",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "2026-09-07",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "greenhouse:4289114009",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Boylan Bottling Co",
       "position": "Supply Chain Operations Analyst",
       "url": "https://job-boards.greenhouse.io/boylanbottling/jobs/4709173006",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "Reverified 19/09/2026; posting date unknown",
       "firstSeenAt": "2026-09-07",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "greenhouse:4709173006",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Point72",
       "position": "Benefits Analyst",
       "url": "https://job-boards.greenhouse.io/point72/jobs/8678094002",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "Reverified 19/09/2026; posting date unknown",
       "firstSeenAt": "2026-09-07",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "greenhouse:8678094002",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Forge Global",
       "position": "Fund Administration, Operations Analyst",
       "url": "https://job-boards.greenhouse.io/forgeglobal/jobs/6142217004",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "2026-09-07",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "greenhouse:6142217004",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Forus",
       "position": "AI Operations",
       "url": "https://jobs.ashbyhq.com/forus/ddf8e4e0-78a8-4e51-acb8-d653109970f9/application",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "7d+",
       "firstSeenAt": "2026-09-07",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:ddf8e4e0-78a8-4e51-acb8-d653109970f9",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Hive",
@@ -976,24 +1064,30 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/13S3HUW-qCv3NWayIt0znNGBbLf4oGhcm/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; exact Lever role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-07",
-      "appliedAt": "2026-09-20",
+      "appliedAt": "20/09/2026 13:49:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:8a55e4ff-ec69-4691-aa65-fc7cbd7c6ee0",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "iCapital",
       "position": "Product Operations - Associate",
       "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8648980002",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1FdUz-nhqk8LFnd13JhqcBljUzO-RTj05/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; 7d+\nSeptember 22 email: iCapital Product Operations - Associate rejected; other candidates more closely aligned with needs.",
       "firstSeenAt": "2026-09-07",
-      "appliedAt": "2026-09-20",
+      "appliedAt": "20/09/2026 11:51:03",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-22"
+      "rejectedAt": "2026-09-22",
+      "canonicalKey": "greenhouse:8648980002",
+      "rejectionAt": "22/09/2026 15:35:07",
+      "offerAt": ""
     },
     {
       "company": "Hive",
@@ -1142,14 +1236,17 @@ export const jobSearchData = {
       "company": "Canoe Intelligence",
       "position": "Data Analyst, Private Markets",
       "url": "https://careers.canoeintelligence.com/jobs/676043-data-analyst-private-markets",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1fuzwQ87Rbs8iALNE0ys8nHkoXSttQnZz/view?usp=drivesdk",
       "notes": "Archived September 22: required private-markets/fund-operations experience is not demonstrated in the current resume. Not an application or rejection.",
       "firstSeenAt": "2026-09-11",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "careers.canoeintelligence.com/jobs/676043-data-analyst-private-markets",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Lincoln Financial",
@@ -1181,57 +1278,69 @@ export const jobSearchData = {
       "company": "SpaceXAI",
       "position": "AI Tutor - Russian",
       "url": "https://www.linkedin.com/jobs/view/4408089535",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "",
       "firstSeenAt": "2026-04-30",
-      "appliedAt": "2026-04-30",
+      "appliedAt": "30/04/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": false,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-08-20"
+      "rejectedAt": "2026-08-20",
+      "canonicalKey": "www.linkedin.com/jobs/view/4408089535",
+      "rejectionAt": "20/08/2026 21:02:49",
+      "offerAt": ""
     },
     {
       "company": "Agilyti",
       "position": "Artificial Intelligence Analyst",
       "url": "https://www.linkedin.com/jobs/view/4407489202",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "",
       "firstSeenAt": "2026-05-05",
-      "appliedAt": "2026-05-05",
+      "appliedAt": "05/05/2026 14:59:47",
       "submissionConfirmed": true,
       "inApplicationCohort": false,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-05-08"
+      "rejectedAt": "2026-05-08",
+      "canonicalKey": "www.linkedin.com/jobs/view/4407489202",
+      "rejectionAt": "08/05/2026 15:00:13",
+      "offerAt": ""
     },
     {
       "company": "CFGI",
       "position": "Consultant",
       "url": "https://www.linkedin.com/jobs/view/4304166934",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "",
       "firstSeenAt": "2026-04-30",
-      "appliedAt": "2026-04-30",
+      "appliedAt": "30/04/2026 18:18:12",
       "submissionConfirmed": true,
       "inApplicationCohort": false,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-05-04"
+      "rejectedAt": "2026-05-04",
+      "canonicalKey": "www.linkedin.com/jobs/view/4304166934",
+      "rejectionAt": "04/05/2026 22:18:16",
+      "offerAt": ""
     },
     {
       "company": "Trident Consulting",
       "position": "Product Consultant",
       "url": "https://www.linkedin.com/jobs/view/4408266950",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "",
       "firstSeenAt": "2026-04-30",
-      "appliedAt": "2026-04-30",
+      "appliedAt": "30/04/2026 18:17:08",
       "submissionConfirmed": true,
       "inApplicationCohort": false,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-05-03"
+      "rejectedAt": "2026-05-03",
+      "canonicalKey": "www.linkedin.com/jobs/view/4408266950",
+      "rejectionAt": "03/05/2026 18:17:35",
+      "offerAt": ""
     },
     {
       "company": "Gartner",
@@ -1241,11 +1350,14 @@ export const jobSearchData = {
       "notes": "Completed recruiter screen September14; employer declined application September19. One confirmed application in the tracking period; exact submission date unknown. Interview remains counted.",
       "firstSeenAt": "2026-09-09",
       "appliedAt": "",
-      "status": "Rejected",
+      "status": "Closed",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-19"
+      "rejectedAt": "2026-09-19",
+      "canonicalKey": "named:gartner:businessanalystmarketinganalytics",
+      "rejectionAt": "19/09/2026 05:04:07",
+      "offerAt": ""
     },
     {
       "company": "Ramp",
@@ -1320,158 +1432,194 @@ export const jobSearchData = {
       "resumeUrl": "https://docs.google.com/document/d/1TjnYJK5g57LV86H5lDaP8Ah3M8ucWMXnpEycjgnR5T4/edit",
       "notes": "≤24h\nSeptember 22 email confirms opening closed; no longer hiring, not candidate rejection.",
       "firstSeenAt": "2026-09-12",
-      "appliedAt": "2026-09-14",
+      "appliedAt": "14/09/2026 23:46:56",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Expired"
+      "finalOutcome": "Expired",
+      "canonicalKey": "careersatdoordash.com/jobs/associate-marketplace---strategy-operations/8143179",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Bank of America",
       "position": "Client Quantitative Analyst I",
       "url": "https://careers.bankofamerica.com/en-us/job-detail/26031257/client-quantitative-analyst-i-multiple-locations",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-12",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "careers.bankofamerica.com/en-us/job-detail/26031257/client-quantitative-analyst-i-multiple-locations",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "DoorDash",
       "position": "Associate, New Verticals - Pharmacy Strategy & Operations",
       "url": "https://careersatdoordash.com/jobs/associate-new-verticals---pharmacy-strategy-operations/7980105/",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/155AIZzzJ8nsrKsP6gPPYZIVU8WNJzZSG/view?usp=drivesdk",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-12",
-      "appliedAt": "2026-09-16",
+      "appliedAt": "16/09/2026 22:11:29",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-21"
+      "rejectedAt": "2026-09-21",
+      "canonicalKey": "careersatdoordash.com/jobs/associate-new-verticals---pharmacy-strategy-operations/7980105",
+      "rejectionAt": "21/09/2026 16:14:47",
+      "offerAt": ""
     },
     {
       "company": "DoorDash",
       "position": "Senior Associate, New Verticals - Fulfilment Strategy & Operations",
       "url": "https://careersatdoordash.com/jobs/senior-associate-new-verticals---fulfilment-strategy-operations/8189143/",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-12",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "careersatdoordash.com/jobs/senior-associate-new-verticals---fulfilment-strategy-operations/8189143",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Clasp",
       "position": "Operations Associate",
       "url": "https://jobs.ashbyhq.com/clasp/8582f75d-84fe-433f-b92d-d208e0334341",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-12",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:8582f75d-84fe-433f-b92d-d208e0334341",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "FanDuel",
       "position": "Commercial Analyst – Casino",
       "url": "https://www.fanduel.careers/jobs/fanduel/commercial-analyst-casino/",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1e7t8heuLkmtdaoIyVRNonbLZb5LH-XsL/view?usp=drivesdk",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-13",
-      "appliedAt": "2026-09-16",
+      "appliedAt": "16/09/2026 18:04:47",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-18"
+      "rejectedAt": "2026-09-18",
+      "canonicalKey": "www.fanduel.careers/jobs/fanduel/commercial-analyst-casino",
+      "rejectionAt": "18/09/2026 13:00:26",
+      "offerAt": ""
     },
     {
       "company": "The Trade Desk",
       "position": "Data Support Analyst I",
       "url": "https://careers.thetradedesk.com/jobs/5165780007/data-support-analyst-i",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://docs.google.com/document/d/16BZhgVaiyiyGFGrZQwa1hpbC_NwkG4uOs0t4o64H8yk/edit",
       "notes": "1–3d",
       "firstSeenAt": "2026-09-13",
-      "appliedAt": "2026-09-14",
+      "appliedAt": "14/09/2026 22:46:15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-17"
+      "rejectedAt": "2026-09-17",
+      "canonicalKey": "careers.thetradedesk.com/jobs/5165780007/data-support-analyst-i",
+      "rejectionAt": "17/09/2026 15:11:57",
+      "offerAt": ""
     },
     {
       "company": "The Brattle Group",
       "position": "Research Analyst (Economics and Finance) - July 2027",
       "url": "https://job-boards.greenhouse.io/thebrattlegroup/jobs/4720816005",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1Kxnk_IeNQpGeGjbL_G5k7RUzCBBMRh9p/view?usp=drivesdk",
       "notes": "",
       "firstSeenAt": "2026-09-13",
-      "appliedAt": "2026-09-18",
+      "appliedAt": "18/09/2026 12:05:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-24"
+      "rejectedAt": "2026-09-24",
+      "canonicalKey": "greenhouse:4720816005",
+      "rejectionAt": "24/09/2026 16:43:16",
+      "offerAt": ""
     },
     {
       "company": "Goldman Sachs",
       "position": "Corporate Treasury, Project Management, New York, Analyst",
       "url": "https://higher.gs.com/roles/183545",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-13",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "higher.gs.com/roles/183545",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Milltown Partners",
       "position": "Analyst (SF)",
       "url": "https://jobs.lever.co/milltownpartners/d4c1e4fb-63c3-453e-9ddf-bb58dff7aefd",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-13",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.lever.co:d4c1e4fb-63c3-453e-9ddf-bb58dff7aefd",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Valerie Health",
       "position": "AI Operations Specialist",
       "url": "https://jobs.ashbyhq.com/valeriehealth/54707996-63b5-4811-98eb-016266654e78",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1BkiFovLRFivyrc_WCjwJqnr9L14biGGE/view?usp=drivesdk",
       "notes": "October 9 Gmail reconciliation: recruiter screen scheduled Monday October 12, 2026 11–11:30am ET with Katelyn Allen. Gmail 1a11c8c5126ccd6d and 1a11c8d4ad393ab1. This is UPCOMING, not a completed interview. Interview Prep INT-VALERIE-20261012 records the event.\n\nOctober 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nManual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nValerie Health: Early-career applicants explicitly encouraged; prior startup/healthcare experience helpful, not required. Lewis records, Camp Vega validation and UN workflows support accuracy, discrepancy investigation and operational delivery. No claimed patient/EHR experience.\nPay: $65,000–$85,000 base; offer must be at least $70,000. Equity/bonus separate if applicable. Current employer careers page links exact requisition; official Ashby public posting feed lists it isListed=true with exact /application URL.\nOfficial JD: https://jobs.ashbyhq.com/valeriehealth/54707996-63b5-4811-98eb-016266654e78\nEvidence checked 2026-10-07T16:59:08.234Z; source https://api.ashbyhq.com/posting-api/job-board/valeriehealth\nResume: https://drive.google.com/file/d/1BkiFovLRFivyrc_WCjwJqnr9L14biGGE/view?usp=drivesdk\n\nHistorical note preserved: ≤24h",
       "firstSeenAt": "2026-09-14",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-14"
+      "rejectedAt": "2026-10-14",
+      "canonicalKey": "jobs.ashbyhq.com:54707996-63b5-4811-98eb-016266654e78",
+      "rejectionAt": "14/10/2026 13:30:38 ET",
+      "offerAt": ""
     },
     {
       "company": "Valerie Health",
       "position": "Agent Operations Associate",
       "url": "https://jobs.ashbyhq.com/valeriehealth/3f3cb67b-2227-486c-b2bf-667dc59dae95/",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-14",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:3f3cb67b-2227-486c-b2bf-667dc59dae95",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Mecka AI",
@@ -1481,50 +1629,62 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/10MypVvMegoewJfWXBsJ8RzPTP7Xf9dm8/view?usp=drivesdk",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-14",
-      "appliedAt": "2026-09-17",
+      "appliedAt": "17/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:7617ec0c-f0b2-45a8-bd6b-ded57fa2222a",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Sierra",
       "position": "GTM Operations Analyst",
       "url": "https://jobs.ashbyhq.com/sierra/21a4df49-1b95-4fe9-b375-af6cf69c0812",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-14",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:21a4df49-1b95-4fe9-b375-af6cf69c0812",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Medra",
       "position": "Business Operations",
       "url": "https://jobs.ashbyhq.com/medraai/13e93fc3-fd20-4e7c-a748-00ccbc2a7f79",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-14",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:13e93fc3-fd20-4e7c-a748-00ccbc2a7f79",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Lambda",
       "position": "Internal Tools & Data Product Analyst",
       "url": "https://jobs.ashbyhq.com/Lambda/c0116ab6-9ec2-4189-9f07-e9dd284222b6",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1VMMW9L2bvDbdbQxRwb3zk07Pjl4g0utJ/view?usp=drivesdk",
       "notes": "October 5, 2026 12:50 ET: Lambda explicitly declined the Internal Tools & Data Product Analyst application. Status changed from Applied to Closed. This is role-specific; no response requested and no sponsorship-policy update.\n\nReverified 20/09/2026; exact Ashby role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-15",
-      "appliedAt": "2026-09-20",
+      "appliedAt": "20/09/2026 13:49:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-05"
+      "rejectedAt": "2026-10-05",
+      "canonicalKey": "jobs.ashbyhq.com:c0116ab6-9ec2-4189-9f07-e9dd284222b6",
+      "rejectionAt": "05/10/2026 12:50",
+      "offerAt": ""
     },
     {
       "company": "MONTICELLOAM",
@@ -1534,16 +1694,19 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1OlT6UFmfZbMh_sEoLpM6y1bSRx1Gf1sn/view?usp=drivesdk",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-15",
-      "appliedAt": "2026-09-16",
+      "appliedAt": "16/09/2026 18:12:19",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:4295353009",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Agave",
       "position": "Product Analyst",
       "url": "https://jobs.ashbyhq.com/Agave/929b3239-7f09-42bc-9603-14b4c347b998",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1jUhnDsc4_wETjSYkazyGI5nuHsJOoso7/view?usp=drivesdk",
       "notes": "October 1, 2026 12:27 ET: Agave rejected the Product Analyst application after review and said it is moving forward with candidates whose experience more closely aligns. Gmail 1a0f84b2c764c0f5. No visa or ATS-specific reason was given.\n\nSUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Reactivated; distinct from submitted Operations Associate. Early-career product investigation, QA, user requirements and data quality connect to AI evaluation and the UN assistant project. Gap: No professional API/Postman integration debugging or product specification ownership. Posting accepts a desire to learn these tools. Do not confuse with already submitted Operations Associate. Score 22+16+16+14+9+7=84; fit only, not ATS probability. $100,000–$150,000; San Francisco, onsite five days. Authorization: Employer YC listing explicitly offers sponsorship, including H-1B/TN for suitable candidates. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1jUhnDsc4_wETjSYkazyGI5nuHsJOoso7/view?usp=drivesdk Cover: https://drive.google.com/file/d/1Iq-ma4h5FemDaHwnrUPMgXAq_n6ZEswA/view?usp=drivesdk",
       "firstSeenAt": "2026-09-15",
@@ -1551,21 +1714,27 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-01"
+      "rejectedAt": "2026-10-01",
+      "canonicalKey": "jobs.ashbyhq.com:929b3239-7f09-42bc-9603-14b4c347b998",
+      "rejectionAt": "2026-10-01",
+      "offerAt": ""
     },
     {
       "company": "Claim Health",
       "position": "Strategy and Operations Associate",
       "url": "https://jobs.ashbyhq.com/claim-health/bb76582b-fe73-48d5-8897-a863bfd88013",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1zVHKQcjVLTgKAPZfErgwkko5TL-PBnXG/view?usp=drivesdk",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-15",
-      "appliedAt": "2026-09-17",
+      "appliedAt": "17/09/2026 14:29:46",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-18"
+      "rejectedAt": "2026-09-18",
+      "canonicalKey": "jobs.ashbyhq.com:bb76582b-fe73-48d5-8897-a863bfd88013",
+      "rejectionAt": "18/09/2026 09:09:08",
+      "offerAt": ""
     },
     {
       "company": "Big Leap Health",
@@ -1588,10 +1757,13 @@ export const jobSearchData = {
       "resumeUrl": "",
       "notes": "",
       "firstSeenAt": "2026-09-16",
-      "appliedAt": "2026-09-16",
+      "appliedAt": "16/09/2026 12:04:51",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:8809524002",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Aksia",
@@ -1601,24 +1773,30 @@ export const jobSearchData = {
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-16",
-      "appliedAt": "2026-09-16",
+      "appliedAt": "16/09/2026 13:16:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:8800607002",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Audax Private Debt",
       "position": "Investor Relations Operations Analyst",
       "url": "https://job-boards.greenhouse.io/audaxprivatedebt/jobs/4731334005",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1IvpYu9B2suafsaZCdiaTtFHHXyCOGLqh/view?usp=drivesdk",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-16",
-      "appliedAt": "2026-09-17",
+      "appliedAt": "17/09/2026 14:34:07",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-21"
+      "rejectedAt": "2026-09-21",
+      "canonicalKey": "greenhouse:4731334005",
+      "rejectionAt": "21/09/2026 09:45:44",
+      "offerAt": ""
     },
     {
       "company": "Conduit Health",
@@ -1706,10 +1884,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1XCs5sCmBGu5It-zf9zuG22adoUTchWNE/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; exact Ashby role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-18",
-      "appliedAt": "2026-09-20",
+      "appliedAt": "20/09/2026 13:49:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:2dbc19ea-c239-4d85-bbe2-8cac96dc5b90",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Axial",
@@ -1819,15 +2000,18 @@ export const jobSearchData = {
       "company": "AlphaSights",
       "position": "Transcription Operations Associate",
       "url": "https://www.alphasights.com/job/transcription-operations-associate/",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1ERyxOh20upWaMT8viMbkrLiag0-j0ytC/view?usp=drivesdk",
       "notes": "September 23 email: Transcription Operations Associate application rejected. Six-month wait before reapplying to this role. Other AlphaSights applications unaffected.",
       "firstSeenAt": "2026-09-18",
-      "appliedAt": "2026-09-18",
+      "appliedAt": "18/09/2026 12:05:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-23"
+      "rejectedAt": "2026-09-23",
+      "canonicalKey": "www.alphasights.com/job/transcription-operations-associate",
+      "rejectionAt": "23/09/2026 09:18:05",
+      "offerAt": ""
     },
     {
       "company": "Precision AQ",
@@ -1837,38 +2021,47 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1nx7CQl72-WkOD6omw1FOUcbu6SvLvHlY/view?usp=drivesdk",
       "notes": "",
       "firstSeenAt": "2026-09-18",
-      "appliedAt": "2026-09-18",
+      "appliedAt": "18/09/2026 12:05:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:6115102004",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "AlphaSights",
       "position": "Growth Operations Associate",
       "url": "https://www.alphasights.com/job/growth-operations-associate/",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1WNn5Gz6rpVFMoJRNFOqUqtrjJEityWtG/view?usp=drivesdk",
       "notes": "September 23 email: Growth Operations Associate rejected. Explicit reason: requires immediate start and cannot consider applicants still in education; invites reapplication nearer graduation.",
       "firstSeenAt": "2026-09-18",
-      "appliedAt": "2026-09-18",
+      "appliedAt": "18/09/2026 12:05:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-23"
+      "rejectedAt": "2026-09-23",
+      "canonicalKey": "www.alphasights.com/job/growth-operations-associate",
+      "rejectionAt": "23/09/2026 06:23:09",
+      "offerAt": ""
     },
     {
       "company": "AlphaSights",
       "position": "Legal & Compliance, Research Compliance Associate",
       "url": "https://www.alphasights.com/job/legal-compliance-research-compliance-associate-2/",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1zHrrsYwql0PzbxV5UAKO1AHqk7D9budR/view?usp=drivesdk",
       "notes": "September 29, 09:15 ET: AlphaSights rejected the Legal & Compliance, Research Compliance Associate application after review. Wait six months before reapplying for this position at any AlphaSights office. Other open AlphaSights applications are unaffected. Gmail 1a0ed4e146cc69d2.",
       "firstSeenAt": "2026-09-18",
-      "appliedAt": "2026-09-18",
+      "appliedAt": "18/09/2026 12:05:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-29"
+      "rejectedAt": "2026-09-29",
+      "canonicalKey": "www.alphasights.com/job/legal-compliance-research-compliance-associate-2",
+      "rejectionAt": "29/09/2026",
+      "offerAt": ""
     },
     {
       "company": "VTS",
@@ -1878,62 +2071,77 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1ybDrsnjL6C0jV7p_U1wNLNDMnaBV84XI/view?usp=drivesdk",
       "notes": "Reverified 19/09/2026; posting date unknown",
       "firstSeenAt": "2026-09-18",
-      "appliedAt": "2026-09-19",
+      "appliedAt": "19/09/2026 19:23:02",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:4723555005",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "EvenUp",
       "position": "Product Operations Associate",
       "url": "https://jobs.ashbyhq.com/evenup/dfa6dfeb-70e9-48bf-8df7-00cf7681fd11",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-18",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:dfa6dfeb-70e9-48bf-8df7-00cf7681fd11",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Monaco",
       "position": "Client Operations",
       "url": "https://jobs.ashbyhq.com/monaco/95a79c72-9720-4743-8923-4dc00321adb8",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-18",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:95a79c72-9720-4743-8923-4dc00321adb8",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Endeavor Flow",
       "position": "Operations Associate",
       "url": "https://jobs.ashbyhq.com/endeavorflow/12b245a0-1afd-4157-9de4-98a0d6203685",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-18",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:12b245a0-1afd-4157-9de4-98a0d6203685",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "ReKlame Health",
       "position": "Business Operations Senior Associate",
       "url": "https://jobs.ashbyhq.com/ReklameHealth/b38ae959-899d-47c6-92dd-89f9d69191bb",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "≤24h",
       "firstSeenAt": "2026-09-18",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:b38ae959-899d-47c6-92dd-89f9d69191bb",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Trayd",
@@ -1943,36 +2151,45 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1pMbn_870OSbD6uz1-9PwiosOztDyzS8R/view?usp=drivesdk",
       "notes": "Reverified 19/09/2026; posting date unknown",
       "firstSeenAt": "2026-09-19",
-      "appliedAt": "2026-09-19",
+      "appliedAt": "19/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.ycombinator.com/companies/trayd/jobs/2dvq0jq-implementations-analyst",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "AlphaSense",
       "position": "Customer Success Associate",
       "url": "https://job-boards.greenhouse.io/alphasense/jobs/8600929002",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "First seen today; posting date unknown",
       "firstSeenAt": "2026-09-19",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "greenhouse:8600929002",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Visa",
       "position": "Strategy Analyst - Cross Border Strategy & Operations",
       "url": "https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/Analyst_REF087892W",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "Posted ~11d ago; reverified 19/09/2026",
       "firstSeenAt": "2026-09-19",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "visa.wd5.myworkdayjobs.com:ref087892w",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Visa",
@@ -1985,35 +2202,44 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "visa.wd5.myworkdayjobs.com:ref088107w",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Visa",
       "position": "Analyst, NA Growth Marketing",
       "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---San-Francisco-CA/Analyst--NA-Growth-Marketing_REF087814W-1",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/17PxhGnS1zKSeYi3yL6EmPs-5iJKTqmc-/view?usp=drivesdk",
       "notes": "Rejected 24/09/2026: Visa Talent Acquisition email confirmed the Analyst, NA Growth Marketing application will not move forward.",
       "firstSeenAt": "2026-09-19",
-      "appliedAt": "2026-09-19",
+      "appliedAt": "19/09/2026 19:15:49",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-24"
+      "rejectedAt": "2026-09-24",
+      "canonicalKey": "visa.wd5.myworkdayjobs.com:ref087814w",
+      "rejectionAt": "24/09/2026 03:11:00",
+      "offerAt": ""
     },
     {
       "company": "Moody's",
       "position": "Data Operations Specialist II",
       "url": "https://careers.moodys.com/en/job/new-york/data-operations-specialist-ii/49841/99480722144",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1xyK1jlK_dZExGi_M_g_wTh05CsT0WmRM/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; 7d+",
       "firstSeenAt": "2026-09-20",
-      "appliedAt": "2026-09-20",
+      "appliedAt": "20/09/2026 11:45:48",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-04"
+      "rejectedAt": "2026-10-04",
+      "canonicalKey": "careers.moodys.com/en/job/new-york/data-operations-specialist-ii/49841/99480722144",
+      "rejectionAt": "04/10/2026 20:00:47",
+      "offerAt": ""
     },
     {
       "company": "Socure",
@@ -2036,10 +2262,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1HFON-e-hiD1XpEDe-5Kn7gwsNHgLmz9K/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; employer careers + exact Ashby role live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-20",
-      "appliedAt": "2026-09-20",
+      "appliedAt": "20/09/2026 13:49:00",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:0b65b19c-44c0-4440-9b6c-4d88c6024772",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Agave",
@@ -2052,46 +2281,58 @@ export const jobSearchData = {
       "appliedAt": "2026-10-01",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.ycombinator.com/companies/agave/jobs/dnn8xb5-associate-product-manager-integrations",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Mercor",
       "position": "Data Scientist",
       "url": "https://jobs.ashbyhq.com/mercor/982a0751-e9eb-4b96-ac93-a1fd1d2f9152",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "",
       "firstSeenAt": "2026-09-20",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:982a0751-e9eb-4b96-ac93-a1fd1d2f9152",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Dime",
       "position": "Forward Deployed Engineer",
       "url": "https://www.ycombinator.com/companies/dime-2/jobs/O1bzYN2-forward-deployed-engineer",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "ChatGPT file: Misha Semenov - Dime - Forward Deployed Engineer.pdf",
       "notes": "Archived 2026-10-02 higher-quality rerun. Still unsubmitted. Exact YC role remains sponsor-friendly/new-grad eligible, but API/database/system-integration familiarity makes it a larger technical stretch than the five retained roles. Not an employer rejection.",
       "firstSeenAt": "2026-09-20",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.ycombinator.com/companies/dime-2/jobs/o1bzyn2-forward-deployed-engineer",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Karumi",
       "position": "Forward Deployed Engineer (FDE)",
       "url": "https://www.ycombinator.com/companies/karumi/jobs/mzQuJ9K-forward-deployed-engineer-fde",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "1–3 years implementation/QA/solutions engineering and CS/STEM or equivalent practical experience not established from verified record; YC login gates form.",
       "firstSeenAt": "2026-09-20",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.ycombinator.com/companies/karumi/jobs/mzquj9k-forward-deployed-engineer-fde",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Draft The Record",
@@ -2101,23 +2342,29 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1lf5kgCfJDAT8k7ZXHx7HUO2yf_Z-bHPJ/view?usp=drivesdk",
       "notes": "October 1, 2026 00:14 ET: User confirmed submitted. Exact submission time not supplied.\n\nSeptember 30 full run. Retained and refreshed. Fit 85/100 (22+16+17+14+8+8); evidence fit, not interview probability. Student-facing service coordination, clear AI response evaluation and the UN assistant project support a move into product support. LIMITS: No paid SaaS account ownership or legal-sector experience is claimed. The employer website uses Customer Success Manager; use the exact YC Specialist listing and confirm level. Pay: $80,000-$120,000. Sponsorship: YC explicitly says Will sponsor. Source: https://www.ycombinator.com/companies/draft-the-record/jobs/WN9VSsM-customer-success-specialist. Both final one-page PDFs passed content and visual checks. Status Found: final interactive application fields and individual eligibility/start timing still need review. Resume: https://drive.google.com/file/d/1lf5kgCfJDAT8k7ZXHx7HUO2yf_Z-bHPJ/view?usp=drivesdk Cover: https://drive.google.com/file/d/1qSLMboZdCv3txDOSs50-PUSuyKpbPO7S/view?usp=drivesdk Outreach: No suitable nonexecutive contact verified. Founder contact removed from the outreach queue.  ",
       "firstSeenAt": "2026-09-20",
-      "appliedAt": "2026-10-01",
+      "appliedAt": "01/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.ycombinator.com/companies/draft-the-record/jobs/wn9vssm-customer-success-specialist",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Airgoods",
       "position": "Growth - Retailers",
       "url": "https://www.ycombinator.com/companies/airgoods/jobs/eHjNGRk-growth-retailers",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "Role predominantly retailer account sales/GMV ownership, with stated 9am–9pm Mon–Thu plus later nights/weekends; weaker match than operations focus.",
       "firstSeenAt": "2026-09-20",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.ycombinator.com/companies/airgoods/jobs/ehjngrk-growth-retailers",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Loop",
@@ -2130,21 +2377,27 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "ats.rippling.com/loop/jobs/9191b3df-1a8b-46d2-a1b4-1420da7b09f7",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Agave",
       "position": "Operations Associate",
       "url": "https://www.ycombinator.com/companies/agave/jobs/owV2cRx-operations-associate",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1neqkS7wbFjpmCaiPljyV4p0QxPXV2Jf-/view?usp=drivesdk",
       "notes": "Archived 24/09/2026 from unsubmitted radar, not an employer rejection. Role remains advertised, but the finance-operations work (Stripe, sales tax, invoicing, partner payouts) is less directly evidenced than the stronger NYC replacements; five-day San Francisco onsite and final YC form remain unverified. Re-entry requires fresh evidence.\nCORRECTION September 24: User confirmed Operations Associate submission. Applied is authoritative; earlier archived/not-submitted note is superseded.",
       "firstSeenAt": "2026-09-21",
-      "appliedAt": "2026-09-24",
+      "appliedAt": "24/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-28"
+      "rejectedAt": "2026-09-28",
+      "canonicalKey": "www.ycombinator.com/companies/agave/jobs/owv2crx-operations-associate",
+      "rejectionAt": "28/09/2026 16:39:15",
+      "offerAt": ""
     },
     {
       "company": "Flagler Health",
@@ -2176,28 +2429,34 @@ export const jobSearchData = {
       "company": "Enigma",
       "position": "Data Operations Associate",
       "url": "https://job-boards.greenhouse.io/enigmaio/jobs/6803803",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1Z8dQfRlGLM8tSiWNnrcDvRwE4uefRZvl/view?usp=drivesdk",
       "notes": "September 28, 2026, 08:57 ET: Enigma rejected candidacy before any interview took place. September 25 invitation is preserved as an invitation only; selected September 28 09:30 time was not employer-confirmed. Gmail 1a0e8187c17fca69. User reports zero completed live interviews obtained through applications.\n\nSeptember 22 full run. Data validation, operational records, analysis, and communication are the clearest match. The posting welcomes 0–2 years. Gap: No demonstrated ownership of enterprise customer onboarding or data dictionaries. SQL is supported by coursework, not claimed as professional production experience. Score 23+18+17+14+9+9=90; fit only. $80,000–$150,000; New York City. Sponsorship: Not stated in employer posting; confirm with recruiting. Documents rebuilt from approved master; one-page visual/text checks passed. Resume: https://drive.google.com/file/d/1Z8dQfRlGLM8tSiWNnrcDvRwE4uefRZvl/view?usp=drivesdk Cover: https://drive.google.com/file/d/1E3UdczUQxENqomLuPCUHsx7xZ6FGnBvj/view?usp=drivesdk Exact application fields verified today.",
       "firstSeenAt": "2026-09-22",
-      "appliedAt": "2026-09-24",
+      "appliedAt": "24/09/2026 22:21:02",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-28"
+      "rejectedAt": "2026-09-28",
+      "canonicalKey": "greenhouse:6803803",
+      "rejectionAt": "2026-09-28",
+      "offerAt": ""
     },
     {
       "company": "Astra",
       "position": "Payment Operations Analyst",
       "url": "https://jobs.ashbyhq.com/astra/7705d345-5ae1-4bfa-b826-937ebb7d7ca1/",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1H3JqMV5dp5tNR104nR43rqwMFT7N_son/view?usp=drivesdk",
       "notes": "24 September 2026: User could not find the Astra opening and did not apply. Archived from active radar. Not an employer rejection. Earlier package retained.",
       "firstSeenAt": "2026-09-22",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:7705d345-5ae1-4bfa-b826-937ebb7d7ca1",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Clera client (fintech bank)",
@@ -2210,13 +2469,16 @@ export const jobSearchData = {
       "appliedAt": "2026-09-25",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:57d1d370-987c-4cf6-baf1-36dd448c2d14",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Bikky",
       "position": "Data Analyst - Data Operations",
       "url": "https://jobs.gem.com/bikky/am9icG9zdDpzZP7kWfEFU_aadmielBxz",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1WKbevyzPMk8WC_kaPsuNVvRmJVssFF7A/view?usp=drivesdk",
       "notes": "September 29, 2026: Bikky rejected Data Analyst - Data Operations; employer said other candidates more closely align. Email 1a0ee9c5741b91eb. No specific ATS or sponsorship reason supplied.\n\nSUBMITTED September 25, 2026: Misha confirmed all five applications submitted at 2:20 p.m. ET. Applied is authoritative; earlier Found/Ready/form-review notes are historical. Exact submission times were not provided.\n\nSeptember 25 final run. Retained; score corrected. Data validation, discrepancy investigation, marketing analysis and business reporting are directly relevant. Gap: SQL fluency is required; resume supports SQL coursework, not production SQL ownership. dbt is not evidenced. Ideal 1–3 years, but posting considers exceptional applicants from other backgrounds. Score 23+16+17+12+10+6=84; fit only, not ATS probability. $100,000–$140,000; New York City, hybrid. Authorization: Not stated; CPT/OPT acceptance and longer-term policy need confirmation. Exact public destination revalidated September 25. Final interactive form fields not independently inspected; remains Found. Resume: https://drive.google.com/file/d/1WKbevyzPMk8WC_kaPsuNVvRmJVssFF7A/view?usp=drivesdk Cover: https://drive.google.com/file/d/1iswZnAK-FmDN0xDyhcVDaQ2cC1zcIIqt/view?usp=drivesdk",
       "firstSeenAt": "2026-09-24",
@@ -2224,7 +2486,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-09-29"
+      "rejectedAt": "2026-09-29",
+      "canonicalKey": "jobs.gem.com/bikky/am9icg9zddpzzp7kwfefu_aadmielbxz",
+      "rejectionAt": "29/09/2026",
+      "offerAt": ""
     },
     {
       "company": "Ambrook",
@@ -2263,7 +2528,10 @@ export const jobSearchData = {
       "appliedAt": "2026-09-25",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:2b1c3ce3-0b80-4daa-b9b8-8f48b24e491f",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "MissionOne Media",
@@ -2273,10 +2541,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1oLcCgIgkj4Dl8Kh4WEu_akJ0f8INCI40/view?usp=drivesdk",
       "notes": "28/09/2026 review: CONTENT PASS for sourced resume claims; VISUAL PASS: one page, master geometry, 23 bullets, extracted text, links, typography and alignment inspected. Eligibility UNRESOLVED: application asks completed quantitative/science bachelor's/master's OR 4+ years analytical experience; MSBA expected Dec 2026 and BS is Business Administration. Do not infer Yes. SQL only supported at academic level; no claim of production refresh, RLS or data dictionary ownership. Exact form verified live today. Compensation and sponsorship policy unstated. Reclassified Found pending eligibility review. Updated resume: https://drive.google.com/file/d/1oLcCgIgkj4Dl8Kh4WEu_akJ0f8INCI40/view?usp=drivesdk",
       "firstSeenAt": "2026-09-27",
-      "appliedAt": "2026-09-28",
+      "appliedAt": "28/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:6185658004",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Arch",
@@ -2286,10 +2557,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1YY4QqRdbdxzdKHEi5cXPK7Su5vefLDUl/view?usp=drivesdk",
       "notes": "28/09/2026 review: CONTENT PASS for supported resume claims; VISUAL PASS: rendered one-page master layout and extracted text checked. Strong transferable records, data quality and client coordination evidence. Eligibility UNRESOLVED: posting says current college senior graduating Winter 2026 or Spring/Summer 2027; candidate is an MS student with BS in 2025. Confirm graduate-student eligibility. Summer 2027 start is not near-term income. Deadline October 11, 11:59 PM ET; $70K-$85K. Sponsorship policy unstated. Employer listing indexed; final Ashby form not independently exposed. Updated resume: https://drive.google.com/file/d/1YY4QqRdbdxzdKHEi5cXPK7Su5vefLDUl/view?usp=drivesdk",
       "firstSeenAt": "2026-09-27",
-      "appliedAt": "2026-09-28",
+      "appliedAt": "28/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:4e1822e5-1149-4acd-9287-252a22d99c41",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Numeral",
@@ -2325,10 +2599,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/12LJC7T_oMll1WpDex7Pa_YK6JsMSp6LW/view?usp=drivesdk",
       "notes": "28/09/2026 review: CONTENT PASS for supported resume claims; VISUAL PASS: one-page approved layout, typography, alignment, text, links and bullet counts checked. Best remaining near-term role: 0-2 years, internships count; supported UN workflow project, Lewis records/service coordination, Pinear KPI and market analysis. No healthcare or patient-operations experience claimed. $50K-$100K advertised; confirm at least $70K base. Sponsorship and start-date compatibility remain unconfirmed. Employer posting indexed; final Ashby fields not independently exposed, so remains Found. Updated resume: https://drive.google.com/file/d/12LJC7T_oMll1WpDex7Pa_YK6JsMSp6LW/view?usp=drivesdk",
       "firstSeenAt": "2026-09-27",
-      "appliedAt": "2026-09-28",
+      "appliedAt": "28/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:06f53c8e-820a-48d7-9da9-e5c04a368cf9",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "DeepAware AI",
@@ -2347,27 +2624,33 @@ export const jobSearchData = {
       "company": "Medplum",
       "position": "Business Operations Associate",
       "url": "https://www.medplum.com/careers/business-operations-associate",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1-Ilpcq-kLiJcDHTT_lAKuXBPEqxUYf77/view?usp=drivesdk",
       "notes": "September 30, 2026: Replaced by IL MAKIAGE: weaker role-level sponsorship evidence (YC citizen/visa only). No employer rejection.\n\nSeptember 28 evening run: documents prepared and visually checked. Evidence: Lewis records, compliance-support workflows and events align with coordination; UN client scoping and analytics projects support operational analysis. Gaps: SOC II, HITRUST, R&D tax credits and healthcare contracting would be new domains. Confirm work authorization, future sponsorship and SF timing. $90,000-$125,000 base. Sponsorship: YC says US citizen/visa only; no sponsorship commitment on the employer page. Final application fields/eligibility require review. Resume: https://drive.google.com/file/d/1-Ilpcq-kLiJcDHTT_lAKuXBPEqxUYf77/view?usp=drivesdk Cover: https://drive.google.com/file/d/1G9gI0vRpIcQWLBkFCFE2q4Yk8fIJeBi8/view?usp=drivesdk",
       "firstSeenAt": "2026-09-28",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.medplum.com/careers/business-operations-associate",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Clipboard",
       "position": "Revenue Strategy & Growth Associate",
       "url": "https://jobs.ashbyhq.com/clipboard/2ca7fa94-6b57-4358-9105-857b911c15f7",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1FJEq3bH_1S17FdTwbQbLH-4yr45EogiA/view?usp=drivesdk",
       "notes": "September 30, 2026: Replaced by sponsor-friendly alternatives: no sponsorship commitment and published compensation combines base and bonus. No employer rejection.\n\nSeptember 28 evening run: documents prepared and visually checked. Evidence: Pinear customer segmentation, KPI analysis and budget modeling match the analytical growth work; Excel and modeling projects provide supporting evidence. Gaps: No revenue quota ownership, churn model deployment or production growth experiments claimed. Confirm base pay separately from bonus and work-authorization eligibility. $80,000-$120,000 total compensation, base plus bonus. Sponsorship: YC says US citizen/visa only; sponsorship is not promised. Final application fields/eligibility require review. Resume: https://drive.google.com/file/d/1FJEq3bH_1S17FdTwbQbLH-4yr45EogiA/view?usp=drivesdk Cover: https://drive.google.com/file/d/1ewuJJl1aXDb3icASkLmPYkmzsI1lCUi1/view?usp=drivesdk",
       "firstSeenAt": "2026-09-28",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:2ca7fa94-6b57-4358-9105-857b911c15f7",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Novig",
@@ -2386,28 +2669,34 @@ export const jobSearchData = {
       "company": "PA Consulting",
       "position": "Early Career | Growth Strategy Analyst (2027)",
       "url": "https://jobs.smartrecruiters.com/paconsulting/744000151106940",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1DQlpaMBR-lFexqg_7ljaxI2hv79Jodvw/view?usp=drivesdk",
       "notes": "September 30, 2026: Removed after exact application URLs failed current revalidation and the role was absent from the employer early-career listing on September 30. University copy expires September 30. Not a candidate rejection; do not claim permanently closed.\n\n29 September 2026 full run. Exact employer SmartRecruiters posting, published 22 September, revalidated. Early-career program explicitly welcomes Fall/Winter 2026 graduates; MS completion in December 2026 fits. $94,500-$104,475 base. Sponsorship and work-authorization policy are not stated. Final interactive form fields were not independently exposed under the no-cloud-browser rule, so status remains Found. Resume and cover letter were rendered, visually inspected, uploaded and linked. Resume: https://drive.google.com/file/d/1DQlpaMBR-lFexqg_7ljaxI2hv79Jodvw/view?usp=drivesdk Cover: https://drive.google.com/file/d/1Ql-dpmtxE78dvn2GzfdIWQevxP6yZ0QM/view?usp=drivesdk",
       "firstSeenAt": "2026-09-29",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.smartrecruiters.com/paconsulting/744000151106940",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Handshake",
       "position": "Operations Associate",
       "url": "https://jobs.ashbyhq.com/handshake/d547e216-2ca7-4087-9d57-bbce9f5bd6b4",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1QSaAzrQ4T11fdVVxfKc4-XjXgC_gNW5f/view?usp=drivesdk",
       "notes": "October 2, 2026 17:35 ET: Handshake rejected the Operations Associate application after review, stating the background was not the strongest match. Gmail 1a0fe8acf743224d. No visa, sponsorship, or work-authorization reason was given. No response requested.\n\nOctober 1, 2026 00:14 ET: User confirmed submitted. Exact submission time not supplied.\n\nSeptember 30 full run. Retained and refreshed. Fit 88/100 (24+17+18+13+9+7); evidence fit, not interview probability. AI evaluation against guidelines, data-quality investigation, university service requests and UN workflow development align with operational execution. The posting accepts basic SQL or willingness to learn and asks for 1+ year in operations/business support. LIMITS: Indexed versions differ between Central Operations and Trust & Safety under the same requisition. Both concern data, issue triage and written communication; confirm current scope. No fraud investigations, BPO management, payments operations or production SQL ownership claimed. Confirm start date and sponsorship before investing in assessments. Pay: $92,000-$115,000 base. Sponsorship: Role-level policy remains unconfirmed. Retained as a strong functional-match exception, not a sponsor-friendly promise. Source: https://jobs.ashbyhq.com/handshake/d547e216-2ca7-4087-9d57-bbce9f5bd6b4/. Both final one-page PDFs passed content and visual checks. Status Found: final interactive application fields and individual eligibility/start timing still need review. Resume: https://drive.google.com/file/d/1QSaAzrQ4T11fdVVxfKc4-XjXgC_gNW5f/view?usp=drivesdk Cover: https://drive.google.com/file/d/1n_FkUasO3f38eO0SeG5uCJxvudLaijZN/view?usp=drivesdk Outreach: Winnie Yeoh, Handshake Central Operations team; publicly shared hiring activity. Exact requisition ownership is unconfirmed. https://www.linkedin.com/in/winnieyeoh UNSENT LinkedIn note: Hi Winnie, I’m applying for Handshake’s Operations Associate role. My background spans AI evaluation, UN automation and student operations. Could I ask what your team values in an early-career hire?",
       "firstSeenAt": "2026-09-29",
-      "appliedAt": "2026-10-01",
+      "appliedAt": "01/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-02"
+      "rejectedAt": "2026-10-02",
+      "canonicalKey": "jobs.ashbyhq.com:d547e216-2ca7-4087-9d57-bbce9f5bd6b4",
+      "rejectionAt": "02/10/2026",
+      "offerAt": ""
     },
     {
       "company": "IL MAKIAGE (ODDITY)",
@@ -2417,10 +2706,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1n8ae_6uWXncRahQfTEGrYucSXDppXqoM/view?usp=drivesdk",
       "notes": "October 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\n2026-10-03 QA refresh: retained per user instruction. Exact Handshake requisition 11421561 remains access-blocked pending platform support; deadline last reported October 14. Revalidated secondary employer description: NYC/Soho, four office days, $70,000-$75,000 base, 0-2 years, explicit qualified OPT/STEM OPT/H-1B sponsorship. Current CPT does not establish future OPT approval; confirm December-graduation start timing and work authorization before submission. New one-page position-specific PDF was rebuilt from the approved master after the prior file failed visual QA; extracted text and rendered-page inspection passed. No application or outreach sent.",
       "firstSeenAt": "2026-09-30",
-      "appliedAt": "2026-10-04",
+      "appliedAt": "04/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "app.joinhandshake.com/jobs/11421561",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Sygaldry Technologies",
@@ -2430,10 +2722,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1zMiRhk_X04OXvAq4XKXrFi-NJ5kkpVVZ/view?usp=drivesdk",
       "notes": "October 1, 2026 00:14 ET: User confirmed submitted. Exact submission time not supplied.\n\nSeptember 30 full run. New. Fit 78/100 (19+15+16+13+7+8); evidence fit, not interview probability. Lewis service coordination and events, Fordham Executive MBA graduate assistance, and AI workflow experience support hands-on workplace operations. The full description accepts operations or a similar high-touch environment without a fixed years minimum. LIMITS: An operations-adjacent option rather than an analyst job. Executive calendar ownership, travel booking, facilities/vendors and office budgets are not established. Confirm SF relocation/start timing and visa support for this specific hire. Pay: $100,000-$130,000. Sponsorship: Posting says it is open to supporting visas whenever possible; conditional, not guaranteed. Source: https://www.builtinsf.com/job/office-manager-executive-assistant/10914440. Both final one-page PDFs passed content and visual checks. Status Found: final interactive application fields and individual eligibility/start timing still need review. Resume: https://drive.google.com/file/d/1zMiRhk_X04OXvAq4XKXrFi-NJ5kkpVVZ/view?usp=drivesdk Cover: https://drive.google.com/file/d/1xIgJhj_6OS0nZeYmSm2KFtxth5S6Dr4b/view?usp=drivesdk Outreach: No individual nonexecutive hiring contact verified. The company publishes letsbuild@sygaldry.com as a general recruiting route. https://www.linkedin.com/jobs/view/head-of-system-architecture-frontier-ai-hardware-at-sygaldry-technologies-4366623703 ",
       "firstSeenAt": "2026-09-30",
-      "appliedAt": "2026-10-01",
+      "appliedAt": "01/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:63d80832-5ea7-4fe1-b077-ecbbd0e8f6c2",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Raydar client",
@@ -2443,10 +2738,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1H-qZ8RKG8M6jnu5SnB9RnyFx1qborGKq/view?usp=drivesdk",
       "notes": "October 1, 2026 00:14 ET: User confirmed submitted. Exact submission time not supplied.\n\nSeptember 30 full run. New. Fit 73/100 (21+16+13+7+9+7); evidence fit, not interview probability. UN Copilot Studio assistant and a three-agent workflow provide hands-on AI evidence; Pinear segmentation and KPI analysis support the growth component. The role allows 0-5 years and values academic achievement. LIMITS: Exploratory stretch: first BizOps hire with broad ownership. No startup operating leadership, customer activation/pricing ownership or measured production impact of the UN assistant is established. Confirm whether the internship project meets its operational-results requirement, the end employer and SF start timing. Pay: $170,000-$300,000 base. Sponsorship: Recruiter posting explicitly offers visa sponsorship and transfers. End-employer identity is undisclosed. Source: https://builtin.com/job/founding-bizops/11159021. Both final one-page PDFs passed content and visual checks. Status Found: final interactive application fields and individual eligibility/start timing still need review. Resume: https://drive.google.com/file/d/1H-qZ8RKG8M6jnu5SnB9RnyFx1qborGKq/view?usp=drivesdk Cover: https://drive.google.com/file/d/1TkAGqdja0trc1YfOPuJI3qmTAZxraZJL/view?usp=drivesdk Outreach: Alzen Flores, Raydar technical recruiter. Verified company affiliation; ask for routing to the BizOps recruiter. https://www.linkedin.com/in/alzen-flores-03388411a UNSENT LinkedIn note: Hi Alzen, I’m interested in Raydar’s Founding BizOps role. I built a Copilot Studio assistant at the UN and study analytics at Fordham. Are you the right person to ask about the opening?",
       "firstSeenAt": "2026-09-30",
-      "appliedAt": "2026-10-01",
+      "appliedAt": "01/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "apply.workable.com/raydar/j/048557d378",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Fulcrum",
@@ -2459,21 +2757,27 @@ export const jobSearchData = {
       "appliedAt": "2026-10-01",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.ycombinator.com/companies/fulcrum/jobs/d6oj8sj-generalist",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Agave",
       "position": "Customer Solutions Engineer",
       "url": "https://www.ycombinator.com/companies/agave/jobs/CU8TDs5-customer-solutions-engineer",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1gSVR638_yvqKZRn_o9s87ZlBOyysBQdC/view?usp=drivesdk",
       "notes": "October 1, 2026 12:46 ET: Application submitted. Y Combinator confirmation email 1a0f85c3235c80c9 confirms Agave received the Customer Solutions Engineer application.\n\nOctober 1, 2026 full run. New. Fit 85/100; evidence fit, not interview probability. Exact YC employer posting is live, lists $130,000-$180,000 base, 1+ year, San Francisco with remote optional, and explicitly states visa sponsorship is available. UN client-needs research, Copilot Studio workflow work, project coordination and student-facing services align with implementations, documentation and customer communication. Material gaps: no professional SaaS implementation portfolio, construction experience, sales demos, Postman/API work or ownership of 15+ concurrent customer launches. Employer says construction and technical skills are not required, but customer-facing experience is required and startup/top-consulting experience is preferred. YC sign-in gates the final form, so status remains Found. One-page position-specific PDF passed extracted-text and rendered visual QA and was durably saved. Resume: https://drive.google.com/file/d/1gSVR638_yvqKZRn_o9s87ZlBOyysBQdC/view?usp=drivesdk Outreach: Ben Vandenbosch, current Founding Technical Product Manager at Agave; draft only, no email verified and nothing sent.",
       "firstSeenAt": "2026-10-01",
-      "appliedAt": "2026-10-01",
+      "appliedAt": "01/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-03"
+      "rejectedAt": "2026-10-03",
+      "canonicalKey": "www.ycombinator.com/companies/agave/jobs/cu8tds5-customer-solutions-engineer",
+      "rejectionAt": "03/10/2026 00:27",
+      "offerAt": ""
     },
     {
       "company": "Daisy",
@@ -2492,27 +2796,33 @@ export const jobSearchData = {
       "company": "Google",
       "position": "Associate Product Manager, University Graduate, 2027 Start",
       "url": "https://www.google.com/about/careers/applications/jobs/results/107272685397910214-associate-product-manager-university-graduate-2027-start",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "ChatGPT file: Misha_Semenov_Google_APM_2027_Resume.pdf",
       "notes": "Archived 2026-10-02 during corrected sponsor-first QA. Direct Google role was credible, but role-level sponsorship evidence was not established and stronger sponsor-verified roles replaced it. Not applied; not an employer rejection.",
       "firstSeenAt": "2026-10-02",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.google.com/about/careers/applications/jobs/results/107272685397910214-associate-product-manager-university-graduate-2027-start",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Google",
       "position": "Customer Growth Associate, Google Customer Solutions, University Graduate, 2027 Start (English)",
       "url": "https://www.google.com/about/careers/applications/jobs/results/121628144896484038-customer-growth-associate-google-customer-solutions-university-graduate-2027-start-english",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "ChatGPT file: Misha_Semenov_Google_Customer_Growth_Resume.pdf",
       "notes": "Archived 2026-10-02 during corrected sponsor-first QA. Direct Google role was credible, but role-level sponsorship evidence was not established and stronger sponsor-verified roles replaced it. Not applied; not an employer rejection.",
       "firstSeenAt": "2026-10-02",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.google.com/about/careers/applications/jobs/results/121628144896484038-customer-growth-associate-google-customer-solutions-university-graduate-2027-start-english",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Raymond James",
@@ -2525,85 +2835,106 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Unsubmitted; archived shortlist replacement"
+      "finalOutcome": "Unsubmitted; archived shortlist replacement",
+      "canonicalKey": "raymondjames.wd1.myworkdayjobs.com:r",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "D. E. Shaw & Co.",
       "position": "Human Capital - Product Operations Associate",
       "url": "https://www.deshaw.com/careers/human-capital-product-operations-associate-6062",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1rBjfOLodn3BXOunHL7uyz2j6KzzP6h1t/view?usp=drivesdk",
       "notes": "October 7, 2026 12:04 ET: Archived UNsubmitted — Misha reports page has no application; prior Apply-link-only validation was insufficient. Blocked and removed from active shortlist, not rejected or withdrawn. Preserve documents/history; do not recommend again without verified working role-specific form.\n\nOctober 7 second manual run: reactivated previously archived, UNsubmitted requisition 6062; this is not a newly discovered job. Stronger attainable product/analysis match replaces Moab technical stretch, keeping exactly five active unsubmitted roles. Official full description and Apply Now link reverified: https://www.deshaw.com/careers/human-capital-product-operations-associate-6062 ; application https://apply.deshaw.com/ApplicationPage1.html?entity=DESCO is JS-dependent (final fields not inspected; no browser). NYC, bachelor's/equivalent, internships preferred but experience NOT required. $75,000-$90,000 BASE; year-end variable bonus and overtime separate. Work: user needs, requirements/scoping, operational support, testing, system changes, data cleanups/audits. Verified evidence: UN Copilot Studio assistant and four-person requirements/scoping, Lewis 10,000+ records/3,000+ students, Camp Vega AI-data cleaning/validation, AI evaluation and analytics education. Gaps: no professional permission administration, HRIS configuration, production software rollout or formal product-management ownership claimed. Deadline/start not published; confirm December 2026 availability and employer-specific CPT eligibility. Sponsorship UNKNOWN: historical H-1B filings are only sourcing leads, not this role's approval. Exceptional inclusion based on direct early-career fit; do not assume future OPT. Existing October2 PDF replaced in place with approved-master layout; one page, three working contact links, 23 bullets; rendered and visually inspected, text extraction passed. Resume: https://drive.google.com/file/d/1rBjfOLodn3BXOunHL7uyz2j6KzzP6h1t/view?usp=drivesdk . No outreach sent.\n\nSecond-run search evidence: sponsor-first YC search found Agave Product Analyst (already applied/rejected), Pocket Supply Chain Analyst (3+ and inventory/fulfillment expertise), Firstbase BizOps Manager (3+), Keye PE strategist (3+ PE), and engineering roles (technical mismatch). Capital One 2027 BA Associate explicitly rejects current/future sponsorship including CPT/OPT/STEM OPT; WTW 2027 risk same. Emendata Data Analyst no current/future sponsorship. Gain America Junior BA $62,400 fails floor. Dow Jones entry BA employer mirror confirms removed April7, expired: https://www.builtinnyc.com/job/business-analyst/8955996 . D.E.Shaw L&D Specialist5911 requires5-7 years; COO5258 requiresone comparable professional year not demonstrated by counting overlapping internships. UN/agency review: official UN P2 associate data273653 expired March10 (https://careers.un.org/jobSearchDescription/273653); UNICEF595944 expiredOct5, REACH595949 fiveyears, UNDESA285877 minimumexperience/domain unverified as eligible; none added. Four prior jobs remain unsubmitted; unchanged approved PDFs reused. Shortfall: no five NEW qualifying jobs and no new role-specific sponsorship-positive option. All retained roles' sponsorship remains unknown; OneMain salary floor remains unverified; City of Charlotte is a systems stretch.",
       "firstSeenAt": "2026-10-02",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.deshaw.com/careers/human-capital-product-operations-associate-6062",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "MUFG",
       "position": "Analyst, Markets AI Enablement and Digitization",
       "url": "https://to.indeed.com/aan6rl4jtrbl",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "ChatGPT file: Misha_Semenov_MUFG_AI_Enablement_Resume.pdf",
       "notes": "Archived 2026-10-02 during corrected full-run QA. Prior recommendation relied on an aggregator application path and did not establish role-level sponsorship. Not applied; not an employer rejection.",
       "firstSeenAt": "2026-10-02",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "to.indeed.com/aan6rl4jtrbl",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "UNICEF",
       "position": "Assurance Mapping and Data Analytics Consultant",
       "url": "https://secure.dc7.pageuppeople.com/apply/671/cw/applicationForm/initApplication.asp?lJobID=595944&sLanguage=en-us&sSourcePointer=cw&lJobSourceTypeID=796",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1LDjdGcszR1yoLoUEE5r0lWiwJZ4Tnzv9/view?usp=drivesdk",
       "notes": "Archived October 6, 2026 — not rejected. Official UNICEF vacancy 595944 closed October 5 at 11:55 p.m. EDT and the application deadline has passed. No submission confirmation exists. Prior resume and outreach draft are preserved historically, but this expired consultancy is no longer in the active radar.",
       "firstSeenAt": "2026-10-02",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Expired"
+      "finalOutcome": "Expired",
+      "canonicalKey": "secure.dc7.pageuppeople.com/apply/671/cw/applicationform/initapplication.asp",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "EliseAI",
       "position": "Associate Solutions Engineer | Healthcare",
       "url": "https://jobs.ashbyhq.com/eliseai/68e1e7e0-0089-4cd5-9603-24bae85891a9",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "ChatGPT file: Misha Semenov - EliseAI - Associate Solutions Engineer Healthcare.pdf",
       "notes": "2026-10-02 archived after full-description QA. Exact role listing states visa sponsorship Not Available: https://wellfound.com/jobs/4173407-associate-solutions-engineer-healthcare . Historical exact-title LCA filings are sourcing leads, not evidence that this opening sponsors. Unsubmitted; not an employer rejection.",
       "firstSeenAt": "2026-10-02",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:68e1e7e0-0089-4cd5-9603-24bae85891a9",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "BioStack Platforms",
       "position": "Clinical Data Lead",
       "url": "https://www.ycombinator.com/companies/biostack-platforms/jobs/HIfysXu-clinical-data-lead",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "ChatGPT file: Misha Semenov - BioStack Platforms - Clinical Data Lead.pdf",
       "notes": "Archived 2026-10-02 higher-quality rerun. Still unsubmitted. Exact YC role remains sponsor-friendly/new-grad eligible, but clinical-data domain and end-to-end dataset-delivery ownership are materially less supported than the retained five. Not an employer rejection.",
       "firstSeenAt": "2026-10-02",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.ycombinator.com/companies/biostack-platforms/jobs/hifysxu-clinical-data-lead",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Revion",
       "position": "Founding Forward Deployed Engineer",
       "url": "https://www.ycombinator.com/companies/revion/jobs/1z9Zy5a-founding-forward-deployed-engineer",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "ChatGPT file: Misha Semenov - Revion - Founding Forward Deployed Engineer.pdf",
       "notes": "2026-10-02 archived after full-description QA. Full description requires strong engineering and technical implementation ownership beyond the verified candidate record: https://www.ycombinator.com/companies/revion/jobs/1z9Zy5a-founding-forward-deployed-engineer Unsubmitted; not an employer rejection.",
       "firstSeenAt": "2026-10-02",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "www.ycombinator.com/companies/revion/jobs/1z9zy5a-founding-forward-deployed-engineer",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "PointOne",
@@ -2613,10 +2944,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1ne0VoPwmWe-4RIGy18B011qkY4wgq12B/view?usp=drivesdk",
       "notes": "October 4, 2026 18:11 ET: Y Combinator explicitly confirmed receipt of the PointOne application. Status remains Applied. No reply or action requested; the team will contact Misha by email if there is a fit.\n\nOctober 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\nArchived 2026-10-03 — user excluded sales roles from all future search and preparation. This is an active-radar removal, not an employer rejection; prior application history and files are preserved.",
       "firstSeenAt": "2026-10-02",
-      "appliedAt": "2026-10-04",
+      "appliedAt": "04/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.ycombinator.com/companies/pointone/jobs/kume05y-sales-development-representative",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Sim",
@@ -2626,10 +2960,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1H9eM8RSgsSXBYfogCFxZYar2Euf7tIma/view?usp=drivesdk",
       "notes": "October 4, 2026 18:21 ET: Y Combinator explicitly confirmed receipt of the Sim application. Status remains Applied. No reply or action requested; the team will contact Misha by email if there is a fit.\n\nOctober 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\nArchived 2026-10-03 — user excluded sales roles from all future search and preparation. This is an active-radar removal, not an employer rejection; prior application history and files are preserved.",
       "firstSeenAt": "2026-10-02",
-      "appliedAt": "2026-10-04",
+      "appliedAt": "04/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.ycombinator.com/companies/sim/jobs/dbusbgh-founding-sales",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "YouShift",
@@ -2639,10 +2976,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1iybcDsi4Ck-1cUD4p5zjayr6pfKlZcHb/view?usp=drivesdk",
       "notes": "October 4, 2026 18:19 ET: Y Combinator explicitly confirmed receipt of the YouShift application. Status remains Applied. No reply or action requested; the team will contact Misha by email if there is a fit.\n\nOctober 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\nArchived 2026-10-03 — user excluded sales roles from all future search and preparation. This is an active-radar removal, not an employer rejection; prior application history and files are preserved.",
       "firstSeenAt": "2026-10-02",
-      "appliedAt": "2026-10-04",
+      "appliedAt": "04/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.ycombinator.com/companies/youshift/jobs/tgkvaql-founding-business-development-representative",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "McKinsey & Company",
@@ -2652,10 +2992,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1buBfKUhsh6Ma_D3pr6zeZswJYbe4QVs_/view?usp=drivesdk",
       "notes": "October 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\n2026-10-03 new discovery from the official McKinsey careers page, requisition 15136. NYC, Charlotte and San Francisco are listed. Role combines research, data analysis, interviews, strategy and implementation; typically requires an undergraduate degree and less than four years of work experience. Compensation is described as competitive but no range is published, so the $70,000 base floor is not independently verified. The current page is silent on role-level sponsorship; employer/global recruiting history is only a sourcing signal, not a promise. Official role page is live, but final application fields were not independently exposed without using a cloud browser; kept Found. One-page position-specific PDF rebuilt from the approved master; extracted text and rendered-page visual QA passed.",
       "firstSeenAt": "2026-10-03",
-      "appliedAt": "2026-10-04",
+      "appliedAt": "04/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.mckinsey.com/careers/search-jobs/jobs/businessanalyst-15136",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "BarkleyOKRP",
@@ -2664,11 +3007,14 @@ export const jobSearchData = {
       "resumeUrl": "",
       "notes": "Employer confirmation email 2026-09-29; exact position and application URL were not stated.",
       "firstSeenAt": "2026-09-29",
-      "appliedAt": "2026-09-29",
+      "appliedAt": "29/09/2026 02:15:03",
       "status": "Applied",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "named:barkleyokrp:positionnotspecifiedinemployeremail",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "WisdomTree",
@@ -2678,10 +3024,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1cewxFe8sNNzBj-jz2S_07yFNcVX4_Rms/view?usp=drivesdk",
       "notes": "October 7, 2026 12:04 ET: Misha confirmed submission. Applied; exact individual submission time not supplied.\n\nManual run October 7, 2026. Unsubmitted: tracker/application history deduplicated and targeted Gmail check since October 5 found no application confirmations. Role-specific sponsorship remains UNKNOWN; retained exceptionally for analytical fit, not as positive sponsorship evidence. Misha reports current CPT; employer-specific authorization and work dates need his review. Do not assume future OPT approval. Resume rebuilt from approved September 29 master, preserving Liberation Serif, name/contact positions, working email/LinkedIn/portfolio links, section rules, exact baselines, right-aligned dates/locations, hanging indents and spacing. Each final PDF visually compared beside master and extracted-text checked; one page, 3 bullets per experience, 4 per school, approved coursework/Chief Events Officer/NACDA and 2025-2026 swimming dates. No production tools or outcomes invented.\n\nOfficial full JD and live Apply link: https://jobs.lever.co/wisdomtree/621718c3-779f-4e9c-9681-be75dafc427e . NYC/commutable, Work Smart hybrid. $70,000-$85,000 BASE plus discretionary cash/equity bonus. Bachelor's/equivalent; applied AI, Microsoft automation familiarity, QA and business needs. UN Copilot Studio, three-agent workflow and AI evaluation are direct evidence. Gaps: no verified production Power Apps/Power Automate/Azure Foundry deployments; resume does not claim them. No published deadline or start date; December 2026 availability must be confirmed. Existing Patsy Flores draft remains unsent.",
       "firstSeenAt": "2026-10-05",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:621718c3-779f-4e9c-9681-be75dafc427e",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "OneMain Financial",
@@ -2691,36 +3040,45 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1UZ8WxfUN7NeSBXnd9U0ZEVQk079zMOyO/view?usp=drivesdk",
       "notes": "October 7, 2026 12:04 ET: Misha confirmed submission. Applied; exact individual submission time not supplied.\n\nManual run October 7, 2026. Unsubmitted: tracker/application history deduplicated and targeted Gmail check since October 5 found no application confirmations. Role-specific sponsorship remains UNKNOWN; retained exceptionally for analytical fit, not as positive sponsorship evidence. Misha reports current CPT; employer-specific authorization and work dates need his review. Do not assume future OPT approval. Resume rebuilt from approved September 29 master, preserving Liberation Serif, name/contact positions, working email/LinkedIn/portfolio links, section rules, exact baselines, right-aligned dates/locations, hanging indents and spacing. Each final PDF visually compared beside master and extracted-text checked; one page, 3 bullets per experience, 4 per school, approved coursework/Chief Events Officer/NACDA and 2025-2026 swimming dates. No production tools or outcomes invented.\n\nOfficial full JD and Apply path: https://jobs.onemainfinancial.com/job/wilmington/analytics-analyst/21631/100341806912 . R2608-52224, posted Sept 8. Charlotte is approved; Wilmington requires separate relocation approval and is not recommended by this run. Current bachelor's/master's graduation Winter 2026-Spring 2027 explicitly matches December 2026. Academic/athletic project teamwork qualifies. Business analysis, cross-functional implementation and technical problem solving align with KPI/segmentation work, UN team and analytics education. Employer BASE PAY is UNPUBLISHED: the $70,000 floor is not verified and third-party estimates are not treated as base. No deadline or exact program start published. Existing Christine Santana-Smith draft remains unsent.",
       "firstSeenAt": "2026-10-05",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.onemainfinancial.com/job/wilmington/analytics-analyst/21631/100341806912",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "City of Charlotte",
       "position": "UMS Business Systems Analyst",
       "url": "https://charlottenc.wd12.myworkdayjobs.com/en-US/citgov/job/UMS-Business-Systems-Analyst_JR104646",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1U7WZZvTEOL6EJjZcUPk0QeDkGbu5JhYa/view?usp=drivesdk",
       "notes": "October 7, 2026 12:04 ET: Archived UNsubmitted — Misha reports role does not exist at application destination. Prior indexed description was insufficient proof of availability. Blocked and removed from active shortlist, not rejected or withdrawn. Preserve documents/history; do not recommend again without verified working role-specific form.\n\nManual run October 7, 2026. Unsubmitted: tracker/application history deduplicated and targeted Gmail check since October 5 found no application confirmations. Role-specific sponsorship remains UNKNOWN; retained exceptionally for analytical fit, not as positive sponsorship evidence. Misha reports current CPT; employer-specific authorization and work dates need his review. Do not assume future OPT approval. Resume rebuilt from approved September 29 master, preserving Liberation Serif, name/contact positions, working email/LinkedIn/portfolio links, section rules, exact baselines, right-aligned dates/locations, hanging indents and spacing. Each final PDF visually compared beside master and extracted-text checked; one page, 3 bullets per experience, 4 per school, approved coursework/Chief Events Officer/NACDA and 2025-2026 swimming dates. No production tools or outcomes invented.\n\nOfficial full JD: https://charlottenc.wd12.myworkdayjobs.com/en-US/citgov/job/UMS-Business-Systems-Analyst_JR104646 . JR104646, Charlotte Water, full time; deadline October 14, 2026. $87,027-$96,696 salary. Bachelor's Level Degree is an explicit minimum-qualification route independent of the high-school/associate experience routes. Requirements discovery, process analysis, data validation/reporting align with UN and student services work. Material skill gaps: advanced Oracle SQL/PLSQL, SSRS, utility enterprise applications, production UAT/test plans, Jira/Azure DevOps and integrations. Preferred qualifications are distinguished from baseline degree; this is a systems stretch, not utility expertise. No published start timing; December graduation/CPT schedule needs employer agreement. Existing Zachary Cannon draft remains unsent.",
       "firstSeenAt": "2026-10-05",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "charlottenc.wd12.myworkdayjobs.com:jr104646",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Moab",
       "position": "Data & AI Analyst",
       "url": "https://jobs.ashbyhq.com/moab/8ab10f9b-2a49-409d-8b20-7ecf1ed92ee4",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1xwwC9V_ZsFxwLJcQZMWphBAQ8ihWk01D/view?usp=drivesdk",
       "notes": "October 7 second manual run: archived UNsubmitted after replacing with stronger attainable D. E. Shaw Product Operations role. Technical Python/SQL, ETL/API/SDK/Git and migration ownership gap remains. Archive is not rejection, withdrawal or application; original PDF and history preserved.\n\nManual run October 7, 2026. Unsubmitted: tracker/application history deduplicated and targeted Gmail check since October 5 found no application confirmations. Role-specific sponsorship remains UNKNOWN; retained exceptionally for analytical fit, not as positive sponsorship evidence. Misha reports current CPT; employer-specific authorization and work dates need his review. Do not assume future OPT approval. Resume rebuilt from approved September 29 master, preserving Liberation Serif, name/contact positions, working email/LinkedIn/portfolio links, section rules, exact baselines, right-aligned dates/locations, hanging indents and spacing. Each final PDF visually compared beside master and extracted-text checked; one page, 3 bullets per experience, 4 per school, approved coursework/Chief Events Officer/NACDA and 2025-2026 swimming dates. No production tools or outcomes invented.\n\nOfficial full JD indexed and Ashby application destination: https://jobs.ashbyhq.com/moab/8ab10f9b-2a49-409d-8b20-7ecf1ed92ee4 . NYC, full time; $125,000-$175,000 estimated BASE plus equity. This is explicitly a TECHNICAL STRETCH: Python/SQL proficiency and API/SDK, ETL/data modeling, Git and migration ownership exceed the verified professional record. Employer accepts 0-5+ years and explicitly invites candidates who do not meet every criterion. Relevant evidence is 20,000+ AI data points, 10,000+ record operations, Copilot Studio and analytical coursework; no API/SDK/ETL/Git production work is claimed. Separate Moab role's sponsorship restriction is not generalized here. Ashby is JS-dependent; page is indexed with full JD, final interactive fields not inspected because no browser is allowed. No deadline/start date published. No verified nonexecutive role contact found.",
       "firstSeenAt": "2026-10-06",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.ashbyhq.com:8ab10f9b-2a49-409d-8b20-7ecf1ed92ee4",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Invesco",
@@ -2730,10 +3088,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1PU49beNexjDNSpsLEoyZd7qDRxX3mIEe/view?usp=drivesdk",
       "notes": "October 7, 2026 12:04 ET: Misha confirmed submission. Applied; exact individual submission time not supplied.\n\nManual run October 7, 2026. Unsubmitted: tracker/application history deduplicated and targeted Gmail check since October 5 found no application confirmations. Role-specific sponsorship remains UNKNOWN; retained exceptionally for analytical fit, not as positive sponsorship evidence. Misha reports current CPT; employer-specific authorization and work dates need his review. Do not assume future OPT approval. Resume rebuilt from approved September 29 master, preserving Liberation Serif, name/contact positions, working email/LinkedIn/portfolio links, section rules, exact baselines, right-aligned dates/locations, hanging indents and spacing. Each final PDF visually compared beside master and extracted-text checked; one page, 3 bullets per experience, 4 per school, approved coursework/Chief Events Officer/NACDA and 2025-2026 swimming dates. No production tools or outcomes invented.\n\nOfficial full indexed JD: https://invesco.wd1.myworkdayjobs.com/en-GB/IVZ/job/Business-Analyst--Investment-Compliance_R-14679 . R-14679, New York, four office days/week. $75,000-$105,000 salary; incentives separate. Explicitly accepts academic work, internships, apprenticeships and part-time early-career evidence; bachelor's qualifies. Duties: business/process analysis, requirements, validation/testing, documentation, Excel/SQL/Power BI/Python and responsible AI/automation. Finance/compliance exposure is preferred, not mandatory. Evidence: Lewis compliance-focused records, UN client-needs/scoping, AI output validation, analytics coursework and KPI reporting. Gaps: no trade/holdings/restriction systems, formal UAT ownership or asset-management compliance expertise. Official page presents Apply; Workday final form fetch blocked/JS-dependent, not field-by-field inspected. No deadline/start date published; confirm December 2026 availability and authorization. Role-specific sponsorship is not stated. No verified current nonexecutive role-specific recruiter; no outreach sent.\n\nSearch evidence/rejections, October 7: sponsor-friendly YC led sourcing. Agave Product Analyst explicitly sponsors but is already rejected/submitted (duplicate; https://www.ycombinator.com/companies/agave/jobs/Z4eqc5c-product-analyst). OffDeal Founding SWE sponsors/new grads but requires engineering stack beyond verified record. Keye PE Strategist, Axle Senior Deployment Strategist and ProSights Deployment Lead require 3+ years/domain experience. Confido Applied AI Data Analyst header allows new grads but body requires completed MS, 2-4 years quantitative AI work and enterprise SQL/Snowflake/dbt/AWS (https://www.ycombinator.com/companies/confido/jobs/V06JWRY-applied-ai-data-analyst). BioStack Clinical Data Lead sponsor-friendly, but clinical sourcing/vendor negotiation and commercial delivery less aligned with main analyst priorities (https://www.ycombinator.com/companies/biostack-platforms/jobs/HIfysXu-clinical-data-lead). Makai Labs FDE AI Analyst explicitly no sponsorship. Newform Paid Social Analyst explicitly no current/future sponsorship (https://jobs.ashbyhq.com/newform/ceab5c60-dd44-44c1-8d42-5f9825b98d85). Onyx Data, Product Validation, Product Operations and Operations Analyst postings explicitly no sponsorship. Gain America Junior BA $62,400 and Junior Data $58,240 fail floor; training/placement leads excluded. Jitsu Business Insights Analyst fit well, but exact Built In vacancy says removed October 6 at 18:14 EST; not shortlisted (https://www.builtinnyc.com/job/business-insights-analyst/11424161). Historical Jitsu visa filings may describe different same-name software company, so not used. UN/UNICEF: 595944 expired October 5 and stays Archived; REACH595949 official minimum 5 years plus advanced degree (https://jobs.unicef.org/en-us/job/595949/resultsenabling-advisory-and-capacity-hub-reach-process-reengineering-consultant-programmes-ny-us-remote-homebased-with-possible-travel-if-required-12-months-595949); UNDESA Data Management285877 official listing active to October13, full official detail403 blocked, secondary sources report5+years plus master's or bachelor's+7 and national environment statistics (https://careers.un.org/jobSearchDescription/285877?language=en), excluded rather than claiming verified eligibility. LinkedIn candidate page hit429; approved master used for claims. No clear new role-level sponsorship-positive analytical match passed all filters. No coverage counts inflated.\n\nOctober 7 dashboard reconciliation: 56 unique confirmed post-August24 submissions from Application History, including all five September20 confirmations plus Epic. Four April/May submissions and unverified Loop excluded. Prior 50 metric understated lifetime applications. Rejections23: count verified candidate declines, including Lambda October5; DoorDash Marketplace opening closure is not a rejection. Completed interviews0: Enigma's canceled invitation was never an interview. Offers0. No new submissions during this manual run.",
       "firstSeenAt": "2026-10-07",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": ""
+      "finalOutcome": "",
+      "canonicalKey": "invesco.wd1.myworkdayjobs.com:r",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Metropolitan Commercial Bank",
@@ -2743,10 +3104,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1fgu9G5xJVZ7GmCUQignI-QB17Botfdco/view?usp=drivesdk",
       "notes": "October 7, 2026 12:47 ET: Misha confirmed all three submissions (Instawork AI & Automation, Metropolitan Applied AI Analyst, PineBridge Data Systems Analyst). Date recorded; exact submission times not provided. Preserve final submitted PDF snapshot.\n\nManual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial full JD and full application form verified: https://job-boards.greenhouse.io/metropolitancommercialbank/jobs/4708072006 . Base $120,000-$150,000; incentives separate. Two-plus years requested but employer explicitly considers relevant internships, apprenticeships and hands-on AI/analytics/automation projects. EXPERIENCE AND TECHNICAL STRETCH: verified internships are overlapping and are NOT counted as two full-time years. Strong direct fit in UN Copilot Studio assistant, user-needs/scoping, multi-agent workflow refinement, Data Annotation evaluation, Camp Vega AI-data validation. Gaps: no verified professional RAG, Azure Foundry, Snowflake, REST/API, JSON/YAML, Git or MCP/A2A deployment. Python/SQL listed from approved master and coursework, not portrayed as enterprise delivery. Sponsorship questions present but no commitment to sponsor. LinkedIn discovery https://www.linkedin.com/jobs/view/applied-ai-analyst-at-metropolitan-commercial-bank-4472561499 .",
       "firstSeenAt": "2026-10-07",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:4708072006",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "PineBridge Investments (MetLife Investment Management)",
@@ -2756,10 +3120,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1lBdd9F5lk1Ob9tr_Y3kRRvtCNL037lFP/view?usp=drivesdk",
       "notes": "October 7, 2026 12:47 ET: Misha confirmed all three submissions (Instawork AI & Automation, Metropolitan Applied AI Analyst, PineBridge Data Systems Analyst). Date recorded; exact submission times not provided. Preserve final submitted PDF snapshot.\n\nManual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial Workday requisition R-02095 retrieved through employer public CXS job details: title exact, posted=true and canApply=true, externalUrl exact. Full active JD verified October7. Application destination: https://pinebridge.wd5.myworkdayjobs.com/PineBridge_Career_Site/job/New-York/Data-Systems-Analyst_R-02095 . JS-dependent final account/form not inspected, no browser used. Base $100,000-$110,000 plus separate bonus/benefits. Bachelor's in business analytics or related accepted; 1-2 years asset-management/finance-operations experience PREFERRED, not required. AI implementation/project management strongly preferred. SQL/Python/Excel required. Fit: UN AI assistant project, Camp Vega 20,000+ AI-data quality work, Lewis 10,000+ record operations, KPI analysis and verified analytical coursework. Gaps: no professional private-credit portfolio systems, cash-flow projection or investment modeling delivery; tools beyond academic/approved-master evidence not claimed. Employer posted September9; this is posting date, not employment start date. LinkedIn listing https://www.linkedin.com/jobs/view/data-systems-analyst-at-metlife-investment-management-4463058587 .\n\nRun shortfall: THREE credible active unsubmitted matches, not five. CAIS Partner Experience req8809524002 excluded as ALREADY APPLIED (history APP-20260916-CAIS-PARTNEREXP). Jitsu Business Insights official Rippling redirects job_not_found; TogetherAI GTM Data Analytics Engineer official Greenhouse redirects board error (closed); WisdomTree Portfolio Solutions direct Lever404. MUFG Markets AI Enablement appears in mirrors but not current employer NY analyst job feed; not claimed active. Middesk Data Operations requires at least2 years consulting/finance/strategy/BizOps with scalable software processes, no explicit internship allowance; excluded experience mismatch. Clipboard Revenue Strategy/Growth salary is80-120TOTAL base+bonus and employer-profile says sponsorship unavailable; also Sales department; excluded. Emendata Data Analyst explicitly no current/future sponsorship. VettaFi Index Governance explicitly no work permit sponsorship. BlackRock PFS BI/BA full JD requires5+ years despite junior-looking mirrors. Shiftsmart Shift Success requires3-6 years and is reported closed. Hearst AI/resilience21hours/week35-41/hr annual below70kfloor. Relevant official UN search: UNICEF595944 expiredOct5; REACH595949 activeOct8 but5yearsminimum; UNDataAnalyst275170 explicitly no longer available, Apr23deadline; UN national-professional openings outside approved geographies excluded. Sponsor-friendly employers/YC researched first; no new role with positive sponsorship, approved pay and verified experience fit passed all filters. LinkedIn used for discovery and official employer paths for verification.",
       "firstSeenAt": "2026-10-07",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "pinebridge.wd5.myworkdayjobs.com:r",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Silna Health",
@@ -2769,10 +3136,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1B-Hy-Bm56xobyHNnxkjDcHfDwFYVWddg/view?usp=drivesdk",
       "notes": "October 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nManual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nSilna Health: Recent graduates, including nontechnical analytical backgrounds, explicitly encouraged. UN Copilot Studio assistant and Data Annotation output evaluation directly match deployment testing, prompting and AI quality. OCR, healthcare insurance workflows and production browser/phone agents are gaps, not required prior experience.\nPay: $120,000–$160,000 base. Equity/bonus separate if applicable. Public official Ashby posting API returned isListed=true and exact current applyUrl; old 4fb17cf8 requisition not used.\nOfficial JD: https://jobs.ashbyhq.com/silnahealth.com/8ed75986-4032-425b-b82a-fa6010a18656\nEvidence checked 2026-10-07T16:59:08.234Z; source https://api.ashbyhq.com/posting-api/job-board/silnahealth.com?includeCompensation=true\nResume: https://drive.google.com/file/d/1B-Hy-Bm56xobyHNnxkjDcHfDwFYVWddg/view?usp=drivesdk",
       "firstSeenAt": "2026-10-07",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:8ed75986-4032-425b-b82a-fa6010a18656",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Health Services Advisory Group",
@@ -2782,10 +3152,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1yhqWgi0YR1BqZPrDV3Yg0TFjVBuE9OCp/view?usp=drivesdk",
       "notes": "October 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nManual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nHealth Services Advisory Group: Academic/internship data analysis accepted; related analytical degree and coursework. Verified SQL/Python, Excel, data validation and logistic-regression academic project support requirements. SAS willingness to learn required, not prior SAS; healthcare datasets and SAS are gaps. Apply form asks SAS experience: verified record supports No.\nPay: $70,000–$75,000 base. Equity/bonus separate if applicable. Exact official Lever application form opened today with resume upload, contact fields and Submit application button; no form filled or submitted.\nOfficial JD: https://jobs.lever.co/hsag/2937f26a-3e66-4d42-ba61-c26e5b52f488\nEvidence checked 2026-10-07T16:59:08.234Z; source https://jobs.lever.co/hsag/2937f26a-3e66-4d42-ba61-c26e5b52f488/apply\nResume: https://drive.google.com/file/d/1yhqWgi0YR1BqZPrDV3Yg0TFjVBuE9OCp/view?usp=drivesdk",
       "firstSeenAt": "2026-10-07",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:2937f26a-3e66-4d42-ba61-c26e5b52f488",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "CertiK",
@@ -2795,10 +3168,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1vA8CNgCBS2_4Nw9JSh2wFhdL12pJWxLc/view?usp=drivesdk",
       "notes": "October 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nManual requested run October 7, 2026. FOUR qualified unsubmitted openings; one-position shortfall recorded instead of padding. Fresh tracker/history duplicate preflight completed before resume authoring; all four eligible. Snapshot SHA256 b8ebd99b10dcdc9254c350c23fd770c293500fa15bfcda798410d3e965fc8eef. Approved master libfile_7675dde2a3908191a50dba63afe47887 version 2 (September 29), verified LinkedIn source. One page, 3 contribution bullets per experience, 4 per school, exact master contact geometry and 3 tested hyperlinks; final rendered page inspected and all 15 tailored bullets asserted in extracted text. Skills/metrics limited to verified records. QA completed 07/10/2026 13:02:41 ET. Sponsorship UNKNOWN for all four: disclosed role-fit exceptions, not evidence of visa support. Current reported CPT only; no assumed OPT approval; role/dates/hours and employer acceptance require confirmation. Deadlines and mandatory start dates not published. Start after December 2026 graduation or compatible authorized CPT must be discussed. No applications, outreach, covers or schedules created.\n\nResearch exclusions before drafting: previously submitted Agave and Loop blocked at initial duplicate screen. Old EliseAI new-grad AI Operations f8744c2a not present in current official posting API (124 current jobs); not reused. Moelis AI BA REQ102036 not present in current official Workday search feed (https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs); no accessible live exact application, excluded. Raymond James R-0013200 canApply=true/posted=true and current title AI Business Enablement Analyst, but verified candidate record does not establish requested vendor/license/contract coordination; archived, not a rejection. Neuberger R0012405 asks 2–4 years and archived indexed JD explicitly disallows current/future sponsorship; not shortlisted. Calibrate Junior Data Analyst pay $60k–$65k, below floor; Centene Analyst I explicitly excludes future sponsorship including CPT/OPT; Firstbase BizOps Manager requires 3–5 startup years; no inflated internships. NYC/SF/Charlotte/eligible US remote searched; no qualifying Charlotte lead verified. Official UNICEF search returned Digital Data Analyst 595435 closed Sep11 and Assurance Mapping OIAI deadline Oct5; no attainable active UN/agency opening confirmed. Research sources and skill gaps are retained below.\n\nCertiK: Current degree completion explicitly permitted; business administration and MS Business Analytics related to finance, both GPAs exceed 3.6; Lewis finance/accounting courses verified. Record cleansing, validation, KPI analysis and budget modeling align. Confirm requested mid-level course equivalency with transcript; no invented journal-entry, month-end close or bank-reconciliation experience.\nPay: $60,000–$80,000 annual salary; offer must be at least $70,000. Equity/bonus separate if applicable. Exact official Lever application form opened today, current title, resume upload, contact fields and Submit application button; no submission.\nOfficial JD: https://jobs.lever.co/certik/7d25f5e8-2fed-412c-b182-6568a491483e\nEvidence checked 2026-10-07T16:59:08.234Z; source https://jobs.lever.co/certik/7d25f5e8-2fed-412c-b182-6568a491483e/apply\nResume: https://drive.google.com/file/d/1vA8CNgCBS2_4Nw9JSh2wFhdL12pJWxLc/view?usp=drivesdk",
       "firstSeenAt": "2026-10-07",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:7d25f5e8-2fed-412c-b182-6568a491483e",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Security Benefit",
@@ -2808,10 +3184,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1c9W_ND-dEUqtN9b7ISGuZ8x3jgsJgnp7/view?usp=drivesdk",
       "notes": "October 7, 2026: Misha confirmed submission of all five: Silna AI Deployment Analyst, Valerie Health AI Operations Specialist, HSAG Analyst I, CertiK Financial Analyst (Entry-Level), and Security Benefit Associate Business Data Analyst. Confirmation date recorded; exact submission times were not supplied. User submitted applications himself; preserve submitted resume snapshot.\n\nUser-selected additional opening, not a scheduled run. Exact Security Benefit LinkedIn posting 4476316169 describes entry-level Data Intelligence work: data collection/validation, reporting, documentation and supported testing. 0–2 years; coursework and internships accepted. Remote possible for the right candidate; Topeka home office. Salary, deadline, start timing and role sponsorship not published in provided posting. Unknown sponsorship and remote eligibility are not positive evidence. Resume prepared from approved September 29 updated master; one page, three bullets per experience, four per school; extracted text, all 15 position-specific bullets, three contact links and rendered layout checked. No invented Snowflake, ELT production delivery, UAT or insurance work. Library version 2, libfile_3253cd10119881918752aab7f2c66847. Submitted PDF: https://drive.google.com/file/d/1c9W_ND-dEUqtN9b7ISGuZ8x3jgsJgnp7/view?usp=drivesdk",
       "firstSeenAt": "2026-10-07",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.linkedin.com/jobs/view/associate-business-data-analyst-at-security-benefit-4476316169",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Oliver Wyman",
@@ -2821,10 +3200,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1Mlh2XW7JgT_IgTQYFnHt8CVwn8HehPpp/view?usp=drivesdk",
       "notes": "October 7, 2026: Misha confirmed submission. Confirmation date recorded; exact submission time not supplied. User-selected LinkedIn posting 4474312818; duplicate check found no prior record. NYC hybrid, 60% in office; $95,000–$130,000 base, incentives separate. JD asks 2–5 years analytics/digital enablement; internships not counted as cumulative full-time years. AI output evaluation and UN Copilot Studio project align with AI experimentation, workflow testing and documentation. Sponsorship, start timing and deadline not established. Approved updated master used; one page, 15 position-specific experience bullets, 4 school bullets each, 3 working contact links, rendered and extracted text checked. No unsupported custom GPT deployment, AI coaching or prompt-library accomplishments claimed. Submitted resume: https://drive.google.com/file/d/1Mlh2XW7JgT_IgTQYFnHt8CVwn8HehPpp/view?usp=drivesdk",
       "firstSeenAt": "2026-10-07",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.linkedin.com/jobs/view/4474312818",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Recidiviz",
@@ -2834,10 +3216,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
       "notes": "October 7, 2026: Misha confirmed submission of Recidiviz Data Analyst (Entry-Level). Confirmation date recorded; exact submission time not supplied. Application submitted by Misha. Preserve submitted resume snapshot and explicit no-sponsorship evidence.\n\nUser-selected resume request October 7, 2026; subsequently confirmed applied. Explicit visa sponsorship unavailable; excluded from automatic sponsorship-friendly searches, retained only as user-selected exception. Official live JD: https://job-boards.greenhouse.io/recidiviz/jobs/4717510006. Entry-level Data Analyst, $85,000 fixed annual compensation, NYC/Oakland/US remote; occasional state travel including prison/parole office visits. Minimum six months real-world data analysis/cleaning including internships; part-time hours must equal roughly six months full-time, not established. SQL joins/aggregations/window functions and Python/Pandas live coding required; granular proficiency not assumed from general skills. No invented BigQuery, Looker, GCP, criminal justice analysis or product-launch delivery. TechJobsForGood shows posted October 6, validThrough November 5; employer deadline and mandatory start not published. Current CPT compatibility and future work authorization must be confirmed. Master layout preserved; all 15 revised experience bullets, 23 total bullets, one page and three contact links passed extracted-text and rendered QA. Resume: https://drive.google.com/file/d/1LaWtFPczclQgCfry2AC1vvCbxBexlov1/view?usp=drivesdk",
       "firstSeenAt": "2026-10-07",
-      "appliedAt": "2026-10-07",
+      "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:4717510006",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "True North Insights",
@@ -2847,24 +3232,30 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1EmkzvYOZjzx-om5BO3EGc8751WgaZbVe/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed submission. Confirmation date recorded; exact submission time not supplied. User-selected exception to search priorities, not a new run. Handshake full description viewed in cloud browser October 8 by user request, job 11273033. January 2027 anticipated start, on-site NYC. Actual base $65,000 plus uncapped monthly bonus; employer states $85,000–$115,000 average for high-performing associates, while platform header advertises $91,000–$125,000. Base below $70,000 floor. Expert-network client services: expert identification/outreach, consultation scheduling, multiple engagements, client coordination. Outside main business/data/AI analyst search; do not use as justification to include sales/client-services in future runs. Bachelor degree/GPA3.5 minimum, 6–18 months experience, internships welcome; leadership and multilingual record align. No invented expert recruiting or hedge-fund client work. Explicit F-1 STEM OPT acceptance; future sponsorship not stated, OPT approval not assumed. Approved latest master retained; one page, 15 updated experience bullets, 3 hyperlinks, 3 bullets per experience and 4 per school. Extracted text and final rendered PDF checked. Submitted resume snapshot: https://drive.google.com/file/d/1EmkzvYOZjzx-om5BO3EGc8751WgaZbVe/view?usp=drivesdk",
       "firstSeenAt": "2026-10-08",
-      "appliedAt": "2026-10-08",
+      "appliedAt": "08/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "app.joinhandshake.com/jobs/11273033",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Keystone",
       "position": "Associates and Consultants (2027 Grads)",
       "url": "https://app.joinhandshake.com/jobs/11568732",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed application submission; confirmation date recorded, exact submission time not supplied. User-selected Handshake posting 11568732, full description read October 8. Associates and Consultants (2027 Grads), economics/strategy/technology and litigation consulting. $110,000–$176,000 base; discretionary bonus separate. Hybrid, multiple US offices including NYC and San Francisco. Strong overlap: MS Business Analytics GPA 3.88, BS Business Administration GPA 3.98, Python/SQL, data cleaning/validation, market research and analytical reporting. Gaps: no verified litigation consulting, econometrics, financial valuation or R/Stata experience. December 2026 graduation versus 2027 cohort eligibility needs confirmation; exact start and employer deadline not established. JD requires US work authorization; sponsorship not confirmed. Handshake search filter is not role-level sponsorship evidence. No future OPT approval assumed. Duplicate check completed before drafting. Approved master uses Liberation Serif, verified embedded fonts; resume one page, 23 bullets, 3 working contact links, extracted text and rendered layout checked. Cover letter one page, requested separately, checked. Submitted resume snapshot: https://drive.google.com/file/d/1n8HNWsro5SDnFLYQ8TKdAmk_sYuzWSWH/view?usp=drivesdk. Prepared cover letter: https://drive.google.com/file/d/19Ug54HzeKqqJiKHq2AEbbC9Xcp9EmRPF/view?usp=drivesdk. Library resume libfile_85bd98bf3e008191a7d710eb3c2518d8; cover libfile_0357f04f4c3c8191b5eb6c09e7d49f8a.",
       "firstSeenAt": "2026-10-08",
-      "appliedAt": "2026-10-08",
+      "appliedAt": "08/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-15"
+      "rejectedAt": "2026-10-15",
+      "canonicalKey": "app.joinhandshake.com/jobs/11568732",
+      "rejectionAt": "2026-10-15",
+      "offerAt": ""
     },
     {
       "company": "Revley.ai",
@@ -2874,10 +3265,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/15LlZp3FmU_96ZnrnsShVgxl3c7ZJj-Td/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed application submission; confirmation date recorded, exact submission time not supplied. User-selected exception to analyst search priorities, not a full run. Handshake 11500652 header Founding Growth Marketer — AI & Ecommerce; JD title Content & Growth Marketer — Revley. Full description read October 8. NYC in-person preferred or remote; initial 60-day contract, possible full-time conversion not guaranteed. Header $65,000–$450,000 does not establish base, bonus or contract rate; compensation unconfirmed. Role focuses X content, product demos, creator outreach, growth experiments, AI production workflows and HubSpot tracking. Relevant verified evidence: Pinear market research/three segments/KPIs/budget modeling/SEO, UN Copilot Studio/Power Automate, AI response evaluation, LinkedIn-verified website/Google Ads/Odoo CRM and 1,500+ records in Semenov Swim Program. No invented X following, creator campaigns, ecommerce clients, HubSpot, Meta campaigns or conversion metrics. Personal X profile, work samples, ecommerce experience examples and AI workflow demo requested; completeness of submitted samples not confirmed. JD requests no cover letter; user separately requested one, prepared file retained without asserting it was attached. US work authorization required; sponsorship not confirmed by JD, search filters not sufficient proof. CPT compatibility and future work authorization not assumed. Duplicate check before drafting; one-page resume, 23 bullets, 3 contact links, approved master Liberation Serif font/layout, rendered and extracted text QA passed. Resume snapshot: https://drive.google.com/file/d/15LlZp3FmU_96ZnrnsShVgxl3c7ZJj-Td/view?usp=drivesdk. Prepared cover letter: https://drive.google.com/file/d/1Wo8XFYq7YHIMaMkUPWDVgkDwQHo2uUhs/view?usp=drivesdk. Library resume libfile_f2293f8c75d48191a3ef9c6c9ceb0b26; cover libfile_ace940fb6034819189119dbcad0487a5.",
       "firstSeenAt": "2026-10-08",
-      "appliedAt": "2026-10-08",
+      "appliedAt": "08/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "app.joinhandshake.com/jobs/11500652",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Cardella Waste Services",
@@ -2887,10 +3281,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1ov5923vGeP8pc6nbyEu41t3mQekeXtzC/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed submission of this and the preceding application ('applied to both'), interpreted as Cardella and Renewable Careers. Confirmation date recorded; exact submission time not supplied. Duplicate check completed before drafting. Full JD read October 8, Handshake 11600315. Full-time entry-level; recent/upcoming graduates welcome, relevant internship not required. $80,000–$85,000 base, benefits and 401(k). Finance/accounting/operations/risk reporting, budgeting/forecasting/variance, invoice/vendor/cash-flow/captive insurance, fleet costs/profitability, dashboards, Salesforce analysis, AI tools and workflow automation. Fit: Business degree, MSBA, Excel/Python/SQL/Power BI, Pinear budget/KPI work, UN automation and large-data validation. Gaps: no verified professional accounts payable, captive insurance, cash-flow forecasting, fleet/capex analysis, Salesforce or valuation. No invented claims. Authorization required, sponsorship not stated; Handshake filter not positive role-level proof. Start timing and deadline unknown; current CPT compatibility and future authorization need confirmation. Resume Library libfile_38c9fa4f067c81918ff0d9210106258d. Approved latest master layout and Liberation Serif font retained, one page, 23 bullets, three working contact links; rendered PDF and extracted text checked. Submitted resume snapshot: https://drive.google.com/file/d/1ov5923vGeP8pc6nbyEu41t3mQekeXtzC/view?usp=drivesdk",
       "firstSeenAt": "2026-10-08",
-      "appliedAt": "2026-10-08",
+      "appliedAt": "08/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "app.joinhandshake.com/jobs/11600315",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Renewable Careers (energy employer undisclosed)",
@@ -2900,10 +3297,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1NdZ61iUY_P750mUago-bYEf2liGsNNKU/view?usp=drivesdk",
       "notes": "October 8, 2026: Misha confirmed submission of this and the preceding application ('applied to both'), interpreted as Cardella and Renewable Careers. Confirmation date recorded; exact submission time not supplied. Duplicate check completed before drafting. Full LinkedIn JD read October 8, 4477185963. Posted by Renewable Careers recruiter Daniel May; underlying energy operating company not named. $80,000–$100,000 base, full-time hybrid Jersey City. Entry-level models for project economics/energy production/markets, research markets/policy/technology/competitors, due diligence support, fleet performance, reports/dashboards/presentations and spreadsheets/data sets. Excel required; Python/SQL/visualization plus; energy/finance/data internships optional. Fit: MSBA, strong GPAs, modeling/KPIs/market research, Python/SQL/Excel/BI and validation. Gaps: no verified energy production modeling, project due diligence, interconnection/permitting or renewable asset experience; no invented sector claims. US authorization required; sponsorship not stated. Rolling applications; fixed deadline and start unknown. Resume Library libfile_873b31f543d48191990aa1173eb14c45. Approved latest master layout and Liberation Serif font retained, one page, 23 bullets, three working contact links; rendered PDF and extracted text checked. Submitted resume snapshot: https://drive.google.com/file/d/1NdZ61iUY_P750mUago-bYEf2liGsNNKU/view?usp=drivesdk",
       "firstSeenAt": "2026-10-08",
-      "appliedAt": "2026-10-08",
+      "appliedAt": "08/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.linkedin.com/jobs/view/4477185963",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "adMarketplace",
@@ -2916,7 +3316,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-09",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.admarketplace.com/jobs/706587-graduate-data-analyst",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Dow Jones",
@@ -2929,13 +3332,16 @@ export const jobSearchData = {
       "appliedAt": "2026-10-10",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "dowjones.wd1.myworkdayjobs.com:job_req_55391",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "FanDuel",
       "position": "Campaign Analytics, Data Analyst",
       "url": "https://www.fanduel.careers/open-positions?gh_jid=8055746",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1e0TCTdc2aW6zus3CjFuK6u8ydlm0Ngdf/view?usp=drivesdk",
       "notes": "October 10, 2026: Misha confirmed submission of all five October 9 run roles: Dow Jones Analyst, Newsroom Data; FanDuel Campaign Analytics, Data Analyst; Wilson Elser Data Analyst; Grapevine Product & Savings Intelligence Analyst; LSEG Business Analyst Graduate Programme. Confirmation date recorded; exact submission dates/times not supplied. Prepared resumes retained as submitted snapshots. Prior pending application requirements are superseded by this submission confirmation.\nOctober 9, 2026 manual analyst run. Live snapshot preflight passed before authoring; snapshot SHA256 abcce8bb40ec1a8a78254e1b9ce2b999643647d07845606db2244881da6f275f. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256 db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: Pinear campaign KPIs and segments plus sports analytics project fit measurement role. | location: New York, hybrid | experience: One-plus year similar experience; marketing analytics, data QA and ongoing analytics coursework; SQL and Excel skills verified. | mandatory_requirements: One-plus year similar experience; marketing analytics, data QA and ongoing analytics coursework; SQL and Excel skills verified. | base_salary: Posted annual base $90,000–112,000 | authorization: No explicit sponsorship prohibition found in official posting. Current CPT reported; future OPT not approved or assumed. | start_timing: No mandatory immediate start date identified; availability remains subject to CPT approval. | application_path: Greenhouse requisition 8055746 returned active application questions and required resume field.. Application checked 2026-10-09T16:21:21.409Z. Sponsorship UNCONFIRMED: Exceptional fit for verified analytics experience; posting does not prohibit sponsorship. Must confirm employer authorization support before applying. No professional campaign attribution or experimentation ownership claimed. Requisition 8055746 is distinct from prior FanDuel Commercial Analyst Casino. Deadline not published. Fit score 92; role/skills/experience/seniority/education/achievement 24/19/17/13/10/9. Resume one page, 23 bullets, 3 contact links; approved Liberation Serif font and geometry, rendered page and extracted text inspected. PDF SHA256 ace0684823660da76999f9909642539ed4e4f8bb1913c0a125feb372b6a11266. Resume https://drive.google.com/file/d/1e0TCTdc2aW6zus3CjFuK6u8ydlm0Ngdf/view?usp=drivesdk; Library libfile_db89ee3f98ec81919a0234a4c2a7aedd. Prepared only; no application submission or outreach. YC target shortfall: zero YC roles retained. Agave equivalents already submitted; Confido 2–4 R&D years/domain gap, David AI 2–6 startup operations years, Pocket physical supply forecasting gap, Rainfall analyst absent from live board, ARQ/Numeral/Bretton authorization restrictions. UN relevant searched postings expired before October 9; no generalist padding.",
       "firstSeenAt": "2026-10-09",
@@ -2943,7 +3349,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-14"
+      "rejectedAt": "2026-10-14",
+      "canonicalKey": "greenhouse:8055746",
+      "rejectionAt": "14/10/2026 10:35:06 ET",
+      "offerAt": ""
     },
     {
       "company": "Wilson Elser",
@@ -2956,13 +3365,16 @@ export const jobSearchData = {
       "appliedAt": "2026-10-10",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "greenhouse:5406594008",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "LSEG",
       "position": "Business Analyst Graduate Programme",
       "url": "https://lseg.wd3.myworkdayjobs.com/Graduate_Careers/job/USA-New-York-28-Liberty-Street/R0123408-Business-Analyst-Graduate-Programme_R0123420",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1Sskb0EEcTazZSugM7PAcw-SNnIx2V3vl/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed completion of the LSEG Cappfinity Immersive Online Assessment. Candidate reports soft skills, teamwork and workplace-behavior questions; no numerical or technical sections reported. Assessment completed; employer result and progression pending. Completion is not a human interview. Date confirmed; exact completion time not supplied.\nOctober 10, 2026: Misha confirmed submission of all five October 9 run roles: Dow Jones Analyst, Newsroom Data; FanDuel Campaign Analytics, Data Analyst; Wilson Elser Data Analyst; Grapevine Product & Savings Intelligence Analyst; LSEG Business Analyst Graduate Programme. Confirmation date recorded; exact submission dates/times not supplied. Prepared resumes retained as submitted snapshots. Prior pending application requirements are superseded by this submission confirmation.\nOctober 9, 2026 manual analyst run. Live snapshot preflight passed before authoring; snapshot SHA256 abcce8bb40ec1a8a78254e1b9ce2b999643647d07845606db2244881da6f275f. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256 db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: Graduate business/data analysis and stakeholder requirements fit UN project scoping and analytics projects. | location: New York | experience: 2026 graduates/final-year master's completing before September 2027 accepted; MS Business Analytics December 2026, SQL/Python/BI coursework and finance background fit. | mandatory_requirements: 2026 graduates/final-year master's completing before September 2027 accepted; MS Business Analytics December 2026, SQL/Python/BI coursework and finance background fit. | base_salary: Posted annual base $62,800–104,600; include only with offer at least $70,000 | authorization: Posting says unrestricted work rights are ideal, not an explicit sponsorship prohibition. Current CPT is reported only; September 2027 authorization must be confirmed. | start_timing: September 2027 programme start; MS expected December 2026 meets stated education timing. | application_path: Workday canApply=true; posted=true; deadline October 20, 2026; one programme application.. Application checked 2026-10-09T16:21:21.409Z. Sponsorship UNCONFIRMED: Relevant eligible graduate programme; work-rights wording is preference, not categorical prohibition. Confirm September 2027 eligibility and sponsorship before applying. September 2027 start. Base range $62,800–$104,600 crosses floor: require offer >=$70,000. Deadline October 20, 2026, rolling and may close early. Unrestricted US work rights stated as ideal; confirm programme eligibility, employer support and September 2027 authorization. Future OPT approval not assumed. Fit score 94; role/skills/experience/seniority/education/achievement 24/19/17/15/10/9. Resume one page, 23 bullets, 3 contact links; approved Liberation Serif font and geometry, rendered page and extracted text inspected. PDF SHA256 335fa3a337e852887483c88c739d96017ac31708b811890d11d5ce34f0a3a542. Resume https://drive.google.com/file/d/1Sskb0EEcTazZSugM7PAcw-SNnIx2V3vl/view?usp=drivesdk; Library libfile_f40bc449a17481919f5b3b4c80598d9e. Prepared only; no application submission or outreach. YC target shortfall: zero YC roles retained. Agave equivalents already submitted; Confido 2–4 R&D years/domain gap, David AI 2–6 startup operations years, Pocket physical supply forecasting gap, Rainfall analyst absent from live board, ARQ/Numeral/Bretton authorization restrictions. UN relevant searched postings expired before October 9; no generalist padding.",
       "firstSeenAt": "2026-10-09",
@@ -2970,7 +3382,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-14"
+      "rejectedAt": "2026-10-14",
+      "canonicalKey": "lseg.wd3.myworkdayjobs.com:r0123420",
+      "rejectionAt": "14/10/2026 19:39:16 ET",
+      "offerAt": ""
     },
     {
       "company": "Prelim",
@@ -2980,10 +3395,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1gaJ0m1-7Fr-wQgBAd9mqYRRPPfnakkq6/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed submission of all six October13 positions, including David AI and replacement Altis. AppliedAt records the confirmation date only; exact submission times were not supplied. Prepared materials retained as submitted snapshots. The standing exclusion of lead roles remains in force for future searches.\nRUN-20261013-1745Z manual specialist run. Five newly discovered unsubmitted roles, three YC companies (Prelim/Trayd/David AI). Pre-authoring duplicate/eligibility preflight PASS; read 2026-10-13T17:59:47.412Z UTC / America/New_York; snapshot SHA256604afb60571649820f6f2de0b7f13fa11c7e890297f68b976a392b66ecd600c5. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: PASS — Primary live Ashby posting: configure bank forms, business rules and integrations; scripting and requirements gathering. UN Copilot Studio workflow design, Python/SQL and client scope research directly transfer. | location: PASS — US remote (continental US) — approved geography. | experience: PASS — Primary posting states no fixed years minimum; Python scripting, technical problem solving, communication and parallel projects supported by MSBA, UN, Lewis and AI evaluation. | mandatory_requirements: PASS — Bank-domain experience is preferred, not mandatory. Verified scripting, requirements research and no-code workflow experience; no required unverified platform. | base_salary: PASS — $130,000–$140,000 base; bonus/equity excluded. | authorization: PASS — Candidate reports current CPT through Dec2026; future OPT is planned, not approved. Current employer posting has no explicit current/future sponsorship prohibition. Eligibility/required employer CPT acceptance must be confirmed; do not assert unrestricted work authorization. | start_timing: PASS — No fixed incompatible cohort start or completed master's requirement in current posting. Immediate employment is conditional on CPT approval and study schedule; graduationDec2026. | application_path: PASS — Current employer application route HTTP200; employer board isListed/current careers link confirms exact role. Read-only validation; no form submitted. Application checked 2026-10-13T18:01:00.565Z. Sponsorship UNKNOWN; strong exception: Explicit strong-fit exception: Primary live Ashby posting: configure bank forms, business rules and integrations; scripting and requirements gathering. UN Copilot Studio workflow design, Python/SQL and client scope research directly transfer. No sponsorship inferred from employer general policy.  Fit score 90 (role/skills/experience/seniority/education/achievement 24/18/17/12/10/9); score is fit, not success probability. PASS: original one-page geometry, all five pages visually reviewed; no clipping/overlap, 10pt text, 23 bullets, exact education/dates/contact and 3 hyperlinks preserved. PDF SHA256452f4cf0ce396bfaf00331d9551be3db09ddd0aec9b1430c9070ef638d350c29. Library libfile_333f4b5d2c3881919e0e35cf79476477; Drive 1gaJ0m1-7Fr-wQgBAd9mqYRRPPfnakkq6; resume https://drive.google.com/file/d/1gaJ0m1-7Fr-wQgBAd9mqYRRPPfnakkq6/view?usp=drivesdk. First Seen At reflects this run's verified read; exact earlier discovery minute unavailable. Posted At uses employer timestamp only; Prelim/David old publication dates retained despite current isListed=true. No applications, outreach or schedules performed. Sensitive authorization/sponsorship/compensation/start answers remain for Misha. UN search: current UNICEF596234 requires5years/gender-policy expertise; UNDP RBAS internship is not qualifying>=70kbase full-time analyst; P3/P5 postings expired/too senior and OICTG6 requires experience beyond verified record. Canonical row IDs Tracker86, History150.",
       "firstSeenAt": "2026-10-13",
-      "appliedAt": "2026-10-13",
+      "appliedAt": "13/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "jobs.ashbyhq.com:8f2fa43f-2165-4369-869c-866b3505f48f",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Trayd",
@@ -2993,10 +3411,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1ueCHFT64AZ-fJH8K4pV41WJg83BCmB4D/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed submission of all six October13 positions, including David AI and replacement Altis. AppliedAt records the confirmation date only; exact submission times were not supplied. Prepared materials retained as submitted snapshots. The standing exclusion of lead roles remains in force for future searches.\nRUN-20261013-1745Z manual specialist run. Five newly discovered unsubmitted roles, three YC companies (Prelim/Trayd/David AI). Pre-authoring duplicate/eligibility preflight PASS; read 2026-10-13T17:59:47.412Z UTC / America/New_York; snapshot SHA256604afb60571649820f6f2de0b7f13fa11c7e890297f68b976a392b66ecd600c5. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: PASS — Employer careers links this live Gem role. AI response review, factual/tone validation, triage and knowledge workflow improvement map directly to DataAnnotation AI evaluation and UN assistant. | location: PASS — New York, NY — onsite 5 days — approved geography. | experience: PASS — Current JD explicitly accepts recent graduates / 0–2 years. AI code fixes are learned alongside engineering; no required prior construction/payroll domain. | mandatory_requirements: PASS — Verified AI evaluation, response rewrites, user-facing services and workflow research. NYC office commitment is compatible with approved location. | base_salary: PASS — $70,000–$85,000 base; bonus/equity excluded. | authorization: PASS — Candidate reports current CPT through Dec2026; future OPT is planned, not approved. Current employer posting has no explicit current/future sponsorship prohibition. Eligibility/required employer CPT acceptance must be confirmed; do not assert unrestricted work authorization. | start_timing: PASS — No fixed incompatible cohort start or completed master's requirement in current posting. Immediate employment is conditional on CPT approval and study schedule; graduationDec2026. | application_path: PASS — Current employer application route HTTP200; employer board isListed/current careers link confirms exact role. Read-only validation; no form submitted. Application checked 2026-10-13T18:01:00.565Z. Sponsorship UNKNOWN; strong exception: Explicit strong-fit exception: Employer careers links this live Gem role. AI response review, factual/tone validation, triage and knowledge workflow improvement map directly to DataAnnotation AI evaluation and UN assistant. No sponsorship inferred from employer general policy. Prior Trayd Implementations Analyst (YC 2DvQ0jQ) is a different title and requisition; this is Gem am9icG9zdDp57EARHTh0W0RUhdaA19Z2, linked as AI Support Specialist on employer careers. Fit score 93 (role/skills/experience/seniority/education/achievement 24/19/17/15/9/9); score is fit, not success probability. PASS: original one-page geometry, all five pages visually reviewed; no clipping/overlap, 10pt text, 23 bullets, exact education/dates/contact and 3 hyperlinks preserved. PDF SHA2563a6f69cb76410e6443e0f18945188e683351351a415caa2de372573841acbe35. Library libfile_650fd6cb75148191bea07c686ad6ba1b; Drive 1ueCHFT64AZ-fJH8K4pV41WJg83BCmB4D; resume https://drive.google.com/file/d/1ueCHFT64AZ-fJH8K4pV41WJg83BCmB4D/view?usp=drivesdk. First Seen At reflects this run's verified read; exact earlier discovery minute unavailable. Posted At uses employer timestamp only; Prelim/David old publication dates retained despite current isListed=true. No applications, outreach or schedules performed. Sensitive authorization/sponsorship/compensation/start answers remain for Misha. UN search: current UNICEF596234 requires5years/gender-policy expertise; UNDP RBAS internship is not qualifying>=70kbase full-time analyst; P3/P5 postings expired/too senior and OICTG6 requires experience beyond verified record. Canonical row IDs Tracker87, History151.",
       "firstSeenAt": "2026-10-13",
-      "appliedAt": "2026-10-13",
+      "appliedAt": "13/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "jobs.gem.com/buildtrayd-com/am9icg9zddp57earhth0w0ruhdaa19z2",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "David AI",
@@ -3006,10 +3427,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/18x5J52lHMYhu3XR5Gp0woiiIgvFJLaGB/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed submission of all six October13 positions, including David AI and replacement Altis. AppliedAt records the confirmation date only; exact submission times were not supplied. Prepared materials retained as submitted snapshots. The standing exclusion of lead roles remains in force for future searches.\nOctober13,2026:Misha excluded lead positions permanently. Archived this unsubmitted role and replaced its slot with Altis Analyst,VentureIntelligenceProgram. Not an employer rejection.\nRUN-20261013-1745Z manual specialist run. Five newly discovered unsubmitted roles, three YC companies (Prelim/Trayd/David AI). Pre-authoring duplicate/eligibility preflight PASS; read 2026-10-13T17:59:47.412Z UTC / America/New_York; snapshot SHA256604afb60571649820f6f2de0b7f13fa11c7e890297f68b976a392b66ecd600c5. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: PASS — Current primary Ashby job owns data workflow quality and operational execution. Camp Vega 20,000-point validation, AI response evaluation and UN workflow prototyping transfer; production audio pipeline ownership remains a stretch. | location: PASS — New York, NY / San Francisco, CA — onsite — approved geography. | experience: PASS — Current Ashby posting says 1–6 years, allowing operations or similar background, unlike older YC body (2–6). More than one year across Lewis operations, UN and Camp Vega; no overlapping durations counted. | mandatory_requirements: PASS — Current employer description allows operations/strategic projects or similar, rather than exclusively CS/consulting. SQL/Python verified. Large-scale audio data and extreme ownership are desirable gaps, not stated mandatory prior industry tenure. | base_salary: PASS — $125,000–$175,000 base; bonus/equity excluded. | authorization: PASS — Candidate reports current CPT through Dec2026; future OPT is planned, not approved. Current employer posting has no explicit current/future sponsorship prohibition. Eligibility/required employer CPT acceptance must be confirmed; do not assert unrestricted work authorization. | start_timing: PASS — No fixed incompatible cohort start or completed master's requirement in current posting. Immediate employment is conditional on CPT approval and study schedule; graduationDec2026. | application_path: PASS — Current employer application route HTTP200; employer board isListed/current careers link confirms exact role. Read-only validation; no form submitted. Application checked 2026-10-13T18:01:00.565Z. Sponsorship advertised Will sponsor on YC same-title listing; current Ashby requirements supersede older YC requirements, employer confirmation required. Current employer Ashby UUID d064a7ca... is live/listed. Older YC listing cKdFdzD is same title but stale requirements; use current employer requirements and compensation, and YC's advertised willingness to sponsor subject to confirmation. Fit score 78 (role/skills/experience/seniority/education/achievement 22/16/16/6/9/9); score is fit, not success probability. PASS: original one-page geometry, all five pages visually reviewed; no clipping/overlap, 10pt text, 23 bullets, exact education/dates/contact and 3 hyperlinks preserved. PDF SHA25621a6eaff2d56561fc897950e82e4ffc443fecc67d24284a9f8a539cb6d226d43. Library libfile_9409426f94488191b108fe021db882bc; Drive 18x5J52lHMYhu3XR5Gp0woiiIgvFJLaGB; resume https://drive.google.com/file/d/18x5J52lHMYhu3XR5Gp0woiiIgvFJLaGB/view?usp=drivesdk. First Seen At reflects this run's verified read; exact earlier discovery minute unavailable. Posted At uses employer timestamp only; Prelim/David old publication dates retained despite current isListed=true. No applications, outreach or schedules performed. Sensitive authorization/sponsorship/compensation/start answers remain for Misha. UN search: current UNICEF596234 requires5years/gender-policy expertise; UNDP RBAS internship is not qualifying>=70kbase full-time analyst; P3/P5 postings expired/too senior and OICTG6 requires experience beyond verified record. Canonical row IDs Tracker88, History152.",
       "firstSeenAt": "2026-10-13",
-      "appliedAt": "2026-10-13",
+      "appliedAt": "13/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "jobs.ashbyhq.com:d064a7ca-30e7-465b-b935-2682514e1371",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Columbia University",
@@ -3022,7 +3446,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-13",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "opportunities.columbia.edu/en-us/jobs/operations-and-data-analyst-new-york-united-states",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Columbia University",
@@ -3035,7 +3462,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-13",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "opportunities.columbia.edu/en-us/jobs/data-analyst-new-york-united-states",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Altis",
@@ -3048,13 +3478,16 @@ export const jobSearchData = {
       "appliedAt": "2026-10-13",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "jobs.ashbyhq.com:bd10f062-18cc-4ee8-98ab-be0bc9244073",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Gap",
       "position": "Analyst - Pricing Analytics",
       "url": "https://gapinc.wd1.myworkdayjobs.com/GAPINC/job/NY-55-Thomas-St/Analyst---Pricing-Analytics_R223225",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1jq4zz3q9jjQl9AnkG2WQqNPpr4t6tU-r/view?usp=drivesdk",
       "notes": "Analyst - Pricing Analytics (R223225): applied October15; employer rejection received October19. Application remains included in cumulative submissions.",
       "firstSeenAt": "2026-10-15",
@@ -3062,7 +3495,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-19"
+      "rejectedAt": "2026-10-19",
+      "canonicalKey": "gapinc.wd1.myworkdayjobs.com:r223225",
+      "rejectionAt": "10/19/2026",
+      "offerAt": ""
     },
     {
       "company": "Amex Global Business Travel",
@@ -3075,7 +3511,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "travelhrportal.wd1.myworkdayjobs.com:j",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Judi Health",
@@ -3088,7 +3527,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:5447579008",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "UCSF",
@@ -3101,7 +3543,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "iazuqy.fa.ocs.oraclecloud.com/hcmui/candidateexperience/en/sites/cx_1/job/8821",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Horizon Media",
@@ -3114,7 +3559,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "horizonmedia.wd1.myworkdayjobs.com:r0017544",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Etsy",
@@ -3127,7 +3575,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.etsy.com/jobs/marketing-analyst-paid-social-brooklyn-new-york-united-states",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Atominvest",
@@ -3140,7 +3591,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:c7469459-426c-405c-a178-db8421c8b3ec",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "SS&C",
@@ -3153,7 +3607,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "ssctech.wd1.myworkdayjobs.com:r46476",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Piper Sandler",
@@ -3166,7 +3623,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "pipersandler.wd501.myworkdayjobs.com:r",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Building Services 32BJ Benefit Funds",
@@ -3176,10 +3636,13 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1uTEVVc4dvSmmFNTOdd4uzHdAGaSuNVvs/view?usp=drivesdk",
       "notes": "Misha confirmed submission October 15, 2026; exact Handshake submit time unknown. NYC, $90,000/year, 0–2 years; business requirements, process improvement, data analysis, testing and documentation. United Nations AI assistant scope/stakeholder work, Lewis records and data validation align. Sponsorship UNKNOWN; role posting does not confirm support. Resume is a submitted snapshot in Google Drive.",
       "firstSeenAt": "2026-10-15",
-      "appliedAt": "2026-10-15",
+      "appliedAt": "15/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "app.joinhandshake.com/jobs/11626403",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Nathel & Nathel",
@@ -3189,23 +3652,29 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1GW_gh4jMHeVHLT8KJiPanryZGvR_8UCR/view?usp=drivesdk",
       "notes": "Misha confirmed submission October 15, 2026; exact Handshake submit time unknown. Bronx onsite, $120,000/year; AI automation, Python, operations process assessment, rollout/training. IMPORTANT: Employer expressly offers NO CURRENT OR FUTURE VISA SPONSORSHIP despite accepting OPT. User's independent long-term authorization is not documented, and sponsorship restriction remains a risk. Posting requires functioning portfolio/project URL and brief description; completeness of submitted form not independently verified. Resume is a submitted snapshot in Google Drive.",
       "firstSeenAt": "2026-10-15",
-      "appliedAt": "2026-10-15",
+      "appliedAt": "15/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending"
+      "finalOutcome": "Pending",
+      "canonicalKey": "app.joinhandshake.com/jobs/11629049",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Milbank",
       "position": "Business Analyst",
       "url": "https://careers-milbank.icims.com/jobs/1685/business-analyst/job",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1BjYS_-1EFGXkyU7fcmFdhIWBBUZ53pIr/view?usp=drivesdk",
       "notes": "October 16: moved out of current shortlist; remains unsubmitted. NYC / hybrid; $65,000-$85,000 base. No minimum years; analytics/law firm experience preferred. Business-related degree, advanced Excel, BI/database experience, report QC and business metrics. Verified Excel/Tableau/PowerBI/Oracle coursework, student records and KPI analysis match. Sponsorship unstated; current/future authorization requires review.  Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": "2026-10-15",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "careers-milbank.icims.com/jobs/1685/business-analyst/job",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "BTS",
@@ -3215,36 +3684,45 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1olKq35N-Q4SyiL1dhVSTU8KP0fXOOvbQ/view?usp=drivesdk",
       "notes": "NYC / hybrid; $75,000-$90,000 base. No minimum years; bachelor, advanced Excel/business simulation models, AI tool building, presentation and workflow thinking. UN Copilot project and Excel simulation project directly relevant. Travel25-30% requires user review; no travel consent claimed. Requires permanent US work eligibility without sponsorship. Retained for skills match under explicit user rule R140; eligibility NOT confirmed.  Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": "2026-10-15",
-      "appliedAt": "2026-10-15",
+      "appliedAt": "10/15/2026 19:32",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "bts.hrmdirect.com/employment/job-opening.php?req=3732582",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Ekimetrics",
       "position": "Junior Business Scientist, Data Science and Marketing Effectiveness",
       "url": "https://jobs.lever.co/ekimetrics/d9d64766-3d42-4ba9-94d4-f74cdaf20065",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1MpWAKQyjt6jJA22TGlCdk2-ZOALU9t1P/view?usp=drivesdk",
       "notes": "October 16: moved out of current shortlist; remains unsubmitted. NYC / hybrid 3 days; $75,000 base. Explicit0-2 years including internships. BasicPython, data cleaning, regression/marketing metrics and analytical degree/equivalent. MSBA in progress, business bachelor/quant coursework, CampVega20kdata, PinearKPIs and regression project. MMM/Azure/Databricks nice-to-have; not claimed. No visa sponsorship or transfer for this recruitment. Application explicitly offers currently-authorized status as answer; user must answer truthfully and confirm work permission.  Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": "2026-10-15",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.lever.co:d9d64766-3d42-4ba9-94d4-f74cdaf20065",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Veeva Systems",
       "position": "Marketing Analytics - Data Analyst - July 2027 Start Date - ADP",
       "url": "https://jobs.lever.co/veeva/28c47d34-3ad6-4485-85a9-686b4239b9ea",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1fRTyjKpimuGWuGVXZkVeGKtKDAYLpg7x/view?usp=drivesdk",
       "notes": "October 16: moved out of current shortlist; remains unsubmitted. NYC / onsite 4 days; $82,500 base. Explicit0-2years post-grad; bacheloranymajorGPA3.0-4.0; intermediateSQL/Python, dataQA and marketingreporting. GPA3.98/3.88, SQLPythoncoursework, Pinear and CampVega directfit. July2027startafterDec2026graduation. No employmentvisa sponsorship; posting explicitly lists H-1B, OPT and TN. User R140 allows preparation; actualJuly2027eligibility not established. Transcript/shortanswers and assessment are human application steps.  Resume prepared from approved master. Application not submitted.",
       "firstSeenAt": "2026-10-15",
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "Other"
+      "finalOutcome": "Other",
+      "canonicalKey": "jobs.lever.co:28c47d34-3ad6-4485-85a9-686b4239b9ea",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Artefact",
@@ -3258,7 +3736,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-19T15:27:52-04:00"
+      "rejectedAt": "2026-10-19T15:27:52-04:00",
+      "canonicalKey": "greenhouse:8893475002",
+      "rejectionAt": "2026-10-19",
+      "offerAt": ""
     },
     {
       "company": "Capgemini",
@@ -3271,13 +3752,16 @@ export const jobSearchData = {
       "appliedAt": "2026-10-16",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.capgemini.com/job/new-york%2c-ny-c%26ca-campus-associate-application-consultant-ny-10001/1447324633",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Deloitte",
       "position": "Business Analyst, Functional Transformation",
       "url": "https://www.linkedin.com/jobs/view/4479225734/",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1PP_GNYVB5duchMOHUyfoGMVJXAWGN3tj/view?usp=drivesdk",
       "notes": "Business Analyst, Functional Transformation (371235): applied October16; employer rejection received October18. Application remains included in cumulative submissions.",
       "firstSeenAt": "2026-10-16",
@@ -3285,7 +3769,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
-      "rejectedAt": "2026-10-18"
+      "rejectedAt": "2026-10-18",
+      "canonicalKey": "www.linkedin.com/jobs/view/4479225734",
+      "rejectionAt": "18/10/2026 07:37 ET",
+      "offerAt": ""
     },
     {
       "company": "Metergy Solutions",
@@ -3298,7 +3785,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-16",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:1a20d596-888d-4191-b22d-24d7435a7a69",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Heitmeyer Consulting",
@@ -3311,20 +3801,26 @@ export const jobSearchData = {
       "appliedAt": "2026-10-16",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "www.heitmeyerconsulting.com/job/14960-jr-bsa-charlotte-north-carolina",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "AFRY",
       "position": "Entry-Level Analyst, Pulp & Paper",
       "url": "https://jobs.smartrecruiters.com/AFRY/744000152200360-entry-level-analyst-pulp-paper",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/15_0RyeYt5MybqwX1NnLGLT6AQyMJY0l_/view?usp=drivesdk",
       "notes": "NYC / hybrid; Up to $80,000 base. Explicitentrylevel, no priorindustryexperience required, bachelorbusiness accepted. Excel/PowerPoint, marketresearch and analyticalmodels. Pinearsegmentation/budgetmodeling, graduateExcelmodels, clientneedsUN directtransfer. Industryknowledge learned; no M&A/due-diligenceexperience claimed. Employer states no current or future sponsorship. Preparation permitted under userR140; no visa exception assumed. All resume formatting and links checked. Application submitted October 16; confirmed by Misha. Exact submission time unknown.",
       "firstSeenAt": "2026-10-16",
       "appliedAt": "2026-10-16",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Rejected",
+      "canonicalKey": "jobs.smartrecruiters.com/afry/744000152200360-entry-level-analyst-pulp-paper",
+      "rejectionAt": "19/10/2026 13:21 ET",
+      "offerAt": ""
     },
     {
       "company": "Precision Medicine Group / Evidence Solutions",
@@ -3337,7 +3833,10 @@ export const jobSearchData = {
       "appliedAt": "2026-10-16",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:6205728004",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Broadsign",
@@ -3350,13 +3849,16 @@ export const jobSearchData = {
       "appliedAt": "2026-10-16",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:8019197003",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "American Express",
       "position": "Campus Graduate Masters Full-Time Senior Analyst - 2027 Data & Analytics, Enterprise Technology Services",
       "url": "https://careers.americanexpress.com/en/sites/CX_1/job/26013683/",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1Fd_gaYKAJPF7sI-nlu4_6QFNZy7BANEK/view?usp=drivesdk",
       "notes": "Charlotte hybrid; $89,250–$150,250 base + bonus/benefits. 2027 campus master's analytics program; Dec 2026–Jun 2027 graduation. Senior Analyst is the graduate program title, with no prior tenure minimum. Data quality, KPI dashboards, budgeting/scenarios and responsible AI. No visa sponsorship. Deadline Nov 1 at 03:59 UTC. Resume prepared from approved master; application not submitted.\nOctober 19: archived unsubmitted; replaced in the current five-role shortlist. Original application history and resume preserved. ",
       "firstSeenAt": "2026-10-16",
@@ -3364,13 +3866,16 @@ export const jobSearchData = {
       "submissionConfirmed": false,
       "inApplicationCohort": false,
       "finalOutcome": "Other",
-      "applicationCheckedAt": "2026-10-19"
+      "applicationCheckedAt": "2026-10-19",
+      "canonicalKey": "careers.americanexpress.com/en/sites/cx_1/job/26013683",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Grant Street Group",
       "position": "Business Analyst",
       "url": "https://jobs.lever.co/grantstreet/ee9892b2-41f6-45d7-b31a-56b806fd1565",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1ZjH1FYcsExQNM07k5Gu1bibJ6j2lELKc/view?usp=drivesdk",
       "notes": "US remote; $70,000–$120,000 base. Entry-level business analysis bridging clients and software developers; training, testing, specifications and implementation. Prior BA experience not required. Requires 10–15% travel. Visa sponsorship unavailable. Resume prepared from approved master; application not submitted.\nOctober 19: archived unsubmitted; replaced in the current five-role shortlist. Original application history and resume preserved. ",
       "firstSeenAt": "2026-10-16",
@@ -3378,13 +3883,16 @@ export const jobSearchData = {
       "submissionConfirmed": false,
       "inApplicationCohort": false,
       "finalOutcome": "Other",
-      "applicationCheckedAt": "2026-10-19"
+      "applicationCheckedAt": "2026-10-19",
+      "canonicalKey": "jobs.lever.co:ee9892b2-41f6-45d7-b31a-56b806fd1565",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "PJT Partners",
       "position": "Analyst - PJT Park Hill (Corporate - DealCloud)",
       "url": "https://pjtpartners.wd1.myworkdayjobs.com/Careers/job/New-York/Analyst---Park-Hill-Corporate--DealCloud-_R0003386",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1q9Cis9lvrYY3WV0BXf3ymCOe3XAnsIxB/view?usp=drivesdk",
       "notes": "New York onsite; $80,000–$100,000 base. BI, CRM data, reporting and quality checks. 0–1 year; internships and academic projects count. Equivalent CRM exposure accepted; DealCloud/VBA/finance experience are advantages. Role sponsorship unstated. Resume prepared from approved master; application not submitted.\nOctober 19: archived unsubmitted; replaced in the current five-role shortlist. Original application history and resume preserved. ",
       "firstSeenAt": "2026-10-16",
@@ -3392,13 +3900,16 @@ export const jobSearchData = {
       "submissionConfirmed": false,
       "inApplicationCohort": false,
       "finalOutcome": "Other",
-      "applicationCheckedAt": "2026-10-19"
+      "applicationCheckedAt": "2026-10-19",
+      "canonicalKey": "pjtpartners.wd1.myworkdayjobs.com:r0003386",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "SemiAnalysis",
       "position": "Research Analyst, AI Infrastructure & Economics",
       "url": "https://app.dover.com/apply/SemiAnalysis/c7633db3-0196-4e39-bcdf-75a10526b9f0",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1ok1-0cdGO09XfzW8f8iDKufPmWuA2znL/view?usp=drivesdk",
       "notes": "NYC or San Francisco, office preferred/hybrid considered. Junior research analyst, 0–3 years; datasets, spreadsheet models and research on AI infrastructure economics. Student projects accepted; Python/SQL optional. Employer hiring system explicitly lists visa support. Base pay unpublished; confirm it meets $70,000 minimum. Resume prepared from approved master; application not submitted.\nOctober 19: archived unsubmitted; replaced in the current five-role shortlist. Original application history and resume preserved. The employer still lists the role, but its application page could not be reverified due to an access error; this is not a rejection or confirmed vacancy closure.",
       "firstSeenAt": "2026-10-16",
@@ -3406,13 +3917,16 @@ export const jobSearchData = {
       "submissionConfirmed": false,
       "inApplicationCohort": false,
       "finalOutcome": "Other",
-      "applicationCheckedAt": "2026-10-19"
+      "applicationCheckedAt": "2026-10-19",
+      "canonicalKey": "app.dover.com/apply/semianalysis/c7633db3-0196-4e39-bcdf-75a10526b9f0",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Blue Matter",
       "position": "Associate / Associate Consultant - Analytics",
       "url": "https://bluematterconsulting.applytojob.com/apply/5jX75t3YOY/Associate-Associate-Consultant-Analytics-Practice",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1VMr1ywG4DlIxrc_NwFPpFdQw2Frd39i4/view?usp=drivesdk",
       "notes": "Retained fromOct16; existing checked resume reused unchanged, not a new discovery. SouthSanFrancisco; apply for Associate0–1year tier, not AssociateConsultant2–4year tier. $70,000–$130,000 base spans levels; entry-tier offer must be confirmed. Data cleaning, regression/segmentation, Excel and Tableau/PowerBI fit; pharmaceutical/claims data experience is preferred and not claimed. Posting age unknown; current application form verifiedOct19. Start after Dec2026degree and sponsorship require confirmation. October22: displaced unsubmitted from current shortlist; previous PDF/history retained. No employer rejection or closure inferred.",
       "firstSeenAt": "2026-10-16",
@@ -3420,7 +3934,10 @@ export const jobSearchData = {
       "submissionConfirmed": false,
       "inApplicationCohort": false,
       "finalOutcome": "Other",
-      "applicationCheckedAt": "2026-10-19"
+      "applicationCheckedAt": "2026-10-19",
+      "canonicalKey": "bluematterconsulting.applytojob.com/apply/5jx75t3yoy/associate-associate-consultant-analytics-practice",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "TF Warren Group",
@@ -3433,21 +3950,27 @@ export const jobSearchData = {
       "appliedAt": "2026-10-16",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active"
+      "finalOutcome": "Active",
+      "canonicalKey": "tfwarren.com/top-careers/graduate-training-program",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Epic",
       "position": "Position not specified in employer emails",
       "url": "",
-      "status": "Rejected",
+      "status": "Closed",
       "resumeUrl": "",
       "notes": "Employer emails confirm an application and September21 rejection. Original position title and job link were not specified; kept as one separate application.",
       "firstSeenAt": "2026-09-14",
-      "appliedAt": "2026-09-14",
+      "appliedAt": "14/09/2026 16:17:06",
       "rejectedAt": "2026-09-21",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Rejected"
+      "finalOutcome": "Rejected",
+      "canonicalKey": "named:epic:positionnotspecifiedinemployeremails",
+      "rejectionAt": "21/09/2026 17:10:48",
+      "offerAt": ""
     },
     {
       "company": "American Express",
@@ -3461,13 +3984,16 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
-      "applicationCheckedAt": "2026-10-22"
+      "applicationCheckedAt": "2026-10-22",
+      "canonicalKey": "careers.americanexpress.com/en/sites/cx_1/job/26013102",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Fusable",
       "position": "Data Analyst",
       "url": "https://recruiting.ultipro.com/ran1004/JobBoard/c4a6f199-4067-786a-1f9d-9fa3d8111d01/OpportunityDetail?opportunityId=e91af8cc-7691-4af3-ba6e-5646d1f4281a",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1sIOEKPK74nc_5t3P5-Cm1gaiUTKRXQg3/view?usp=drivesdk",
       "notes": "$80,000–$95,000 base; US remote, full-time40h. SQL, basicPython, Excel, data quality and cost/reporting work;1–3years in data analysis or related field. OriginalSep29; verified external repostOct15. Strong match to data validation, records and reporting experience; equipment-cost domain is a learning area. Start flexibility and sponsorship not published; confirm before lengthy assessments. October22: displaced unsubmitted from current shortlist; previous PDF/history retained. No employer rejection or closure inferred.",
       "firstSeenAt": "2026-10-19",
@@ -3475,13 +4001,16 @@ export const jobSearchData = {
       "submissionConfirmed": false,
       "inApplicationCohort": false,
       "finalOutcome": "Other",
-      "applicationCheckedAt": "2026-10-19"
+      "applicationCheckedAt": "2026-10-19",
+      "canonicalKey": "recruiting.ultipro.com/ran1004/jobboard/c4a6f199-4067-786a-1f9d-9fa3d8111d01/opportunitydetail",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Amwins",
       "position": "Data Reporting Analyst",
       "url": "https://www.amwins.com/who-we-are/careers/open-positions?gh_jid=4397913009",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1sX6Pn2015Weswdr5Kcfrb7WovbCUWsYE/view?usp=drivesdk",
       "notes": "Base pay not published: confirm at least$70,000. Charlotte in-office. Excel/pivot/lookups, QA, performance reporting, presentations and AI-assisted work; no fixed years minimum. Insurance experience preferred, not required. First publishedSep8; still listed, not a verified fresh repost. Older-role exception for direct reporting/QA match. Sponsorship and start date unconfirmed. October22: displaced unsubmitted from current shortlist; previous PDF/history retained. No employer rejection or closure inferred.",
       "firstSeenAt": "2026-10-19",
@@ -3489,13 +4018,16 @@ export const jobSearchData = {
       "submissionConfirmed": false,
       "inApplicationCohort": false,
       "finalOutcome": "Other",
-      "applicationCheckedAt": "2026-10-19"
+      "applicationCheckedAt": "2026-10-19",
+      "canonicalKey": "greenhouse:4397913009",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "OpenX",
       "position": "Business Intelligence Data Analyst",
       "url": "https://jobs.lever.co/openx/df23b30a-21b5-4055-9698-5b5c2767df3c",
-      "status": "Archived",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1WuQYjjG8yYsWldJlY2Ra86AoqqareMet/view?usp=drivesdk",
       "notes": "$93,500–$110,000 base plus bonus/equity; US remote. BI and financial/performance reporting;1–3years analytical work and strongSQL. Coursework/projectSQL is verified, not productionSQL ownership; technical screen is a stretch to prepare for. Lever record createdAug24; no verified fresh repost. Current opening retained as an older-role exception for direct analytics fit and pay. Company sponsorship history exists, but this role’s support and start date are unconfirmed. October22: displaced unsubmitted from current shortlist; previous PDF/history retained. No employer rejection or closure inferred.",
       "firstSeenAt": "2026-10-19",
@@ -3503,7 +4035,10 @@ export const jobSearchData = {
       "submissionConfirmed": false,
       "inApplicationCohort": false,
       "finalOutcome": "Other",
-      "applicationCheckedAt": "2026-10-19"
+      "applicationCheckedAt": "2026-10-19",
+      "canonicalKey": "jobs.lever.co:df23b30a-21b5-4055-9698-5b5c2767df3c",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Lantern",
@@ -3517,7 +4052,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
-      "applicationCheckedAt": "2026-10-22"
+      "applicationCheckedAt": "2026-10-22",
+      "canonicalKey": "greenhouse:5256718007",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Makai Labs",
@@ -3531,7 +4069,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
-      "applicationCheckedAt": "2026-10-22"
+      "applicationCheckedAt": "2026-10-22",
+      "canonicalKey": "jobs.ashbyhq.com:3d4373e8-e09a-4034-a8e0-d511cef44fc7",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Charles River Associates",
@@ -3545,7 +4086,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
-      "applicationCheckedAt": "2026-10-22"
+      "applicationCheckedAt": "2026-10-22",
+      "canonicalKey": "greenhouse:8054054",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Compass Group",
@@ -3559,7 +4103,10 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
-      "applicationCheckedAt": "2026-10-22"
+      "applicationCheckedAt": "2026-10-22",
+      "canonicalKey": "careers.compass-usa.com/data-analyst-charlotte-nc-hybrid/job/5e66e542be09bacda81d38167c1649b8",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Emendata",
@@ -3573,7 +4120,58 @@ export const jobSearchData = {
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
-      "applicationCheckedAt": "2026-10-22"
+      "applicationCheckedAt": "2026-10-22",
+      "canonicalKey": "greenhouse:4164352003",
+      "rejectionAt": "",
+      "offerAt": ""
+    },
+    {
+      "canonicalKey": "builtincharlotte.com/job/core-ops-analyst/10588628",
+      "company": "Capital Group",
+      "position": "Core Ops Analyst",
+      "url": "https://builtincharlotte.com/job/core-ops-analyst/10588628",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-08-24",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Expired",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "careers.compass-usa.com/data-intelligence-analyst-charlotte-nc/job/4609c5bc01fc6cbcca3354f0e1ab1504",
+      "company": "Foodbuy",
+      "position": "Data Intelligence Analyst",
+      "url": "https://careers.compass-usa.com/data-intelligence-analyst-charlotte-nc/job/4609C5BC01FC6CBCCA3354F0E1AB1504",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "8/29/2026 10:34",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "to.indeed.com/aadh2zjdgxqq",
+      "company": "ABM Industries",
+      "position": "Workforce Productivity Analyst",
+      "url": "https://to.indeed.com/aadh2zjdgxqq",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-08-29",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Other",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -3583,8 +4181,7 @@ export const jobSearchData = {
       "position": "Junior Project Manager",
       "stage": "Completed — Recruiter screen",
       "date": "28/05/2026 14:45 ET",
-      "interviewer": "Anna Miroshnikova",
-      "notes": "Gmail 19e6fe7047552f16 (updated invite), same event as 19e6aa3ef11bf37b. Counted once. Completion grounded in Misha's October 9 confirmation of multiple PNK calls and progression to subsequent interview. Additional undated calls not counted."
+      "interviewer": "Anna Miroshnikova"
     },
     {
       "id": "INT-PNK-20260530",
@@ -3592,8 +4189,7 @@ export const jobSearchData = {
       "position": "Junior Project Manager",
       "stage": "Completed — Interview",
       "date": "30/05/2026 11:00 ET",
-      "interviewer": "Anna Miroshnikova; Anton Voronkin",
-      "notes": "Gmail 19e79678af9b094f; June 10 task email 19eb1c0172f4732b references prior call and finalists. Completion also grounded in Misha's confirmation. Take-home task is not a separate interview."
+      "interviewer": "Anna Miroshnikova; Anton Voronkin"
     },
     {
       "id": "INT-PNK-20260615",
@@ -3601,8 +4197,7 @@ export const jobSearchData = {
       "position": "Junior Project Manager",
       "stage": "Completed — In-person interview",
       "date": "15/06/2026 17:00 ET",
-      "interviewer": "Aleksei Posokhov",
-      "notes": "Gmail thread 19ebdd83d57ba4cd: June 16 thank-you 19ed15b76fb936c2 confirms yesterday's meeting; employer reply confirms next steps. Unanswered phone attempt at entry not counted separately."
+      "interviewer": "Aleksei Posokhov"
     },
     {
       "id": "INT-GARTNER-20260914",
@@ -3610,8 +4205,7 @@ export const jobSearchData = {
       "position": "Business Analyst, Marketing Analytics",
       "stage": "Completed — Recruiter screen",
       "date": "14/09/2026 09:30 ET",
-      "interviewer": "Nick Jordan",
-      "notes": "Date preserved from existing Application History row57. Misha confirmed one completed call; Gmail 1a0b8e8a15aa5f88 thanks him for recent discussion and rejects application Sept19. Rejection preserved."
+      "interviewer": "Nick Jordan"
     },
     {
       "id": "INT-OUT2WIN-RECRUITER",
@@ -3619,8 +4213,7 @@ export const jobSearchData = {
       "position": "Sales Development Representative",
       "stage": "Completed — Recruiter screen",
       "date": "Date not confirmed",
-      "interviewer": null,
-      "notes": "Misha explicitly confirmed two completed Out2Win calls October9. One employer round confirmed by Gmail Oct7, so one earlier recruiter call counted. Exact earlier date/interviewer not established; no application date invented."
+      "interviewer": null
     },
     {
       "id": "INT-OUT2WIN-20261007",
@@ -3628,8 +4221,7 @@ export const jobSearchData = {
       "position": "Sales Development Representative",
       "stage": "Completed — Employer interview",
       "date": "07/10/2026 10:00 ET",
-      "interviewer": "Owen Lyons",
-      "notes": "Gmail invite 1a112133d155e6ca and thank-you 1a116ed099701478 confirm completion Oct7. Updated conferencing invitations are duplicates. Out2Win two total includes preceding recruiter screen. No new sales discovery authorized."
+      "interviewer": "Owen Lyons"
     },
     {
       "id": "INT-VALERIE-20261012",
@@ -3637,8 +4229,7 @@ export const jobSearchData = {
       "position": "AI Operations Specialist",
       "stage": "Completed — Recruiter screen",
       "date": "12/10/2026 11:00 ET",
-      "interviewer": "Katelyn Allen",
-      "notes": "Recruiter screen with Katelyn Allen completed October12 at11:00ET, confirmed by user's post-call discussion. Employer rejection received October14; completed interview remains counted. Duplicate calendar invitations count once."
+      "interviewer": "Katelyn Allen"
     },
     {
       "id": "ASSESS-ALPHASIGHTS-20260925",
@@ -3646,8 +4237,7 @@ export const jobSearchData = {
       "position": "Research Compliance Associate",
       "stage": "Completed AI assessment",
       "date": "25/09/2026",
-      "interviewer": null,
-      "notes": "Gmail 1a0d9614f1b1a703 explicitly confirms completed HeyMilo interview for Research Compliance Associate. Automated screening, excluded from human interview/screening count. Sept29 rejection preserved."
+      "interviewer": null
     },
     {
       "id": "ASSESS-LSEG-20261013",
@@ -3655,8 +4245,7 @@ export const jobSearchData = {
       "position": "Business Analyst Graduate Programme",
       "stage": "Completed — Online assessment",
       "date": "13/10/2026",
-      "interviewer": null,
-      "notes": "Cappfinity online assessment completed October13; confirmed by employer receipt. Employer rejection received October14. Automated assessment excluded from human interview total."
+      "interviewer": null
     }
   ],
   "outreachState": [
@@ -4618,5 +5207,12 @@ export const jobSearchData = {
         }
       ]
     }
-  ]
+  ],
+  "sourceSnapshot": {
+    "readAt": "2026-10-23T16:32:39.228Z",
+    "sha256": "6b2a192a6bd2bb9b40aaba2b7b513f279883cee752f139ab6f17e0e03096d412",
+    "historyRecords": 189,
+    "trackerRecords": 269,
+    "uniqueHistoryRecords": 186
+  }
 };

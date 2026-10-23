@@ -1,9 +1,11 @@
+import { calculateMetrics } from "@/lib/job-search-model.mjs";
+
 export default function DashboardClient({ jobSearchData }) {
   const jobs = jobSearchData.jobs || [];
-  const activeJobs = jobs.filter((job) => ["Found", "Ready to Submit"].includes(job.status));
+  const activeJobs = jobs.filter((job) => ["Found", "Ready to Submit"].includes(job.status) && !job.submissionConfirmed);
   const pending = activeJobs.filter((job) => job.status === "Found").length;
   const ready = activeJobs.filter((job) => job.status === "Ready to Submit").length;
-  const lifetime = jobSearchData.metrics || {};
+  const lifetime = { ...jobSearchData.metrics, ...calculateMetrics(jobSearchData) };
 
   const metrics = [
     {
@@ -56,7 +58,7 @@ export default function DashboardClient({ jobSearchData }) {
 
         <dl className="grid grid-cols-1 gap-4 min-[360px]:grid-cols-2 md:grid-cols-[1.15fr_1fr_1fr]">
           <div className="flex min-h-64 flex-col justify-between rounded-3xl border border-blue-100 bg-[#edf4ff] p-7 min-[360px]:col-span-2 sm:p-8 md:col-span-1 md:row-span-2">
-            <dt className="text-base font-medium text-blue-900">Active jobs</dt>
+            <dt className="text-base font-medium text-blue-900">To apply</dt>
             <dd className="my-6 text-8xl font-semibold leading-none tracking-[-0.055em] text-blue-700 tabular-nums sm:text-9xl">
               {activeJobs.length}
             </dd>
@@ -85,6 +87,7 @@ export default function DashboardClient({ jobSearchData }) {
           <p className="mt-2 text-sm leading-6 text-slate-600">
             Ready to submit means the resume is prepared and the application path has been checked. These applications have not been confirmed submitted.
           </p>
+          {activeJobs.length === 0 ? <p className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-600">All prepared applications have been submitted. Your next shortlist will appear after a new search.</p> : null}
           <ul className="mt-5 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
             {activeJobs.map((job) => (
               <li key={job.url || `${job.company}-${job.position}`} className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">

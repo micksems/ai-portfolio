@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { jobKey, calculateMetrics, validatePipeline } from '../src/lib/job-search-model.mjs';
+const job={company:'Example',position:'Analyst',url:'https://jobs.ashbyhq.com/example/11111111-1111-1111-1111-111111111111',status:'Applied',submissionConfirmed:true,inApplicationCohort:true,finalOutcome:'Active'};
+const data=(jobs=[job],events=[])=>{const d={jobs,interviewEvents:events,sourceSnapshot:{sha256:'snapshot',readAt:'2026-10-23T16:00:00Z'}};d.metrics=calculateMetrics(d);return d;};
+test('rejected and closed submissions stay in application total',()=>assert.equal(calculateMetrics(data([{...job,status:'Closed',finalOutcome:'Rejected'}])).applications,1));
+test('historical submission excluded only from cohort, not lifetime',()=>{const m=calculateMetrics(data([{...job,inApplicationCohort:false}]));assert.equal(m.applications,0);assert.equal(m.lifetimeApplications,1);});
+test('unknown submission and an assessment do not become a confirmed application or human interview',()=>{const m=calculateMetrics(data([{...job,submissionConfirmed:false,inApplicationCohort:false}], [{id:'a',stage:'Completed AI assessment'},{id:'b',stage:'Completed — Online assessment'}]));assert.equal(m.applications,0);assert.equal(m.interviews,0);assert.equal(m.aiAssessments,1);assert.equal(m.onlineAssessments,1);});
+test('duplicate invites count once and fail release validation',()=>{const d=data([job],[{id:'a',stage:'Completed — Recruiter screen'},{id:'a',stage:'Completed — Recruiter screen'}]);assert.equal(d.metrics.interviews,1);assert.match(validatePipeline(d).join(' '),/duplicate interview/);});
+test('URL tracking and application suffix do not create new requisitions',()=>assert.equal(jobKey(job),jobKey({...job,url:job.url+'/application?utm_source=test'})));
+test('BTS and Indeed query requisitions remain distinct',()=>{for(const [url,a,b] of [['https://example.com/jobs','req=1','req=2'],['https://indeed.com/viewjob','jk=one','jk=two']])assert.notEqual(jobKey({...job,url:url+'?'+a}),jobKey({...job,url:url+'?'+b}));});
+test('stale manual metrics block release',()=>{const d=data();d.metrics.applications=99;assert.match(validatePipeline(d).join(' '),/Metric applications/);});
+test('duplicate jobs, submitted shortlist and rejection conflicts block release',()=>{assert.match(validatePipeline(data([job,job])).join(' '),/Duplicate job/);assert.match(validatePipeline(data([{...job,status:'Ready to Submit'}])).join(' '),/unsubmitted state/);assert.match(validatePipeline(data([{...job,finalOutcome:'Rejected'}])).join(' '),/Rejection status mismatch/);});
