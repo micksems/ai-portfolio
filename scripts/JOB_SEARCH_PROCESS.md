@@ -1,46 +1,35 @@
-# Job search updates
+# Job-search workflow — ordered execution contract
+Version 3, 2026-10-26. **Google Sheet is canonical.** GitHub/Vercel is a read-only published snapshot. This repository does not independently run discovery, write resumes, read Gmail, or schedule tasks.
 
-The native Google Sheet is the record of applications and outcomes. The website
-is a published snapshot, not a live connection. Do not hand-edit headline totals.
+This file is the **execution order** and retry contract. Keep the detailed controls where they belong: Google Sheet **Agent Rules** (especially R-06, R-10, R-11, R-56, R-135, R-136, R-137, R-149), **Scoring Rules**, Candidate Profile, Experience Bank, and [RESUME_TAILORING_STANDARD.md](RESUME_TAILORING_STANDARD.md). Resolve conflicts by the latest explicit user direction; do not silently replace those authoritative details with an older scheduled-task prompt.
 
-1. Read the current Job Tracker, Application History and Interview Prep before
-   mutations. Identify an exact requisition; use canonical keys, not employer
-   name alone. Never change a historical submission into an unsubmitted lead.
-2. On user-confirmed submission, update Tracker Status/Applied At and History
-   Current Stage/Final Outcome/Applied At. Set History AB Submission Confirmed
-   and AC In Application Cohort to true for the primary unique record, and AD
-   Canonical Job Key. Preserve evidence and unknown time precision in Notes.
-   Closed/rejected applications remain confirmed. Four pre-August 24 submissions
-   remain lifetime-only. Gartner has a confirmed cohort submission with unknown
-   submission date; do not invent one. Loop stays unverified until new evidence.
-3. When creating records, set AB/AC false and AD to the exact canonical key.
-   Historical duplicate rows remain as evidence, with submission flags false;
-   only the primary record contributes to totals. Rejection counts deduplicate
-   by AD. Keep distinct requisitions distinct. Append interview events once per
-   event ID; automated assessments do not count as human interviews.
-4. Read the three sheets back with UNFORMATTED_VALUE. Export an object containing
-   readAt (ISO timestamp), tracker (A:S), history (A:AD), interviews (A:R), each
-   with header row. Save this export outside the repository; it includes private
-   notes. Run `node scripts/sync-job-search.mjs /absolute/path/snapshot.json` from
-   the repository within 30 minutes. It rejects missing submission metadata,
-   reconciles terminal outcomes, preserves unknown dates, removes display
-   duplicates, derives totals and records the source hash and read time.
-5. Run `npm run check:pipeline`, `npm run test:pipeline`, then `npm run build`.
-   Both pipeline checks are required by prebuild. Review the diff, commit the
-   code/data and publish through the connected production Git branch. Verify
-   that production is READY on the exact commit and the website shows the new
-   values. A Sheet write alone does not update the website.
+## Choose one lane before using tools
+- **Manual requested discovery + tailored resumes:** use the user's *current* requested count and scope (R-11 currently requires the requested number of NEW distinct entry-level jobs; a prior disabled daily task used a different maintenance-of-five mode). No scheduled execution is implied. Exclude sales/SDR/quota roles and senior/lead scope by default. Contact discovery, outreach, form answers, cover letters, and submissions are **separate user requests**; never add them for a normal search.
+- **Incoming Gmail reply monitor:** inspect only new relevant messages; classify from the entire message/thread, not snippets. Skip processed/spam/trash/generic alerts and outbound-only drafts. Make evidence-supported stage changes, preserve immutability of submission history, draft a reply only when useful, never send. A label is an acknowledgement: apply Job Search/Processed **after all required writes/sync succeed**; on failure leave unprocessed for safe retry.
+- **Sheet-to-dashboard synchronization:** never discover jobs, regenerate resumes, enrich contacts, send messages, or rewrite the Sheet. Only reconcile a *verified change* to canonical Sheet data into the public snapshot. No-op means no commit/deployment.
 
-Manual requested searches retain their separate preflight: exactly the requested
-new jobs, no Senior/Sr/Lead titles, no submitted duplicates, verified role and
-application evidence, and master-based resumes. Always use Times New Roman for
-all resume and cover-letter text in Word and PDF. Run the actual font checker,
-render and inspect each page before release. No scheduled search, applications,
-outreach or email is enabled by these scripts.
+## Critical order and short-circuit gates
+1. **Read once / classify operation.** For application/reply paths, read the minimal fresh canonical Sheet rows and relevant Gmail thread. Record stable run ID and per-event IDs; if event already applied and published, STOP (no extra reads/generation). For discovery, use one fresh read of Job Tracker + Application History, and required profile/master evidence; cache unchanged verified inputs by content hash.
+2. **Canonical identity + duplicate preflight.** Normalize employer ATS requisition with \`jobKey\`. Check *both* Tracker and History before deep job research, and once again before resume creation. A confirmed submission stays submitted even after rejection/closure. Never create a second row for the same canonical requisition. Distinct requisitions need evidence, not just a similar title. Unknown identity = HOLD.
+3. **Cheap hard gates before expensive steps.** Confirm exact complete dated JD, role level, mandatory skills/years/scope, legal start/eligibility, location, compensation and application path. Sponsorship is a strong preference and separately tracked pursuit risk (R-10 / HF-03); "no sponsorship" alone is **not** a hard filter. Actual legal work ineligibility is. Unknown remains unknown. Respect current role-specific policy and the user's requested quantity. Check exact employer form/ATS, not snippets or generic landing pages.
+4. **Score and freeze shortlisted eligible roles.** Score *only* passing requirements and honestly disclose material gaps. Do not inflate a score or pad a quota with ineligible/closed roles. Select by distinct requisition. No contact deep-dives during a normal resume run. Reuse unchanged retained job research; refresh only material stale/changed claims.
+5. **Resume and document creation only for frozen new/defective roles.** Pin approved master ID/version/hash once. Map each critical JD responsibility to verified Candidate Profile / Experience Bank evidence and to literal proof in the final PDF. Apply [RESUME_TAILORING_STANDARD.md](RESUME_TAILORING_STANDARD.md): role/ownership gate, truthful rewriting, one-page format, Times New Roman per R-148, actual font check, render/inspect PDF once, extract and verify text/links. Run \`node scripts/check-resume-fit.mjs /path/to/reviewed-evidence-pack.json\`. **HOLD** packages are not Ready to Submit. Preserve an existing passing PDF; never re-render/upload solely because a scheduled check ran.
+6. **Persist once, then canonical readback.** Store passing PDFs under stable requisition identifiers, preserving submitted snapshot IDs. Upsert the exact existing Sheet rows (Tracker, History, Outreach Queue, Interview Prep where applicable) only after verified evidence; avoid repeated duplicate writes. Read back *affected* rows before broader reconciliation. Keep facts, full notes and private research in the canonical Sheet; do not dump new private notes into the public repository.
+7. **Publish only if changed.** After any canonical pipeline change, export one fresh (≤30-minute) UNFORMATTED_VALUE snapshot outside the repository: \`{readAt, tracker: A:S, history: A:AD, interviews: A:R, outreach?: A:Q}\` including header rows. Include Outreach Queue when it changed; otherwise it may be omitted. Run \`node scripts/sync-job-search.mjs /path/to/snapshot.json\`. It will print \`changed:false\` and NOT touch the file on identical public data. STOP there if no change. The same event ID/requisition/message ID must not make a second history/interview/contact row or resume file.
+8. **One commit / one build / one deployment verification.** If \`changed:true\`, review the diff; fetch current \`master\` file SHA just before the Git write and make **one atomic commit** of the changed files. On stale-head conflict, refresh and reconcile before any retry; never parallel-write the same path. \`npm run build\` automatically executes \`check:pipeline\`, all regression tests (including resume gate), and the Next.js build **once** via \`prebuild\`. Do NOT separately run these tests then run \`npm run build\` again. Run lint once for actual code changes. GitHub CI then builds the same commit; verify its result and exact Vercel production deployment \`READY\` and serving that commit. A Sheet write alone is NOT a website deployment.
+9. **Acknowledge completion, or resume from checkpoint.** Only after the required downstream sync and draft is verified, label the relevant Gmail message Job Search/Processed (no archive/delete). Notify only on actionable changes or a substantive failure. Record run ID, input/requirement snapshot hashes, stable event IDs, completed stage/output IDs, final Sheet row IDs, PDF IDs/hashes, commit and deployment. On partial failure, compare existing state first and **resume at the failed stage**; never replay earlier successful uploads, contacts, drafts, spreadsheet writes or submissions.
 
+## Integrity rules and historical exceptions
+- **Application History**: AB Submission Confirmed, AC In Application Cohort and AD Canonical Job Key are required booleans/key. Exactly one counted primary record per requisition. Historical duplicate rows remain as evidence but are never counted twice.
+- Cohort begins **August 24, 2026**. Four earlier confirmed applications remain lifetime-only. Gartner is confirmed in cohort with unknown Applied At. Loop is unverified until new evidence. Closed/rejected confirmed submissions always count toward application totals. Never infer midnight from a date-only value.
+- Completed human interviews differ from automated assessments; unique event ID required. Do not change outcomes on vague recruiter signals. Never answer sensitive authorization, compensation or attestation questions on the user's behalf.
+- Contact replies: use \`jobKey + verified contact\` as the stable outreach identity; message IDs avoid duplicate response events and duplicate threaded Gmail drafts. No reply -> no \`Replied\` status. No confirmed sent evidence -> no \`Contacted\`.
+- Manual shortlist scope and quantity can change at the user's explicit request. Historical inactive automation prompts are not active policy. Do not use an obsolete five-job total or sponsor hard filter to override current R-11/R-10.
+- **Privacy**: Existing notes/history are deliberately preserved. New private Company Signals, candidate details, email bodies, sponsorship disclosures or contact enrichment stay in the Sheet/approved private storage—not in the public GitHub jobSearchData.js. Do not delete historical notes as a cleanup shortcut.
 
-## Resume tailoring — mandatory v2 quality gate (effective 2026-10-26)
-
-Read and apply `scripts/RESUME_TAILORING_STANDARD.md` before selecting a role, scoring it, or authoring a tailored resume. Preserve a dated full job description and an evidence-to-requirement matrix based on the approved master. A high match score is not proof of eligibility or seniority: missing demonstrated must-haves, end-to-end ownership, required experience, or a work-authorization restriction must cause HOLD and transparent disclosure, not silent optimistic scoring. Distinguish "coordinated"/"supported" from "owned" and stage-specific experience from complete delivery. Strong domain keyword overlap is insufficient.
-
-For every tailored resume package, record a reviewed JSON evidence pack, then run `node scripts/check-resume-fit.mjs /absolute/path/evidence-pack.json`. Resolve every HOLD blocker before marking Ready to Submit. An output of READY_FOR_HUMAN_REVIEW is a QA checkpoint, not authorization to apply. The check is deliberately separate from generic dashboard syncing and requires the final actual PDF extracted text, linked candidate evidence, seniority, complete JD snapshot, and human-verified PDF quality. Run `npm run test:resume` to verify the gate itself. Do not infer that a rejection email proves a specific resume defect unless the employer states it.
+## Efficiency and diagnostic checkpoints
+- Use a per-requisition cache of verified JD and final PDF *only until the job post, candidate master or explicit user constraints change*. Record source/date/hash; do not reuse stale mandatory-eligibility claims.
+- Batch independent read-only connector calls where supported. Never parallelize dependent writes or claim cross-system atomicity.
+- Log elapsed time/count per stage in the **private run checkpoint**, not the public website, to find where the run is slow: canonical read, discovery, JD verification, eligibility, resume render/QA, Sheet write/readback, CI/deploy. Optimize measured bottlenecks, not by deleting validation.
+- Do not perform redundant Gmail sweeps during a resume-only run; the separate reply monitor owns mailbox monitoring.
+- Local scripts provide deterministic syncing/checking, **not** a transactional scheduler or an integrated resume-generating backend. External agents must call the stages explicitly.

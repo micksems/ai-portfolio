@@ -62,10 +62,14 @@ export function auditResumeFit(pack) {
   }
 
   const auth = pack?.workAuthorization || {};
-  if (!['verified_permitted', 'unknown', 'explicit_restriction'].includes(auth.status)) {
-    blockers.push('Work authorization must be recorded as verified_permitted, unknown or explicit_restriction.');
+  if (!['verified_permitted', 'unknown', 'explicit_restriction', 'legal_ineligible'].includes(auth.status)) {
+    blockers.push('Work authorization must be verified_permitted, unknown, explicit_restriction, or legal_ineligible.');
+  } else if (auth.status === 'legal_ineligible') {
+    blockers.push('Verified legal work ineligibility for this position: hold until independently resolved.');
   } else if (auth.status === 'explicit_restriction') {
-    blockers.push('Posting has an explicit authorization/sponsorship restriction: pause for individual eligibility review.');
+    // An employer's no-sponsorship policy is a pursuit risk, NOT proof of
+    // current legal ineligibility (Agent Rules R-10, Scoring HF-03).
+    warnings.push('Employer states a sponsorship restriction: disclose it and review actual work eligibility with the candidate.');
   } else if (auth.status === 'unknown') {
     warnings.push('Sponsorship/work authorization is unknown; do not imply approval.');
   }

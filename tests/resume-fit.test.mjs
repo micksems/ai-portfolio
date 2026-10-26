@@ -26,6 +26,13 @@ test('seniority shortfall cannot be overridden by 99% score',()=>{
 test('unverified experience source blocks application readiness',()=>{
   const p=pack();p.candidateEvidence[0].verified=false;assert.equal(auditResumeFit(p).decision,'HOLD');
 });
-test('explicit sponsorship restriction triggers review',()=>{
-  const p=pack();p.workAuthorization.status='explicit_restriction';assert.equal(auditResumeFit(p).decision,'HOLD');
+test('no-sponsorship policy is a pursuit warning, not a hard filter',()=>{
+  const p=pack();p.workAuthorization.status='explicit_restriction';
+  const result=auditResumeFit(p);
+  assert.equal(result.decision,'READY_FOR_HUMAN_REVIEW');
+  assert.match(result.warnings.join(' '),/sponsorship restriction/i);
+});
+test('verified legal inability to work blocks the package',()=>{
+  const p=pack();p.workAuthorization.status='legal_ineligible';
+  assert.equal(auditResumeFit(p).decision,'HOLD');
 });
