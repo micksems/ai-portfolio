@@ -9,7 +9,8 @@
     "lint": "eslint",
     "check:pipeline": "node scripts/check-job-search.mjs",
     "test:pipeline": "node --test tests/job-search.test.mjs",
-    "prebuild": "npm run check:pipeline && npm run test:pipeline"
+    "prebuild": "npm run check:pipeline && npm run test:pipeline && npm run test:resume",
+    "test:resume": "node --test tests/resume-fit.test.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
