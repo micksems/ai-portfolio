@@ -53,6 +53,20 @@ export function auditResumeFit(pack) {
     }
   }
   if (!criticalTotal) blockers.push('At least one employer requirement must be explicitly marked critical.');
+  if (!Array.isArray(pack?.primaryDuties) || pack.primaryDuties.length < 3 || pack.primaryDuties.length > 5) {
+    blockers.push('Provide the 3–5 primary duties independently extracted from the complete job posting.');
+  } else {
+    const seenDuties = new Set();
+    for (const duty of pack.primaryDuties) {
+      if (!duty.requirementId || seenDuties.has(duty.requirementId)) blockers.push('Missing or repeated primary duty ID.');
+      seenDuties.add(duty.requirementId);
+      const req = requirements.find(r => r.id === duty.requirementId);
+      if (!req || !req.critical || req.status !== 'met' || !req.resumeProof ||
+          !norm(resume.text).includes(norm(req.resumeProof))) {
+        blockers.push('Primary duty is not supported by verified critical requirement and literal PDF proof: ' + (duty.requirementId || '(missing)'));
+      }
+    }
+  }
 
   const seniority = pack?.seniorityAssessment || {};
   if (!seniority.postingRequirement || !seniority.actualEvidence || !['supported', 'borderline', 'gap', 'unknown'].includes(seniority.status)) {
