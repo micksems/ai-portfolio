@@ -5,14 +5,15 @@ const pack = () => ({
   role: {company:'Example',title:'Analyst',requisitionOrJobUrl:'https://example.org/jobs/1'},
   jobDescriptionSnapshot: {url:'https://example.org/jobs/1',capturedAt:'2026-10-26',text:'Analyst business statistics Excel SQL '.repeat(20)},
   candidateEvidence: [{id:'e1',description:'Built analytics dashboard',source:'verified master resume, role X',verified:true}],
-  requirements: [{id:'r1',description:'Excel dashboard skills',critical:true,status:'met',evidenceIds:['e1'],resumeProof:'Built analytics dashboard'}],
+  requirements: ['r1','r2','r3'].map(id=>({id,description:'Excel dashboard skills',critical:true,status:'met',evidenceIds:['e1'],resumeProof:'Built analytics dashboard'})),
+  primaryDuties: [{requirementId:'r1'},{requirementId:'r2'},{requirementId:'r3'}],
   resume: {masterSource:'approved master version 1',text:'Built analytics dashboard. '.repeat(30)},
   seniorityAssessment: {status:'supported',postingRequirement:'0–2 years',actualEvidence:'Relevant internships and projects'},
   workAuthorization: {status:'unknown'},
   qualityChecks: {masterLayoutPreserved:true,renderedAndInspected:true,extractedTextReviewed:true,contactLinksVerified:true,claimsFactChecked:true}
 });
 test('evidence supported application is eligible for human review',()=>{
-  const r=auditResumeFit(pack());assert.equal(r.decision,'READY_FOR_HUMAN_REVIEW');assert.equal(r.summary.criticalSupported,1);
+  const r=auditResumeFit(pack());assert.equal(r.decision,'READY_FOR_HUMAN_REVIEW');assert.equal(r.summary.criticalSupported,3);
 });
 test('unsupported critical requirement holds the package',()=>{
   const p=pack();p.requirements[0].status='partial';assert.equal(auditResumeFit(p).decision,'HOLD');
@@ -35,4 +36,11 @@ test('no-sponsorship policy is a pursuit warning, not a hard filter',()=>{
 test('verified legal inability to work blocks the package',()=>{
   const p=pack();p.workAuthorization.status='legal_ineligible';
   assert.equal(auditResumeFit(p).decision,'HOLD');
+});
+
+test('missing primary duties inventory blocks release',()=>{
+  const p=pack();delete p.primaryDuties;assert.equal(auditResumeFit(p).decision,'HOLD');
+});
+test('primary duty with unsupported responsibility blocks release',()=>{
+  const p=pack();p.requirements[1].status='partial';assert.equal(auditResumeFit(p).decision,'HOLD');
 });
