@@ -67,3 +67,13 @@ test('coursework exposure cannot satisfy independent delivery',()=>{
 test('old previously passing packs are held for migration',()=>{
  const p=pack();delete p.schemaVersion;assert.equal(auditResumeFit(p).decision,'HOLD');
 });
+
+
+test('verified applied stakeholder research is recognized without weakening course-title holds',()=>{
+ const p=pack(); const proof='Researched stakeholder needs with a four-person team';
+ Object.assign(p.requirements[0],{description:proof,employerQuote:proof,resumeProof:proof,sourceText:proof,sourceQuote:proof});
+ p.jobDescriptionSnapshot.text+=' '+proof;p.resume.text+=' '+proof;
+ assert.equal(auditResumeFit(p).decision,'READY_FOR_HUMAN_REVIEW');
+ p.requirements[0].resumeProof='Stakeholder Research';p.resume.text+=' Stakeholder Research';
+ assert.equal(auditResumeFit(p).decision,'HOLD');
+});

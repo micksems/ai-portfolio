@@ -55,7 +55,7 @@ export function auditResumeFit(pack) {
       if (!req.evidenceRationale || !req.gaps || req.reviewVerdict !== 'supported')
         blockers.push('Missing explicit duty-to-evidence review and limits: ' + req.id);
       if (req.status === 'met' && req.requiredDepth !== 'exposure' &&
-          !/\b(?:built|wrote|ran|made|maintained|managed|analyzed|analysed|evaluated|developed|created|designed|tested|cleaned|validated|refined|reviewed|organized|compared|edited|assessed|modeled|used|applied|translated|converted|identified|investigated|ranked|monitored|coordinated)\b/i.test(req.resumeProof || ''))
+          !/\b(?:built|wrote|ran|made|maintained|managed|analyzed|analysed|evaluated|developed|created|designed|tested|cleaned|validated|refined|reviewed|organized|compared|edited|assessed|modeled|used|applied|translated|converted|identified|investigated|ranked|monitored|coordinated|researched|documented)\b/i.test(req.resumeProof || ''))
         blockers.push('Skill name or course title is not applied-work proof: ' + req.id);
     }
     if (req.critical) criticalTotal += 1;
@@ -153,4 +153,5 @@ if (process.argv[1]?.endsWith('/check-resume-fit.mjs')) {
     process.exitCode = 2;
   }
 }
+
 

@@ -10,6 +10,10 @@ export function jobKey(job) {
   if (/^(jobs\.)?(lever\.co|ashbyhq\.com)$/.test(u.hostname) && uuid) return `${u.hostname}:${uuid}`;
   const wd = path.match(/_([^/]+)$/)?.[1];
   if (u.hostname.endsWith('myworkdayjobs.com') && wd) return `${u.hostname}:${wd.replace(/-\d+$/, '')}`;
+  // Paycor reuses action URLs across tenants and requisitions. Both IDs matter;
+  // source, language and application-step changes do not create a new job.
+  if (u.hostname === 'recruitingbypaycor.com' && u.searchParams.get('clientId') && u.searchParams.get('id'))
+    return `paycor:${u.searchParams.get('clientId').toLowerCase()}:${u.searchParams.get('id').toLowerCase()}`;
   for (const field of ['req', 'jk', 'jobId', 'jobid', 'requisitionId']) if (u.searchParams.has(field)) return `${u.hostname}${path}?${field}=${u.searchParams.get(field)}`;
   return u.hostname + path;
 }
@@ -47,3 +51,4 @@ export function validatePipeline(data) {
   if (!data.sourceSnapshot?.sha256 || !data.sourceSnapshot?.readAt) errors.push('Missing source snapshot provenance');
   return errors;
 }
+

@@ -11,3 +11,12 @@ test('URL tracking and application suffix do not create new requisitions',()=>as
 test('BTS and Indeed query requisitions remain distinct',()=>{for(const [url,a,b] of [['https://example.com/jobs','req=1','req=2'],['https://indeed.com/viewjob','jk=one','jk=two']])assert.notEqual(jobKey({...job,url:url+'?'+a}),jobKey({...job,url:url+'?'+b}));});
 test('stale manual metrics block release',()=>{const d=data();d.metrics.applications=99;assert.match(validatePipeline(d).join(' '),/Metric applications/);});
 test('duplicate jobs, submitted shortlist and rejection conflicts block release',()=>{assert.match(validatePipeline(data([job,job])).join(' '),/Duplicate job/);assert.match(validatePipeline(data([{...job,status:'Ready to Submit'}])).join(' '),/unsubmitted state/);assert.match(validatePipeline(data([{...job,finalOutcome:'Rejected'}])).join(' '),/Rejection status mismatch/);});
+
+
+test('Paycor action steps deduplicate but different tenants and requisitions do not',()=>{
+ const base={company:'Example',position:'Analyst'};
+ const key=(step,client,id)=>jobKey({...base,url:`https://recruitingbypaycor.com/career/${step}.action?clientId=${client}&id=${id}&source=board&lang=en`});
+ assert.equal(key('JobIntroduction','tenant-a','job-one'),key('SubmitResume','tenant-a','job-one'));
+ assert.notEqual(key('JobIntroduction','tenant-a','job-one'),key('JobIntroduction','tenant-a','job-two'));
+ assert.notEqual(key('JobIntroduction','tenant-a','job-one'),key('JobIntroduction','tenant-b','job-one'));
+});

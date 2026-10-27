@@ -4332,6 +4332,86 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "paycor:8a7883c677ac64aa0177dac431a71b29:8a78879ea0f4259701a0f9cf25327a40",
+      "company": "Fortress Information Security",
+      "position": "Fortress FastLane, Data Quality Analyst",
+      "url": "https://recruitingbypaycor.com/career/JobIntroduction.action?clientId=8a7883c677ac64aa0177dac431a71b29&id=8a78879ea0f4259701a0f9cf25327a40",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/19WJa8k0rI1QzliW6NDtaZJuNkC2PpDCM/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-27",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "cs-recruiters.com/jobs/charlotte/north-carolina/junior-data-analyst/10508231",
+      "company": "Careerscape (client undisclosed)",
+      "position": "Junior Data Analyst",
+      "url": "https://cs-recruiters.com/jobs/charlotte/north-carolina/junior-data-analyst/10508231/",
+      "status": "Closed",
+      "resumeUrl": "https://drive.google.com/file/d/14jdt0iCaC1CXAOdyN5_JiBz-Xc4-l1UV/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-27",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Other",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "aig.wd1.myworkdayjobs.com:jr2604219",
+      "company": "AIG",
+      "position": "2027 Early Careers: Analyst, Data Office: Business Intelligence",
+      "url": "https://aig.wd1.myworkdayjobs.com/en-US/early_careers/job/XMLNAME-2027-Early-Careers--Analyst--Data-Office--Business-Intelligence---United-States--Multiple-Cities_JR2604219",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-10-27",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Other",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "www.ycombinator.com/companies/arq/jobs/fal7pnu-junior-data-analyst-new-york",
+      "company": "ARQ",
+      "position": "Junior Data Analyst - New York",
+      "url": "https://www.ycombinator.com/companies/arq/jobs/fAL7pnu-junior-data-analyst-new-york",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-10-27",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Other",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jobs.ashbyhq.com:d10f128c-c0c9-4597-9cd2-a3386e8d2a99",
+      "company": "Novig",
+      "position": "Product Data Analyst",
+      "url": "https://jobs.ashbyhq.com/novig/d10f128c-c0c9-4597-9cd2-a3386e8d2a99",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-10-27",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Other",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -5369,10 +5449,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-27T15:44:01.568Z",
-    "sha256": "2903c6acd9740c20a58fcc9e2cdb61bf80061d60144bedb6d4c0137f023fb298",
-    "historyRecords": 199,
-    "trackerRecords": 279,
-    "uniqueHistoryRecords": 196
+    "readAt": "2026-10-27T16:05:21.666Z",
+    "sha256": "62713533444c06cc8fd9046e0ce0877408ce4b6e3d0a3871e495045e1027ea43",
+    "historyRecords": 204,
+    "trackerRecords": 284,
+    "uniqueHistoryRecords": 201
   }
 };
