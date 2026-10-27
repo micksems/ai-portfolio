@@ -1,5 +1,5 @@
 # Job-search workflow — ordered execution contract
-Version 3, 2026-10-26. **Google Sheet is canonical.** GitHub/Vercel is a read-only published snapshot. This repository does not independently run discovery, write resumes, read Gmail, or schedule tasks.
+Version 4, 2026-10-27. **Google Sheet is canonical.** GitHub/Vercel is a read-only published snapshot. This repository does not independently run discovery, write resumes, read Gmail, or schedule tasks.
 
 This file is the **execution order** and retry contract. Keep the detailed controls where they belong: Google Sheet **Agent Rules** (especially R-06, R-10, R-11, R-56, R-135, R-136, R-137, R-149), **Scoring Rules**, Candidate Profile, Experience Bank, and [RESUME_TAILORING_STANDARD.md](RESUME_TAILORING_STANDARD.md). Resolve conflicts by the latest explicit user direction; do not silently replace those authoritative details with an older scheduled-task prompt.
 
@@ -33,3 +33,12 @@ This file is the **execution order** and retry contract. Keep the detailed contr
 - Log elapsed time/count per stage in the **private run checkpoint**, not the public website, to find where the run is slow: canonical read, discovery, JD verification, eligibility, resume render/QA, Sheet write/readback, CI/deploy. Optimize measured bottlenecks, not by deleting validation.
 - Do not perform redundant Gmail sweeps during a resume-only run; the separate reply monitor owns mailbox monitoring.
 - Local scripts provide deterministic syncing/checking, **not** a transactional scheduler or an integrated resume-generating backend. External agents must call the stages explicitly.
+
+## Job outcome feedback loop
+The objective is qualified human interviews and offers, not keyword-match scores or total applications. For each run:
+1. Gate on the actual duties, seniority, and verified mandatory requirements before scoring. Rank eligible roles by direct evidence of relevant work, not just shared keywords. Do not pad a requested quota with poor-fit positions.
+2. Independently extract the 3–5 main responsibilities from the complete dated job posting. Require supported proof for each in the final PDF. A checker pass is necessary but not sufficient: review whether the resume proves ownership and depth rather than simply matching text.
+3. Use verified achievements, role-specific ordering, Times New Roman and an inspected, selectable one-page PDF. Preserve the exact submitted version for future analysis. Never invent responsibilities or outcomes.
+4. Keep separate counts for confirmed submissions, human recruiter responses, assessments, human interviews, offers, and rejections. Analyze conversion by role family and cohort, including denominators. A generic rejection is not proof of its cause.
+5. Diagnose the weak funnel stage before changing strategy: poor application-to-screen conversion calls for selection and resume review; poor assessment results call for skills practice; poor interview conversion calls for interview preparation.
+6. The repository does not execute discovery, resume generation, or checker invocation automatically. The run operator must invoke and verify those steps; if any gate cannot be completed, label the application HOLD, not Ready to Submit.
