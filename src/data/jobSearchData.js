@@ -4,7 +4,7 @@ export const jobSearchData = {
     "applications": 117,
     "interviews": 7,
     "offers": 0,
-    "rejections": 38,
+    "rejections": 39,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -4095,17 +4095,17 @@ export const jobSearchData = {
       "company": "Compass Group",
       "position": "Data Analyst",
       "url": "https://careers.compass-usa.com/data-analyst-charlotte-nc-hybrid/job/5E66E542BE09BACDA81D38167C1649B8",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/12t0WZmAeKOvr87u5r7e5azdjxC8MAYu4/view?usp=drivesdk",
       "notes": "October 23, 2026: Misha confirmed submission of the current five roles plus Amex New York, explicitly including Emendata. Submission date recorded; individual times unknown. This supersedes earlier unsubmitted/archive status. Submitted resume snapshot retained.\n\nCharlotte, NC / hybrid; Base pay unpublished. Data quality and market research for internal sales analytics, no selling quota. Pay/start/sponsorship unpublished; confirm base at least70k. Posting: 2026-10-19T22:12:46.645201Z. Advertised3daysago; very direct dataQC/Excel/research scope and internships accepted. SalesDataAnalytics team produces research datasets/recordvalidation for internal colleagues; no cold calling, outbound selling, quotas or account sales duties. Payunknown must meet70kbase; ask before lengthy interview. Distinct from old Foodbuy DataIntelligenceAnalyst1416572600.",
       "firstSeenAt": "2026-10-22",
       "appliedAt": "2026-10-23",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active",
+      "finalOutcome": "Rejected",
       "applicationCheckedAt": "2026-10-22",
       "canonicalKey": "careers.compass-usa.com/data-analyst-charlotte-nc-hybrid/job/5e66e542be09bacda81d38167c1649b8",
-      "rejectionAt": "",
+      "rejectionAt": "2026-10-27",
       "offerAt": ""
     },
     {
@@ -5449,7 +5449,7 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-27T16:39:14.966Z",
+    "readAt": "2026-10-27T22:28:56.116Z",
     "sha256": "41f5ab53e81417b5647dd1b047c5e47a033bc9c6092ad30ed2696ab954228d00",
     "historyRecords": 204,
     "trackerRecords": 284,
