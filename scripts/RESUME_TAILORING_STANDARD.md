@@ -37,3 +37,13 @@ Optional `fitScore` is informational and never cancels a blocker.
 
 ## Roles and functions
 This standard governs ChatGPT-driven/manual generation. The portfolio repository stores dashboard data and scripts but does **not** itself demonstrate a production resume-generation engine. Adding this gate does not automatically change any external scheduled task; future operators must invoke it explicitly or integrate it into their own runner.
+
+## Release schema v3 — October 27 correction
+The previous gate accepted course labels as applied proficiency and repeated one generic proof across primary duties. All v2 packages require re-review; a historical PASS is not current authorization.
+
+- Extract 3–5 distinct **work tasks** from the employer JD before consulting candidate evidence. Degrees, tool names and personality traits cannot fill these slots.
+- Every ledger row includes kind, exact employerQuote present in the stored JD, requiredDepth and demonstratedDepth (exposure/applied/independent/production), original sourceText/sourceQuote, evidenceRationale, gaps, and reviewVerdict. Mandatory gaps remain HOLD. Preferred requirements must not be misclassified to hide a mandatory gap.
+- Applied skills require an executed-work example in the final resume. A course title or skill list alone cannot prove strong SQL, modeling, or independent delivery. Course projects can prove applied work when the actual method, output and contribution are sourced; they do not prove professional production ownership.
+- Select relevant projects from the full verified project bank before authoring. For AI evaluation: model evaluation/NLP and customer segmentation; for reporting: SQL database and dashboard projects. Preserve chronology and Times New Roman, but replace less relevant project slots. Do not confine tailoring to synonym changes on legacy bullets.
+- The CLI binds the reviewed text to actual PDF bytes using resume.localPath, resume.sha256 and independent PDF extraction. Changed bytes or intended-draft text block release.
+- The checker checks structural evidence and depth declarations; it cannot independently judge semantic relevance or certify self-reported provenance. A skeptical content review remains required. Report unresolved gaps explicitly and do not promise interviews.

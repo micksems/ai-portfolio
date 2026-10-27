@@ -42,3 +42,7 @@ The objective is qualified human interviews and offers, not keyword-match scores
 4. Keep separate counts for confirmed submissions, human recruiter responses, assessments, human interviews, offers, and rejections. Analyze conversion by role family and cohort, including denominators. A generic rejection is not proof of its cause.
 5. Diagnose the weak funnel stage before changing strategy: poor application-to-screen conversion calls for selection and resume review; poor assessment results call for skills practice; poor interview conversion calls for interview preparation.
 6. The repository does not execute discovery, resume generation, or checker invocation automatically. The run operator must invoke and verify those steps; if any gate cannot be completed, label the application HOLD, not Ready to Submit.
+
+
+### Mandatory release correction — October 27
+Use schemaVersion 3 of check-resume-fit. Bind the final PDF path/hash/text; require distinct work-task coverage and depth/source excerpts. An old PASS, matching keywords, a course name, or a high fit score never authorizes Ready to Submit. Review the actual strongest project evidence before rendering; do not reissue five near-identical master copies. If a prior package fails, hold its existing row and repair its existing artifact only after the content gate passes. Preserve submitted versions.

@@ -1,4 +1,6 @@
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
 
 /**
  * Conservative pre-submission quality gate. Input is a reviewed evidence pack,
@@ -30,6 +32,9 @@ export function auditResumeFit(pack) {
     if (!ev.source || !ev.description || ev.verified !== true) blockers.push('Evidence ' + (ev.id || '(empty)') + ' is unverified or lacks provenance.');
     ids.add(ev.id);
   }
+  if (pack?.schemaVersion !== 3) blockers.push('Rebuild evidence pack using schemaVersion 3; legacy self-reported passes are invalid.');
+  const requirementKinds = new Set(['task','skill','education','experience','availability']);
+  const depth = {exposure:0, applied:1, independent:2, production:3};
   const reqIds = new Set();
   let coveredCritical = 0;
   let criticalTotal = 0;
@@ -38,6 +43,21 @@ export function auditResumeFit(pack) {
     reqIds.add(req.id);
     if (!req.description) blockers.push('Requirement ' + req.id + ' lacks the employer\'s wording.');
     if (!['met', 'partial', 'missing', 'unknown'].includes(req.status)) blockers.push('Requirement ' + req.id + ' lacks an evidence-based status.');
+    if (!requirementKinds.has(req.kind)) blockers.push('Classify requirement kind: ' + req.id);
+    if (!req.employerQuote || !norm(jd.text).includes(norm(req.employerQuote)))
+      blockers.push('Requirement must quote the captured employer posting: ' + req.id);
+    if (req.critical && ['task','skill'].includes(req.kind)) {
+      if (!(req.requiredDepth in depth) || !(req.demonstratedDepth in depth) ||
+          depth[req.demonstratedDepth] < depth[req.requiredDepth])
+        blockers.push('Required work depth is not demonstrated: ' + req.id);
+      if (!req.sourceQuote || !req.sourceText || !norm(req.sourceText).includes(norm(req.sourceQuote)))
+        blockers.push('Missing candidate source excerpt: ' + req.id);
+      if (!req.evidenceRationale || !req.gaps || req.reviewVerdict !== 'supported')
+        blockers.push('Missing explicit duty-to-evidence review and limits: ' + req.id);
+      if (req.status === 'met' && req.requiredDepth !== 'exposure' &&
+          !/\b(?:built|wrote|ran|made|maintained|managed|analyzed|analysed|evaluated|developed|created|designed|tested|cleaned|validated|refined|reviewed|organized|compared|edited|assessed|modeled|used|applied|translated|converted|identified|investigated|ranked|monitored|coordinated)\b/i.test(req.resumeProof || ''))
+        blockers.push('Skill name or course title is not applied-work proof: ' + req.id);
+    }
     if (req.critical) criticalTotal += 1;
     const linked = Array.isArray(req.evidenceIds) ? req.evidenceIds : [];
     for (const id of linked) if (!ids.has(id)) blockers.push('Requirement ' + req.id + ' cites nonexistent evidence ' + id + '.');
@@ -57,10 +77,20 @@ export function auditResumeFit(pack) {
     blockers.push('Provide the 3–5 primary duties independently extracted from the complete job posting.');
   } else {
     const seenDuties = new Set();
+    const dutyDescriptions = new Set();
+    const dutyProofs = new Set();
     for (const duty of pack.primaryDuties) {
       if (!duty.requirementId || seenDuties.has(duty.requirementId)) blockers.push('Missing or repeated primary duty ID.');
       seenDuties.add(duty.requirementId);
       const req = requirements.find(r => r.id === duty.requirementId);
+      if (req) {
+        const description = norm(req.employerQuote);
+        const proof = norm(req.resumeProof);
+        if (req.kind !== 'task') blockers.push('Primary duties must be work tasks, not degrees or general skills: ' + req.id);
+        if (dutyDescriptions.has(description) || dutyProofs.has(proof))
+          blockers.push('Primary duties need distinct task-specific proof: ' + req.id);
+        dutyDescriptions.add(description); dutyProofs.add(proof);
+      }
       if (!req || !req.critical || req.status !== 'met' || !req.resumeProof ||
           !norm(resume.text).includes(norm(req.resumeProof))) {
         blockers.push('Primary duty is not supported by verified critical requirement and literal PDF proof: ' + (duty.requirementId || '(missing)'));
@@ -101,7 +131,21 @@ if (process.argv[1]?.endsWith('/check-resume-fit.mjs')) {
   try {
     const path = process.argv[2];
     if (!path) throw new Error('Usage: node scripts/check-resume-fit.mjs evidence-pack.json');
-    const report = auditResumeFit(JSON.parse(readFileSync(path, 'utf8')));
+    const pack = JSON.parse(readFileSync(path, 'utf8'));
+    // Inspect the actual release artifact, not an intended draft supplied as text.
+    const pdf = pack.resume?.localPath;
+    if (!pdf || !pack.resume?.sha256) throw new Error('Missing final PDF path/hash.');
+    const bytes = readFileSync(pdf);
+    if (createHash('sha256').update(bytes).digest('hex') !== pack.resume.sha256)
+      throw new Error('PDF changed after review; repeat affected QA.');
+    const python = process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3';
+    const extracted = spawnSync(python, ['-c',
+      'import fitz,sys; d=fitz.open(sys.argv[1]); print("\\n".join(p.get_text() for p in d),end="")', pdf], {encoding:'utf8'});
+    if (extracted.status !== 0) throw new Error('Cannot extract final PDF text: ' + extracted.stderr);
+    const normalize = value => String(value).replace(/\s+/g,' ').trim();
+    if (normalize(extracted.stdout) !== normalize(pack.resume.text))
+      throw new Error('Evidence text differs from actual PDF; release blocked.');
+    const report = auditResumeFit(pack);
     console.log(JSON.stringify(report, null, 2));
     if (report.decision !== 'READY_FOR_HUMAN_REVIEW') process.exitCode = 1;
   } catch (e) {
@@ -109,3 +153,4 @@ if (process.argv[1]?.endsWith('/check-resume-fit.mjs')) {
     process.exitCode = 2;
   }
 }
+

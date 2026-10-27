@@ -2,12 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { auditResumeFit } from '../scripts/check-resume-fit.mjs';
 const pack = () => ({
+  schemaVersion:3,
   role: {company:'Example',title:'Analyst',requisitionOrJobUrl:'https://example.org/jobs/1'},
-  jobDescriptionSnapshot: {url:'https://example.org/jobs/1',capturedAt:'2026-10-26',text:'Analyst business statistics Excel SQL '.repeat(20)},
+  jobDescriptionSnapshot: {url:'https://example.org/jobs/1',capturedAt:'2026-10-26',text:('Built analytics dashboard. Cleaned customer data. Evaluated model outputs. ').repeat(20)},
   candidateEvidence: [{id:'e1',description:'Built analytics dashboard',source:'verified master resume, role X',verified:true}],
-  requirements: ['r1','r2','r3'].map(id=>({id,description:'Excel dashboard skills',critical:true,status:'met',evidenceIds:['e1'],resumeProof:'Built analytics dashboard'})),
+  requirements: ['Built analytics dashboard','Cleaned customer data','Evaluated model outputs'].map((proof,i)=>({id:'r'+(i+1),description:proof,employerQuote:proof,kind:'task',requiredDepth:'applied',demonstratedDepth:'applied',sourceQuote:proof,sourceText:proof,reviewVerdict:'supported',evidenceRationale:'Direct executed task in verified internship; no independent production ownership implied.',gaps:'Different domain; no invented outcomes.',critical:true,status:'met',evidenceIds:['e1'],resumeProof:proof})),
   primaryDuties: [{requirementId:'r1'},{requirementId:'r2'},{requirementId:'r3'}],
-  resume: {masterSource:'approved master version 1',text:'Built analytics dashboard. '.repeat(30)},
+  resume: {masterSource:'approved master version 1',text:'Built analytics dashboard. Cleaned customer data. Evaluated model outputs. '.repeat(30)},
   seniorityAssessment: {status:'supported',postingRequirement:'0–2 years',actualEvidence:'Relevant internships and projects'},
   workAuthorization: {status:'unknown'},
   qualityChecks: {masterLayoutPreserved:true,renderedAndInspected:true,extractedTextReviewed:true,contactLinksVerified:true,claimsFactChecked:true}
@@ -43,4 +44,26 @@ test('missing primary duties inventory blocks release',()=>{
 });
 test('primary duty with unsupported responsibility blocks release',()=>{
   const p=pack();p.requirements[1].status='partial';assert.equal(auditResumeFit(p).decision,'HOLD');
+});
+
+
+test('course-title laundering cannot satisfy applied SQL work',()=>{
+ const p=pack(); p.requirements[0].resumeProof='Data Management and SQL'; p.resume.text+=' Data Management and SQL';
+ assert.equal(auditResumeFit(p).decision,'HOLD');
+});
+test('different IDs cannot disguise duplicate primary duties',()=>{
+ const p=pack(); Object.assign(p.requirements[1],{employerQuote:p.requirements[0].employerQuote,resumeProof:p.requirements[0].resumeProof});
+ assert.equal(auditResumeFit(p).decision,'HOLD');
+});
+test('a degree cannot be substituted for a primary duty',()=>{
+ const p=pack();p.requirements[0].kind='education';assert.equal(auditResumeFit(p).decision,'HOLD');
+});
+test('invented employer requirement absent from dated JD is blocked',()=>{
+ const p=pack();p.requirements[0].employerQuote='Owned enterprise security SLAs';assert.equal(auditResumeFit(p).decision,'HOLD');
+});
+test('coursework exposure cannot satisfy independent delivery',()=>{
+ const p=pack();p.requirements[0].requiredDepth='independent';p.requirements[0].demonstratedDepth='exposure';assert.equal(auditResumeFit(p).decision,'HOLD');
+});
+test('old previously passing packs are held for migration',()=>{
+ const p=pack();delete p.schemaVersion;assert.equal(auditResumeFit(p).decision,'HOLD');
 });
