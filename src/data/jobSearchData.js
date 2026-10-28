@@ -1,7 +1,7 @@
 export const jobSearchData = {
-  "updatedAt": "October 27, 2026",
+  "updatedAt": "October 28, 2026",
   "metrics": {
-    "applications": 117,
+    "applications": 120,
     "interviews": 7,
     "offers": 0,
     "rejections": 39,
@@ -13,8 +13,8 @@ export const jobSearchData = {
     "onlineAssessments": 1,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-10-27",
-    "lifetimeApplications": 121
+    "auditedAt": "2026-10-28",
+    "lifetimeApplications": 124
   },
   "jobs": [
     {
@@ -3036,7 +3036,7 @@ export const jobSearchData = {
       "company": "OneMain Financial",
       "position": "Analytics Analyst",
       "url": "https://jobs.onemainfinancial.com/job/wilmington/analytics-analyst/21631/100341806912",
-      "status": "Applied",
+      "status": "Interview",
       "resumeUrl": "https://drive.google.com/file/d/1UZ8WxfUN7NeSBXnd9U0ZEVQk079zMOyO/view?usp=drivesdk",
       "notes": "October 7, 2026 12:04 ET: Misha confirmed submission. Applied; exact individual submission time not supplied.\n\nManual run October 7, 2026. Unsubmitted: tracker/application history deduplicated and targeted Gmail check since October 5 found no application confirmations. Role-specific sponsorship remains UNKNOWN; retained exceptionally for analytical fit, not as positive sponsorship evidence. Misha reports current CPT; employer-specific authorization and work dates need his review. Do not assume future OPT approval. Resume rebuilt from approved September 29 master, preserving Liberation Serif, name/contact positions, working email/LinkedIn/portfolio links, section rules, exact baselines, right-aligned dates/locations, hanging indents and spacing. Each final PDF visually compared beside master and extracted-text checked; one page, 3 bullets per experience, 4 per school, approved coursework/Chief Events Officer/NACDA and 2025-2026 swimming dates. No production tools or outcomes invented.\n\nOfficial full JD and Apply path: https://jobs.onemainfinancial.com/job/wilmington/analytics-analyst/21631/100341806912 . R2608-52224, posted Sept 8. Charlotte is approved; Wilmington requires separate relocation approval and is not recommended by this run. Current bachelor's/master's graduation Winter 2026-Spring 2027 explicitly matches December 2026. Academic/athletic project teamwork qualifies. Business analysis, cross-functional implementation and technical problem solving align with KPI/segmentation work, UN team and analytics education. Employer BASE PAY is UNPUBLISHED: the $70,000 floor is not verified and third-party estimates are not treated as base. No deadline or exact program start published. Existing Christine Santana-Smith draft remains unsent.",
       "firstSeenAt": "2026-10-05",
@@ -4178,12 +4178,12 @@ export const jobSearchData = {
       "company": "Affirm",
       "position": "Analyst, Early Career (Full Stack)",
       "url": "https://job-boards.greenhouse.io/affirm/jobs/8039471003",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/184S8G8q-6F9wxAZuGOi04PwO6suhCtYt/view?usp=drivesdk",
       "firstSeenAt": "2026-10-23",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-10-27",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -4194,12 +4194,12 @@ export const jobSearchData = {
       "company": "Activate Consulting",
       "position": "2027 Business Analyst",
       "url": "https://activateconsulting.applytojob.com/apply/sFMI8ByazW/2027-Business-Analyst",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1Dj6_6NkmPd122iPsk0uOI02GLU1SfgRU/view?usp=drivesdk",
       "firstSeenAt": "2026-10-23",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-10-27",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -4210,12 +4210,12 @@ export const jobSearchData = {
       "company": "iSpot",
       "position": "Associate Data Analyst",
       "url": "https://job-boards.greenhouse.io/ispottv/jobs/4742654005",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1iIOB6NnkHW8CHmlZk2OQxAD_CMhKiBaN/view?usp=drivesdk",
       "firstSeenAt": "2026-10-23",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-10-27",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -4485,6 +4485,14 @@ export const jobSearchData = {
       "position": "Business Analyst Graduate Programme",
       "stage": "Completed — Online assessment",
       "date": "13/10/2026",
+      "interviewer": null
+    },
+    {
+      "id": "INT-ONEMAIN-1A182ED447C69FB7",
+      "company": "OneMain Financial",
+      "position": "Analytics Analyst",
+      "stage": "Scheduling — 2nd round virtual case study",
+      "date": "Date pending; availability submitted Oct 28",
       "interviewer": null
     }
   ],
@@ -5449,8 +5457,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-27T22:28:56.116Z",
-    "sha256": "70a9009e34c9e50a50ef3db44f8e77a344a7feb7e2ffb8ee752c80ec3f2944b4",
+    "readAt": "2026-10-28T21:46:24.591Z",
+    "sha256": "2eafb436d707e692e3eeb3645f9558f2854e55ba4471774bfc9afdfa4ccc9da4",
     "historyRecords": 204,
     "trackerRecords": 284,
     "uniqueHistoryRecords": 201
