@@ -2,7 +2,7 @@ export const jobSearchData = {
   "updatedAt": "October 29, 2026",
   "metrics": {
     "applications": 120,
-    "interviews": 7,
+    "interviews": 8,
     "offers": 0,
     "rejections": 40,
     "trackerStartedAt": "Aug 24, 2026",
@@ -10,7 +10,7 @@ export const jobSearchData = {
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
     "scheduledInterviews": 0,
     "aiAssessments": 1,
-    "onlineAssessments": 1,
+    "onlineAssessments": 2,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
     "auditedAt": "2026-10-29",
@@ -3716,7 +3716,7 @@ export const jobSearchData = {
       "company": "Columbia University",
       "position": "Data Analyst — Environmental Health & Safety",
       "url": "https://opportunities.columbia.edu/en-US/jobs/data-analyst-new-york-united-states",
-      "status": "Applied",
+      "status": "Interview",
       "resumeUrl": "https://drive.google.com/file/d/1z9uHWLpBbLHqTZdlm67Vt7vByre-_EU4/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed submission of all six October13 positions, including David AI and replacement Altis. AppliedAt records the confirmation date only; exact submission times were not supplied. Prepared materials retained as submitted snapshots. The standing exclusion of lead roles remains in force for future searches.\nRUN-20261013-1745Z manual specialist run. Five newly discovered unsubmitted roles, three YC companies (Prelim/Trayd/David AI). Pre-authoring duplicate/eligibility preflight PASS; read 2026-10-13T17:59:47.412Z UTC / America/New_York; snapshot SHA256604afb60571649820f6f2de0b7f13fa11c7e890297f68b976a392b66ecd600c5. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: PASS — EH&S560048: data validation, reconciliation, report support, requirements, application troubleshooting and AI automation. Verified student-record operations, Camp Vega quality and UN automation match. | location: PASS — New York, NY — Geffen; hybrid possible — approved geography. | experience: PASS — 1+ year relevant data work supported by Lewis9months plus CampVega, UN and AI evaluation; overlapping jobs not double-counted. | mandatory_requirements: PASS — Bachelor completed in Business Administration, with current MSBA quantitative/IS educational emphasis (SQL, Python, databases, analytics) treated as related field; employer must confirm degree equivalence. No claim completed MS or STEM bachelor. Power Query/VBA/database administration preferred; verified Excel/SQL, PowerBI and AI workflows. Lab inventory experience not mandatory. | base_salary: PASS — $66,300–$75,000 base; offer must be ≥$70,000; bonus/equity excluded. | authorization: PASS — Candidate reports current CPT through Dec2026; future OPT is planned, not approved. Current employer posting has no explicit current/future sponsorship prohibition. Eligibility/required employer CPT acceptance must be confirmed; do not assert unrestricted work authorization. | start_timing: PASS — No fixed incompatible cohort start or completed master's requirement in current posting. Immediate employment is conditional on CPT approval and study schedule; graduationDec2026. | application_path: PASS — Primary job page HTTP200 and job-specific lazy Apply form HTTP200 with first name, last name, email and Apply button; PageUp req in link matches. Read-only validation; no form submitted. Application checked 2026-10-13T18:01:00.565Z. Sponsorship UNKNOWN; strong exception: Explicit strong-fit exception: EH&S560048: data validation, reconciliation, report support, requirements, application troubleshooting and AI automation. Verified student-record operations, Camp Vega quality and UN automation match. No sponsorship inferred from employer general policy. New EH&Sreq560048; differs from old Columbia Associate Data Analyst557347 and this run'sIEOR559696. Fit score 85 (role/skills/experience/seniority/education/achievement 22/17/17/11/9/9); score is fit, not success probability. PASS: original one-page geometry, all five pages visually reviewed; no clipping/overlap, 10pt text, 23 bullets, exact education/dates/contact and 3 hyperlinks preserved. PDF SHA2569cc3dcfeb970f310fd00128a089aa23eeb5fc3a9ec19c0239300f97990d5e7d4. Library libfile_d3a3bfbaebf48191ac4dafc1282670cb; Drive 1z9uHWLpBbLHqTZdlm67Vt7vByre-_EU4; resume https://drive.google.com/file/d/1z9uHWLpBbLHqTZdlm67Vt7vByre-_EU4/view?usp=drivesdk. First Seen At reflects this run's verified read; exact earlier discovery minute unavailable. Posted At uses employer timestamp only; Prelim/David old publication dates retained despite current isListed=true. No applications, outreach or schedules performed. Sensitive authorization/sponsorship/compensation/start answers remain for Misha. UN search: current UNICEF596234 requires5years/gender-policy expertise; UNDP RBAS internship is not qualifying>=70kbase full-time analyst; P3/P5 postings expired/too senior and OICTG6 requires experience beyond verified record. Canonical row IDs Tracker90, History154.",
       "firstSeenAt": "2026-10-13",
@@ -4755,6 +4755,22 @@ export const jobSearchData = {
       "stage": "Scheduling — 2nd round virtual case study",
       "date": "Date pending; availability submitted Oct 28",
       "interviewer": ""
+    },
+    {
+      "id": "INT-COLUMBIA-20261028-1A18318E05628338",
+      "company": "Columbia University",
+      "position": "Data Analyst — Environmental Health & Safety",
+      "stage": "Completed — Recruiter screen",
+      "date": "2026-10-28",
+      "interviewer": "Emily Riber"
+    },
+    {
+      "id": "ASSESS-ONEMAIN-1A15BEFCC30C0AD1",
+      "company": "OneMain Financial",
+      "position": "Analytics Analyst",
+      "stage": "Completed — Online assessment",
+      "date": "October 2026; exact completion date not confirmed",
+      "interviewer": ""
     }
   ],
   "outreachState": [
@@ -5718,8 +5734,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-29T17:48:39.854Z",
-    "sha256": "0078ff43ffe377f32446c77a9350b63dceb191e72f18f2adcb85dfda83c424a4",
+    "readAt": "2026-10-29T17:58:17.206Z",
+    "sha256": "f9a3b78e316eb71c0f6f86fa05301c78f104ce693f4d64f620950fa530dc20c4",
     "historyRecords": 288,
     "trackerRecords": 288,
     "uniqueHistoryRecords": 288
