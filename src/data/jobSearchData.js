@@ -1,10 +1,10 @@
 export const jobSearchData = {
-  "updatedAt": "October 28, 2026",
+  "updatedAt": "October 29, 2026",
   "metrics": {
     "applications": 120,
     "interviews": 7,
     "offers": 0,
-    "rejections": 39,
+    "rejections": 40,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -13,7 +13,7 @@ export const jobSearchData = {
     "onlineAssessments": 1,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-10-28",
+    "auditedAt": "2026-10-29",
     "lifetimeApplications": 124
   },
   "jobs": [
@@ -3616,16 +3616,16 @@ export const jobSearchData = {
       "company": "Piper Sandler",
       "position": "Fixed Income Strategy and Analytics Analyst",
       "url": "https://pipersandler.wd501.myworkdayjobs.com/piper_sandler_careers/job/Fixed-Income-Strategy-and-Analytics-Analyst_R-100718",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1-Z5fM3gncxno2tKfMtlBuMZ-kDIuT2Bw/view?usp=drivesdk",
       "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC onsite; base 75,000–95,000. 0–2 years; related business degree with finance/accounting/economics coursework, Excel modeling. Financial-domain stretch. Licenses may be earned within120days; must discuss willingness with user. No sales quota listed. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "2026-10-15",
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active",
+      "finalOutcome": "Rejected",
       "canonicalKey": "pipersandler.wd501.myworkdayjobs.com:r",
-      "rejectionAt": "",
+      "rejectionAt": "2026-10-29",
       "offerAt": ""
     },
     {
@@ -5457,8 +5457,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-28T21:46:24.591Z",
-    "sha256": "2eafb436d707e692e3eeb3645f9558f2854e55ba4471774bfc9afdfa4ccc9da4",
+    "readAt": "2026-10-29T12:49:32.562Z",
+    "sha256": "c845eba91c2c49eed25eb41c5f81c57f31bc89cf09d336224c0ab345c5474be9",
     "historyRecords": 204,
     "trackerRecords": 284,
     "uniqueHistoryRecords": 201
