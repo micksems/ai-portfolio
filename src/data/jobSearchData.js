@@ -4673,6 +4673,86 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "jobs.lever.co:4d3d7741-f357-4a6d-b18f-60e2541c1a7f",
+      "company": "Waabi",
+      "position": "Operations Analyst",
+      "url": "https://jobs.lever.co/waabi/4d3d7741-f357-4a6d-b18f-60e2541c1a7f",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1TnVOL6JUnR2ByPm5FZV5X1QRfo4ZZQvg/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-29",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jobs.ashbyhq.com:99967c4f-e3cc-42b3-90d0-0f4499140c22",
+      "company": "Kin Insurance",
+      "position": "Pricing & Risk Analyst",
+      "url": "https://jobs.ashbyhq.com/kin/99967c4f-e3cc-42b3-90d0-0f4499140c22",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1qk6VF5702bWBy7k3eWBRxn31jC4EHDVz/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-29",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "groupecreditagricole.jobs/en/our-jobs-offer/578-170464-4-us-analyst---cfo-solutions-reference--2026-115163--",
+      "company": "Crédit Agricole CIB",
+      "position": "US Analyst - CFO Solutions",
+      "url": "https://groupecreditagricole.jobs/en/our-jobs-offer/578-170464-4-us-analyst---cfo-solutions-reference--2026-115163--/",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/12YqSD4Zgym41tABwGWCZ8-Eue-Swzy8v/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-29",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jobs.lever.co:1584186a-ba9d-4827-9ecb-e7caec98d966",
+      "company": "Veeva Systems",
+      "position": "Associate Consultant - Entry-Level Technology Consulting (Life Sciences)",
+      "url": "https://jobs.lever.co/veeva/1584186a-ba9d-4827-9ecb-e7caec98d966",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/14Md-Jlp6MYJ5WJqPbHZokgQer0b8b2Xz/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-29",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jobs.lever.co:f00ef9bf-f943-495e-8936-e8cedb53ee46",
+      "company": "Deploy",
+      "position": "Data Operations Analyst",
+      "url": "https://jobs.lever.co/hive/f00ef9bf-f943-495e-8936-e8cedb53ee46",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1y5X1qK_RzDRi2RhFqHfb61521iUOiBFV/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-29",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -5734,10 +5814,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-29T17:58:17.206Z",
-    "sha256": "f9a3b78e316eb71c0f6f86fa05301c78f104ce693f4d64f620950fa530dc20c4",
-    "historyRecords": 288,
-    "trackerRecords": 288,
-    "uniqueHistoryRecords": 288
+    "readAt": "2026-10-29T19:35:35.489Z",
+    "sha256": "1497461c65cc4ca6bbf77e8daac892f7b872879b8528b5c6e7575c42bd8f7b9b",
+    "historyRecords": 293,
+    "trackerRecords": 293,
+    "uniqueHistoryRecords": 293
   }
 };
