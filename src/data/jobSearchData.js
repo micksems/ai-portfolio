@@ -28,7 +28,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.indeed.com/viewjob?jk=215e8d1929e98a35",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Good Apple",
@@ -57,7 +60,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:4620751006",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "AvidXchange",
@@ -70,7 +76,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.linkedin.com/jobs/view/business-insights-analyst-i-at-avidxchange-inc-4423208846",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Walmart / VIZIO",
@@ -83,7 +92,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.walmart.com/us/en/jobs/r-2504580",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "NYC Campaign Finance Board",
@@ -96,7 +108,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "cityjobs.nyc.gov/job/data-and-metrics-analyst-in-manhattan-jid-44848",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Instawork",
@@ -106,7 +121,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/10KQ3X2LaeB4Me-ezyeOaRUP0V5YNc98N/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; exact Greenhouse role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-20",
-      "appliedAt": "20/09/2026 13:49:00",
+      "appliedAt": "2026-09-20",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
@@ -125,7 +140,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:5998559004",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Charlie Health",
@@ -135,7 +153,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1FYpMoYl1W66MruGgiUz6llt767r2G7MQ/view?usp=drivesdk",
       "notes": "October 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\n2026-10-03 fresh re-entry after primary-role reprioritization. Exact employer requisition 5997404004 is live; external application destination exposes Submit application. NYC hybrid/four office days, $75,000-$100,000 base plus target bonus, 1-3 years, advanced Excel and SQL/Tableau strongly preferred. Core work is data analysis, dashboards, process design and cross-functional operational improvement. Sponsorship is not stated; retained as an exceptional analytical match under V-03 neutral treatment, not as sponsorship evidence. One-page position-specific PDF rebuilt from the approved master; extracted text and visual QA passed.",
       "firstSeenAt": "2026-10-03",
-      "appliedAt": "04/10/2026",
+      "appliedAt": "2026-10-04",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
@@ -170,7 +188,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:4eccbd19-890a-485c-8e1b-5cf1b0255ed1",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Stepful",
@@ -247,7 +268,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "capgroup.wd1.myworkdayjobs.com:jr6952",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Macy's",
@@ -308,7 +332,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.compassgroupcareers.com/united_states/job/charlotte-data-intelligence-analyst-%28charlotte%2c-nc%29-nc-28217/1416572600",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "ABM Industries",
@@ -321,7 +348,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.indeed.com/viewjob?jk=2f4f16bd1c008347",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Dimensional Fund Advisors",
@@ -334,7 +364,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "dimensional.wd5.myworkdayjobs.com:2026-9014",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Instawork",
@@ -344,7 +377,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1w77O4jYJHbnDX_g-zQHhEFcQAhiUC4js/view?usp=drivesdk",
       "notes": "October 7, 2026 12:47 ET: Misha confirmed all three submissions (Instawork AI & Automation, Metropolitan Applied AI Analyst, PineBridge Data Systems Analyst). Date recorded; exact submission times not provided. Preserve final submitted PDF snapshot.\n\nManual requested run October 7, 2026, following 12:04 ET submission confirmation. Unsubmitted role deduplicated against live Job Tracker and Application History, including exact requisition IDs. Sponsorship is UNKNOWN: exceptional inclusion for role fit, not positive sponsorship evidence; no current/future prohibition found in full employer JD. Historical employer filings and authorization questions do not establish role sponsorship. Current CPT while studying only; employer approval and December 2026 start availability must be confirmed. No future OPT approval assumed. Deadline and employment start date not published. Resume uses approved September 29 master and verified LinkedIn source; one page, exact contact placement and three working hyperlinks, newest-to-oldest experience, three bullets per experience, four per school. Final PDF rendered and visually inspected; text, links and clipping checked. No unsupported metrics, technology proficiency or production outcomes added. No sales, cover letters, applications or outreach sent; runs remain manual only.\n\nOfficial live full description AND application fields/Submit Application inspected October 7: https://job-boards.greenhouse.io/instawork/jobs/4702041006 . Base $90,000-$120,000 plus equity. Accepts 0-3 years, including new grads with strong internships. Analytics, workflow automation, compensation process and forecasting operations; no selling or prospecting quota. Fit: UN Copilot Studio multi-agent assistant, client-needs scoping, AI output evaluation, Lewis data operations and Excel analytics. Gaps: no verified payroll/commission administration, Salesforce, n8n or production compensation automation. Reopened existing tracker row24 after live employer form verified; original August30 first-seen preserved. No history submission for this requisition. Different from Applied Instawork Product Operations req4583589006.",
       "firstSeenAt": "2026-08-30",
-      "appliedAt": "07/10/2026",
+      "appliedAt": "2026-10-07",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
@@ -363,7 +396,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:c94f2732-3307-4fe0-b021-8fc0fe6d341a",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Ramp",
@@ -376,7 +412,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:1c8e2b03-fcb3-4949-9113-07812f138eb6",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Hive",
@@ -389,7 +428,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:70d6122f-b0c4-46cf-bb73-0ec9a3749942",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Harper",
@@ -483,7 +525,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:5366455008",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Shiftsmart",
@@ -512,7 +557,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:d74c19a1-ec0e-4f99-828d-a37c3bab1ef3",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Finix",
@@ -525,7 +573,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:68f25f58-45ad-4683-adbc-8d40c3e0b62c",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Capcom USA",
@@ -538,7 +589,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.jobvite.com/capcomusa/job/opzcafwk",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Sela AI",
@@ -551,7 +605,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:bed4b178-8620-4e10-90b3-ff3898072c81",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Highbeam",
@@ -564,7 +621,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:60b69921-b805-4a8d-a6ef-bba2a3aba05d",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Realign LLC",
@@ -577,7 +637,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.indeed.com/viewjob?jk=964e31a96c59ad15",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Scan.com",
@@ -590,7 +653,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:e3460b05-078d-4050-ab6a-e62a0f8733a7",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Talos",
@@ -603,7 +669,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:6bfa5c2e-dbd1-4b6a-93b5-3592c264ff40",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "iTradeNetwork",
@@ -616,7 +685,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:5381144008",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Tennr",
@@ -629,7 +701,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:5cbe9ece-a98b-4412-b872-8051077e3e7d",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Garage",
@@ -642,7 +717,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:4b6513b6-fb8d-4ab4-86fc-295fa0699085",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Fortuna Health",
@@ -672,7 +750,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:8e38ca33-13df-45e1-90f2-de13847fc4b2",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Kahana & Feld LLP",
@@ -685,7 +766,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.indeed.com/viewjob?jk=96ab249ba45e248f",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "STARK Carpet",
@@ -698,7 +782,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.indeed.com/viewjob?jk=f2bd758de514888e",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "allwhere",
@@ -711,7 +798,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "allwhere.applytojob.com/apply/yrazafjnnp/business-operations-analyst",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "DataCT LLC",
@@ -724,7 +814,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "datact.hireclick.com/jb/operations-analyst/view/232875",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "CastleOak Securities",
@@ -737,7 +830,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:6140885004",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "CRC Group",
@@ -750,7 +846,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "tihinsurance.wd1.myworkdayjobs.com:r0000003103",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "TerraForm Power",
@@ -763,7 +862,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "recruiting.ultipro.com/bro5000/jobboard/8a85f2ba-487c-4082-bfb9-ef9393d416f4/opportunitydetail",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Washington Abstract",
@@ -776,7 +878,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.monster.com/job-openings/product-operations-analyst-new-york-ny--fd2ffb03-6fb7-4787-870f-2f54f696f1ee",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Inmar Intelligence",
@@ -789,7 +894,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "inmar.wd1.myworkdayjobs.com:jy2627293",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Michael Page client",
@@ -802,7 +910,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.michaelpage.com/job-detail/analyst-operations-analytics/ref/jn-072026-7063510",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Digital Asset",
@@ -812,7 +923,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1jiBga8lBkTv_xVfPe8ty7IXQ2aq8UWIl/view?usp=drivesdk",
       "notes": "October 4, 2026 18:21 ET: Misha confirmed all discussed applications submitted except UNICEF. Confirmation date recorded; exact individual submission times not supplied. Applied supersedes prior Found/Ready/Archived status and historical access blockers. Sales exclusions remain in force for future discovery.\n\n2026-10-03 fresh re-entry based on current official Greenhouse requisition 4385554009 and the user’s clarified Business/AI Analyst priority. Employer page describes the first Operations analyst, SQL dashboards, operational/on-chain analysis, AI workflow automation and executive reporting; $100,000-$125,000 base. It asks 2-4 years but explicitly frames the role as early-career and treats internships/early operations, finance, consulting or data-heavy roles as relevant. Application form and sponsorship question are live; role-level sponsorship policy is not stated. Retained as an exceptional functional match, with the experience and sponsorship gaps disclosed. New one-page position-specific PDF rebuilt from the approved master; extracted text and visual QA passed.",
       "firstSeenAt": "2026-09-05",
-      "appliedAt": "04/10/2026",
+      "appliedAt": "2026-10-04",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
@@ -845,7 +956,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1kYG2PQ0mNcy_xWOl2VuJ8qHbYVQ0MeYr/view?usp=drivesdk",
       "notes": "September 22 full run. Combines internal-client needs, automation, service coordination, and AI experience; exceptional early-career applicants considered. Gap: No direct logistics or SaaS account ownership. Customer deployments would be new responsibilities. Score 22+17+17+14+9+9=88; fit only. $100,000–$120,000 (YC listing); San Francisco, in person; 10–20% travel. Sponsorship: Employer YC listing says it will sponsor. Documents rebuilt from approved master; one-page visual/text checks passed. Resume: https://drive.google.com/file/d/1kYG2PQ0mNcy_xWOl2VuJ8qHbYVQ0MeYr/view?usp=drivesdk Cover: https://drive.google.com/file/d/1lfMEYJC5mrpRVXE1A6HKkgz1ALEfEli9/view?usp=drivesdk Final application fields not independently verified; keep Found.",
       "firstSeenAt": "2026-09-06",
-      "appliedAt": "24/09/2026 22:26:02",
+      "appliedAt": "2026-09-24",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
@@ -864,7 +975,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:27eacf07-7293-47aa-a39e-a0577f750378",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Crusoe",
@@ -877,7 +991,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:dd0f789c-e2d0-47bc-bfd1-83bfdf89082e",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Alvarez & Marsal",
@@ -890,7 +1007,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.alvarezandmarsal.com/jobs/16891235-product-analyst-ai-tools",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "First American",
@@ -903,7 +1023,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.firstam.com/job/santa-ana/business-intelligence-specialist-remote/39054/99034161792",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "AtoB",
@@ -916,7 +1039,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:9a00bcca-240b-4fe9-b9ed-c7a293746ad2",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "BlackRock",
@@ -926,7 +1052,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1S1h5kxC5AWep_t9myir_E7sKwVqvRfO9/view?usp=drivesdk",
       "notes": "Reverified 19/09/2026; aged 7d+ but active",
       "firstSeenAt": "2026-09-07",
-      "appliedAt": "19/09/2026",
+      "appliedAt": "2026-09-19",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
@@ -945,7 +1071,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.blackrock.com/job/new-york/analyst-portfolio-analytics-and-reporting-private-credit/45831/98890304432",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "BlackRock",
@@ -958,7 +1087,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.blackrock.com/en/job/new-york/research-associate-investor-data-preqin/45831/99044478576",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "BlackRock",
@@ -1064,7 +1196,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/13S3HUW-qCv3NWayIt0znNGBbLf4oGhcm/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; exact Lever role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-07",
-      "appliedAt": "20/09/2026 13:49:00",
+      "appliedAt": "2026-09-20",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
@@ -1080,7 +1212,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1FdUz-nhqk8LFnd13JhqcBljUzO-RTj05/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; 7d+\nSeptember 22 email: iCapital Product Operations - Associate rejected; other candidates more closely aligned with needs.",
       "firstSeenAt": "2026-09-07",
-      "appliedAt": "20/09/2026 11:51:03",
+      "appliedAt": "2026-09-20",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
@@ -1100,7 +1232,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:0fcd320b-b613-4ecf-b217-f4714cf56a61",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Hive",
@@ -1113,7 +1248,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:44ecff3f-02e2-4408-9f47-dfbafb280344",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Cardless",
@@ -1126,7 +1264,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:91940d95-ee52-42c9-8844-46d6c10567f3",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Palantir Technologies",
@@ -1139,7 +1280,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lever.co:5174e95b-2e0a-46f8-8db7-e2c837a0ac94",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Cardless",
@@ -1152,7 +1296,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:53b586e0-c37d-4b8a-91e9-7c98697d9c2b",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Datadog",
@@ -1165,7 +1312,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.datadoghq.com/detail/8049521",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Datadog",
@@ -1178,7 +1328,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.datadoghq.com/detail/7843331",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Alvarez & Marsal",
@@ -1191,7 +1344,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.alvarezandmarsal.com/jobs/17160946-associate-global-transaction-analytics",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "iHeartMedia",
@@ -1204,7 +1360,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.iheartmedia.com/careers",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "adMarketplace",
@@ -1217,7 +1376,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "careers.admarketplace.com/jobs/698969-data-analyst-finance",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Lincoln Financial",
@@ -1230,7 +1392,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lincolnfinancial.com/job/charlotte-analyst%2c-investment-data-analytics-nc-28201/1409076700",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Canoe Intelligence",
@@ -1259,7 +1424,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.lincolnfinancial.com/job/charlotte-associate-investment-analyst-nc-28201/1414165900",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Fastly",
@@ -1272,7 +1440,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.fastly.com/about/careers",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "SpaceXAI",
@@ -1370,7 +1541,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:4d3197eb-49dc-4827-a1e6-26cf0ff24b55",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Qualitate",
@@ -1383,7 +1557,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:b5b22dba-5864-4eb2-a412-7420c949de35",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Judi Health",
@@ -1396,7 +1573,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:5143266008",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Northmarq",
@@ -1409,7 +1589,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:5239502008",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Ramp",
@@ -1422,7 +1605,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:dba53e68-4c96-449d-af4d-27dc475b814c",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "DoorDash",
@@ -1677,7 +1863,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1VMMW9L2bvDbdbQxRwb3zk07Pjl4g0utJ/view?usp=drivesdk",
       "notes": "October 5, 2026 12:50 ET: Lambda explicitly declined the Internal Tools & Data Product Analyst application. Status changed from Applied to Closed. This is role-specific; no response requested and no sponsorship-policy update.\n\nReverified 20/09/2026; exact Ashby role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-15",
-      "appliedAt": "20/09/2026 13:49:00",
+      "appliedAt": "20/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
@@ -1747,7 +1933,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:671a061d-21e4-45de-9ea0-c745440d0c65",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "CAIS",
@@ -1809,7 +1998,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:050d57b6-e7c6-4f4e-8350-f67fa3af8da5",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Basis Research Institute",
@@ -1822,7 +2014,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:05559513-288d-4dfe-bbbf-f0035a7d3d2a",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Madhive",
@@ -1835,7 +2030,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:319ce3d7-c2b7-4963-a31b-5d8d73293745",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Tailwind",
@@ -1848,7 +2046,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:6752496a-70b7-4679-be3b-4b8ba6d14cb3",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Farsight AI",
@@ -1861,7 +2062,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:103845f1-f775-4fe0-a7a2-9185e72e749e",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Fernstone",
@@ -1874,7 +2078,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:04aec27e-888e-47e5-b23f-a1b3da541b02",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Jerry.ai",
@@ -1884,7 +2091,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1XCs5sCmBGu5It-zf9zuG22adoUTchWNE/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; exact Ashby role + application path live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-18",
-      "appliedAt": "20/09/2026 13:49:00",
+      "appliedAt": "20/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
@@ -1903,7 +2110,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.axial.net/company/careers",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "iCapital",
@@ -1916,7 +2126,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "greenhouse:8660767002",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Valon",
@@ -1929,7 +2142,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:457cbb87-6c9b-4a21-96f8-f99701411754",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Distributed Spectrum",
@@ -1942,7 +2158,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:dba82f49-0db4-4d80-8223-2c81bd345761",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Roku",
@@ -1955,7 +2174,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.weareroku.com/jobs/systems-operations-associate-new-york-united-states",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Buro Happold",
@@ -1968,7 +2190,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.linkedin.com/jobs/view/4440074324",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Meridial",
@@ -1981,7 +2206,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "mail.google.com/mail/u",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Terac",
@@ -1994,7 +2222,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "terac.com/opportunities/tkd76ruiqxw3wy-x",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "AlphaSights",
@@ -2252,7 +2483,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:e977aad8-77fa-4d36-872f-a5f022e76c22",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Listen Labs",
@@ -2262,7 +2496,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1HFON-e-hiD1XpEDe-5Kn7gwsNHgLmz9K/view?usp=drivesdk",
       "notes": "Reverified 20/09/2026; employer careers + exact Ashby role live\nOctober 7 reconciliation: confirmed September 20 submission restored from Application History. Date only recorded; 13:49 ET there is user-confirmation time, not a verified submit-click time.",
       "firstSeenAt": "2026-09-20",
-      "appliedAt": "20/09/2026 13:49:00",
+      "appliedAt": "20/09/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Active",
@@ -2410,7 +2644,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:e758d675-82f0-4a16-ae0b-251b7a0b118f",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "ClaimSorted",
@@ -2423,7 +2660,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:e25262a6-4797-4ae3-b702-fdbeeb2327cb",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Enigma",
@@ -2502,7 +2742,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:d477f001-417f-455d-914b-254bc411dff1",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "BlackRock",
@@ -2515,7 +2758,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "blackrock.wd1.myworkdayjobs.com:r266544",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Pylon",
@@ -2576,7 +2822,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:e50e001c-870b-4bc9-b519-9333e762e64b",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Column",
@@ -2589,7 +2838,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "jobs.ashbyhq.com:c349d594-33a2-49a2-a168-afa8d8226572",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Squad Health",
@@ -2618,7 +2870,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.ycombinator.com/companies/deepaware-ai-robotics-center-of-silicon-valley/jobs/oz49id3-business-development-associate",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Medplum",
@@ -2663,7 +2918,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "landing.novig.com/careers/growth-operations-coordinator-268d43",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "PA Consulting",
@@ -2770,7 +3028,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1gSVR638_yvqKZRn_o9s87ZlBOyysBQdC/view?usp=drivesdk",
       "notes": "October 1, 2026 12:46 ET: Application submitted. Y Combinator confirmation email 1a0f85c3235c80c9 confirms Agave received the Customer Solutions Engineer application.\n\nOctober 1, 2026 full run. New. Fit 85/100; evidence fit, not interview probability. Exact YC employer posting is live, lists $130,000-$180,000 base, 1+ year, San Francisco with remote optional, and explicitly states visa sponsorship is available. UN client-needs research, Copilot Studio workflow work, project coordination and student-facing services align with implementations, documentation and customer communication. Material gaps: no professional SaaS implementation portfolio, construction experience, sales demos, Postman/API work or ownership of 15+ concurrent customer launches. Employer says construction and technical skills are not required, but customer-facing experience is required and startup/top-consulting experience is preferred. YC sign-in gates the final form, so status remains Found. One-page position-specific PDF passed extracted-text and rendered visual QA and was durably saved. Resume: https://drive.google.com/file/d/1gSVR638_yvqKZRn_o9s87ZlBOyysBQdC/view?usp=drivesdk Outreach: Ben Vandenbosch, current Founding Technical Product Manager at Agave; draft only, no email verified and nothing sent.",
       "firstSeenAt": "2026-10-01",
-      "appliedAt": "01/10/2026",
+      "appliedAt": "2026-10-01",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Rejected",
@@ -2790,7 +3048,10 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": ""
+      "finalOutcome": "Active",
+      "canonicalKey": "www.joindaisy.com/careers/business-operations-associate-6ff6d",
+      "rejectionAt": "",
+      "offerAt": ""
     },
     {
       "company": "Google",
@@ -3091,7 +3352,7 @@ export const jobSearchData = {
       "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "",
+      "finalOutcome": "Active",
       "canonicalKey": "invesco.wd1.myworkdayjobs.com:r",
       "rejectionAt": "",
       "offerAt": ""
@@ -3395,7 +3656,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1gaJ0m1-7Fr-wQgBAd9mqYRRPPfnakkq6/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed submission of all six October13 positions, including David AI and replacement Altis. AppliedAt records the confirmation date only; exact submission times were not supplied. Prepared materials retained as submitted snapshots. The standing exclusion of lead roles remains in force for future searches.\nRUN-20261013-1745Z manual specialist run. Five newly discovered unsubmitted roles, three YC companies (Prelim/Trayd/David AI). Pre-authoring duplicate/eligibility preflight PASS; read 2026-10-13T17:59:47.412Z UTC / America/New_York; snapshot SHA256604afb60571649820f6f2de0b7f13fa11c7e890297f68b976a392b66ecd600c5. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: PASS — Primary live Ashby posting: configure bank forms, business rules and integrations; scripting and requirements gathering. UN Copilot Studio workflow design, Python/SQL and client scope research directly transfer. | location: PASS — US remote (continental US) — approved geography. | experience: PASS — Primary posting states no fixed years minimum; Python scripting, technical problem solving, communication and parallel projects supported by MSBA, UN, Lewis and AI evaluation. | mandatory_requirements: PASS — Bank-domain experience is preferred, not mandatory. Verified scripting, requirements research and no-code workflow experience; no required unverified platform. | base_salary: PASS — $130,000–$140,000 base; bonus/equity excluded. | authorization: PASS — Candidate reports current CPT through Dec2026; future OPT is planned, not approved. Current employer posting has no explicit current/future sponsorship prohibition. Eligibility/required employer CPT acceptance must be confirmed; do not assert unrestricted work authorization. | start_timing: PASS — No fixed incompatible cohort start or completed master's requirement in current posting. Immediate employment is conditional on CPT approval and study schedule; graduationDec2026. | application_path: PASS — Current employer application route HTTP200; employer board isListed/current careers link confirms exact role. Read-only validation; no form submitted. Application checked 2026-10-13T18:01:00.565Z. Sponsorship UNKNOWN; strong exception: Explicit strong-fit exception: Primary live Ashby posting: configure bank forms, business rules and integrations; scripting and requirements gathering. UN Copilot Studio workflow design, Python/SQL and client scope research directly transfer. No sponsorship inferred from employer general policy.  Fit score 90 (role/skills/experience/seniority/education/achievement 24/18/17/12/10/9); score is fit, not success probability. PASS: original one-page geometry, all five pages visually reviewed; no clipping/overlap, 10pt text, 23 bullets, exact education/dates/contact and 3 hyperlinks preserved. PDF SHA256452f4cf0ce396bfaf00331d9551be3db09ddd0aec9b1430c9070ef638d350c29. Library libfile_333f4b5d2c3881919e0e35cf79476477; Drive 1gaJ0m1-7Fr-wQgBAd9mqYRRPPfnakkq6; resume https://drive.google.com/file/d/1gaJ0m1-7Fr-wQgBAd9mqYRRPPfnakkq6/view?usp=drivesdk. First Seen At reflects this run's verified read; exact earlier discovery minute unavailable. Posted At uses employer timestamp only; Prelim/David old publication dates retained despite current isListed=true. No applications, outreach or schedules performed. Sensitive authorization/sponsorship/compensation/start answers remain for Misha. UN search: current UNICEF596234 requires5years/gender-policy expertise; UNDP RBAS internship is not qualifying>=70kbase full-time analyst; P3/P5 postings expired/too senior and OICTG6 requires experience beyond verified record. Canonical row IDs Tracker86, History150.",
       "firstSeenAt": "2026-10-13",
-      "appliedAt": "13/10/2026",
+      "appliedAt": "2026-10-13",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Pending",
@@ -3411,7 +3672,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/1ueCHFT64AZ-fJH8K4pV41WJg83BCmB4D/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed submission of all six October13 positions, including David AI and replacement Altis. AppliedAt records the confirmation date only; exact submission times were not supplied. Prepared materials retained as submitted snapshots. The standing exclusion of lead roles remains in force for future searches.\nRUN-20261013-1745Z manual specialist run. Five newly discovered unsubmitted roles, three YC companies (Prelim/Trayd/David AI). Pre-authoring duplicate/eligibility preflight PASS; read 2026-10-13T17:59:47.412Z UTC / America/New_York; snapshot SHA256604afb60571649820f6f2de0b7f13fa11c7e890297f68b976a392b66ecd600c5. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: PASS — Employer careers links this live Gem role. AI response review, factual/tone validation, triage and knowledge workflow improvement map directly to DataAnnotation AI evaluation and UN assistant. | location: PASS — New York, NY — onsite 5 days — approved geography. | experience: PASS — Current JD explicitly accepts recent graduates / 0–2 years. AI code fixes are learned alongside engineering; no required prior construction/payroll domain. | mandatory_requirements: PASS — Verified AI evaluation, response rewrites, user-facing services and workflow research. NYC office commitment is compatible with approved location. | base_salary: PASS — $70,000–$85,000 base; bonus/equity excluded. | authorization: PASS — Candidate reports current CPT through Dec2026; future OPT is planned, not approved. Current employer posting has no explicit current/future sponsorship prohibition. Eligibility/required employer CPT acceptance must be confirmed; do not assert unrestricted work authorization. | start_timing: PASS — No fixed incompatible cohort start or completed master's requirement in current posting. Immediate employment is conditional on CPT approval and study schedule; graduationDec2026. | application_path: PASS — Current employer application route HTTP200; employer board isListed/current careers link confirms exact role. Read-only validation; no form submitted. Application checked 2026-10-13T18:01:00.565Z. Sponsorship UNKNOWN; strong exception: Explicit strong-fit exception: Employer careers links this live Gem role. AI response review, factual/tone validation, triage and knowledge workflow improvement map directly to DataAnnotation AI evaluation and UN assistant. No sponsorship inferred from employer general policy. Prior Trayd Implementations Analyst (YC 2DvQ0jQ) is a different title and requisition; this is Gem am9icG9zdDp57EARHTh0W0RUhdaA19Z2, linked as AI Support Specialist on employer careers. Fit score 93 (role/skills/experience/seniority/education/achievement 24/19/17/15/9/9); score is fit, not success probability. PASS: original one-page geometry, all five pages visually reviewed; no clipping/overlap, 10pt text, 23 bullets, exact education/dates/contact and 3 hyperlinks preserved. PDF SHA2563a6f69cb76410e6443e0f18945188e683351351a415caa2de372573841acbe35. Library libfile_650fd6cb75148191bea07c686ad6ba1b; Drive 1ueCHFT64AZ-fJH8K4pV41WJg83BCmB4D; resume https://drive.google.com/file/d/1ueCHFT64AZ-fJH8K4pV41WJg83BCmB4D/view?usp=drivesdk. First Seen At reflects this run's verified read; exact earlier discovery minute unavailable. Posted At uses employer timestamp only; Prelim/David old publication dates retained despite current isListed=true. No applications, outreach or schedules performed. Sensitive authorization/sponsorship/compensation/start answers remain for Misha. UN search: current UNICEF596234 requires5years/gender-policy expertise; UNDP RBAS internship is not qualifying>=70kbase full-time analyst; P3/P5 postings expired/too senior and OICTG6 requires experience beyond verified record. Canonical row IDs Tracker87, History151.",
       "firstSeenAt": "2026-10-13",
-      "appliedAt": "13/10/2026",
+      "appliedAt": "2026-10-13",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Pending",
@@ -3427,7 +3688,7 @@ export const jobSearchData = {
       "resumeUrl": "https://drive.google.com/file/d/18x5J52lHMYhu3XR5Gp0woiiIgvFJLaGB/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed submission of all six October13 positions, including David AI and replacement Altis. AppliedAt records the confirmation date only; exact submission times were not supplied. Prepared materials retained as submitted snapshots. The standing exclusion of lead roles remains in force for future searches.\nOctober13,2026:Misha excluded lead positions permanently. Archived this unsubmitted role and replaced its slot with Altis Analyst,VentureIntelligenceProgram. Not an employer rejection.\nRUN-20261013-1745Z manual specialist run. Five newly discovered unsubmitted roles, three YC companies (Prelim/Trayd/David AI). Pre-authoring duplicate/eligibility preflight PASS; read 2026-10-13T17:59:47.412Z UTC / America/New_York; snapshot SHA256604afb60571649820f6f2de0b7f13fa11c7e890297f68b976a392b66ecd600c5. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: PASS — Current primary Ashby job owns data workflow quality and operational execution. Camp Vega 20,000-point validation, AI response evaluation and UN workflow prototyping transfer; production audio pipeline ownership remains a stretch. | location: PASS — New York, NY / San Francisco, CA — onsite — approved geography. | experience: PASS — Current Ashby posting says 1–6 years, allowing operations or similar background, unlike older YC body (2–6). More than one year across Lewis operations, UN and Camp Vega; no overlapping durations counted. | mandatory_requirements: PASS — Current employer description allows operations/strategic projects or similar, rather than exclusively CS/consulting. SQL/Python verified. Large-scale audio data and extreme ownership are desirable gaps, not stated mandatory prior industry tenure. | base_salary: PASS — $125,000–$175,000 base; bonus/equity excluded. | authorization: PASS — Candidate reports current CPT through Dec2026; future OPT is planned, not approved. Current employer posting has no explicit current/future sponsorship prohibition. Eligibility/required employer CPT acceptance must be confirmed; do not assert unrestricted work authorization. | start_timing: PASS — No fixed incompatible cohort start or completed master's requirement in current posting. Immediate employment is conditional on CPT approval and study schedule; graduationDec2026. | application_path: PASS — Current employer application route HTTP200; employer board isListed/current careers link confirms exact role. Read-only validation; no form submitted. Application checked 2026-10-13T18:01:00.565Z. Sponsorship advertised Will sponsor on YC same-title listing; current Ashby requirements supersede older YC requirements, employer confirmation required. Current employer Ashby UUID d064a7ca... is live/listed. Older YC listing cKdFdzD is same title but stale requirements; use current employer requirements and compensation, and YC's advertised willingness to sponsor subject to confirmation. Fit score 78 (role/skills/experience/seniority/education/achievement 22/16/16/6/9/9); score is fit, not success probability. PASS: original one-page geometry, all five pages visually reviewed; no clipping/overlap, 10pt text, 23 bullets, exact education/dates/contact and 3 hyperlinks preserved. PDF SHA25621a6eaff2d56561fc897950e82e4ffc443fecc67d24284a9f8a539cb6d226d43. Library libfile_9409426f94488191b108fe021db882bc; Drive 18x5J52lHMYhu3XR5Gp0woiiIgvFJLaGB; resume https://drive.google.com/file/d/18x5J52lHMYhu3XR5Gp0woiiIgvFJLaGB/view?usp=drivesdk. First Seen At reflects this run's verified read; exact earlier discovery minute unavailable. Posted At uses employer timestamp only; Prelim/David old publication dates retained despite current isListed=true. No applications, outreach or schedules performed. Sensitive authorization/sponsorship/compensation/start answers remain for Misha. UN search: current UNICEF596234 requires5years/gender-policy expertise; UNDP RBAS internship is not qualifying>=70kbase full-time analyst; P3/P5 postings expired/too senior and OICTG6 requires experience beyond verified record. Canonical row IDs Tracker88, History152.",
       "firstSeenAt": "2026-10-13",
-      "appliedAt": "13/10/2026",
+      "appliedAt": "2026-10-13",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
       "finalOutcome": "Pending",
@@ -4453,7 +4714,7 @@ export const jobSearchData = {
       "position": "Sales Development Representative",
       "stage": "Completed — Recruiter screen",
       "date": "Date not confirmed",
-      "interviewer": null
+      "interviewer": ""
     },
     {
       "id": "INT-OUT2WIN-20261007",
@@ -4477,7 +4738,7 @@ export const jobSearchData = {
       "position": "Research Compliance Associate",
       "stage": "Completed AI assessment",
       "date": "25/09/2026",
-      "interviewer": null
+      "interviewer": ""
     },
     {
       "id": "ASSESS-LSEG-20261013",
@@ -4485,7 +4746,7 @@ export const jobSearchData = {
       "position": "Business Analyst Graduate Programme",
       "stage": "Completed — Online assessment",
       "date": "13/10/2026",
-      "interviewer": null
+      "interviewer": ""
     },
     {
       "id": "INT-ONEMAIN-1A182ED447C69FB7",
@@ -4493,7 +4754,7 @@ export const jobSearchData = {
       "position": "Analytics Analyst",
       "stage": "Scheduling — 2nd round virtual case study",
       "date": "Date pending; availability submitted Oct 28",
-      "interviewer": null
+      "interviewer": ""
     }
   ],
   "outreachState": [
@@ -5457,10 +5718,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-29T12:49:32.562Z",
-    "sha256": "c845eba91c2c49eed25eb41c5f81c57f31bc89cf09d336224c0ab345c5474be9",
-    "historyRecords": 204,
-    "trackerRecords": 284,
-    "uniqueHistoryRecords": 201
+    "readAt": "2026-10-29T17:48:39.854Z",
+    "sha256": "0078ff43ffe377f32446c77a9350b63dceb191e72f18f2adcb85dfda83c424a4",
+    "historyRecords": 288,
+    "trackerRecords": 288,
+    "uniqueHistoryRecords": 288
   }
 };

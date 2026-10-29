@@ -16,9 +16,9 @@ export default function DashboardClient({ jobSearchData }) {
         : "Lifetime submitted applications",
     },
     {
-      label: "Interviews",
-      value: lifetime.interviewsMinimum ? `${lifetime.interviews}+` : (lifetime.interviews ?? 0),
-      description: `Completed interviews and recruiter calls · ${lifetime.scheduledInterviews ?? 0} upcoming`,
+      label: "Progress events",
+      value: (lifetime.interviews ?? 0) + (lifetime.aiAssessments ?? 0) + (lifetime.onlineAssessments ?? 0),
+      description: `${lifetime.interviews ?? 0} recorded interviews/calls · ${(lifetime.aiAssessments ?? 0) + (lifetime.onlineAssessments ?? 0)} assessments`,
     },
     {
       label: "Offers",
@@ -110,3 +110,4 @@ export default function DashboardClient({ jobSearchData }) {
     </main>
   );
 }
+

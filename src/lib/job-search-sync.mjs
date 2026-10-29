@@ -1,3 +1,4 @@
+import { normalizeSnapshot } from './job-search-source.mjs';
 // Pure, deterministic reconciliation. No external I/O, polling, or scheduling.
 // The Google Sheet is canonical; the dashboard is a read-only published snapshot.
 import { jobKey, calculateMetrics, validatePipeline } from './job-search-model.mjs';
@@ -42,6 +43,7 @@ function publishedState(data, storedMetrics) {
 }
 
 export function reconcileJobSearch(current, snapshot) {
+  snapshot = normalizeSnapshot(snapshot);
   if (!current || !Array.isArray(current.jobs)) throw new Error('Missing current dashboard jobs');
   const histories = sheetRows(snapshot.history, 'Application History');
   const trackers = sheetRows(snapshot.tracker, 'Job Tracker');
@@ -191,3 +193,4 @@ export function reconcileJobSearch(current, snapshot) {
     ],
   };
 }
+
