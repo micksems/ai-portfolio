@@ -4,7 +4,7 @@ export const jobSearchData = {
     "applications": 125,
     "interviews": 8,
     "offers": 0,
-    "rejections": 40,
+    "rejections": 41,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -4373,17 +4373,17 @@ export const jobSearchData = {
       "company": "Emendata",
       "position": "Data Analyst",
       "url": "https://job-boards.greenhouse.io/emendata/jobs/4164352003",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1R9ES-oMGntVSy9M0hLWUOkK7rXYTfwH3/view?usp=drivesdk",
       "notes": "October 23, 2026: Misha confirmed submission of the current five roles plus Amex New York, explicitly including Emendata. Submission date recorded; individual times unknown. This supersedes earlier unsubmitted/archive status. Submitted resume snapshot retained.\n\nSan Francisco onsite; new graduates explicitly welcome. Data cleaning/linking, statistical research and reporting; basic/intermediate Python/SQL/R. Evergreen requisition first published2020, updatedSep28,2026; current form/board verifiedOct22, not represented as fresh or proof of unfilled seat. Base pay and start unpublished; confirm base>=70k. No current/future visa sponsorship; SF85 background investigation and undergraduate transcript required. User expectedDec2026 graduation accurate; sensitive eligibility questions need review. Resume/masterfont/onepage/23bullets/3links checked.",
       "firstSeenAt": "2026-10-22",
       "appliedAt": "2026-10-23",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active",
+      "finalOutcome": "Rejected",
       "applicationCheckedAt": "2026-10-22",
       "canonicalKey": "greenhouse:4164352003",
-      "rejectionAt": "",
+      "rejectionAt": "2026-10-30",
       "offerAt": ""
     },
     {
@@ -5034,7 +5034,7 @@ export const jobSearchData = {
       "position": "Sales Development Representative",
       "stage": "Completed — Recruiter screen",
       "date": "Date not confirmed",
-      "interviewer": null
+      "interviewer": ""
     },
     {
       "id": "INT-OUT2WIN-20261007",
@@ -5058,7 +5058,7 @@ export const jobSearchData = {
       "position": "Research Compliance Associate",
       "stage": "Completed AI assessment",
       "date": "25/09/2026",
-      "interviewer": null
+      "interviewer": ""
     },
     {
       "id": "ASSESS-LSEG-20261013",
@@ -5066,7 +5066,7 @@ export const jobSearchData = {
       "position": "Business Analyst Graduate Programme",
       "stage": "Completed — Online assessment",
       "date": "13/10/2026",
-      "interviewer": null
+      "interviewer": ""
     },
     {
       "id": "INT-ONEMAIN-1A182ED447C69FB7",
@@ -5074,7 +5074,7 @@ export const jobSearchData = {
       "position": "Analytics Analyst",
       "stage": "Scheduling — 2nd round virtual case study",
       "date": "Date pending; availability submitted Oct 28",
-      "interviewer": null
+      "interviewer": ""
     },
     {
       "id": "INT-COLUMBIA-20261028-1A18318E05628338",
@@ -5090,7 +5090,7 @@ export const jobSearchData = {
       "position": "Analytics Analyst",
       "stage": "Completed — Online assessment",
       "date": "October 2026; exact completion date not confirmed",
-      "interviewer": null
+      "interviewer": ""
     },
     {
       "id": "ASSESS-VEEVA-1A18AFDA3189D638",
@@ -5098,7 +5098,7 @@ export const jobSearchData = {
       "position": "Associate Consultant - Entry-Level Technology Consulting (Life Sciences)",
       "stage": "Invited — Rembrandt personality assessment",
       "date": "Invited 2026-10-30; complete within 3 business days",
-      "interviewer": null
+      "interviewer": ""
     }
   ],
   "outreachState": [
@@ -6062,8 +6062,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-30T15:37:51.794Z",
-    "sha256": "a5d994c2ebc87b68b62abe56a4042fdf49bdfb479f8c0c4190a2e4f1df45044d",
+    "readAt": "2026-10-30T17:41:11.131Z",
+    "sha256": "422ef525a4c7bf59e5c6393d0cc02be9825204430e9bfdf1333fcffe02f39575",
     "historyRecords": 308,
     "trackerRecords": 308,
     "uniqueHistoryRecords": 308
