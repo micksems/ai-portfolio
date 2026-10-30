@@ -4931,6 +4931,14 @@ export const jobSearchData = {
       "stage": "Completed — Online assessment",
       "date": "October 2026; exact completion date not confirmed",
       "interviewer": ""
+    },
+    {
+      "id": "ASSESS-VEEVA-1A18AFDA3189D638",
+      "company": "Veeva Systems",
+      "position": "Associate Consultant - Entry-Level Technology Consulting (Life Sciences)",
+      "stage": "Invited — Rembrandt personality assessment",
+      "date": "Invited 2026-10-30; complete within 3 business days",
+      "interviewer": ""
     }
   ],
   "outreachState": [
@@ -5894,7 +5902,7 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-30T05:07:19.322Z",
+    "readAt": "2026-10-30T12:56:25.809Z",
     "sha256": "70fb977da179a702b17b07c3630332722b9fc122775900f131fda9d933e86488",
     "historyRecords": 298,
     "trackerRecords": 298,
