@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "check:pipeline": "node scripts/check-job-search.mjs",
-    "prebuild": "npm run check:pipeline && node --test tests/job-search.test.mjs tests/job-search-sync.test.mjs tests/resume-fit.test.mjs",
+    "prebuild": "npm run check:pipeline && npm run test:all",
+    "jobs": "node scripts/job-search-run.mjs",
     "test:sync": "node --test tests/job-search-sync.test.mjs",
     "test:all": "node --test tests/*.test.mjs"
   },

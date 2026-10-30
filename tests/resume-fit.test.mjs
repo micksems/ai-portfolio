@@ -68,6 +68,17 @@ test('old previously passing packs are held for migration',()=>{
  const p=pack();delete p.schemaVersion;assert.equal(auditResumeFit(p).decision,'HOLD');
 });
 
+test('an arbitrary string cannot stand in for the JD capture date',()=>{
+ const p=pack();p.jobDescriptionSnapshot.capturedAt='reviewed';assert.equal(auditResumeFit(p).decision,'HOLD');
+});
+
+test('a genuine collaboration task is applied work, not a course label',()=>{
+ const p=pack(),proof='Collaborated with a four-person team to research internal client needs';
+ Object.assign(p.requirements[0],{employerQuote:proof,resumeProof:proof,sourceText:proof,sourceQuote:proof});
+ p.jobDescriptionSnapshot.text+=' '+proof;p.resume.text+=' '+proof;
+ assert.equal(auditResumeFit(p).decision,'READY_FOR_HUMAN_REVIEW');
+});
+
 
 test('verified applied stakeholder research is recognized without weakening course-title holds',()=>{
  const p=pack(); const proof='Researched stakeholder needs with a four-person team';

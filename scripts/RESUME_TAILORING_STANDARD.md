@@ -1,4 +1,10 @@
 # Evidence-first resume tailoring standard (v2)
+
+Execution update, October 29: the staged runner in `job-search-run.mjs` is mandatory for new packages.
+It invokes the final checker before upload/Ready rather than relying on an operator to remember it.
+Every candidateEvidence record includes `localPath` and `sha256` for an actual approved/verified source
+file. The checker independently reads that file and verifies critical sourceText excerpts against it.
+PDF path/hash/text and actual PNG review remain required. An existing submitted resume is immutable.
 Effective 2026-10-26. Applies to every manual or automated job recommendation, tailored resume, or "Ready to Submit" package. The user requested this corrective change after the Mecka Strategic Project Lead rejection.
 
 ## Why this exists
@@ -12,14 +18,14 @@ A match score measures *overlap*, not qualification. Mecka Strategic Project Lea
 5. **Tailor for duties, not nouns.** Start with the employer's top 3–5 tasks, then select the most relevant *verified* achievements. Put the strongest direct proof near the top of Experience; prioritize actions, scale, outcome, stakeholders and tools where supported. Reorder/rephrase faithfully, without inflating titles, independent ownership, team size, revenue, percentages, shipped status, tenure, authorization, or seniority. If top responsibilities cannot be supported, recommend a different role rather than manufacturing bullets.
 6. **Adversarial review.** Ask: "If I were a skeptical hiring manager, which required duties remain unproven by this exact resume?" Test end-to-end deliverables versus assisting on a stage; consumer/customer ownership versus internal collaboration; maintaining records versus owning an SLA; projects/coursework versus production outcomes; and tools used versus tools merely familiar. State the gaps, not just strengths.
 7. **Mechanical and evidence QA.** Use approved master, original facts, chronology, font/layout and links; render/inspect the PDF, check selectable/extracted text, line wrapping, date/location alignment, contact links, ATS-readable headings, one-page target (unless user approves otherwise), and final claim-by-claim fact check. Preserve a source-master version/hash and final PDF URL. Optional keywords never replace proof. Do not produce cover letters unless specifically requested.
-8. **Release gate.** Assemble a reviewed evidence pack and run `node scripts/check-resume-fit.mjs /path/to/evidence-pack.json`. The tool returns HOLD for unknown/missing critical evidence, unsupported seniority, unsupported claims, verified legal ineligibility, missing dated JD, or incomplete PDF QA. A no-sponsorship employer policy alone is a warning, not a hard filter. Passing the tool only means READY_FOR_HUMAN_REVIEW; it is not permission to submit, nor proof the employer will interview or sponsor. If the checker is unavailable, manually perform and document the same gate. Never infer QA completed.
+8. **Release gate.** Assemble a reviewed evidence pack and run `node scripts/check-resume-fit.mjs /path/to/evidence-pack.json`. The tool returns HOLD for unknown/missing critical evidence, unsupported seniority, unsupported claims, verified legal ineligibility, missing dated JD, or incomplete PDF QA. A no-sponsorship employer policy alone is a warning, not a hard filter. Passing the tool only means READY_FOR_HUMAN_REVIEW; it is not permission to submit, nor proof the employer will interview or sponsor. If the checker is unavailable, hold the package and repair the environment. Do not manually bypass the release gate or infer QA completed.
 9. **Audit and feedback.** Save the scorecard, unmet requirements, resume version, posting snapshot, authorization uncertainty and eventual outcome by exact requisition. Do not claim any individual rejection reveals why unless the employer explicitly states it. Periodically review rejected, interviewed and assessed applications to calibrate thresholds. Preserve already-submitted materials as historical snapshots.
 
 ## Minimum evidence pack for the checker
 JSON containing:
 - `role: {company, title, requisitionOrJobUrl}`
 - `jobDescriptionSnapshot: {url, capturedAt, text}` (full text, minimum 400 characters)
-- `candidateEvidence: [{id, description, source, verified:true}]`
+- `candidateEvidence: [{id, description, source, verified:true, localPath, sha256}]`
 - `requirements: [{id, description, critical:true|false, status:"met"|"partial"|"missing"|"unknown", evidenceIds:["e1"], resumeProof:"exact excerpt from submitted resume"}]`
 - `resume: {masterSource, text}` (extract from actual final PDF, not intended draft)
 - `seniorityAssessment: {status:"supported"|"borderline"|"gap"|"unknown", postingRequirement, actualEvidence}`
