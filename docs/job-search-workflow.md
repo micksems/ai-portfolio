@@ -18,6 +18,18 @@ research and writing judgement, views the actual final PNGs, and calls the conne
 GitHub/Vercel tools. A waiting stage is not completion. The runner does not invent verified evidence,
 write application forms, submit applications, send messages, or schedule searches.
 
+## Completion and timing
+
+There is no overall run deadline, elapsed-time budget, search-query budget, or speed target.
+Timing measurements are diagnostic only. Continue discovery across additional employers and sources
+until the requested five new qualified roles, five verified role-specific PDFs, tracker updates and
+website synchronization are complete. Rejected leads, exhausted initial queries, and an individual
+source failure are not run-level blockers. Per-request and per-command timeouts only prevent hangs;
+retry or switch sources and resume the same run. Do not lower requestedCount to deliver a partial run
+without the user's instruction. Preserve duplicate, eligibility, factual and PDF checks. A shortfall
+requires a concrete external blocker that actually prevents further progress, identified precisely;
+it must never be attributed to an inferred time limit or a limited first batch of search results.
+
 ## Inputs
 
 Create `inputs.json` in the private run directory. Paths relative to that directory are supported for
