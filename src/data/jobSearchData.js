@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "October 29, 2026",
+  "updatedAt": "October 30, 2026",
   "metrics": {
     "applications": 125,
     "interviews": 8,
@@ -13,7 +13,7 @@ export const jobSearchData = {
     "onlineAssessments": 2,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-10-29",
+    "auditedAt": "2026-10-30",
     "lifetimeApplications": 129
   },
   "jobs": [
@@ -4753,6 +4753,86 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "greenhouse:8258623",
+      "company": "FanDuel",
+      "position": "Analyst — Media, Casino Analytics",
+      "url": "https://www.fanduel.careers/jobs/fanduel/analyst/?gh_jid=8258623",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1701-VJgaBzVGF304yivSQNydnLdG_3oo/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "careers.canoeintelligence.com/jobs/724971-support-analyst",
+      "company": "Canoe Intelligence",
+      "position": "Support Analyst",
+      "url": "https://careers.canoeintelligence.com/jobs/724971-support-analyst",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1MfJDngOV7GOZqizby5FdHHKv-7MSxbeG/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "greenhouse:6222434004",
+      "company": "HumanSignal",
+      "position": "QA Specialist",
+      "url": "https://job-boards.greenhouse.io/humansignal/jobs/6222434004",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1DtokYDu5LirTWyNiEcwS-xIggdWAgIEQ/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "greenhouse:5443941008",
+      "company": "Mochi Health",
+      "position": "Operations Associate (Pharmacy)",
+      "url": "https://job-boards.greenhouse.io/mochihealth/jobs/5443941008",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1BpBCTKqGz4fd-rAbUAQMuMWbYqxtxxG_/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "analystcareers-analysisgroup.icims.com/jobs/3004/analyst---generalist-%282027-start-date%29/job",
+      "company": "Analysis Group",
+      "position": "Analyst — Generalist (2027 Start Date)",
+      "url": "https://analystcareers-analysisgroup.icims.com/jobs/3004/analyst---generalist-%282027-start-date%29/job",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1CzpsQVRwIdTxKot6ilH4LhJUK75WFvaT/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -5814,10 +5894,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-30T03:21:56.731Z",
-    "sha256": "a567d98effc10474de651f74dbb918fd72e3f9c37885138ec74a02b378fc7869",
-    "historyRecords": 293,
-    "trackerRecords": 293,
-    "uniqueHistoryRecords": 293
+    "readAt": "2026-10-30T05:07:19.322Z",
+    "sha256": "70fb977da179a702b17b07c3630332722b9fc122775900f131fda9d933e86488",
+    "historyRecords": 298,
+    "trackerRecords": 298,
+    "uniqueHistoryRecords": 298
   }
 };
