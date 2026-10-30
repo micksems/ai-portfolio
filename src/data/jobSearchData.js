@@ -4833,6 +4833,166 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "careers.bankofamerica.com/en-us/job-detail/26040183/risk-process-analyst-multiple-locations",
+      "company": "Bank of America",
+      "position": "Risk Process Analyst",
+      "url": "https://careers.bankofamerica.com/en-us/job-detail/26040183/risk-process-analyst-multiple-locations",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1VYhaaAX0zh6Hxeuxm6LJJ-g1XXS_m22U/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "vanguard.wd5.myworkdayjobs.com:180091",
+      "company": "Vanguard",
+      "position": "Technology Leadership Program – Data Analyst – NC",
+      "url": "https://vanguard.wd5.myworkdayjobs.com/vanguard_external/job/Charlotte-NC/Technology-Leadership-Program---Data---Analytics--Analyst----NC_180091-1",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1QLLIELc3SvTLo0Z4mbGB_1t5F8rb1-aU/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "careers.bv.com/job/charlotte-consulting-analyst-transactions-nc/1434095833",
+      "company": "Black & Veatch",
+      "position": "Consulting Analyst – Transactions",
+      "url": "https://careers.bv.com/job/Charlotte-Consulting-Analyst-Transactions-NC/1434095833/",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1KhZbp68QN6J1Rjc-5WG-ssRQTpBlfi-e/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jefferies.tal.net/vx/lang-en-gb/mobile-0/appcentre-1/brand-4/candidate/so/pm/1/pl/2/opp/2026-2026-campus-recruiting-analyst-new-york/en-gb",
+      "company": "Jefferies",
+      "position": "2026 Campus Recruiting Analyst – New York",
+      "url": "https://jefferies.tal.net/vx/lang-en-GB/mobile-0/appcentre-1/brand-4/candidate/so/pm/1/pl/2/opp/2026-2026-Campus-Recruiting-Analyst-New-York/en-GB",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1JzQ3QSzm4n-37HIt4X_EZSKP4VsxIBn8/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jobs.ashbyhq.com:2e5f59c7-7e34-4392-8ced-1964c68bc78a",
+      "company": "MeridianLink",
+      "position": "Associate Implementation Analyst",
+      "url": "https://jobs.ashbyhq.com/meridianlink/2e5f59c7-7e34-4392-8ced-1964c68bc78a/",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1T0xvVUwkx31NTXncI_I-nF-XpuxTtRGg/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "recruiting.ultipro.com/lof1001loft/jobboard/7d5d697a-acc8-4c60-b834-3093dc583bcc/opportunitydetail",
+      "company": "Loftware",
+      "position": "AI Solutions Implementation Specialist",
+      "url": "https://recruiting.ultipro.com/LOF1001LOFT/JobBoard/7d5d697a-acc8-4c60-b834-3093dc583bcc/OpportunityDetail?opportunityId=2fbe27b7-0b53-41c1-99da-8aafcdd691fd",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1jV8haziz2m6GUTjPgB6xTUssk7DBjdGI/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "greenhouse:5265290007",
+      "company": "Pallet",
+      "position": "Associate Deployment Strategist (AI/ML Product)",
+      "url": "https://job-boards.greenhouse.io/pallet/jobs/5265290007",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1V2i2p0qiujJ2HmGFizmcsPNTeQxpavxi/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jobs.ashbyhq.com:555d3020-e769-4d2d-bb64-d94107b1b79f",
+      "company": "Neko Health",
+      "position": "AI Acceleration Specialist",
+      "url": "https://jobs.ashbyhq.com/neko-health/555d3020-e769-4d2d-bb64-d94107b1b79f",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1aUmJiClQnTOytg9F55nAlp42MDgUxEWy/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "gobeacon.wd1.myworkdayjobs.com:req-2026",
+      "company": "Beacon Mobility",
+      "position": "AI Innovation & Automation Analyst – Operations Support",
+      "url": "https://gobeacon.wd1.myworkdayjobs.com/beaconmobilitycareers/job/Beacon/AI-Innovation---Automation-Analyst--Operations-Support_REQ-2026-4448",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/19qshVybkoYmjeO8NYD7eLZygpSId49t2/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "careers.cognizant.com/apj-en/jobs/47775/ai-first-business-data-analyst",
+      "company": "Cognizant",
+      "position": "AI-First Business & Data Analyst",
+      "url": "https://careers.cognizant.com/apj-en/jobs/47775/ai-first-business-data-analyst/",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1bSiIhUDZZmvVKtTcrVHKYV6bR1v0Ag56/view?usp=drivesdk",
+      "firstSeenAt": "2026-10-30",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -4874,7 +5034,7 @@ export const jobSearchData = {
       "position": "Sales Development Representative",
       "stage": "Completed — Recruiter screen",
       "date": "Date not confirmed",
-      "interviewer": ""
+      "interviewer": null
     },
     {
       "id": "INT-OUT2WIN-20261007",
@@ -4898,7 +5058,7 @@ export const jobSearchData = {
       "position": "Research Compliance Associate",
       "stage": "Completed AI assessment",
       "date": "25/09/2026",
-      "interviewer": ""
+      "interviewer": null
     },
     {
       "id": "ASSESS-LSEG-20261013",
@@ -4906,7 +5066,7 @@ export const jobSearchData = {
       "position": "Business Analyst Graduate Programme",
       "stage": "Completed — Online assessment",
       "date": "13/10/2026",
-      "interviewer": ""
+      "interviewer": null
     },
     {
       "id": "INT-ONEMAIN-1A182ED447C69FB7",
@@ -4914,7 +5074,7 @@ export const jobSearchData = {
       "position": "Analytics Analyst",
       "stage": "Scheduling — 2nd round virtual case study",
       "date": "Date pending; availability submitted Oct 28",
-      "interviewer": ""
+      "interviewer": null
     },
     {
       "id": "INT-COLUMBIA-20261028-1A18318E05628338",
@@ -4930,7 +5090,7 @@ export const jobSearchData = {
       "position": "Analytics Analyst",
       "stage": "Completed — Online assessment",
       "date": "October 2026; exact completion date not confirmed",
-      "interviewer": ""
+      "interviewer": null
     },
     {
       "id": "ASSESS-VEEVA-1A18AFDA3189D638",
@@ -4938,7 +5098,7 @@ export const jobSearchData = {
       "position": "Associate Consultant - Entry-Level Technology Consulting (Life Sciences)",
       "stage": "Invited — Rembrandt personality assessment",
       "date": "Invited 2026-10-30; complete within 3 business days",
-      "interviewer": ""
+      "interviewer": null
     }
   ],
   "outreachState": [
@@ -5902,10 +6062,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-30T12:56:25.809Z",
-    "sha256": "70fb977da179a702b17b07c3630332722b9fc122775900f131fda9d933e86488",
-    "historyRecords": 298,
-    "trackerRecords": 298,
-    "uniqueHistoryRecords": 298
+    "readAt": "2026-10-30T15:37:51.794Z",
+    "sha256": "a5d994c2ebc87b68b62abe56a4042fdf49bdfb479f8c0c4190a2e4f1df45044d",
+    "historyRecords": 308,
+    "trackerRecords": 308,
+    "uniqueHistoryRecords": 308
   }
 };
