@@ -112,6 +112,15 @@ test('rejection ledger survives a later run using the same facts',t=>{
  assert.equal(JSON.parse(readFileSync(result.path))[key].reason,'mandatory domain experience missing');
 });
 
+test('reformatting unchanged JSON facts does not invalidate rejection caching',t=>{
+ const p=temp(t);for(const n of ['candidate','evidence','rules'])writeFileSync(join(p,n+'.json'),'{"fact":true}');
+ writeFileSync(join(p,'inputs.json'),JSON.stringify({candidatePath:'candidate.json',evidencePath:'evidence.json',rulesPath:'rules.json',stateDir:'cache'}));
+ const first=recordRejections(p,[{key,reason:'required experience missing',revision:null}]);const before=JSON.parse(readFileSync(first.path))[key].context;
+ for(const n of ['candidate','evidence','rules'])writeFileSync(join(p,n+'.json'),JSON.stringify({fact:true},null,2)+'\n');
+ const after=recordRejections(p,[{key,reason:'required experience missing',revision:null}]);
+ assert.equal(JSON.parse(readFileSync(after.path))[key].context,before);
+});
+
 test('claim review reads the actual source and rejects invented or changed evidence',t=>{
  const p=temp(t),source=join(p,'evidence.txt');writeFileSync(source,'Cleaned and validated customer datasets.');
  const pack={candidateEvidence:[{id:'e1',localPath:source,sha256:fileDigest(source)}],

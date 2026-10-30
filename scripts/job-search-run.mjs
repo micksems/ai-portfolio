@@ -15,8 +15,8 @@ const python=process.env.CODEX_PRIMARY_RUNTIME_PYTHON||'python3';
 const read=path=>JSON.parse(readFileSync(path,'utf8'));
 const required=(condition,message)=>{if(!condition)throw new Error(message);};
 const hashFiles=paths=>paths.map(path=>({path,sha256:fileDigest(path)}));
-const policyFor=(dir,config)=>({candidateDigest:digest({candidate:fileDigest(resolve(dir,config.candidatePath)),
-  evidence:fileDigest(resolve(dir,config.evidencePath))}),rulesDigest:fileDigest(resolve(dir,config.rulesPath)),employerAliases:{...EMPLOYER_ALIASES,...config.employerAliases}});
+const policyFor=(dir,config)=>({candidateDigest:digest({candidate:read(resolve(dir,config.candidatePath)),
+  evidence:read(resolve(dir,config.evidencePath))}),rulesDigest:digest(read(resolve(dir,config.rulesPath))),employerAliases:{...EMPLOYER_ALIASES,...config.employerAliases}});
 function execute(program,args) {
   const r=spawnSync(program,args,{encoding:'utf8',maxBuffer:12_000_000,timeout:120_000});
   if(r.error||r.status!==0)throw new Error((r.error?.message||r.stderr||r.stdout||'Command failed').trim());
@@ -94,7 +94,7 @@ export async function run(directory,{mode='run'}={}) {
   const lock=join(dir,'run.lock'),token=randomUUID();let fd;
   if(existsSync(lock)&&Date.now()-statSync(lock).mtimeMs>15*60_000)unlinkSync(lock);
   try{fd=openSync(lock,'wx',0o600);}catch{throw new Error('Another run holds this directory. Inspect run.lock before recovery.');}
-  const heartbeat=()=>writeFileSync(fd,JSON.stringify({token,updatedAt:new Date().toISOString()})+'\n');
+  const heartbeat=()=>writeFileSync(lock,JSON.stringify({token,updatedAt:new Date().toISOString()})+'\n',{mode:0o600});
   heartbeat();const lease=setInterval(heartbeat,10_000);lease.unref();
   try {
     const config=read(join(dir,'inputs.json'));
