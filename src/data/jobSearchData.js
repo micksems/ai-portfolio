@@ -8,7 +8,7 @@ export const jobSearchData = {
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
-    "scheduledInterviews": 0,
+    "scheduledInterviews": 1,
     "aiAssessments": 1,
     "onlineAssessments": 2,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
@@ -5072,8 +5072,8 @@ export const jobSearchData = {
       "id": "INT-ONEMAIN-1A182ED447C69FB7",
       "company": "OneMain Financial",
       "position": "Analytics Analyst",
-      "stage": "Scheduling — 2nd round virtual case study",
-      "date": "Date pending; availability submitted Oct 28",
+      "stage": "Scheduled — Round 2 manager-led case study (Teams)",
+      "date": "2026-11-06",
       "interviewer": ""
     },
     {
@@ -6062,7 +6062,7 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-30T20:14:02.733Z",
+    "readAt": "2026-10-30T21:56:15.110Z",
     "sha256": "53f8f5c2d92a898a96b94ec0b037f7a26cff75a47f30412984de34559059b51a",
     "historyRecords": 308,
     "trackerRecords": 308,
