@@ -47,6 +47,37 @@ export function validateUploads(release,receipts) {
   return release.resumes.filter(r=>!seen.has(r.key));
 }
 
+// This checks that a role-first draft was supplied. Semantic relevance and
+// truthfulness still require a source-based review; a word-change score cannot.
+export function validateAuthoringPlans(plans,packs) {
+  const work=[342,355,368,410,423,436,478,491,504,546,559,572,614,627,640];
+  const signatures=new Map();
+  for(const plan of plans) {
+    const pack=packs.find(p=>p.key===plan.key),review=plan.authoringReview;
+    required(pack&&review?.roleFocus&&review.comparisonDecision,'Missing role-first drafting review for '+plan.key);
+    required(work.every(y=>typeof plan.changes?.[y]==='string'&&plan.changes[y].trim()),'Supply the complete reviewed experience draft; do not inherit master bullets.');
+    for(const duty of pack.primaryDuties||[]) {
+      const selected=review.evidenceSelections?.find(s=>s.requirementId===duty.requirementId);
+      required(selected&&plan.changes[selected.baseline]&&selected.rationale&&selected.sourceIds?.length,
+        'Map each primary duty to the selected draft evidence: '+duty.requirementId);
+      required(selected.sourceIds.every(id=>pack.candidateEvidence.some(e=>e.id===id)),'Unknown selected evidence source');
+    }
+    required([681,694,707].every(y=>review.projectChoices?.some(p=>Number(p.baseline)===y&&p.rationale&&p.scopeLimit)),
+      'Explain each project choice and its factual scope.');
+    const signature=work.map(y=>plan.changes[y].trim()).sort().join('\n');
+    required(!signatures.has(signature)||review.sharedExperienceRationale,
+      'Identical experience text across roles requires an explicit evidence-based justification; skills and ordering alone are not a rewrite.');
+    signatures.set(signature,plan.key);
+  }
+}
+
+export function permitsFitHeldRevision(mode,candidate,result) {
+  // A requested edit may replace an existing draft while keeping the job on
+  // hold. Missing source/PDF proof never qualifies for this narrow exception.
+  return mode==='revise'&&candidate.releaseStatus==='Found'&&result.blockers.length>0&&
+    result.blockers.every(b=>/^Critical employer requirement .* is (?:unknown|missing|partial);|^Required work depth is not demonstrated:|^Seniority is (?:borderline|gap|unknown):/.test(b));
+}
+
 export function readyPlan(snapshot,candidates,receipts,spreadsheetId) {
   fresh(snapshot);
   const header=snapshot.jobs[0], records=jobs(snapshot), byKey=new Map(records.map(r=>[r.record['Canonical Job Key'],r]));
@@ -54,12 +85,14 @@ export function readyPlan(snapshot,candidates,receipts,spreadsheetId) {
   const requests=[],expectedBefore=[];
   for(const candidate of candidates) {
     const key=jobKey(candidate), upload=receipts.find(r=>r.key===key), existing=byKey.get(key);
+    const readyStatus=candidate.releaseStatus||'Ready to Submit';
+    required(['Ready to Submit','Found'].includes(readyStatus),'Invalid package review status');
     required(upload,'Missing upload for '+key);
     if(existing?.record['Submission Confirmed']===true) continue;
     if(existing) required(existing.record['Tailored Resume']===upload.drive_url,'Existing job is not this run’s uploaded artifact; reconcile before writing.');
     const row=header.map((_,i)=>existing?.row[i]??'');
     const fields={'Canonical Job Key':key,'Application ID':existing?.record['Application ID']||'APP-'+digest(key).slice(0,16),
-      Company:candidate.company,Position:candidate.position,'Job URL':candidate.url,Status:'Ready to Submit',
+      Company:candidate.company,Position:candidate.position,'Job URL':candidate.url,Status:readyStatus,
       Location:candidate.location||'','Role Family':candidate.roleFamily||'Analytics','Match Score':candidate.score??'',
       'Posted At':candidate.posted||'','First Seen At':existing?.record['First Seen At']||new Date().toISOString(),
       'Ready At':existing?.record['Ready At']||new Date().toISOString(),'Submission Confirmed':false,'In Application Cohort':false,
@@ -112,14 +145,14 @@ export async function run(directory,{mode='run'}={}) {
       if(m.waiting&&(!stages.length||stages.includes(m.waiting.stage))){m.waitHistory=m.waitHistory||[];m.waitHistory.push({...m.waiting,durationMs:Date.now()-Date.parse(m.waiting.since)});delete m.waiting;writeJson(manifestPath,m);}
     };
     if(mode==='status')return {status:manifest.waiting?'waiting':'recorded',wallElapsedMs:Date.now()-Date.parse(manifest.startedAt),...manifest};
-    required(['run','sync'].includes(mode),'Use run|sync|status RUN_DIRECTORY');
+    required(['run','revise','sync'].includes(mode),'Use run|revise|sync|status RUN_DIRECTORY');
     required(config.spreadsheetId,'Missing canonical spreadsheet ID');
     const snapshot=read(path('snapshotPath'));fresh(snapshot);jobs(snapshot);
     const code={runner:fileDigest(join(scripts,'job-search-run.mjs')),render:fileDigest(join(scripts,'render-job-resumes.py')),
       checker:fileDigest(join(scripts,'check-resume-fit.mjs')),preflight:fileDigest(join(scripts,'job_search_preflight.py'))};
     const codeDigest=digest(code);
     let release;
-    if(mode==='run') {
+    if(mode==='run'||mode==='revise') {
       const policy=policyFor(dir,config);
       const master=config.master;
       required(master?.library_file_id&&master.version&&master.sha256,'Pin the current approved master metadata');
@@ -145,6 +178,15 @@ export async function run(directory,{mode='run'}={}) {
       const candidates=read(shortlistPath),plans=existsSync(plansPath)?read(plansPath):null,packs=existsSync(packsPath)?read(packsPath):null;
       required(candidates.length===(config.requestedCount||5),'Continue discovery until the requested distinct eligible count is met; do not pad.');
       if(!plans||!packs)return wait('authoring-inputs',{plansPath,packsPath});
+      validateAuthoringPlans(plans,packs);
+      if(mode==='revise') {
+        required(config.revisionOf,'Revision mode must identify the prior package.');
+        for(const c of candidates) {
+          const existing=jobs(snapshot).find(r=>r.record['Canonical Job Key']===jobKey(c));
+          required(existing&&existing.record['Submission Confirmed']===false&&!existing.record['Applied At'],
+            'Revision mode only permits an existing unsubmitted package; submitted snapshots are immutable.');
+        }
+      }
       const norm=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
       const employer=v=>norm(policy.employerAliases[v]||v);
       for(const candidate of candidates) {
@@ -167,7 +209,7 @@ export async function run(directory,{mode='run'}={}) {
         // A completed release may resume uploads/sync without reauthoring. New
         // content always repeats the fresh duplicate gate before touching PDFs.
         const preflightPath=join(dir,'preflight.json'),preflightResult=join(dir,'preflight-result.json');
-        const payload={process_policy_version:2,run_mode:'normal',requested_count:config.requestedCount||5,
+        const payload={process_policy_version:2,run_mode:mode==='revise'?'replacement':'normal',requested_count:config.requestedCount||5,
           snapshot:{read_at:snapshot.readAt,jobs:snapshot.jobs},master,candidates};
         await runStage(manifestPath,'preflight',{payload,code:code.preflight},async()=>{
           writeJson(preflightPath,payload);
@@ -208,8 +250,11 @@ export async function run(directory,{mode='run'}={}) {
             writeJson(packPath,reviewed);
             await runStage(manifestPath,'content:'+report.key,{code:code.checker,reviewed},async()=>{
               const result=auditResumeArtifact(reviewed,sourceTextCache);
+              const candidate=candidates.find(c=>jobKey(c)===report.key);
+              const heldDraft=permitsFitHeldRevision(mode,candidate,result);
+              if(heldDraft)result.artifactDisposition='REVISED_DRAFT_FIT_HOLD';
               writeJson(resultPath,result);
-              required(result.decision==='READY_FOR_HUMAN_REVIEW','Final content check held '+report.key+': '+result.blockers.join('; '));
+              required(result.decision==='READY_FOR_HUMAN_REVIEW'||heldDraft,'Final content check held '+report.key+': '+result.blockers.join('; '));
               return [packPath,resultPath];
             });
             files.push(packPath,resultPath,report.localPath,report.previewPath,report.textPath);
@@ -234,8 +279,9 @@ export async function run(directory,{mode='run'}={}) {
       for(const report of release.resumes) {
         const record=jobs(readback).find(r=>r.record['Canonical Job Key']===report.key)?.record;
         const receipt=receipts.find(r=>r.key===report.key);
+        const expectedStatus=candidates.find(c=>jobKey(c)===report.key)?.releaseStatus||'Ready to Submit';
         required(record&&record['Tailored Resume']===receipt.drive_url&&
-          (record.Status==='Ready to Submit'||record['Submission Confirmed']===true),'Sheet readback does not contain the saved package');
+          (record.Status===expectedStatus||record['Submission Confirmed']===true),'Sheet readback does not contain the saved package');
       }
       resolveWait('sheet-write');
       await runStage(manifestPath,'sheet-readback',{readback,receipts},async()=>[readbackPath]);

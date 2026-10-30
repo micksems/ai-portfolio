@@ -88,3 +88,13 @@ test('verified applied stakeholder research is recognized without weakening cour
  p.requirements[0].resumeProof='Stakeholder Research';p.resume.text+=' Stakeholder Research';
  assert.equal(auditResumeFit(p).decision,'HOLD');
 });
+
+test('ordinary executed-work wording is accepted while tool/course lists remain held',()=>{
+ for(const proof of ['Prepared validated datasets for output assessment','Gathered client needs and defined a project scope','Interpreted campaign KPIs and presented recommendations','Presented campaign performance findings','Revised an administrative agent workflow']) {
+  const p=pack();Object.assign(p.requirements[0],{employerQuote:proof,resumeProof:proof,sourceText:proof,sourceQuote:proof});
+  p.jobDescriptionSnapshot.text+=' '+proof;p.resume.text+=' '+proof;
+  assert.equal(auditResumeFit(p).decision,'READY_FOR_HUMAN_REVIEW');
+  p.requirements[0].resumeProof='SQL, Python, Advanced Excel';p.resume.text+=' SQL, Python, Advanced Excel';
+  assert.equal(auditResumeFit(p).decision,'HOLD');
+ }
+});

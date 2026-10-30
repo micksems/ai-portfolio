@@ -84,8 +84,11 @@ def render(config):
     for job in config['jobs']:
         changes = {int(y): text for y, text in job['changes'].items()}
         labels = {int(y): text for y, text in job['projectLabels'].items()}
-        if not set(changes).issubset(editable) or set(labels) != {681, 694, 707}:
+        skill_labels = {int(y): text for y, text in job.get('skillLabels', {}).items()}
+        if (not set(changes).issubset(editable) or set(labels) != {681, 694, 707}
+                or (skill_labels and set(skill_labels) != {81, 94, 107})):
             raise ValueError('Unexpected master layout edit')
+        labels.update(skill_labels)
         if any(not isinstance(t, str) or not t.strip() or '\n' in t for t in changes.values()):
             raise ValueError('Use reviewed single-line replacements')
         doc = fitz.open(masterpath)
@@ -198,3 +201,4 @@ if __name__ == '__main__':
     except (ValueError, KeyError, OSError, IndexError) as error:
         print(str(error), file=sys.stderr)
         sys.exit(2)
+

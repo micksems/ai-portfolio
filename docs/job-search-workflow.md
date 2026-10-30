@@ -8,6 +8,9 @@ Current explicit user instructions override stored policy. The website publishes
 
 Use `npm run jobs -- run PRIVATE_RUN_DIRECTORY` for a requested search/resume run;
 use `npm run jobs -- sync PRIVATE_RUN_DIRECTORY` for confirmed submissions or reply updates.
+Use `npm run jobs -- revise PRIVATE_RUN_DIRECTORY` for an explicitly requested rewrite of existing
+unsubmitted packages. Set revisionOf to the prior run. Retained roles are not new jobs; reuse their
+Library/Drive identities and preserve submitted snapshots. All source, PDF and release checks apply.
 Use `npm run jobs -- status PRIVATE_RUN_DIRECTORY` for measured stage/wait durations.
 Do not copy an earlier run's scripts or assemble a new renderer. Keep private run directories and caches
 outside the checkout or inside its ignored `.job-search/` directory. Never commit candidate data, evidence
@@ -22,7 +25,7 @@ write application forms, submit applications, send messages, or schedule searche
 
 There is no overall run deadline, elapsed-time budget, search-query budget, or speed target.
 Timing measurements are diagnostic only. Continue discovery across additional employers and sources
-until the requested five new qualified roles, five verified role-specific PDFs, tracker updates and
+until the user-requested number of new qualified roles and verified role-specific PDFs, tracker updates and
 website synchronization are complete. Rejected leads, exhausted initial queries, and an individual
 source failure are not run-level blockers. Per-request and per-command timeouts only prevent hangs;
 retry or switch sources and resume the same run. Do not lower requestedCount to deliver a partial run
@@ -84,7 +87,14 @@ Preserve date-only precision; never infer an application from preparation or a s
    Jobs submission state is required before authoring. A confirmed submission remains blocked after
    rejection/closure. A same-title alias requires `distinctRoleReview` with comparedKey, decision=distinct,
    employerSource, employerQuote present in the JD, and an actual team/duties/program difference.
-5. **Render:** `plans.json` is an array keyed by canonical requisition, with reviewed `changes`
+5. **Draft and render:** Treat the master as verified facts and style, not inherited experience copy.
+   Supply the complete reviewed experience text. Each plan has authoringReview with roleFocus,
+   evidenceSelections mapping each primary duty to a baseline/sourceIds/rationale, projectChoices
+   explaining the three selected projects and scopeLimit, and comparisonDecision. Skills edits and
+   reordered master bullets alone are not substantive rewriting. The runner checks this boundary;
+   an operator must still review semantic relevance. No arbitrary changed-word percentage.
+   Optional skillLabels may reorder the three skills categories to put the role focus first.
+   **Render:** `plans.json` is an array keyed by canonical requisition, with reviewed `changes`
    (baseline:text) and `projectLabels` (681/694/707:label). The pinned-master renderer preserves geometry,
    chronology, education/experience structure and links. No model writes code or invents bullets inside
    the renderer. Only its actual inputs invalidate a PDF; a new read timestamp, score or publishing retry
@@ -96,8 +106,10 @@ Preserve date-only precision; never infer an application from preparation or a s
    View each final PNG once; read its actual extracted text and fact-check the claims. Write reviews.json
    entries with key, sha256, previewSha256, reviewer, renderedAndInspected, extractedTextReviewed,
    claimsFactChecked. These flags record real review, never fabricated defaults. The controller invokes
-   the final artifact/evidence checker itself. HOLD packages cannot advance to saving/Ready. Unsupported
-   duties are a discovery/content problem, not a reason to weaken the checker.
+   the final artifact/evidence checker itself. HOLD packages cannot advance to Ready. Only an explicit
+   `revise` of an existing unsubmitted package may save a fact-checked draft with a qualification-only
+   HOLD, and its tracker status must remain Found. Factual, source and PDF failures always block saving.
+   Unsupported duties are a discovery/content problem, not a reason to weaken the checker.
 7. **Save:** the runner returns only missing uploads. Use one Library batch and bounded parallel Drive
    uploads. Save exact successful connector receipts to uploads.json: key, sha256, library_file_id,
    drive_file_id, drive_url. Keep successful receipts on partial failure; do not upload them again.

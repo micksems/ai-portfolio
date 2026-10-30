@@ -1,5 +1,24 @@
 # Evidence-first resume tailoring standard (v2)
 
+October 30 corrective rule: the approved master is a fact and style reference, not default experience copy.
+Supply the full reviewed experience draft for each role. Before rendering, each plan must include
+`authoringReview` with a roleFocus, primary-duty evidenceSelections (requirementId, baseline,
+sourceIds, rationale), three projectChoices (baseline, rationale, scopeLimit), and a comparisonDecision.
+Review the actual employer duties before choosing evidence. Explain relevant overlap; do not impose a
+word-change percentage or manufacture differences. Identical experience sets across roles require an
+explicit evidence-based sharedExperienceRationale. Skills changes and bullet reordering alone are not
+a substantive rewrite. The runner now checks this authoring boundary; it does not certify semantic fit.
+
+Use `jobs revise PRIVATE_RUN_DIRECTORY` only for a user-requested rewrite of existing unsubmitted
+packages, with revisionOf identifying the prior run. This uses the same renderer, evidence gate and
+upload/sync path; it never counts retained roles as new and never edits submitted snapshots. Keep
+existing Library/Drive file identities when replacing unsubmitted drafts. A resume may be saved for
+human review while its job remains Found when an authorization or fit question is unresolved; do not
+upgrade that job to Ready merely because the PDF exists. All factual and artifact checks still apply.
+Only in explicit revision mode, an existing unsubmitted draft may be replaced while a qualification
+HOLD remains recorded as REVISED_DRAFT_FIT_HOLD and its job remains Found. This does not release a
+new application or certify fit. Source, claim-proof and PDF failures still block saving in every mode.
+
 Execution update, October 29: the staged runner in `job-search-run.mjs` is mandatory for new packages.
 It invokes the final checker before upload/Ready rather than relying on an operator to remember it.
 Every candidateEvidence record includes `localPath` and `sha256` for an actual approved/verified source

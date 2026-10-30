@@ -4951,7 +4951,7 @@ export const jobSearchData = {
       "company": "Neko Health",
       "position": "AI Acceleration Specialist",
       "url": "https://jobs.ashbyhq.com/neko-health/555d3020-e769-4d2d-bb64-d94107b1b79f",
-      "status": "Ready to Submit",
+      "status": "Found",
       "resumeUrl": "https://drive.google.com/file/d/1aUmJiClQnTOytg9F55nAlp42MDgUxEWy/view?usp=drivesdk",
       "firstSeenAt": "2026-10-30",
       "appliedAt": "",
@@ -4983,7 +4983,7 @@ export const jobSearchData = {
       "company": "Cognizant",
       "position": "AI-First Business & Data Analyst",
       "url": "https://careers.cognizant.com/apj-en/jobs/47775/ai-first-business-data-analyst/",
-      "status": "Ready to Submit",
+      "status": "Found",
       "resumeUrl": "https://drive.google.com/file/d/1bSiIhUDZZmvVKtTcrVHKYV6bR1v0Ag56/view?usp=drivesdk",
       "firstSeenAt": "2026-10-30",
       "appliedAt": "",
@@ -6062,8 +6062,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-30T17:41:11.131Z",
-    "sha256": "422ef525a4c7bf59e5c6393d0cc02be9825204430e9bfdf1333fcffe02f39575",
+    "readAt": "2026-10-30T20:14:02.733Z",
+    "sha256": "53f8f5c2d92a898a96b94ec0b037f7a26cff75a47f30412984de34559059b51a",
     "historyRecords": 308,
     "trackerRecords": 308,
     "uniqueHistoryRecords": 308

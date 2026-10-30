@@ -6,7 +6,7 @@ import {join,resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {digest,fileDigest,runStage,readManifest} from '../scripts/run-checkpoint.mjs';
 import {SourceCache,discoverCandidates,sourceUrl} from '../scripts/job-search-discovery.mjs';
-import {readyPlan,validateUploads,recordRejections,run} from '../scripts/job-search-run.mjs';
+import {readyPlan,validateUploads,validateAuthoringPlans,permitsFitHeldRevision,recordRejections,run} from '../scripts/job-search-run.mjs';
 import {applyPublicationProposal} from '../scripts/job-search-publication.mjs';
 import {jobKey,calculateMetrics} from '../src/lib/job-search-model.mjs';
 import {verifyCandidateSources} from '../scripts/check-resume-fit.mjs';
@@ -19,6 +19,31 @@ const candidate={company:'Example',position:'Data Analyst',url,location:'New Yor
 const key=jobKey(candidate);
 const jobRow=(status='Applied',confirmed=true)=>[key,'APP-1','Example','Data Analyst',url,status,'New York','Analytics',85,'','','','2026-10-29',confirmed,confirmed,'Active','','','','https://drive.google.com/file/d/file1/view','',''];
 const snapshot=(rows=[])=>({readAt:new Date().toISOString(),jobs:[header,...rows],events:[eventHeader]});
+
+test('requested draft revisions preserve qualification holds but never waive factual or PDF failures',()=>{
+ const result={blockers:['Critical employer requirement r1 is unknown; do not mark resume ready.','Required work depth is not demonstrated: r1']};
+ assert.equal(permitsFitHeldRevision('revise',{releaseStatus:'Found'},result),true);
+ assert.equal(permitsFitHeldRevision('run',{releaseStatus:'Found'},result),false);
+ assert.equal(permitsFitHeldRevision('revise',{releaseStatus:'Ready to Submit'},result),false);
+ assert.equal(permitsFitHeldRevision('revise',{releaseStatus:'Found'},{blockers:['Missing final resume quality check: claimsFactChecked.']}),false);
+ assert.equal(permitsFitHeldRevision('revise',{releaseStatus:'Found'},{blockers:['Requirement r1 lacks literal proof in the submitted resume text.']}),false);
+});
+
+test('role-first drafting rejects recycled experience with only skills or order changes',()=>{
+ const work=[342,355,368,410,423,436,478,491,504,546,559,572,614,627,640];
+ const changes=Object.fromEntries(work.map((y,i)=>[y,'Verified work example '+i]));
+ for(const y of [681,694,707])changes[y]='Verified project';
+ const authoringReview={roleFocus:'Testing and documented data quality',comparisonDecision:'Reviewed against a consulting draft',
+   evidenceSelections:[{requirementId:'d1',baseline:546,sourceIds:['e1'],rationale:'Dataset review demonstrates this testing task.'}],
+   projectChoices:[681,694,707].map(baseline=>({baseline,rationale:'Selected for this duty',scopeLimit:'Academic team work'}))};
+ const plan={key:'one',changes,authoringReview};
+ const pack={key:'one',primaryDuties:[{requirementId:'d1'}],candidateEvidence:[{id:'e1'}]};
+ assert.doesNotThrow(()=>validateAuthoringPlans([plan],[pack]));
+ const other={...plan,key:'two',changes:{...changes,81:'Different skills',342:changes[355],355:changes[342]}};
+ assert.throws(()=>validateAuthoringPlans([plan,other],[pack,{...pack,key:'two'}]),/Identical experience/);
+ assert.throws(()=>validateAuthoringPlans([{...plan,authoringReview:{...authoringReview,evidenceSelections:[]}}],[pack]),/primary duty/);
+ assert.throws(()=>validateAuthoringPlans([{...plan,changes:{81:'Skills only'}}],[pack]),/complete reviewed experience/);
+});
 
 test('completed stage reuse requires unchanged outputs, not a saved PASS label',async t=>{
  const p=temp(t),manifest=join(p,'manifest.json'),output=join(p,'output');let calls=0;
@@ -89,6 +114,8 @@ test('ready plan preserves a confirmed submission and native booleans',()=>{
  const plan=readyPlan(snapshot(),[candidate],[receipt],'sheet');const cells=plan.requests[0].updateCells.rows[0].values;
  assert.equal(cells[13].userEnteredValue.boolValue,false);assert.equal(cells[14].userEnteredValue.boolValue,false);
  assert.equal(cells[5].userEnteredValue.stringValue,'Ready to Submit');
+  assert.equal(readyPlan(snapshot(),[{...candidate,releaseStatus:'Found'}],[receipt],'sheet').requests[0].updateCells.rows[0].values[5].userEnteredValue.stringValue,'Found');
+  assert.throws(()=>readyPlan(snapshot(),[{...candidate,releaseStatus:'Applied'}],[receipt],'sheet'),/Invalid package/);
 });
 test('sheet row indexes remain correct after blank rows',()=>{
  const row=jobRow('Ready to Submit',false),receipt={key,drive_url:row[19]};
