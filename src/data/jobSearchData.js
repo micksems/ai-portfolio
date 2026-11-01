@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "October 30, 2026",
+  "updatedAt": "November 1, 2026",
   "metrics": {
     "applications": 125,
     "interviews": 8,
@@ -13,7 +13,7 @@ export const jobSearchData = {
     "onlineAssessments": 2,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-10-30",
+    "auditedAt": "2026-11-01",
     "lifetimeApplications": 129
   },
   "jobs": [
@@ -5099,6 +5099,14 @@ export const jobSearchData = {
       "stage": "Invited — Rembrandt personality assessment",
       "date": "Invited 2026-10-30; complete within 3 business days",
       "interviewer": ""
+    },
+    {
+      "id": "INT-ENIGMA-1A19438FC8C7D28B",
+      "company": "Enigma",
+      "position": "Data Operations Associate",
+      "stage": "Invited — Introductory call; not scheduled",
+      "date": "Invited 2026-10-31; meeting date/time not confirmed",
+      "interviewer": "Jurien Garrison"
     }
   ],
   "outreachState": [
@@ -6062,8 +6070,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-10-30T21:56:15.110Z",
-    "sha256": "53f8f5c2d92a898a96b94ec0b037f7a26cff75a47f30412984de34559059b51a",
+    "readAt": "2026-11-01T14:02:30.900595Z",
+    "sha256": "b4b91e137e2ce1a3e5c0a2cb8775851e795b29174982070a1953cfcbe9ce806e",
     "historyRecords": 308,
     "trackerRecords": 308,
     "uniqueHistoryRecords": 308
