@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "November 2, 2026",
   "metrics": {
-    "applications": 130,
+    "applications": 132,
     "interviews": 8,
     "offers": 0,
     "rejections": 41,
@@ -14,7 +14,7 @@ export const jobSearchData = {
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
     "auditedAt": "2026-11-02",
-    "lifetimeApplications": 134
+    "lifetimeApplications": 136
   },
   "jobs": [
     {
@@ -4503,12 +4503,12 @@ export const jobSearchData = {
       "company": "Brixmor Property Group",
       "position": "Analyst, Financial Asset Management",
       "url": "https://brixmor.wd504.myworkdayjobs.com/External_Career/job/New-York-NY-US/Analyst--Financial-Asset-Management_JR100023",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1DzbPNITJJXWWKxx-FL0powt4Ho1kFO-7/view?usp=drivesdk",
       "firstSeenAt": "2026-10-23",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-11-02",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -4599,12 +4599,12 @@ export const jobSearchData = {
       "company": "Fortress Information Security",
       "position": "Fortress FastLane, Data Quality Analyst",
       "url": "https://recruitingbypaycor.com/career/JobIntroduction.action?clientId=8a7883c677ac64aa0177dac431a71b29&id=8a78879ea0f4259701a0f9cf25327a40",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/19WJa8k0rI1QzliW6NDtaZJuNkC2PpDCM/view?usp=drivesdk",
       "firstSeenAt": "2026-10-27",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-11-02",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -6150,8 +6150,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-02T19:23:46.256Z",
-    "sha256": "e91aeb3a3b1df07e1924e9c1f74dac49cb3321664c754884285d9eda229c78e1",
+    "readAt": "2026-11-02T20:24:59.105Z",
+    "sha256": "cc863e7cb5ab83a206fb965f111edbc72584205bfc1eab876444519900137d90",
     "historyRecords": 313,
     "trackerRecords": 313,
     "uniqueHistoryRecords": 313
