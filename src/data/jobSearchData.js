@@ -8,9 +8,9 @@ export const jobSearchData = {
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
-    "scheduledInterviews": 1,
+    "scheduledInterviews": 2,
     "aiAssessments": 1,
-    "onlineAssessments": 2,
+    "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
     "auditedAt": "2026-11-02",
@@ -5176,17 +5176,17 @@ export const jobSearchData = {
       "id": "ASSESS-VEEVA-1A18AFDA3189D638",
       "company": "Veeva Systems",
       "position": "Associate Consultant - Entry-Level Technology Consulting (Life Sciences)",
-      "stage": "Invited — Rembrandt personality assessment",
-      "date": "Invited 2026-10-30; complete within 3 business days",
+      "stage": "Completed — Online assessment (Rembrandt personality)",
+      "date": "2026-11-02",
       "interviewer": ""
     },
     {
       "id": "INT-ENIGMA-1A19438FC8C7D28B",
       "company": "Enigma",
       "position": "Data Operations Associate",
-      "stage": "Invited — Introductory call; not scheduled",
-      "date": "Invited 2026-10-31; meeting date/time not confirmed",
-      "interviewer": "Jurien Garrison"
+      "stage": "Scheduled — Introductory Google Meet (not completed)",
+      "date": "2026-11-05",
+      "interviewer": "Jinghong Cui"
     }
   ],
   "outreachState": [
@@ -6150,8 +6150,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-02T19:04:58.125Z",
-    "sha256": "52cd81e77186f25814e7209e8d76feec91f7c4964e35ba4bd0dfc2890191f44f",
+    "readAt": "2026-11-02T19:23:46.256Z",
+    "sha256": "e91aeb3a3b1df07e1924e9c1f74dac49cb3321664c754884285d9eda229c78e1",
     "historyRecords": 313,
     "trackerRecords": 313,
     "uniqueHistoryRecords": 313
