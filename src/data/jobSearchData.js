@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "November 1, 2026",
+  "updatedAt": "November 2, 2026",
   "metrics": {
     "applications": 125,
     "interviews": 8,
@@ -13,7 +13,7 @@ export const jobSearchData = {
     "onlineAssessments": 2,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-01",
+    "auditedAt": "2026-11-02",
     "lifetimeApplications": 129
   },
   "jobs": [
@@ -4993,6 +4993,86 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "morningstar.wd5.myworkdayjobs.com:req",
+      "company": "Morningstar DBRS",
+      "position": "Structured Finance Analytics, Methodology & AI Solutions, Analyst - New York",
+      "url": "https://morningstar.wd5.myworkdayjobs.com/morningstar/job/New-York/Structured-Finance-Analytics--Methodology---AI-Solutions--Analyst---New-York_REQ-058936",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1yHWlpN0QhE-Vs35waBlvxkeaqLDt7Hbq/view?usp=drivesdk",
+      "firstSeenAt": "2026-11-02",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?jobId=558895",
+      "company": "Glenmede",
+      "position": "E&F Investment Research Analyst",
+      "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=91a10898-d8ce-4d8a-8e43-34624df15cff&ccId=19000101_000001&lang=en_US&jobId=558895",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/11HP2kUmRkLmAPyGk29ZKuTZqsKNlGDf3/view?usp=drivesdk",
+      "firstSeenAt": "2026-11-02",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jobs.ashbyhq.com:bf78e172-6d6c-415b-aaa5-d36c863e2116",
+      "company": "Nevoya",
+      "position": "AI Operations Associate",
+      "url": "https://jobs.ashbyhq.com/nevoya/bf78e172-6d6c-415b-aaa5-d36c863e2116",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/17UD3dLAYof6teeeiantTM9BbmPFX1HxQ/view?usp=drivesdk",
+      "firstSeenAt": "2026-11-02",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "interpublic.wd5.myworkdayjobs.com:r14806",
+      "company": "Omnicom Corporate",
+      "position": "Risk Analyst",
+      "url": "https://interpublic.wd5.myworkdayjobs.com/OMC/job/New-York-New-York-United-States-of-America/Risk-Analyst_R14806-1",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1-sg_og65KmbTUsYChFcz8Hxfw1lv0PPD/view?usp=drivesdk",
+      "firstSeenAt": "2026-11-02",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jll.wd1.myworkdayjobs.com:req542619",
+      "company": "JLL",
+      "position": "Analyst",
+      "url": "https://jll.wd1.myworkdayjobs.com/jllcareers/job/New-York-NY/Analyst_REQ542619",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1lcztIHn_1iATF2zT_N34xYff7KW98BTj/view?usp=drivesdk",
+      "firstSeenAt": "2026-11-02",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -6070,10 +6150,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-01T14:02:30.900595Z",
-    "sha256": "b4b91e137e2ce1a3e5c0a2cb8775851e795b29174982070a1953cfcbe9ce806e",
-    "historyRecords": 308,
-    "trackerRecords": 308,
-    "uniqueHistoryRecords": 308
+    "readAt": "2026-11-02T18:26:46.478Z",
+    "sha256": "2347a4482532da9c3dc79069d69c4658b9568f2624b2225f570285da3856cf44",
+    "historyRecords": 313,
+    "trackerRecords": 313,
+    "uniqueHistoryRecords": 313
   }
 };
