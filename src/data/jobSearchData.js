@@ -5186,7 +5186,7 @@ export const jobSearchData = {
       "position": "Data Operations Associate",
       "stage": "Scheduled — Introductory Google Meet (not completed)",
       "date": "2026-11-05",
-      "interviewer": "Jinghong Cui"
+      "interviewer": "Jinghong Cui (hiring manager)"
     }
   ],
   "outreachState": [
@@ -6150,8 +6150,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-02T22:16:56.211Z",
-    "sha256": "20b6d3aa14cb26ee1d7592b175750bf4049cb164e221345b310ee51b75c404d4",
+    "readAt": "2026-11-02T22:46:56.209Z",
+    "sha256": "2015d1414e7120e5b2af67515678611622c8c1895e074b0c13c7dba4ae722f2b",
     "historyRecords": 313,
     "trackerRecords": 313,
     "uniqueHistoryRecords": 313
