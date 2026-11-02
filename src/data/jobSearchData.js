@@ -4887,7 +4887,7 @@ export const jobSearchData = {
       "company": "Jefferies",
       "position": "2026 Campus Recruiting Analyst – New York",
       "url": "https://jefferies.tal.net/vx/lang-en-GB/mobile-0/appcentre-1/brand-4/candidate/so/pm/1/pl/2/opp/2026-2026-Campus-Recruiting-Analyst-New-York/en-GB",
-      "status": "Ready to Submit",
+      "status": "Archived",
       "resumeUrl": "https://drive.google.com/file/d/1JzQ3QSzm4n-37HIt4X_EZSKP4VsxIBn8/view?usp=drivesdk",
       "firstSeenAt": "2026-10-30",
       "appliedAt": "",
@@ -4983,7 +4983,7 @@ export const jobSearchData = {
       "company": "Cognizant",
       "position": "AI-First Business & Data Analyst",
       "url": "https://careers.cognizant.com/apj-en/jobs/47775/ai-first-business-data-analyst/",
-      "status": "Found",
+      "status": "Archived",
       "resumeUrl": "https://drive.google.com/file/d/1bSiIhUDZZmvVKtTcrVHKYV6bR1v0Ag56/view?usp=drivesdk",
       "firstSeenAt": "2026-10-30",
       "appliedAt": "",
@@ -6150,8 +6150,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-02T20:24:59.105Z",
-    "sha256": "cc863e7cb5ab83a206fb965f111edbc72584205bfc1eab876444519900137d90",
+    "readAt": "2026-11-02T22:16:56.211Z",
+    "sha256": "20b6d3aa14cb26ee1d7592b175750bf4049cb164e221345b310ee51b75c404d4",
     "historyRecords": 313,
     "trackerRecords": 313,
     "uniqueHistoryRecords": 313
