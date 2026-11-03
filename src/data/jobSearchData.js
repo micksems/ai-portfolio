@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "November 3, 2026",
   "metrics": {
-    "applications": 134,
+    "applications": 135,
     "interviews": 8,
     "offers": 0,
     "rejections": 43,
@@ -14,7 +14,7 @@ export const jobSearchData = {
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
     "auditedAt": "2026-11-03",
-    "lifetimeApplications": 138
+    "lifetimeApplications": 139
   },
   "jobs": [
     {
@@ -5121,6 +5121,22 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "digitalcareers.infosys.com/global-careers/company-job/description/reqid/154434br",
+      "company": "Infosys",
+      "position": "Associate - Campus",
+      "url": "https://digitalcareers.infosys.com/global-careers/company-job/description/reqid/154434BR",
+      "status": "Applied",
+      "resumeUrl": "https://chatgpt.com/library?file_id=libfile_24a24b8d4c688191970c0ed73f788473&account_id=personal",
+      "firstSeenAt": "2026-11-03",
+      "appliedAt": "2026-11-03",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -6198,10 +6214,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-03T19:06:23.219Z",
-    "sha256": "52ee0398a8503936344d2f02397f884aba9b65eff11acaf2acf53fa86b7d3f0a",
-    "historyRecords": 314,
-    "trackerRecords": 314,
-    "uniqueHistoryRecords": 314
+    "readAt": "2026-11-03T19:39:58.784Z",
+    "sha256": "593f362f202017dd713de35ae336de10473630344bb330552fd3ea17e52d909c",
+    "historyRecords": 315,
+    "trackerRecords": 315,
+    "uniqueHistoryRecords": 315
   }
 };
