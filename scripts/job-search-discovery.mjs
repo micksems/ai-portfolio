@@ -1,6 +1,6 @@
 import {existsSync, readFileSync, mkdirSync} from 'node:fs';
 import {join} from 'node:path';
-import {jobKey} from '../src/lib/job-search-model.mjs';
+import {jobKey,jobIdentityKeys} from '../src/lib/job-search-model.mjs';
 import {digest, writeJson} from './run-checkpoint.mjs';
 
 const MINUTE=60_000;
@@ -71,9 +71,21 @@ export function candidatesFrom(source,data) {
     detailsCached:Boolean(j.content||j.descriptionHtml||j.descriptionPlain),revision:j.updated_at||j.updatedAt||j.publishedAt||j.createdAt||null,
   })).filter(j=>j.url&&j.position);
 }
+// Use explicit posting metadata only. Missing facts stay for full-JD review;
+// employer branding and inferred legal eligibility never satisfy this gate.
+export function earlyMismatch(job,policy={}) {
+  if(job.explicitCptOptRestriction===true)return 'Explicit CPT/OPT restriction';
+  if(Number.isFinite(job.salaryMaxAnnual)&&job.salaryMaxAnnual<(policy.minimumBaseSalary??70000))return 'Base salary ceiling below preference';
+  if(job.locationEligible===false)return 'Location mismatch';
+  if(job.startTimingEligible===false)return 'Start/enrollment mismatch';
+  if(job.mandatoryExperienceMet===false||job.seniorOwnershipRequired===true)return 'Mandatory experience/ownership mismatch';
+  if(job.roleFamily?.startsWith('AI')&&job.aiDutiesRelevant===false)return 'AI branding without relevant AI work';
+  return null;
+}
+
 export function discoverCandidates(sources,snapshot,policy,rejections={}) {
   const header=snapshot.jobs[0];
-  const known=new Map(snapshot.jobs.slice(1).filter(r=>r[0]).map(r=>[r[header.indexOf('Canonical Job Key')],r]));
+  const known=new Set(snapshot.jobs.slice(1).filter(r=>r[0]).flatMap(r=>jobIdentityKeys({canonicalKey:r[header.indexOf('Canonical Job Key')],url:r[header.indexOf('Job URL')]})));
   const context=digest({candidate:policy.candidateDigest,rules:policy.rulesDigest});
   const aliases={...EMPLOYER_ALIASES,...policy.employerAliases};
   const norm=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
@@ -81,12 +93,13 @@ export function discoverCandidates(sources,snapshot,policy,rejections={}) {
   const knownTitles=new Set(snapshot.jobs.slice(1).filter(r=>r[0]).map(r=>employer(r[header.indexOf('Company')])+':'+norm(r[header.indexOf('Position')])));
   const accepted=[],held=[],seen=new Set();let duplicates=0,filtered=0;
   for(const job of sources) {
-    const key=jobKey(job);
+    const key=jobKey({...job,canonicalKey:undefined});
     if(seen.has(key)||known.has(key)){duplicates++;continue;}seen.add(key);
+    if(earlyMismatch(job,policy)){filtered++;continue;}
     const rejected=rejections[key];
     if(rejected?.context===context&&rejected.expiresAt>Date.now()&&rejected.revision===(job.revision??null)){filtered++;continue;}
     if(/\b(senior|sr\.?|lead|principal|staff|director|manager|sales|sdr|bdr)\b/i.test(job.position)){filtered++;continue;}
-    if(!/analyst|analytics|data quality|ai evaluation|consultant/i.test(job.position)){filtered++;continue;}
+    if(!/analyst|analytics|data quality|ai evaluat|ai automation|consultant/i.test(job.position)){filtered++;continue;}
     if(/india|canada|united kingdom|london|europe|australia/i.test(job.location)&&
        !/new york|san francisco|charlotte|remote us|united states|usa/i.test(job.location)){filtered++;continue;}
     const entry={...job,key};

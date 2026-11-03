@@ -1,12 +1,13 @@
 # Evidence-first resume tailoring standard (v2)
 
 October 30 corrective rule: the approved master is a fact and style reference, not default experience copy.
-Supply the full reviewed experience draft for each role. Before rendering, each plan must include
+Review experience for each role; retain a directly relevant pinned-master bullet through
+authoringReview.retainedBaselines or supply a replacement. No all-fifteen rewrite requirement. Before rendering, each plan must include
 `authoringReview` with a roleFocus, primary-duty evidenceSelections (requirementId, baseline,
 sourceIds, rationale), three projectChoices (baseline, rationale, scopeLimit), and a comparisonDecision.
 Review the actual employer duties before choosing evidence. Explain relevant overlap; do not impose a
 word-change percentage or manufacture differences. Identical experience sets across roles require an
-explicit evidence-based sharedExperienceRationale. Skills changes and bullet reordering alone are not
+explicit evidence-based sharedExperienceRationale; truthful overlap is permitted. Skills changes and bullet reordering alone are not
 a substantive rewrite. The runner now checks this authoring boundary; it does not certify semantic fit.
 
 Use `jobs revise PRIVATE_RUN_DIRECTORY` only for a user-requested rewrite of existing unsubmitted
@@ -68,6 +69,9 @@ The previous gate accepted course labels as applied proficiency and repeated one
 
 - Extract 3–5 distinct **work tasks** from the employer JD before consulting candidate evidence. Degrees, tool names and personality traits cannot fill these slots.
 - Every ledger row includes kind, exact employerQuote present in the stored JD, requiredDepth and demonstratedDepth (exposure/applied/independent/production), original sourceText/sourceQuote, evidenceRationale, gaps, and reviewVerdict. Mandatory gaps remain HOLD. Preferred requirements must not be misclassified to hide a mandatory gap.
+- Applied critical skills/tasks require workExample {context, actionQuote, outputQuote}:
+  context identifies professional/internship/academic_team/academic_individual/personal/volunteer work;
+  actionQuote must occur in sourceText and outputQuote in resumeProof. No verb whitelist.
 - Applied skills require an executed-work example in the final resume. A course title or skill list alone cannot prove strong SQL, modeling, or independent delivery. Course projects can prove applied work when the actual method, output and contribution are sourced; they do not prove professional production ownership.
 - Select relevant projects from the full verified project bank before authoring. For AI evaluation: model evaluation/NLP and customer segmentation; for reporting: SQL database and dashboard projects. Preserve chronology and Times New Roman, but replace less relevant project slots. Do not confine tailoring to synonym changes on legacy bullets.
 - The CLI binds the reviewed text to actual PDF bytes using resume.localPath, resume.sha256 and independent PDF extraction. Changed bytes or intended-draft text block release.

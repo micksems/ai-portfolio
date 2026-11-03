@@ -25,7 +25,7 @@ def identity(record):
     if not raw_url:
         return 'named:' + normalized(record.get('company')) + ':' + normalized(record.get('position'))
     u = urlsplit(str(raw_url))
-    path = u.path.rstrip('/').lower()
+    path = re.sub(r'/(apply|application)/?$', '', u.path.lower()).rstrip('/')
     query = parse_qs(u.query)
     if 'greenhouse.io' in (u.hostname or '') or 'gh_jid' in query:
         match = re.search(r'/jobs/(\d+)', path)
@@ -35,7 +35,7 @@ def identity(record):
     if 'myworkdayjobs.com' in (u.hostname or ''):
         match = re.search(r'_([^/]+?)(?:/apply)?$', path)
         if match:
-            return (u.hostname or '') + ':' + re.sub(r'-\d+$', '', match.group(1))
+            return (u.hostname or '') + ':' + match.group(1)
     if 'lever.co' in (u.hostname or '') or 'ashbyhq.com' in (u.hostname or ''):
         match = re.search(r'[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}', path)
         if match:
@@ -77,11 +77,13 @@ def check(payload, now=None):
         if any(not isinstance(r.get('Submission Confirmed'), bool) for r in rows):
             raise ValueError('Jobs submission flags must be native booleans')
         records = [{'company': r.get('Company'), 'position': r.get('Position'),
-                    'url': r.get('Job URL'), 'status': r.get('Status', ''),
+                    'canonical_key': r.get('Canonical Job Key'), 'url': r.get('Job URL'), 'status': r.get('Status', ''),
                     'applied_at': r.get('Applied At'),
                     'submission_confirmed': r['Submission Confirmed']} for r in rows]
     else:
         records = snapshot['tracker'] + snapshot['history']
+    if payload.get('historical_benchmark') and run_mode != 'replacement':
+        raise ValueError('Historical benchmark must use replacement duplicate protection')
     candidates = payload['candidates']
     requested_count = payload.get('requested_count', 5)
     if not isinstance(requested_count, int) or isinstance(requested_count, bool) or requested_count < 1:
@@ -103,9 +105,9 @@ def check(payload, now=None):
         if key in seen:
             reasons.append('Duplicate within shortlist')
         seen.add(key)
-        exact = [r for r in records if identity(r) == key]
-        if re.search(r'\b(?:senior|sr\.?|lead)\b', c.get('position', ''), re.I):
-            reasons.append('Senior/Sr/Lead title excluded, including campus graduate bands')
+        exact = [r for r in records if identity(r) == key or r.get('canonical_key') == key]
+        if re.search(r'\b(?:senior|sr\.?|lead|principal|director|sales|sdr|bdr)\b', c.get('position', ''), re.I):
+            reasons.append('Senior/lead/sales title excluded, including campus graduate bands')
         if payload.get('run_mode', 'normal') == 'normal' and (exact or c.get('retained')):
             reasons.append('Normal runs require new jobs; retained/previously-seen roles do not fill requested slots')
         if any(submitted(r) for r in exact):
@@ -123,7 +125,7 @@ def check(payload, now=None):
                 if evidence.get('verdict') != 'pass' or not evidence.get('evidence'):
                     reasons.append('Preflight incomplete: ' + gate)
             app = c.get('gates', {}).get('application_path', {})
-            if not app.get('checked_at') or not 0 <= (now-stamp(app['checked_at'])).total_seconds() <= 86400:
+            if not payload.get('historical_benchmark') and (not app.get('checked_at') or not 0 <= (now-stamp(app['checked_at'])).total_seconds() <= 86400):
                 reasons.append('Application evidence missing or stale')
             if payload.get('process_policy_version', 1) >= 2:
                 selection = c.get('selection', {})

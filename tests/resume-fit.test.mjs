@@ -6,7 +6,7 @@ const pack = () => ({
   role: {company:'Example',title:'Analyst',requisitionOrJobUrl:'https://example.org/jobs/1'},
   jobDescriptionSnapshot: {url:'https://example.org/jobs/1',capturedAt:'2026-10-26',text:('Built analytics dashboard. Cleaned customer data. Evaluated model outputs. ').repeat(20)},
   candidateEvidence: [{id:'e1',description:'Built analytics dashboard',source:'verified master resume, role X',verified:true}],
-  requirements: ['Built analytics dashboard','Cleaned customer data','Evaluated model outputs'].map((proof,i)=>({id:'r'+(i+1),description:proof,employerQuote:proof,kind:'task',requiredDepth:'applied',demonstratedDepth:'applied',sourceQuote:proof,sourceText:proof,reviewVerdict:'supported',evidenceRationale:'Direct executed task in verified internship; no independent production ownership implied.',gaps:'Different domain; no invented outcomes.',critical:true,status:'met',evidenceIds:['e1'],resumeProof:proof})),
+  requirements: ['Built analytics dashboard','Cleaned customer data','Evaluated model outputs'].map((proof,i)=>({id:'r'+(i+1),description:proof,employerQuote:proof,kind:'task',requiredDepth:'applied',demonstratedDepth:'applied',sourceQuote:proof,sourceText:proof,reviewVerdict:'supported',evidenceRationale:'Direct executed task in verified internship; no independent production ownership implied.',gaps:'Different domain; no invented outcomes.',critical:true,status:'met',evidenceIds:['e1'],resumeProof:proof,workExample:{context:'internship',actionQuote:proof,outputQuote:proof}})),
   primaryDuties: [{requirementId:'r1'},{requirementId:'r2'},{requirementId:'r3'}],
   resume: {masterSource:'approved master version 1',text:'Built analytics dashboard. Cleaned customer data. Evaluated model outputs. '.repeat(30)},
   seniorityAssessment: {status:'supported',postingRequirement:'0–2 years',actualEvidence:'Relevant internships and projects'},
@@ -74,7 +74,7 @@ test('an arbitrary string cannot stand in for the JD capture date',()=>{
 
 test('a genuine collaboration task is applied work, not a course label',()=>{
  const p=pack(),proof='Collaborated with a four-person team to research internal client needs';
- Object.assign(p.requirements[0],{employerQuote:proof,resumeProof:proof,sourceText:proof,sourceQuote:proof});
+ Object.assign(p.requirements[0],{employerQuote:proof,resumeProof:proof,sourceText:proof,sourceQuote:proof,workExample:{context:'internship',actionQuote:proof,outputQuote:proof}});
  p.jobDescriptionSnapshot.text+=' '+proof;p.resume.text+=' '+proof;
  assert.equal(auditResumeFit(p).decision,'READY_FOR_HUMAN_REVIEW');
 });
@@ -82,7 +82,7 @@ test('a genuine collaboration task is applied work, not a course label',()=>{
 
 test('verified applied stakeholder research is recognized without weakening course-title holds',()=>{
  const p=pack(); const proof='Researched stakeholder needs with a four-person team';
- Object.assign(p.requirements[0],{description:proof,employerQuote:proof,resumeProof:proof,sourceText:proof,sourceQuote:proof});
+ Object.assign(p.requirements[0],{description:proof,employerQuote:proof,resumeProof:proof,sourceText:proof,sourceQuote:proof,workExample:{context:'internship',actionQuote:proof,outputQuote:proof}});
  p.jobDescriptionSnapshot.text+=' '+proof;p.resume.text+=' '+proof;
  assert.equal(auditResumeFit(p).decision,'READY_FOR_HUMAN_REVIEW');
  p.requirements[0].resumeProof='Stakeholder Research';p.resume.text+=' Stakeholder Research';
@@ -90,8 +90,8 @@ test('verified applied stakeholder research is recognized without weakening cour
 });
 
 test('ordinary executed-work wording is accepted while tool/course lists remain held',()=>{
- for(const proof of ['Prepared validated datasets for output assessment','Gathered client needs and defined a project scope','Interpreted campaign KPIs and presented recommendations','Presented campaign performance findings','Revised an administrative agent workflow']) {
-  const p=pack();Object.assign(p.requirements[0],{employerQuote:proof,resumeProof:proof,sourceText:proof,sourceQuote:proof});
+ for(const proof of ['Prepared validated datasets for output assessment','Gathered client needs and defined a project scope','Interpreted campaign KPIs and presented recommendations','Presented campaign performance findings','Revised an administrative agent workflow','Examined recognition records for classification errors','Reconciled source records against the reporting output']) {
+  const p=pack();Object.assign(p.requirements[0],{employerQuote:proof,resumeProof:proof,sourceText:proof,sourceQuote:proof,workExample:{context:'internship',actionQuote:proof,outputQuote:proof}});
   p.jobDescriptionSnapshot.text+=' '+proof;p.resume.text+=' '+proof;
   assert.equal(auditResumeFit(p).decision,'READY_FOR_HUMAN_REVIEW');
   p.requirements[0].resumeProof='SQL, Python, Advanced Excel';p.resume.text+=' SQL, Python, Advanced Excel';

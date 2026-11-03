@@ -6,9 +6,9 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {randomUUID} from 'node:crypto';
 import {digest,fileDigest,writeJson,readManifest,runStage,outputsValid} from './run-checkpoint.mjs';
-import {discover,EMPLOYER_ALIASES} from './job-search-discovery.mjs';
-import {jobKey} from '../src/lib/job-search-model.mjs';
-import {auditResumeArtifact} from './check-resume-fit.mjs';
+import {discover,EMPLOYER_ALIASES,earlyMismatch} from './job-search-discovery.mjs';
+import {jobKey,sameJob} from '../src/lib/job-search-model.mjs';
+import {auditResumeArtifact,SourceTextCache} from './check-resume-fit.mjs';
 
 const scripts=dirname(fileURLToPath(import.meta.url));
 const python=process.env.CODEX_PRIMARY_RUNTIME_PYTHON||'python3';
@@ -34,17 +34,35 @@ function jobs(snapshot) {
 }
 function value(v) {return {userEnteredValue:typeof v==='boolean'?{boolValue:v}:typeof v==='number'?{numberValue:v}:{stringValue:String(v??'')}};}
 
+export function checkCandidateIdentity(candidates,snapshot,mode) {
+  const records=jobs(snapshot),seen=new Set();
+  for(const c of candidates){
+    const mismatch=earlyMismatch(c);required(!mismatch,mismatch);
+    const key=jobKey({...c,canonicalKey:undefined});
+    required(!c.canonicalKey||c.canonicalKey===key,'New candidate key must match its full requisition URL');
+    required(!seen.has(key),'Duplicate within shortlist');seen.add(key);
+    const matches=records.filter(r=>sameJob(c,{canonicalKey:r.record['Canonical Job Key'],url:r.record['Job URL']}));
+    required(!matches.some(r=>r.record['Submission Confirmed']===true||r.record['Applied At']||/^(Applied|Rejected|Interview|Offer)$/i.test(r.record.Status)),
+      'Already submitted: resume generation forbidden');
+    if(mode==='run')required(!matches.length&&!c.retained,'Previously seen roles cannot fill new-job slots');
+    else required(matches.length===1,'Revision/benchmark must resolve one existing unsubmitted role');
+  }
+}
+
 export function validateUploads(release,receipts) {
   const seen=new Set();
   for(const receipt of receipts) {
     required(!seen.has(receipt.key),'Duplicate upload receipt');seen.add(receipt.key);
     const resume=release.resumes.find(r=>r.key===receipt.key);
     required(resume&&resume.sha256===receipt.sha256,'Upload receipt does not match released PDF');
-    required(/^libfile_[a-z0-9]+$/i.test(receipt.library_file_id||''),'Missing successful Library receipt');
+    if(receipt.library_file_id)required(/^libfile_[a-z0-9]+$/i.test(receipt.library_file_id),'Invalid Library receipt');
     const id=String(receipt.drive_url||'').match(/^https:\/\/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)\/view(?:\?|$)/)?.[1];
-    required(id&&id===receipt.drive_file_id,'Missing/mismatched Drive receipt');
+    if(receipt.drive_url||receipt.drive_file_id)required(id&&id===receipt.drive_file_id,'Missing/mismatched Drive receipt');
+    if(receipt.uncertain?.length)required(false,'Uncertain upload outcome: inspect provider state before retrying '+receipt.key);
   }
-  return release.resumes.filter(r=>!seen.has(r.key));
+  return release.resumes.flatMap(r=>{const receipt=receipts.find(x=>x.key===r.key);
+    const missing=['library','drive'].filter(provider=>provider==='library'?!receipt?.library_file_id:!receipt?.drive_file_id);
+    return missing.length?[{...r,missing}]:[];});
 }
 
 // This checks that a role-first draft was supplied. Semantic relevance and
@@ -55,20 +73,26 @@ export function validateAuthoringPlans(plans,packs) {
   for(const plan of plans) {
     const pack=packs.find(p=>p.key===plan.key),review=plan.authoringReview;
     required(pack&&review?.roleFocus&&review.comparisonDecision,'Missing role-first drafting review for '+plan.key);
-    required(work.every(y=>typeof plan.changes?.[y]==='string'&&plan.changes[y].trim()),'Supply the complete reviewed experience draft; do not inherit master bullets.');
+    required(work.every(y=>(typeof plan.changes?.[y]==='string'&&plan.changes[y].trim())||review.retainedBaselines?.includes(y)),
+      'Review each experience slot: supply a replacement or explicitly retain the pinned master evidence.');
     for(const duty of pack.primaryDuties||[]) {
       const selected=review.evidenceSelections?.find(s=>s.requirementId===duty.requirementId);
-      required(selected&&plan.changes[selected.baseline]&&selected.rationale&&selected.sourceIds?.length,
+      required(selected&&(plan.changes[selected.baseline]||review.retainedBaselines?.includes(Number(selected.baseline)))&&selected.rationale&&selected.sourceIds?.length,
         'Map each primary duty to the selected draft evidence: '+duty.requirementId);
       required(selected.sourceIds.every(id=>pack.candidateEvidence.some(e=>e.id===id)),'Unknown selected evidence source');
     }
     required([681,694,707].every(y=>review.projectChoices?.some(p=>Number(p.baseline)===y&&p.rationale&&p.scopeLimit)),
       'Explain each project choice and its factual scope.');
-    const signature=work.map(y=>plan.changes[y].trim()).sort().join('\n');
+    const signature=work.map(y=>(plan.changes[y]||'retained:'+y).trim()).sort().join('\n');
     required(!signatures.has(signature)||review.sharedExperienceRationale,
       'Identical experience text across roles requires an explicit evidence-based justification; skills and ordering alone are not a rewrite.');
     signatures.set(signature,plan.key);
   }
+}
+
+// Only values consumed by the renderer belong in its cache fingerprint.
+export function renderPlan(plan) {
+  return {changes:plan.changes,projectLabels:plan.projectLabels,skillLabels:plan.skillLabels||{}};
 }
 
 export function permitsFitHeldRevision(mode,candidate,result) {
@@ -84,14 +108,14 @@ export function readyPlan(snapshot,candidates,receipts,spreadsheetId) {
   let nextRow=snapshot.jobs.reduce((last,row,index)=>row[0]?index+1:last,1);
   const requests=[],expectedBefore=[];
   for(const candidate of candidates) {
-    const key=jobKey(candidate), upload=receipts.find(r=>r.key===key), existing=byKey.get(key);
+    const key=jobKey(candidate), upload=receipts.find(r=>r.key===key), existing=byKey.get(key)||records.find(r=>sameJob(candidate,{canonicalKey:r.record['Canonical Job Key'],url:r.record['Job URL']}));
     const readyStatus=candidate.releaseStatus||'Ready to Submit';
     required(['Ready to Submit','Found'].includes(readyStatus),'Invalid package review status');
     required(upload,'Missing upload for '+key);
-    if(existing?.record['Submission Confirmed']===true) continue;
+    if(existing&&(existing.record['Submission Confirmed']===true||existing.record['Applied At']||/^(Applied|Rejected|Interview|Offer)$/i.test(existing.record.Status))) continue;
     if(existing) required(existing.record['Tailored Resume']===upload.drive_url,'Existing job is not this run’s uploaded artifact; reconcile before writing.');
     const row=header.map((_,i)=>existing?.row[i]??'');
-    const fields={'Canonical Job Key':key,'Application ID':existing?.record['Application ID']||'APP-'+digest(key).slice(0,16),
+    const fields={'Canonical Job Key':existing?.record['Canonical Job Key']||key,'Application ID':existing?.record['Application ID']||'APP-'+digest(key).slice(0,16),
       Company:candidate.company,Position:candidate.position,'Job URL':candidate.url,Status:readyStatus,
       Location:candidate.location||'','Role Family':candidate.roleFamily||'Analytics','Match Score':candidate.score??'',
       'Posted At':candidate.posted||'','First Seen At':existing?.record['First Seen At']||new Date().toISOString(),
@@ -145,14 +169,14 @@ export async function run(directory,{mode='run'}={}) {
       if(m.waiting&&(!stages.length||stages.includes(m.waiting.stage))){m.waitHistory=m.waitHistory||[];m.waitHistory.push({...m.waiting,durationMs:Date.now()-Date.parse(m.waiting.since)});delete m.waiting;writeJson(manifestPath,m);}
     };
     if(mode==='status')return {status:manifest.waiting?'waiting':'recorded',wallElapsedMs:Date.now()-Date.parse(manifest.startedAt),...manifest};
-    required(['run','revise','sync'].includes(mode),'Use run|revise|sync|status RUN_DIRECTORY');
+    required(['run','revise','benchmark','sync'].includes(mode),'Use run|revise|benchmark|sync|status RUN_DIRECTORY');
     required(config.spreadsheetId,'Missing canonical spreadsheet ID');
     const snapshot=read(path('snapshotPath'));fresh(snapshot);jobs(snapshot);
     const code={runner:fileDigest(join(scripts,'job-search-run.mjs')),render:fileDigest(join(scripts,'render-job-resumes.py')),
       checker:fileDigest(join(scripts,'check-resume-fit.mjs')),preflight:fileDigest(join(scripts,'job_search_preflight.py'))};
     const codeDigest=digest(code);
     let release;
-    if(mode==='run'||mode==='revise') {
+    if(mode==='run'||mode==='revise'||mode==='benchmark') {
       const policy=policyFor(dir,config);
       const master=config.master;
       required(master?.library_file_id&&master.version&&master.sha256,'Pin the current approved master metadata');
@@ -167,6 +191,7 @@ export async function run(directory,{mode='run'}={}) {
       });
       const shortlistPath=path('shortlistPath'),plansPath=path('plansPath'),packsPath=path('packsPath'),reviewsPath=path('reviewsPath');
       if(!existsSync(shortlistPath)) {
+        required(mode!=='benchmark','Benchmark requires one existing role; discovery is disabled.');
         const discoveryPath=join(dir,'discovery.json');
         const sourceConfig={stateDir:resolve(dir,config.stateDir||'../../cache'),sources:config.sources||[],policy};
         await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,policy,jobs:digest(snapshot.jobs),window:Math.floor(Date.now()/900_000)},async()=>{
@@ -175,22 +200,25 @@ export async function run(directory,{mode='run'}={}) {
         return wait('shortlist',{path:discoveryPath,needed:config.requestedCount||5,
           instruction:'Review exact employer JDs and application paths, add dated evidence packs and reviewed authoring plans. Discovery leads are not qualified jobs.'});
       }
-      const candidates=read(shortlistPath),plans=existsSync(plansPath)?read(plansPath):null,packs=existsSync(packsPath)?read(packsPath):null;
+      const candidates=read(shortlistPath);
       required(candidates.length===(config.requestedCount||5),'Continue discovery until the requested distinct eligible count is met; do not pad.');
+      checkCandidateIdentity(candidates,snapshot,mode);
+      const plans=existsSync(plansPath)?read(plansPath):null,packs=existsSync(packsPath)?read(packsPath):null;
       if(!plans||!packs)return wait('authoring-inputs',{plansPath,packsPath});
       validateAuthoringPlans(plans,packs);
-      if(mode==='revise') {
+      if(mode==='revise'||mode==='benchmark') {
+        if(mode==='benchmark')required(candidates.length===1,'Benchmark requires exactly one existing role.');
         required(config.revisionOf,'Revision mode must identify the prior package.');
         for(const c of candidates) {
-          const existing=jobs(snapshot).find(r=>r.record['Canonical Job Key']===jobKey(c));
-          required(existing&&existing.record['Submission Confirmed']===false&&!existing.record['Applied At'],
+          const existing=jobs(snapshot).find(r=>sameJob(c,{canonicalKey:r.record['Canonical Job Key'],url:r.record['Job URL']}));
+          required(existing&&existing.record['Submission Confirmed']===false&&!existing.record['Applied At']&&!/^(Applied|Rejected|Interview|Offer)$/i.test(existing.record.Status),
             'Revision mode only permits an existing unsubmitted package; submitted snapshots are immutable.');
         }
       }
       const norm=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
       const employer=v=>norm(policy.employerAliases[v]||v);
       for(const candidate of candidates) {
-        const similar=jobs(snapshot).filter(r=>r.record['Canonical Job Key']!==jobKey(candidate)&&employer(r.record.Company)===employer(candidate.company)&&norm(r.record.Position)===norm(candidate.position));
+        const similar=jobs(snapshot).filter(r=>!sameJob(candidate,{canonicalKey:r.record['Canonical Job Key'],url:r.record['Job URL']})&&employer(r.record.Company)===employer(candidate.company)&&norm(r.record.Position)===norm(candidate.position));
         if(similar.length) {
           const review=candidate.distinctRoleReview,pack=packs.find(p=>p.key===jobKey(candidate));
           required(review?.decision==='distinct'&&similar.some(r=>r.record['Canonical Job Key']===review.comparedKey)&&
@@ -209,7 +237,7 @@ export async function run(directory,{mode='run'}={}) {
         // A completed release may resume uploads/sync without reauthoring. New
         // content always repeats the fresh duplicate gate before touching PDFs.
         const preflightPath=join(dir,'preflight.json'),preflightResult=join(dir,'preflight-result.json');
-        const payload={process_policy_version:2,run_mode:mode==='revise'?'replacement':'normal',requested_count:config.requestedCount||5,
+        const payload={process_policy_version:2,run_mode:['revise','benchmark'].includes(mode)?'replacement':'normal',historical_benchmark:mode==='benchmark',requested_count:config.requestedCount||5,
           snapshot:{read_at:snapshot.readAt,jobs:snapshot.jobs},master,candidates};
         await runStage(manifestPath,'preflight',{payload,code:code.preflight},async()=>{
           writeJson(preflightPath,payload);
@@ -227,7 +255,7 @@ export async function run(directory,{mode='run'}={}) {
           const stem=digest(key).slice(0,16),input=join(dir,stem+'-render.json'),report=join(dir,stem+'-render-report.json');
           const output=join(dir,'resumes','Misha-Semenov-'+stem+'.pdf');
           await runStage(manifestPath,'render:'+key,{code:code.render,master:master.sha256,fonts:fontInput,
-            identity:{key,company:candidate.company,position:candidate.position},plan},async()=>{
+            identity:{key,company:candidate.company,position:candidate.position},plan:renderPlan(plan)},async()=>{
             writeJson(input,{master,fonts:read(fontsFile),jobs:[{...plan,key,company:candidate.company,position:candidate.position,output}]});
             execute(python,[join(scripts,'render-job-resumes.py'),input,report]);
             const data=read(report)[0];return [report,data.localPath,data.previewPath,data.textPath];
@@ -236,7 +264,7 @@ export async function run(directory,{mode='run'}={}) {
         }
         if(!existsSync(reviewsPath))return wait('pdf-review',{reviewsPath,pdfs:reports.map(r=>({key:r.key,sha256:r.sha256,previewPath:r.previewPath,previewSha256:fileDigest(r.previewPath)}))});
         const reviews=read(reviewsPath);
-        const sourceTextCache=new Map();
+        const sourceTextCache=new SourceTextCache(join(resolve(dir,config.stateDir||'../../cache'),'evidence-text'));
         await runStage(manifestPath,'release',context,async()=>{
           const files=[];
           for(const report of reports) {
@@ -263,9 +291,10 @@ export async function run(directory,{mode='run'}={}) {
         });
         release=read(releasePath);
       }
+      if(mode==='benchmark'){resolveWait();return {status:'complete',mode,changed:false,resumes:release.resumes.map(r=>({key:r.key,path:r.localPath,sha256:r.sha256})),manifest:manifestPath};}
       const uploadsPath=path('uploadsPath'),receipts=existsSync(uploadsPath)?read(uploadsPath):[];
       const pending=validateUploads(release,receipts);
-      if(pending.length)return wait('uploads',{uploadsPath,pending:pending.map(r=>({key:r.key,path:r.localPath,sha256:r.sha256})),
+      if(pending.length)return wait('uploads',{uploadsPath,pending:pending.map(r=>({key:r.key,path:r.localPath,sha256:r.sha256,missing:r.missing})),
         instruction:'Save only missing PDFs in one Library batch and bounded parallel Drive uploads. Record exact connector receipts; never upload a saved item again.'});
       resolveWait('uploads');
       await runStage(manifestPath,'uploads',{release:fileDigest(releasePath),receipts},async()=>[uploadsPath]);
@@ -277,7 +306,8 @@ export async function run(directory,{mode='run'}={}) {
       }
       const readback=read(readbackPath);fresh(readback);
       for(const report of release.resumes) {
-        const record=jobs(readback).find(r=>r.record['Canonical Job Key']===report.key)?.record;
+        const candidate=candidates.find(c=>jobKey(c)===report.key);
+        const record=jobs(readback).find(r=>sameJob(candidate,{canonicalKey:r.record['Canonical Job Key'],url:r.record['Job URL']}))?.record;
         const receipt=receipts.find(r=>r.key===report.key);
         const expectedStatus=candidates.find(c=>jobKey(c)===report.key)?.releaseStatus||'Ready to Submit';
         required(record&&record['Tailored Resume']===receipt.drive_url&&
@@ -328,6 +358,6 @@ export async function run(directory,{mode='run'}={}) {
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href) {
   try{const [mode,dir,input]=process.argv.slice(2);required(dir,'Use job-search-run.mjs run|sync|status PRIVATE_RUN_DIRECTORY');
-    console.log(JSON.stringify(mode==='reject'?recordRejections(dir,read(input)):await run(dir,{mode}),null,2));}
+    console.log(JSON.stringify(mode==='checkpoint'?JSON.parse(execute(python,[join(scripts,'archive-job-search.py'),dir,input])):mode==='reject'?recordRejections(dir,read(input)):await run(dir,{mode}),null,2));}
   catch(error){console.error(error.message);process.exitCode=1;}
 }

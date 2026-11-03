@@ -11,6 +11,11 @@ use `npm run jobs -- sync PRIVATE_RUN_DIRECTORY` for confirmed submissions or re
 Use `npm run jobs -- revise PRIVATE_RUN_DIRECTORY` for an explicitly requested rewrite of existing
 unsubmitted packages. Set revisionOf to the prior run. Retained roles are not new jobs; reuse their
 Library/Drive identities and preserve submitted snapshots. All source, PDF and release checks apply.
+Use `npm run jobs -- benchmark PRIVATE_RUN_DIRECTORY` for one explicitly requested existing,
+unsubmitted role using its dated captured JD. Set requestedCount=1 and revisionOf. It uses all
+source/PDF checks but stops before uploads, tracker or publication; it never asserts current availability.
+Use `npm run jobs -- checkpoint PRIVATE_STATE_ROOT ARCHIVE_PATH` to close and verify the private ZIP
+before upload. The archive must be outside the state root; unchanged bytes return changed=false.
 Use `npm run jobs -- status PRIVATE_RUN_DIRECTORY` for measured stage/wait durations.
 Do not copy an earlier run's scripts or assemble a new renderer. Keep private run directories and caches
 outside the checkout or inside its ignored `.job-search/` directory. Never commit candidate data, evidence
@@ -75,7 +80,11 @@ Preserve date-only precision; never infer an application from preparation or a s
    requests metadata first; Lever/Ashby reuse their board response. Four concurrent requests, eight-second
    deadlines, explicit errors. Successful sources cache for 15 minutes; 404/410 for 24 hours;
    401/403/429 for one hour; transient failures for five minutes. Source bodies are content-addressed.
-   Exact known requisitions are removed before deeper research. Same employer/title and known aliases
+   Full Workday requisitions, including hyphens and suffixes, remain distinct. Match historical keys
+   through their saved URLs without rewriting submitted records. Exact known requisitions are removed
+   before deeper research. The runner repeats identity/submission protection before reading authoring plans.
+   Use earlyMismatch for explicit salary, location, timing, mandatory-experience and CPT/OPT restrictions.
+   Missing metadata is not proof of mismatch. An AI-branded recruiting/admin role is not an AI analyst role. Same employer/title and known aliases
    (including Deploy/Hive) are held as possible reposts. A new ID alone cannot fill a new-job slot.
 3. **Research and freeze:** supplement ATS discovery with connected search, including the official
    UN/agency check and sponsor-friendly employers. Research only surviving relevant leads. Verify the
@@ -88,21 +97,30 @@ Preserve date-only precision; never infer an application from preparation or a s
    rejection/closure. A same-title alias requires `distinctRoleReview` with comparedKey, decision=distinct,
    employerSource, employerQuote present in the JD, and an actual team/duties/program difference.
 5. **Draft and render:** Treat the master as verified facts and style, not inherited experience copy.
-   Supply the complete reviewed experience text. Each plan has authoringReview with roleFocus,
+   Review each experience slot; replace it or explicitly retain the pinned master bullet with
+   authoringReview.retainedBaselines. Do not rewrite all fifteen bullets for wording differences. Each plan has authoringReview with roleFocus,
    evidenceSelections mapping each primary duty to a baseline/sourceIds/rationale, projectChoices
-   explaining the three selected projects and scopeLimit, and comparisonDecision. Skills edits and
-   reordered master bullets alone are not substantive rewriting. The runner checks this boundary;
+   explaining the three selected projects and scopeLimit, and comparisonDecision. Select evidence and projects for actual duties. Retain strong directly relevant bullets.
+   Explain evidence selection and positioning; synonym swaps and keyword edits are not substantive work. The runner checks this boundary;
    an operator must still review semantic relevance. No arbitrary changed-word percentage.
    Optional skillLabels may reorder the three skills categories to put the role focus first.
    **Render:** `plans.json` is an array keyed by canonical requisition, with reviewed `changes`
    (baseline:text) and `projectLabels` (681/694/707:label). The pinned-master renderer preserves geometry,
    chronology, education/experience structure and links. No model writes code or invents bullets inside
-   the renderer. Only its actual inputs invalidate a PDF; a new read timestamp, score or publishing retry
+   the renderer. Only changes, projectLabels, skillLabels, identity, master, fonts and renderer code invalidate a PDF;
+   writing-review rationale and other non-rendering metadata do not. In particular, a new read timestamp, score or publishing retry
    does not. Actual text/bounds/fonts/links are checked and PNG/text companions are produced.
 6. **Content and visual release:** `packs.json` follows [the evidence standard](../scripts/RESUME_TAILORING_STANDARD.md).
    Each pack has `key`, 3–5 distinct employer work duties and the full requirements ledger. Every candidate
    evidence entry also binds `localPath` and `sha256` to the original approved/verified file. Critical source
-   excerpts are checked against independently read file bytes; course titles cannot prove applied work.
+   excerpts are checked against independently read file bytes. SourceTextCache retains extracted text by
+   source SHA256 with a text-integrity hash, reused across runs. Keep a compact private evidence bank
+   with source hash/path, exact excerpts, work context and factual limits; re-extract only changed sources; course titles cannot prove applied work. Applied critical evidence requires workExample with context
+   (professional/internship/academic_team/academic_individual/personal/volunteer), actionQuote present in
+   sourceText, and outputQuote present in resumeProof. This replaces the verb whitelist; human review
+   must establish that the cited work actually supports the duty. Never substitute a transferable skill
+   for a required platform or minimum professional tenure. Honor explicit training/no-domain-experience
+   wording; distinguish mandatory qualifications from preferences and future duties.
    View each final PNG once; read its actual extracted text and fact-check the claims. Write reviews.json
    entries with key, sha256, previewSha256, reviewer, renderedAndInspected, extractedTextReviewed,
    claimsFactChecked. These flags record real review, never fabricated defaults. The controller invokes
@@ -112,7 +130,9 @@ Preserve date-only precision; never infer an application from preparation or a s
    Unsupported duties are a discovery/content problem, not a reason to weaken the checker.
 7. **Save:** the runner returns only missing uploads. Use one Library batch and bounded parallel Drive
    uploads. Save exact successful connector receipts to uploads.json: key, sha256, library_file_id,
-   drive_file_id, drive_url. Keep successful receipts on partial failure; do not upload them again.
+   drive_file_id, drive_url. Keep successful per-provider receipts on partial failure; the runner returns missing providers only.
+   Record uncertain:["library"] or ["drive"] after an ambiguous result; inspect the provider before
+   retrying. Do not repeat a successful save or treat missing acknowledgement as proof of failure.
 8. **Sheet:** the runner produces ready-sheet-plan.json. Compare expectedBefore with fresh target cell
    metadata immediately before applying its structured requests. If state changed, refresh snapshot.json
    and regenerate the plan. Preserve submitted records and exact submitted PDFs. Read back Jobs/Events
@@ -136,9 +156,13 @@ Entries are `{key,reason,revision,hours}` (revision may be null). They expire wi
 is silently swallowed. Do not repeat a cached failing route through multiple search engines unless new
 evidence changes the result. Cache is a retrieval aid, not qualification or permanent proof of closure.
 
-Every executed stage and external review/wait is timed in manifest.json. A completed stage is reused
+Every executed stage and external review/wait is timed in manifest.json. These are local stage timings,
+not token or billing records; they cannot explain every external research action. Keep tool output to
+counts, relevant excerpts and exceptions. Read sources once and retain full responses privately. A completed stage is reused
 only when its inputs and every referenced output hash still match. Missing/changed files invalidate reuse.
-Resume at the returned boundary. A sync failure never authorizes recreating resumes. Save the private
+Resume at the returned boundary. A sync failure never authorizes recreating resumes. Finalize the archive with the checkpoint command (ZIP close, CRC and per-file SHA256 verification,
+atomic installation). Never upload an archive while its writer is still running. Keep the existing
+Library identity and expected version guard; changed=false means no upload. Save the private
 state/cache manifest and new rejection ledger with the existing private pipeline state at handoff; restore
 that state once at the next run, then refresh live Jobs/submission evidence. Bootstrap/source data is not
 another mutable tracker. Keep the reply monitor schedule unchanged.

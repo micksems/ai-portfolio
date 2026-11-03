@@ -1,6 +1,17 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
+import {join} from 'node:path';
+import {digest,writeJson} from './run-checkpoint.mjs';
+
+export class SourceTextCache {
+  constructor(directory){this.directory=directory;mkdirSync(directory,{recursive:true});}
+  has(hash){return existsSync(join(this.directory,hash+'.json'));}
+  get(hash){const entry=JSON.parse(readFileSync(join(this.directory,hash+'.json'),'utf8'));
+    if(entry.sourceHash!==hash||digest(entry.text)!==entry.textHash)throw new Error('Evidence text cache integrity failure');
+    return entry.text;}
+  set(hash,text){writeJson(join(this.directory,hash+'.json'),{sourceHash:hash,textHash:digest(text),text});}
+}
 
 const normalizedText = value => String(value||'').replace(/\s+/g,' ').trim();
 function artifactText(path, expectedHash, cache) {
@@ -95,9 +106,13 @@ export function auditResumeFit(pack) {
         blockers.push('Missing candidate source excerpt: ' + req.id);
       if (!req.evidenceRationale || !req.gaps || req.reviewVerdict !== 'supported')
         blockers.push('Missing explicit duty-to-evidence review and limits: ' + req.id);
-      if (req.status === 'met' && req.requiredDepth !== 'exposure' &&
-          !/\b(?:built|wrote|ran|made|maintained|managed|analyzed|analysed|evaluated|developed|created|designed|tested|cleaned|validated|refined|reviewed|organized|compared|edited|assessed|modeled|used|applied|translated|converted|identified|investigated|ranked|monitored|coordinated|collaborated|researched|documented|prepared|preprocessed|gathered|implemented|iterated|interpreted|charted|scoped|turned|corrected|kept|worked|structured|inspected|traced|recorded|produced|presented|revised|summarized|explained|mapped|defined|shared|clarified)\b/i.test(req.resumeProof || ''))
-        blockers.push('Skill name or course title is not applied-work proof: ' + req.id);
+      if (req.status === 'met' && req.requiredDepth !== 'exposure') {
+        const example=req.workExample;
+        if (!example || !['professional','internship','academic_team','academic_individual','personal','volunteer'].includes(example.context) ||
+            !example.actionQuote || !norm(req.sourceText).includes(norm(example.actionQuote)) ||
+            !example.outputQuote || !norm(req.resumeProof).includes(norm(example.outputQuote)))
+          blockers.push('Applied work needs a source-bound action, literal resume output and factual work context: '+req.id);
+      }
     }
     if (req.critical) criticalTotal += 1;
     const linked = Array.isArray(req.evidenceIds) ? req.evidenceIds : [];
@@ -147,6 +162,7 @@ export function auditResumeFit(pack) {
   }
 
   const auth = pack?.workAuthorization || {};
+  if(auth.explicitCptOptRestriction===true)blockers.push('Employer explicitly excludes CPT/OPT: excluded by candidate preference.');
   if (!['verified_permitted', 'unknown', 'explicit_restriction', 'legal_ineligible'].includes(auth.status)) {
     blockers.push('Work authorization must be verified_permitted, unknown, explicit_restriction, or legal_ineligible.');
   } else if (auth.status === 'legal_ineligible') {

@@ -42,7 +42,7 @@ test('role-first drafting rejects recycled experience with only skills or order 
  const other={...plan,key:'two',changes:{...changes,81:'Different skills',342:changes[355],355:changes[342]}};
  assert.throws(()=>validateAuthoringPlans([plan,other],[pack,{...pack,key:'two'}]),/Identical experience/);
  assert.throws(()=>validateAuthoringPlans([{...plan,authoringReview:{...authoringReview,evidenceSelections:[]}}],[pack]),/primary duty/);
- assert.throws(()=>validateAuthoringPlans([{...plan,changes:{81:'Skills only'}}],[pack]),/complete reviewed experience/);
+ assert.throws(()=>validateAuthoringPlans([{...plan,changes:{81:'Skills only'}}],[pack]),/Review each experience slot/);
 });
 
 test('completed stage reuse requires unchanged outputs, not a saved PASS label',async t=>{
@@ -118,7 +118,7 @@ test('ready plan preserves a confirmed submission and native booleans',()=>{
   assert.throws(()=>readyPlan(snapshot(),[{...candidate,releaseStatus:'Applied'}],[receipt],'sheet'),/Invalid package/);
 });
 test('sheet row indexes remain correct after blank rows',()=>{
- const row=jobRow('Ready to Submit',false),receipt={key,drive_url:row[19]};
+ const row=jobRow('Ready to Submit',false),receipt={key,drive_url:row[19]};row[12]='';
  const plan=readyPlan(snapshot([[],row]),[candidate],[receipt],'sheet');
  assert.equal(plan.requests[0].updateCells.range.startRowIndex,2);
 });

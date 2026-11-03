@@ -9,13 +9,27 @@ export function jobKey(job) {
   const uuid = path.match(/[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}/)?.[0];
   if (/^(jobs\.)?(lever\.co|ashbyhq\.com)$/.test(u.hostname) && uuid) return `${u.hostname}:${uuid}`;
   const wd = path.match(/_([^/]+)$/)?.[1];
-  if (u.hostname.endsWith('myworkdayjobs.com') && wd) return `${u.hostname}:${wd.replace(/-\d+$/, '')}`;
+  if (u.hostname.endsWith('myworkdayjobs.com') && wd) return `${u.hostname}:${wd}`;
   // Paycor reuses action URLs across tenants and requisitions. Both IDs matter;
   // source, language and application-step changes do not create a new job.
   if (u.hostname === 'recruitingbypaycor.com' && u.searchParams.get('clientId') && u.searchParams.get('id'))
     return `paycor:${u.searchParams.get('clientId').toLowerCase()}:${u.searchParams.get('id').toLowerCase()}`;
   for (const field of ['req', 'jk', 'jobId', 'jobid', 'requisitionId']) if (u.searchParams.has(field)) return `${u.hostname}${path}?${field}=${u.searchParams.get(field)}`;
   return u.hostname + path;
+}
+// Historical stored keys remain immutable; URL-derived identities recognize them
+// without propagating truncated Workday keys into new candidates.
+export function jobIdentityKeys(job) {
+  const keys = new Set();
+  if (job.url) keys.add(jobKey({...job, canonicalKey:undefined}));
+  const stored = job.canonicalKey;
+  if (stored && !/myworkdayjobs\.com:(?:req|r|jr)$/.test(stored)) keys.add(stored);
+  if (!keys.size) keys.add(jobKey(job));
+  return [...keys];
+}
+export function sameJob(a,b) {
+  const keys = new Set(jobIdentityKeys(a));
+  return jobIdentityKeys(b).some(key=>keys.has(key));
 }
 export function calculateMetrics(data) {
   const jobs = [...new Map(data.jobs.map((j) => [jobKey(j), j])).values()];
