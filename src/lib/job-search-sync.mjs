@@ -61,9 +61,21 @@ export function reconcileJobSearch(current, snapshot) {
   }
 
   // Index once; repeated tracker.find in the old loop was O(history x tracker).
+  // Accept a historical key only when the published record already binds it
+  // to this exact URL-derived requisition. New identities still use full IDs.
+  const storedKeyByIdentity = new Map(current.jobs.map(job =>
+    [jobKey({...job, canonicalKey:undefined}), jobKey(job)]));
+  const norm = value => String(value || '').toLowerCase().replace(/[^a-z0-9]/g,'');
+  for (const row of histories) {
+    if (row['Job URL']) continue;
+    const key = row['Canonical Job Key'], parts = String(key || '').split(':');
+    if (parts.length === 2 && norm(parts[0]) === norm(row.Company) && norm(parts[1]) === norm(row.Position))
+      storedKeyByIdentity.set(jobKey({company:row.Company,position:row.Position}),key);
+  }
   const trackerByKey = new Map();
   for (const row of trackers) {
-    const key = jobKey({ url: row['Job URL'], company: row.Company, position: row.Position });
+    const identity = jobKey({ url: row['Job URL'], company: row.Company, position: row.Position });
+    const key = storedKeyByIdentity.get(identity) || identity;
     if (trackerByKey.has(key)) throw new Error('Duplicate canonical Job Tracker row: ' + key);
     trackerByKey.set(key, row);
   }
@@ -75,7 +87,8 @@ export function reconcileJobSearch(current, snapshot) {
       throw new Error('Missing submission metadata in Application History: ' + (row['Application ID'] || '(unknown)'));
     const key = row['Canonical Job Key'];
     const expected = jobKey({url:row['Job URL'],company:row.Company,position:row.Position});
-    if (key !== expected) throw new Error('Canonical key differs for ' + (row['Application ID'] || '(unknown)'));
+    if (key !== expected && storedKeyByIdentity.get(expected) !== key)
+      throw new Error('Canonical key differs for ' + (row['Application ID'] || '(unknown)'));
     const prior = historyByKey.get(key);
     if (!prior || (row['Submission Confirmed'] && !prior['Submission Confirmed']))
       historyByKey.set(key, row);

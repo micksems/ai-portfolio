@@ -8,6 +8,8 @@ export function jobKey(job) {
   if ((u.hostname.endsWith('greenhouse.io') || u.searchParams.has('gh_jid')) && gh) return `greenhouse:${gh}`;
   const uuid = path.match(/[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}/)?.[0];
   if (/^(jobs\.)?(lever\.co|ashbyhq\.com)$/.test(u.hostname) && uuid) return `${u.hostname}:${uuid}`;
+  const linkedin = path.match(/\/jobs\/view\/(?:.*-)?(\d+)$/)?.[1];
+  if ((u.hostname === 'linkedin.com' || u.hostname.endsWith('.linkedin.com')) && linkedin) return `linkedin:${linkedin}`;
   const wd = path.match(/_([^/]+)$/)?.[1];
   if (u.hostname.endsWith('myworkdayjobs.com') && wd) return `${u.hostname}:${wd}`;
   // Paycor reuses action URLs across tenants and requisitions. Both IDs matter;

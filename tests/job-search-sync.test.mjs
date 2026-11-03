@@ -81,3 +81,29 @@ test('date-only serials stay date-only; ambiguous legacy text remains verbatim',
   assert.equal(sheetDate(46310),'2026-10-15');
   assert.equal(sheetDate('10/26/2026 12:00 ET'),'10/26/2026 12:00 ET');
 });
+
+
+test('historical Workday keys remain bound to their exact requisition during sync',()=>{
+ for(const [stored,suffix] of [['example.wd5.myworkdayjobs.com:req','REQ-058936'],['example.wd5.myworkdayjobs.com:2026-9014','2026-9014-1']]) {
+  const u='https://example.wd5.myworkdayjobs.com/careers/job/Analyst_'+suffix;
+  const d=base(),s=source();d.jobs[0]={...d.jobs[0],canonicalKey:stored,url:u};
+  s.tracker[1][2]=u;s.history[1][3]=u;s.history[1][6]=stored;
+  assert.equal(reconcileJobSearch(d,s).changed,false);
+  s.tracker[1][4]='https://drive.google.com/revised';
+  const changed=reconcileJobSearch(d,s);assert.equal(changed.data.jobs.length,1);
+  assert.equal(changed.data.jobs[0].canonicalKey,stored);
+  assert.equal(changed.data.jobs[0].resumeUrl,'https://drive.google.com/revised');
+  s.tracker[1][2]=u+'2';s.history[1][3]=u+'2';
+  assert.throws(()=>reconcileJobSearch(d,s),/Canonical key differs/);
+ }
+});
+
+
+test('an email-reconciled named record without a job URL preserves its company/title key',()=>{
+ const d=base(),s=source(),named='cais:ai-data-systems-engineer';
+ s.history.push(['APP-2','CAIS','AI Data Systems Engineer','',true,false,named,'Closed','Rejected','','2026-11-03','2026-11-03','']);
+ s.tracker.push(['CAIS','AI Data Systems Engineer','','Closed','']);
+ const r=reconcileJobSearch(d,s);const j=r.data.jobs.find(j=>j.canonicalKey===named);
+ assert.equal(j.submissionConfirmed,true);assert.equal(j.url,'');assert.equal(j.status,'Closed');
+ s.history[2][6]='different:unrelated';assert.throws(()=>reconcileJobSearch(d,s),/Canonical key differs/);
+});

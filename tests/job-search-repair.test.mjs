@@ -61,3 +61,11 @@ test('partial provider receipts request only missing saves and ambiguous outcome
  assert.throws(()=>validateUploads(release,[{...receipt,uncertain:['drive']}]),/Uncertain upload/);
  assert.equal(validateUploads(release,[{...receipt,drive_file_id:'d',drive_url:'https://drive.google.com/file/d/d/view'}]).length,0);
 });
+
+
+test('LinkedIn numeric and titled URLs resolve one requisition in both identity parsers',()=>{
+ const urls=['https://www.linkedin.com/jobs/view/4486880689/','https://www.linkedin.com/jobs/view/ai-strategist-at-example-4486880689/'];
+ const keys=urls.map(url=>jobKey({url}));assert.deepEqual(keys,['linkedin:4486880689','linkedin:4486880689']);
+ const py=spawnSync('python3',['-c',"from scripts.job_search_preflight import identity;import json,sys;print(json.dumps([identity({'url':u}) for u in json.loads(sys.argv[1])]))",JSON.stringify(urls)],{encoding:'utf8'});
+ assert.equal(py.status,0,py.stderr);assert.deepEqual(JSON.parse(py.stdout),keys);
+});

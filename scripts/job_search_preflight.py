@@ -32,6 +32,9 @@ def identity(record):
         key = match.group(1) if match else query.get('gh_jid', [''])[0]
         if key:
             return 'greenhouse:' + key
+    linkedin = re.search(r'/jobs/view/(?:.*-)?(\d+)$', path)
+    if ((u.hostname or '') == 'linkedin.com' or (u.hostname or '').endswith('.linkedin.com')) and linkedin:
+        return 'linkedin:' + linkedin.group(1)
     if 'myworkdayjobs.com' in (u.hostname or ''):
         match = re.search(r'_([^/]+?)(?:/apply)?$', path)
         if match:

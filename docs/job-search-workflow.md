@@ -81,7 +81,9 @@ Preserve date-only precision; never infer an application from preparation or a s
    deadlines, explicit errors. Successful sources cache for 15 minutes; 404/410 for 24 hours;
    401/403/429 for one hour; transient failures for five minutes. Source bodies are content-addressed.
    Full Workday requisitions, including hyphens and suffixes, remain distinct. Match historical keys
-   through their saved URLs without rewriting submitted records. Exact known requisitions are removed
+   through their saved URLs without rewriting submitted records. Dashboard reconciliation accepts a legacy key only when the
+   previously published record binds it to that exact requisition URL. LinkedIn numeric and titled
+   URLs share the numeric job ID. URL-less named records must match their company/title key. Exact known requisitions are removed
    before deeper research. The runner repeats identity/submission protection before reading authoring plans.
    Use earlyMismatch for explicit salary, location, timing, mandatory-experience and CPT/OPT restrictions.
    Missing metadata is not proof of mismatch. An AI-branded recruiting/admin role is not an AI analyst role. Same employer/title and known aliases

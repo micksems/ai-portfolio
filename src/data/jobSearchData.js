@@ -1,10 +1,10 @@
 export const jobSearchData = {
-  "updatedAt": "November 2, 2026",
+  "updatedAt": "November 3, 2026",
   "metrics": {
-    "applications": 132,
+    "applications": 134,
     "interviews": 8,
     "offers": 0,
-    "rejections": 41,
+    "rejections": 43,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -13,8 +13,8 @@ export const jobSearchData = {
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-02",
-    "lifetimeApplications": 136
+    "auditedAt": "2026-11-03",
+    "lifetimeApplications": 138
   },
   "jobs": [
     {
@@ -5073,6 +5073,54 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "linkedin:4486880689",
+      "company": "Joblet-AI",
+      "position": "AI Strategist",
+      "url": "https://www.linkedin.com/jobs/view/4486880689/",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "",
+      "appliedAt": "",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
+      "finalOutcome": "Rejected",
+      "rejectionAt": "2026-11-03",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "cais:ai-data-systems-engineer",
+      "company": "CAIS",
+      "position": "AI & Data Systems Engineer",
+      "url": "",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "",
+      "appliedAt": "",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
+      "finalOutcome": "Rejected",
+      "rejectionAt": "2026-11-03",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "careers.wipro.com/job/junior-forward-deployed-engineer/160017-en_us",
+      "company": "Wipro",
+      "position": "Junior Forward Deployed Engineer",
+      "url": "https://careers.wipro.com/job/Junior-Forward-Deployed-Engineer/160017-en_US/",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1W_EKcdLjJ8971Cc2LOcMYSYt2cakjTeS/view?usp=drivesdk",
+      "firstSeenAt": "2026-11-03",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -6150,10 +6198,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-02T22:46:56.209Z",
-    "sha256": "2015d1414e7120e5b2af67515678611622c8c1895e074b0c13c7dba4ae722f2b",
-    "historyRecords": 313,
-    "trackerRecords": 313,
-    "uniqueHistoryRecords": 313
+    "readAt": "2026-11-03T19:06:23.219Z",
+    "sha256": "52ee0398a8503936344d2f02397f884aba9b65eff11acaf2acf53fa86b7d3f0a",
+    "historyRecords": 314,
+    "trackerRecords": 314,
+    "uniqueHistoryRecords": 314
   }
 };
