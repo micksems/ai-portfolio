@@ -1,10 +1,10 @@
 export const jobSearchData = {
-  "updatedAt": "November 3, 2026",
+  "updatedAt": "November 4, 2026",
   "metrics": {
-    "applications": 135,
+    "applications": 136,
     "interviews": 8,
     "offers": 0,
-    "rejections": 43,
+    "rejections": 45,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -13,8 +13,8 @@ export const jobSearchData = {
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-03",
-    "lifetimeApplications": 139
+    "auditedAt": "2026-11-04",
+    "lifetimeApplications": 140
   },
   "jobs": [
     {
@@ -4807,14 +4807,14 @@ export const jobSearchData = {
       "company": "Mochi Health",
       "position": "Operations Associate (Pharmacy)",
       "url": "https://job-boards.greenhouse.io/mochihealth/jobs/5443941008",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1BpBCTKqGz4fd-rAbUAQMuMWbYqxtxxG_/view?usp=drivesdk",
       "firstSeenAt": "2026-10-30",
       "appliedAt": "2026-11-02",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active",
-      "rejectionAt": "",
+      "finalOutcome": "Rejected",
+      "rejectionAt": "2026-11-04",
       "offerAt": "",
       "notes": ""
     },
@@ -5135,6 +5135,22 @@ export const jobSearchData = {
       "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "linkedin:4487027931",
+      "company": "Joblet-AI",
+      "position": "AI Consultant (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4487027931/",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "",
+      "appliedAt": "",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
+      "finalOutcome": "Rejected",
+      "rejectionAt": "2026-11-03",
       "offerAt": "",
       "notes": ""
     }
@@ -6214,10 +6230,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-03T19:39:58.784Z",
-    "sha256": "593f362f202017dd713de35ae336de10473630344bb330552fd3ea17e52d909c",
-    "historyRecords": 315,
-    "trackerRecords": 315,
-    "uniqueHistoryRecords": 315
+    "readAt": "2026-11-04T23:00:22.838Z",
+    "sha256": "f571150858fcb2ea7dba431fc39047a82df2d7768ada4497533bf86836d1a6d8",
+    "historyRecords": 316,
+    "trackerRecords": 316,
+    "uniqueHistoryRecords": 316
   }
 };
