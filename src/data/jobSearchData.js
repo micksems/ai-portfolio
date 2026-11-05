@@ -1,19 +1,19 @@
 export const jobSearchData = {
-  "updatedAt": "November 4, 2026",
+  "updatedAt": "November 5, 2026",
   "metrics": {
     "applications": 136,
     "interviews": 8,
     "offers": 0,
-    "rejections": 45,
+    "rejections": 47,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
-    "scheduledInterviews": 2,
+    "scheduledInterviews": 1,
     "aiAssessments": 1,
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-04",
+    "auditedAt": "2026-11-05",
     "lifetimeApplications": 140
   },
   "jobs": [
@@ -4727,14 +4727,14 @@ export const jobSearchData = {
       "company": "Veeva Systems",
       "position": "Associate Consultant - Entry-Level Technology Consulting (Life Sciences)",
       "url": "https://jobs.lever.co/veeva/1584186a-ba9d-4827-9ecb-e7caec98d966",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/14Md-Jlp6MYJ5WJqPbHZokgQer0b8b2Xz/view?usp=drivesdk",
       "firstSeenAt": "2026-10-29",
       "appliedAt": "2026-10-29",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active",
-      "rejectionAt": "",
+      "finalOutcome": "Rejected",
+      "rejectionAt": "2026-11-05",
       "offerAt": "",
       "notes": ""
     },
@@ -5127,14 +5127,14 @@ export const jobSearchData = {
       "company": "Infosys",
       "position": "Associate - Campus",
       "url": "https://digitalcareers.infosys.com/global-careers/company-job/description/reqid/154434BR",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://chatgpt.com/library?file_id=libfile_24a24b8d4c688191970c0ed73f788473&account_id=personal",
       "firstSeenAt": "2026-11-03",
       "appliedAt": "2026-11-03",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active",
-      "rejectionAt": "",
+      "finalOutcome": "Rejected",
+      "rejectionAt": "2026-11-05",
       "offerAt": "",
       "notes": ""
     },
@@ -5264,7 +5264,7 @@ export const jobSearchData = {
       "id": "INT-ENIGMA-1A19438FC8C7D28B",
       "company": "Enigma",
       "position": "Data Operations Associate",
-      "stage": "Scheduled — Introductory Google Meet (not completed)",
+      "stage": "Completed — Hiring manager interview",
       "date": "2026-11-05",
       "interviewer": "Jinghong Cui (hiring manager)"
     }
@@ -6230,8 +6230,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-04T23:00:22.838Z",
-    "sha256": "f571150858fcb2ea7dba431fc39047a82df2d7768ada4497533bf86836d1a6d8",
+    "readAt": "2026-11-05T18:49:21.223Z",
+    "sha256": "5a463714afaeb3bc49157c34d4411768be04e382c7aac8762b4834a8cdc93c67",
     "historyRecords": 316,
     "trackerRecords": 316,
     "uniqueHistoryRecords": 316
