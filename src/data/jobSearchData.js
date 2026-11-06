@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "November 6, 2026",
   "metrics": {
-    "applications": 137,
+    "applications": 139,
     "interviews": 8,
     "offers": 0,
     "rejections": 47,
@@ -14,7 +14,7 @@ export const jobSearchData = {
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
     "auditedAt": "2026-11-06",
-    "lifetimeApplications": 141
+    "lifetimeApplications": 143
   },
   "jobs": [
     {
@@ -2679,7 +2679,7 @@ export const jobSearchData = {
       "finalOutcome": "Rejected",
       "rejectedAt": "2026-09-28",
       "canonicalKey": "greenhouse:6803803",
-      "rejectionAt": "2026-09-28",
+      "rejectionAt": "2026-11-06",
       "offerAt": ""
     },
     {
@@ -5111,12 +5111,12 @@ export const jobSearchData = {
       "company": "Wipro",
       "position": "Junior Forward Deployed Engineer",
       "url": "https://careers.wipro.com/job/Junior-Forward-Deployed-Engineer/160017-en_US/",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1W_EKcdLjJ8971Cc2LOcMYSYt2cakjTeS/view?usp=drivesdk",
       "firstSeenAt": "2026-11-03",
       "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -5197,6 +5197,22 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "hcltech:168496",
+      "company": "HCLTech",
+      "position": "Record Analyst / Analyst",
+      "url": "",
+      "status": "Applied",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-06",
+      "appliedAt": "2026-11-06",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -6278,10 +6294,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-06T14:08:21.442Z",
-    "sha256": "80ef69871fac50afe588f9f4a3549b6bc6f4dd86ee1d63c7864abe8390b13c34",
-    "historyRecords": 319,
-    "trackerRecords": 319,
-    "uniqueHistoryRecords": 319
+    "readAt": "2026-11-06T19:26:44.278Z",
+    "sha256": "ef2d979ed88e58e7a1273bf39f174dfb40e241b0be46ac847be5286a4a086260",
+    "historyRecords": 320,
+    "trackerRecords": 320,
+    "uniqueHistoryRecords": 320
   }
 };
