@@ -1,20 +1,20 @@
 export const jobSearchData = {
-  "updatedAt": "November 5, 2026",
+  "updatedAt": "November 6, 2026",
   "metrics": {
-    "applications": 136,
+    "applications": 137,
     "interviews": 8,
     "offers": 0,
     "rejections": 47,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
-    "scheduledInterviews": 1,
+    "scheduledInterviews": 0,
     "aiAssessments": 1,
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-05",
-    "lifetimeApplications": 140
+    "auditedAt": "2026-11-06",
+    "lifetimeApplications": 141
   },
   "jobs": [
     {
@@ -4983,12 +4983,12 @@ export const jobSearchData = {
       "company": "Cognizant",
       "position": "AI-First Business & Data Analyst",
       "url": "https://careers.cognizant.com/apj-en/jobs/47775/ai-first-business-data-analyst/",
-      "status": "Archived",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1bSiIhUDZZmvVKtTcrVHKYV6bR1v0Ag56/view?usp=drivesdk",
       "firstSeenAt": "2026-10-30",
       "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -5153,6 +5153,54 @@ export const jobSearchData = {
       "rejectionAt": "2026-11-03",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "diversityjobs.com/career/18777920/product-analyst-data-analyst-new-york-new-york",
+      "company": "Tata Consultancy Services",
+      "position": "Product Analyst / Data Analyst",
+      "url": "https://diversityjobs.com/career/18777920/Product-Analyst-Data-Analyst-New-York-New-York",
+      "status": "Found",
+      "resumeUrl": "",
+      "firstSeenAt": "",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "www.indeed.com/viewjob?jk=bebcbc6219148d4f",
+      "company": "Wipro",
+      "position": "Data Analyst",
+      "url": "https://www.indeed.com/viewjob?jk=bebcbc6219148d4f",
+      "status": "Archived",
+      "resumeUrl": "",
+      "firstSeenAt": "",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "www.hcltech.com/careers/us-gem-program",
+      "company": "HCLTech",
+      "position": "Global Engagement Manager (GEM) Program",
+      "url": "https://www.hcltech.com/careers/us-gem-program",
+      "status": "Archived",
+      "resumeUrl": "",
+      "firstSeenAt": "",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -5232,7 +5280,7 @@ export const jobSearchData = {
       "id": "INT-ONEMAIN-1A182ED447C69FB7",
       "company": "OneMain Financial",
       "position": "Analytics Analyst",
-      "stage": "Scheduled — Round 2 manager-led case study (Teams)",
+      "stage": "Reschedule requested — Round 2 manager-led case study (Teams)",
       "date": "2026-11-06",
       "interviewer": ""
     },
@@ -6230,10 +6278,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-05T18:49:21.223Z",
-    "sha256": "5a463714afaeb3bc49157c34d4411768be04e382c7aac8762b4834a8cdc93c67",
-    "historyRecords": 316,
-    "trackerRecords": 316,
-    "uniqueHistoryRecords": 316
+    "readAt": "2026-11-06T14:08:21.442Z",
+    "sha256": "80ef69871fac50afe588f9f4a3549b6bc6f4dd86ee1d63c7864abe8390b13c34",
+    "historyRecords": 319,
+    "trackerRecords": 319,
+    "uniqueHistoryRecords": 319
   }
 };
