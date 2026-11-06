@@ -87,7 +87,8 @@ export function reconcileJobSearch(current, snapshot) {
       throw new Error('Missing submission metadata in Application History: ' + (row['Application ID'] || '(unknown)'));
     const key = row['Canonical Job Key'];
     const expected = jobKey({url:row['Job URL'],company:row.Company,position:row.Position});
-    if (row['Job URL'] && key !== expected && storedKeyByIdentity.get(expected) !== key)
+    const opaqueHcltechKey = !row['Job URL'] && norm(row.Company) === 'hcltech' && /^hcltech:\d+$/i.test(key);
+    if (key !== expected && storedKeyByIdentity.get(expected) !== key && !opaqueHcltechKey)
       throw new Error('Canonical key differs for ' + (row['Application ID'] || '(unknown)'));
     const prior = historyByKey.get(key);
     if (!prior || (row['Submission Confirmed'] && !prior['Submission Confirmed']))
