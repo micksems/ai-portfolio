@@ -68,7 +68,10 @@ export function candidatesFrom(source,data) {
     location:j.categories?.allLocations?.join(' / ')||(typeof j.location==='string'?j.location:j.location?.name||j.categories?.location||''),
     source:sourceUrl(source),id:String(j.id),
     // Board metadata can select a lead, never certify a complete JD or a live form.
-    detailsCached:Boolean(j.content||j.descriptionHtml||j.descriptionPlain),revision:j.updated_at||j.updatedAt||j.publishedAt||j.createdAt||null,
+    detailsCached:Boolean(j.content||j.descriptionHtml||j.descriptionPlain),
+    descriptionSnippet:String(j.content||j.descriptionPlain||j.descriptionHtml||'')
+      .replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').slice(0,1200),
+    revision:j.updated_at||j.updatedAt||j.publishedAt||j.createdAt||null,
   })).filter(j=>j.url&&j.position);
 }
 // Use explicit posting metadata only. Missing facts stay for full-JD review;
