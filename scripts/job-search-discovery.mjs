@@ -159,7 +159,7 @@ export function selectBudgetedSources(sources,maxBoardRequests=12,sourceOffset=0
 }
 
 export async function discover(config,snapshot) {
-  const cache=new SourceCache(join(config.stateDir,'sources'));
+  const cache=new SourceCache(join(config.stateDir,'sources'),{fetcher:config.fetcher??fetch});
   const maxBoardRequests=config.maxBoardRequests??12;
   const maxDiscoveryPasses=config.maxDiscoveryPasses??2;
   const sourceOffset=config.sourceOffset??0;
@@ -189,8 +189,8 @@ export async function discover(config,snapshot) {
     passSummaries.push({index:pass+1,offset:batch.offset,queried:current.length,
       nextOffset,leads:leads.length,accepted:interim.candidates.length,
       held:interim.held.length,errors:current.filter(r=>r.response.error).length});
-    // Select broadly at metadata stage; final eligibility is still checked from JD.
-    if(interim.candidates.length>=Math.max(3,config.requestedCount??5)*3)break;
+    // Both inexpensive metadata passes are checked if more boards remain.
+    // Stopping after a large unqualified title pool caused zero-result runs.
     if(!remaining)break;
   }
   const atsLeads=results.flatMap(r=>r.response.status===200?candidatesFrom(r.source,r.response.data):[]);
