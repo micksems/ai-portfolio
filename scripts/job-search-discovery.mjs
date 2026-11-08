@@ -5,28 +5,93 @@ import {digest, writeJson} from './run-checkpoint.mjs';
 
 const MINUTE=60_000;
 export const EMPLOYER_ALIASES={Deploy:'Hive','Hive AI':'Hive'};
-export function sourceUrl(source) {
-  if (!/^[a-z0-9._-]+$/i.test(source.board || '')) throw new Error('Supply the verified ATS board slug');
-  const board=encodeURIComponent(source.board);
-  if (source.provider==='greenhouse') return `https://boards-api.greenhouse.io/v1/boards/${board}/jobs`;
-  if (source.provider==='lever') return `https://api.lever.co/v0/postings/${board}?mode=json`;
-  if (source.provider==='ashby') return `https://api.ashbyhq.com/posting-api/job-board/${board}`;
-  throw new Error('Unsupported ATS provider; use connected search for other employers');
+const safeToken=value=>typeof value==='string'&&/^[a-z0-9_-]+$/i.test(value);
+function publicUrl(value) {
+  let parsed;
+  try { parsed=new URL(value); } catch { throw new Error('A verified HTTPS employer source URL is required'); }
+  if(parsed.protocol!=='https:'||parsed.username||parsed.password||parsed.port||
+     !parsed.hostname.includes('.')||/^(localhost|.*\\.localhost|.*\\.local)$/i.test(parsed.hostname)||
+     /^(?:\\d{1,3}\\.){3}\\d{1,3}$/.test(parsed.hostname))
+    throw new Error('Employer source must be a public HTTPS URL');
+  return parsed;
 }
-
+const workdayHost=source=>{
+  const parsed=publicUrl('https://'+(source.host||''));
+  if(!/^[a-z0-9-]+\\.wd\\d+\\.myworkdayjobs\\.com$/i.test(parsed.hostname))
+    throw new Error('Use a verified Workday public careers host');
+  if(!safeToken(source.tenant)||!safeToken(source.site))
+    throw new Error('Workday source needs the verified tenant and career site');
+  return parsed.hostname;
+};
+export function sourceUrl(source) {
+  if(source.provider==='workday') {
+    const host=workdayHost(source);
+    return `https://${host}/wday/cxs/${encodeURIComponent(source.tenant)}/${encodeURIComponent(source.site)}/jobs`;
+  }
+  if(source.provider==='official-json') {
+    const url=publicUrl(source.feedUrl);
+    // A source must be explicitly bound to its official, known host;
+    // a job aggregator's arbitrary JSON endpoint is not employer evidence.
+    if(!source.officialHost||url.hostname!==source.officialHost.toLowerCase())
+      throw new Error('Official JSON feed host must match verified officialHost');
+    if(!source.company)throw new Error('Official source must identify its employer');
+    return url.href;
+  }
+  if(!/^[a-z0-9._-]+$/i.test(source.board||''))
+    throw new Error('Supply the verified ATS board slug');
+  const board=encodeURIComponent(source.board);
+  if(source.provider==='greenhouse') return `https://boards-api.greenhouse.io/v1/boards/${board}/jobs`;
+  if(source.provider==='lever') return `https://api.lever.co/v0/postings/${board}?mode=json`;
+  if(source.provider==='ashby') return `https://api.ashbyhq.com/posting-api/job-board/${board}`;
+  throw new Error('Unsupported ATS provider; configure official source or dated lead');
+}
+export function workdayRequests(source) {
+  const url=sourceUrl(source);
+  if(source.provider!=='workday')throw new Error('Workday requests require Workday source');
+  const terms=source.searchTerms??['analyst','data','AI'];
+  if(!Array.isArray(terms)||terms.length<1||terms.length>3||
+     terms.some(x=>typeof x!=='string'||!x.trim()||x.length>40))
+    throw new Error('Provide one to three relevant Workday search terms');
+  const pages=source.maxPagesPerTerm??1;
+  if(!Number.isInteger(pages)||pages<1||pages>2)
+    throw new Error('Workday page budget must be one or two');
+  return terms.flatMap(searchText=>Array.from({length:pages},(_,page)=>({
+    url,init:{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({appliedFacets:{},limit:20,offset:page*20,searchText})},
+    term:searchText,page
+  })));
+}
+function workdayJobUrl(source,externalPath) {
+  if(typeof externalPath!=='string'||!externalPath.startsWith('/')||
+     externalPath.startsWith('//')||!externalPath.includes('/job/'))return '';
+  const result=new URL(`https://${workdayHost(source)}/${source.site}${externalPath}`);
+  if(result.hostname!==source.host.toLowerCase())return '';
+  return result.href;
+}
+export function publicJobUrl(source,url) {
+  if(typeof url!=='string'||!url)return '';
+  let parsed;
+  try {parsed=publicUrl(url);}catch{return '';}
+  if(source.provider==='official-json') {
+    const hosts=source.allowedJobHosts??[source.officialHost];
+    if(!Array.isArray(hosts)||!hosts.map(x=>String(x).toLowerCase()).includes(parsed.hostname))return '';
+  }
+  return parsed.href;
+}
 export class SourceCache {
   constructor(directory,{fetcher=fetch,now=()=>Date.now(),timeoutMs=8000}={}) {
     this.directory=directory; this.fetcher=fetcher; this.now=now; this.timeoutMs=timeoutMs; this.inflight=new Map();
     mkdirSync(directory,{recursive:true});
     this.stats={networkRequests:0,cacheHits:0,errors:0};
   }
-  async get(url) {
-    if(this.inflight.has(url)) return this.inflight.get(url);
-    const promise=this.read(url); this.inflight.set(url,promise);
-    try{return await promise;}finally{this.inflight.delete(url);}
+  async get(url,init={}) {
+    const key=digest({url,method:init.method||'GET',body:init.body||''});
+    if(this.inflight.has(key)) return this.inflight.get(key);
+    const promise=this.read(url,init); this.inflight.set(key,promise);
+    try{return await promise;}finally{this.inflight.delete(key);}
   }
-  async read(url) {
-    const key=digest(url), metaPath=join(this.directory,key+'.json');
+  async read(url,init={}) {
+    const key=digest({url,method:init.method||'GET',body:init.body||''}), metaPath=join(this.directory,key+'.json');
     const meta=existsSync(metaPath)?JSON.parse(readFileSync(metaPath,'utf8')):null;
     if(meta && meta.expiresAt>this.now()) {
       this.stats.cacheHits++;
@@ -39,7 +104,7 @@ export class SourceCache {
     const timer=setTimeout(()=>controller.abort(),this.timeoutMs);
     let result;
     try {
-      const response=await this.fetcher(url,{signal:controller.signal,headers:{Accept:'application/json'}});
+      const response=await this.fetcher(url,{...init,signal:controller.signal,headers:{Accept:'application/json',...(init.headers||{})}});
       if(!response.ok) {
         const ttl=[404,410].includes(response.status)?24*60*MINUTE:[401,403,429].includes(response.status)?60*MINUTE:5*MINUTE;
         result={url,status:response.status,checkedAt:this.now(),expiresAt:this.now()+ttl,error:'HTTP '+response.status};
@@ -62,16 +127,30 @@ export class SourceCache {
 }
 
 export function candidatesFrom(source,data) {
-  const rows=Array.isArray(data)?data:data?.jobs||[];
-  return rows.map(j=>({company:source.company||source.board,position:j.title||j.text||'',
-    url:j.absolute_url||j.hostedUrl||j.jobUrl||'',
-    location:j.categories?.allLocations?.join(' / ')||(typeof j.location==='string'?j.location:j.location?.name||j.categories?.location||''),
-    source:sourceUrl(source),id:String(j.id),
-    // Board metadata can select a lead, never certify a complete JD or a live form.
-    detailsCached:Boolean(j.content||j.descriptionHtml||j.descriptionPlain),
-    descriptionSnippet:String(j.content||j.descriptionPlain||j.descriptionHtml||'')
-      .replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').slice(0,1200),
-    revision:j.updated_at||j.updatedAt||j.publishedAt||j.createdAt||null,
+  if(source.provider==='workday') {
+    return (data?.jobPostings||[]).map(j=>({
+      company:source.company,position:j.title||'',
+      url:workdayJobUrl(source,j.externalPath),location:j.locationsText||j.locationText||'',
+      source:sourceUrl(source),id:String(j.bulletFields?.[0]||j.externalPath||''),
+      discoveryChannel:'official-workday',observedAt:null,
+      detailsCached:false,descriptionSnippet:'',revision:j.postedOn||null
+    })).filter(j=>j.url&&j.position);
+  }
+  const rows=Array.isArray(data)?data:(data?.jobs||data?.results||data?.items||[]);
+  if(!Array.isArray(rows))throw new Error('Invalid official ATS job array');
+  return rows.map(j=>({
+    company:source.company||source.board,position:j.title||j.text||j.name||'',
+    url:source.provider==='official-json'
+      ?publicJobUrl(source,j.absolute_url||j.hostedUrl||j.jobUrl||j.url||'')
+      :j.absolute_url||j.hostedUrl||j.jobUrl||'',
+    location:j.categories?.allLocations?.join(' / ')||
+      (typeof j.location==='string'?j.location:j.location?.name||j.categories?.location||j.locationText||''),
+    source:sourceUrl(source),id:String(j.id??j.requisitionId??''),
+    discoveryChannel:source.provider==='official-json'?'official-feed':'official-ats',
+    detailsCached:Boolean(j.content||j.descriptionHtml||j.descriptionPlain||j.description),
+    descriptionSnippet:String(j.content||j.descriptionPlain||j.descriptionHtml||j.description||'')
+      .replace(/<[^>]*>/g,' ').replace(/\\s+/g,' ').slice(0,1200),
+    revision:j.updated_at||j.updatedAt||j.publishedAt||j.createdAt||null
   })).filter(j=>j.url&&j.position);
 }
 // Use explicit posting metadata only. Missing facts stay for full-JD review;
