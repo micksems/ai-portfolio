@@ -10,6 +10,16 @@ with tempfile.NamedTemporaryFile() as f:
  now=datetime.datetime.now(datetime.timezone.utc)
  p={'process_policy_version':2,'snapshot':{'read_at':now.isoformat(),'jobs':[['Canonical Job Key','Company','Position','Job URL','Status','Submission Confirmed'],['greenhouse:123','E','Analyst','https://job-boards.greenhouse.io/e/jobs/123','Closed',True]]},'candidates':[{'company':'E','position':'Analyst','url':'https://job-boards.greenhouse.io/e/jobs/123'}],'requested_count':1,'master':{'library_file_id':'test','version':2,'sha256':hashlib.sha256(b'master').hexdigest(),'local_path':f.name}}
  r=m.check(p,now);assert not r[0]['eligible_for_resume'];assert any('Already submitted' in x for x in r[0]['reasons'])
+ # A smaller verified shortlist must be evaluated without silently reducing the goal.
+ p['requested_count']=5
+ partial=m.check(p,now)
+ assert len(partial)==1 and 'Already submitted' in partial[0]['reasons']
+ p['candidates']=[]
+ try:
+  m.check(p,now)
+  raise AssertionError('Empty shortlist must not be accepted')
+ except ValueError as e:
+  assert 'zero result' in str(e)
  print('ok')`;
  const r=spawnSync('python3',['-c',code],{cwd:fileURLToPath(new URL('..',import.meta.url)),encoding:'utf8'});assert.equal(r.status,0,r.stderr);assert.match(r.stdout,/ok/);
 });
