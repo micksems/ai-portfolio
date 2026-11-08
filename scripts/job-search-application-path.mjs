@@ -8,8 +8,8 @@ const publicHttps=value=>{
   let u;
   try {u=new URL(value);}catch{throw new Error('Application route needs an absolute URL');}
   if(u.protocol!=='https:'||u.username||u.password||u.port||!u.hostname.includes('.')||
-    /^(localhost|.*\\.local|.*\\.localhost)$/i.test(u.hostname)||
-    /^(?:\\d{1,3}\\.){3}\\d{1,3}$/.test(u.hostname))
+    /^(localhost|.*\.local|.*\.localhost)$/i.test(u.hostname)||
+    /^(?:\d{1,3}\.){3}\d{1,3}$/.test(u.hostname))
     throw new Error('Only public HTTPS application URLs are supported');
   return u;
 };
@@ -24,13 +24,13 @@ export function classifyApplicationPath({requestedUrl,finalUrl,status,body='',po
   if(status===401||status===403)return {...details,state:'hold',reason:'Application requires authentication or access verification'};
   if(status===404||status===410)return {...details,state:'hold',reason:'Employer link is missing or closed'};
   if(status!==200)return {...details,state:'hold',reason:'Employer page returned HTTP '+status};
-  if(/\\/(?:login|signin|sign-in|sso|auth|candidate-login)(?:\\/|$)/i.test(final.pathname))
+  if(/\/(?:login|signin|sign-in|sso|auth|candidate-login)(?:\/|$)/i.test(final.pathname))
     return {...details,state:'hold',reason:'Sign-in gateway; application form beyond sign-in not verified'};
-  if(/\\/(?:careers?|search-jobs?|searchjobs|job-search|talentcommunity)(?:\\/)?$/i.test(final.pathname))
+  if(/\/(?:careers?|search-jobs?|searchjobs|job-search|talentcommunity)(?:\/)?$/i.test(final.pathname))
     return {...details,state:'hold',reason:'Redirected to a general careers or talent-community page'};
   if(requisition&&!textMatch(body,requisition)&&!textMatch(final.href,requisition))
     return {...details,state:'hold',reason:'Expected requisition not found in final employer page'};
-  if(position&&!textMatch(body,position)&&!textMatch(final.href,position.replace(/\\s+/g,'-')))
+  if(position&&!textMatch(body,position)&&!textMatch(final.href,position.replace(/\s+/g,'-')))
     return {...details,state:'review',reason:'Employer page returned but position identity needs confirmation'};
   return {...details,state:'review',reason:'Specific employer job page appears accessible; verify the actual apply form and eligibility manually'};
 }
