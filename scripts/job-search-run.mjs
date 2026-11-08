@@ -196,7 +196,7 @@ export async function run(directory,{mode='run'}={}) {
         required(mode!=='benchmark','Benchmark requires one existing role; discovery is disabled.');
         const discoveryPath=join(dir,'discovery.json');
         const sourceConfig={stateDir:resolve(dir,config.stateDir||'../../cache'),sources:config.sources||[],policy,maxBoardRequests:config.maxBoardRequests??12};
-        await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,policy,jobs:digest(snapshot.jobs)},async()=>{
+        await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,policy,maxBoardRequests:sourceConfig.maxBoardRequests,jobs:digest(snapshot.jobs)},async()=>{
           writeJson(discoveryPath,await discover(sourceConfig,snapshot));return [discoveryPath];
         });
         return wait('shortlist',{path:discoveryPath,needed:config.requestedCount||5,
