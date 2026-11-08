@@ -179,10 +179,18 @@ export function candidatesFromExternalLeads(leads=[]) {
       if(!['https:','http:'].includes(parsed.protocol)) throw new Error('External lead URL must be HTTP(S): '+index);
     }
     if(!Number.isFinite(Date.parse(lead.observedAt)))throw new Error('Invalid external lead observedAt: '+index);
+    const jobHost=new URL(lead.url).hostname;
+    const evidenceHost=new URL(lead.evidenceUrl).hostname;
+    // A third-party search snippet is not official employer evidence.
+    // A verified employer ATS host may differ from its corporate website, but
+    // the declared host and both URLs must belong to the same employer ATS.
+    const official=Boolean(lead.officialEmployerHost)&&
+      jobHost===String(lead.officialEmployerHost).toLowerCase()&&
+      evidenceHost===jobHost;
     return {company:lead.company,position:lead.position,url:lead.url,location:lead.location||'',
       source:lead.evidenceUrl,discoveryChannel:'external',observedAt:lead.observedAt,
-      detailsCached:Boolean(lead.descriptionSnippet),descriptionSnippet:lead.descriptionSnippet||'',
-      revision:lead.revision??null};
+      sourceTrust:official?'declared-official':'unverified',detailsCached:Boolean(lead.descriptionSnippet),
+      descriptionSnippet:lead.descriptionSnippet||'',revision:lead.revision??null};
   });
 }
 
@@ -213,6 +221,12 @@ export function discoverCandidates(sources,snapshot,policy,rejections={}) {
       filtered++;filteredReasons.outsideUS++;continue;
     }
     const entry={...job,key};
+    // Keep third-party snippets visible in the audit, never as verified ATS leads.
+    if(job.discoveryChannel==='external'&&job.sourceTrust!=='declared-official'){
+      held.push({...entry,reason:'Unverified external source; confirm official employer requisition and URL.'});
+      filteredReasons.unverifiedExternal=(filteredReasons.unverifiedExternal||0)+1;
+      continue;
+    }
     // Broad entry-level titles need the actual duties checked; do not reject
     // every Associate/Specialist simply because its title lacks 'Analyst'.
     const direct=/analyst|analytics|data quality|data governance|business intelligence|ai evaluat|ai automation|consultant|implementation|reporting|research|insights|quality assurance|business systems|process improvement/i.test(job.position);
