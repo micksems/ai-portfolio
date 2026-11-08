@@ -10,14 +10,14 @@ function publicUrl(value) {
   let parsed;
   try { parsed=new URL(value); } catch { throw new Error('A verified HTTPS employer source URL is required'); }
   if(parsed.protocol!=='https:'||parsed.username||parsed.password||parsed.port||
-     !parsed.hostname.includes('.')||/^(localhost|.*\\.localhost|.*\\.local)$/i.test(parsed.hostname)||
-     /^(?:\\d{1,3}\\.){3}\\d{1,3}$/.test(parsed.hostname))
+     !parsed.hostname.includes('.')||/^(localhost|.*\.localhost|.*\.local)$/i.test(parsed.hostname)||
+     /^(?:\d{1,3}\.){3}\d{1,3}$/.test(parsed.hostname))
     throw new Error('Employer source must be a public HTTPS URL');
   return parsed;
 }
 const workdayHost=source=>{
   const parsed=publicUrl('https://'+(source.host||''));
-  if(!/^[a-z0-9-]+\\.wd\\d+\\.myworkdayjobs\\.com$/i.test(parsed.hostname))
+  if(!/^[a-z0-9-]+\.wd\d+\.myworkdayjobs\.com$/i.test(parsed.hostname))
     throw new Error('Use a verified Workday public careers host');
   if(!safeToken(source.tenant)||!safeToken(source.site))
     throw new Error('Workday source needs the verified tenant and career site');
@@ -149,7 +149,7 @@ export function candidatesFrom(source,data) {
     discoveryChannel:source.provider==='official-json'?'official-feed':'official-ats',
     detailsCached:Boolean(j.content||j.descriptionHtml||j.descriptionPlain||j.description),
     descriptionSnippet:String(j.content||j.descriptionPlain||j.descriptionHtml||j.description||'')
-      .replace(/<[^>]*>/g,' ').replace(/\\s+/g,' ').slice(0,1200),
+      .replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').slice(0,1200),
     revision:j.updated_at||j.updatedAt||j.publishedAt||j.createdAt||null
   })).filter(j=>j.url&&j.position);
 }
