@@ -17,7 +17,7 @@ const workday={provider:'workday',company:'Example Workday',
 test('verified Workday careers requests use bounded public POST search',()=>{
  const requests=workdayRequests(workday);
  assert.equal(requests.length,2);
- assert.match(sourceUrl(workday),/sample\\.wd5\\.myworkdayjobs\\.com\\/wday\\/cxs\\/sample\\/External\\/jobs$/);
+ assert.match(sourceUrl(workday),/sample\.wd5\.myworkdayjobs\.com\/wday\/cxs\/sample\/External\/jobs$/);
  const first=JSON.parse(requests[0].init.body);
  assert.deepEqual(first,{appliedFacets:{},limit:20,offset:0,searchText:'analyst'});
  assert.equal(requests[0].init.method,'POST');
