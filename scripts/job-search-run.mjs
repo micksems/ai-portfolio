@@ -183,6 +183,25 @@ export async function run(directory,{mode='run'}={}) {
     let remainingCount=0;
     if(mode==='run'||mode==='revise'||mode==='benchmark') {
       const policy=policyFor(dir,config);
+      // Fail before font extraction/resume work if employer discovery cannot
+      // cover the requested employer list. An empty source list is not
+      // evidence that the labor market has zero suitable roles.
+      if(mode==='run'&&!existsSync(path('shortlistPath'))) {
+        const targets=config.targetEmployers||[];
+        const leads=config.externalLeadsPath?read(path('externalLeadsPath')):(config.externalLeads||[]);
+        const normalize=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+        const targetNames=targets.map(t=>typeof t==='string'?t:t.name);
+        const targetKeys=new Set(targetNames.map(normalize));
+        const configured=[...(config.sources||[]),...leads];
+        if(!targets.length||!configured.length)return wait('source-configuration',{
+          reason:!targets.length?'Supply an explicit ordered targetEmployers list from the approved employer scope.':
+            'No verified employer ATS sources or dated external leads were configured.',
+          targetEmployers:targetNames,sourceCount:(config.sources||[]).length,
+          externalLeadCount:leads.length,
+          instruction:'Configure verified official employer sources before discovery. Zero configured sources is NOT zero available jobs.'});
+        const outside=configured.filter(x=>!targetKeys.has(normalize(x.company))).map(x=>x.company);
+        required(!outside.length,'Discovery source outside current employer scope: '+outside.join(', '));
+      }
       const master=config.master;
       required(master?.library_file_id&&master.version&&master.sha256,'Pin the current approved master metadata');
       required(fileDigest(master.local_path)===master.sha256,'Master hash differs');
@@ -200,10 +219,12 @@ export async function run(directory,{mode='run'}={}) {
         const discoveryPath=join(dir,'discovery.json');
         const externalLeads=config.externalLeadsPath?read(path('externalLeadsPath')):(config.externalLeads||[]);
         const sourceConfig={stateDir:resolve(dir,config.stateDir||'../../cache'),
-          sources:config.sources||[],externalLeads,policy,requestedCount,
+          sources:config.sources||[],externalLeads,targetEmployers:config.targetEmployers||[],
+          policy,requestedCount,
           maxBoardRequests:config.maxBoardRequests??12,maxDiscoveryPasses:config.maxDiscoveryPasses??2,
           sourceOffset:config.sourceOffset??0};
-        await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,externalLeads,
+        await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,
+          targetEmployers:sourceConfig.targetEmployers,externalLeads,
           policy,maxBoardRequests:sourceConfig.maxBoardRequests,maxDiscoveryPasses:sourceConfig.maxDiscoveryPasses,
           sourceOffset:sourceConfig.sourceOffset,jobs:digest(snapshot.jobs)},async()=>{
           writeJson(discoveryPath,await discover(sourceConfig,snapshot));return [discoveryPath];
@@ -213,13 +234,16 @@ export async function run(directory,{mode='run'}={}) {
           leads:discovery.candidates.length,held:discovery.held.length,
           filtered:discovery.counts.filtered,duplicates:discovery.counts.duplicates,
           reasonCounts:discovery.counts.filteredReasons,sourceBudget:discovery.sourceBudget,
-          instruction:'Select only verified eligible roles from the leads. External leads need full employer JD and application-path review. If none qualify, report the checked sources and reasons; do not describe deferred boards as checked.'});
+          audit:discovery.audit,
+          instruction:'Report exact attempted, failed, unconfigured and deferred employers. Check shortlisted official requisition and application form using the bounded application-path checker. A successful HTTP GET is not a verified apply form. Do not call zero leads a successful run.'});
       }
       const candidates=read(shortlistPath);
       required(candidates.length>=1&&candidates.length<=requestedCount,
         'Provide 1..requestedCount verified roles, or report a zero-result discovery with its reason counts. Never pad or silently lower the target.');
       remainingCount=requestedCount-candidates.length;
       checkCandidateIdentity(candidates,snapshot,mode);
+      required(candidates.every(c=>c.discoveryChannel!=='external'||c.sourceTrust==='declared-official'),
+        'Third-party/unverified external lead cannot enter resume stage without a verified official employer source');
       const plans=existsSync(plansPath)?read(plansPath):null,packs=existsSync(packsPath)?read(packsPath):null;
       if(!plans||!packs)return wait('authoring-inputs',{plansPath,packsPath});
       validateAuthoringPlans(plans,packs);
