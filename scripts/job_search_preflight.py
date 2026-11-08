@@ -132,6 +132,22 @@ def check(payload, now=None):
             app = c.get('gates', {}).get('application_path', {})
             if not payload.get('historical_benchmark') and (not app.get('checked_at') or not 0 <= (now-stamp(app['checked_at'])).total_seconds() <= 86400):
                 reasons.append('Application evidence missing or stale')
+            # 'PASS' or an HTTP 200 on a generic careers page is NOT a verified form.
+            # Keep the evidence explicit and human reviewed before resume drafting.
+            if not payload.get('historical_benchmark'):
+                if app.get('form_verified') is not True or app.get('requisition_confirmed') is not True:
+                    reasons.append('Application form and exact requisition must be independently verified')
+                if app.get('verification_method') not in ('manual_form_review', 'authenticated_form_review'):
+                    reasons.append('Application path needs actual human form review, not a generic link check')
+                url = app.get('form_url') or ''
+                if not isinstance(url, str) or not url.startswith('https://'):
+                    reasons.append('Application evidence requires a direct HTTPS form URL')
+                if not app.get('form_evidence') or not app.get('reviewed_by'):
+                    reasons.append('Application form review needs concrete evidence and reviewer identity')
+            if c.get('explicitCptOptRestriction') is True:
+                reasons.append('Explicit CPT/OPT exclusion is a mandatory blocker')
+            if payload.get('run_mode', 'normal') == 'normal' and c.get('releaseStatus') == 'Found':
+                reasons.append('Held/Found job cannot be counted as a released new application')
             if payload.get('process_policy_version', 1) >= 2:
                 selection = c.get('selection', {})
                 for field in ('posting_date_basis', 'posting_date_source', 'start_window',
