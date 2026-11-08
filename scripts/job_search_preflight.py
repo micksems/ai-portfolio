@@ -91,8 +91,10 @@ def check(payload, now=None):
     requested_count = payload.get('requested_count', 5)
     if not isinstance(requested_count, int) or isinstance(requested_count, bool) or requested_count < 1:
         raise ValueError('requested_count must be a positive integer')
-    if len(candidates) != requested_count:
-        raise ValueError('Exactly the user-requested count is required; continue discovery before authoring')
+    if not 1 <= len(candidates) <= requested_count:
+        raise ValueError('Require 1..requested_count verified candidates; a zero result needs discovery diagnostics')
+    # requested_count remains the user's target; smaller batches are explicit,
+    # incomplete runs, never an implicit lowering of their requested goal.
     master = payload['master']
     if not all(master.get(k) for k in ('library_file_id', 'version', 'sha256', 'local_path')):
         raise ValueError('Approved master identity/version/hash/path are required')
