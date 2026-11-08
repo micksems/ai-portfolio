@@ -202,9 +202,6 @@ export async function run(directory,{mode='run'}={}) {
         const outside=configured.filter(x=>!targetKeys.has(normalize(x.company))).map(x=>x.company);
         required(!outside.length,'Discovery source outside current employer scope: '+outside.join(', '));
       }
-      const master=config.master;
-      required(master?.library_file_id&&master.version&&master.sha256,'Pin the current approved master metadata');
-      required(fileDigest(master.local_path)===master.sha256,'Master hash differs');
       const shortlistPath=path('shortlistPath'),plansPath=path('plansPath'),packsPath=path('packsPath'),reviewsPath=path('reviewsPath');
       if(!existsSync(shortlistPath)) {
         required(mode!=='benchmark','Benchmark requires one existing role; discovery is disabled.');
@@ -230,6 +227,11 @@ export async function run(directory,{mode='run'}={}) {
           audit:discovery.audit,dashboardSyncRequired:true,
           instruction:'Report exact attempted, failed, unconfigured and deferred employers. Check shortlisted official requisition and application form using the bounded application-path checker. A successful HTTP GET is not a verified apply form. Do not call zero leads a successful run.'});
       }
+      // Discovery is independent from resume/font availability.
+      // Only request the pinned master after a real shortlist exists.
+      const master=config.master;
+      required(master?.library_file_id&&master.version&&master.sha256,'Pin the current approved master metadata');
+      required(fileDigest(master.local_path)===master.sha256,'Master hash differs');
       const candidates=read(shortlistPath);
       required(candidates.length>=1&&candidates.length<=requestedCount,
         'Provide 1..requestedCount verified roles, or report a zero-result discovery with its reason counts. Never pad or silently lower the target.');
