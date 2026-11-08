@@ -35,13 +35,24 @@ Within a run, query verified sources once, deduplicate by requisition before ful
 and reuse cached evidence/failed lookups. Do not run overlapping search engines to rediscover
 the same board or repeatedly request full tracker/archives.
 
-Default discovery is limited to **12 distinct verified ATS boards per pass** (configurable via
-`maxBoardRequests`, 1–24). The discovery result records queried and deferred boards; deferred
-sources are **unsearched**, not rejected. Use at most two focused discovery passes for a manual
-run before reporting the actual shortfall and its evidence. Do not enter an unbounded search loop.
+Discovery processes up to **12 distinct verified ATS boards per pass** (`maxBoardRequests`, 1–24),
+and **automatically continues** to the next boards for at most two passes (`maxDiscoveryPasses`, 1–2).
+It records `nextOffset`, per-pass counts and deferred sources. To request a later pass, set
+`sourceOffset` to the saved `nextOffset`; never restart at board zero by accident.
+Deferred boards are **unsearched**, not rejected. No unbounded search loops.
+
+The three built-in board feeds (Greenhouse, Lever, Ashby) do not cover many target employers.
+A dated `externalLeadsPath` provides a safe input for jobs found via official career sites,
+Workday, SAP SuccessFactors, or connected search. Each lead needs company, position, URL,
+`evidenceUrl`, and ISO `observedAt`. Such leads go through identical duplicate/seniority filters,
+but remain unqualified until exact employer JD, authorization and application-path verification.
+Do not treat a general careers redirect as a usable application form or infer job freshness.
+
 Never manufacture matches, relax qualification gates, or silently lower `requestedCount`.
-If fewer genuine openings are verified, report the incomplete run and what remains to be checked;
-the next requested pass resumes from the saved checkpoint.
+If **1–4** roles pass all gates in a five-job run, generate and persist those verified resumes,
+then return `status: partial`, the original five-job target and exact remaining count.
+If none qualify, do not render anything; report reasons, sources searched and deferred employers.
+The next requested pass resumes from its saved checkpoint.
 
 A time/credit guardrail limits **repeated work**, not the amount of care spent on each shortlisted
 job or the evidence and PDF release gate. Stop retrying a source after the recorded timeout/error
@@ -71,6 +82,10 @@ the named input files; master/font/evidence artifact paths must be absolute. Exa
   "publishedPath": "published.json",
   "stateDir": "../../cache",
   "sources": [{"provider":"greenhouse","board":"verified-slug","company":"Employer"}],
+  "sourceOffset": 0,
+  "maxBoardRequests": 12,
+  "maxDiscoveryPasses": 2,
+  "externalLeadsPath": "dated-external-leads.json",
   "master": {"library_file_id":"current-approved-id","version":2,"sha256":"actual-sha256","local_path":"/absolute/master.pdf"},
   "fontSourcePath": "/absolute/previously-saved-Times-New-Roman-resume.pdf"
 }
@@ -97,14 +112,14 @@ Preserve date-only precision; never infer an application from preparation or a s
    URLs share the numeric job ID. URL-less named records must match their company/title key. Exact known requisitions are removed
    before deeper research. The runner repeats identity/submission protection before reading authoring plans.
    Use earlyMismatch for explicit salary, location, timing, mandatory-experience and CPT/OPT restrictions.
-   Missing metadata is not proof of mismatch. An AI-branded recruiting/admin role is not an AI analyst role. Same employer/title and known aliases
+   Missing metadata is not proof of mismatch. Broader Associate/Specialist/Graduate titles with relevant duty snippets enter review rather than being rejected by title alone; ambiguous ones remain held until duties are checked. An AI-branded recruiting/admin role is not an AI analyst role. Same employer/title and known aliases
    (including Deploy/Hive) are held as possible reposts. A new ID alone cannot fill a new-job slot.
-3. **Research and freeze:** follow the live Rules employer scope, currently the H-1B-dependent employer list. Do not run unrelated UN/agency or general-market searches unless requested. Research only surviving relevant leads. Verify the
+3. **Research and freeze:** follow the live Rules employer scope, currently the H-1B-dependent employer list. Use native ATS feeds plus dated external leads for Workday/SAP/other company career sites. Do not run unrelated UN/agency or general-market searches unless requested. Review relevant leads and held ambiguous Associate/Specialist titles before excluding them. Verify the
    complete dated employer JD, mandatory/preferred qualifications, seniority, geography, base pay,
    start/enrollment, actual authorization restrictions and the exact application route. Sponsorship is a
    preference, not automatic legal ineligibility. Freeze the requested number of genuinely new roles;
    disclose a real shortfall instead of padding. Scores are not interview probabilities.
-4. **Preflight:** provide policy-v2 candidates to the existing duplicate/eligibility validator. Fresh
+4. **Preflight:** provide 1..requestedCount verified policy-v2 candidates to the existing duplicate/eligibility validator; requestedCount remains the full user target. A shortfall is reported as incomplete, not erased. Fresh
    Jobs submission state is required before authoring. A confirmed submission remains blocked after
    rejection/closure. A same-title alias requires `distinctRoleReview` with comparedKey, decision=distinct,
    employerSource, employerQuote present in the JD, and an actual team/duties/program difference.
@@ -159,6 +174,28 @@ Preserve date-only precision; never infer an application from preparation or a s
    new commit. If the remote write timed out, inspect GitHub state before retrying. A stale-base conflict
    requires checking whether the proposal was already applied; reconcile a newer base only after ruling
    out an earlier successful write. Final handoff stays the application/PDF table and material caveats.
+
+## External employer lead format
+
+The private `dated-external-leads.json` is an array; example only:
+
+```json
+[
+  {
+    "company": "Example Employer",
+    "position": "Business Operations Associate",
+    "url": "https://example.com/careers/req-123",
+    "evidenceUrl": "https://example.com/careers/req-123",
+    "observedAt": "2026-11-08T15:00:00Z",
+    "location": "New York, NY",
+    "descriptionSnippet": "Process analytics, reporting and data quality responsibilities."
+  }
+]
+```
+
+The recorded source and timestamp certify only what was found, not that the position
+is active, eligible, or bookable through a specific form. Include no invented employer
+claims, and keep the file private. The user must still submit all applications.
 
 ## Cache and recovery
 
