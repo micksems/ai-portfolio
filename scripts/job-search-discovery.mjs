@@ -109,9 +109,17 @@ export function discoverCandidates(sources,snapshot,policy,rejections={}) {
   return {candidates:accepted,held,counts:{duplicates,filtered},context};
 }
 
+export function selectBudgetedSources(sources,maxBoardRequests=12) {
+  if(!Number.isInteger(maxBoardRequests)||maxBoardRequests<1||maxBoardRequests>24)
+    throw new Error('maxBoardRequests must be an integer from 1 to 24.');
+  const unique=[...new Map(sources.map(s=>[sourceUrl(s),s])).values()];
+  return {selected:unique.slice(0,maxBoardRequests),total:unique.length,deferred:Math.max(0,unique.length-maxBoardRequests),limit:maxBoardRequests};
+}
+
 export async function discover(config,snapshot) {
   const cache=new SourceCache(join(config.stateDir,'sources'));
-  const sources=[...new Map(config.sources.map(s=>[sourceUrl(s),s])).values()];
+  const budget=selectBudgetedSources(config.sources,config.maxBoardRequests??12);
+  const sources=budget.selected;
   const results=[];
   // Bound concurrency. A large board must not occupy the entire run.
   let cursor=0;
@@ -121,7 +129,7 @@ export async function discover(config,snapshot) {
   const rejectionPath=join(config.stateDir,'rejections.json');
   const rejections=existsSync(rejectionPath)?JSON.parse(readFileSync(rejectionPath,'utf8')):{};
   const output=discoverCandidates(results.flatMap(r=>r.response.status===200?candidatesFrom(r.source,r.response.data):[]),snapshot,config.policy,rejections);
-  return {...output,requests:cache.stats,sources:results.map(({source,response})=>({provider:source.provider,board:source.board,
+  return {...output,requests:cache.stats,sourceBudget:{limit:budget.limit,total:budget.total,queried:sources.length,deferred:budget.deferred},sources:results.map(({source,response})=>({provider:source.provider,board:source.board,
     status:response.status,cached:response.cached,checkedAt:response.checkedAt,expiresAt:response.expiresAt,error:response.error||null})),
-    limits:'Discovery leads only. Location, compensation, requirements and application path still require exact employer verification.'};
+    limits:'Discovery leads only. Deferred sources are not searched or rejected. Location, compensation, requirements and application path require exact employer verification.'};
 }
