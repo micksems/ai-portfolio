@@ -160,7 +160,9 @@ export function earlyMismatch(job,policy={}) {
   if(Number.isFinite(job.salaryMaxAnnual)&&job.salaryMaxAnnual<(policy.minimumBaseSalary??70000))return 'Base salary ceiling below preference';
   if(job.locationEligible===false)return 'Location mismatch';
   if(job.startTimingEligible===false)return 'Start/enrollment mismatch';
-  if(job.mandatoryExperienceMet===false||job.seniorOwnershipRequired===true)return 'Mandatory experience/ownership mismatch';
+  // Junior roles with a years/domain gap are stretch candidates, not automatic rejections.
+  // A genuinely senior independent-ownership requirement remains outside scope.
+  if(job.seniorOwnershipRequired===true)return 'Senior-level ownership requirement';
   if(job.roleFamily?.startsWith('AI')&&job.aiDutiesRelevant===false)return 'AI branding without relevant AI work';
   return null;
 }
@@ -220,7 +222,11 @@ export function discoverCandidates(sources,snapshot,policy,rejections={}) {
        !/new york|san francisco|charlotte|remote us|united states|usa/i.test(job.location)){
       filtered++;filteredReasons.outsideUS++;continue;
     }
-    const entry={...job,key};
+    const entry={...job,key,
+      ...(job.mandatoryExperienceMet===false?{stretchReasons:[
+        'Posted experience requirement is not directly established; compare transferable project, internship and academic work against specific duties.'
+      ]}:{}),
+    };
     // Keep third-party snippets visible in the audit, never as verified ATS leads.
     if(job.discoveryChannel==='external'&&job.sourceTrust!=='declared-official'){
       held.push({...entry,reason:'Unverified external source; confirm official employer requisition and URL.'});

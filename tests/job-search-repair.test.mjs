@@ -39,9 +39,10 @@ test('explicit retention is accepted with duty and project evidence review',()=>
  const p={key:'k',changes:{},authoringReview:{retainedBaselines,roleFocus:'AI review',comparisonDecision:'Keep directly relevant verified facts',evidenceSelections:[{requirementId:'d1',baseline:342,sourceIds:['master'],rationale:'Direct evaluation work'}],projectChoices:[681,694,707].map(baseline=>({baseline,rationale:'Selected evidence',scopeLimit:'Academic team'}))}};
  assert.doesNotThrow(()=>validateAuthoringPlans([p],[{key:'k',primaryDuties:[{requirementId:'d1'}],candidateEvidence:[{id:'master'}]}]));
 });
-test('explicit mismatches filter early without excluding training or unknown sponsorship',()=>{
- for(const item of [{salaryMaxAnnual:69000},{explicitCptOptRestriction:true},{mandatoryExperienceMet:false},{startTimingEligible:false},{seniorOwnershipRequired:true},{roleFamily:'AI / Operations',aiDutiesRelevant:false}])assert.ok(earlyMismatch(item));
- assert.equal(earlyMismatch({sponsorship:'unknown',mandatoryExperienceMet:true,domainTrainingProvided:true}),null);
+test('nontransferable mismatches filter early while junior experience gaps are reviewed',()=>{
+ for(const item of [{salaryMaxAnnual:69000},{explicitCptOptRestriction:true},{startTimingEligible:false},{seniorOwnershipRequired:true},{roleFamily:'AI / Operations',aiDutiesRelevant:false}])assert.ok(earlyMismatch(item));
+ assert.equal(earlyMismatch({mandatoryExperienceMet:false}),null);
+ assert.equal(earlyMismatch({sponsorship:'unknown',mandatoryExperienceMet:false,domainTrainingProvided:true}),null);
 });
 test('text cache persists across processes and detects corrupt stored text',t=>{
  const d=mkdtempSync(join(tmpdir(),'evidence-'));t.after(()=>rmSync(d,{recursive:true,force:true}));

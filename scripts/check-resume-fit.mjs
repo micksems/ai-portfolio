@@ -54,7 +54,7 @@ export function auditResumeArtifact(pack,cache=new Map()) {
 }
 
 /**
- * Conservative pre-submission quality gate. Input is a reviewed evidence pack,
+ * Evidence-backed, stretch-friendly pre-submission quality gate. Input is a reviewed evidence pack,
  * not raw AI guesses. The script deliberately does not calculate a fit percentage.
  * Usage: node scripts/check-resume-fit.mjs evidence-pack.json
  */
@@ -68,6 +68,19 @@ export function auditResumeFit(pack) {
   const requirements = Array.isArray(pack?.requirements) ? pack.requirements : [];
   const checks = pack?.qualityChecks || {};
   const norm = (s) => String(s || '').replace(/\s+/g, ' ').trim().toLowerCase();
+  // The employer's desired capability and the candidate's related work can
+  // differ; the bridge must explain the connection, cite real evidence and
+  // state the limit. It cannot turn an unperformed task into a claim of mastery.
+  const transferableBridge = (req) => {
+    const bridge=req.transferBridge;
+    return req.status==='partial' && req.reviewVerdict==='transferable' &&
+      req.nonTransferable!==true && bridge &&
+      ['jobDuty','candidateEvidence','evidenceSource','resumeAngle','limits']
+        .every(k=>norm(bridge[k]).length>=8) &&
+      Array.isArray(req.evidenceIds) && req.evidenceIds.length>0 &&
+      norm(req.resumeProof).length>0 &&
+      norm(resume.text).includes(norm(req.resumeProof));
+  };
 
   if (!role.company || !role.title || !role.requisitionOrJobUrl) blockers.push('Role must identify employer, exact title and requisition/job URL.');
   if (!/^https?:\/\//.test(jd.url || '') || !Number.isFinite(Date.parse(jd.capturedAt)) ||
@@ -89,6 +102,7 @@ export function auditResumeFit(pack) {
   const depth = {exposure:0, applied:1, independent:2, production:3};
   const reqIds = new Set();
   let coveredCritical = 0;
+  let bridgedCritical = 0;
   let criticalTotal = 0;
   for (const req of requirements) {
     if (!req.id || reqIds.has(req.id)) blockers.push('Duplicate/missing requirement ID: ' + (req.id || '(empty)') + '.');
@@ -98,15 +112,24 @@ export function auditResumeFit(pack) {
     if (!requirementKinds.has(req.kind)) blockers.push('Classify requirement kind: ' + req.id);
     if (!req.employerQuote || !norm(jd.text).includes(norm(req.employerQuote)))
       blockers.push('Requirement must quote the captured employer posting: ' + req.id);
+    const bridgeOk=transferableBridge(req);
     if (req.critical && ['task','skill'].includes(req.kind)) {
-      if (!(req.requiredDepth in depth) || !(req.demonstratedDepth in depth) ||
-          depth[req.demonstratedDepth] < depth[req.requiredDepth])
-        blockers.push('Required work depth is not demonstrated: ' + req.id);
+      if (!(req.requiredDepth in depth) || !(req.demonstratedDepth in depth)) {
+        blockers.push('Work depth classifications are missing: ' + req.id);
+      } else if (depth[req.demonstratedDepth] < depth[req.requiredDepth]) {
+        if(bridgeOk)warnings.push('Stretch depth gap for '+req.id+
+          ': '+req.demonstratedDepth+' work is related to '+req.requiredDepth+
+          ' work; do not claim the higher level.');
+        else blockers.push('Required work depth is not demonstrated: ' + req.id);
+      }
       if (!req.sourceQuote || !req.sourceText || !norm(req.sourceText).includes(norm(req.sourceQuote)))
         blockers.push('Missing candidate source excerpt: ' + req.id);
-      if (!req.evidenceRationale || !req.gaps || req.reviewVerdict !== 'supported')
+      if (!req.evidenceRationale || !req.gaps ||
+          !['supported','transferable'].includes(req.reviewVerdict) ||
+          (req.reviewVerdict==='transferable'&&!bridgeOk))
         blockers.push('Missing explicit duty-to-evidence review and limits: ' + req.id);
-      if (req.status === 'met' && req.requiredDepth !== 'exposure') {
+      if (['met','partial'].includes(req.status) && req.requiredDepth !== 'exposure' &&
+          (req.status==='met'||bridgeOk)) {
         const example=req.workExample;
         if (!example || !['professional','internship','academic_team','academic_individual','personal','volunteer'].includes(example.context) ||
             !example.actionQuote || !norm(req.sourceText).includes(norm(example.actionQuote)) ||
@@ -117,13 +140,24 @@ export function auditResumeFit(pack) {
     if (req.critical) criticalTotal += 1;
     const linked = Array.isArray(req.evidenceIds) ? req.evidenceIds : [];
     for (const id of linked) if (!ids.has(id)) blockers.push('Requirement ' + req.id + ' cites nonexistent evidence ' + id + '.');
-    if (req.status === 'met' && !linked.length) blockers.push('Requirement ' + req.id + ' is marked met with no verified evidence.');
-    if (req.status === 'met' && (!req.resumeProof || !norm(resume.text).includes(norm(req.resumeProof)))) {
+    if (['met','partial'].includes(req.status) && !linked.length)
+      blockers.push('Requirement ' + req.id + ' has no verified evidence.');
+    if (['met','partial'].includes(req.status) &&
+        (!req.resumeProof || !norm(resume.text).includes(norm(req.resumeProof)))) {
       blockers.push('Requirement ' + req.id + ' lacks literal proof in the submitted resume text.');
     }
     if (req.critical) {
-      if (req.status !== 'met') blockers.push('Critical employer requirement ' + req.id + ' is ' + (req.status || 'unrated') + '; do not mark resume ready.');
-      else if (linked.length && req.resumeProof && norm(resume.text).includes(norm(req.resumeProof))) coveredCritical += 1;
+      if (req.nonTransferable===true && req.status!=='met')
+        blockers.push('Nontransferable employer requirement '+req.id+' is not met.');
+      else if (req.status==='met') {
+        if(linked.length && req.resumeProof && norm(resume.text).includes(norm(req.resumeProof)))
+          coveredCritical += 1;
+      } else if (bridgeOk) {
+        bridgedCritical += 1;
+        warnings.push('Transferable match for '+req.id+': '+req.transferBridge.limits+
+          '. Present related work, not direct proficiency.');
+      } else blockers.push('Critical employer requirement '+req.id+' is '+
+        (req.status||'unrated')+' without an evidence-based transferable bridge.');
     } else if (req.status !== 'met') {
       warnings.push('Noncritical requirement ' + req.id + ' is ' + req.status + '; disclose the gap, do not invent it.');
     }
@@ -147,9 +181,10 @@ export function auditResumeFit(pack) {
           blockers.push('Primary duties need distinct task-specific proof: ' + req.id);
         dutyDescriptions.add(description); dutyProofs.add(proof);
       }
-      if (!req || !req.critical || req.status !== 'met' || !req.resumeProof ||
+      if (!req || !req.critical ||
+          !(req.status==='met'||transferableBridge(req)) || !req.resumeProof ||
           !norm(resume.text).includes(norm(req.resumeProof))) {
-        blockers.push('Primary duty is not supported by verified critical requirement and literal PDF proof: ' + (duty.requirementId || '(missing)'));
+        blockers.push('Primary duty lacks verified direct OR transferable evidence with literal PDF proof: ' + (duty.requirementId || '(missing)'));
       }
     }
   }
@@ -158,7 +193,10 @@ export function auditResumeFit(pack) {
   if (!seniority.postingRequirement || !seniority.actualEvidence || !['supported', 'borderline', 'gap', 'unknown'].includes(seniority.status)) {
     blockers.push('Seniority must be assessed explicitly against demonstrated experience, not inferred from title or score.');
   } else if (seniority.status !== 'supported') {
-    blockers.push('Seniority is ' + seniority.status + ': needs explicit human review or an alternate role.');
+    if(seniority.status==='borderline' &&
+       !/\b(senior|sr\.?|lead|principal|staff|director|manager)\b/i.test(role.title||''))
+      warnings.push('Junior stretch: posting expectations exceed some demonstrated experience; describe actual ownership plainly.');
+    else blockers.push('Seniority is '+seniority.status+': this is not a supported junior stretch.');
   }
 
   const auth = pack?.workAuthorization || {};
@@ -181,7 +219,8 @@ export function auditResumeFit(pack) {
   if (pack?.fitScore != null) warnings.push('A percentage fit score is advisory only; it cannot override a blocker.');
 
   return {decision: blockers.length ? 'HOLD' : 'READY_FOR_HUMAN_REVIEW', blockers, warnings,
-    summary: {requirements: requirements.length, criticalSupported: coveredCritical, criticalTotal}};
+    summary: {requirements: requirements.length, criticalSupported: coveredCritical,
+      criticalTransferable: bridgedCritical, criticalTotal}};
 }
 
 if (process.argv[1]?.endsWith('/check-resume-fit.mjs')) {

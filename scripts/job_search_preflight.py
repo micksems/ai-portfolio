@@ -16,6 +16,19 @@ from urllib.parse import parse_qs, urlsplit
 UTC = dt.timezone.utc
 GATES = ('role_fit', 'location', 'experience', 'mandatory_requirements',
          'base_salary', 'authorization', 'start_timing', 'application_path')
+# A shortfall in direct tenure, domain or tool experience can be bridged by
+# traceable work from internships, coursework, personal projects and other
+# roles. Hard legal, credential, geography, start and form checks remain strict.
+TRANSFERABLE_GATES = frozenset(('role_fit', 'experience', 'mandatory_requirements'))
+BRIDGE_FIELDS = ('jobDuty', 'candidateEvidence', 'evidenceSource',
+                 'resumeAngle', 'limits')
+def valid_bridge(gate):
+    bridge = gate.get('transferBridge')
+    return (isinstance(bridge, dict) and
+            all(isinstance(bridge.get(k), str) and bridge[k].strip()
+                for k in BRIDGE_FIELDS) and
+            gate.get('claimedAsMet') is not True)
+
 
 def normalized(value):
     return re.sub(r'[^a-z0-9]', '', (value or '').lower())
@@ -104,7 +117,7 @@ def check(payload, now=None):
     result, seen = [], set()
     for c in candidates:
         key = identity(c)
-        reasons = []
+        reasons, stretch = [], []
         if not c.get('company') or not c.get('position') or not c.get('url'):
             reasons.append('Missing job identity')
         if key in seen:
@@ -127,8 +140,21 @@ def check(payload, now=None):
         if not reasons:
             for gate in GATES:
                 evidence = c.get('gates', {}).get(gate, {})
-                if evidence.get('verdict') != 'pass' or not evidence.get('evidence'):
-                    reasons.append('Preflight incomplete: ' + gate)
+                verdict = evidence.get('verdict')
+                if verdict == 'pass' and evidence.get('evidence'):
+                    continue
+                if (gate in TRANSFERABLE_GATES and verdict == 'transferable'
+                        and evidence.get('evidence') and valid_bridge(evidence)):
+                    stretch.append({'gate': gate, 'bridge': evidence['transferBridge']})
+                    continue
+                reasons.append('Preflight incomplete: ' + gate)
+            # A transferable skills gap is not a waiver for real legal, degree,
+            # license/certification, language or senior-level requirements.
+            if any(c.get(k) is True for k in
+                   ('nonTransferableRequirementMissing','requiredLicenseMissing',
+                    'requiredDegreeMissing','requiredLanguageMissing',
+                    'seniorOwnershipRequired')):
+                reasons.append('A nontransferable required qualification is missing')
             app = c.get('gates', {}).get('application_path', {})
             if not payload.get('historical_benchmark') and (not app.get('checked_at') or not 0 <= (now-stamp(app['checked_at'])).total_seconds() <= 86400):
                 reasons.append('Application evidence missing or stale')
@@ -169,6 +195,7 @@ def check(payload, now=None):
             # Preserve the stated policy as context for truthful user review.
         result.append({'key': key, 'company': c.get('company'), 'position': c.get('position'),
                        'eligible_for_resume': not reasons, 'reasons': reasons,
+                       'stretch': bool(stretch), 'transferable_bridges': stretch,
                        'previously_seen': bool(exact),
                        'process_policy_version': payload.get('process_policy_version', 1),
                        'required_font_family': 'Times New Roman',
