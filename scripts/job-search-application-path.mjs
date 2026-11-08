@@ -52,10 +52,20 @@ export async function inspectApplicationPath(input,{fetcher=fetch,timeoutMs=8000
       if(!location)break;
       const next=publicHttps(new URL(location,current).href);
       redirects.push({status,from:current.href,to:next.href});
+      const permitted=new Set([new URL(requested).hostname,
+        ...(input.permittedHosts||[]).map(h=>String(h).toLowerCase())]);
+      if(!permitted.has(next.hostname))return {
+        requestedUrl:requested,finalUrl:next.href,status,state:'hold',
+        reason:'Redirected to an unverified host; no external request was made',
+        redirects,humanReviewRequired:true,checkedAt:new Date().toISOString()};
       current=next;
       continue;
     }
     if(status===200){
+      if(Number(response.headers?.get?.('content-length')||0)>1000000)
+        return {requestedUrl:requested,finalUrl:current.href,status,state:'hold',
+          reason:'Application page response too large to inspect safely',
+          redirects,humanReviewRequired:true,checkedAt:new Date().toISOString()};
       const raw=await response.text();
       body=raw.slice(0,150000);
     }
