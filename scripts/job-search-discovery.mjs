@@ -83,6 +83,27 @@ export function earlyMismatch(job,policy={}) {
   return null;
 }
 
+// A verified, dated external discovery lead allows Workday, SuccessFactors and
+// employer career portals to enter the SAME duplicate/eligibility pipeline.
+// This is a lead, NOT a certified active posting or verified application form.
+export function candidatesFromExternalLeads(leads=[]) {
+  if(!Array.isArray(leads)) throw new Error('externalLeads must be an array of dated source records');
+  return leads.map((lead,index)=>{
+    if(!lead.company||!lead.position||!lead.url||!lead.evidenceUrl||!lead.observedAt)
+      throw new Error('External lead '+index+' needs company, position, URL, evidenceUrl and observedAt');
+    for(const name of ['url','evidenceUrl']) {
+      let parsed;
+      try { parsed=new URL(lead[name]); } catch { throw new Error('Invalid external lead '+name+': '+index); }
+      if(!['https:','http:'].includes(parsed.protocol)) throw new Error('External lead URL must be HTTP(S): '+index);
+    }
+    if(!Number.isFinite(Date.parse(lead.observedAt)))throw new Error('Invalid external lead observedAt: '+index);
+    return {company:lead.company,position:lead.position,url:lead.url,location:lead.location||'',
+      source:lead.evidenceUrl,discoveryChannel:'external',observedAt:lead.observedAt,
+      detailsCached:Boolean(lead.descriptionSnippet),descriptionSnippet:lead.descriptionSnippet||'',
+      revision:lead.revision??null};
+  });
+}
+
 export function discoverCandidates(sources,snapshot,policy,rejections={}) {
   const header=snapshot.jobs[0];
   const known=new Set(snapshot.jobs.slice(1).filter(r=>r[0]).flatMap(r=>jobIdentityKeys({canonicalKey:r[header.indexOf('Canonical Job Key')],url:r[header.indexOf('Job URL')]})));
@@ -92,44 +113,94 @@ export function discoverCandidates(sources,snapshot,policy,rejections={}) {
   const employer=v=>norm(aliases[v]||v);
   const knownTitles=new Set(snapshot.jobs.slice(1).filter(r=>r[0]).map(r=>employer(r[header.indexOf('Company')])+':'+norm(r[header.indexOf('Position')])));
   const accepted=[],held=[],seen=new Set();let duplicates=0,filtered=0;
+  const filteredReasons={previouslySeen:0,withinBatchDuplicate:0,earlyMismatch:0,cachedRejection:0,
+    excludedSeniorityOrSales:0,irrelevantTitle:0,outsideUS:0,ambiguousTitle:0};
   for(const job of sources) {
     const key=jobKey({...job,canonicalKey:undefined});
-    if(seen.has(key)||known.has(key)){duplicates++;continue;}seen.add(key);
-    if(earlyMismatch(job,policy)){filtered++;continue;}
+    if(seen.has(key)){duplicates++;filteredReasons.withinBatchDuplicate++;continue;}
+    if(known.has(key)){duplicates++;filteredReasons.previouslySeen++;continue;}
+    seen.add(key);
+    if(earlyMismatch(job,policy)){filtered++;filteredReasons.earlyMismatch++;continue;}
     const rejected=rejections[key];
-    if(rejected?.context===context&&rejected.expiresAt>Date.now()&&rejected.revision===(job.revision??null)){filtered++;continue;}
-    if(/\b(senior|sr\.?|lead|principal|staff|director|manager|sales|sdr|bdr)\b/i.test(job.position)){filtered++;continue;}
-    if(!/analyst|analytics|data quality|ai evaluat|ai automation|consultant/i.test(job.position)){filtered++;continue;}
+    if(rejected?.context===context&&rejected.expiresAt>Date.now()&&rejected.revision===(job.revision??null)){filtered++;filteredReasons.cachedRejection++;continue;}
+    if(/\b(senior|sr\.?|lead|principal|staff|director|manager|sales|sdr|bdr)\b/i.test(job.position)||/business development|account executive/i.test(job.position)){
+      filtered++;filteredReasons.excludedSeniorityOrSales++;continue;
+    }
     if(/india|canada|united kingdom|london|europe|australia/i.test(job.location)&&
-       !/new york|san francisco|charlotte|remote us|united states|usa/i.test(job.location)){filtered++;continue;}
+       !/new york|san francisco|charlotte|remote us|united states|usa/i.test(job.location)){
+      filtered++;filteredReasons.outsideUS++;continue;
+    }
     const entry={...job,key};
+    // Broad entry-level titles need the actual duties checked; do not reject
+    // every Associate/Specialist simply because its title lacks 'Analyst'.
+    const direct=/analyst|analytics|data quality|data governance|business intelligence|ai evaluat|ai automation|consultant|implementation|reporting|research|insights|quality assurance|business systems|process improvement/i.test(job.position);
+    const adjacent=/associate|specialist|coordinator|graduate|trainee|campus|operations|product/i.test(job.position);
+    if(!direct&&!adjacent){filtered++;filteredReasons.irrelevantTitle++;continue;}
+    if(!direct&&!/data|analytic|automation|AI\b|process|research|operations|business systems|quality/i.test(job.descriptionSnippet||'')){
+      held.push({...entry,reason:'Ambiguous early-career title; review employer duties before advancing.'});
+      filteredReasons.ambiguousTitle++;continue;
+    }
     if(knownTitles.has(employer(job.company)+':'+norm(job.position)))held.push({...entry,reason:'Possible repost or employer alias; resolve before deep research.'});
     else accepted.push(entry);
   }
-  return {candidates:accepted,held,counts:{duplicates,filtered},context};
+  return {candidates:accepted,held,counts:{duplicates,filtered,filteredReasons,accepted:accepted.length,held:held.length},context};
 }
 
-export function selectBudgetedSources(sources,maxBoardRequests=12) {
+export function selectBudgetedSources(sources,maxBoardRequests=12,sourceOffset=0) {
   if(!Number.isInteger(maxBoardRequests)||maxBoardRequests<1||maxBoardRequests>24)
     throw new Error('maxBoardRequests must be an integer from 1 to 24.');
   const unique=[...new Map(sources.map(s=>[sourceUrl(s),s])).values()];
-  return {selected:unique.slice(0,maxBoardRequests),total:unique.length,deferred:Math.max(0,unique.length-maxBoardRequests),limit:maxBoardRequests};
+  if(!Number.isInteger(sourceOffset)||sourceOffset<0||sourceOffset>unique.length)
+    throw new Error('sourceOffset must identify the next unsearched board.');
+  const selected=unique.slice(sourceOffset,sourceOffset+maxBoardRequests);
+  const nextOffset=sourceOffset+selected.length;
+  return {selected,total:unique.length,offset:sourceOffset,nextOffset,
+    deferred:unique.length-nextOffset,limit:maxBoardRequests};
 }
 
 export async function discover(config,snapshot) {
   const cache=new SourceCache(join(config.stateDir,'sources'));
-  const budget=selectBudgetedSources(config.sources,config.maxBoardRequests??12);
-  const sources=budget.selected;
-  const results=[];
-  // Bound concurrency. A large board must not occupy the entire run.
-  let cursor=0;
-  await Promise.all(Array.from({length:Math.min(4,sources.length)},async()=>{
-    while(cursor<sources.length){const source=sources[cursor++];const response=await cache.get(sourceUrl(source));results.push({source,response});}
-  }));
+  const maxBoardRequests=config.maxBoardRequests??12;
+  const maxDiscoveryPasses=config.maxDiscoveryPasses??2;
+  const sourceOffset=config.sourceOffset??0;
+  if(!Number.isInteger(maxDiscoveryPasses)||maxDiscoveryPasses<1||maxDiscoveryPasses>2)
+    throw new Error('maxDiscoveryPasses must be 1 or 2.');
+  const external=candidatesFromExternalLeads(config.externalLeads||[]);
   const rejectionPath=join(config.stateDir,'rejections.json');
   const rejections=existsSync(rejectionPath)?JSON.parse(readFileSync(rejectionPath,'utf8')):{};
-  const output=discoverCandidates(results.flatMap(r=>r.response.status===200?candidatesFrom(r.source,r.response.data):[]),snapshot,config.policy,rejections);
-  return {...output,requests:cache.stats,sourceBudget:{limit:budget.limit,total:budget.total,queried:sources.length,deferred:budget.deferred},sources:results.map(({source,response})=>({provider:source.provider,board:source.board,
-    status:response.status,cached:response.cached,checkedAt:response.checkedAt,expiresAt:response.expiresAt,error:response.error||null})),
-    limits:'Discovery leads only. Deferred sources are not searched or rejected. Location, compensation, requirements and application path require exact employer verification.'};
+  const results=[],passSummaries=[];let nextOffset=sourceOffset,remaining=0,total=0;
+  // Pass 2 continues at the NEXT board, not the first 12 again.
+  // A cheap metadata shortlist threshold avoids heavy full-JD work for weak leads.
+  for(let pass=0;pass<maxDiscoveryPasses;pass++) {
+    const batch=selectBudgetedSources(config.sources||[],maxBoardRequests,nextOffset);
+    total=batch.total;remaining=batch.deferred;nextOffset=batch.nextOffset;
+    if(!batch.selected.length)break;
+    let cursor=0;const current=[];
+    await Promise.all(Array.from({length:Math.min(4,batch.selected.length)},async()=>{
+      while(cursor<batch.selected.length) {
+        const source=batch.selected[cursor++];
+        const response=await cache.get(sourceUrl(source));
+        current.push({source,response});
+      }
+    }));
+    results.push(...current);
+    const leads=results.flatMap(r=>r.response.status===200?candidatesFrom(r.source,r.response.data):[]);
+    const interim=discoverCandidates([...external,...leads],snapshot,config.policy,rejections);
+    passSummaries.push({index:pass+1,offset:batch.offset,queried:current.length,
+      nextOffset,leads:leads.length,accepted:interim.candidates.length,
+      held:interim.held.length,errors:current.filter(r=>r.response.error).length});
+    // Select broadly at metadata stage; final eligibility is still checked from JD.
+    if(interim.candidates.length>=Math.max(3,config.requestedCount??5)*3)break;
+    if(!remaining)break;
+  }
+  const atsLeads=results.flatMap(r=>r.response.status===200?candidatesFrom(r.source,r.response.data):[]);
+  const output=discoverCandidates([...external,...atsLeads],snapshot,config.policy,rejections);
+  const sourceBudget={limit:maxBoardRequests,maxPasses:maxDiscoveryPasses,offset:sourceOffset,
+    total,queried:results.length,nextOffset,deferred:remaining,passes:passSummaries.length};
+  return {...output,requests:cache.stats,sourceBudget,passSummaries,
+    externalLeads:external.length,rawAtsLeads:atsLeads.length,
+    sources:results.map(({source,response})=>({provider:source.provider,board:source.board,
+      status:response.status,cached:response.cached,checkedAt:response.checkedAt,
+      expiresAt:response.expiresAt,error:response.error||null})),
+    limits:'Discovery yields unqualified leads only. Deferred boards remain unsearched; an external lead needs full employer JD and application-path review.'};
 }
