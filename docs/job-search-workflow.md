@@ -41,12 +41,29 @@ It records `nextOffset`, per-pass counts and deferred sources. To request a late
 `sourceOffset` to the saved `nextOffset`; never restart at board zero by accident.
 Deferred boards are **unsearched**, not rejected. No unbounded search loops.
 
-The three built-in board feeds (Greenhouse, Lever, Ashby) do not cover many target employers.
-A dated `externalLeadsPath` provides a safe input for jobs found via official career sites,
-Workday, SAP SuccessFactors, or connected search. Each lead needs company, position, URL,
-`evidenceUrl`, and ISO `observedAt`. Such leads go through identical duplicate/seniority filters,
-but remain unqualified until exact employer JD, authorization and application-path verification.
-Do not treat a general careers redirect as a usable application form or infer job freshness.
+The built-in source adapters are **Greenhouse, Lever, Ashby, verified public Workday career
+sites, and explicitly configured public employer JSON feeds**. Workday runs up to three
+server-side terms and two 20-result pages per term, cached by POST body. Do not
+guess tenants, hosts or sites; obtain these from the employer's own public careers
+URL. Respect unavailable or gated endpoints. SAP SuccessFactors does not expose a
+universal public job-search API: only use a genuinely available official employer
+feed or the manual verified-source workflow. <strong>Do not invent a feed.</strong>
+
+For employer pages without a configured public feed, save a dated `externalLeadsPath`
+array from the exact employer posting. Each record requires company, position,
+requisition URL, `evidenceUrl`, ISO `observedAt`, and
+`officialEmployerHost` matching the employer's verified ATS host. Leads missing
+the last field are **held** as unverified, not counted as new qualified candidates.
+The official role JD, mandatory qualifications, actual work authorization and
+application form still need independent verification. A general-careers redirect,
+sign-in gateway or HTTP 200 alone never verifies a usable application form.
+
+Every manual run must supply `targetEmployers` in approved list order and at least
+one configured employer source or dated external lead. Missing source configuration
+returns `source-configuration` before fonts/resume work. Only the configured
+employers are attempted; the discovery audit lists attempted, failed, deferred
+and unconfigured employers. A zero-result run with missing employer coverage is
+a **coverage failure**, not evidence that no jobs exist.
 
 Never manufacture matches, relax qualification gates, or silently lower `requestedCount`.
 If **1–4** roles pass all gates in a five-job run, generate and persist those verified resumes,
@@ -81,7 +98,10 @@ the named input files; master/font/evidence artifact paths must be absolute. Exa
   "readbackPath": "readback.json",
   "publishedPath": "published.json",
   "stateDir": "../../cache",
-  "sources": [{"provider":"greenhouse","board":"verified-slug","company":"Employer"}],
+  "targetEmployers": ["Employer", "Next Employer"],
+  "sources": [
+    {"provider":"greenhouse","board":"verified-slug","company":"Employer"}
+  ],
   "sourceOffset": 0,
   "maxBoardRequests": 12,
   "maxDiscoveryPasses": 2,
@@ -193,9 +213,65 @@ The private `dated-external-leads.json` is an array; example only:
 ]
 ```
 
-The recorded source and timestamp certify only what was found, not that the position
-is active, eligible, or bookable through a specific form. Include no invented employer
-claims, and keep the file private. The user must still submit all applications.
+Add `"officialEmployerHost": "example.com"` to an external lead only after
+confirming that both the job URL and the evidence URL are hosted on that
+employer's genuine ATS/career domain. Without it, the lead is **held**
+until the official source is established. No third-party board snippet
+satisfies this field. The source and timestamp certify only what was found,
+not that the position is active, eligible, or has a working application form.
+Include no invented employer claims and keep the file private.
+
+### Verified direct career-site starting points
+
+Use `config/verified-employer-career-sites.json` for the November 3 named
+employers (TCS, Wipro, Cognizant, Capgemini, HCLTech). These verified starting
+URLs are **not** automatic ATS feed configurations and are **not** individual
+job application links. They make manual discovery more repeatable.
+The H-1B-dependent list and live Rules remain the source of employer scope/order.
+
+### Official Workday source example
+
+Only after confirming host, tenant and site from the company's own careers
+page, configure a local source such as:
+
+```json
+{
+  "company": "Example Employer",
+  "provider": "workday",
+  "host": "sample.wd5.myworkdayjobs.com",
+  "tenant": "sample",
+  "site": "External",
+  "searchTerms": ["analyst", "data", "AI"],
+  "maxPagesPerTerm": 1
+}
+```
+
+This is a format example, **not** a claim that the sample tenant has live jobs.
+
+### Check application links before generating PDFs
+
+For up to ten shortlisted requisitions, store private URL-check inputs in
+`application-links.json` and run:
+
+```bash
+node scripts/job-search-application-path.mjs PRIVATE_RUN_DIRECTORY/application-links.json
+```
+
+Fields: `url` (exact employer listing or apply URL), `position`,
+`requisition`, and optional `permittedHosts` (only verified company ATS
+domains). Results distinguish closed/redirected/general-homepage/sign-in
+links from visible individual job pages. A visible individual job page is
+`state: review`, **not application-ready**; someone must still verify the
+actual form beyond login and record the dated source in the preflight gate.
+
+### Mandatory coverage audit
+
+The runner returns `discovery.audit` at the shortlist boundary. Include
+the checked and unconfigured company names, actual HTTP requests and cache
+hits, candidate/held counts, duplicate/filter reasons, and explicit deferred
+source names when reporting a shortfall. It is not a billed ChatGPT token
+counter. Do not describe a configured company whose source failed, or an
+unconfigured/deferred company, as searched successfully.
 
 ## Cache and recovery
 
