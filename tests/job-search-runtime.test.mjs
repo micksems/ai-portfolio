@@ -74,10 +74,12 @@ test('dated external Workday and SAP leads use the same duplicate and role gates
   {company:'Example Workday',position:'Business Operations Associate',
    url:'https://example.wd5.myworkdayjobs.com/jobs/job/NY/Business-Operations-Associate_REQ-101',
    evidenceUrl:'https://example.wd5.myworkdayjobs.com/jobs',observedAt:now,
+   officialEmployerHost:'example.wd5.myworkdayjobs.com',
    descriptionSnippet:'Business process analytics and reporting.'},
   {company:'Example SAP',position:'AI Data Specialist',
    url:'https://example.sapsf.eu/careers?req=102',
    evidenceUrl:'https://example.sapsf.eu/careers',observedAt:now,
+   officialEmployerHost:'example.sapsf.eu',
    descriptionSnippet:'AI data evaluation and validation.'}
  ]);
  assert.equal(leads.length,2);
@@ -92,7 +94,7 @@ test('dated external Workday and SAP leads use the same duplicate and role gates
 test('ambiguous associate title goes to review, not discarded or automatically approved',()=>{
  const now=new Date().toISOString();
  const base={company:'Example',position:'Operations Associate',url:'https://example.com/jobs/operation-associate',
-  evidenceUrl:'https://example.com/careers',observedAt:now};
+  evidenceUrl:'https://example.com/careers',observedAt:now,officialEmployerHost:'example.com'};
  const ambiguous=discoverCandidates(candidatesFromExternalLeads([base]),snapshot(),{});
  assert.equal(ambiguous.candidates.length,0);
  assert.equal(ambiguous.held.length,1);
