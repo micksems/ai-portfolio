@@ -171,6 +171,8 @@ export async function run(directory,{mode='run'}={}) {
     if(mode==='status')return {status:manifest.waiting?'waiting':'recorded',wallElapsedMs:Date.now()-Date.parse(manifest.startedAt),...manifest};
     required(['run','revise','benchmark','sync'].includes(mode),'Use run|revise|benchmark|sync|status RUN_DIRECTORY');
     required(config.spreadsheetId,'Missing canonical spreadsheet ID');
+    const requestedCount=config.requestedCount??5;
+    required(Number.isInteger(requestedCount)&&requestedCount>=1,'requestedCount must be positive');
     const snapshot=read(path('snapshotPath'));fresh(snapshot);jobs(snapshot);
     const code={runner:fileDigest(join(scripts,'job-search-run.mjs')),render:fileDigest(join(scripts,'render-job-resumes.py')),
       checker:fileDigest(join(scripts,'check-resume-fit.mjs')),preflight:fileDigest(join(scripts,'job_search_preflight.py'))};
@@ -178,6 +180,7 @@ export async function run(directory,{mode='run'}={}) {
     // Re-run the release gate only when rendering, evidence or preflight code changes.
     const evidenceCodeDigest=digest({render:code.render,checker:code.checker,preflight:code.preflight});
     let release;
+    let remainingCount=0;
     if(mode==='run'||mode==='revise'||mode==='benchmark') {
       const policy=policyFor(dir,config);
       const master=config.master;
@@ -195,15 +198,27 @@ export async function run(directory,{mode='run'}={}) {
       if(!existsSync(shortlistPath)) {
         required(mode!=='benchmark','Benchmark requires one existing role; discovery is disabled.');
         const discoveryPath=join(dir,'discovery.json');
-        const sourceConfig={stateDir:resolve(dir,config.stateDir||'../../cache'),sources:config.sources||[],policy,maxBoardRequests:config.maxBoardRequests??12};
-        await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,policy,maxBoardRequests:sourceConfig.maxBoardRequests,jobs:digest(snapshot.jobs)},async()=>{
+        const externalLeads=config.externalLeadsPath?read(path('externalLeadsPath')):(config.externalLeads||[]);
+        const sourceConfig={stateDir:resolve(dir,config.stateDir||'../../cache'),
+          sources:config.sources||[],externalLeads,policy,requestedCount,
+          maxBoardRequests:config.maxBoardRequests??12,maxDiscoveryPasses:config.maxDiscoveryPasses??2,
+          sourceOffset:config.sourceOffset??0};
+        await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,externalLeads,
+          policy,maxBoardRequests:sourceConfig.maxBoardRequests,maxDiscoveryPasses:sourceConfig.maxDiscoveryPasses,
+          sourceOffset:sourceConfig.sourceOffset,jobs:digest(snapshot.jobs)},async()=>{
           writeJson(discoveryPath,await discover(sourceConfig,snapshot));return [discoveryPath];
         });
-        return wait('shortlist',{path:discoveryPath,needed:config.requestedCount||5,
-          instruction:'Review exact employer JDs and application paths, add dated evidence packs and reviewed authoring plans. Discovery leads are not qualified jobs.'});
+        const discovery=read(discoveryPath);
+        return wait('shortlist',{path:discoveryPath,requestedCount,needed:requestedCount,
+          leads:discovery.candidates.length,held:discovery.held.length,
+          filtered:discovery.counts.filtered,duplicates:discovery.counts.duplicates,
+          reasonCounts:discovery.counts.filteredReasons,sourceBudget:discovery.sourceBudget,
+          instruction:'Select only verified eligible roles from the leads. External leads need full employer JD and application-path review. If none qualify, report the checked sources and reasons; do not describe deferred boards as checked.'});
       }
       const candidates=read(shortlistPath);
-      required(candidates.length===(config.requestedCount||5),'Continue discovery until the requested distinct eligible count is met; do not pad.');
+      required(candidates.length>=1&&candidates.length<=requestedCount,
+        'Provide 1..requestedCount verified roles, or report a zero-result discovery with its reason counts. Never pad or silently lower the target.');
+      remainingCount=requestedCount-candidates.length;
       checkCandidateIdentity(candidates,snapshot,mode);
       const plans=existsSync(plansPath)?read(plansPath):null,packs=existsSync(packsPath)?read(packsPath):null;
       if(!plans||!packs)return wait('authoring-inputs',{plansPath,packsPath});
@@ -239,7 +254,7 @@ export async function run(directory,{mode='run'}={}) {
         // A completed release may resume uploads/sync without reauthoring. New
         // content always repeats the fresh duplicate gate before touching PDFs.
         const preflightPath=join(dir,'preflight.json'),preflightResult=join(dir,'preflight-result.json');
-        const payload={process_policy_version:2,run_mode:['revise','benchmark'].includes(mode)?'replacement':'normal',historical_benchmark:mode==='benchmark',requested_count:config.requestedCount||5,
+        const payload={process_policy_version:2,run_mode:['revise','benchmark'].includes(mode)?'replacement':'normal',historical_benchmark:mode==='benchmark',requested_count:requestedCount,
           snapshot:{read_at:snapshot.readAt,jobs:snapshot.jobs},master,candidates};
         await runStage(manifestPath,'preflight',{payload,code:code.preflight},async()=>{
           writeJson(preflightPath,payload);
@@ -338,7 +353,10 @@ export async function run(directory,{mode='run'}={}) {
       });
     }
     const sync=read(syncResultPath);
-    if(!sync.changed){resolveWait();return {status:'complete',changed:false,manifest:manifestPath};}
+    if(!sync.changed){resolveWait();return {status:mode==='sync'||!remainingCount?'complete':'partial',
+      changed:false,requestedCount:mode==='sync'?undefined:requestedCount,
+      preparedCount:mode==='sync'?undefined:requestedCount-remainingCount,
+      remainingCount:mode==='sync'?undefined:remainingCount,manifest:manifestPath};}
     const publishedPath=path('publishedPath');
     if(!existsSync(publishedPath))return wait('publish',{proposalPath,publishedPath,
       instruction:'Apply compact proposal to the fresh GitHub fetch result with matching blob SHA. Commit once; record exact CI and production deployment proof.'});
@@ -351,7 +369,11 @@ export async function run(directory,{mode='run'}={}) {
     required(published.deployment?.state==='READY'&&published.deployment.commit===published.commit&&published.deployment.aliases?.includes('ai-portfolio-ruddy-nine.vercel.app'),'Production deployment differs from published commit');
     required(published.productionVerified===true,'Verify the production route before handoff');
     resolveWait();await runStage(manifestPath,'publish',{proposal:fileDigest(proposalPath),published},async()=>[publishedPath]);
-    return {status:'complete',changed:true,commit:published.commit,manifest:manifestPath};
+    return {status:mode==='sync'||!remainingCount?'complete':'partial',changed:true,
+      requestedCount:mode==='sync'?undefined:requestedCount,
+      preparedCount:mode==='sync'?undefined:requestedCount-remainingCount,
+      remainingCount:mode==='sync'?undefined:remainingCount,
+      commit:published.commit,manifest:manifestPath};
   } finally {
     clearInterval(lease);if(fd!==undefined)closeSync(fd);
     if(existsSync(lock)&&readFileSync(lock,'utf8').includes(token))unlinkSync(lock);
