@@ -13,7 +13,7 @@ with tempfile.NamedTemporaryFile() as f:
  # A smaller verified shortlist must be evaluated without silently reducing the goal.
  p['requested_count']=5
  partial=m.check(p,now)
- assert len(partial)==1 and 'Already submitted' in partial[0]['reasons']
+ assert len(partial)==1 and any('Already submitted' in x for x in partial[0]['reasons'])
  p['candidates']=[]
  try:
   m.check(p,now)
