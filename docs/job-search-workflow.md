@@ -26,17 +26,28 @@ research and writing judgement, views the actual final PNGs, and calls the conne
 GitHub/Vercel tools. A waiting stage is not completion. The runner does not invent verified evidence,
 write application forms, submit applications, send messages, or schedule searches.
 
-## Completion and timing
+## Completion and credit efficiency
 
-There is no overall run deadline, elapsed-time budget, search-query budget, or speed target.
-Timing measurements are diagnostic only. Continue discovery across additional employers and sources
-until the user-requested number of new qualified roles and verified role-specific PDFs, tracker updates and
-website synchronization are complete. Rejected leads, exhausted initial queries, and an individual
-source failure are not run-level blockers. Per-request and per-command timeouts only prevent hangs;
-retry or switch sources and resume the same run. Do not lower requestedCount to deliver a partial run
-without the user's instruction. Preserve duplicate, eligibility, factual and PDF checks. A shortfall
-requires a concrete external blocker that actually prevents further progress, identified precisely;
-it must never be attributed to an inferred time limit or a limited first batch of search results.
+The purpose is to return the user-requested number of **verified** new roles and truthful role-specific PDFs,
+not to maximize searches, retries or elapsed time. The live Rules tab determines employer scope;
+do not consult legacy broad-search instructions when Rules restrict searches to the H-1B employer list.
+Within a run, query verified sources once, deduplicate by requisition before full-JD reads,
+and reuse cached evidence/failed lookups. Do not run overlapping search engines to rediscover
+the same board or repeatedly request full tracker/archives.
+
+Default discovery is limited to **12 distinct verified ATS boards per pass** (configurable via
+`maxBoardRequests`, 1–24). The discovery result records queried and deferred boards; deferred
+sources are **unsearched**, not rejected. Use at most two focused discovery passes for a manual
+run before reporting the actual shortfall and its evidence. Do not enter an unbounded search loop.
+Never manufacture matches, relax qualification gates, or silently lower `requestedCount`.
+If fewer genuine openings are verified, report the incomplete run and what remains to be checked;
+the next requested pass resumes from the saved checkpoint.
+
+A time/credit guardrail limits **repeated work**, not the amount of care spent on each shortlisted
+job or the evidence and PDF release gate. Stop retrying a source after the recorded timeout/error
+unless a verified alternate source exists. Resume a failed stage only; never redo PDFs after an
+upload, Sheet or deployment failure. Keep successful receipts, exact submission protection and
+one-page Times New Roman QA.
 
 ## Inputs
 
@@ -78,7 +89,7 @@ Preserve date-only precision; never infer an application from preparation or a s
    dependencies/fonts fail once before research rather than halfway through document creation.
 2. **Discovery:** configure verified ATS slugs, never guess a long list of alternate slugs. Greenhouse
    requests metadata first; Lever/Ashby reuse their board response. Four concurrent requests, eight-second
-   deadlines, explicit errors. Successful sources cache for 15 minutes; 404/410 for 24 hours;
+   deadlines, explicit errors, and a default 12-board pass limit (24 maximum). Successful sources cache for 15 minutes; 404/410 for 24 hours;
    401/403/429 for one hour; transient failures for five minutes. Source bodies are content-addressed.
    Full Workday requisitions, including hyphens and suffixes, remain distinct. Match historical keys
    through their saved URLs without rewriting submitted records. Dashboard reconciliation accepts a legacy key only when the
@@ -88,8 +99,7 @@ Preserve date-only precision; never infer an application from preparation or a s
    Use earlyMismatch for explicit salary, location, timing, mandatory-experience and CPT/OPT restrictions.
    Missing metadata is not proof of mismatch. An AI-branded recruiting/admin role is not an AI analyst role. Same employer/title and known aliases
    (including Deploy/Hive) are held as possible reposts. A new ID alone cannot fill a new-job slot.
-3. **Research and freeze:** supplement ATS discovery with connected search, including the official
-   UN/agency check and sponsor-friendly employers. Research only surviving relevant leads. Verify the
+3. **Research and freeze:** follow the live Rules employer scope, currently the H-1B-dependent employer list. Do not run unrelated UN/agency or general-market searches unless requested. Research only surviving relevant leads. Verify the
    complete dated employer JD, mandatory/preferred qualifications, seniority, geography, base pay,
    start/enrollment, actual authorization restrictions and the exact application route. Sponsorship is a
    preference, not automatic legal ineligibility. Freeze the requested number of genuinely new roles;

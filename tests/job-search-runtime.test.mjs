@@ -5,7 +5,7 @@ import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {digest,fileDigest,runStage,readManifest} from '../scripts/run-checkpoint.mjs';
-import {SourceCache,discoverCandidates,sourceUrl} from '../scripts/job-search-discovery.mjs';
+import {SourceCache,discoverCandidates,sourceUrl,selectBudgetedSources} from '../scripts/job-search-discovery.mjs';
 import {readyPlan,validateUploads,validateAuthoringPlans,permitsFitHeldRevision,recordRejections,run} from '../scripts/job-search-run.mjs';
 import {applyPublicationProposal} from '../scripts/job-search-publication.mjs';
 import {jobKey,calculateMetrics} from '../src/lib/job-search-model.mjs';
@@ -43,6 +43,17 @@ test('role-first drafting rejects recycled experience with only skills or order 
  assert.throws(()=>validateAuthoringPlans([plan,other],[pack,{...pack,key:'two'}]),/Identical experience/);
  assert.throws(()=>validateAuthoringPlans([{...plan,authoringReview:{...authoringReview,evidenceSelections:[]}}],[pack]),/primary duty/);
  assert.throws(()=>validateAuthoringPlans([{...plan,changes:{81:'Skills only'}}],[pack]),/Review each experience slot/);
+});
+
+test('discovery has an explicit source-request budget and reports deferred boards',()=>{
+ const sources=Array.from({length:18},(_,i)=>({provider:'greenhouse',board:'employer'+i}));
+ const budget=selectBudgetedSources([...sources,sources[0]]);
+ assert.equal(budget.total,18);
+ assert.equal(budget.selected.length,12);
+ assert.equal(budget.deferred,6);
+ assert.equal(selectBudgetedSources(sources,5).selected.length,5);
+ assert.throws(()=>selectBudgetedSources(sources,25),/maxBoardRequests/);
+ assert.throws(()=>selectBudgetedSources(sources,0),/maxBoardRequests/);
 });
 
 test('completed stage reuse requires unchanged outputs, not a saved PASS label',async t=>{

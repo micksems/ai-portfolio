@@ -174,7 +174,9 @@ export async function run(directory,{mode='run'}={}) {
     const snapshot=read(path('snapshotPath'));fresh(snapshot);jobs(snapshot);
     const code={runner:fileDigest(join(scripts,'job-search-run.mjs')),render:fileDigest(join(scripts,'render-job-resumes.py')),
       checker:fileDigest(join(scripts,'check-resume-fit.mjs')),preflight:fileDigest(join(scripts,'job_search_preflight.py'))};
-    const codeDigest=digest(code);
+    // Controller-only edits must not invalidate previously checked PDFs.
+    // Re-run the release gate only when rendering, evidence or preflight code changes.
+    const evidenceCodeDigest=digest({render:code.render,checker:code.checker,preflight:code.preflight});
     let release;
     if(mode==='run'||mode==='revise'||mode==='benchmark') {
       const policy=policyFor(dir,config);
@@ -193,8 +195,8 @@ export async function run(directory,{mode='run'}={}) {
       if(!existsSync(shortlistPath)) {
         required(mode!=='benchmark','Benchmark requires one existing role; discovery is disabled.');
         const discoveryPath=join(dir,'discovery.json');
-        const sourceConfig={stateDir:resolve(dir,config.stateDir||'../../cache'),sources:config.sources||[],policy};
-        await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,policy,jobs:digest(snapshot.jobs),window:Math.floor(Date.now()/900_000)},async()=>{
+        const sourceConfig={stateDir:resolve(dir,config.stateDir||'../../cache'),sources:config.sources||[],policy,maxBoardRequests:config.maxBoardRequests??12};
+        await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,policy,maxBoardRequests:sourceConfig.maxBoardRequests,jobs:digest(snapshot.jobs)},async()=>{
           writeJson(discoveryPath,await discover(sourceConfig,snapshot));return [discoveryPath];
         });
         return wait('shortlist',{path:discoveryPath,needed:config.requestedCount||5,
@@ -229,7 +231,7 @@ export async function run(directory,{mode='run'}={}) {
       const boundSources=[...new Set(packs.flatMap(p=>(p.candidateEvidence||[]).map(ev=>{
         required(ev.localPath&&ev.sha256&&fileDigest(ev.localPath)===ev.sha256,'Bind candidate evidence to actual current source files');return ev.localPath;
       })))];
-      const context=digest({codeDigest,policy,master:master.sha256,fonts:hashFiles(Object.values(read(fontsFile))),candidates,plans,packs,
+      const context=digest({evidenceCodeDigest,policy,master:master.sha256,fonts:hashFiles(Object.values(read(fontsFile))),candidates,plans,packs,
         sources:hashFiles(boundSources),reviews:existsSync(reviewsPath)?fileDigest(reviewsPath):null});
       const releasePath=join(dir,'release.json'),prior=readManifest(manifestPath).stages.release;
       if(prior?.inputDigest===digest(context)&&outputsValid(prior)) release=read(releasePath);
