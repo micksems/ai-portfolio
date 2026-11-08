@@ -65,7 +65,11 @@ employers are attempted; the discovery audit lists attempted, failed, deferred
 and unconfigured employers. A zero-result run with missing employer coverage is
 a **coverage failure**, not evidence that no jobs exist.
 
-Never manufacture matches, relax qualification gates, or silently lower `requestedCount`.
+Prioritize well-connected **junior stretch roles**, not only nearly identical past experience.
+A preferred tool, direct employer-industry background or posted years threshold is not by
+itself an automatic exclusion when documented transferable project/internship work supports
+the core tasks. Never invent achievements or certifications, waive hard eligibility checks,
+or silently lower `requestedCount`.
 If **1–4** roles pass all gates in a five-job run, generate and persist those verified resumes,
 then return `status: partial`, the original five-job target and exact remaining count.
 If none qualify, do not render anything; report reasons, sources searched and deferred employers.
@@ -144,7 +148,7 @@ Preserve date-only precision; never infer an application from preparation or a s
    previously published record binds it to that exact requisition URL. LinkedIn numeric and titled
    URLs share the numeric job ID. URL-less named records must match their company/title key. Exact known requisitions are removed
    before deeper research. The runner repeats identity/submission protection before reading authoring plans.
-   Use earlyMismatch for explicit salary, location, timing, mandatory-experience and CPT/OPT restrictions.
+   Use earlyMismatch for explicit salary, location, timing, senior-independent-ownership and CPT/OPT restrictions. A junior years/domain-experience gap is tracked as stretchReasons, NOT filtered at discovery.
    Missing metadata is not proof of mismatch. Broader Associate/Specialist/Graduate titles with relevant duty snippets enter review rather than being rejected by title alone; ambiguous ones remain held until duties are checked. An AI-branded recruiting/admin role is not an AI analyst role. Same employer/title and known aliases
    (including Deploy/Hive) are held as possible reposts. A new ID alone cannot fill a new-job slot.
 3. **Research and freeze:** follow the live Rules employer scope, currently the H-1B-dependent employer list. Use native ATS feeds plus dated external leads for Workday/SAP/other company career sites. Do not run unrelated UN/agency or general-market searches unless requested. Review relevant leads and held ambiguous Associate/Specialist titles before excluding them. Verify the
@@ -160,8 +164,14 @@ Preserve date-only precision; never infer an application from preparation or a s
    `verification_method: "manual_form_review"` (or `authenticated_form_review`),
    `form_evidence`, `reviewed_by` and a fresh `checked_at`.
    An HTTP 200, employer careers landing page or sign-in-only screen is not a verified application form.
-   Explicit CPT/OPT exclusion, unknown mandatory work qualifications or ambiguous hourly/contingent
-   compensation must remain on hold. On any failed check the runner returns `qualification-hold`
+   Explicit CPT/OPT exclusion, missing nontransferable credential/degree/language, real legal
+   ineligibility or ambiguous hourly/contingent compensation must remain on hold.
+   For experience, role_fit and mandatory_requirements, allow verdict="transferable"
+   where a documented transferBridge (jobDuty, candidateEvidence, evidenceSource, resumeAngle,
+   limits) connects real work to the posting without marking the missing work as done.
+   Do not transform a preferred tool or experience depth mismatch into a hard exclusion.
+   The preflight output must retain the stretch bridge and classify it separately from
+   direct matches. On any failed check the runner returns `qualification-hold`
    with exact reasons; **do not create a resume draft**. Previously submitted roles stay blocked.
    For same-title aliases require `distinctRoleReview` with comparedKey, decision=distinct,
    employerSource, employerQuote in the JD, and an actual team/duties/program difference.
@@ -171,8 +181,14 @@ Preserve date-only precision; never infer an application from preparation or a s
    authoringReview.retainedBaselines. Do not rewrite all fifteen bullets for wording differences. Each plan has authoringReview with roleFocus,
    evidenceSelections mapping each primary duty to a baseline/sourceIds/rationale, projectChoices
    explaining the three selected projects and scopeLimit, and comparisonDecision. Select evidence and projects for actual duties. Retain strong directly relevant bullets.
-   Explain evidence selection and positioning; synonym swaps and keyword edits are not substantive work. The runner checks this boundary;
-   an operator must still review semantic relevance. No arbitrary changed-word percentage.
+   Explain evidence selection and positioning; synonym swaps and keyword edits are not substantive work.
+   Be assertive and write what the candidate *did* and *produced*, choosing the most
+   relevant actual examples from the UN, AI evaluation, Camp Vega, Lewis and analytics
+   projects. Connect tasks by common workflow even if the industry/tool differs.
+   Keep limits and risk in the private evidence record, not as gratuitous apologies
+   in every resume bullet. Do not claim tools, ownership, levels or results that were
+   not actually demonstrated. The runner checks this boundary; an operator still
+   reviews semantic relevance. No arbitrary changed-word percentage.
    Optional skillLabels may reorder the three skills categories to put the role focus first.
    **Render:** `plans.json` is an array keyed by canonical requisition, with reviewed `changes`
    (baseline:text) and `projectLabels` (681/694/707:label). The pinned-master renderer preserves geometry,
@@ -188,9 +204,14 @@ Preserve date-only precision; never infer an application from preparation or a s
    with source hash/path, exact excerpts, work context and factual limits; re-extract only changed sources; course titles cannot prove applied work. Applied critical evidence requires workExample with context
    (professional/internship/academic_team/academic_individual/personal/volunteer), actionQuote present in
    sourceText, and outputQuote present in resumeProof. This replaces the verb whitelist; human review
-   must establish that the cited work actually supports the duty. Never substitute a transferable skill
-   for a required platform or minimum professional tenure. Honor explicit training/no-domain-experience
-   wording; distinguish mandatory qualifications from preferences and future duties.
+   must establish that the cited work supports the underlying duty. A direct-match requirement
+   stays status="met"; a related but nonidentical requirement can be status="partial",
+   reviewVerdict="transferable" with a documented source-anchored transferBridge.
+   A credible bridge can substitute for direct tool/sector/tenure experience as a
+   *pursuit decision*, without making a false claim that the exact platform, years or
+   professional ownership was acquired. Distinguish actual nontransferable requirements
+   (credential/degree/language/legal eligibility) from preferences and future duties;
+   keep those hard exclusions.
    View each final PNG once; read its actual extracted text and fact-check the claims. Write reviews.json
    entries with key, sha256, previewSha256, reviewer, renderedAndInspected, extractedTextReviewed,
    claimsFactChecked. These flags record real review, never fabricated defaults. The controller invokes
