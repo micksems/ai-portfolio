@@ -226,7 +226,8 @@ export async function run(directory,{mode='run'}={}) {
         await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,
           targetEmployers:sourceConfig.targetEmployers,externalLeads,
           policy,maxBoardRequests:sourceConfig.maxBoardRequests,maxDiscoveryPasses:sourceConfig.maxDiscoveryPasses,
-          sourceOffset:sourceConfig.sourceOffset,jobs:digest(snapshot.jobs)},async()=>{
+          sourceOffset:sourceConfig.sourceOffset,discoveryCode:fileDigest(join(scripts,'job-search-discovery.mjs')),
+          jobs:digest(snapshot.jobs)},async()=>{
           writeJson(discoveryPath,await discover(sourceConfig,snapshot));return [discoveryPath];
         });
         const discovery=read(discoveryPath);
