@@ -180,6 +180,7 @@ export async function run(directory,{mode='run'}={}) {
     // Re-run the release gate only when rendering, evidence or preflight code changes.
     const evidenceCodeDigest=digest({render:code.render,checker:code.checker,preflight:code.preflight});
     let release;
+    let remainingCount=0;
     if(mode==='run'||mode==='revise'||mode==='benchmark') {
       const policy=policyFor(dir,config);
       const master=config.master;
@@ -217,7 +218,7 @@ export async function run(directory,{mode='run'}={}) {
       const candidates=read(shortlistPath);
       required(candidates.length>=1&&candidates.length<=requestedCount,
         'Provide 1..requestedCount verified roles, or report a zero-result discovery with its reason counts. Never pad or silently lower the target.');
-      const remainingCount=requestedCount-candidates.length;
+      remainingCount=requestedCount-candidates.length;
       checkCandidateIdentity(candidates,snapshot,mode);
       const plans=existsSync(plansPath)?read(plansPath):null,packs=existsSync(packsPath)?read(packsPath):null;
       if(!plans||!packs)return wait('authoring-inputs',{plansPath,packsPath});
