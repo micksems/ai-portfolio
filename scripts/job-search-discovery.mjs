@@ -254,49 +254,101 @@ export function selectBudgetedSources(sources,maxBoardRequests=12,sourceOffset=0
     deferred:unique.length-nextOffset,limit:maxBoardRequests};
 }
 
+const normal=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const label=s=>s.company||s.board||s.site||s.feedUrl||s.provider;
+export function auditSourceCoverage(config,checks,output,sourceBudget,requestStats) {
+  const ordered=(config.targetEmployers||[]).map(e=>typeof e==='string'?e:e.name).filter(Boolean);
+  const configured=[...(config.sources||[]).map(s=>s.company),
+    ...(config.externalLeads||[]).filter(l=>l.officialEmployerHost).map(l=>l.company)];
+  const active=new Set(configured.map(normal));
+  const missing=ordered.filter(e=>!active.has(normal(e)));
+  const attempted=new Set(checks.map(c=>normal(c.company)));
+  const searched=ordered.filter(e=>attempted.has(normal(e)));
+  const deferred=sourceBudget.deferredSources.map(s=>s.company);
+  const externalReviewed=(config.externalLeads||[]).map(l=>({
+    company:l.company,url:l.url,officialDeclared:Boolean(l.officialEmployerHost),
+    sourceHost:new URL(l.evidenceUrl).hostname
+  }));
+  const failures=checks.filter(c=>c.error||c.status!==200);
+  return {
+    observedAt:new Date().toISOString(),targetEmployerCount:ordered.length,
+    targetEmployersProvided:ordered.length>0,configuredEmployerCount:active.size,
+    unconfiguredEmployers:missing,attemptedEmployers:searched,
+    deferredEmployers:deferred,attemptedSources:checks.length,
+    failedRequests:failures.length,failedSources:failures.map(c=>({company:c.company,
+      status:c.status,error:c.error||'No successful response'})),
+    rawOfficialLeads:output.rawAtsLeads,acceptedLeads:output.candidates.length,
+    heldLeads:output.held.length,duplicates:output.counts.duplicates,
+    filtered:output.counts.filtered,filterReasons:output.counts.filteredReasons,
+    externalReviewed,networkRequests:requestStats.networkRequests,
+    cacheHits:requestStats.cacheHits,
+    coverageStatus:ordered.length===0?'target_scope_not_supplied':
+      missing.length||deferred.length||failures.length?'incomplete':'sources_attempted',
+    interpretation:'Attempted sources are not certified open jobs. A lead needs an exact current employer JD, authorization gates and a usable application form. Unconfigured/deferred employers were NOT searched.'
+  };
+}
 export async function discover(config,snapshot) {
   const cache=new SourceCache(join(config.stateDir,'sources'),{fetcher:config.fetcher??fetch});
   const maxBoardRequests=config.maxBoardRequests??12;
   const maxDiscoveryPasses=config.maxDiscoveryPasses??2;
   const sourceOffset=config.sourceOffset??0;
   if(!Number.isInteger(maxDiscoveryPasses)||maxDiscoveryPasses<1||maxDiscoveryPasses>2)
-    throw new Error('maxDiscoveryPasses must be 1 or 2.');
+    throw new Error('maxDiscoveryPasses must be 1 or 2');
   const external=candidatesFromExternalLeads(config.externalLeads||[]);
   const rejectionPath=join(config.stateDir,'rejections.json');
   const rejections=existsSync(rejectionPath)?JSON.parse(readFileSync(rejectionPath,'utf8')):{};
   const results=[],passSummaries=[];let nextOffset=sourceOffset,remaining=0,total=0;
-  // Pass 2 continues at the NEXT board, not the first 12 again.
-  // A cheap metadata shortlist threshold avoids heavy full-JD work for weak leads.
+  const uniqueSources=[...new Map((config.sources||[]).map(s=>[sourceUrl(s),s])).values()];
   for(let pass=0;pass<maxDiscoveryPasses;pass++) {
-    const batch=selectBudgetedSources(config.sources||[],maxBoardRequests,nextOffset);
+    const batch=selectBudgetedSources(uniqueSources,maxBoardRequests,nextOffset);
     total=batch.total;remaining=batch.deferred;nextOffset=batch.nextOffset;
     if(!batch.selected.length)break;
     let cursor=0;const current=[];
     await Promise.all(Array.from({length:Math.min(4,batch.selected.length)},async()=>{
       while(cursor<batch.selected.length) {
         const source=batch.selected[cursor++];
-        const response=await cache.get(sourceUrl(source));
-        current.push({source,response});
+        const requestItems=source.provider==='workday'?workdayRequests(source):
+          [{url:sourceUrl(source),init:{},term:null,page:0}];
+        const attempts=[],jobs=[];
+        for(const item of requestItems) {
+          const response=await cache.get(item.url,item.init);
+          let found=[];
+          let error=response.error||null;
+          if(response.status===200) {
+            try {found=candidatesFrom(source,response.data);}
+            catch(e) {error='Invalid source response: '+e.message;}
+          }
+          attempts.push({status:response.status,checkedAt:response.checkedAt,cached:response.cached,
+            term:item.term,page:item.page,error,leadCount:found.length});
+          jobs.push(...found);
+          // An unavailable source is not repeatedly retried under different keywords.
+          if(error)break;
+          if(source.provider==='workday'&&found.length===0&&item.page>0)break;
+        }
+        current.push({source,attempts,jobs});
       }
     }));
     results.push(...current);
-    const leads=results.flatMap(r=>r.response.status===200?candidatesFrom(r.source,r.response.data):[]);
+    const leads=results.flatMap(r=>r.jobs);
     const interim=discoverCandidates([...external,...leads],snapshot,config.policy,rejections);
     passSummaries.push({index:pass+1,offset:batch.offset,queried:current.length,
-      nextOffset,leads:leads.length,accepted:interim.candidates.length,
-      held:interim.held.length,errors:current.filter(r=>r.response.error).length});
-    // Both inexpensive metadata passes are checked if more boards remain.
-    // Stopping after a large unqualified title pool caused zero-result runs.
+      nextOffset,rawLeads:leads.length,accepted:interim.candidates.length,
+      held:interim.held.length,failedRequests:current.flatMap(r=>r.attempts).filter(a=>a.error).length,
+      networkRequests:cache.stats.networkRequests,cacheHits:cache.stats.cacheHits});
     if(!remaining)break;
   }
-  const atsLeads=results.flatMap(r=>r.response.status===200?candidatesFrom(r.source,r.response.data):[]);
+  const atsLeads=results.flatMap(r=>r.jobs);
   const output=discoverCandidates([...external,...atsLeads],snapshot,config.policy,rejections);
   const sourceBudget={limit:maxBoardRequests,maxPasses:maxDiscoveryPasses,offset:sourceOffset,
-    total,queried:results.length,nextOffset,deferred:remaining,passes:passSummaries.length};
-  return {...output,requests:cache.stats,sourceBudget,passSummaries,
+    total,queried:results.length,nextOffset,deferred:remaining,passes:passSummaries.length,
+    deferredSources:uniqueSources.slice(nextOffset).map(s=>({company:s.company||label(s),provider:s.provider}))};
+  const checks=results.flatMap(({source,attempts})=>attempts.map(a=>({
+    company:source.company||label(source),provider:source.provider,board:source.board||source.site||null,
+    ...a
+  })));
+  const record={...output,requests:cache.stats,sourceBudget,passSummaries,
     externalLeads:external.length,rawAtsLeads:atsLeads.length,
-    sources:results.map(({source,response})=>({provider:source.provider,board:source.board,
-      status:response.status,cached:response.cached,checkedAt:response.checkedAt,
-      expiresAt:response.expiresAt,error:response.error||null})),
-    limits:'Discovery yields unqualified leads only. Deferred boards remain unsearched; an external lead needs full employer JD and application-path review.'};
+    sources:checks,limits:'Leads only: employer JD, qualifications, start window and usable application form still need verification.'};
+  record.audit=auditSourceCoverage(config,checks,record,sourceBudget,cache.stats);
+  return record;
 }
