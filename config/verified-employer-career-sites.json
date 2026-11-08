@@ -1,0 +1,37 @@
+{
+  "verifiedAt": "2026-11-08",
+  "purpose": "Official employer career-page starting points; these are NOT automatically queried ATS feeds or verified live applications.",
+  "scope": "Named November 3 employer batch only. The H-1B-dependent employer list and current Rules control future scope/order.",
+  "employers": [
+    {
+      "company": "Tata Consultancy Services",
+      "provider": "manual-career-search",
+      "officialCareerUrl": "https://ibegin.tcsapps.com/candidate/jobs/search",
+      "requires": "Find exact requisition and usable application path on iBegin. Do not infer details from the general search page."
+    },
+    {
+      "company": "Wipro",
+      "provider": "manual-career-search",
+      "officialCareerUrl": "https://careers.wipro.com/",
+      "requires": "Confirm individual US requisition on employer career portal; application/login gateway alone is not verified submission access."
+    },
+    {
+      "company": "Cognizant",
+      "provider": "manual-career-search",
+      "officialCareerUrl": "https://careers.cognizant.com/global-en/jobs/",
+      "requires": "Locate exact official posting, mandatory qualifications and role-specific authorization conditions."
+    },
+    {
+      "company": "Capgemini",
+      "provider": "manual-career-search",
+      "officialCareerUrl": "https://careers.capgemini.com/?locale=en_US",
+      "requires": "Confirm direct Apply link remains tied to same requisition, not the general careers page."
+    },
+    {
+      "company": "HCLTech",
+      "provider": "manual-career-search",
+      "officialCareerUrl": "https://careers.hcltech.com/go/United-States/9554455/",
+      "requires": "Verify specific official US requisition; do not treat a general program page as an active role."
+    }
+  ]
+}
