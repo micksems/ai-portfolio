@@ -1,4 +1,42 @@
-# Evidence-first resume tailoring standard (v2)
+# Evidence-first resume tailoring standard (v3 — stretch-friendly)
+
+## November 8, 2026: proactive stretch-role and resume positioning
+
+**Pursue relevant early-career roles even when the resume does not match every item in the JD.**
+The prior "any mandatory experience gap means HOLD" policy was too broad: labels such as
+years of industry experience, preferred platform, job title or direct production ownership
+can describe the employer's ideal hire rather than a genuinely non-negotiable qualification.
+Review the full text before excluding a junior role. Don't assume missing a specific tool
+or an industry background means the candidate cannot do the job.
+
+**Write for the target job, not for the last job's title.** Extract the employer's work tasks and
+select the candidate's closest real work across the United Nations, AI evaluation, Camp Vega,
+Lewis operations, internships, projects and coursework. Connect tasks by transferable
+problem-solving pattern: messy data -> validation, unclear stakeholder need -> requirements,
+repetitive process -> automation, quality concerns -> AI evaluation or testing, business decision
+-> analytical report. Write assertive, concrete accomplishment bullets from those actual
+actions, scope, tools and verified results; move the most relevant bullets forward.
+Do not place unnecessary self-disqualifying language in the resume. Keep the limits in the
+private evidence ledger and surface them in the review rather than making every bullet tentative.
+Rewrite substantially when the role's duties differ; never rely solely on rearranging keywords.
+
+**Bridge the mismatch, never invent performance.** For partial experience/skill matches,
+record `transferBridge` with `jobDuty`, `candidateEvidence`, `evidenceSource`,
+`resumeAngle` and `limits`. `transferable` is an allowed preflight verdict for
+`role_fit`, `experience` and `mandatory_requirements` with such evidence. A
+partial critical task can pass the content gate when its real source, factual work context,
+distinct literal resume proof and a substantive bridge are reviewed. Record the remaining
+gap as a warning; do **not** label an unperformed tool, production deployment, individual
+leadership responsibility, years of experience, certificate, language or degree as acquired.
+
+**Still exclude** senior/lead/sales roles; confirmed legal or authorization barriers,
+explicit CPT/OPT exclusions, unheld licenses/credentials, unavailable start or location,
+closed/unusable application paths, duplicates and unverifiable factual claims.
+A junior or associate role with an experience-depth gap is a **stretch opportunity**,
+not an automatic rejection; senior titles and truly senior independent ownership are
+not permitted in ordinary runs. The target remains five verified distinct openings
+with tailored one-page Times New Roman PDFs and honest shortfall reporting.
+
 
 October 30 corrective rule: the approved master is a fact and style reference, not default experience copy.
 Review experience for each role; retain a directly relevant pinned-master bullet through
@@ -32,13 +70,13 @@ A match score measures *overlap*, not qualification. Mecka Strategic Project Lea
 
 ## Mandatory sequence — never reverse the order
 1. **Capture immutable job evidence before scoring.** Record exact employer, title, requisition ID, official job URL, complete JD text, observation date, location, level, required years, required competencies, degree, compensation, working arrangement, start date, authorization/sponsorship terms, and uncertain items. Do not silently substitute a newer JD version for the version evaluated when applying. When an official posting is JS-only or incomplete, use an identified archived copy or third-party record and label source quality explicitly.
-2. **Role eligibility and seniority gate before tailoring.** Compare mandatory education, years, independent scope, domain, tools, people management, project ownership and stakeholder expectations against actual evidence. Distinguish internship, course, volunteer, and salaried professional experience; do not sum overlapping periods or equate project participation with project ownership. Default manual search policy (R-11/HF-02) excludes Senior/Sr/Lead titles and senior/lead scope unless the user explicitly changes the scope. For any allowed managerial role, independent ownership still requires direct evidence. A mandatory gap means HOLD/NO-GO, not "94% match." Unknown means investigate; do not score as met. Work authorization is role-specific, and company-wide conclusions require employer-wide evidence. Never auto-answer the candidate's personal sponsorship questions.
+2. **Role eligibility and seniority gate before tailoring.** Compare mandatory education, years, independent scope, domain, tools, people management, project ownership and stakeholder expectations against actual evidence. Distinguish internship, course, volunteer, and salaried professional experience; do not sum overlapping periods or equate project participation with project ownership. Default manual search policy (R-11/HF-02) excludes Senior/Sr/Lead titles and senior/lead scope unless the user explicitly changes the scope. For any allowed managerial role, independent ownership still requires direct evidence. An objectively nontransferable qualification gap means HOLD/NO-GO. A transferable years, sector or tool-experience gap can proceed with explicit work evidence and a documented bridge; classify it as a stretch rather than marking it met. Unknown legal/credential requirements still require investigation. Work authorization is role-specific, and company-wide conclusions require employer-wide evidence. Never auto-answer the candidate's personal sponsorship questions.
 3. **Evidence ledger.** For every requirement, record: (a) employer's exact words, (b) Must/Preferred, (c) candidate source (approved master resume or independently verified fact), (d) Met/Partial/Missing/Unknown, (e) what could be truthfully stated on the resume, and (f) risk/gap. Candidate background is not a keyword bag.
 4. **Scoring is secondary to gates.** Show fit by dimensions: domain/function, demonstrated skills, level/years, real ownership scope, work authorization, location/start, and compensation. Do not issue a high composite score when there is a critical requirement gap; disclose any stretch clearly. Never report ATS/hiring odds from an invented numerical score. A role with unresolved mandatory requirements is not "Ready to Submit." Do not pad a fixed-size shortlist.
-5. **Tailor for duties, not nouns.** Start with the employer's top 3–5 tasks, then select the most relevant *verified* achievements. Put the strongest direct proof near the top of Experience; prioritize actions, scale, outcome, stakeholders and tools where supported. Reorder/rephrase faithfully, without inflating titles, independent ownership, team size, revenue, percentages, shipped status, tenure, authorization, or seniority. If top responsibilities cannot be supported, recommend a different role rather than manufacturing bullets.
+5. **Tailor for duties, not nouns.** Start with the employer's top 3–5 tasks, then select the most relevant *verified* achievements. Put the strongest direct proof near the top of Experience; prioritize actions, scale, outcome, stakeholders and tools where supported. Reorder/rephrase faithfully, without inflating titles, independent ownership, team size, revenue, percentages, shipped status, tenure, authorization, or seniority. If direct proof is unavailable, seek the closest validated work and build a specific task-to-skill bridge; only recommend a different role if core tasks truly have no defensible connection. Never fabricate achievements or credentials.
 6. **Adversarial review.** Ask: "If I were a skeptical hiring manager, which required duties remain unproven by this exact resume?" Test end-to-end deliverables versus assisting on a stage; consumer/customer ownership versus internal collaboration; maintaining records versus owning an SLA; projects/coursework versus production outcomes; and tools used versus tools merely familiar. State the gaps, not just strengths.
 7. **Mechanical and evidence QA.** Use approved master, original facts, chronology, font/layout and links; render/inspect the PDF, check selectable/extracted text, line wrapping, date/location alignment, contact links, ATS-readable headings, one-page target (unless user approves otherwise), and final claim-by-claim fact check. Preserve a source-master version/hash and final PDF URL. Optional keywords never replace proof. Do not produce cover letters unless specifically requested.
-8. **Release gate.** Assemble a reviewed evidence pack and run `node scripts/check-resume-fit.mjs /path/to/evidence-pack.json`. The tool returns HOLD for unknown/missing critical evidence, unsupported seniority, unsupported claims, verified legal ineligibility, missing dated JD, or incomplete PDF QA. A no-sponsorship employer policy alone is a warning, not a hard filter. Passing the tool only means READY_FOR_HUMAN_REVIEW; it is not permission to submit, nor proof the employer will interview or sponsor. If the checker is unavailable, hold the package and repair the environment. Do not manually bypass the release gate or infer QA completed.
+8. **Release gate.** Assemble a reviewed evidence pack and run `node scripts/check-resume-fit.mjs /path/to/evidence-pack.json`. The tool holds missing/unsubstantiated critical evidence but permits partial critical tasks with source-bound transferable bridges and documented limits; unsupported claims, senior/lead scope, verified legal ineligibility, missing dated JD, or incomplete PDF QA still block. A no-sponsorship employer policy alone is a warning, not a hard filter. Passing the tool only means READY_FOR_HUMAN_REVIEW; it is not permission to submit, nor proof the employer will interview or sponsor. If the checker is unavailable, hold the package and repair the environment. Do not manually bypass the release gate or infer QA completed.
 9. **Audit and feedback.** Save the scorecard, unmet requirements, resume version, posting snapshot, authorization uncertainty and eventual outcome by exact requisition. Do not claim any individual rejection reveals why unless the employer explicitly states it. Periodically review rejected, interviewed and assessed applications to calibrate thresholds. Preserve already-submitted materials as historical snapshots.
 
 ## Minimum evidence pack for the checker
@@ -68,7 +106,7 @@ This standard governs ChatGPT-driven/manual generation. The portfolio repository
 The previous gate accepted course labels as applied proficiency and repeated one generic proof across primary duties. All v2 packages require re-review; a historical PASS is not current authorization.
 
 - Extract 3–5 distinct **work tasks** from the employer JD before consulting candidate evidence. Degrees, tool names and personality traits cannot fill these slots.
-- Every ledger row includes kind, exact employerQuote present in the stored JD, requiredDepth and demonstratedDepth (exposure/applied/independent/production), original sourceText/sourceQuote, evidenceRationale, gaps, and reviewVerdict. Mandatory gaps remain HOLD. Preferred requirements must not be misclassified to hide a mandatory gap.
+- Every ledger row includes kind, exact employerQuote present in the stored JD, requiredDepth and demonstratedDepth (exposure/applied/independent/production), original sourceText/sourceQuote, evidenceRationale, gaps, and reviewVerdict. Nontransferable mandatory gaps remain HOLD. A partially met experience/work requirement can be bridged from genuine related accomplishments with a transparent private evidence ledger and warnings; preferred requirements must not be relabeled mandatory or vice versa.
 - Applied critical skills/tasks require workExample {context, actionQuote, outputQuote}:
   context identifies professional/internship/academic_team/academic_individual/personal/volunteer work;
   actionQuote must occur in sourceText and outputQuote in resumeProof. No verb whitelist.
