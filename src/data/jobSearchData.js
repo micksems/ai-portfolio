@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "November 6, 2026",
+  "updatedAt": "November 8, 2026",
   "metrics": {
     "applications": 139,
     "interviews": 8,
@@ -13,7 +13,7 @@ export const jobSearchData = {
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-06",
+    "auditedAt": "2026-11-08",
     "lifetimeApplications": 143
   },
   "jobs": [
@@ -5217,6 +5217,86 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "capgemini:526834",
+      "company": "Capgemini",
+      "position": "MDM Junior Analyst",
+      "url": "https://careers.capgemini.com/job/Columbia%2C-SC-MDM-Junior-Analyst-l-Any-II-Informatica-MDM%2C-Reltio%2C-STIBO%2C-Ataccama-SC-29201/1439815333/",
+      "status": "Found",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-08",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "virtusa:plano-it-business-analyst-finance-2026-10-provisional",
+      "company": "Virtusa",
+      "position": "IT Business Analyst – Finance & Business Operations (Associate)",
+      "url": "https://app.bebee.com/us/jobs/associate-virtusa-plano--fj-2435603599",
+      "status": "Found",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-08",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "htcinc.com:246150",
+      "company": "HTC Global Services",
+      "position": "Data Analyst – MDM Reporting & Compliance",
+      "url": "https://www.htcinc.com/job-detail/?jobcode=246150",
+      "status": "Found",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-08",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "mathworks.com:37801-mmcc",
+      "company": "MathWorks",
+      "position": "Associate Information Systems Analyst",
+      "url": "https://www.mathworks.com/company/jobs/opportunities/37801-information-systems-analyst",
+      "status": "Found",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-08",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "jobs.lever.co:0663c1d8-d32a-4f52-a0ce-71fb6b5f0966",
+      "company": "Brillio LLC",
+      "position": "AI Training Data Acquisition Analyst (Japanese, French) - R01572719",
+      "url": "https://jobs.lever.co/brillio-2/0663c1d8-d32a-4f52-a0ce-71fb6b5f0966/apply",
+      "status": "Found",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-08",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -6294,10 +6374,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-06T19:26:44.278Z",
-    "sha256": "ef2d979ed88e58e7a1273bf39f174dfb40e241b0be46ac847be5286a4a086260",
-    "historyRecords": 320,
-    "trackerRecords": 320,
-    "uniqueHistoryRecords": 320
+    "readAt": "2026-11-08T19:35:28.543Z",
+    "sha256": "66371667357637cec23b785c39534d877ea30d27021e61bd8bec2881c5d30dc6",
+    "historyRecords": 325,
+    "trackerRecords": 325,
+    "uniqueHistoryRecords": 325
   }
 };
