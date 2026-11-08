@@ -209,6 +209,32 @@ test('sheet row indexes remain correct after blank rows',()=>{
  const plan=readyPlan(snapshot([[],row]),[candidate],[receipt],'sheet');
  assert.equal(plan.requests[0].updateCells.range.startRowIndex,2);
 });
+test('blocked applicant cannot reach authoring plans, font extraction or PDF rendering',async t=>{
+ const p=temp(t),master=join(p,'master.pdf');writeFileSync(master,'pinned test resume');
+ const candidatePath=join(p,'candidate.json'),evidencePath=join(p,'evidence.json'),
+   rulesPath=join(p,'rules.json');
+ for(const path of [candidatePath,evidencePath,rulesPath])writeFileSync(path,'{}');
+ const job={company:'Example Workday',position:'Data Analyst',
+   url:'https://sample.wd5.myworkdayjobs.com/External/job/New-York/Data-Analyst_R123',
+   gates:{role_fit:{verdict:'pass',evidence:'UN analytical experience'}}};
+ writeFileSync(join(p,'shortlist.json'),JSON.stringify([job]));
+ writeFileSync(join(p,'snapshot.json'),JSON.stringify(snapshot()));
+ writeFileSync(join(p,'inputs.json'),JSON.stringify({
+   spreadsheetId:'fixture',snapshotPath:'snapshot.json',candidatePath:'candidate.json',
+   evidencePath:'evidence.json',rulesPath:'rules.json',shortlistPath:'shortlist.json',
+   master:{library_file_id:'fixture',version:1,local_path:master,sha256:fileDigest(master)}
+ }));
+ const result=await run(p);
+ assert.equal(result.status,'waiting');
+ assert.equal(result.stage,'qualification-hold');
+ assert.equal(result.detail.dashboardSyncRequired,true);
+ assert.ok(result.detail.reasons[0].reasons.some(reason=>reason.includes('application')));
+ assert.equal(existsSync(join(p,'fonts.json')),false);
+ assert.equal(existsSync(join(p,'resumes')),false);
+ assert.equal(existsSync(join(p,'preflight-result.json')),true);
+ assert.equal(readManifest(join(p,'manifest.json')).stages.preflight.status,'complete');
+});
+
 test('concurrent run cannot take over another run lock',async t=>{
  const p=temp(t);writeFileSync(join(p,'run.lock'),'busy');
  await assert.rejects(run(p),/Another run/);assert.equal(readFileSync(join(p,'run.lock'),'utf8'),'busy');

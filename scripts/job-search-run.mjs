@@ -202,17 +202,6 @@ export async function run(directory,{mode='run'}={}) {
         const outside=configured.filter(x=>!targetKeys.has(normalize(x.company))).map(x=>x.company);
         required(!outside.length,'Discovery source outside current employer scope: '+outside.join(', '));
       }
-      const master=config.master;
-      required(master?.library_file_id&&master.version&&master.sha256,'Pin the current approved master metadata');
-      required(fileDigest(master.local_path)===master.sha256,'Master hash differs');
-      const fontsFile=join(dir,'fonts.json');
-      const fontInput=config.fonts?{fonts:hashFiles(Object.values(config.fonts))}:{source:fileDigest(config.fontSourcePath)};
-      await runStage(manifestPath,'environment',{fontInput,master:master.sha256,code:code.render},async()=>{
-        const fonts=config.fonts||JSON.parse(execute(python,[join(scripts,'render-job-resumes.py'),'fonts',config.fontSourcePath,join(resolve(dir,config.stateDir||'../../cache'),'fonts',digest(fontInput))]));
-        writeJson(fontsFile,fonts);execute(python,[join(scripts,'render-job-resumes.py'),'check-fonts',fontsFile]);
-        execute(python,[join(scripts,'render-job-resumes.py'),'check-master',master.local_path]);
-        return [fontsFile,...Object.values(fonts)];
-      });
       const shortlistPath=path('shortlistPath'),plansPath=path('plansPath'),packsPath=path('packsPath'),reviewsPath=path('reviewsPath');
       if(!existsSync(shortlistPath)) {
         required(mode!=='benchmark','Benchmark requires one existing role; discovery is disabled.');
@@ -235,9 +224,14 @@ export async function run(directory,{mode='run'}={}) {
           leads:discovery.candidates.length,held:discovery.held.length,
           filtered:discovery.counts.filtered,duplicates:discovery.counts.duplicates,
           reasonCounts:discovery.counts.filteredReasons,sourceBudget:discovery.sourceBudget,
-          audit:discovery.audit,
+          audit:discovery.audit,dashboardSyncRequired:true,
           instruction:'Report exact attempted, failed, unconfigured and deferred employers. Check shortlisted official requisition and application form using the bounded application-path checker. A successful HTTP GET is not a verified apply form. Do not call zero leads a successful run.'});
       }
+      // Discovery is independent from resume/font availability.
+      // Only request the pinned master after a real shortlist exists.
+      const master=config.master;
+      required(master?.library_file_id&&master.version&&master.sha256,'Pin the current approved master metadata');
+      required(fileDigest(master.local_path)===master.sha256,'Master hash differs');
       const candidates=read(shortlistPath);
       required(candidates.length>=1&&candidates.length<=requestedCount,
         'Provide 1..requestedCount verified roles, or report a zero-result discovery with its reason counts. Never pad or silently lower the target.');
@@ -245,6 +239,42 @@ export async function run(directory,{mode='run'}={}) {
       checkCandidateIdentity(candidates,snapshot,mode);
       required(candidates.every(c=>c.discoveryChannel!=='external'||c.sourceTrust==='declared-official'),
         'Third-party/unverified external lead cannot enter resume stage without a verified official employer source');
+      if(mode==='run')required(candidates.every(c=>!c.releaseStatus||c.releaseStatus==='Ready to Submit'),
+        'New-job run must not generate or release Found/held draft resumes');
+      // Qualification and application evidence MUST pass before generating
+      // authoring plans, extracting fonts or rendering any PDF.
+      const preflightPath=join(dir,'preflight.json'),preflightResult=join(dir,'preflight-result.json');
+      const payload={process_policy_version:2,
+        run_mode:['revise','benchmark'].includes(mode)?'replacement':'normal',
+        historical_benchmark:mode==='benchmark',requested_count:requestedCount,
+        snapshot:{read_at:snapshot.readAt,jobs:snapshot.jobs},master,candidates};
+      await runStage(manifestPath,'preflight',{payload,code:code.preflight},async()=>{
+        writeJson(preflightPath,payload);
+        const r=spawnSync(python,[join(scripts,'job_search_preflight.py'),preflightPath],
+          {encoding:'utf8',maxBuffer:12_000_000,timeout:120_000});
+        if(r.error)throw r.error;
+        if(![0,2].includes(r.status))throw new Error('Preflight could not run: '+(r.stderr||r.stdout));
+        let parsed;
+        try{parsed=JSON.parse(r.stdout);}catch{throw new Error('Preflight output is invalid: '+(r.stderr||r.stdout));}
+        writeJson(preflightResult,parsed);
+        return [preflightPath,preflightResult];
+      });
+      const results=read(preflightResult);
+      if(!Array.isArray(results)||results.some(r=>r.eligible_for_resume!==true))
+        return wait('qualification-hold',{requestedCount,candidatesChecked:candidates.length,
+          reasons:Array.isArray(results)?results.map(r=>({key:r.key,eligible:r.eligible_for_resume,
+            reasons:r.reasons})):results,
+          dashboardSyncRequired:true,
+          instruction:'Do not write or render a resume. Resolve actual qualification/application evidence or remove rejected leads. Publish Found/held leads separately using sync with a fresh Jobs/Events snapshot.'});
+      resolveWait('qualification-hold');
+      const fontsFile=join(dir,'fonts.json');
+      const fontInput=config.fonts?{fonts:hashFiles(Object.values(config.fonts))}:{source:fileDigest(config.fontSourcePath)};
+      await runStage(manifestPath,'environment',{fontInput,master:master.sha256,code:code.render},async()=>{
+        const fonts=config.fonts||JSON.parse(execute(python,[join(scripts,'render-job-resumes.py'),'fonts',config.fontSourcePath,join(resolve(dir,config.stateDir||'../../cache'),'fonts',digest(fontInput))]));
+        writeJson(fontsFile,fonts);execute(python,[join(scripts,'render-job-resumes.py'),'check-fonts',fontsFile]);
+        execute(python,[join(scripts,'render-job-resumes.py'),'check-master',master.local_path]);
+        return [fontsFile,...Object.values(fonts)];
+      });
       const plans=existsSync(plansPath)?read(plansPath):null,packs=existsSync(packsPath)?read(packsPath):null;
       if(!plans||!packs)return wait('authoring-inputs',{plansPath,packsPath});
       validateAuthoringPlans(plans,packs);
@@ -278,14 +308,6 @@ export async function run(directory,{mode='run'}={}) {
       else {
         // A completed release may resume uploads/sync without reauthoring. New
         // content always repeats the fresh duplicate gate before touching PDFs.
-        const preflightPath=join(dir,'preflight.json'),preflightResult=join(dir,'preflight-result.json');
-        const payload={process_policy_version:2,run_mode:['revise','benchmark'].includes(mode)?'replacement':'normal',historical_benchmark:mode==='benchmark',requested_count:requestedCount,
-          snapshot:{read_at:snapshot.readAt,jobs:snapshot.jobs},master,candidates};
-        await runStage(manifestPath,'preflight',{payload,code:code.preflight},async()=>{
-          writeJson(preflightPath,payload);
-          writeJson(preflightResult,JSON.parse(execute(python,[join(scripts,'job_search_preflight.py'),preflightPath])));
-          return [preflightPath,preflightResult];
-        });
         resolveWait('shortlist','authoring-inputs',...(existsSync(reviewsPath)?['pdf-review']:[]));
         const reports=[];
         for(const candidate of candidates) {

@@ -7,7 +7,7 @@ Current explicit user instructions override stored policy. The website publishes
 ## One entry point
 
 Use `npm run jobs -- run PRIVATE_RUN_DIRECTORY` for a requested search/resume run;
-use `npm run jobs -- sync PRIVATE_RUN_DIRECTORY` for confirmed submissions or reply updates.
+use `npm run jobs -- sync PRIVATE_RUN_DIRECTORY` for **every new canonical Jobs/Events change**, including held `Found` leads, confirmed submissions and reply outcomes. Refresh the live snapshot before syncing; no PDFs are needed for `Found` records.
 Use `npm run jobs -- revise PRIVATE_RUN_DIRECTORY` for an explicitly requested rewrite of existing
 unsubmitted packages. Set revisionOf to the prior run. Retained roles are not new jobs; reuse their
 Library/Drive identities and preserve submitted snapshots. All source, PDF and release checks apply.
@@ -70,6 +70,19 @@ If **1–4** roles pass all gates in a five-job run, generate and persist those 
 then return `status: partial`, the original five-job target and exact remaining count.
 If none qualify, do not render anything; report reasons, sources searched and deferred employers.
 The next requested pass resumes from its saved checkpoint.
+
+For **zero verified jobs** or any held role, the user-facing result is incomplete and
+the run's `dashboardSyncRequired` flag must be honored. Record the held
+`Found` lead (with source/reason) in canonical Jobs, refresh Jobs/Events, then call
+`npm run jobs -- sync PRIVATE_RUN_DIRECTORY` and verify the matching published
+GitHub commit plus Vercel READY production route. This is a separate **status-only**
+sync and must not generate or release resumes. A run cannot be declared fully
+reconciled while the website is behind the Sheet. Normal runs must not set
+`releaseStatus: Found` for ready-to-apply resume packages.
+
+A completed GitHub test/build checks software behavior, not actual role eligibility,
+form access or a five-job live search. Benchmark and unit tests must never be
+represented as a successful end-to-end job run.
 
 A time/credit guardrail limits **repeated work**, not the amount of care spent on each shortlisted
 job or the evidence and PDF release gate. Stop retrying a source after the recorded timeout/error
@@ -139,11 +152,21 @@ Preserve date-only precision; never infer an application from preparation or a s
    start/enrollment, actual authorization restrictions and the exact application route. Sponsorship is a
    preference, not automatic legal ineligibility. Freeze the requested number of genuinely new roles;
    disclose a real shortfall instead of padding. Scores are not interview probabilities.
-4. **Preflight:** provide 1..requestedCount verified policy-v2 candidates to the existing duplicate/eligibility validator; requestedCount remains the full user target. A shortfall is reported as incomplete, not erased. Fresh
-   Jobs submission state is required before authoring. A confirmed submission remains blocked after
-   rejection/closure. A same-title alias requires `distinctRoleReview` with comparedKey, decision=distinct,
-   employerSource, employerQuote present in the JD, and an actual team/duties/program difference.
-5. **Draft and render:** Treat the master as verified facts and style, not inherited experience copy.
+4. **Preflight — before any resume drafting or font work:** supply 1..requestedCount policy-v2 candidates to the duplicate/eligibility validator.
+   `requestedCount` stays the user's full target. Before asking for `plans.json`, building fonts, or creating
+   PDFs, the controller evaluates the latest submission snapshot and every mandatory role gate.
+   The `application_path` gate must identify the exact requisition and direct HTTPS form URL,
+   `form_verified: true`, `requisition_confirmed: true`,
+   `verification_method: "manual_form_review"` (or `authenticated_form_review`),
+   `form_evidence`, `reviewed_by` and a fresh `checked_at`.
+   An HTTP 200, employer careers landing page or sign-in-only screen is not a verified application form.
+   Explicit CPT/OPT exclusion, unknown mandatory work qualifications or ambiguous hourly/contingent
+   compensation must remain on hold. On any failed check the runner returns `qualification-hold`
+   with exact reasons; **do not create a resume draft**. Previously submitted roles stay blocked.
+   For same-title aliases require `distinctRoleReview` with comparedKey, decision=distinct,
+   employerSource, employerQuote in the JD, and an actual team/duties/program difference.
+   A shortfall is incomplete, not silently erased.
+5. **Draft and render only after passing preflight:** Treat the master as verified facts and style, not inherited experience copy.
    Review each experience slot; replace it or explicitly retain the pinned master bullet with
    authoringReview.retainedBaselines. Do not rewrite all fifteen bullets for wording differences. Each plan has authoringReview with roleFocus,
    evidenceSelections mapping each primary duty to a baseline/sourceIds/rationale, projectChoices
