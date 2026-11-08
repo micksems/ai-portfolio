@@ -5,7 +5,7 @@ import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {digest,fileDigest,runStage,readManifest} from '../scripts/run-checkpoint.mjs';
-import {SourceCache,discoverCandidates,sourceUrl,selectBudgetedSources} from '../scripts/job-search-discovery.mjs';
+import {SourceCache,discoverCandidates,discover,sourceUrl,selectBudgetedSources,candidatesFromExternalLeads} from '../scripts/job-search-discovery.mjs';
 import {readyPlan,validateUploads,validateAuthoringPlans,permitsFitHeldRevision,recordRejections,run} from '../scripts/job-search-run.mjs';
 import {applyPublicationProposal} from '../scripts/job-search-publication.mjs';
 import {jobKey,calculateMetrics} from '../src/lib/job-search-model.mjs';
@@ -54,6 +54,80 @@ test('discovery has an explicit source-request budget and reports deferred board
  assert.equal(selectBudgetedSources(sources,5).selected.length,5);
  assert.throws(()=>selectBudgetedSources(sources,25),/maxBoardRequests/);
  assert.throws(()=>selectBudgetedSources(sources,0),/maxBoardRequests/);
+});
+
+test('source-budget continuation starts at the NEXT employer, not the first board',()=>{
+ const sources=Array.from({length:28},(_,i)=>({provider:'greenhouse',board:'employer'+i}));
+ const first=selectBudgetedSources(sources,12);
+ const second=selectBudgetedSources(sources,12,first.nextOffset);
+ assert.equal(first.nextOffset,12);
+ assert.equal(second.offset,12);
+ assert.equal(second.selected[0].board,'employer12');
+ assert.equal(second.nextOffset,24);
+ assert.equal(second.deferred,4);
+ assert.throws(()=>selectBudgetedSources(sources,12,29),/sourceOffset/);
+});
+
+test('dated external Workday and SAP leads use the same duplicate and role gates',()=>{
+ const now=new Date().toISOString();
+ const leads=candidatesFromExternalLeads([
+  {company:'Example Workday',position:'Business Operations Associate',
+   url:'https://example.wd5.myworkdayjobs.com/jobs/job/NY/Business-Operations-Associate_REQ-101',
+   evidenceUrl:'https://example.wd5.myworkdayjobs.com/jobs',observedAt:now,
+   descriptionSnippet:'Business process analytics and reporting.'},
+  {company:'Example SAP',position:'AI Data Specialist',
+   url:'https://example.sapsf.eu/careers?req=102',
+   evidenceUrl:'https://example.sapsf.eu/careers',observedAt:now,
+   descriptionSnippet:'AI data evaluation and validation.'}
+ ]);
+ assert.equal(leads.length,2);
+ assert.ok(leads.every(l=>l.discoveryChannel==='external'&&l.observedAt===now));
+ const result=discoverCandidates(leads,snapshot(),{});
+ assert.equal(result.candidates.length,2);
+ assert.throws(()=>candidatesFromExternalLeads([{company:'A',position:'Analyst',url:'https://example.org'}]),/needs company/);
+ const dup=discoverCandidates([...leads,leads[0]],snapshot(),{});
+ assert.equal(dup.counts.duplicates,1);
+});
+
+test('ambiguous associate title goes to review, not discarded or automatically approved',()=>{
+ const now=new Date().toISOString();
+ const base={company:'Example',position:'Operations Associate',url:'https://example.com/jobs/operation-associate',
+  evidenceUrl:'https://example.com/careers',observedAt:now};
+ const ambiguous=discoverCandidates(candidatesFromExternalLeads([base]),snapshot(),{});
+ assert.equal(ambiguous.candidates.length,0);
+ assert.equal(ambiguous.held.length,1);
+ assert.equal(ambiguous.counts.filteredReasons.ambiguousTitle,1);
+ const relevant=discoverCandidates(candidatesFromExternalLeads([{...base,descriptionSnippet:'Process analysis and data reporting'}]),snapshot(),{});
+ assert.equal(relevant.candidates.length,1);
+ const sale=discoverCandidates(candidatesFromExternalLeads([{...base,position:'Sales Associate',
+  descriptionSnippet:'Sales process analytics'}]),snapshot(),{});
+ assert.equal(sale.candidates.length,0);
+ assert.equal(sale.counts.filteredReasons.excludedSeniorityOrSales,1);
+});
+
+test('discovery checks the second source pass and caches results for reuse',async t=>{
+ const directory=temp(t);
+ const sources=Array.from({length:15},(_,i)=>({provider:'greenhouse',board:'jobboard'+i,company:'Company '+i}));
+ let requests=0;
+ const config={stateDir:directory,sources,maxBoardRequests:12,maxDiscoveryPasses:2,sourceOffset:0,
+  requestedCount:5,externalLeads:[],policy:{},
+  fetcher:async url=>{
+   requests++;
+   const isLast=url.includes('jobboard12');
+   return {ok:true,status:200,headers:{get:()=>null},text:async()=>JSON.stringify({jobs:isLast?
+     [{id:123456,title:'Data Quality Associate',absolute_url:'https://boards.greenhouse.io/jobboard12/jobs/123456',content:'Review data quality and AI evaluation outputs',location:{name:'New York'}}]:[]})};
+  }};
+ const first=await discover(config,snapshot());
+ assert.equal(first.sourceBudget.queried,15);
+ assert.equal(first.sourceBudget.passes,2);
+ assert.equal(first.sourceBudget.nextOffset,15);
+ assert.equal(first.passSummaries[1].offset,12);
+ assert.equal(first.candidates.length,1);
+ assert.equal(requests,15);
+ const second=await discover(config,snapshot());
+ assert.equal(second.requests.networkRequests,0);
+ assert.equal(second.requests.cacheHits,15);
+ assert.equal(second.candidates.length,1);
 });
 
 test('completed stage reuse requires unchanged outputs, not a saved PASS label',async t=>{
