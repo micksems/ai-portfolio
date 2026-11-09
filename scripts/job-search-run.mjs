@@ -65,6 +65,21 @@ export function validateUploads(release,receipts) {
     return missing.length?[{...r,missing}]:[];});
 }
 
+export function partitionPreflightDecisions(candidates,results) {
+  required(Array.isArray(results)&&results.length===candidates.length,
+    'Qualification validator did not return a complete candidate decision list');
+  const index=new Map();
+  for(const result of results) {
+    required(result?.key&&!index.has(result.key),'Missing or duplicated preflight identity');
+    index.set(result.key,result);
+  }
+  required(candidates.every(c=>index.has(jobKey(c))),
+    'Preflight decisions do not match approved requisitions');
+  return {eligible:candidates.filter(c=>index.get(jobKey(c)).eligible_for_resume===true),
+    held:results.filter(r=>r.eligible_for_resume!==true)
+      .map(r=>({key:r.key,company:r.company,position:r.position,reasons:r.reasons}))};
+}
+
 // A saved, reviewed PDF is a user deliverable. Do not hold its link hostage to
 // a GitHub/Vercel dashboard publication. Missing uploads are reported separately.
 export function savedPackageHandoff(release,receipts,candidates,requestedCount) {
@@ -296,15 +311,11 @@ export async function run(directory,{mode='run'}={}) {
         writeJson(preflightResult,parsed);
         return [preflightPath,preflightResult];
       });
-      const results=read(preflightResult);
-      required(Array.isArray(results)&&results.length===originalCandidates.length,
-        'Qualification validator did not return a complete candidate decision list');
-      const eligibleKeys=new Set(results.filter(r=>r.eligible_for_resume===true).map(r=>r.key));
-      const qualificationHolds=results.filter(r=>r.eligible_for_resume!==true)
-        .map(r=>({key:r.key,company:r.company,position:r.position,reasons:r.reasons}));
+      const {eligible,held:qualificationHolds}=
+        partitionPreflightDecisions(originalCandidates,read(preflightResult));
       if(qualificationHolds.length)writeJson(join(dir,'qualification-holds.json'),
         {requestedCount,held:qualificationHolds,checkedAt:new Date().toISOString()});
-      candidates=originalCandidates.filter(c=>eligibleKeys.has(jobKey(c)));
+      candidates=eligible;
       if(!candidates.length)
         return wait('qualification-hold',{requestedCount,candidatesChecked:originalCandidates.length,
           reasons:qualificationHolds,dashboardSyncRequired:true,
