@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "November 8, 2026",
+  "updatedAt": "November 9, 2026",
   "metrics": {
     "applications": 139,
     "interviews": 8,
@@ -13,7 +13,7 @@ export const jobSearchData = {
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-08",
+    "auditedAt": "2026-11-09",
     "lifetimeApplications": 143
   },
   "jobs": [
@@ -3989,17 +3989,17 @@ export const jobSearchData = {
       "company": "Artefact",
       "position": "Junior AI & Data Consultant",
       "url": "https://job-boards.greenhouse.io/artefactlinkedin/jobs/8893475002",
-      "status": "Closed",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1KoUpGqxL6qGkRKYZZaHPSVFG6wpSeMYD/view?usp=drivesdk",
       "notes": "User confirmed submission October 16, 2026; exact time unknown. Resume prepared for user-selected role. NYC hybrid; $85k-$105k base. AI/data analysis, Copilot Studio, response evaluation and client needs. Sponsorship and start date unconfirmed. Employer rejection October19. Generic stronger-fit wording provides no individualized reason; no human screen recorded. SubmissionOct16 preserved.",
       "firstSeenAt": "2026-10-16",
       "appliedAt": "2026-10-16",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Rejected",
+      "finalOutcome": "Active",
       "rejectedAt": "2026-10-19T15:27:52-04:00",
       "canonicalKey": "greenhouse:8893475002",
-      "rejectionAt": "2026-10-19",
+      "rejectionAt": "",
       "offerAt": ""
     },
     {
@@ -4455,14 +4455,14 @@ export const jobSearchData = {
       "company": "Activate Consulting",
       "position": "2027 Business Analyst",
       "url": "https://activateconsulting.applytojob.com/apply/sFMI8ByazW/2027-Business-Analyst",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1Dj6_6NkmPd122iPsk0uOI02GLU1SfgRU/view?usp=drivesdk",
       "firstSeenAt": "2026-10-23",
       "appliedAt": "2026-10-27",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active",
-      "rejectionAt": "",
+      "finalOutcome": "Rejected",
+      "rejectionAt": "2026-11-09",
       "offerAt": "",
       "notes": ""
     },
@@ -5208,7 +5208,7 @@ export const jobSearchData = {
       "position": "Record Analyst / Analyst",
       "url": "",
       "status": "Applied",
-      "resumeUrl": "",
+      "resumeUrl": "https://chatgpt.com/library?file_id=libfile_4f5d3e5aae208191be79d5f82ae72c3e&account_id=personal",
       "firstSeenAt": "2026-11-06",
       "appliedAt": "2026-11-06",
       "submissionConfirmed": true,
@@ -5229,7 +5229,7 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "",
+      "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
@@ -5245,7 +5245,7 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "",
+      "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
@@ -5261,7 +5261,7 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "",
+      "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
@@ -5277,7 +5277,7 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "",
+      "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
@@ -5293,7 +5293,55 @@ export const jobSearchData = {
       "appliedAt": "",
       "submissionConfirmed": false,
       "inApplicationCohort": false,
-      "finalOutcome": "",
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "www.htcinc.com/job-detail?jobcode=245895",
+      "company": "HTC Global Services",
+      "position": "Parts Management Analyst",
+      "url": "https://www.htcinc.com/job-detail/?jobcode=245895",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1Ep6Fv0X4CWdS-KC-jUVmRbxlDiOZhqky/view?usp=drivesdk",
+      "firstSeenAt": "2026-11-09",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "www.apexon.com/career-job-detail?jobid=7524",
+      "company": "Apexon",
+      "position": "CRM Business Analyst",
+      "url": "https://www.apexon.com/career-job-detail/?id=4&jobid=7524",
+      "status": "Found",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-09",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "www.apexon.com/career-job-detail?jobid=7480",
+      "company": "Apexon",
+      "position": "Third-Party Risk Concierge Analyst",
+      "url": "https://www.apexon.com/career-job-detail/?id=22&jobid=7480",
+      "status": "Found",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-09",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
@@ -6374,10 +6422,10 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-08T19:35:28.543Z",
-    "sha256": "66371667357637cec23b785c39534d877ea30d27021e61bd8bec2881c5d30dc6",
-    "historyRecords": 325,
-    "trackerRecords": 325,
-    "uniqueHistoryRecords": 325
+    "readAt": "2026-11-09T22:50:36.653Z",
+    "sha256": "4bbc39923341ec1cefad1a6bf87bcf9e928672e7ee4d0fa6889219f019642a11",
+    "historyRecords": 328,
+    "trackerRecords": 328,
+    "uniqueHistoryRecords": 328
   }
 };

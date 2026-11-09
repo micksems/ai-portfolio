@@ -16,7 +16,7 @@ export function jobKey(job) {
   // source, language and application-step changes do not create a new job.
   if (u.hostname === 'recruitingbypaycor.com' && u.searchParams.get('clientId') && u.searchParams.get('id'))
     return `paycor:${u.searchParams.get('clientId').toLowerCase()}:${u.searchParams.get('id').toLowerCase()}`;
-  for (const field of ['req', 'jk', 'jobId', 'jobid', 'requisitionId']) if (u.searchParams.has(field)) return `${u.hostname}${path}?${field}=${u.searchParams.get(field)}`;
+  for (const field of ['req', 'jk', 'jobId', 'jobid', 'requisitionId','jobcode']) if (u.searchParams.has(field)) return `${u.hostname}${path}?${field}=${u.searchParams.get(field)}`;
   return u.hostname + path;
 }
 // Historical stored keys remain immutable; URL-derived identities recognize them
