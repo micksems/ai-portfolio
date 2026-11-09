@@ -1,5 +1,49 @@
 # Job-search execution contract
 
+## November 9, 2026 — deliver-first operating sequence
+
+**A saved, reviewed application package must reach the user before website publication.**
+The old design forced discovery, all candidates' gates, full PDF work, two file uploads,
+Google Sheets mutation, GitHub publication and deployment verification into the same
+user-facing result. That made completed PDFs disappear behind an unrelated deployment
+or one blocked candidate. This has been separated:
+
+1. **Discover once:** Read the current canonical Jobs and Rules; search the requested
+   employer batch, removing known applications. Record source failures and held leads.
+2. **Qualify individually:** An ineligible candidate does not block a different qualified
+   candidate. Keep the original requestedCount and return exact remainingCount.
+   Apply factual transferability rules but never manufacture credentials or waive
+   restrictions. Do not draft resumes for blocked roles.
+3. **Render/review each eligible role:** Use the approved master and real role evidence.
+   Preserve Times New Roman and PDF/claim QA. Reuse successful render receipts.
+4. **Save and deliver immediately:** As Library/Drive uploads succeed, return the saved
+   application URL and PDF links in a two-column handoff. A remaining upload or
+   dashboard error cannot hide the already saved PDFs.
+5. **Update the tracker:** Write/read back only the approved ready rows. If this step
+   is pending, report trackerSyncPending without withholding saved links.
+6. **Publish later in a separate sync:** Run `npm run jobs -- sync PRIVATE_RUN_DIRECTORY`
+   using a fresh canonical Jobs/Events snapshot and verify GitHub/Vercel.
+   A failed website deployment does not undo or relabel completed saved PDFs.
+
+**Recovery after interruption:** `npm run jobs -- handoff PRIVATE_RUN_DIRECTORY`
+returns saved application/PDF URLs from private release and upload receipts without
+searching again, generating a PDF, fetching the whole tracker or requiring a fresh
+snapshot. It reports missing uploads and whether tracker synchronization remains.
+For existing runs, inspect the last manifest and do not rewrite successful artifacts.
+
+**Boundaries:** `run` completes its user-facing package delivery after an exact
+Jobs readback, with `websiteSyncPending:true`. A waiting `uploads` or
+`sheet-write` result now includes deliverNow and all fully saved packages.
+Those links must be communicated immediately, not left inside the run manifest.
+A `sync` run handles publication alone; it never generates resumes.
+
+The full task target stays five. This is a **partial** result if fewer than five
+packages are saved, even if the run checked many employers. This is not a
+promise that ChatGPT billing or usage counters can be measured by local code.
+The controller's wall timings and cache counters do not measure billed model
+credits. The workflow must not keep rereading the same history or restarting
+from employer one after saving successful packages.
+
 The live Google Sheet `1Kvb_4CM_FcOEVubMq8LTNFve6LOqw4uxU_SMDMVN44o` is canonical.
 Use visible **Jobs, Candidate, Evidence, Events, Rules**. Hidden tabs are frozen archives.
 Current explicit user instructions override stored policy. The website publishes a read-only snapshot.
@@ -7,7 +51,7 @@ Current explicit user instructions override stored policy. The website publishes
 ## One entry point
 
 Use `npm run jobs -- run PRIVATE_RUN_DIRECTORY` for a requested search/resume run;
-use `npm run jobs -- sync PRIVATE_RUN_DIRECTORY` for **every new canonical Jobs/Events change**, including held `Found` leads, confirmed submissions and reply outcomes. Refresh the live snapshot before syncing; no PDFs are needed for `Found` records.
+use `npm run jobs -- sync PRIVATE_RUN_DIRECTORY` for **every new canonical Jobs/Events change**, including held `Found` leads, confirmed submissions and reply outcomes. Use `npm run jobs -- handoff PRIVATE_RUN_DIRECTORY` to recover already saved, reviewed PDFs after interruptions without replaying discovery or publication. Refresh the live snapshot before syncing; no PDFs are needed for `Found` records.
 Use `npm run jobs -- revise PRIVATE_RUN_DIRECTORY` for an explicitly requested rewrite of existing
 unsubmitted packages. Set revisionOf to the prior run. Retained roles are not new jobs; reuse their
 Library/Drive identities and preserve submitted snapshots. All source, PDF and release checks apply.
@@ -23,7 +67,7 @@ packs, receipts, raw JDs, PDFs, fonts or run manifests. No credentials are neede
 
 The controller performs local stages and returns the next explicit boundary. The assistant still supplies
 research and writing judgement, views the actual final PNGs, and calls the connected Library/Drive/Sheet/
-GitHub/Vercel tools. A waiting stage is not completion. The runner does not invent verified evidence,
+GitHub/Vercel tools. A waiting stage is not completion, but saved, reviewed PDFs within a waiting stage ARE deliverables and must be handed off immediately. The runner does not invent verified evidence,
 write application forms, submit applications, send messages, or schedule searches.
 
 ## Completion and credit efficiency
