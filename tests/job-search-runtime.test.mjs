@@ -6,7 +6,7 @@ import {join,resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {digest,fileDigest,runStage,readManifest} from '../scripts/run-checkpoint.mjs';
 import {SourceCache,discoverCandidates,discover,sourceUrl,selectBudgetedSources,candidatesFromExternalLeads} from '../scripts/job-search-discovery.mjs';
-import {readyPlan,validateUploads,validateAuthoringPlans,permitsFitHeldRevision,recordRejections,run} from '../scripts/job-search-run.mjs';
+import {readyPlan,validateUploads,validateAuthoringPlans,permitsFitHeldRevision,recordRejections,run,savedPackageHandoff,partitionPreflightDecisions} from '../scripts/job-search-run.mjs';
 import {applyPublicationProposal} from '../scripts/job-search-publication.mjs';
 import {jobKey,calculateMetrics} from '../src/lib/job-search-model.mjs';
 import {verifyCandidateSources} from '../scripts/check-resume-fit.mjs';
@@ -19,6 +19,65 @@ const candidate={company:'Example',position:'Data Analyst',url,location:'New Yor
 const key=jobKey(candidate);
 const jobRow=(status='Applied',confirmed=true)=>[key,'APP-1','Example','Data Analyst',url,status,'New York','Analytics',85,'','','','2026-10-29',confirmed,confirmed,'Active','','','','https://drive.google.com/file/d/file1/view','',''];
 const snapshot=(rows=[])=>({readAt:new Date().toISOString(),jobs:[header,...rows],events:[eventHeader]});
+
+test('saved PDF handoff is independent of GitHub, Vercel and missing uploads',()=>{
+ const c2={company:'Example',position:'AI Data Analyst',
+   url:'https://jobs.lever.co/example/22222222-2222-4222-8222-222222222222'};
+ const key2=jobKey(c2);
+ const release={resumes:[{key,sha256:'hash-1',localPath:'/resumes/one.pdf'},
+   {key:key2,sha256:'hash-2',localPath:'/resumes/two.pdf'}]};
+ const receipts=[{key,sha256:'hash-1',library_file_id:'libfile_1234',
+   drive_file_id:'fileone',drive_url:'https://drive.google.com/file/d/fileone/view'}];
+ const first=savedPackageHandoff(release,receipts,[candidate,c2],5);
+ assert.equal(first.savedCount,1);
+ assert.equal(first.remainingCount,4);
+ assert.equal(first.deliverables[0].applicationUrl,candidate.url);
+ assert.equal(first.deliverables[0].resumePdfUrl,receipts[0].drive_url);
+ assert.deepEqual(first.pendingUploads,[{key:key2,missing:['library','drive']}]);
+ const complete=savedPackageHandoff(release,[...receipts,
+  {key:key2,sha256:'hash-2',library_file_id:'libfile_5678',drive_file_id:'filetwo',
+   drive_url:'https://drive.google.com/file/d/filetwo/view'}],[candidate,c2],5);
+ assert.equal(complete.savedCount,2);
+ assert.equal(complete.remainingCount,3);
+ assert.throws(()=>savedPackageHandoff(release,[{...receipts[0],sha256:'tampered'}],
+  [candidate,c2],5),/match/);
+});
+test('partially qualified shortlists keep eligible roles and report holds without losing original five-job target',()=>{
+ const c2={company:'Example',position:'AI Data Analyst',
+   url:'https://jobs.lever.co/example/22222222-2222-4222-8222-222222222222'};
+ const key2=jobKey(c2);
+ const outcome=partitionPreflightDecisions([candidate,c2],[
+   {key,eligible_for_resume:true,company:'Example',position:'Data Analyst',reasons:[]},
+   {key:key2,eligible_for_resume:false,company:'Example',position:'AI Data Analyst',
+    reasons:['Required language missing']}
+ ]);
+ assert.equal(outcome.eligible.length,1);
+ assert.equal(outcome.held.length,1);
+ assert.deepEqual(outcome.held[0].reasons,['Required language missing']);
+ assert.throws(()=>partitionPreflightDecisions([candidate,c2],[
+  {key,eligible_for_resume:true}]),/complete/);
+ assert.throws(()=>partitionPreflightDecisions([candidate,c2],[
+  {key,eligible_for_resume:true},{key,eligible_for_resume:true}]),/duplicated/);
+});
+test('recovery mode returns saved PDF links with no fresh tracker read or website wait',async t=>{
+ const p=temp(t);
+ const saved={resumes:[{key,sha256:'sha-1',localPath:join(p,'resume.pdf')}]};
+ const receipts=[{key,sha256:'sha-1',library_file_id:'libfile_abc',
+  drive_file_id:'file1',drive_url:'https://drive.google.com/file/d/file1/view'}];
+ writeFileSync(join(p,'inputs.json'),JSON.stringify({requestedCount:5,
+  shortlistPath:'shortlist.json',uploadsPath:'uploads.json',readbackPath:'readback.json'}));
+ writeFileSync(join(p,'shortlist.json'),JSON.stringify([candidate]));
+ writeFileSync(join(p,'release.json'),JSON.stringify(saved));
+ writeFileSync(join(p,'uploads.json'),JSON.stringify(receipts));
+ const result=await run(p,{mode:'handoff'});
+ assert.equal(result.status,'recovered');
+ assert.equal(result.savedCount,1);
+ assert.equal(result.remainingCount,4);
+ assert.equal(result.trackerSyncPending,true);
+ assert.equal(result.websiteSyncPending,true);
+ assert.equal(result.deliverables[0].resumePdfUrl,receipts[0].drive_url);
+ assert.equal(existsSync(join(p,'run.lock')),false);
+});
 
 test('requested draft revisions preserve qualification holds but never waive factual or PDF failures',()=>{
  const result={blockers:['Critical employer requirement r1 is unknown; do not mark resume ready.','Required work depth is not demonstrated: r1']};
