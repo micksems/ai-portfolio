@@ -65,6 +65,29 @@ export function validateUploads(release,receipts) {
     return missing.length?[{...r,missing}]:[];});
 }
 
+// A saved, reviewed PDF is a user deliverable. Do not hold its link hostage to
+// a GitHub/Vercel dashboard publication. Missing uploads are reported separately.
+export function savedPackageHandoff(release,receipts,candidates,requestedCount) {
+  required(Array.isArray(release?.resumes),'Missing verified release');
+  required(Array.isArray(receipts),'Missing upload receipts');
+  required(Array.isArray(candidates),'Missing approved candidate shortlist');
+  required(Number.isInteger(requestedCount)&&requestedCount>=1,'Invalid requested count');
+  const pendingUploads=validateUploads(release,receipts);
+  const pendingKeys=new Set(pendingUploads.map(item=>item.key));
+  const deliverables=release.resumes.filter(r=>!pendingKeys.has(r.key)).map(r=>{
+    const candidate=candidates.find(c=>jobKey(c)===r.key);
+    const receipt=receipts.find(x=>x.key===r.key);
+    required(candidate&&receipt?.drive_url,'Saved PDF lacks its approved role or Drive link: '+r.key);
+    return {key:r.key,company:candidate.company,position:candidate.position,
+      applicationUrl:candidate.url,resumePdfUrl:receipt.drive_url,
+      libraryFileId:receipt.library_file_id,sha256:r.sha256};
+  });
+  required(deliverables.length<=requestedCount,'Saved packages exceed original target');
+  return {requestedCount,savedCount:deliverables.length,
+    remainingCount:requestedCount-deliverables.length,deliverables,
+    pendingUploads:pendingUploads.map(({key,missing})=>({key,missing}))};
+}
+
 // This checks that a role-first draft was supplied. Semantic relevance and
 // truthfulness still require a source-based review; a word-change score cannot.
 export function validateAuthoringPlans(plans,packs) {
@@ -169,7 +192,20 @@ export async function run(directory,{mode='run'}={}) {
       if(m.waiting&&(!stages.length||stages.includes(m.waiting.stage))){m.waitHistory=m.waitHistory||[];m.waitHistory.push({...m.waiting,durationMs:Date.now()-Date.parse(m.waiting.since)});delete m.waiting;writeJson(manifestPath,m);}
     };
     if(mode==='status')return {status:manifest.waiting?'waiting':'recorded',wallElapsedMs:Date.now()-Date.parse(manifest.startedAt),...manifest};
-    required(['run','revise','benchmark','sync'].includes(mode),'Use run|revise|benchmark|sync|status RUN_DIRECTORY');
+    required(['run','revise','benchmark','sync','handoff'].includes(mode),
+      'Use run|revise|benchmark|sync|handoff|status RUN_DIRECTORY');
+    if(mode==='handoff') {
+      const releaseFile=join(dir,'release.json'),shortlistFile=path('shortlistPath'),
+        uploadsFile=path('uploadsPath');
+      required(existsSync(releaseFile)&&existsSync(shortlistFile),
+        'No released packages to recover; inspect the last waiting stage with status');
+      const handoff=savedPackageHandoff(read(releaseFile),
+        existsSync(uploadsFile)?read(uploadsFile):[],read(shortlistFile),
+        config.requestedCount??5);
+      return {status:handoff.savedCount?'recovered':'waiting',...handoff,
+        trackerSyncPending:!existsSync(path('readbackPath')),
+        websiteSyncPending:true,manifest:manifestPath};
+    }
     required(config.spreadsheetId,'Missing canonical spreadsheet ID');
     const requestedCount=config.requestedCount??5;
     required(Number.isInteger(requestedCount)&&requestedCount>=1,'requestedCount must be positive');
@@ -232,7 +268,8 @@ export async function run(directory,{mode='run'}={}) {
       const master=config.master;
       required(master?.library_file_id&&master.version&&master.sha256,'Pin the current approved master metadata');
       required(fileDigest(master.local_path)===master.sha256,'Master hash differs');
-      const candidates=read(shortlistPath);
+      let candidates=read(shortlistPath);
+      const originalCandidates=candidates;
       required(candidates.length>=1&&candidates.length<=requestedCount,
         'Provide 1..requestedCount verified roles, or report a zero-result discovery with its reason counts. Never pad or silently lower the target.');
       remainingCount=requestedCount-candidates.length;
@@ -260,12 +297,19 @@ export async function run(directory,{mode='run'}={}) {
         return [preflightPath,preflightResult];
       });
       const results=read(preflightResult);
-      if(!Array.isArray(results)||results.some(r=>r.eligible_for_resume!==true))
-        return wait('qualification-hold',{requestedCount,candidatesChecked:candidates.length,
-          reasons:Array.isArray(results)?results.map(r=>({key:r.key,eligible:r.eligible_for_resume,
-            reasons:r.reasons})):results,
-          dashboardSyncRequired:true,
-          instruction:'Do not write or render a resume. Resolve actual qualification/application evidence or remove rejected leads. Publish Found/held leads separately using sync with a fresh Jobs/Events snapshot.'});
+      required(Array.isArray(results)&&results.length===originalCandidates.length,
+        'Qualification validator did not return a complete candidate decision list');
+      const eligibleKeys=new Set(results.filter(r=>r.eligible_for_resume===true).map(r=>r.key));
+      const qualificationHolds=results.filter(r=>r.eligible_for_resume!==true)
+        .map(r=>({key:r.key,company:r.company,position:r.position,reasons:r.reasons}));
+      if(qualificationHolds.length)writeJson(join(dir,'qualification-holds.json'),
+        {requestedCount,held:qualificationHolds,checkedAt:new Date().toISOString()});
+      candidates=originalCandidates.filter(c=>eligibleKeys.has(jobKey(c)));
+      if(!candidates.length)
+        return wait('qualification-hold',{requestedCount,candidatesChecked:originalCandidates.length,
+          reasons:qualificationHolds,dashboardSyncRequired:true,
+          instruction:'No verified eligible applications. Report the exact blockers and save discovered Found leads separately; do not draft a resume.'});
+      remainingCount=requestedCount-candidates.length;
       resolveWait('qualification-hold');
       const fontsFile=join(dir,'fonts.json');
       const fontInput=config.fonts?{fonts:hashFiles(Object.values(config.fonts))}:{source:fileDigest(config.fontSourcePath)};
@@ -275,8 +319,13 @@ export async function run(directory,{mode='run'}={}) {
         execute(python,[join(scripts,'render-job-resumes.py'),'check-master',master.local_path]);
         return [fontsFile,...Object.values(fonts)];
       });
-      const plans=existsSync(plansPath)?read(plansPath):null,packs=existsSync(packsPath)?read(packsPath):null;
-      if(!plans||!packs)return wait('authoring-inputs',{plansPath,packsPath});
+      const keys=new Set(candidates.map(c=>jobKey(c)));
+      const plans=existsSync(plansPath)?read(plansPath).filter(p=>keys.has(p.key)):null;
+      const packs=existsSync(packsPath)?read(packsPath).filter(p=>keys.has(p.key)):null;
+      if(!plans||!packs)return wait('authoring-inputs',{plansPath,packsPath,
+        eligibleRoles:candidates.map(c=>({company:c.company,position:c.position,url:c.url})),
+        skippedRoles:qualificationHolds,
+        instruction:'Prepare role-specific inputs only for the eligible roles. Do not rewrite held candidates.'});
       validateAuthoringPlans(plans,packs);
       if(mode==='revise'||mode==='benchmark') {
         if(mode==='benchmark')required(candidates.length===1,'Benchmark requires exactly one existing role.');
@@ -358,15 +407,22 @@ export async function run(directory,{mode='run'}={}) {
       if(mode==='benchmark'){resolveWait();return {status:'complete',mode,changed:false,resumes:release.resumes.map(r=>({key:r.key,path:r.localPath,sha256:r.sha256})),manifest:manifestPath};}
       const uploadsPath=path('uploadsPath'),receipts=existsSync(uploadsPath)?read(uploadsPath):[];
       const pending=validateUploads(release,receipts);
-      if(pending.length)return wait('uploads',{uploadsPath,pending:pending.map(r=>({key:r.key,path:r.localPath,sha256:r.sha256,missing:r.missing})),
-        instruction:'Save only missing PDFs in one Library batch and bounded parallel Drive uploads. Record exact connector receipts; never upload a saved item again.'});
+      if(pending.length) {
+        const handoff=savedPackageHandoff(release,receipts,candidates,requestedCount);
+        return wait('uploads',{uploadsPath,pending:pending.map(r=>({key:r.key,path:r.localPath,sha256:r.sha256,missing:r.missing})),
+          ...handoff,deliverNow:handoff.savedCount>0,
+          instruction:'Deliver links for already saved packages immediately; upload only missing PDFs. Do not redo a saved resume or make publication a prerequisite.'});
+      }
       resolveWait('uploads');
       await runStage(manifestPath,'uploads',{release:fileDigest(releasePath),receipts},async()=>[uploadsPath]);
+      const handoff=savedPackageHandoff(release,receipts,candidates,requestedCount);
       const readbackPath=path('readbackPath');
       if(!existsSync(readbackPath)) {
         const sheetPlan=join(dir,'ready-sheet-plan.json');
         await runStage(manifestPath,'sheet-plan',{snapshot,receipts,candidates},async()=>{writeJson(sheetPlan,readyPlan(snapshot,candidates,receipts,config.spreadsheetId));return [sheetPlan];});
-        return wait('sheet-write',{sheetPlan,readbackPath,instruction:'Inspect target cell metadata, compare expectedBefore immediately before applying this batch, then save fresh Jobs/Events readback. Do not write stale row positions.'});
+        return wait('sheet-write',{sheetPlan,readbackPath,...handoff,deliverNow:true,
+          trackerSyncPending:true,websiteSyncPending:true,
+          instruction:'Deliver the saved role/PDF links to the user NOW. Sheet reconciliation continues separately; do not claim the tracker or website is updated yet.'});
       }
       const readback=read(readbackPath);fresh(readback);
       for(const report of release.resumes) {
@@ -379,6 +435,12 @@ export async function run(directory,{mode='run'}={}) {
       }
       resolveWait('sheet-write');
       await runStage(manifestPath,'sheet-readback',{readback,receipts},async()=>[readbackPath]);
+      resolveWait();
+      // The user receives a real package before GitHub publication. Sync is
+      // independently repeatable and must not rerender or delay these links.
+      return {status:remainingCount?'partial':'complete',...handoff,
+        skippedRoles:qualificationHolds,trackerUpdated:true,websiteSyncPending:true,
+        manifest:manifestPath};
     }
     const publishSnapshot=mode==='sync'?path('snapshotPath'):path('readbackPath');
     const proposalPath=join(dir,'publication-proposal.json'),syncResultPath=join(dir,'sync-result.json');
@@ -428,7 +490,7 @@ export async function run(directory,{mode='run'}={}) {
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href) {
-  try{const [mode,dir,input]=process.argv.slice(2);required(dir,'Use job-search-run.mjs run|sync|status PRIVATE_RUN_DIRECTORY');
+  try{const [mode,dir,input]=process.argv.slice(2);required(dir,'Use job-search-run.mjs run|sync|handoff|status PRIVATE_RUN_DIRECTORY');
     console.log(JSON.stringify(mode==='checkpoint'?JSON.parse(execute(python,[join(scripts,'archive-job-search.py'),dir,input])):mode==='reject'?recordRejections(dir,read(input)):await run(dir,{mode}),null,2));}
   catch(error){console.error(error.message);process.exitCode=1;}
 }
