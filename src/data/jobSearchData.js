@@ -1,10 +1,10 @@
 export const jobSearchData = {
-  "updatedAt": "November 9, 2026",
+  "updatedAt": "November 10, 2026",
   "metrics": {
     "applications": 139,
     "interviews": 8,
     "offers": 0,
-    "rejections": 47,
+    "rejections": 48,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -13,7 +13,7 @@ export const jobSearchData = {
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-09",
+    "auditedAt": "2026-11-10",
     "lifetimeApplications": 143
   },
   "jobs": [
@@ -3297,14 +3297,14 @@ export const jobSearchData = {
       "company": "OneMain Financial",
       "position": "Analytics Analyst",
       "url": "https://jobs.onemainfinancial.com/job/wilmington/analytics-analyst/21631/100341806912",
-      "status": "Interview",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1UZ8WxfUN7NeSBXnd9U0ZEVQk079zMOyO/view?usp=drivesdk",
       "notes": "October 7, 2026 12:04 ET: Misha confirmed submission. Applied; exact individual submission time not supplied.\n\nManual run October 7, 2026. Unsubmitted: tracker/application history deduplicated and targeted Gmail check since October 5 found no application confirmations. Role-specific sponsorship remains UNKNOWN; retained exceptionally for analytical fit, not as positive sponsorship evidence. Misha reports current CPT; employer-specific authorization and work dates need his review. Do not assume future OPT approval. Resume rebuilt from approved September 29 master, preserving Liberation Serif, name/contact positions, working email/LinkedIn/portfolio links, section rules, exact baselines, right-aligned dates/locations, hanging indents and spacing. Each final PDF visually compared beside master and extracted-text checked; one page, 3 bullets per experience, 4 per school, approved coursework/Chief Events Officer/NACDA and 2025-2026 swimming dates. No production tools or outcomes invented.\n\nOfficial full JD and Apply path: https://jobs.onemainfinancial.com/job/wilmington/analytics-analyst/21631/100341806912 . R2608-52224, posted Sept 8. Charlotte is approved; Wilmington requires separate relocation approval and is not recommended by this run. Current bachelor's/master's graduation Winter 2026-Spring 2027 explicitly matches December 2026. Academic/athletic project teamwork qualifies. Business analysis, cross-functional implementation and technical problem solving align with KPI/segmentation work, UN team and analytics education. Employer BASE PAY is UNPUBLISHED: the $70,000 floor is not verified and third-party estimates are not treated as base. No deadline or exact program start published. Existing Christine Santana-Smith draft remains unsent.",
       "firstSeenAt": "2026-10-05",
       "appliedAt": "07/10/2026",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active",
+      "finalOutcome": "Other",
       "canonicalKey": "jobs.onemainfinancial.com/job/wilmington/analytics-analyst/21631/100341806912",
       "rejectionAt": "",
       "offerAt": ""
@@ -3684,16 +3684,16 @@ export const jobSearchData = {
       "company": "David AI",
       "position": "Data Product Operations Lead",
       "url": "https://jobs.ashbyhq.com/david-ai/d064a7ca-30e7-465b-b935-2682514e1371/application",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/18x5J52lHMYhu3XR5Gp0woiiIgvFJLaGB/view?usp=drivesdk",
       "notes": "October 13, 2026: Misha confirmed submission of all six October13 positions, including David AI and replacement Altis. AppliedAt records the confirmation date only; exact submission times were not supplied. Prepared materials retained as submitted snapshots. The standing exclusion of lead roles remains in force for future searches.\nOctober13,2026:Misha excluded lead positions permanently. Archived this unsubmitted role and replaced its slot with Altis Analyst,VentureIntelligenceProgram. Not an employer rejection.\nRUN-20261013-1745Z manual specialist run. Five newly discovered unsubmitted roles, three YC companies (Prelim/Trayd/David AI). Pre-authoring duplicate/eligibility preflight PASS; read 2026-10-13T17:59:47.412Z UTC / America/New_York; snapshot SHA256604afb60571649820f6f2de0b7f13fa11c7e890297f68b976a392b66ecd600c5. Approved master libfile_7675dde2a3908191a50dba63afe47887 v2 SHA256db7d2947de9cda1d43a45e77c793c8b4f2a7ed9daed42d6d0e07e2a9c4974a81. role_fit: PASS — Current primary Ashby job owns data workflow quality and operational execution. Camp Vega 20,000-point validation, AI response evaluation and UN workflow prototyping transfer; production audio pipeline ownership remains a stretch. | location: PASS — New York, NY / San Francisco, CA — onsite — approved geography. | experience: PASS — Current Ashby posting says 1–6 years, allowing operations or similar background, unlike older YC body (2–6). More than one year across Lewis operations, UN and Camp Vega; no overlapping durations counted. | mandatory_requirements: PASS — Current employer description allows operations/strategic projects or similar, rather than exclusively CS/consulting. SQL/Python verified. Large-scale audio data and extreme ownership are desirable gaps, not stated mandatory prior industry tenure. | base_salary: PASS — $125,000–$175,000 base; bonus/equity excluded. | authorization: PASS — Candidate reports current CPT through Dec2026; future OPT is planned, not approved. Current employer posting has no explicit current/future sponsorship prohibition. Eligibility/required employer CPT acceptance must be confirmed; do not assert unrestricted work authorization. | start_timing: PASS — No fixed incompatible cohort start or completed master's requirement in current posting. Immediate employment is conditional on CPT approval and study schedule; graduationDec2026. | application_path: PASS — Current employer application route HTTP200; employer board isListed/current careers link confirms exact role. Read-only validation; no form submitted. Application checked 2026-10-13T18:01:00.565Z. Sponsorship advertised Will sponsor on YC same-title listing; current Ashby requirements supersede older YC requirements, employer confirmation required. Current employer Ashby UUID d064a7ca... is live/listed. Older YC listing cKdFdzD is same title but stale requirements; use current employer requirements and compensation, and YC's advertised willingness to sponsor subject to confirmation. Fit score 78 (role/skills/experience/seniority/education/achievement 22/16/16/6/9/9); score is fit, not success probability. PASS: original one-page geometry, all five pages visually reviewed; no clipping/overlap, 10pt text, 23 bullets, exact education/dates/contact and 3 hyperlinks preserved. PDF SHA25621a6eaff2d56561fc897950e82e4ffc443fecc67d24284a9f8a539cb6d226d43. Library libfile_9409426f94488191b108fe021db882bc; Drive 18x5J52lHMYhu3XR5Gp0woiiIgvFJLaGB; resume https://drive.google.com/file/d/18x5J52lHMYhu3XR5Gp0woiiIgvFJLaGB/view?usp=drivesdk. First Seen At reflects this run's verified read; exact earlier discovery minute unavailable. Posted At uses employer timestamp only; Prelim/David old publication dates retained despite current isListed=true. No applications, outreach or schedules performed. Sensitive authorization/sponsorship/compensation/start answers remain for Misha. UN search: current UNICEF596234 requires5years/gender-policy expertise; UNDP RBAS internship is not qualifying>=70kbase full-time analyst; P3/P5 postings expired/too senior and OICTG6 requires experience beyond verified record. Canonical row IDs Tracker88, History152.",
       "firstSeenAt": "2026-10-13",
       "appliedAt": "2026-10-13",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Pending",
+      "finalOutcome": "Rejected",
       "canonicalKey": "jobs.ashbyhq.com:d064a7ca-30e7-465b-b935-2682514e1371",
-      "rejectionAt": "",
+      "rejectionAt": "2026-11-10",
       "offerAt": ""
     },
     {
@@ -5424,7 +5424,7 @@ export const jobSearchData = {
       "id": "INT-ONEMAIN-1A182ED447C69FB7",
       "company": "OneMain Financial",
       "position": "Analytics Analyst",
-      "stage": "Reschedule requested — Round 2 manager-led case study (Teams)",
+      "stage": "Not attended — user confirmed; reschedule unconfirmed",
       "date": "2026-11-06",
       "interviewer": ""
     },
@@ -6422,8 +6422,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-09T22:50:36.653Z",
-    "sha256": "4bbc39923341ec1cefad1a6bf87bcf9e928672e7ee4d0fa6889219f019642a11",
+    "readAt": "2026-11-10T18:50:21.245Z",
+    "sha256": "138083bf7b150a905fcf85a2bfbba2697671340c98451558a25026875d20db64",
     "historyRecords": 328,
     "trackerRecords": 328,
     "uniqueHistoryRecords": 328
