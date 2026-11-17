@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "November 17, 2026",
   "metrics": {
-    "applications": 141,
+    "applications": 142,
     "interviews": 8,
     "offers": 0,
     "rejections": 49,
@@ -14,7 +14,7 @@ export const jobSearchData = {
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
     "auditedAt": "2026-11-17",
-    "lifetimeApplications": 145
+    "lifetimeApplications": 146
   },
   "jobs": [
     {
@@ -5383,12 +5383,12 @@ export const jobSearchData = {
       "company": "Essen Health Care",
       "position": "Integrated Care Coordinator (Chinese & Russian Speaking), Onsite",
       "url": "https://careers-essenmed.icims.com/jobs/2554/integrated-care-coordinator-%28chinese-%26-russian-speaking%29-onsite%21/job",
-      "status": "Found",
+      "status": "Applied",
       "resumeUrl": "",
       "firstSeenAt": "2026-11-17",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-11-17",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -6606,8 +6606,8 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-17T17:32:22.819Z",
-    "sha256": "10a389acbb11b3a5f754801d9e526d54edef2d4267b70bcb88541b73e2d4b8dc",
+    "readAt": "2026-11-17T21:26:43.941Z",
+    "sha256": "c498bac4dff54e9398fd2902d89c14c647531cc43dcee2f4cddd9d9c36e74f95",
     "historyRecords": 332,
     "trackerRecords": 332,
     "uniqueHistoryRecords": 332,
