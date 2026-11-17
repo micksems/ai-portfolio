@@ -1,5 +1,27 @@
 # Job-search execution contract
 
+## November 17, 2026 — candidate evidence source corrections
+
+- **IMCRA**: Senior Associate, New York, **November 2025–present**. Use the
+  correct start date in every newly generated or revised resume, and consider
+  its recent analytics/outreach, medical-community partnership, CRM/spreadsheet
+  tracking and multilingual coordination work for matching job descriptions.
+  Old January 2026 records are superseded. No invented clinical credentials or
+  outreach volume.
+- **DataAnnotation**: User reports access to all 14 public role categories;
+  the canonical `DataAnnotation Roles` tab records the 133 public titles
+  reviewed November 17, 2026. Access is separate from confirmed completed
+  project duties. Use job-relevant AI evaluation titles or specialization
+  descriptors only when actual evaluated tasks can be supported by the
+  Evidence/Experience Bank; don't falsely claim medical, legal, finance
+  licensing, engineering employment or specialized project completion.
+- **Tracking**: The Google Jobs/Events/Outreach Queue and the independent
+  Outreach Tracker have been reconciled for November 17 applications and
+  sent/replied outreach. Use employer receipt verification for Applied;
+  historical prepared PDFs alone cannot count as submitted applications.
+  Website publication is a separate sync. Never replay resume generation to
+  refresh the website.
+
 ## November 9, 2026 — deliver-first operating sequence
 
 **A saved, reviewed application package must reach the user before website publication.**
