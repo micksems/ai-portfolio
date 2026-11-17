@@ -1,10 +1,10 @@
 export const jobSearchData = {
-  "updatedAt": "November 10, 2026",
+  "updatedAt": "November 17, 2026",
   "metrics": {
-    "applications": 139,
+    "applications": 141,
     "interviews": 8,
     "offers": 0,
-    "rejections": 48,
+    "rejections": 49,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -13,8 +13,8 @@ export const jobSearchData = {
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-10",
-    "lifetimeApplications": 143
+    "auditedAt": "2026-11-17",
+    "lifetimeApplications": 145
   },
   "jobs": [
     {
@@ -3861,16 +3861,16 @@ export const jobSearchData = {
       "company": "SS&C",
       "position": "Product Solutions Analyst",
       "url": "https://ssctech.wd1.myworkdayjobs.com/SSCTechnologies/job/Product-Solutions-Analyst_R46476",
-      "status": "Applied",
+      "status": "Closed",
       "resumeUrl": "https://drive.google.com/file/d/1LwMgwSUKe2O17Brn9k744xXUwfsoFy8N/view?usp=drivesdk",
       "notes": "User confirmed application submitted October 15, 2026; exact submission time unknown. NYC hybrid; base 70,000–100,000. No minimum years; business degree welcomed, analytical skills and communication; SQL/C#/PowerShell training provided. Technical support adjacent to BA. Role-specific sponsorship unconfirmed. Tailored master-format PDF checked October15.",
       "firstSeenAt": "2026-10-15",
       "appliedAt": "2026-10-15",
       "submissionConfirmed": true,
       "inApplicationCohort": true,
-      "finalOutcome": "Active",
+      "finalOutcome": "Rejected",
       "canonicalKey": "ssctech.wd1.myworkdayjobs.com:r46476",
-      "rejectionAt": "",
+      "rejectionAt": "2026-11-12",
       "offerAt": ""
     },
     {
@@ -5345,6 +5345,70 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "americor.applytojob.com/apply/38kw5xapmh/associate-product-manager-ai-voice-technology",
+      "company": "Americor",
+      "position": "Associate Product Manager, AI & Voice Technology",
+      "url": "https://americor.applytojob.com/apply/38Kw5xAPmh/Associate-Product-Manager-AI-Voice-Technology",
+      "status": "Applied",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-17",
+      "appliedAt": "2026-11-17",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "td.wd3.myworkdayjobs.com:r_1516907",
+      "company": "TD Bank",
+      "position": "Relationship Banker I (Kings Highway) — Bilingual Russian or Georgian Preferred",
+      "url": "https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/Brooklyn-New-York/Relationship-Banker-I--Kings-Highway--Full-Time--Bilingual-Urdu--Hindi--Spanish--Turkish--Russian-or-Hebrew-preferred-_R_1516907?source=LinkedIn",
+      "status": "Applied",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-17",
+      "appliedAt": "2026-11-17",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "careers-essenmed.icims.com/jobs/2554/integrated-care-coordinator-%28chinese-%26-russian-speaking%29-onsite%21/job",
+      "company": "Essen Health Care",
+      "position": "Integrated Care Coordinator (Chinese & Russian Speaking), Onsite",
+      "url": "https://careers-essenmed.icims.com/jobs/2554/integrated-care-coordinator-%28chinese-%26-russian-speaking%29-onsite%21/job",
+      "status": "Found",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-17",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "myjobs.adp.com/bessemer/cx/job-details",
+      "company": "Bessemer Trust",
+      "position": "Infrastructure Engineering Intern",
+      "url": "https://myjobs.adp.com/bessemer/cx/job-details?reqId=5001232194806",
+      "status": "Archived",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-17",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -5459,6 +5523,14 @@ export const jobSearchData = {
       "stage": "Completed — Hiring manager interview",
       "date": "2026-11-05",
       "interviewer": "Jinghong Cui (hiring manager)"
+    },
+    {
+      "id": "INT-METAVIEW-20261113",
+      "company": "Metaview",
+      "position": "Sales Development Representative",
+      "stage": "Completed — Introductory sales call",
+      "date": "2026-11-13",
+      "interviewer": "Alasdair Anderson"
     }
   ],
   "outreachState": [
@@ -6125,6 +6197,118 @@ export const jobSearchData = {
       "contact": "No credible role-specific nonexecutive contact verified",
       "status": "No Contact Found",
       "lastResponseAt": ""
+    },
+    {
+      "company": "Infosys",
+      "position": "Associate - Campus · 154434BR",
+      "jobUrl": "https://digitalcareers.infosys.com/global-careers/company-job/description/reqid/154434BR",
+      "contact": "Ian Co",
+      "status": "Replied",
+      "lastResponseAt": "2026-11-17"
+    },
+    {
+      "company": "Capgemini",
+      "position": "MDM Junior Analyst · 526834",
+      "jobUrl": "https://careers.capgemini.com/job/Columbia%2C-SC-MDM-Junior-Analyst-l-Any-II-Informatica-MDM%2C-Reltio%2C-STIBO%2C-Ataccama-SC-29201/1439815333/",
+      "contact": "Shatarupa Chakraborti",
+      "status": "Replied",
+      "lastResponseAt": "2026-11-16"
+    },
+    {
+      "company": "Wipro",
+      "position": "Junior Forward Deployed Engineer · 160017",
+      "jobUrl": "",
+      "contact": "Maumita Bhowmick",
+      "status": "Awaiting reply",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Capgemini",
+      "position": "Associate Application Consultant — NY/Chicago",
+      "jobUrl": "",
+      "contact": "Amy Weichman",
+      "status": "Awaiting reply",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "HCLTech",
+      "position": "Record Analyst / Analyst · 168496",
+      "jobUrl": "",
+      "contact": "Gaurav Rana",
+      "status": "Awaiting reply",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Capgemini Invent",
+      "position": "Data-Driven Transformation / AI",
+      "jobUrl": "",
+      "contact": "Allison Lambert",
+      "status": "Awaiting reply",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Infosys",
+      "position": "Campus Associate · 154434BR",
+      "jobUrl": "",
+      "contact": "Rajini Srinivas",
+      "status": "Replied",
+      "lastResponseAt": "2026-11-05"
+    },
+    {
+      "company": "Gain America",
+      "position": "Junior Data Analyst NYC",
+      "jobUrl": "",
+      "contact": "Gain America general recruiting",
+      "status": "Awaiting reply",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Perfict Global",
+      "position": "Data Analyst — December graduate",
+      "jobUrl": "",
+      "contact": "Rohini Rupnoor",
+      "status": "Awaiting reply",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Tata Consultancy Services",
+      "position": "Gen AI Developer — Santa Clara / early-career AI",
+      "jobUrl": "",
+      "contact": "Abirami Murugan",
+      "status": "Awaiting reply",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Mphasis",
+      "position": "Data Analyst / graduate opportunities",
+      "jobUrl": "",
+      "contact": "Suman Roy",
+      "status": "Awaiting reply",
+      "lastResponseAt": ""
+    },
+    {
+      "company": "Metaview",
+      "position": "Sales role — recruiter-initiated intro",
+      "jobUrl": "",
+      "contact": "Alasdair Anderson",
+      "status": "Replied — declined",
+      "lastResponseAt": "2026-11-17"
+    },
+    {
+      "company": "Fordham Hack the Unreachable event",
+      "position": "Hackathon judge / AI strategy",
+      "jobUrl": "",
+      "contact": "Anna Kim",
+      "status": "Connected",
+      "lastResponseAt": "2026-11-14"
+    },
+    {
+      "company": "Company unconfirmed",
+      "position": "Networking invitation",
+      "jobUrl": "",
+      "contact": "Carolina Garcia Chaves",
+      "status": "Connected",
+      "lastResponseAt": "2026-11-10"
     }
   ],
   "activityHistory": [
@@ -6422,10 +6606,11 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-10T18:50:21.245Z",
-    "sha256": "138083bf7b150a905fcf85a2bfbba2697671340c98451558a25026875d20db64",
-    "historyRecords": 328,
-    "trackerRecords": 328,
-    "uniqueHistoryRecords": 328
+    "readAt": "2026-11-17T17:32:22.819Z",
+    "sha256": "10a389acbb11b3a5f754801d9e526d54edef2d4267b70bcb88541b73e2d4b8dc",
+    "historyRecords": 332,
+    "trackerRecords": 332,
+    "uniqueHistoryRecords": 332,
+    "outreachRecords": 97
   }
 };
