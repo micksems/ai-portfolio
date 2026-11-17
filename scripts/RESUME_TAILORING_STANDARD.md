@@ -1,5 +1,40 @@
 # Evidence-first resume tailoring standard (v3 — stretch-friendly)
 
+## November 17, 2026: current IMCRA experience and DataAnnotation role framing
+
+**IMCRA: use the user's corrected employment dates.** International Medical Crisis and
+Response Alliance (IMCRA), New York, **Senior Associate, November 2025–present**.
+The earlier January 2026 start date was incorrect and is superseded by the
+user's direct November 17 correction. The user's duties are broad, with
+**analytics and outreach** as the dominant themes: clinician and nonprofit
+contact research, personalized professional correspondence, bilingual
+communication, Excel/Google Sheets outreach-status and follow-up analysis,
+partnership support, and medical education program coordination. Give this
+recent, credible organizational work meaningful space in healthcare,
+data/business analysis, program, partnerships, client support, nonprofit and
+research applications. It can rank above older internships. Do not describe
+it as direct patient care or claim fabricated contacts, percentages or other
+outcomes. Use the Evidence and Experience Bank tabs as the factual source.
+
+**DataAnnotation: category access is not completed specialized work.** User
+reports access to work in **all 14 advertised job categories** on
+https://www.dataannotation.tech/ as of November 17: General, Languages,
+Data & ML, Finance, Economics, Accounting, Coding, Cybersecurity,
+Engineering, STEM, Healthcare Ops, Medical, Legal, and Design. The
+DataAnnotation Roles tab in the canonical Google Sheet records 133 advertised
+titles as of that date. Resume authors may select a *truthful, job-facing
+functional title* based on completed work (e.g., AI Evaluator, AI Evaluation
+Analyst, or an actual verified language/finance evaluation specialization).
+Do not present access to finance, engineering, legal, clinical or coding
+projects as proof that tasks were completed or that the candidate has the
+professional credentials those projects often require. Vary the subtitle,
+selected bullets and work examples for a JD only when the completed tasks and
+tools support it. Preserve employer identity and timeline (DataAnnotation,
+June 2026–present); do not rewrite historical confirmed submissions.
+Verified general evaluation volume from direct user confirmation is
+approximately 200–500 response evaluations per week across approximately
+15 projects; do not invent scores, employment titles or seniority.
+
 ## November 8, 2026: proactive stretch-role and resume positioning
 
 **Pursue relevant early-career roles even when the resume does not match every item in the JD.**
