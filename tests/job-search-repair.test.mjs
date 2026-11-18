@@ -70,3 +70,19 @@ test('LinkedIn numeric and titled URLs resolve one requisition in both identity 
  const py=spawnSync('python3',['-c',"from scripts.job_search_preflight import identity;import json,sys;print(json.dumps([identity({'url':u}) for u in json.loads(sys.argv[1])]))",JSON.stringify(urls)],{encoding:'utf8'});
  assert.equal(py.status,0,py.stderr);assert.deepEqual(JSON.parse(py.stdout),keys);
 });
+
+test('HTC detail and form links preserve the saved package key in discovery and preflight',()=>{
+  const detail='https://www.htcinc.com/job-detail/?jobcode=100001';
+  const form='https://htcinc.com/apply-now/?source=email&jobcode=100001';
+  const other=detail.replace('100001','100002');
+  const roles=[detail,form,other].map(url=>({url,company:'HTC Global Services',position:'Operations Analyst'}));
+  const keys=roles.map(jobKey);
+  assert.equal(keys[0],'www.htcinc.com/job-detail?jobcode=100001');
+  assert.equal(keys[0],keys[1]);assert.notEqual(keys[0],keys[2]);
+  const py=spawnSync('python3',['-c',"from scripts.job_search_preflight import identity; import json,sys; print(json.dumps([identity(r) for r in json.load(sys.stdin)]))"],
+    {input:JSON.stringify(roles),encoding:'utf8'});
+  assert.equal(py.status,0,py.stderr);assert.deepEqual(JSON.parse(py.stdout),keys);
+  const state={jobs:[header,['htcinc.com:100002','HTC Global Services','Reporting Analyst',other,'Found',false,false,'']]};
+  assert.equal(discoverCandidates(roles,state,{}).counts.duplicates,2);
+  assert.doesNotThrow(()=>checkCandidateIdentity([roles[1]],state,'run'));
+});

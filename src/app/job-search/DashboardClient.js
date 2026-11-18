@@ -1,8 +1,7 @@
-import { calculateMetrics } from "@/lib/job-search-model.mjs";
+import { activeShortlist, calculateMetrics } from "@/lib/job-search-model.mjs";
 
 export default function DashboardClient({ jobSearchData }) {
-  const jobs = jobSearchData.jobs || [];
-  const activeJobs = jobs.filter((job) => ["Found", "Ready to Submit"].includes(job.status) && !job.submissionConfirmed);
+  const activeJobs = activeShortlist(jobSearchData);
   const pending = activeJobs.filter((job) => job.status === "Found").length;
   const ready = activeJobs.filter((job) => job.status === "Ready to Submit").length;
   const lifetime = { ...jobSearchData.metrics, ...calculateMetrics(jobSearchData) };
@@ -90,7 +89,7 @@ export default function DashboardClient({ jobSearchData }) {
           {activeJobs.length === 0 ? <p className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-600">All prepared applications have been submitted. Your next shortlist will appear after a new search.</p> : null}
           <ul className="mt-5 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
             {activeJobs.map((job) => (
-              <li key={job.url || `${job.company}-${job.position}`} className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
+              <li key={job.canonicalKey} className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-slate-500">{job.company}</p>
                   <h3 className="mt-1 font-semibold">{job.position}</h3>

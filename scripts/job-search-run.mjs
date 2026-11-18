@@ -1,12 +1,12 @@
 // Manual run controller. Research/content judgement and connected writes remain
 // explicit review boundaries; all local dependencies, timings and reuse are enforced.
 import {readFileSync,writeFileSync,statSync,existsSync,mkdirSync,openSync,closeSync,unlinkSync} from 'node:fs';
-import {resolve,join,dirname} from 'node:path';
+import {resolve,join,dirname,basename} from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {randomUUID} from 'node:crypto';
-import {digest,fileDigest,writeJson,readManifest,runStage,outputsValid} from './run-checkpoint.mjs';
-import {discover,EMPLOYER_ALIASES,earlyMismatch} from './job-search-discovery.mjs';
+import {digest,fileDigest,gitBlobSha,writeJson,readManifest,runStage,outputsValid} from './run-checkpoint.mjs';
+import {discover,EMPLOYER_ALIASES,earlyMismatch,sourcesForTargets} from './job-search-discovery.mjs';
 import {jobKey,sameJob} from '../src/lib/job-search-model.mjs';
 import {auditResumeArtifact,SourceTextCache} from './check-resume-fit.mjs';
 
@@ -34,19 +34,31 @@ function jobs(snapshot) {
 }
 function value(v) {return {userEnteredValue:typeof v==='boolean'?{boolValue:v}:typeof v==='number'?{numberValue:v}:{stringValue:String(v??'')}};}
 
-export function checkCandidateIdentity(candidates,snapshot,mode) {
+function screenShortlist(candidates,snapshot,mode) {
   const records=jobs(snapshot),seen=new Set();
+  const eligible=[],held=[];
   for(const c of candidates){
-    const mismatch=earlyMismatch(c);required(!mismatch,mismatch);
     const key=jobKey({...c,canonicalKey:undefined});
-    required(!c.canonicalKey||c.canonicalKey===key,'New candidate key must match its full requisition URL');
-    required(!seen.has(key),'Duplicate within shortlist');seen.add(key);
-    const matches=records.filter(r=>sameJob(c,{canonicalKey:r.record['Canonical Job Key'],url:r.record['Job URL']}));
-    required(!matches.some(r=>r.record['Submission Confirmed']===true||r.record['Applied At']||/^(Applied|Rejected|Interview|Offer)$/i.test(r.record.Status)),
-      'Already submitted: resume generation forbidden');
-    if(mode==='run')required(!matches.length&&!c.retained,'Previously seen roles cannot fill new-job slots');
-    else required(matches.length===1,'Revision/benchmark must resolve one existing unsubmitted role');
+    const matches=records.filter(r=>sameJob(c,{canonicalKey:r.record['Canonical Job Key'],url:r.record['Job URL'],company:r.record.Company,position:r.record.Position}));
+    const reasons=[];
+    const mismatch=earlyMismatch(c);
+    if(mismatch)reasons.push(mismatch);
+    if(c.canonicalKey&&c.canonicalKey!==key)reasons.push('New candidate key must match its full requisition URL');
+    if(seen.has(key))reasons.push('Duplicate within shortlist');
+    if(matches.some(r=>r.record['Submission Confirmed']===true||r.record['Applied At']||/^(Applied|Rejected|Interview|Offer)$/i.test(r.record.Status)))
+      reasons.push('Already submitted: resume generation forbidden');
+    if(mode==='run'&&(matches.length||c.retained))reasons.push('Previously seen roles cannot fill new-job slots');
+    if(mode!=='run'&&matches.length!==1)reasons.push('Revision/benchmark must resolve one existing unsubmitted role');
+    if(c.discoveryChannel==='external'&&c.sourceTrust!=='declared-official')reasons.push('External lead needs a verified official employer source');
+    if(mode==='run'&&c.releaseStatus&&c.releaseStatus!=='Ready to Submit')reasons.push('A held role cannot fill a new-job slot');
+    if(reasons.length)held.push({key,company:c.company,position:c.position,reasons});
+    else {eligible.push(c);seen.add(key);}
   }
+  return {eligible,held};
+}
+export function checkCandidateIdentity(candidates,snapshot,mode) {
+  const {held}=screenShortlist(candidates,snapshot,mode);
+  if(held.length)throw new Error(held[0].reasons.join('. '));
 }
 
 export function validateUploads(release,receipts) {
@@ -93,14 +105,33 @@ export function savedPackageHandoff(release,receipts,candidates,requestedCount) 
     const candidate=candidates.find(c=>jobKey(c)===r.key);
     const receipt=receipts.find(x=>x.key===r.key);
     required(candidate&&receipt?.drive_url,'Saved PDF lacks its approved role or Drive link: '+r.key);
+    const form=candidate.gates?.application_path;
+    const applicationUrl=form?.form_verified && form.requisition_confirmed && form.form_url?.startsWith('https://')
+      ? form.form_url : candidate.url;
     return {key:r.key,company:candidate.company,position:candidate.position,
-      applicationUrl:candidate.url,resumePdfUrl:receipt.drive_url,
+      applicationUrl,resumePdfUrl:receipt.drive_url,
       libraryFileId:receipt.library_file_id,sha256:r.sha256};
   });
   required(deliverables.length<=requestedCount,'Saved packages exceed original target');
   return {requestedCount,savedCount:deliverables.length,
     remainingCount:requestedCount-deliverables.length,deliverables,
     pendingUploads:pendingUploads.map(({key,missing})=>({key,missing}))};
+}
+
+function savedRowsPresent(snapshot,deliverables,candidates) {
+  const records=jobs(snapshot);
+  return deliverables.every(item=>{
+    const candidate=candidates.find(c=>jobKey(c)===item.key);
+    const matches=records.filter(({record:r})=>sameJob(candidate,{canonicalKey:r['Canonical Job Key'],
+      url:r['Job URL'],company:r.Company,position:r.Position}));
+    return matches.length===1 && matches[0].record['Tailored Resume']===item.resumePdfUrl &&
+      (matches[0].record.Status===(candidate.releaseStatus||'Ready to Submit') || matches[0].record['Submission Confirmed']===true);
+  });
+}
+function verifiedOutput(stage,path) {
+  if(stage?.status!=='complete'||!existsSync(path))return false;
+  const hash=fileDigest(path);
+  return stage.outputs.some(output=>basename(output.path)===basename(path) && output.sha256===hash);
 }
 
 // This checks that a role-first draft was supplied. Semantic relevance and
@@ -184,7 +215,7 @@ export function recordRejections(directory,input) {
   writeJson(file,saved);return {saved:input.length,path:file};
 }
 
-export async function run(directory,{mode='run'}={}) {
+export async function run(directory,{mode='run',baseBlobSha}={}) {
   const dir=resolve(directory);mkdirSync(dir,{recursive:true});
   const lock=join(dir,'run.lock'),token=randomUUID();let fd;
   if(existsSync(lock)&&Date.now()-statSync(lock).mtimeMs>15*60_000)unlinkSync(lock);
@@ -207,47 +238,79 @@ export async function run(directory,{mode='run'}={}) {
       if(m.waiting&&(!stages.length||stages.includes(m.waiting.stage))){m.waitHistory=m.waitHistory||[];m.waitHistory.push({...m.waiting,durationMs:Date.now()-Date.parse(m.waiting.since)});delete m.waiting;writeJson(manifestPath,m);}
     };
     if(mode==='status')return {status:manifest.waiting?'waiting':'recorded',wallElapsedMs:Date.now()-Date.parse(manifest.startedAt),...manifest};
-    required(['run','revise','benchmark','sync','handoff'].includes(mode),
-      'Use run|revise|benchmark|sync|handoff|status RUN_DIRECTORY');
+    required(['run','revise','benchmark','sync','begin-publish','handoff'].includes(mode),
+      'Use run|revise|benchmark|sync|begin-publish|handoff|status RUN_DIRECTORY');
+    const proposalPath=join(dir,'publication-proposal.json'),publishedPath=path('publishedPath');
+    if(mode==='begin-publish') {
+      required(manifest.waiting?.stage==='publish' && outputsValid(manifest.stages.sync),
+        'Prepare a current proposal with sync before starting the GitHub write.');
+      const proposal=read(proposalPath);
+      required(baseBlobSha && baseBlobSha===proposal.baseBlobSha,
+        'GitHub base changed before the write. Refresh the checkout and run sync.');
+      const source=read(path('snapshotPath'));fresh(source);
+      const hash=digest({jobs:source.jobs,events:source.events,outreach:source.outreach||null});
+      required(hash===(proposal.sourceHash||proposal.setFields.sourceSnapshot?.sha256),
+        'Tracker changed before the write. Run sync to prepare the current proposal.');
+      if(existsSync(publishedPath))return wait('verification',{publishedPath,
+        instruction:'Inspect the recorded GitHub write before another attempt.'});
+      writeJson(publishedPath,{proposalSha256:fileDigest(proposalPath),state:'attempting'});
+      return {status:'ready-to-publish',baseBlobSha,proposalPath,publishedPath};
+    }
     if(mode==='handoff') {
       const releaseFile=join(dir,'release.json'),shortlistFile=path('shortlistPath'),
         uploadsFile=path('uploadsPath');
       required(existsSync(releaseFile)&&existsSync(shortlistFile),
         'No released packages to recover; inspect the last waiting stage with status');
+      const approved=read(shortlistFile),readback=path('readbackPath');
       const handoff=savedPackageHandoff(read(releaseFile),
-        existsSync(uploadsFile)?read(uploadsFile):[],read(shortlistFile),
+        existsSync(uploadsFile)?read(uploadsFile):[],approved,
         config.requestedCount??5);
       return {status:handoff.savedCount?'recovered':'waiting',...handoff,
-        trackerSyncPending:!existsSync(path('readbackPath')),
+        trackerSyncPending:!(handoff.savedCount && verifiedOutput(manifest.stages['sheet-readback'],readback) &&
+          savedRowsPresent(read(readback),handoff.deliverables,approved)),
         websiteSyncPending:true,manifest:manifestPath};
     }
     required(config.spreadsheetId,'Missing canonical spreadsheet ID');
     const requestedCount=config.requestedCount??5;
     required(Number.isInteger(requestedCount)&&requestedCount>=1,'requestedCount must be positive');
     const snapshot=read(path('snapshotPath'));fresh(snapshot);jobs(snapshot);
-    const code={runner:fileDigest(join(scripts,'job-search-run.mjs')),render:fileDigest(join(scripts,'render-job-resumes.py')),
-      checker:fileDigest(join(scripts,'check-resume-fit.mjs')),preflight:fileDigest(join(scripts,'job_search_preflight.py'))};
-    // Controller-only edits must not invalidate previously checked PDFs.
-    // Re-run the release gate only when rendering, evidence or preflight code changes.
-    const evidenceCodeDigest=digest({render:code.render,checker:code.checker,preflight:code.preflight});
     let release;
     let remainingCount=0;
     if(mode==='run'||mode==='revise'||mode==='benchmark') {
+      // A refreshed tracker after a successful write already contains these roles.
+      // Finish that same run using its checked files and exact readback.
+      if(mode==='run' && verifiedOutput(manifest.stages.release,join(dir,'release.json')) &&
+          verifiedOutput(manifest.stages.uploads,path('uploadsPath')) && existsSync(path('shortlistPath'))) {
+        const approved=read(path('shortlistPath'));
+        const handoff=savedPackageHandoff(read(join(dir,'release.json')),read(path('uploadsPath')),approved,requestedCount);
+        if(handoff.savedCount && !handoff.pendingUploads.length && savedRowsPresent(snapshot,handoff.deliverables,approved)) {
+          const file=path('readbackPath');
+          await runStage(manifestPath,'sheet-readback',{snapshot,packages:handoff.deliverables},async()=>{
+            writeJson(file,snapshot);return [file];
+          });
+          resolveWait('uploads','sheet-write');
+          return {status:handoff.remainingCount?'partial':'complete',...handoff,recovered:true,
+            trackerUpdated:true,websiteSyncPending:true,manifest:manifestPath};
+        }
+      }
       const policy=policyFor(dir,config);
       // Fail before font extraction/resume work if employer discovery cannot
       // cover the requested employer list. An empty source list is not
       // evidence that the labor market has zero suitable roles.
+      let sources=config.sources||[];
       if(mode==='run'&&!existsSync(path('shortlistPath'))) {
         const targets=config.targetEmployers||[];
+        const catalog=read(resolve(scripts,'../config/verified-employer-career-sites.json'));
+        sources=sourcesForTargets(targets,sources,catalog.employers);
         const leads=config.externalLeadsPath?read(path('externalLeadsPath')):(config.externalLeads||[]);
         const normalize=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
         const targetNames=targets.map(t=>typeof t==='string'?t:t.name);
         const targetKeys=new Set(targetNames.map(normalize));
-        const configured=[...(config.sources||[]),...leads];
+        const configured=[...sources,...leads];
         if(!targets.length||!configured.length)return wait('source-configuration',{
           reason:!targets.length?'Supply an explicit ordered targetEmployers list from the approved employer scope.':
             'No verified employer ATS sources or dated external leads were configured.',
-          targetEmployers:targetNames,sourceCount:(config.sources||[]).length,
+          targetEmployers:targetNames,sourceCount:sources.length,
           externalLeadCount:leads.length,
           instruction:'Configure verified official employer sources before discovery. Zero configured sources is NOT zero available jobs.'});
         const outside=configured.filter(x=>!targetKeys.has(normalize(x.company))).map(x=>x.company);
@@ -259,14 +322,14 @@ export async function run(directory,{mode='run'}={}) {
         const discoveryPath=join(dir,'discovery.json');
         const externalLeads=config.externalLeadsPath?read(path('externalLeadsPath')):(config.externalLeads||[]);
         const sourceConfig={stateDir:resolve(dir,config.stateDir||'../../cache'),
-          sources:config.sources||[],externalLeads,targetEmployers:config.targetEmployers||[],
+          sources,externalLeads,targetEmployers:config.targetEmployers||[],
           policy,requestedCount,
           maxBoardRequests:config.maxBoardRequests??12,maxDiscoveryPasses:config.maxDiscoveryPasses??2,
           sourceOffset:config.sourceOffset??0};
         await runStage(manifestPath,'discovery',{sources:sourceConfig.sources,
           targetEmployers:sourceConfig.targetEmployers,externalLeads,
           policy,maxBoardRequests:sourceConfig.maxBoardRequests,maxDiscoveryPasses:sourceConfig.maxDiscoveryPasses,
-          sourceOffset:sourceConfig.sourceOffset,discoveryCode:fileDigest(join(scripts,'job-search-discovery.mjs')),
+          sourceOffset:sourceConfig.sourceOffset,discoveryCode:hashFiles(['job-search-discovery.mjs','read-job-feed.py'].map(f=>join(scripts,f))),
           jobs:digest(snapshot.jobs)},async()=>{
           writeJson(discoveryPath,await discover(sourceConfig,snapshot));return [discoveryPath];
         });
@@ -280,19 +343,22 @@ export async function run(directory,{mode='run'}={}) {
       }
       // Discovery is independent from resume/font availability.
       // Only request the pinned master after a real shortlist exists.
+      const originalCandidates=read(shortlistPath);
+      required(originalCandidates.length>=1&&originalCandidates.length<=requestedCount,
+        'Provide 1..requestedCount verified roles, or report a zero-result discovery with its reason counts. Never pad or silently lower the target.');
+      const screened=screenShortlist(originalCandidates,snapshot,mode);
+      let candidates=screened.eligible;
+      if(!candidates.length) {
+        writeJson(join(dir,'qualification-holds.json'),{requestedCount,held:screened.held});
+        return wait('qualification-hold',{requestedCount,candidatesChecked:originalCandidates.length,
+          reasons:screened.held,dashboardSyncRequired:true});
+      }
       const master=config.master;
       required(master?.library_file_id&&master.version&&master.sha256,'Pin the current approved master metadata');
       required(fileDigest(master.local_path)===master.sha256,'Master hash differs');
-      let candidates=read(shortlistPath);
-      const originalCandidates=candidates;
-      required(candidates.length>=1&&candidates.length<=requestedCount,
-        'Provide 1..requestedCount verified roles, or report a zero-result discovery with its reason counts. Never pad or silently lower the target.');
-      remainingCount=requestedCount-candidates.length;
-      checkCandidateIdentity(candidates,snapshot,mode);
-      required(candidates.every(c=>c.discoveryChannel!=='external'||c.sourceTrust==='declared-official'),
-        'Third-party/unverified external lead cannot enter resume stage without a verified official employer source');
-      if(mode==='run')required(candidates.every(c=>!c.releaseStatus||c.releaseStatus==='Ready to Submit'),
-        'New-job run must not generate or release Found/held draft resumes');
+      const code={render:fileDigest(join(scripts,'render-job-resumes.py')),checker:fileDigest(join(scripts,'check-resume-fit.mjs')),
+        preflight:fileDigest(join(scripts,'job_search_preflight.py'))};
+      const evidenceCodeDigest=digest(code);
       // Qualification and application evidence MUST pass before generating
       // authoring plans, extracting fonts or rendering any PDF.
       const preflightPath=join(dir,'preflight.json'),preflightResult=join(dir,'preflight-result.json');
@@ -311,11 +377,11 @@ export async function run(directory,{mode='run'}={}) {
         writeJson(preflightResult,parsed);
         return [preflightPath,preflightResult];
       });
-      const {eligible,held:qualificationHolds}=
-        partitionPreflightDecisions(originalCandidates,read(preflightResult));
+      const decisions=partitionPreflightDecisions(candidates,read(preflightResult));
+      const qualificationHolds=[...screened.held,...decisions.held];
       if(qualificationHolds.length)writeJson(join(dir,'qualification-holds.json'),
         {requestedCount,held:qualificationHolds,checkedAt:new Date().toISOString()});
-      candidates=eligible;
+      candidates=decisions.eligible;
       if(!candidates.length)
         return wait('qualification-hold',{requestedCount,candidatesChecked:originalCandidates.length,
           reasons:qualificationHolds,dashboardSyncRequired:true,
@@ -436,14 +502,7 @@ export async function run(directory,{mode='run'}={}) {
           instruction:'Deliver the saved role/PDF links to the user NOW. Sheet reconciliation continues separately; do not claim the tracker or website is updated yet.'});
       }
       const readback=read(readbackPath);fresh(readback);
-      for(const report of release.resumes) {
-        const candidate=candidates.find(c=>jobKey(c)===report.key);
-        const record=jobs(readback).find(r=>sameJob(candidate,{canonicalKey:r.record['Canonical Job Key'],url:r.record['Job URL']}))?.record;
-        const receipt=receipts.find(r=>r.key===report.key);
-        const expectedStatus=candidates.find(c=>jobKey(c)===report.key)?.releaseStatus||'Ready to Submit';
-        required(record&&record['Tailored Resume']===receipt.drive_url&&
-          (record.Status===expectedStatus||record['Submission Confirmed']===true),'Sheet readback does not contain the saved package');
-      }
+      required(savedRowsPresent(readback,handoff.deliverables,candidates),'Sheet readback does not contain the saved package');
       resolveWait('sheet-write');
       await runStage(manifestPath,'sheet-readback',{readback,receipts},async()=>[readbackPath]);
       resolveWait();
@@ -453,35 +512,53 @@ export async function run(directory,{mode='run'}={}) {
         skippedRoles:qualificationHolds,trackerUpdated:true,websiteSyncPending:true,
         manifest:manifestPath};
     }
-    const publishSnapshot=mode==='sync'?path('snapshotPath'):path('readbackPath');
-    const proposalPath=join(dir,'publication-proposal.json'),syncResultPath=join(dir,'sync-result.json');
-    const snapshotForPublish=read(publishSnapshot);fresh(snapshotForPublish);
-    required(snapshotForPublish.events,'Include current Events in the publication snapshot');
+    const publishSnapshot=path('snapshotPath'),syncResultPath=join(dir,'sync-result.json');
+    required(snapshot.events,'Include current Events in the publication snapshot');
     // Caller refreshes the checkout/base file once before this step. Blob lease
     // in the connector proposal prevents overwriting a concurrent monitor update.
     required(!config.baseDataPath||resolve(config.baseDataPath)===resolve(scripts,'../src/data/jobSearchData.js'),'Refresh this checkout’s base data file before publishing.');
-    const previous=readManifest(manifestPath);
-    const pendingPublication=['publish','verification'].includes(previous.waiting?.stage)&&existsSync(proposalPath)&&existsSync(syncResultPath)&&read(syncResultPath).changed;
-    if(pendingPublication) {
-      const expected=read(proposalPath).setFields?.sourceSnapshot?.sha256;
-      const current=digest({jobs:snapshotForPublish.jobs,events:snapshotForPublish.events,outreach:snapshotForPublish.outreach||null});
-      required(expected===current,'Canonical data changed during publication; verify the outstanding write before starting another publication.');
-    } else {
-      await runStage(manifestPath,'sync',{snapshot:snapshotForPublish,base:fileDigest(join(scripts,'../src/data/jobSearchData.js'))},async()=>{
+    const basePath=join(scripts,'../src/data/jobSearchData.js');
+    const baseText=readFileSync(basePath,'utf8'),baseSha=gitBlobSha(baseText);
+    const receipt=existsSync(publishedPath)?read(publishedPath):null;
+    const pending=['publish','verification'].includes(manifest.waiting?.stage) ||
+      Boolean(receipt && !verifiedOutput(manifest.stages.publish,publishedPath));
+    const proposed=pending?read(proposalPath):null;
+    if(receipt)required(existsSync(proposalPath) && receipt.proposalSha256===fileDigest(proposalPath),
+      'Publication receipt belongs to another proposal');
+    if(receipt?.state==='not-written')required(!receipt.commit,'A committed write cannot be marked not-written');
+    if(receipt?.commit && !pending && baseSha===read(proposalPath).baseBlobSha)
+      return wait('refresh-base',{commit:receipt.commit,instruction:'Refresh the checkout to include the verified commit before reconciling another change.'});
+    if(pending && !receipt) {
+      // Older runs may have committed before they could store a receipt.
+      const base=JSON.parse(baseText.replace(/^export const jobSearchData = /,'').replace(/;\s*$/,''));
+      const expected=proposed.sourceHash || proposed.setFields.sourceSnapshot?.sha256;
+      if(manifest.waiting.stage==='verification' || (baseSha!==proposed.baseBlobSha && expected && base.sourceSnapshot?.sha256===expected))
+        return wait('verification',{proposalPath,publishedPath,
+          instruction:'Locate the existing GitHub commit and record its proof. If the write never landed, record state=not-written with the proposal hash.'});
+    }
+    const keepReceipt=pending && receipt && receipt.state!=='not-written';
+    if(!keepReceipt) {
+      if(receipt) {
+        required(receipt.state==='not-written' || verifiedOutput(manifest.stages.publish,publishedPath),
+          'Verify the previous GitHub write before preparing another.');
+        writeJson(join(dir,'publication-receipts',digest(receipt)+'.json'),receipt);
+        unlinkSync(publishedPath);
+      }
+      await runStage(manifestPath,'sync',{snapshot,base:baseSha,
+        syncCode:hashFiles(['scripts/sync-job-search.mjs','scripts/job-search-publication.mjs','src/lib/job-search-model.mjs',
+          'src/lib/job-search-sync.mjs','src/lib/job-search-source.mjs'].map(f=>resolve(scripts,'..',f)))},async()=>{
         const result=JSON.parse(execute(process.execPath,[join(scripts,'sync-job-search.mjs'),publishSnapshot,'--proposal',proposalPath]));
         writeJson(syncResultPath,result);return result.changed?[proposalPath,syncResultPath]:[syncResultPath];
       });
     }
     const sync=read(syncResultPath);
-    if(!sync.changed){resolveWait();return {status:mode==='sync'||!remainingCount?'complete':'partial',
-      changed:false,requestedCount:mode==='sync'?undefined:requestedCount,
-      preparedCount:mode==='sync'?undefined:requestedCount-remainingCount,
-      remainingCount:mode==='sync'?undefined:remainingCount,manifest:manifestPath};}
-    const publishedPath=path('publishedPath');
+    if(!sync.changed){resolveWait();return {status:'complete',changed:false,manifest:manifestPath};}
     if(!existsSync(publishedPath))return wait('publish',{proposalPath,publishedPath,
-      instruction:'Apply compact proposal to the fresh GitHub fetch result with matching blob SHA. Commit once; record exact CI and production deployment proof.'});
+      baseBlobSha:sync.baseBlobSha,
+      instruction:'Apply the proposal in memory to the fresh GitHub blob. Immediately before the write use begin-publish with that blob SHA, then record the returned commit.'});
     const published=read(publishedPath);
-    required(published.proposalSha256===fileDigest(proposalPath),'Publication receipt belongs to another proposal');
+    if(!published.commit)return wait('verification',{proposalPath,publishedPath,
+      instruction:'Inspect the previous GitHub write. Record its exact commit or a confirmed not-written outcome before retrying.'});
     required(/^[a-f0-9]{40}$/.test(published.commit||''),'Missing exact publication commit; inspect the remote outcome before retrying.');
     required(!['failure','error','cancelled'].includes(published.ci),'Publication CI failed; resume verification/fix, do not recreate resumes.');
     if(published.ci!=='success'||published.deployment?.state!=='READY'||published.productionVerified!==true)
@@ -489,11 +566,10 @@ export async function run(directory,{mode='run'}={}) {
     required(published.deployment?.state==='READY'&&published.deployment.commit===published.commit&&published.deployment.aliases?.includes('ai-portfolio-ruddy-nine.vercel.app'),'Production deployment differs from published commit');
     required(published.productionVerified===true,'Verify the production route before handoff');
     resolveWait();await runStage(manifestPath,'publish',{proposal:fileDigest(proposalPath),published},async()=>[publishedPath]);
-    return {status:mode==='sync'||!remainingCount?'complete':'partial',changed:true,
-      requestedCount:mode==='sync'?undefined:requestedCount,
-      preparedCount:mode==='sync'?undefined:requestedCount-remainingCount,
-      remainingCount:mode==='sync'?undefined:remainingCount,
-      commit:published.commit,manifest:manifestPath};
+    const current=digest({jobs:snapshot.jobs,events:snapshot.events,outreach:snapshot.outreach||null});
+    if((proposed.sourceHash||proposed.setFields.sourceSnapshot?.sha256)!==current)
+      return wait('sync',{verifiedCommit:published.commit,instruction:'The previous commit is verified. Sync the newer tracker snapshot against the refreshed GitHub base.'});
+    return {status:'complete',changed:true,commit:published.commit,manifest:manifestPath};
   } finally {
     clearInterval(lease);if(fd!==undefined)closeSync(fd);
     if(existsSync(lock)&&readFileSync(lock,'utf8').includes(token))unlinkSync(lock);
@@ -502,6 +578,6 @@ export async function run(directory,{mode='run'}={}) {
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href) {
   try{const [mode,dir,input]=process.argv.slice(2);required(dir,'Use job-search-run.mjs run|sync|handoff|status PRIVATE_RUN_DIRECTORY');
-    console.log(JSON.stringify(mode==='checkpoint'?JSON.parse(execute(python,[join(scripts,'archive-job-search.py'),dir,input])):mode==='reject'?recordRejections(dir,read(input)):await run(dir,{mode}),null,2));}
+    console.log(JSON.stringify(mode==='checkpoint'?JSON.parse(execute(python,[join(scripts,'archive-job-search.py'),dir,input])):mode==='reject'?recordRejections(dir,read(input)):await run(dir,{mode,baseBlobSha:input}),null,2));}
   catch(error){console.error(error.message);process.exitCode=1;}
 }
