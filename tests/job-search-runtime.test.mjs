@@ -343,7 +343,7 @@ test('compact publication updates exact fields and refuses stale source SHA',()=
 
 test('publication CLI produces a small patch, leaves base untouched and clears old proposal on no-op',t=>{
  const dir=temp(t);
- for(const name of ['scripts/sync-job-search.mjs','scripts/job-search-publication.mjs','src/lib/job-search-sync.mjs','src/lib/job-search-model.mjs','src/lib/job-search-source.mjs']) {
+ for(const name of ['scripts/sync-job-search.mjs','scripts/job-search-publication.mjs','scripts/run-checkpoint.mjs','src/lib/job-search-sync.mjs','src/lib/job-search-model.mjs','src/lib/job-search-source.mjs']) {
   mkdirSync(join(dir,name,'..'),{recursive:true});copyFileSync(resolve(name),join(dir,name));
  }
  const job={canonicalKey:key,company:'Example',position:'Data Analyst',url,status:'Applied',resumeUrl:'https://drive.google.com/file/d/file1/view',submissionConfirmed:true,inApplicationCohort:true,notes:'',firstSeenAt:'',appliedAt:'2026-10-29',finalOutcome:'Active',rejectionAt:'',offerAt:''};
@@ -365,7 +365,7 @@ test('publication CLI produces a small patch, leaves base untouched and clears o
  assert.deepEqual(JSON.parse(readFileSync(proposal)),{changed:false});
 });
 
-test('a landed commit still waits for CI/deployment proof after the local base refreshes',t=>{
+function publicationFixture(t) {
  const dir=temp(t),runDir=join(dir,'state');mkdirSync(runDir);
  const files=['scripts/job-search-run.mjs','scripts/run-checkpoint.mjs','scripts/job-search-discovery.mjs',
   'scripts/check-resume-fit.mjs','scripts/render-job-resumes.py','scripts/job_search_preflight.py',
@@ -377,7 +377,11 @@ test('a landed commit still waits for CI/deployment proof after the local base r
  const base=join(dir,'src/data/jobSearchData.js');mkdirSync(join(dir,'src/data'),{recursive:true});writeFileSync(base,'export const jobSearchData = '+JSON.stringify(data)+';\n');
  writeFileSync(join(runDir,'inputs.json'),JSON.stringify({spreadsheetId:'fixture',snapshotPath:'snapshot.json',publishedPath:'published.json'}));
  writeFileSync(join(runDir,'snapshot.json'),JSON.stringify(snapshot([jobRow()])));
- const command=()=>{const result=spawnSync(process.execPath,[join(dir,'scripts/job-search-run.mjs'),'sync',runDir],{encoding:'utf8'});assert.equal(result.status,0,result.stderr);return JSON.parse(result.stdout);};
+ const command=(mode='sync',...args)=>{const result=spawnSync(process.execPath,[join(dir,'scripts/job-search-run.mjs'),mode,runDir,...args],{encoding:'utf8'});assert.equal(result.status,0,result.stderr);return JSON.parse(result.stdout);};
+ return {command,base,runDir,data};
+}
+test('a landed commit still waits for CI/deployment proof after the local base refreshes',t=>{
+ const {command,base,runDir,data}=publicationFixture(t);
  assert.equal(command().stage,'publish');
  const proposalPath=join(runDir,'publication-proposal.json'),proposal=JSON.parse(readFileSync(proposalPath)),proposalHash=fileDigest(proposalPath);
  const committed=applyPublicationProposal(data,proposal,proposal.baseBlobSha);writeFileSync(base,'export const jobSearchData = '+JSON.stringify(committed)+';\n');
@@ -385,4 +389,57 @@ test('a landed commit still waits for CI/deployment proof after the local base r
  assert.equal(command().stage,'verification');assert.equal(fileDigest(proposalPath),proposalHash);
  receipt.ci='success';receipt.productionVerified=true;receipt.deployment={state:'READY',commit:receipt.commit,aliases:['ai-portfolio-ruddy-nine.vercel.app']};
  writeFileSync(join(runDir,'published.json'),JSON.stringify(receipt));assert.equal(command().status,'complete');
+});
+
+test('an unsent proposal rebases on the fresh blob while an uncertain write retains its exact proposal',t=>{
+ const {command,base,runDir}=publicationFixture(t);
+ const first=command(),path=first.detail.proposalPath;
+ writeFileSync(base,readFileSync(base,'utf8')+'\n');
+ const second=command(),hash=fileDigest(path);
+ assert.equal(second.stage,'publish');assert.notEqual(second.detail.baseBlobSha,first.detail.baseBlobSha);
+ assert.equal(command('begin-publish',second.detail.baseBlobSha).status,'ready-to-publish');
+ writeFileSync(base,readFileSync(base,'utf8')+'\n');
+ const changed=snapshot([jobRow('Closed')]);changed.jobs[1][15]='Rejected';
+ writeFileSync(join(runDir,'snapshot.json'),JSON.stringify(changed));
+ assert.equal(command().stage,'verification');assert.equal(fileDigest(path),hash);
+ writeFileSync(join(runDir,'published.json'),JSON.stringify({proposalSha256:hash,state:'not-written'}));
+ const retry=command();assert.equal(retry.stage,'publish');assert.notEqual(fileDigest(path),hash);
+ assert.equal(JSON.parse(readFileSync(path)).upsertJobs[0].finalOutcome,'Rejected');
+});
+
+test('a lost receipt and newer tracker data never turn an already landed proposal into a second write',t=>{
+ const {command,base,runDir,data}=publicationFixture(t);
+ const {proposalPath}=command().detail,proposal=JSON.parse(readFileSync(proposalPath));
+ const committed=applyPublicationProposal(data,proposal,proposal.baseBlobSha);
+ writeFileSync(base,'export const jobSearchData = '+JSON.stringify(committed)+';\n');
+ const changed=snapshot([jobRow('Closed')]);changed.jobs[1][15]='Rejected';
+ writeFileSync(join(runDir,'snapshot.json'),JSON.stringify(changed));
+ assert.equal(command().stage,'verification');
+ const commit='a'.repeat(40);
+ writeFileSync(join(runDir,'published.json'),JSON.stringify({proposalSha256:fileDigest(proposalPath),commit,
+   ci:'success',productionVerified:true,deployment:{state:'READY',commit,aliases:['ai-portfolio-ruddy-nine.vercel.app']}}));
+ assert.equal(command().detail.verifiedCommit,commit);
+ assert.equal(command().stage,'publish');assert.equal(JSON.parse(readFileSync(proposalPath)).upsertJobs[0].status,'Closed');
+});
+
+test('a saved package can finish from an exact refreshed tracker without rediscovery, authoring, or a second sheet write',async t=>{
+ const dir=temp(t),config={spreadsheetId:'fixture',requestedCount:5,snapshotPath:'snapshot.json',
+   shortlistPath:'shortlist.json',uploadsPath:'uploads.json',readbackPath:'readback.json'};
+ const save=(name,value)=>{const path=join(dir,name);writeFileSync(path,JSON.stringify(value));return path;};
+ save('inputs.json',config);
+ const formUrl=url+'/apply';
+ save('shortlist.json',[{...candidate,gates:{application_path:{form_verified:true,requisition_confirmed:true,form_url:formUrl}}}]);
+ const releases=save('release.json',{resumes:[{key,sha256:'pdfhash'}]});
+ const uploads=save('uploads.json',[{key,sha256:'pdfhash',library_file_id:'libfile_test',
+   drive_file_id:'file1',drive_url:'https://drive.google.com/file/d/file1/view'}]);
+ const m=join(dir,'manifest.json');
+ await runStage(m,'release','reviewed',async()=>[releases]);await runStage(m,'uploads','saved',async()=>[uploads]);
+ const row=jobRow('Ready to Submit',false);row[12]='';save('snapshot.json',snapshot([row]));
+ save('readback.json',{jobs:[]});
+ assert.equal((await run(dir,{mode:'handoff'})).trackerSyncPending,true);
+ const result=await run(dir);
+ assert.equal(result.recovered,true);assert.equal(result.status,'partial');assert.equal(result.remainingCount,4);
+ assert.equal(result.deliverables[0].applicationUrl,formUrl);
+ assert.equal((await run(dir,{mode:'handoff'})).trackerSyncPending,false);
+ assert.equal(existsSync(join(dir,'ready-sheet-plan.json')),false);
 });

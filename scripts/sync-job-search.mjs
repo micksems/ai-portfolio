@@ -5,6 +5,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { reconcileJobSearch } from '../src/lib/job-search-sync.mjs';
 import { applyPublicationProposal } from './job-search-publication.mjs';
+import { gitBlobSha } from './run-checkpoint.mjs';
 const input = process.argv[2];
 if (!input) throw new Error('Usage: node scripts/sync-job-search.mjs snapshot.json');
 const raw = readFileSync(input, 'utf8');
@@ -48,9 +49,8 @@ if (proposalIndex >= 0) {
   const wantedOrder = result.data.jobs.map(j=>j.canonicalKey);
   const setFields = Object.fromEntries(['updatedAt','metrics','interviewEvents','outreachState','sourceSnapshot']
     .filter(k=>JSON.stringify(data[k])!==JSON.stringify(result.data[k])).map(k=>[k,result.data[k]]));
-  const bytes = Buffer.from(existing);
-  const baseBlobSha = createHash('sha1').update(Buffer.concat([Buffer.from('blob '+bytes.length+'\0'),bytes])).digest('hex');
-  const proposal = {version:1,baseBlobSha,upsertJobs,removeJobs,setFields,
+  const baseBlobSha = gitBlobSha(existing);
+  const proposal = {version:1,baseBlobSha,sourceHash:snapshot.sourceHash,upsertJobs,removeJobs,setFields,
     ...(JSON.stringify(naturalOrder)!==JSON.stringify(wantedOrder)?{jobOrder:wantedOrder}:{}),scope:result.scope};
   const applied = applyPublicationProposal(data,proposal,baseBlobSha);
   if (JSON.stringify(applied)!==JSON.stringify(result.data)) throw new Error('Publication proposal differs from reconciliation');

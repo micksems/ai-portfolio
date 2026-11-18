@@ -1,7 +1,7 @@
 import { normalizeSnapshot } from './job-search-source.mjs';
 // Pure, deterministic reconciliation. No external I/O, polling, or scheduling.
 // The Google Sheet is canonical; the dashboard is a read-only published snapshot.
-import { jobKey, calculateMetrics, validatePipeline } from './job-search-model.mjs';
+import { activeShortlist, jobKey, calculateMetrics, validatePipeline } from './job-search-model.mjs';
 
 export function sheetRows(matrix, name) {
   if (!Array.isArray(matrix) || !Array.isArray(matrix[0])) throw new Error('Missing sheet matrix: ' + name);
@@ -173,10 +173,22 @@ export function reconcileJobSearch(current, snapshot) {
     next.outreachState = [...contacts.values()];
   }
 
+  next.sourceSnapshot = {...current.sourceSnapshot, metricsVersion:2};
   const computed = calculateMetrics(next);
   next.metrics = { ...next.metrics, ...computed };
   const after = publishedState(next, next.metrics);
-  const changed = before !== after;
+  // The canonical Jobs matrix is a full read. Keep historical records while
+  // taking the visible shortlist exclusively from its current rows.
+  const currentKeys = snapshot.jobs ? new Set(historyByKey.keys()) :
+    current.sourceSnapshot?.activeJobKeys ? new Set([...current.sourceSnapshot.activeJobKeys,
+      ...trackerByKey.keys(), ...historyByKey.keys()]) : null;
+  const activeJobKeys = currentKeys ? next.jobs
+    .filter(job => currentKeys.has(job.canonicalKey) && !job.submissionConfirmed &&
+      ['Found','Ready to Submit'].includes(job.status))
+    .map(job => job.canonicalKey).sort() : null;
+  const shortlistChanged = activeJobKeys !== null &&
+    JSON.stringify(activeJobKeys) !== JSON.stringify(activeShortlist(current).map(jobKey).sort());
+  const changed = before !== after || shortlistChanged;
   if (!changed) return {changed:false, data:current, scope:[]};
 
   next.updatedAt = new Intl.DateTimeFormat('en-US',{
@@ -186,11 +198,13 @@ export function reconcileJobSearch(current, snapshot) {
     timeZone:'America/New_York',
   }).format(new Date(snapshot.readAt));
   next.sourceSnapshot = {
+    metricsVersion:2,
     readAt:snapshot.readAt,
     sha256:snapshot.sourceHash || current.sourceSnapshot?.sha256 || '',
     historyRecords:histories.length,
     trackerRecords:trackers.length,
     uniqueHistoryRecords:historyByKey.size,
+    ...(activeJobKeys ? {activeJobKeys} : {}),
     ...(outreach ? {outreachRecords:outreach.length} : {}),
   };
 
@@ -199,6 +213,7 @@ export function reconcileJobSearch(current, snapshot) {
   return {
     changed:true, data:next,
     scope:[
+      ...(shortlistChanged ? ['shortlist'] : []),
       ...(JSON.stringify(current.jobs) !== JSON.stringify(next.jobs) ? ['jobs']:[]),
       ...(JSON.stringify(current.interviewEvents) !== JSON.stringify(next.interviewEvents) ? ['interviews']:[]),
       ...(JSON.stringify(current.outreachState) !== JSON.stringify(next.outreachState) ? ['outreach']:[]),

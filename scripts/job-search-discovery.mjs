@@ -1,9 +1,12 @@
 import {existsSync, readFileSync, mkdirSync} from 'node:fs';
 import {join} from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {jobKey,jobIdentityKeys} from '../src/lib/job-search-model.mjs';
 import {digest, writeJson} from './run-checkpoint.mjs';
 
 const MINUTE=60_000;
+const officialFeed = source => ['official-json', 'official-rss'].includes(source.provider);
 export const EMPLOYER_ALIASES={Deploy:'Hive','Hive AI':'Hive'};
 const safeToken=value=>typeof value==='string'&&/^[a-z0-9_-]+$/i.test(value);
 function publicUrl(value) {
@@ -28,12 +31,12 @@ export function sourceUrl(source) {
     const host=workdayHost(source);
     return `https://${host}/wday/cxs/${encodeURIComponent(source.tenant)}/${encodeURIComponent(source.site)}/jobs`;
   }
-  if(source.provider==='official-json') {
+  if(officialFeed(source)) {
     const url=publicUrl(source.feedUrl);
     // A source must be explicitly bound to its official, known host;
     // a job aggregator's arbitrary JSON endpoint is not employer evidence.
     if(!source.officialHost||url.hostname!==source.officialHost.toLowerCase())
-      throw new Error('Official JSON feed host must match verified officialHost');
+      throw new Error('Official feed host must match verified officialHost');
     if(!source.company)throw new Error('Official source must identify its employer');
     return url.href;
   }
@@ -72,7 +75,7 @@ export function publicJobUrl(source,url) {
   if(typeof url!=='string'||!url)return '';
   let parsed;
   try {parsed=publicUrl(url);}catch{return '';}
-  if(source.provider==='official-json') {
+  if(officialFeed(source)) {
     const hosts=source.allowedJobHosts??[source.officialHost];
     if(!Array.isArray(hosts)||!hosts.map(x=>String(x).toLowerCase()).includes(parsed.hostname))return '';
   }
@@ -84,14 +87,14 @@ export class SourceCache {
     mkdirSync(directory,{recursive:true});
     this.stats={networkRequests:0,cacheHits:0,errors:0};
   }
-  async get(url,init={}) {
-    const key=digest({url,method:init.method||'GET',body:init.body||''});
+  async get(url,init={},format='json') {
+    const key=digest({url,method:init.method||'GET',body:init.body||'',...(format==='rss'?{format}:{})});
     if(this.inflight.has(key)) return this.inflight.get(key);
-    const promise=this.read(url,init); this.inflight.set(key,promise);
+    const promise=this.read(url,init,key,format); this.inflight.set(key,promise);
     try{return await promise;}finally{this.inflight.delete(key);}
   }
-  async read(url,init={}) {
-    const key=digest({url,method:init.method||'GET',body:init.body||''}), metaPath=join(this.directory,key+'.json');
+  async read(url,init,key,format) {
+    const metaPath=join(this.directory,key+'.json');
     const meta=existsSync(metaPath)?JSON.parse(readFileSync(metaPath,'utf8')):null;
     if(meta && meta.expiresAt>this.now()) {
       this.stats.cacheHits++;
@@ -104,7 +107,7 @@ export class SourceCache {
     const timer=setTimeout(()=>controller.abort(),this.timeoutMs);
     let result;
     try {
-      const response=await this.fetcher(url,{...init,signal:controller.signal,headers:{Accept:'application/json',...(init.headers||{})}});
+      const response=await this.fetcher(url,{...init,signal:controller.signal,headers:{Accept:format==='rss'?'application/rss+xml, application/xml':'application/json',...(init.headers||{})}});
       if(!response.ok) {
         const ttl=[404,410].includes(response.status)?24*60*MINUTE:[401,403,429].includes(response.status)?60*MINUTE:5*MINUTE;
         result={url,status:response.status,checkedAt:this.now(),expiresAt:this.now()+ttl,error:'HTTP '+response.status};
@@ -112,7 +115,10 @@ export class SourceCache {
         if(Number(response.headers?.get?.('content-length')||0)>8_000_000) throw new Error('ATS response exceeds 8MB limit');
         const text=await response.text();
         if(Buffer.byteLength(text)>8_000_000) throw new Error('ATS response exceeds 8MB limit');
-        const data=JSON.parse(text); const bodyHash=digest(data);
+        const data=format==='rss' ? JSON.parse(execFileSync(process.env.CODEX_PRIMARY_RUNTIME_PYTHON||'python3',
+          [fileURLToPath(new URL('./read-job-feed.py',import.meta.url))],
+          {input:text,encoding:'utf8',maxBuffer:16_000_000,timeout:5000})) : JSON.parse(text);
+        const bodyHash=digest(data);
         const bodyPath=join(this.directory,bodyHash+'.body');
         if(!existsSync(bodyPath)) writeJson(bodyPath,data);
         result={url,status:200,checkedAt:this.now(),expiresAt:this.now()+15*MINUTE,bodyHash,data};
@@ -128,7 +134,8 @@ export class SourceCache {
 
 export function candidatesFrom(source,data) {
   if(source.provider==='workday') {
-    return (data?.jobPostings||[]).map(j=>({
+    if(!Array.isArray(data?.jobPostings)) throw new Error('Expected a Workday jobPostings array');
+    return data.jobPostings.map(j=>({
       company:source.company,position:j.title||'',
       url:workdayJobUrl(source,j.externalPath),location:j.locationsText||j.locationText||'',
       source:sourceUrl(source),id:String(j.bulletFields?.[0]||j.externalPath||''),
@@ -136,17 +143,17 @@ export function candidatesFrom(source,data) {
       detailsCached:false,descriptionSnippet:'',revision:j.postedOn||null
     })).filter(j=>j.url&&j.position);
   }
-  const rows=Array.isArray(data)?data:(data?.jobs||data?.results||data?.items||[]);
+  const rows=Array.isArray(data)?data:(data?.jobs||data?.results||data?.items);
   if(!Array.isArray(rows))throw new Error('Invalid official ATS job array');
   return rows.map(j=>({
     company:source.company||source.board,position:j.title||j.text||j.name||'',
-    url:source.provider==='official-json'
+    url:officialFeed(source)
       ?publicJobUrl(source,j.absolute_url||j.hostedUrl||j.jobUrl||j.url||'')
       :j.absolute_url||j.hostedUrl||j.jobUrl||'',
     location:j.categories?.allLocations?.join(' / ')||
-      (typeof j.location==='string'?j.location:j.location?.name||j.categories?.location||j.locationText||''),
+      (typeof j.location==='string'?j.location:j.location?.name||j.categories?.location||j.locationText||source.location||''),
     source:sourceUrl(source),id:String(j.id??j.requisitionId??''),
-    discoveryChannel:source.provider==='official-json'?'official-feed':'official-ats',
+    discoveryChannel:officialFeed(source)?'official-feed':'official-ats',
     detailsCached:Boolean(j.content||j.descriptionHtml||j.descriptionPlain||j.description),
     descriptionSnippet:String(j.content||j.descriptionPlain||j.descriptionHtml||j.description||'')
       .replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').slice(0,1200),
@@ -262,6 +269,16 @@ export function selectBudgetedSources(sources,maxBoardRequests=12,sourceOffset=0
 
 const normal=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
 const label=s=>s.company||s.board||s.site||s.feedUrl||s.provider;
+function employerOrder(targets) {
+  const order = new Map(targets.map((target, index) => [normal(typeof target==='string'?target:target.name), index]));
+  return (a,b) => (order.get(normal(a.company)) ?? order.size) - (order.get(normal(b.company)) ?? order.size);
+}
+export function sourcesForTargets(targets, supplied, catalog) {
+  const requested = new Set(targets.map(t => normal(typeof t==='string'?t:t.name)));
+  const configured = new Set(supplied.map(s => normal(s.company)));
+  const defaults = catalog.filter(e => e.source && requested.has(normal(e.company)) && !configured.has(normal(e.company)));
+  return [...supplied, ...defaults.map(e => ({company:e.company,...e.source}))].sort(employerOrder(targets));
+}
 export function auditSourceCoverage(config,checks,output,sourceBudget,requestStats) {
   const ordered=(config.targetEmployers||[]).map(e=>typeof e==='string'?e:e.name).filter(Boolean);
   const configured=[...(config.sources||[]).map(s=>s.company),
@@ -304,7 +321,8 @@ export async function discover(config,snapshot) {
   const rejectionPath=join(config.stateDir,'rejections.json');
   const rejections=existsSync(rejectionPath)?JSON.parse(readFileSync(rejectionPath,'utf8')):{};
   const results=[],passSummaries=[];let nextOffset=sourceOffset,remaining=0,total=0;
-  const uniqueSources=[...new Map((config.sources||[]).map(s=>[sourceUrl(s),s])).values()];
+  const ordered=employerOrder(config.targetEmployers||[]);
+  const uniqueSources=[...new Map((config.sources||[]).map(s=>[sourceUrl(s),s])).values()].sort(ordered);
   for(let pass=0;pass<maxDiscoveryPasses;pass++) {
     const batch=selectBudgetedSources(uniqueSources,maxBoardRequests,nextOffset);
     total=batch.total;remaining=batch.deferred;nextOffset=batch.nextOffset;
@@ -312,12 +330,12 @@ export async function discover(config,snapshot) {
     let cursor=0;const current=[];
     await Promise.all(Array.from({length:Math.min(4,batch.selected.length)},async()=>{
       while(cursor<batch.selected.length) {
-        const source=batch.selected[cursor++];
+        const index=cursor++,source=batch.selected[index];
         const requestItems=source.provider==='workday'?workdayRequests(source):
           [{url:sourceUrl(source),init:{},term:null,page:0}];
         const attempts=[],jobs=[];
         for(const item of requestItems) {
-          const response=await cache.get(item.url,item.init);
+          const response=await cache.get(item.url,item.init,source.provider==='official-rss'?'rss':'json');
           let found=[];
           let error=response.error||null;
           if(response.status===200) {
@@ -331,12 +349,12 @@ export async function discover(config,snapshot) {
           if(error)break;
           if(source.provider==='workday'&&found.length===0&&item.page>0)break;
         }
-        current.push({source,attempts,jobs});
+        current[index]={source,attempts,jobs};
       }
     }));
     results.push(...current);
     const leads=results.flatMap(r=>r.jobs);
-    const interim=discoverCandidates([...external,...leads],snapshot,config.policy,rejections);
+    const interim=discoverCandidates([...leads,...external].sort(ordered),snapshot,config.policy,rejections);
     passSummaries.push({index:pass+1,offset:batch.offset,queried:current.length,
       nextOffset,rawLeads:leads.length,accepted:interim.candidates.length,
       held:interim.held.length,failedRequests:current.flatMap(r=>r.attempts).filter(a=>a.error).length,
@@ -344,7 +362,7 @@ export async function discover(config,snapshot) {
     if(!remaining)break;
   }
   const atsLeads=results.flatMap(r=>r.jobs);
-  const output=discoverCandidates([...external,...atsLeads],snapshot,config.policy,rejections);
+  const output=discoverCandidates([...atsLeads,...external].sort(ordered),snapshot,config.policy,rejections);
   const sourceBudget={limit:maxBoardRequests,maxPasses:maxDiscoveryPasses,offset:sourceOffset,
     total,queried:results.length,nextOffset,deferred:remaining,passes:passSummaries.length,
     deferredSources:uniqueSources.slice(nextOffset).map(s=>({company:s.company||label(s),provider:s.provider}))};

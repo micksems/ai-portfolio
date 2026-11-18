@@ -58,9 +58,15 @@ def identity(record):
             return (u.hostname or '') + ':' + match.group()
     if u.hostname == 'recruitingbypaycor.com' and query.get('clientId') and query.get('id'):
         return 'paycor:' + query['clientId'][0].lower() + ':' + query['id'][0].lower()
-    for field in ('jk', 'jobId', 'jobid', 'requisitionId', 'req'):
+    host = (u.hostname or '').removeprefix('www.')
+    jobcode = query.get('jobcode', [''])[0]
+    if host == 'htcinc.com' and path in ('/job-detail', '/apply-now') and re.fullmatch(r'[0-9]+', jobcode):
+        return 'www.htcinc.com/job-detail?jobcode=' + jobcode
+    for field in ('req', 'jk', 'jobId', 'jobid', 'requisitionId', 'jobcode'):
         if query.get(field):
             return (u.hostname or '').lower() + path + '?' + field + '=' + query[field][0]
+    if path in ('/career', '/careers') and record.get('position'):
+        return host + path + ':' + re.sub(r'[^a-z0-9]+', '-', record['position'].lower()).strip('-')
     return (u.hostname or '').lower() + path
 
 def submitted(record):

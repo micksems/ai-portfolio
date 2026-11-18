@@ -4,7 +4,7 @@ import {mkdtempSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {SourceCache,sourceUrl,workdayRequests,candidatesFrom,discover,
-  candidatesFromExternalLeads,discoverCandidates} from '../scripts/job-search-discovery.mjs';
+  candidatesFromExternalLeads,discoverCandidates,sourcesForTargets} from '../scripts/job-search-discovery.mjs';
 import {classifyApplicationPath,inspectApplicationPath} from '../scripts/job-search-application-path.mjs';
 
 const snapshot=()=>({jobs:[['Canonical Job Key','Company','Position','Job URL']]});
@@ -13,6 +13,35 @@ const directory=t=>{const path=mkdtempSync(join(tmpdir(),'job-source-'));
 const workday={provider:'workday',company:'Example Workday',
   host:'sample.wd5.myworkdayjobs.com',tenant:'sample',site:'External',
   searchTerms:['analyst','AI'],maxPagesPerTerm:1};
+
+test('catalog feeds are opt-in by employer and keep employer order across parallel sources',async t=>{
+  const feed={provider:'official-rss',officialHost:'careers.example.com',feedUrl:'https://careers.example.com/us.rss'};
+  const catalog=[{company:'Listed',source:feed},{company:'Manual'}];
+  const board={provider:'greenhouse',board:'another',company:'Another'};
+  assert.deepEqual(sourcesForTargets(['Another','Manual'],[board],catalog),[board]);
+  const targets=['Listed','Another'],sources=sourcesForTargets(targets,[board],catalog);
+  assert.deepEqual(sources.map(s=>s.company),targets);
+  assert.equal(sourcesForTargets(targets,[{...board,company:'Listed'}],catalog).length,1);
+  const xml='<rss version="2.0"><channel><item><title>Data &amp; Reporting Analyst</title><link>https://careers.example.com/job/1</link></item><item><title>Data Analyst</title><link>https://aggregator.example/job/2</link></item></channel></rss>';
+  const cfg={stateDir:directory(t),sources:[...sources].reverse(),targetEmployers:targets,policy:{},
+    fetcher:async url=>new Response(url===feed.feedUrl?xml:JSON.stringify({jobs:[
+      {title:'Business Analyst',absolute_url:'https://boards.greenhouse.io/another/jobs/55'}]}))};
+  const result=await discover(cfg,snapshot());
+  assert.deepEqual(result.candidates.map(j=>j.company),targets);
+  assert.equal(result.candidates[0].position,'Data & Reporting Analyst');
+  assert.equal((await discover(cfg,snapshot())).requests.networkRequests,0);
+});
+
+test('the HTC form binds a resume field to its own requisition and continues to require review',()=>{
+  const url='https://www.htcinc.com/apply-now/?jobcode=100001';
+  const input={requestedUrl:url,finalUrl:url,status:200,position:'Operations Analyst',requisition:'100001'};
+  const body='<form method="post" action="/apply-now/?jobcode=100001"><input value="100001" name="jobcode" type="hidden"><input type="file" name="career-file"></form>';
+  const result=classifyApplicationPath({...input,body});
+  assert.equal(result.state,'review');assert.equal(result.formEvidence.requisition,'100001');
+  assert.equal(result.humanReviewRequired,true);
+  assert.equal(classifyApplicationPath({...input,body:body.replace('value="100001"','value="100002"')}).state,'hold');
+  assert.equal(classifyApplicationPath({...input,body:body.replace('type="file"','type="text"')}).formEvidence,undefined);
+});
 
 test('verified Workday careers requests use bounded public POST search',()=>{
  const requests=workdayRequests(workday);

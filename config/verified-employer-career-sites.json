@@ -1,6 +1,6 @@
 {
   "verifiedAt": "2026-11-08",
-  "purpose": "Official employer career-page starting points; these are NOT automatically queried ATS feeds or verified live applications.",
+  "purpose": "Official career starting points. An optional source identifies a separately verified job feed for that employer.",
   "scope": "Named November 3 employer batch only. The H-1B-dependent employer list and current Rules control future scope/order.",
   "employers": [
     {
@@ -31,6 +31,13 @@
       "company": "HCLTech",
       "provider": "manual-career-search",
       "officialCareerUrl": "https://careers.hcltech.com/go/United-States/9554455/",
+      "source": {
+        "provider": "official-rss",
+        "officialHost": "careers.hcltech.com",
+        "feedUrl": "https://careers.hcltech.com/services/rss/category/?catid=9554455",
+        "location": "United States",
+        "verifiedAt": "2026-11-18"
+      },
       "requires": "Verify specific official US requisition; do not treat a general program page as an active role."
     }
   ]

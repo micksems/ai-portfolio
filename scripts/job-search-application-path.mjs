@@ -14,6 +14,33 @@ const publicHttps=value=>{
   return u;
 };
 const textMatch=(body,value)=>Boolean(value)&&body.toLowerCase().includes(String(value).toLowerCase());
+function attributes(tag) {
+  const fields = {};
+  for (const match of tag.matchAll(/\s+([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g))
+    fields[match[1].toLowerCase()] = match[2] ?? match[3] ?? match[4];
+  return fields;
+}
+function inspectHtcForm(final, body, requisition) {
+  if (!requisition || !/^(www\.)?htcinc\.com$/.test(final.hostname) ||
+      !/^\/apply-now\/?$/i.test(final.pathname)) return null;
+  const expected = String(requisition);
+  if (final.searchParams.get('jobcode') !== expected)
+    return {state:'hold',reason:'The application URL identifies a different HTC requisition'};
+  for (const match of body.matchAll(/<form\b([^>]*)>([\s\S]*?)<\/form\s*>/gi)) {
+    const inputs = Array.from(match[2].matchAll(/<input\b([^>]*)>/gi), tag => attributes(tag[1]));
+    const hidden = inputs.find(input => input.type === 'hidden' && input.name === 'jobcode');
+    if (!hidden) continue;
+    let action;
+    try { action = new URL(attributes(match[1]).action || '', final); } catch { continue; }
+    if (hidden.value !== expected || action.origin !== final.origin ||
+        !/^\/apply-now\/?$/i.test(action.pathname) || action.searchParams.get('jobcode') !== expected)
+      return {state:'hold',reason:'The application form does not match the requested HTC requisition'};
+    if (inputs.some(input => input.type === 'file'))
+      return {state:'review',reason:'Application form and resume upload found for this requisition; review the form fields',
+        formEvidence:{requisition:expected,action:action.href,resumeUpload:true}};
+  }
+  return null;
+}
 export function classifyApplicationPath({requestedUrl,finalUrl,status,body='',position='',requisition='',redirects=[],
   permittedHosts=[]}) {
   const requested=publicHttps(requestedUrl),final=publicHttps(finalUrl||requestedUrl);
@@ -28,6 +55,8 @@ export function classifyApplicationPath({requestedUrl,finalUrl,status,body='',po
     return {...details,state:'hold',reason:'Sign-in gateway; application form beyond sign-in not verified'};
   if(/\/(?:careers?|search-jobs?|searchjobs|job-search|talentcommunity)(?:\/)?$/i.test(final.pathname))
     return {...details,state:'hold',reason:'Redirected to a general careers or talent-community page'};
+  const form = inspectHtcForm(final, body, requisition);
+  if (form) return {...details, ...form};
   if(requisition&&!textMatch(body,requisition)&&!textMatch(final.href,requisition))
     return {...details,state:'hold',reason:'Expected requisition not found in final employer page'};
   if(position&&!textMatch(body,position)&&!textMatch(final.href,position.replace(/\s+/g,'-')))

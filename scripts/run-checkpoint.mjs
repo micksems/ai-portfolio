@@ -5,6 +5,7 @@ import {pathToFileURL} from 'node:url';
 
 export const digest = value => createHash('sha256').update(typeof value === 'string' ? value : JSON.stringify(value)).digest('hex');
 export const fileDigest = path => createHash('sha256').update(readFileSync(path)).digest('hex');
+export const gitBlobSha = bytes => createHash('sha1').update('blob '+Buffer.byteLength(bytes)+'\0').update(bytes).digest('hex');
 export function writeJson(path, value) {
   mkdirSync(dirname(path), {recursive:true});
   const temp = path + '.' + randomUUID() + '.tmp';

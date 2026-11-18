@@ -4,13 +4,17 @@ export function normalizeSnapshot(snapshot) {
   const [header,...body]=snapshot.jobs;
   const required=['Canonical Job Key','Company','Position','Job URL','Status','Submission Confirmed','In Application Cohort'];
   if (!Array.isArray(header) || required.some(k=>!header.includes(k))) throw new Error('Incomplete Jobs headers');
-  const rows=body.filter(r=>r[0]).map(r=>Object.fromEntries(header.map((h,i)=>[h,r[i]??null])));
+  const rows=[];
   const seen=new Set();
-  for(const row of rows){
+  for(const [index,cells] of body.entries()){
+    if(!cells[0])continue;
+    const row=Object.fromEntries(header.map((h,i)=>[h,cells[i]??null]));
     const key=row['Canonical Job Key'];
     if(seen.has(key))throw new Error('Duplicate canonical Jobs row: '+key);
     seen.add(key);
-    if(typeof row['Submission Confirmed']!=='boolean'||typeof row['In Application Cohort']!=='boolean')throw new Error('Jobs submission flags must be native booleans: '+key);
+    for(const field of ['Submission Confirmed','In Application Cohort'])
+      if(typeof row[field]!=='boolean')throw new Error('Jobs row '+(index+2)+' ('+key+'): '+field+' must use native booleans');
+    rows.push(row);
   }
   const matrix=(fields)=>[fields,...rows.map(r=>fields.map(f=>f==='Current Stage'?r.Status:r[f]??null))];
   return {...snapshot,

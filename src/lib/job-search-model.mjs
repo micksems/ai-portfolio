@@ -16,7 +16,13 @@ export function jobKey(job) {
   // source, language and application-step changes do not create a new job.
   if (u.hostname === 'recruitingbypaycor.com' && u.searchParams.get('clientId') && u.searchParams.get('id'))
     return `paycor:${u.searchParams.get('clientId').toLowerCase()}:${u.searchParams.get('id').toLowerCase()}`;
+  const host = u.hostname.replace(/^www\./, '');
+  const jobcode = u.searchParams.get('jobcode');
+  if (host === 'htcinc.com' && ['/job-detail', '/apply-now'].includes(path) && /^\d+$/.test(jobcode))
+    return 'www.htcinc.com/job-detail?jobcode=' + jobcode;
   for (const field of ['req', 'jk', 'jobId', 'jobid', 'requisitionId','jobcode']) if (u.searchParams.has(field)) return `${u.hostname}${path}?${field}=${u.searchParams.get(field)}`;
+  if (/^\/careers?$/.test(path) && job.position)
+    return host + path + ':' + job.position.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   return u.hostname + path;
 }
 // Historical stored keys remain immutable; URL-derived identities recognize them
@@ -33,15 +39,26 @@ export function sameJob(a,b) {
   const keys = new Set(jobIdentityKeys(a));
   return jobIdentityKeys(b).some(key=>keys.has(key));
 }
+export function activeShortlist(data) {
+  const keys = data.sourceSnapshot?.activeJobKeys;
+  const current = Array.isArray(keys) ? new Set(keys) : null;
+  return data.jobs.filter(job => ['Found','Ready to Submit'].includes(job.status) &&
+    !job.submissionConfirmed && (!current || current.has(jobKey(job))));
+}
 export function calculateMetrics(data) {
   const jobs = [...new Map(data.jobs.map((j) => [jobKey(j), j])).values()];
   const events = [...new Map((data.interviewEvents || []).map((e) => [e.id, e])).values()];
+  // Keep a published snapshot reproducible under the definition used to audit it.
+  // A fresh canonical reconciliation adopts version 2.
+  const interviewStage = data.sourceSnapshot?.metricsVersion === 2
+    ? /^Completed — (Recruiter screen|Interview|In-person interview|Employer interview|Hiring manager interview|Introductory sales call)\b/i
+    : /^Completed — (Recruiter screen|Interview|In-person interview|Employer interview)/;
   return {
     applications: jobs.filter((j) => j.submissionConfirmed === true && j.inApplicationCohort === true).length,
     lifetimeApplications: jobs.filter((j) => j.submissionConfirmed === true).length,
     rejections: jobs.filter((j) => j.finalOutcome === 'Rejected').length,
     offers: jobs.filter((j) => j.finalOutcome === 'Offer' || j.offerAt).length,
-    interviews: events.filter((e) => /^Completed — (Recruiter screen|Interview|In-person interview|Employer interview)/.test(e.stage)).length,
+    interviews: events.filter((e) => interviewStage.test(e.stage)).length,
     scheduledInterviews: events.filter((e) => /^Scheduled —/.test(e.stage)).length,
     aiAssessments: events.filter((e) => /Completed.*AI assessment/i.test(e.stage)).length,
     onlineAssessments: events.filter((e) => /Completed.*Online assessment/i.test(e.stage)).length,
