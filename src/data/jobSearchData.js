@@ -1,7 +1,7 @@
 export const jobSearchData = {
   "updatedAt": "November 19, 2026",
   "metrics": {
-    "applications": 143,
+    "applications": 144,
     "interviews": 10,
     "offers": 0,
     "rejections": 51,
@@ -14,7 +14,7 @@ export const jobSearchData = {
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
     "auditedAt": "2026-11-19",
-    "lifetimeApplications": 147
+    "lifetimeApplications": 148
   },
   "jobs": [
     {
@@ -5447,12 +5447,12 @@ export const jobSearchData = {
       "company": "HTC Global Services",
       "position": "AI Data Annotation Specialist – Text and Audio",
       "url": "https://www.htcinc.com/job-detail/?jobcode=246194",
-      "status": "Ready to Submit",
+      "status": "Applied",
       "resumeUrl": "https://drive.google.com/file/d/1eYDrEEL3FcsfrSbV7y_0wA3HnoRm66QP/view",
       "firstSeenAt": "2026-11-19",
-      "appliedAt": "",
-      "submissionConfirmed": false,
-      "inApplicationCohort": false,
+      "appliedAt": "2026-11-19",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
       "finalOutcome": "Active",
       "rejectionAt": "",
       "offerAt": "",
@@ -5497,6 +5497,22 @@ export const jobSearchData = {
       "url": "https://www.htcinc.com/job-detail/?jobcode=245991",
       "status": "Ready to Submit",
       "resumeUrl": "https://drive.google.com/file/d/1G8xPB6JrvW4A4Wt7prxTJxQaEghwQTFB/view",
+      "firstSeenAt": "2026-11-19",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "denkensolutions.com/usa-careers/job/communications-event-program-coordinator/ooj-21999/57e0e8e57ba9250122c67d85a81a0aebd80b7c48",
+      "company": "Denken Solutions",
+      "position": "Communications & Event Program Coordinator",
+      "url": "https://denkensolutions.com/usa-careers/job/communications-event-program-coordinator/OOJ-21999/57e0e8e57ba9250122c67d85a81a0aebd80b7c48/",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1fiUB9aJApDmhN2-CFfy0tlwX_NIxZcZr/view",
       "firstSeenAt": "2026-11-19",
       "appliedAt": "",
       "submissionConfirmed": false,
@@ -6703,14 +6719,15 @@ export const jobSearchData = {
   ],
   "sourceSnapshot": {
     "metricsVersion": 2,
-    "readAt": "2026-11-19T15:15:43.882717+00:00",
-    "sha256": "1b598809cce7b6d255a8304df1462a05e8a880d4ad7fee33d138c08ae4bebd3a",
-    "historyRecords": 337,
-    "trackerRecords": 337,
-    "uniqueHistoryRecords": 337,
+    "readAt": "2026-11-19T21:15:08.598Z",
+    "sha256": "623f09a7f36a19322af039f8ce427e9d7709036942e8f0a7de6bca8191d65c9e",
+    "historyRecords": 338,
+    "trackerRecords": 338,
+    "uniqueHistoryRecords": 338,
     "activeJobKeys": [
       "capgemini:526834",
       "careers.bv.com/job/charlotte-consulting-analyst-transactions-nc/1434095833",
+      "denkensolutions.com/usa-careers/job/communications-event-program-coordinator/ooj-21999/57e0e8e57ba9250122c67d85a81a0aebd80b7c48",
       "diversityjobs.com/career/18777920/product-analyst-data-analyst-new-york-new-york",
       "gobeacon.wd1.myworkdayjobs.com:req-2026",
       "greenhouse:5265290007",
@@ -6730,7 +6747,6 @@ export const jobSearchData = {
       "www.apexon.com/career-job-detail?jobid=7524",
       "www.htcinc.com/job-detail?jobcode=245895",
       "www.htcinc.com/job-detail?jobcode=245991",
-      "www.htcinc.com/job-detail?jobcode=246194",
       "www.htcinc.com/job-detail?jobcode=246294",
       "www.htcinc.com/job-detail?jobcode=246323"
     ]
