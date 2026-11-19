@@ -1,10 +1,10 @@
 export const jobSearchData = {
-  "updatedAt": "November 17, 2026",
+  "updatedAt": "November 18, 2026",
   "metrics": {
-    "applications": 142,
-    "interviews": 8,
+    "applications": 143,
+    "interviews": 10,
     "offers": 0,
-    "rejections": 49,
+    "rejections": 51,
     "trackerStartedAt": "Aug 24, 2026",
     "interviewsMinimum": true,
     "interviewScope": "Completed human interviews and recruiter screens across confirmed history, including May–June PNK; lower bound. Automated screenings and upcoming calls excluded.",
@@ -13,8 +13,8 @@ export const jobSearchData = {
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-17",
-    "lifetimeApplications": 146
+    "auditedAt": "2026-11-18",
+    "lifetimeApplications": 147
   },
   "jobs": [
     {
@@ -5409,6 +5409,38 @@ export const jobSearchData = {
       "rejectionAt": "",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "metaview.ai/careers:sales-development-representative",
+      "company": "Metaview",
+      "position": "Sales Development Representative",
+      "url": "https://www.metaview.ai/careers",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "2026-11-13",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Rejected",
+      "rejectionAt": "2026-11-17",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "instalily.ai:business-development-representative",
+      "company": "InstaLILY AI",
+      "position": "Business Development Representative",
+      "url": "",
+      "status": "Closed",
+      "resumeUrl": "",
+      "firstSeenAt": "",
+      "appliedAt": "",
+      "submissionConfirmed": true,
+      "inApplicationCohort": true,
+      "finalOutcome": "Rejected",
+      "rejectionAt": "2026-11-17",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -6606,11 +6638,33 @@ export const jobSearchData = {
     }
   ],
   "sourceSnapshot": {
-    "readAt": "2026-11-17T21:26:43.941Z",
-    "sha256": "c498bac4dff54e9398fd2902d89c14c647531cc43dcee2f4cddd9d9c36e74f95",
-    "historyRecords": 332,
-    "trackerRecords": 332,
-    "uniqueHistoryRecords": 332,
-    "outreachRecords": 97
+    "metricsVersion": 2,
+    "readAt": "2026-11-19T04:08:06.022Z",
+    "sha256": "d671ba1e6ae0e0e4df70627826c84ab99240733b568937426ddddeecda9cf2e5",
+    "historyRecords": 333,
+    "trackerRecords": 333,
+    "uniqueHistoryRecords": 333,
+    "activeJobKeys": [
+      "capgemini:526834",
+      "careers.bv.com/job/charlotte-consulting-analyst-transactions-nc/1434095833",
+      "diversityjobs.com/career/18777920/product-analyst-data-analyst-new-york-new-york",
+      "gobeacon.wd1.myworkdayjobs.com:req-2026",
+      "greenhouse:5265290007",
+      "htcinc.com:246150",
+      "interpublic.wd5.myworkdayjobs.com:r14806",
+      "jll.wd1.myworkdayjobs.com:req542619",
+      "jobs.ashbyhq.com:2e5f59c7-7e34-4392-8ced-1964c68bc78a",
+      "jobs.ashbyhq.com:555d3020-e769-4d2d-bb64-d94107b1b79f",
+      "jobs.ashbyhq.com:bf78e172-6d6c-415b-aaa5-d36c863e2116",
+      "jobs.lever.co:0663c1d8-d32a-4f52-a0ce-71fb6b5f0966",
+      "mathworks.com:37801-mmcc",
+      "morningstar.wd5.myworkdayjobs.com:req",
+      "recruiting.ultipro.com/lof1001loft/jobboard/7d5d697a-acc8-4c60-b834-3093dc583bcc/opportunitydetail",
+      "virtusa:plano-it-business-analyst-finance-2026-10-provisional",
+      "workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?jobId=558895",
+      "www.apexon.com/career-job-detail?jobid=7480",
+      "www.apexon.com/career-job-detail?jobid=7524",
+      "www.htcinc.com/job-detail?jobcode=245895"
+    ]
   }
 };
