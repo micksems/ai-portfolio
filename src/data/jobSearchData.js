@@ -1,5 +1,5 @@
 export const jobSearchData = {
-  "updatedAt": "November 18, 2026",
+  "updatedAt": "November 19, 2026",
   "metrics": {
     "applications": 143,
     "interviews": 10,
@@ -13,7 +13,7 @@ export const jobSearchData = {
     "onlineAssessments": 3,
     "applicationsScope": "Unique confirmed submissions since August24,2026; four earlier applications and one unverified Loop record excluded. Gartner is confirmed through employer correspondence; exact submission date unknown.",
     "rejectionsScope": "Lifetime verified rejection outcomes, including four before tracker start.",
-    "auditedAt": "2026-11-18",
+    "auditedAt": "2026-11-19",
     "lifetimeApplications": 147
   },
   "jobs": [
@@ -5441,6 +5441,70 @@ export const jobSearchData = {
       "rejectionAt": "2026-11-17",
       "offerAt": "",
       "notes": ""
+    },
+    {
+      "canonicalKey": "www.htcinc.com/job-detail?jobcode=246194",
+      "company": "HTC Global Services",
+      "position": "AI Data Annotation Specialist – Text and Audio",
+      "url": "https://www.htcinc.com/job-detail/?jobcode=246194",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1eYDrEEL3FcsfrSbV7y_0wA3HnoRm66QP/view",
+      "firstSeenAt": "2026-11-19",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "www.htcinc.com/job-detail?jobcode=246323",
+      "company": "HTC Global Services",
+      "position": "IT Procurement & Strategic Sourcing Associate",
+      "url": "https://www.htcinc.com/job-detail/?jobcode=246323",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1923gxX7qufLdJ1zV2YQpqv870zMti3qv/view",
+      "firstSeenAt": "2026-11-19",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "www.htcinc.com/job-detail?jobcode=246294",
+      "company": "HTC Global Services",
+      "position": "Financial Reporting & Business Intelligence Analyst",
+      "url": "https://www.htcinc.com/job-detail/?jobcode=246294",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1pINqb89O2rnXRDzj60LTeN1ZMk_ty239/view",
+      "firstSeenAt": "2026-11-19",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
+    },
+    {
+      "canonicalKey": "www.htcinc.com/job-detail?jobcode=245991",
+      "company": "HTC Global Services",
+      "position": "UX Research Specialist",
+      "url": "https://www.htcinc.com/job-detail/?jobcode=245991",
+      "status": "Ready to Submit",
+      "resumeUrl": "https://drive.google.com/file/d/1G8xPB6JrvW4A4Wt7prxTJxQaEghwQTFB/view",
+      "firstSeenAt": "2026-11-19",
+      "appliedAt": "",
+      "submissionConfirmed": false,
+      "inApplicationCohort": false,
+      "finalOutcome": "Active",
+      "rejectionAt": "",
+      "offerAt": "",
+      "notes": ""
     }
   ],
   "interviewEvents": [
@@ -6639,11 +6703,11 @@ export const jobSearchData = {
   ],
   "sourceSnapshot": {
     "metricsVersion": 2,
-    "readAt": "2026-11-19T04:08:06.022Z",
-    "sha256": "d671ba1e6ae0e0e4df70627826c84ab99240733b568937426ddddeecda9cf2e5",
-    "historyRecords": 333,
-    "trackerRecords": 333,
-    "uniqueHistoryRecords": 333,
+    "readAt": "2026-11-19T15:15:43.882717+00:00",
+    "sha256": "1b598809cce7b6d255a8304df1462a05e8a880d4ad7fee33d138c08ae4bebd3a",
+    "historyRecords": 337,
+    "trackerRecords": 337,
+    "uniqueHistoryRecords": 337,
     "activeJobKeys": [
       "capgemini:526834",
       "careers.bv.com/job/charlotte-consulting-analyst-transactions-nc/1434095833",
@@ -6664,7 +6728,11 @@ export const jobSearchData = {
       "workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?jobId=558895",
       "www.apexon.com/career-job-detail?jobid=7480",
       "www.apexon.com/career-job-detail?jobid=7524",
-      "www.htcinc.com/job-detail?jobcode=245895"
+      "www.htcinc.com/job-detail?jobcode=245895",
+      "www.htcinc.com/job-detail?jobcode=245991",
+      "www.htcinc.com/job-detail?jobcode=246194",
+      "www.htcinc.com/job-detail?jobcode=246294",
+      "www.htcinc.com/job-detail?jobcode=246323"
     ]
   }
 };
